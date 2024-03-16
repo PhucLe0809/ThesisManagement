@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="FStudentDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FDisplayMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FStudentFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FTeamCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FTeamFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FThesisFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FTopicFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FMessageSeeAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FTeamDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FThesisDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UCAccountInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCAccountAvatar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCDescussionResource.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCDiscussionStatistical.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCDiscussionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="FDisplayLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UCDiscussionMessage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCDisplayLecture.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCDisplayWelcome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCIndividualLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCIndividualList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCStudentItemAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCStudents.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCStudentStatistical.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCTeamLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCTeamList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCStudentMiniLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCThesisCreate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCThesisLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCThesisList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCThesisStatistical.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCTopicCreate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCAccountLecture.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCDiscussion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCDashboardLecture.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCDiscussionLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCTopicStatistical.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCTopic.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCTopicList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCTopicLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCTopicMiniLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCWelcome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="FTopicDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

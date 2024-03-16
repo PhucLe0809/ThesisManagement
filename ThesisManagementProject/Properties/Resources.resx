@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="GifSleep" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GifSleep.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LogoThesisManagement" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LogoThesisManagement.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LogoThesisManagement1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LogoThesisManagement.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicAddCloudBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicAddCloudBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicAddCloudBlack64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicAddCloudBlack64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicAddCloudWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicAddCloudWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicAddCloudWhite64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicAddCloudWhite64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicAddDescription" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicAddDescription.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicAddHashtag" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicAddHashtag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicAddLevel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicAddLevel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicAddTopic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicAddTopic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicAddTopicDescription" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicAddTopicDescription.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicBirthday" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicBirthday.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicCitizencode" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicCitizencode.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicDiscuss" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicDiscuss.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicEmail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicEmail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicFullname" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicFullname.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicGender" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicGender.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicGradientSend" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicGradientSend.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicHandle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicHandle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicInLineDelete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicInLineDelete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicInLineEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicInLineEdit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicInLineGradientDelete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicInLineGradientDelete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicInLineGradientEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicInLineGradientEdit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicInLineGradientStar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicInLineGradientStar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicInLineStar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicInLineStar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicIteamGradientLinked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicIteamGradientLinked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicItemAdd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicItemAdd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicItemAddFillGradient" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicItemAddFillGradient.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicItemAddGradient" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicItemAddGradient.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicItemAddTeam" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicItemAddTeam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicItemAddTeamGradient" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicItemAddTeamGradient.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicItemAddTeamWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicItemAddTeamWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicItemCopy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicItemCopy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicItemFaculty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicItemFaculty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicItemFilter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicItemFilter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicItemGradientCopy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicItemGradientCopy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicItemGradientFilter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicItemGradientFilter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicItemGradientResources" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicItemGradientResources.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicItemGradientSearch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicItemGradientSearch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicItemHandle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicItemHandle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicItemLinked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicItemLinked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicItemMember" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicItemMember.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicItemOff" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicItemOff.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicItemOn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicItemOn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicItemPencil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicItemPencil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicItemPencilWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicItemPencilWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicItemReference" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicItemReference.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicItemRemove" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicItemRemove.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicItemResources" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicItemResources.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicItemSearch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicItemSearch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicItemUniversity" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicItemUniversity.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicMiniLineEssay" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicMiniLineEssay.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicMiniLineGradientEssay" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicMiniLineGradientEssay.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicPhonenumber" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicPhonenumber.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicSearch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicSearch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicSend" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicSend.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicStudent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicStudent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicTask" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicTask.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicTeam" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicTeam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicThesis" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicThesis.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PictureAccount" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PictureAccount.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PictureAccountGradient" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PictureAccountGradient.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PictureAvatarAccount" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PictureAvatarAccount.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PictureAvatarLecture" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PictureAvatarLecture.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="PictureAvatarStudent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PictureAvatarStudent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PictureAvatarTeam" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PictureAvatarTeam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PictureBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PictureBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PictureBackgroundDisplayMain" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PictureBackgroundDisplayMain.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PictureBackgroundTaskbar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PictureBackgroundTaskbar.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="PictureCameraHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PictureCameraHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PictureCircleChat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PictureCircleChat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PictureDiscussion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PictureDiscussion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PictureDiscussionGradient" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PictureDiscussionGradient.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PictureEditPencil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PictureEditPencil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PictureLogOut" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PictureLogOut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PictureLogOutGradient" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PictureLogOutGradient.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PictureNullBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PictureNullBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PictureStudent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PictureStudent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PictureStudentGradient" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PictureStudentGradient.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PictureTask" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PictureTask.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PictureTaskGradient" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PictureTaskGradient.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PictureThesis" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PictureThesis.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PictureThesisGradient" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PictureThesisGradient.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicWorkcode" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicWorkcode.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>
