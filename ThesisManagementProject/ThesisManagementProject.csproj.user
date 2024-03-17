@@ -16,6 +16,9 @@
     <Compile Update="FTeamFilter.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FThesisEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FThesisFilter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -26,9 +29,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FTeamDetails.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="FThesisDetails.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UCAccountInformation.cs">
@@ -46,13 +46,16 @@
     <Compile Update="UCDiscussionView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="FDisplayLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="UCDiscussionMessage.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UCDisplayLecture.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCDisplayLogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCDisplayRegister.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UCDisplayWelcome.cs">
@@ -85,10 +88,16 @@
     <Compile Update="UCThesisCreate.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="UCThesisDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UCThesisLine.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UCThesisList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCThesisMiniLine.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UCThesisStatistical.cs">

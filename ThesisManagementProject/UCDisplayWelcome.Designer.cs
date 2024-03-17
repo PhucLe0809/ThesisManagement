@@ -36,12 +36,18 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             gButtonLogin = new Guna.UI2.WinForms.Guna2Button();
             gProgressBarToLine = new Guna.UI2.WinForms.Guna2ProgressBar();
             lblThesisManagement = new Label();
             lblWelcome = new Label();
             gPictureBoxLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             gGradientButtonLecture = new Guna.UI2.WinForms.Guna2GradientButton();
+            gGradientButtonRegister = new Guna.UI2.WinForms.Guna2GradientButton();
+            gGradientButtonStudent = new Guna.UI2.WinForms.Guna2GradientButton();
             ((System.ComponentModel.ISupportInitialize)gPictureBoxLogo).BeginInit();
             SuspendLayout();
             // 
@@ -138,11 +144,66 @@
             gGradientButtonLecture.TabIndex = 17;
             gGradientButtonLecture.Text = "Lecture";
             // 
+            // gGradientButtonRegister
+            // 
+            gGradientButtonRegister.BorderColor = SystemColors.ButtonFace;
+            gGradientButtonRegister.BorderRadius = 10;
+            gGradientButtonRegister.BorderThickness = 1;
+            gGradientButtonRegister.CustomizableEdges = customizableEdges9;
+            gGradientButtonRegister.DisabledState.BorderColor = Color.DarkGray;
+            gGradientButtonRegister.DisabledState.CustomBorderColor = Color.DarkGray;
+            gGradientButtonRegister.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            gGradientButtonRegister.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            gGradientButtonRegister.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            gGradientButtonRegister.FillColor = Color.White;
+            gGradientButtonRegister.FillColor2 = Color.White;
+            gGradientButtonRegister.Font = new Font("Trebuchet MS", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gGradientButtonRegister.ForeColor = Color.FromArgb(74, 97, 94);
+            gGradientButtonRegister.HoverState.BorderColor = Color.White;
+            gGradientButtonRegister.HoverState.FillColor = Color.FromArgb(94, 148, 255);
+            gGradientButtonRegister.HoverState.FillColor2 = Color.FromArgb(255, 77, 165);
+            gGradientButtonRegister.HoverState.ForeColor = Color.White;
+            gGradientButtonRegister.Location = new Point(1063, 403);
+            gGradientButtonRegister.Name = "gGradientButtonRegister";
+            gGradientButtonRegister.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            gGradientButtonRegister.Size = new Size(133, 45);
+            gGradientButtonRegister.TabIndex = 18;
+            gGradientButtonRegister.Text = "Register";
+            gGradientButtonRegister.Click += gGradientButtonRegister_Click;
+            // 
+            // gGradientButtonStudent
+            // 
+            gGradientButtonStudent.BorderColor = SystemColors.ButtonFace;
+            gGradientButtonStudent.BorderRadius = 10;
+            gGradientButtonStudent.BorderThickness = 1;
+            gGradientButtonStudent.CustomizableEdges = customizableEdges11;
+            gGradientButtonStudent.DisabledState.BorderColor = Color.DarkGray;
+            gGradientButtonStudent.DisabledState.CustomBorderColor = Color.DarkGray;
+            gGradientButtonStudent.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            gGradientButtonStudent.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            gGradientButtonStudent.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            gGradientButtonStudent.FillColor = Color.White;
+            gGradientButtonStudent.FillColor2 = Color.White;
+            gGradientButtonStudent.Font = new Font("Trebuchet MS", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gGradientButtonStudent.ForeColor = Color.FromArgb(74, 97, 94);
+            gGradientButtonStudent.HoverState.BorderColor = Color.White;
+            gGradientButtonStudent.HoverState.FillColor = Color.FromArgb(94, 148, 255);
+            gGradientButtonStudent.HoverState.FillColor2 = Color.FromArgb(255, 77, 165);
+            gGradientButtonStudent.HoverState.ForeColor = Color.White;
+            gGradientButtonStudent.Location = new Point(839, 403);
+            gGradientButtonStudent.Name = "gGradientButtonStudent";
+            gGradientButtonStudent.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            gGradientButtonStudent.Size = new Size(133, 45);
+            gGradientButtonStudent.TabIndex = 19;
+            gGradientButtonStudent.Text = "Student";
+            // 
             // UCDisplayWelcome
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(gGradientButtonStudent);
+            Controls.Add(gGradientButtonRegister);
             Controls.Add(gGradientButtonLecture);
             Controls.Add(gProgressBarToLine);
             Controls.Add(lblThesisManagement);
@@ -163,5 +224,7 @@
         private Label lblWelcome;
         private Guna.UI2.WinForms.Guna2PictureBox gPictureBoxLogo;
         private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonLecture;
+        private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonRegister;
+        private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonStudent;
     }
 }

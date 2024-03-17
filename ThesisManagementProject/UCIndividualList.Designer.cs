@@ -61,14 +61,14 @@
             gGradientButtonInformation = new Guna.UI2.WinForms.Guna2GradientButton();
             gGradientButtonTool = new Guna.UI2.WinForms.Guna2GradientButton();
             gGradientButtonNumTopic = new Guna.UI2.WinForms.Guna2GradientButton();
-            gGradientButtonNumThesises = new Guna.UI2.WinForms.Guna2GradientButton();
+            gGradientButtonNumTheses = new Guna.UI2.WinForms.Guna2GradientButton();
             gShadowPanelStudent = new Guna.UI2.WinForms.Guna2ShadowPanel();
             lblNoteStatisStudent = new Label();
             gPictureBoxItemStudent = new Guna.UI2.WinForms.Guna2PictureBox();
             lblNumStudent = new Label();
             gShadowPanelSearch = new Guna.UI2.WinForms.Guna2ShadowPanel();
             gButtonFilter = new Guna.UI2.WinForms.Guna2Button();
-            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            gTextBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
             gGradientButtonTag = new Guna.UI2.WinForms.Guna2GradientButton();
             gShadowPanelStudent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)gPictureBoxItemStudent).BeginInit();
@@ -104,7 +104,6 @@
             gGradientButtonStudentCode.Size = new Size(153, 40);
             gGradientButtonStudentCode.TabIndex = 17;
             gGradientButtonStudentCode.Text = "Student code";
-            gGradientButtonStudentCode.TextAlign = HorizontalAlignment.Left;
             // 
             // gGradientButtonAccount
             // 
@@ -150,7 +149,6 @@
             gGradientButtonStatus.Size = new Size(180, 40);
             gGradientButtonStatus.TabIndex = 18;
             gGradientButtonStatus.Text = "Status";
-            gGradientButtonStatus.TextAlign = HorizontalAlignment.Left;
             // 
             // gGradientButtonTeams
             // 
@@ -173,7 +171,6 @@
             gGradientButtonTeams.Size = new Size(89, 40);
             gGradientButtonTeams.TabIndex = 20;
             gGradientButtonTeams.Text = "Teams";
-            gGradientButtonTeams.TextAlign = HorizontalAlignment.Left;
             // 
             // gGradientButtonInformation
             // 
@@ -196,7 +193,6 @@
             gGradientButtonInformation.Size = new Size(148, 40);
             gGradientButtonInformation.TabIndex = 22;
             gGradientButtonInformation.Text = "Informations";
-            gGradientButtonInformation.TextAlign = HorizontalAlignment.Left;
             // 
             // gGradientButtonTool
             // 
@@ -219,7 +215,6 @@
             gGradientButtonTool.Size = new Size(79, 40);
             gGradientButtonTool.TabIndex = 21;
             gGradientButtonTool.Text = "Tool";
-            gGradientButtonTool.TextAlign = HorizontalAlignment.Left;
             // 
             // gGradientButtonNumTopic
             // 
@@ -242,30 +237,28 @@
             gGradientButtonNumTopic.Size = new Size(89, 40);
             gGradientButtonNumTopic.TabIndex = 23;
             gGradientButtonNumTopic.Text = "Topics";
-            gGradientButtonNumTopic.TextAlign = HorizontalAlignment.Left;
             // 
-            // gGradientButtonNumThesises
+            // gGradientButtonNumTheses
             // 
-            gGradientButtonNumThesises.CustomizableEdges = customizableEdges15;
-            gGradientButtonNumThesises.DisabledState.BorderColor = Color.DarkGray;
-            gGradientButtonNumThesises.DisabledState.CustomBorderColor = Color.DarkGray;
-            gGradientButtonNumThesises.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            gGradientButtonNumThesises.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
-            gGradientButtonNumThesises.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            gGradientButtonNumThesises.FillColor = Color.White;
-            gGradientButtonNumThesises.FillColor2 = Color.White;
-            gGradientButtonNumThesises.Font = new Font("Trebuchet MS", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            gGradientButtonNumThesises.ForeColor = Color.FromArgb(74, 97, 94);
-            gGradientButtonNumThesises.HoverState.FillColor = Color.FromArgb(94, 148, 255);
-            gGradientButtonNumThesises.HoverState.FillColor2 = Color.FromArgb(255, 77, 165);
-            gGradientButtonNumThesises.HoverState.ForeColor = Color.White;
-            gGradientButtonNumThesises.Location = new Point(731, 113);
-            gGradientButtonNumThesises.Name = "gGradientButtonNumThesises";
-            gGradientButtonNumThesises.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            gGradientButtonNumThesises.Size = new Size(89, 40);
-            gGradientButtonNumThesises.TabIndex = 24;
-            gGradientButtonNumThesises.Text = "Theises";
-            gGradientButtonNumThesises.TextAlign = HorizontalAlignment.Left;
+            gGradientButtonNumTheses.CustomizableEdges = customizableEdges15;
+            gGradientButtonNumTheses.DisabledState.BorderColor = Color.DarkGray;
+            gGradientButtonNumTheses.DisabledState.CustomBorderColor = Color.DarkGray;
+            gGradientButtonNumTheses.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            gGradientButtonNumTheses.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            gGradientButtonNumTheses.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            gGradientButtonNumTheses.FillColor = Color.White;
+            gGradientButtonNumTheses.FillColor2 = Color.White;
+            gGradientButtonNumTheses.Font = new Font("Trebuchet MS", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gGradientButtonNumTheses.ForeColor = Color.FromArgb(74, 97, 94);
+            gGradientButtonNumTheses.HoverState.FillColor = Color.FromArgb(94, 148, 255);
+            gGradientButtonNumTheses.HoverState.FillColor2 = Color.FromArgb(255, 77, 165);
+            gGradientButtonNumTheses.HoverState.ForeColor = Color.White;
+            gGradientButtonNumTheses.Location = new Point(731, 113);
+            gGradientButtonNumTheses.Name = "gGradientButtonNumTheses";
+            gGradientButtonNumTheses.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            gGradientButtonNumTheses.Size = new Size(89, 40);
+            gGradientButtonNumTheses.TabIndex = 24;
+            gGradientButtonNumTheses.Text = "Theses";
             // 
             // gShadowPanelStudent
             // 
@@ -322,7 +315,7 @@
             // 
             gShadowPanelSearch.BackColor = Color.Transparent;
             gShadowPanelSearch.Controls.Add(gButtonFilter);
-            gShadowPanelSearch.Controls.Add(guna2TextBox1);
+            gShadowPanelSearch.Controls.Add(gTextBoxSearch);
             gShadowPanelSearch.FillColor = Color.White;
             gShadowPanelSearch.Location = new Point(306, 14);
             gShadowPanelSearch.Name = "gShadowPanelSearch";
@@ -354,33 +347,33 @@
             gButtonFilter.TabIndex = 10;
             gButtonFilter.Click += guna2Button1_Click;
             // 
-            // guna2TextBox1
+            // gTextBoxSearch
             // 
-            guna2TextBox1.BorderColor = Color.FromArgb(74, 97, 94);
-            guna2TextBox1.BorderRadius = 8;
-            guna2TextBox1.CustomizableEdges = customizableEdges21;
-            guna2TextBox1.DefaultText = "";
-            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Font = new Font("Segoe UI", 9F);
-            guna2TextBox1.ForeColor = Color.Black;
-            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.IconLeft = (Image)resources.GetObject("guna2TextBox1.IconLeft");
-            guna2TextBox1.IconLeftOffset = new Point(5, 0);
-            guna2TextBox1.Location = new Point(15, 18);
-            guna2TextBox1.Margin = new Padding(3, 4, 3, 4);
-            guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.PasswordChar = '\0';
-            guna2TextBox1.PlaceholderForeColor = Color.Gray;
-            guna2TextBox1.PlaceholderText = "Search user name";
-            guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            guna2TextBox1.Size = new Size(287, 40);
-            guna2TextBox1.TabIndex = 9;
-            guna2TextBox1.TextOffset = new Point(5, 0);
+            gTextBoxSearch.BorderColor = Color.FromArgb(74, 97, 94);
+            gTextBoxSearch.BorderRadius = 8;
+            gTextBoxSearch.CustomizableEdges = customizableEdges21;
+            gTextBoxSearch.DefaultText = "";
+            gTextBoxSearch.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            gTextBoxSearch.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            gTextBoxSearch.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            gTextBoxSearch.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            gTextBoxSearch.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            gTextBoxSearch.Font = new Font("Segoe UI", 9F);
+            gTextBoxSearch.ForeColor = Color.Black;
+            gTextBoxSearch.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            gTextBoxSearch.IconLeft = (Image)resources.GetObject("gTextBoxSearch.IconLeft");
+            gTextBoxSearch.IconLeftOffset = new Point(5, 0);
+            gTextBoxSearch.Location = new Point(15, 18);
+            gTextBoxSearch.Margin = new Padding(3, 4, 3, 4);
+            gTextBoxSearch.Name = "gTextBoxSearch";
+            gTextBoxSearch.PasswordChar = '\0';
+            gTextBoxSearch.PlaceholderForeColor = Color.Gray;
+            gTextBoxSearch.PlaceholderText = "Search user name";
+            gTextBoxSearch.SelectedText = "";
+            gTextBoxSearch.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            gTextBoxSearch.Size = new Size(287, 40);
+            gTextBoxSearch.TabIndex = 9;
+            gTextBoxSearch.TextOffset = new Point(5, 0);
             // 
             // gGradientButtonTag
             // 
@@ -419,7 +412,7 @@
             Controls.Add(gGradientButtonTeams);
             Controls.Add(gGradientButtonInformation);
             Controls.Add(gGradientButtonTool);
-            Controls.Add(gGradientButtonNumThesises);
+            Controls.Add(gGradientButtonNumTheses);
             Controls.Add(gGradientButtonTag);
             Name = "UCIndividualList";
             Size = new Size(1180, 750);
@@ -439,14 +432,14 @@
         private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonInformation;
         private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonTool;
         private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonNumTopic;
-        private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonNumThesises;
+        private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonNumTheses;
         private Guna.UI2.WinForms.Guna2ShadowPanel gShadowPanelStudent;
         private Label lblNoteStatisStudent;
         private Guna.UI2.WinForms.Guna2PictureBox gPictureBoxItemStudent;
         private Label lblNumStudent;
         private Guna.UI2.WinForms.Guna2ShadowPanel gShadowPanelSearch;
         private Guna.UI2.WinForms.Guna2Button gButtonFilter;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox gTextBoxSearch;
         private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonTag;
     }
 }

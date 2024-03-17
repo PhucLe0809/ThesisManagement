@@ -79,24 +79,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges49 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            gButtonUniversitySelectAll = new Guna.UI2.WinForms.Guna2Button();
-            gSeparatorUniversity = new Guna.UI2.WinForms.Guna2Separator();
-            lblUniversity = new Label();
-            gShadowPanelUniversity = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            gTextBoxUniversitySelected = new Guna.UI2.WinForms.Guna2TextBox();
-            lblUniversitySelectAll = new Label();
-            gTextBoxSearchUniversity = new Guna.UI2.WinForms.Guna2TextBox();
-            clbUniversity = new CheckedListBox();
             gGradientButtonSave = new Guna.UI2.WinForms.Guna2GradientButton();
             gButtonCancel = new Guna.UI2.WinForms.Guna2Button();
-            gShadowPanelFaculty = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            gTextBoxFacultySelected = new Guna.UI2.WinForms.Guna2TextBox();
-            lblFacultySelectAll = new Label();
-            gTextBoxSearchFaculty = new Guna.UI2.WinForms.Guna2TextBox();
-            clbFaculty = new CheckedListBox();
-            gButtonFacultySelectAll = new Guna.UI2.WinForms.Guna2Button();
-            gSeparatorFaculty = new Guna.UI2.WinForms.Guna2Separator();
-            lblFaculty = new Label();
             gShadowPanelFavorites = new Guna.UI2.WinForms.Guna2ShadowPanel();
             gButtonStar = new Guna.UI2.WinForms.Guna2Button();
             lblFavorites = new Label();
@@ -115,7 +99,7 @@
             gRadioButtonYearFrom = new Guna.UI2.WinForms.Guna2RadioButton();
             gTextBoxYearTo = new Guna.UI2.WinForms.Guna2TextBox();
             lblYearTo = new Label();
-            guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            gSeparatorBirthday = new Guna.UI2.WinForms.Guna2Separator();
             gTextBoxYearFrom = new Guna.UI2.WinForms.Guna2TextBox();
             lblYearFrom = new Label();
             lblYearAll = new Label();
@@ -148,8 +132,22 @@
             lblTeamAll = new Label();
             gButtonTeamAll = new Guna.UI2.WinForms.Guna2Button();
             lblTeam = new Label();
-            gShadowPanelUniversity.SuspendLayout();
-            gShadowPanelFaculty.SuspendLayout();
+            lblFaculty = new Label();
+            gSeparatorFaculty = new Guna.UI2.WinForms.Guna2Separator();
+            gButtonFacultySelectAll = new Guna.UI2.WinForms.Guna2Button();
+            clbFaculty = new CheckedListBox();
+            gTextBoxSearchFaculty = new Guna.UI2.WinForms.Guna2TextBox();
+            lblFacultySelectAll = new Label();
+            gTextBoxFacultySelected = new Guna.UI2.WinForms.Guna2TextBox();
+            gShadowPanelFaculty = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            lblUniversity = new Label();
+            gSeparatorUniversity = new Guna.UI2.WinForms.Guna2Separator();
+            gButtonUniversitySelectAll = new Guna.UI2.WinForms.Guna2Button();
+            clbUniversity = new CheckedListBox();
+            gTextBoxSearchUniversity = new Guna.UI2.WinForms.Guna2TextBox();
+            lblUniversitySelectAll = new Label();
+            gTextBoxUniversitySelected = new Guna.UI2.WinForms.Guna2TextBox();
+            gShadowPanelUniversity = new Guna.UI2.WinForms.Guna2ShadowPanel();
             gShadowPanelFavorites.SuspendLayout();
             gShadowPanelGender.SuspendLayout();
             gShadowPanelStatus.SuspendLayout();
@@ -157,155 +155,15 @@
             gShadowPanelNumTopic.SuspendLayout();
             gShadowPanelNumThesis.SuspendLayout();
             gShadowPanelNumTeam.SuspendLayout();
+            gShadowPanelFaculty.SuspendLayout();
+            gShadowPanelUniversity.SuspendLayout();
             SuspendLayout();
-            // 
-            // gButtonUniversitySelectAll
-            // 
-            gButtonUniversitySelectAll.BackColor = Color.Transparent;
-            gButtonUniversitySelectAll.BorderRadius = 5;
-            gButtonUniversitySelectAll.CustomizableEdges = customizableEdges1;
-            gButtonUniversitySelectAll.DisabledState.BorderColor = Color.DarkGray;
-            gButtonUniversitySelectAll.DisabledState.CustomBorderColor = Color.DarkGray;
-            gButtonUniversitySelectAll.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            gButtonUniversitySelectAll.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            gButtonUniversitySelectAll.FillColor = Color.Transparent;
-            gButtonUniversitySelectAll.Font = new Font("Segoe UI", 9F);
-            gButtonUniversitySelectAll.ForeColor = Color.White;
-            gButtonUniversitySelectAll.HoverState.FillColor = Color.White;
-            gButtonUniversitySelectAll.HoverState.Image = Properties.Resources.PicItemOff;
-            gButtonUniversitySelectAll.Image = Properties.Resources.PicItemOn;
-            gButtonUniversitySelectAll.ImageOffset = new Point(1, 0);
-            gButtonUniversitySelectAll.ImageSize = new Size(35, 35);
-            gButtonUniversitySelectAll.Location = new Point(665, 13);
-            gButtonUniversitySelectAll.Name = "gButtonUniversitySelectAll";
-            gButtonUniversitySelectAll.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            gButtonUniversitySelectAll.Size = new Size(40, 40);
-            gButtonUniversitySelectAll.TabIndex = 32;
-            // 
-            // gSeparatorUniversity
-            // 
-            gSeparatorUniversity.BackColor = Color.White;
-            gSeparatorUniversity.Location = new Point(30, 64);
-            gSeparatorUniversity.Name = "gSeparatorUniversity";
-            gSeparatorUniversity.Size = new Size(675, 12);
-            gSeparatorUniversity.TabIndex = 31;
-            // 
-            // lblUniversity
-            // 
-            lblUniversity.AutoSize = true;
-            lblUniversity.BackColor = Color.Transparent;
-            lblUniversity.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblUniversity.Location = new Point(30, 22);
-            lblUniversity.Name = "lblUniversity";
-            lblUniversity.Size = new Size(136, 28);
-            lblUniversity.TabIndex = 30;
-            lblUniversity.Text = "UNIVERSITY";
-            // 
-            // gShadowPanelUniversity
-            // 
-            gShadowPanelUniversity.BackColor = Color.Transparent;
-            gShadowPanelUniversity.Controls.Add(gTextBoxUniversitySelected);
-            gShadowPanelUniversity.Controls.Add(lblUniversitySelectAll);
-            gShadowPanelUniversity.Controls.Add(gTextBoxSearchUniversity);
-            gShadowPanelUniversity.Controls.Add(clbUniversity);
-            gShadowPanelUniversity.Controls.Add(gButtonUniversitySelectAll);
-            gShadowPanelUniversity.Controls.Add(gSeparatorUniversity);
-            gShadowPanelUniversity.Controls.Add(lblUniversity);
-            gShadowPanelUniversity.FillColor = Color.White;
-            gShadowPanelUniversity.Location = new Point(368, 12);
-            gShadowPanelUniversity.Name = "gShadowPanelUniversity";
-            gShadowPanelUniversity.Radius = 7;
-            gShadowPanelUniversity.ShadowColor = Color.Black;
-            gShadowPanelUniversity.ShadowDepth = 120;
-            gShadowPanelUniversity.ShadowShift = 7;
-            gShadowPanelUniversity.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            gShadowPanelUniversity.Size = new Size(734, 346);
-            gShadowPanelUniversity.TabIndex = 37;
-            // 
-            // gTextBoxUniversitySelected
-            // 
-            gTextBoxUniversitySelected.BorderColor = Color.FromArgb(74, 97, 94);
-            gTextBoxUniversitySelected.BorderRadius = 5;
-            gTextBoxUniversitySelected.CustomizableEdges = customizableEdges3;
-            gTextBoxUniversitySelected.DefaultText = "";
-            gTextBoxUniversitySelected.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            gTextBoxUniversitySelected.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            gTextBoxUniversitySelected.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            gTextBoxUniversitySelected.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            gTextBoxUniversitySelected.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            gTextBoxUniversitySelected.Font = new Font("Segoe UI", 9F);
-            gTextBoxUniversitySelected.ForeColor = Color.Black;
-            gTextBoxUniversitySelected.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            gTextBoxUniversitySelected.IconLeftOffset = new Point(5, 0);
-            gTextBoxUniversitySelected.Location = new Point(30, 83);
-            gTextBoxUniversitySelected.Margin = new Padding(3, 4, 3, 4);
-            gTextBoxUniversitySelected.Multiline = true;
-            gTextBoxUniversitySelected.Name = "gTextBoxUniversitySelected";
-            gTextBoxUniversitySelected.PasswordChar = '\0';
-            gTextBoxUniversitySelected.PlaceholderForeColor = Color.Gray;
-            gTextBoxUniversitySelected.PlaceholderText = "University selected @";
-            gTextBoxUniversitySelected.ReadOnly = true;
-            gTextBoxUniversitySelected.SelectedText = "";
-            gTextBoxUniversitySelected.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            gTextBoxUniversitySelected.Size = new Size(675, 65);
-            gTextBoxUniversitySelected.TabIndex = 36;
-            gTextBoxUniversitySelected.TextOffset = new Point(5, 0);
-            // 
-            // lblUniversitySelectAll
-            // 
-            lblUniversitySelectAll.AutoSize = true;
-            lblUniversitySelectAll.BackColor = Color.Transparent;
-            lblUniversitySelectAll.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblUniversitySelectAll.ForeColor = Color.FromArgb(74, 97, 94);
-            lblUniversitySelectAll.Location = new Point(577, 19);
-            lblUniversitySelectAll.Name = "lblUniversitySelectAll";
-            lblUniversitySelectAll.Size = new Size(84, 25);
-            lblUniversitySelectAll.TabIndex = 35;
-            lblUniversitySelectAll.Text = "select all";
-            // 
-            // gTextBoxSearchUniversity
-            // 
-            gTextBoxSearchUniversity.BorderColor = Color.FromArgb(74, 97, 94);
-            gTextBoxSearchUniversity.BorderRadius = 8;
-            gTextBoxSearchUniversity.CustomizableEdges = customizableEdges5;
-            gTextBoxSearchUniversity.DefaultText = "";
-            gTextBoxSearchUniversity.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            gTextBoxSearchUniversity.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            gTextBoxSearchUniversity.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            gTextBoxSearchUniversity.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            gTextBoxSearchUniversity.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            gTextBoxSearchUniversity.Font = new Font("Segoe UI", 9F);
-            gTextBoxSearchUniversity.ForeColor = Color.Black;
-            gTextBoxSearchUniversity.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            gTextBoxSearchUniversity.IconLeft = (Image)resources.GetObject("gTextBoxSearchUniversity.IconLeft");
-            gTextBoxSearchUniversity.IconLeftOffset = new Point(5, 0);
-            gTextBoxSearchUniversity.Location = new Point(187, 13);
-            gTextBoxSearchUniversity.Margin = new Padding(3, 4, 3, 4);
-            gTextBoxSearchUniversity.Name = "gTextBoxSearchUniversity";
-            gTextBoxSearchUniversity.PasswordChar = '\0';
-            gTextBoxSearchUniversity.PlaceholderForeColor = Color.Gray;
-            gTextBoxSearchUniversity.PlaceholderText = "Search university";
-            gTextBoxSearchUniversity.SelectedText = "";
-            gTextBoxSearchUniversity.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            gTextBoxSearchUniversity.Size = new Size(287, 40);
-            gTextBoxSearchUniversity.TabIndex = 34;
-            gTextBoxSearchUniversity.TextOffset = new Point(5, 0);
-            // 
-            // clbUniversity
-            // 
-            clbUniversity.BorderStyle = BorderStyle.None;
-            clbUniversity.FormattingEnabled = true;
-            clbUniversity.Items.AddRange(new object[] { "Vietnam National University, Hanoi", "Vietnam National University, Ho Chi Minh City", "Hanoi University of Science and Technology", "Ho Chi Minh City University of Technology", "Vietnam National University of Agriculture", "Hue University", "Can Tho University", "Da Nang University of Technology", "Hanoi University of Education", "Hanoi University of Agriculture", "Hue University of Medicine and Pharmacy", "Hue University of Sciences", "Hanoi University of Mining and Geology", "Ho Chi Minh City University of Agriculture and Forestry", "Hanoi University of Pharmacy", "University of Danang - University of Science and Technology", "Thai Nguyen University", "University of Da Nang", "Vietnam National University of Forestry", "Vietnam National University of Art Education", "Thai Nguyen University of Agriculture and Forestry", "Ho Chi Minh City University of Pedagogy", "University of Economics, Ho Chi Minh City", "Hanoi University of Home Affairs", "Hanoi University of Culture", "Hanoi University of Industrial Fine Arts", "Duy Tan University", "Nong Lam University - Ho Chi Minh City", "Industrial University of Ho Chi Minh City", "University of Transport and Communications", "Hanoi University of Natural Resources and Environment", "Posts and Telecommunications Institute of Technology", "Vietnam National University of Music", "Vinh University", "University of Economics and Law - Ho Chi Minh City", "Hue University of Economics", "Vietnam Maritime University", "Vietnam National University of Civil Engineering", "Hanoi National University of Education", "Hoa Sen University", "Hanoi Open University", "Hong Bang International University", "Bach Khoa University - Ho Chi Minh City", "Ton Duc Thang University", "Van Lang University", "Foreign Trade University", "Hanoi Law University", "Hanoi University of Business and Technology", "Phuong Dong University", "Water Resources University", "Hanoi University of Physical Education and Sports", "Banking University of Ho Chi Minh City", "Pham Ngoc Thach University of Medicine", "Foreign Trade University - Ho Chi Minh City", "Vietnam Academy of Social Sciences", "Hanoi Architectural University", "Hanoi University of Science and Technology - Vietnam - France University", "University of Da Nang - University of Economics", "University of Labor and Social Affairs", "Hanoi University of Science", "Hanoi University of Civil Engineering", "Hanoi University of Mining and Geology - University of Science and Technology", "University of Finance and Marketing", "Hanoi Medical University", "Hanoi National University of Education", "Hanoi University of Technology and Business", "Ho Chi Minh City University of Information Technology", "Vietnam National University of Agriculture - International Cooperation Center", "Hanoi University of Agriculture - Sub-Institute for Training and Technology Transfer", "Hung Vuong University", "Lac Hong University", "Hoa Binh University", "Bac Ha International University", "University of Labour and Social Affairs - Ho Chi Minh City", "Vietnam National University of Art Education - International College", "Hanoi University of Business", "Vietnam National University of Civil Engineering - International Training Institute for Infrastructural Safety and Environment", "Tay Bac University", "Hue College of Economics", "Hue College of Medicine and Pharmacy", "Ha Long University", "Hanoi University of Home Affairs - Thai Nguyen University of Politics", "Hanoi University of Public Health", "Hanoi University of Social Sciences and Humanities", "Hanoi University of Technology and Education", "Haiphong University", "Hoa Sen University - International College", "Ho Chi Minh City University of Architecture", "Ho Chi Minh City University of Culture", "Ho Chi Minh City University of Law", "Ho Chi Minh City University of Pedagogy - Dong Thap University", "Ho Chi Minh City University of Technology - Vietnam National University Ho Chi Minh City", "Ho Chi Minh City University of Transport", "Ho Chi Minh City University of Transport - International School", "Hue University of Agriculture and Forestry - Quang Tri Branch", "Hue University of Medicine and Pharmacy - Quang Tri Branch", "Hung Yen University of Technology and Education", "Industrial University of Ho Chi Minh City - Bien Hoa Branch", "International University - Vietnam National University Ho Chi Minh City", "Kien Giang University", "Lac Hong University - Branch in Ho Chi Minh City", "Lac Hong University - Branch in Vung Tau City", "Lac Hong University - Branch in Nha Trang City", "Lac Hong University - Branch in Can Tho City", "Lac Hong University - Branch in Binh Duong Province", "Lac Hong University - Branch in Binh Thuan Province", "Lac Hong University - Branch in Dong Nai Province", "Lac Hong University - Branch in Binh Phuoc Province", "Lac Hong University - Branch in Long An Province", "Lac Hong University - Branch in Da Nang City", "Lac Hong University - Branch in Quang Tri Province", "Lac Hong University - Branch in Lam Dong Province", "Lac Hong University - Branch in Thai Nguyen Province", "Lac Hong University - Branch in Nghe An Province", "Lac Hong University - Branch in Khanh Hoa Province", "Lac Hong University - Branch in Quang Nam Province", "Lac Hong University - Branch in Quang Ngai Province", "Lac Hong University - Branch in Thanh Hoa Province", "Lac Hong University - Branch in Hai Duong Province", "Lac Hong University - Branch in Vinh Phuc Province", "Lac Hong University - Branch in Bac Ninh Province", "Lac Hong University - Branch in Phu Tho Province", "Lac Hong University - Branch in Nam Dinh Province", "Lac Hong University - Branch in Thai Binh Province", "Lac Hong University - Branch in Ninh Binh Province", "Lac Hong University - Branch in Hung Yen Province", "Lac Hong University - Branch in Ha Nam Province", "Lac Hong University - Branch in Yen Bai Province", "Lac Hong University - Branch in Hoa Binh Province", "Lac Hong University - Branch in Son La Province", "Lac Hong University - Branch in Lai Chau Province", "Lac Hong University - Branch in Dien Bien Province", "Lac Hong University - Branch in Lang Son Province", "Lac Hong University - Branch in Cao Bang Province", "Lac Hong University - Branch in Bac Kan Province", "Lac Hong University - Branch in Ha Giang Province", "Lac Hong University - Branch in Tuyen Quang Province", "Lac Hong University - Branch in Bac Giang Province", "Lac Hong University - Branch in Lang Son Province", "Lac Hong University - Branch in Cao Bang Province", "Lac Hong University - Branch in Bac Kan Province", "Lac Hong University - Branch in Ha Giang Province", "Lac Hong University - Branch in Tuyen Quang Province", "Lac Hong University - Branch in Bac Giang Province", "Lac Hong University - Branch in Quang Ninh Province", "Lac Hong University - Branch in Thai Nguyen Province", "Lac Hong University - Branch in Phu Tho Province", "Lac Hong University - Branch in Nam Dinh Province", "Lac Hong University - Branch in Thai Binh Province", "Lac Hong University - Branch in Ninh Binh Province", "Lac Hong University - Branch in Hung Yen Province", "Lac Hong University - Branch in Ha Nam Province", "Lac Hong University - Branch in Yen Bai Province", "Lac Hong University - Branch in Hoa Binh Province", "Lac Hong University - Branch in Son La Province", "Lac Hong University - Branch in Lai Chau Province", "Lac Hong University - Branch in Dien Bien Province", "Lac Hong University - Branch in Lang Son Province", "Lac Hong University - Branch in Cao Bang Province", "Lac Hong University - Branch in Bac Kan Province", "Lac Hong University - Branch in Ha Giang Province", "Lac Hong University - Branch in Tuyen Quang Province", "Lac Hong University - Branch in Bac Giang Province", "Lac Hong University - Branch in Quang Ninh Province", "Lac Hong University - Branch in Binh Duong Province", "Lac Hong University - Branch in Binh Phuoc Province", "Lac Hong University - Branch in Long An Province", "Lac Hong University - Branch in Da Nang City", "Lac Hong University - Branch in Quang Tri Province", "Lac Hong University - Branch in Lam Dong Province", "Lac Hong University - Branch in Thai Nguyen Province", "Lac Hong University - Branch in Nghe An Province", "Lac Hong University - Branch in Khanh Hoa Province", "Lac Hong University - Branch in Quang Nam Province", "Lac Hong University - Branch in Quang Ngai Province", "Lac Hong University - Branch in Thanh Hoa Province", "Lac Hong University - Branch in Hai Duong Province", "Lac Hong University - Branch in Vinh Phuc Province", "Lac Hong University - Branch in Bac Ninh Province", "Lac Hong University - Branch in Quang Ninh Province", "Lac Hong University - Branch in Binh Duong Province", "Lac Hong University - Branch in Binh Phuoc Province", "Lac Hong University - Branch in Long An Province", "Lac Hong University - Branch in Da Nang City", "Lac Hong University - Branch in Quang Tri Province", "Lac Hong University - Branch in Lam Dong Province", "Lac Hong University - Branch in Thai Nguyen Province", "Lac Hong University - Branch in Nghe An Province", "Lac Hong University - Branch in Khanh Hoa Province", "Lac Hong University - Branch in Quang Nam Province", "Lac Hong University - Branch in Quang Ngai Province", "Lac Hong University - Branch in Thanh Hoa Province", "Lac Hong University - Branch in Hai Duong Province", "Lac Hong University - Branch in Vinh Phuc Province", "Lac Hong University - Branch in Bac Ninh Province" });
-            clbUniversity.Location = new Point(30, 162);
-            clbUniversity.Name = "clbUniversity";
-            clbUniversity.Size = new Size(675, 154);
-            clbUniversity.TabIndex = 33;
             // 
             // gGradientButtonSave
             // 
             gGradientButtonSave.BackColor = Color.Transparent;
             gGradientButtonSave.BorderRadius = 7;
-            gGradientButtonSave.CustomizableEdges = customizableEdges7;
+            gGradientButtonSave.CustomizableEdges = customizableEdges1;
             gGradientButtonSave.DisabledState.BorderColor = Color.DarkGray;
             gGradientButtonSave.DisabledState.CustomBorderColor = Color.DarkGray;
             gGradientButtonSave.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -317,7 +175,7 @@
             gGradientButtonSave.ForeColor = Color.White;
             gGradientButtonSave.Location = new Point(997, 775);
             gGradientButtonSave.Name = "gGradientButtonSave";
-            gGradientButtonSave.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            gGradientButtonSave.ShadowDecoration.CustomizableEdges = customizableEdges2;
             gGradientButtonSave.Size = new Size(100, 35);
             gGradientButtonSave.TabIndex = 34;
             gGradientButtonSave.Text = "Save";
@@ -327,7 +185,7 @@
             // 
             gButtonCancel.BackColor = Color.Transparent;
             gButtonCancel.BorderRadius = 7;
-            gButtonCancel.CustomizableEdges = customizableEdges9;
+            gButtonCancel.CustomizableEdges = customizableEdges3;
             gButtonCancel.DisabledState.BorderColor = Color.DarkGray;
             gButtonCancel.DisabledState.CustomBorderColor = Color.DarkGray;
             gButtonCancel.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -337,153 +195,11 @@
             gButtonCancel.ForeColor = Color.White;
             gButtonCancel.Location = new Point(891, 775);
             gButtonCancel.Name = "gButtonCancel";
-            gButtonCancel.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            gButtonCancel.ShadowDecoration.CustomizableEdges = customizableEdges4;
             gButtonCancel.Size = new Size(100, 35);
             gButtonCancel.TabIndex = 35;
             gButtonCancel.Text = "Cancel";
             gButtonCancel.Click += gButtonCancel_Click;
-            // 
-            // gShadowPanelFaculty
-            // 
-            gShadowPanelFaculty.BackColor = Color.Transparent;
-            gShadowPanelFaculty.Controls.Add(gTextBoxFacultySelected);
-            gShadowPanelFaculty.Controls.Add(lblFacultySelectAll);
-            gShadowPanelFaculty.Controls.Add(gTextBoxSearchFaculty);
-            gShadowPanelFaculty.Controls.Add(clbFaculty);
-            gShadowPanelFaculty.Controls.Add(gButtonFacultySelectAll);
-            gShadowPanelFaculty.Controls.Add(gSeparatorFaculty);
-            gShadowPanelFaculty.Controls.Add(lblFaculty);
-            gShadowPanelFaculty.FillColor = Color.White;
-            gShadowPanelFaculty.Location = new Point(368, 364);
-            gShadowPanelFaculty.Name = "gShadowPanelFaculty";
-            gShadowPanelFaculty.Radius = 7;
-            gShadowPanelFaculty.ShadowColor = Color.Black;
-            gShadowPanelFaculty.ShadowDepth = 120;
-            gShadowPanelFaculty.ShadowShift = 7;
-            gShadowPanelFaculty.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            gShadowPanelFaculty.Size = new Size(734, 303);
-            gShadowPanelFaculty.TabIndex = 38;
-            // 
-            // gTextBoxFacultySelected
-            // 
-            gTextBoxFacultySelected.BorderColor = Color.FromArgb(74, 97, 94);
-            gTextBoxFacultySelected.BorderRadius = 5;
-            gTextBoxFacultySelected.CustomizableEdges = customizableEdges11;
-            gTextBoxFacultySelected.DefaultText = "";
-            gTextBoxFacultySelected.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            gTextBoxFacultySelected.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            gTextBoxFacultySelected.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            gTextBoxFacultySelected.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            gTextBoxFacultySelected.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            gTextBoxFacultySelected.Font = new Font("Segoe UI", 9F);
-            gTextBoxFacultySelected.ForeColor = Color.Black;
-            gTextBoxFacultySelected.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            gTextBoxFacultySelected.IconLeftOffset = new Point(5, 0);
-            gTextBoxFacultySelected.Location = new Point(30, 83);
-            gTextBoxFacultySelected.Margin = new Padding(3, 4, 3, 4);
-            gTextBoxFacultySelected.Multiline = true;
-            gTextBoxFacultySelected.Name = "gTextBoxFacultySelected";
-            gTextBoxFacultySelected.PasswordChar = '\0';
-            gTextBoxFacultySelected.PlaceholderForeColor = Color.Gray;
-            gTextBoxFacultySelected.PlaceholderText = "Faculty selected @";
-            gTextBoxFacultySelected.ReadOnly = true;
-            gTextBoxFacultySelected.SelectedText = "";
-            gTextBoxFacultySelected.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            gTextBoxFacultySelected.Size = new Size(675, 65);
-            gTextBoxFacultySelected.TabIndex = 36;
-            gTextBoxFacultySelected.TextOffset = new Point(5, 0);
-            // 
-            // lblFacultySelectAll
-            // 
-            lblFacultySelectAll.AutoSize = true;
-            lblFacultySelectAll.BackColor = Color.Transparent;
-            lblFacultySelectAll.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblFacultySelectAll.ForeColor = Color.FromArgb(74, 97, 94);
-            lblFacultySelectAll.Location = new Point(578, 19);
-            lblFacultySelectAll.Name = "lblFacultySelectAll";
-            lblFacultySelectAll.Size = new Size(84, 25);
-            lblFacultySelectAll.TabIndex = 35;
-            lblFacultySelectAll.Text = "select all";
-            // 
-            // gTextBoxSearchFaculty
-            // 
-            gTextBoxSearchFaculty.BorderColor = Color.FromArgb(74, 97, 94);
-            gTextBoxSearchFaculty.BorderRadius = 8;
-            gTextBoxSearchFaculty.CustomizableEdges = customizableEdges13;
-            gTextBoxSearchFaculty.DefaultText = "";
-            gTextBoxSearchFaculty.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            gTextBoxSearchFaculty.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            gTextBoxSearchFaculty.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            gTextBoxSearchFaculty.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            gTextBoxSearchFaculty.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            gTextBoxSearchFaculty.Font = new Font("Segoe UI", 9F);
-            gTextBoxSearchFaculty.ForeColor = Color.Black;
-            gTextBoxSearchFaculty.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            gTextBoxSearchFaculty.IconLeft = (Image)resources.GetObject("gTextBoxSearchFaculty.IconLeft");
-            gTextBoxSearchFaculty.IconLeftOffset = new Point(5, 0);
-            gTextBoxSearchFaculty.Location = new Point(187, 13);
-            gTextBoxSearchFaculty.Margin = new Padding(3, 4, 3, 4);
-            gTextBoxSearchFaculty.Name = "gTextBoxSearchFaculty";
-            gTextBoxSearchFaculty.PasswordChar = '\0';
-            gTextBoxSearchFaculty.PlaceholderForeColor = Color.Gray;
-            gTextBoxSearchFaculty.PlaceholderText = "Search faculty";
-            gTextBoxSearchFaculty.SelectedText = "";
-            gTextBoxSearchFaculty.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            gTextBoxSearchFaculty.Size = new Size(287, 40);
-            gTextBoxSearchFaculty.TabIndex = 34;
-            gTextBoxSearchFaculty.TextOffset = new Point(5, 0);
-            // 
-            // clbFaculty
-            // 
-            clbFaculty.BorderStyle = BorderStyle.None;
-            clbFaculty.FormattingEnabled = true;
-            clbFaculty.Items.AddRange(new object[] { "Faculty of Mathematics and Computer Science - Toan - Khoa hoc may tinh", "Faculty of Physics - Vat ly", "Faculty of Chemistry - Hoa hoc", "Faculty of Biology - Sinh hoc", "Faculty of Earth Sciences - Khoa hoc Trai dat", "Faculty of Information Technology - Cong nghe Thong tin", "Faculty of Material Science and Technology - Vat lieu va Cong nghe Vat lieu", "Faculty of Environmental Science and Engineering - Khoa hoc va Ky thuat Moi truong", "Faculty of Electrical and Electronics Engineering - Ky thuat Dien va Dien tu", "Faculty of Mechanical Engineering - Ky thuat Co khi", "Faculty of Chemical Engineering - Ky thuat Hoa hoc", "Faculty of Industrial Engineering - Ky thuat Cong nghiep", "Faculty of Biotechnology - Cong nghe Sinh hoc", "Faculty of Economics - Kinh te", "Faculty of Law - Luat", "Faculty of Humanities and Social Sciences - Nhan van va Khoa hoc Xa hoi", "Faculty of International Studies - Ngoai ngu", "Faculty of Urban Planning - Quy hoach Do thi", "Faculty of Political Science - Khoa hoc Chinh tri", "Faculty of Applied Linguistics - Ngon ngu ung dung", "Faculty of Teacher Education - Dao tao Giao vien" });
-            clbFaculty.Location = new Point(30, 162);
-            clbFaculty.Name = "clbFaculty";
-            clbFaculty.Size = new Size(675, 110);
-            clbFaculty.TabIndex = 33;
-            // 
-            // gButtonFacultySelectAll
-            // 
-            gButtonFacultySelectAll.BackColor = Color.Transparent;
-            gButtonFacultySelectAll.BorderRadius = 5;
-            gButtonFacultySelectAll.CustomizableEdges = customizableEdges15;
-            gButtonFacultySelectAll.DisabledState.BorderColor = Color.DarkGray;
-            gButtonFacultySelectAll.DisabledState.CustomBorderColor = Color.DarkGray;
-            gButtonFacultySelectAll.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            gButtonFacultySelectAll.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            gButtonFacultySelectAll.FillColor = Color.Transparent;
-            gButtonFacultySelectAll.Font = new Font("Segoe UI", 9F);
-            gButtonFacultySelectAll.ForeColor = Color.White;
-            gButtonFacultySelectAll.HoverState.FillColor = Color.White;
-            gButtonFacultySelectAll.HoverState.Image = Properties.Resources.PicItemOff;
-            gButtonFacultySelectAll.Image = Properties.Resources.PicItemOn;
-            gButtonFacultySelectAll.ImageOffset = new Point(1, 0);
-            gButtonFacultySelectAll.ImageSize = new Size(35, 35);
-            gButtonFacultySelectAll.Location = new Point(665, 13);
-            gButtonFacultySelectAll.Name = "gButtonFacultySelectAll";
-            gButtonFacultySelectAll.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            gButtonFacultySelectAll.Size = new Size(40, 40);
-            gButtonFacultySelectAll.TabIndex = 32;
-            // 
-            // gSeparatorFaculty
-            // 
-            gSeparatorFaculty.BackColor = Color.White;
-            gSeparatorFaculty.Location = new Point(30, 64);
-            gSeparatorFaculty.Name = "gSeparatorFaculty";
-            gSeparatorFaculty.Size = new Size(675, 12);
-            gSeparatorFaculty.TabIndex = 31;
-            // 
-            // lblFaculty
-            // 
-            lblFaculty.AutoSize = true;
-            lblFaculty.BackColor = Color.Transparent;
-            lblFaculty.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblFaculty.Location = new Point(30, 22);
-            lblFaculty.Name = "lblFaculty";
-            lblFaculty.Size = new Size(108, 28);
-            lblFaculty.TabIndex = 30;
-            lblFaculty.Text = "FACULTY";
             // 
             // gShadowPanelFavorites
             // 
@@ -502,7 +218,7 @@
             // gButtonStar
             // 
             gButtonStar.BorderRadius = 5;
-            gButtonStar.CustomizableEdges = customizableEdges17;
+            gButtonStar.CustomizableEdges = customizableEdges5;
             gButtonStar.DisabledState.BorderColor = Color.DarkGray;
             gButtonStar.DisabledState.CustomBorderColor = Color.DarkGray;
             gButtonStar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -516,7 +232,7 @@
             gButtonStar.ImageSize = new Size(25, 25);
             gButtonStar.Location = new Point(26, 16);
             gButtonStar.Name = "gButtonStar";
-            gButtonStar.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            gButtonStar.ShadowDecoration.CustomizableEdges = customizableEdges6;
             gButtonStar.Size = new Size(40, 40);
             gButtonStar.TabIndex = 13;
             // 
@@ -552,7 +268,7 @@
             gComboBoxBirthday.BackColor = Color.Transparent;
             gComboBoxBirthday.BorderColor = Color.FromArgb(74, 97, 94);
             gComboBoxBirthday.BorderRadius = 5;
-            gComboBoxBirthday.CustomizableEdges = customizableEdges19;
+            gComboBoxBirthday.CustomizableEdges = customizableEdges7;
             gComboBoxBirthday.DrawMode = DrawMode.OwnerDrawFixed;
             gComboBoxBirthday.DropDownStyle = ComboBoxStyle.DropDownList;
             gComboBoxBirthday.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -563,7 +279,7 @@
             gComboBoxBirthday.Items.AddRange(new object[] { "Male", "Female", "Other" });
             gComboBoxBirthday.Location = new Point(138, 9);
             gComboBoxBirthday.Name = "gComboBoxBirthday";
-            gComboBoxBirthday.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            gComboBoxBirthday.ShadowDecoration.CustomizableEdges = customizableEdges8;
             gComboBoxBirthday.Size = new Size(145, 40);
             gComboBoxBirthday.TabIndex = 39;
             gComboBoxBirthday.TextOffset = new Point(2, 0);
@@ -584,7 +300,7 @@
             // 
             gButtonGenderSelectAll.BackColor = Color.Transparent;
             gButtonGenderSelectAll.BorderRadius = 5;
-            gButtonGenderSelectAll.CustomizableEdges = customizableEdges21;
+            gButtonGenderSelectAll.CustomizableEdges = customizableEdges9;
             gButtonGenderSelectAll.DisabledState.BorderColor = Color.DarkGray;
             gButtonGenderSelectAll.DisabledState.CustomBorderColor = Color.DarkGray;
             gButtonGenderSelectAll.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -599,7 +315,7 @@
             gButtonGenderSelectAll.ImageSize = new Size(35, 35);
             gButtonGenderSelectAll.Location = new Point(382, 9);
             gButtonGenderSelectAll.Name = "gButtonGenderSelectAll";
-            gButtonGenderSelectAll.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            gButtonGenderSelectAll.ShadowDecoration.CustomizableEdges = customizableEdges10;
             gButtonGenderSelectAll.Size = new Size(40, 40);
             gButtonGenderSelectAll.TabIndex = 36;
             // 
@@ -635,7 +351,7 @@
             gComboBoxStatus.BackColor = Color.Transparent;
             gComboBoxStatus.BorderColor = Color.FromArgb(74, 97, 94);
             gComboBoxStatus.BorderRadius = 5;
-            gComboBoxStatus.CustomizableEdges = customizableEdges23;
+            gComboBoxStatus.CustomizableEdges = customizableEdges11;
             gComboBoxStatus.DrawMode = DrawMode.OwnerDrawFixed;
             gComboBoxStatus.DropDownStyle = ComboBoxStyle.DropDownList;
             gComboBoxStatus.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -646,7 +362,7 @@
             gComboBoxStatus.Items.AddRange(new object[] { "Pending", "In Process", "Completed", "Others" });
             gComboBoxStatus.Location = new Point(138, 9);
             gComboBoxStatus.Name = "gComboBoxStatus";
-            gComboBoxStatus.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            gComboBoxStatus.ShadowDecoration.CustomizableEdges = customizableEdges12;
             gComboBoxStatus.Size = new Size(145, 40);
             gComboBoxStatus.TabIndex = 40;
             gComboBoxStatus.TextOffset = new Point(2, 0);
@@ -667,7 +383,7 @@
             // 
             gButtonStatusSelectAll.BackColor = Color.Transparent;
             gButtonStatusSelectAll.BorderRadius = 5;
-            gButtonStatusSelectAll.CustomizableEdges = customizableEdges25;
+            gButtonStatusSelectAll.CustomizableEdges = customizableEdges13;
             gButtonStatusSelectAll.DisabledState.BorderColor = Color.DarkGray;
             gButtonStatusSelectAll.DisabledState.CustomBorderColor = Color.DarkGray;
             gButtonStatusSelectAll.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -682,7 +398,7 @@
             gButtonStatusSelectAll.ImageSize = new Size(35, 35);
             gButtonStatusSelectAll.Location = new Point(384, 9);
             gButtonStatusSelectAll.Name = "gButtonStatusSelectAll";
-            gButtonStatusSelectAll.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            gButtonStatusSelectAll.ShadowDecoration.CustomizableEdges = customizableEdges14;
             gButtonStatusSelectAll.Size = new Size(40, 40);
             gButtonStatusSelectAll.TabIndex = 36;
             // 
@@ -704,7 +420,7 @@
             gShadowPanelYearOfBirth.Controls.Add(gRadioButtonYearFrom);
             gShadowPanelYearOfBirth.Controls.Add(gTextBoxYearTo);
             gShadowPanelYearOfBirth.Controls.Add(lblYearTo);
-            gShadowPanelYearOfBirth.Controls.Add(guna2Separator1);
+            gShadowPanelYearOfBirth.Controls.Add(gSeparatorBirthday);
             gShadowPanelYearOfBirth.Controls.Add(gTextBoxYearFrom);
             gShadowPanelYearOfBirth.Controls.Add(lblYearFrom);
             gShadowPanelYearOfBirth.Controls.Add(lblYearAll);
@@ -763,7 +479,7 @@
             // 
             gTextBoxYearTo.BorderColor = Color.FromArgb(74, 97, 94);
             gTextBoxYearTo.BorderRadius = 5;
-            gTextBoxYearTo.CustomizableEdges = customizableEdges27;
+            gTextBoxYearTo.CustomizableEdges = customizableEdges15;
             gTextBoxYearTo.DefaultText = "";
             gTextBoxYearTo.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxYearTo.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -780,7 +496,7 @@
             gTextBoxYearTo.PlaceholderForeColor = Color.Gray;
             gTextBoxYearTo.PlaceholderText = "number";
             gTextBoxYearTo.SelectedText = "";
-            gTextBoxYearTo.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            gTextBoxYearTo.ShadowDecoration.CustomizableEdges = customizableEdges16;
             gTextBoxYearTo.Size = new Size(120, 30);
             gTextBoxYearTo.TabIndex = 42;
             // 
@@ -796,18 +512,18 @@
             lblYearTo.TabIndex = 43;
             lblYearTo.Text = "to";
             // 
-            // guna2Separator1
+            // gSeparatorBirthday
             // 
-            guna2Separator1.Location = new Point(23, 54);
-            guna2Separator1.Name = "guna2Separator1";
-            guna2Separator1.Size = new Size(272, 12);
-            guna2Separator1.TabIndex = 41;
+            gSeparatorBirthday.Location = new Point(23, 54);
+            gSeparatorBirthday.Name = "gSeparatorBirthday";
+            gSeparatorBirthday.Size = new Size(272, 12);
+            gSeparatorBirthday.TabIndex = 41;
             // 
             // gTextBoxYearFrom
             // 
             gTextBoxYearFrom.BorderColor = Color.FromArgb(74, 97, 94);
             gTextBoxYearFrom.BorderRadius = 5;
-            gTextBoxYearFrom.CustomizableEdges = customizableEdges29;
+            gTextBoxYearFrom.CustomizableEdges = customizableEdges17;
             gTextBoxYearFrom.DefaultText = "";
             gTextBoxYearFrom.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxYearFrom.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -824,7 +540,7 @@
             gTextBoxYearFrom.PlaceholderForeColor = Color.Gray;
             gTextBoxYearFrom.PlaceholderText = "number";
             gTextBoxYearFrom.SelectedText = "";
-            gTextBoxYearFrom.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            gTextBoxYearFrom.ShadowDecoration.CustomizableEdges = customizableEdges18;
             gTextBoxYearFrom.Size = new Size(120, 30);
             gTextBoxYearFrom.TabIndex = 37;
             // 
@@ -856,7 +572,7 @@
             // 
             gButtonYearAll.BackColor = Color.Transparent;
             gButtonYearAll.BorderRadius = 5;
-            gButtonYearAll.CustomizableEdges = customizableEdges31;
+            gButtonYearAll.CustomizableEdges = customizableEdges19;
             gButtonYearAll.DisabledState.BorderColor = Color.DarkGray;
             gButtonYearAll.DisabledState.CustomBorderColor = Color.DarkGray;
             gButtonYearAll.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -871,7 +587,7 @@
             gButtonYearAll.ImageSize = new Size(35, 35);
             gButtonYearAll.Location = new Point(255, 17);
             gButtonYearAll.Name = "gButtonYearAll";
-            gButtonYearAll.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            gButtonYearAll.ShadowDecoration.CustomizableEdges = customizableEdges20;
             gButtonYearAll.Size = new Size(40, 40);
             gButtonYearAll.TabIndex = 38;
             // 
@@ -910,7 +626,7 @@
             // 
             gTextBoxTopicTo.BorderColor = Color.FromArgb(74, 97, 94);
             gTextBoxTopicTo.BorderRadius = 5;
-            gTextBoxTopicTo.CustomizableEdges = customizableEdges33;
+            gTextBoxTopicTo.CustomizableEdges = customizableEdges21;
             gTextBoxTopicTo.DefaultText = "";
             gTextBoxTopicTo.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxTopicTo.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -927,7 +643,7 @@
             gTextBoxTopicTo.PlaceholderForeColor = Color.Gray;
             gTextBoxTopicTo.PlaceholderText = "number";
             gTextBoxTopicTo.SelectedText = "";
-            gTextBoxTopicTo.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            gTextBoxTopicTo.ShadowDecoration.CustomizableEdges = customizableEdges22;
             gTextBoxTopicTo.Size = new Size(120, 30);
             gTextBoxTopicTo.TabIndex = 42;
             // 
@@ -954,7 +670,7 @@
             // 
             gTextBoxTopicFrom.BorderColor = Color.FromArgb(74, 97, 94);
             gTextBoxTopicFrom.BorderRadius = 5;
-            gTextBoxTopicFrom.CustomizableEdges = customizableEdges35;
+            gTextBoxTopicFrom.CustomizableEdges = customizableEdges23;
             gTextBoxTopicFrom.DefaultText = "";
             gTextBoxTopicFrom.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxTopicFrom.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -971,7 +687,7 @@
             gTextBoxTopicFrom.PlaceholderForeColor = Color.Gray;
             gTextBoxTopicFrom.PlaceholderText = "number";
             gTextBoxTopicFrom.SelectedText = "";
-            gTextBoxTopicFrom.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            gTextBoxTopicFrom.ShadowDecoration.CustomizableEdges = customizableEdges24;
             gTextBoxTopicFrom.Size = new Size(120, 30);
             gTextBoxTopicFrom.TabIndex = 37;
             // 
@@ -1003,7 +719,7 @@
             // 
             gButtonTopicAll.BackColor = Color.Transparent;
             gButtonTopicAll.BorderRadius = 5;
-            gButtonTopicAll.CustomizableEdges = customizableEdges37;
+            gButtonTopicAll.CustomizableEdges = customizableEdges25;
             gButtonTopicAll.DisabledState.BorderColor = Color.DarkGray;
             gButtonTopicAll.DisabledState.CustomBorderColor = Color.DarkGray;
             gButtonTopicAll.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -1018,7 +734,7 @@
             gButtonTopicAll.ImageSize = new Size(35, 35);
             gButtonTopicAll.Location = new Point(255, 17);
             gButtonTopicAll.Name = "gButtonTopicAll";
-            gButtonTopicAll.ShadowDecoration.CustomizableEdges = customizableEdges38;
+            gButtonTopicAll.ShadowDecoration.CustomizableEdges = customizableEdges26;
             gButtonTopicAll.Size = new Size(40, 40);
             gButtonTopicAll.TabIndex = 38;
             // 
@@ -1057,7 +773,7 @@
             // 
             gTextBoxThesisTo.BorderColor = Color.FromArgb(74, 97, 94);
             gTextBoxThesisTo.BorderRadius = 5;
-            gTextBoxThesisTo.CustomizableEdges = customizableEdges39;
+            gTextBoxThesisTo.CustomizableEdges = customizableEdges27;
             gTextBoxThesisTo.DefaultText = "";
             gTextBoxThesisTo.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxThesisTo.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -1074,7 +790,7 @@
             gTextBoxThesisTo.PlaceholderForeColor = Color.Gray;
             gTextBoxThesisTo.PlaceholderText = "number";
             gTextBoxThesisTo.SelectedText = "";
-            gTextBoxThesisTo.ShadowDecoration.CustomizableEdges = customizableEdges40;
+            gTextBoxThesisTo.ShadowDecoration.CustomizableEdges = customizableEdges28;
             gTextBoxThesisTo.Size = new Size(120, 30);
             gTextBoxThesisTo.TabIndex = 42;
             // 
@@ -1101,7 +817,7 @@
             // 
             gTextBoxThesisFrom.BorderColor = Color.FromArgb(74, 97, 94);
             gTextBoxThesisFrom.BorderRadius = 5;
-            gTextBoxThesisFrom.CustomizableEdges = customizableEdges41;
+            gTextBoxThesisFrom.CustomizableEdges = customizableEdges29;
             gTextBoxThesisFrom.DefaultText = "";
             gTextBoxThesisFrom.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxThesisFrom.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -1118,7 +834,7 @@
             gTextBoxThesisFrom.PlaceholderForeColor = Color.Gray;
             gTextBoxThesisFrom.PlaceholderText = "number";
             gTextBoxThesisFrom.SelectedText = "";
-            gTextBoxThesisFrom.ShadowDecoration.CustomizableEdges = customizableEdges42;
+            gTextBoxThesisFrom.ShadowDecoration.CustomizableEdges = customizableEdges30;
             gTextBoxThesisFrom.Size = new Size(120, 30);
             gTextBoxThesisFrom.TabIndex = 37;
             // 
@@ -1150,7 +866,7 @@
             // 
             gButtonThesisAll.BackColor = Color.Transparent;
             gButtonThesisAll.BorderRadius = 5;
-            gButtonThesisAll.CustomizableEdges = customizableEdges43;
+            gButtonThesisAll.CustomizableEdges = customizableEdges31;
             gButtonThesisAll.DisabledState.BorderColor = Color.DarkGray;
             gButtonThesisAll.DisabledState.CustomBorderColor = Color.DarkGray;
             gButtonThesisAll.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -1165,7 +881,7 @@
             gButtonThesisAll.ImageSize = new Size(35, 35);
             gButtonThesisAll.Location = new Point(255, 17);
             gButtonThesisAll.Name = "gButtonThesisAll";
-            gButtonThesisAll.ShadowDecoration.CustomizableEdges = customizableEdges44;
+            gButtonThesisAll.ShadowDecoration.CustomizableEdges = customizableEdges32;
             gButtonThesisAll.Size = new Size(40, 40);
             gButtonThesisAll.TabIndex = 38;
             // 
@@ -1204,7 +920,7 @@
             // 
             gTextBoxTeamTo.BorderColor = Color.FromArgb(74, 97, 94);
             gTextBoxTeamTo.BorderRadius = 5;
-            gTextBoxTeamTo.CustomizableEdges = customizableEdges45;
+            gTextBoxTeamTo.CustomizableEdges = customizableEdges33;
             gTextBoxTeamTo.DefaultText = "";
             gTextBoxTeamTo.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxTeamTo.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -1221,7 +937,7 @@
             gTextBoxTeamTo.PlaceholderForeColor = Color.Gray;
             gTextBoxTeamTo.PlaceholderText = "number";
             gTextBoxTeamTo.SelectedText = "";
-            gTextBoxTeamTo.ShadowDecoration.CustomizableEdges = customizableEdges46;
+            gTextBoxTeamTo.ShadowDecoration.CustomizableEdges = customizableEdges34;
             gTextBoxTeamTo.Size = new Size(120, 30);
             gTextBoxTeamTo.TabIndex = 42;
             // 
@@ -1248,7 +964,7 @@
             // 
             gTextBoxTeamFrom.BorderColor = Color.FromArgb(74, 97, 94);
             gTextBoxTeamFrom.BorderRadius = 5;
-            gTextBoxTeamFrom.CustomizableEdges = customizableEdges47;
+            gTextBoxTeamFrom.CustomizableEdges = customizableEdges35;
             gTextBoxTeamFrom.DefaultText = "";
             gTextBoxTeamFrom.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxTeamFrom.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -1265,7 +981,7 @@
             gTextBoxTeamFrom.PlaceholderForeColor = Color.Gray;
             gTextBoxTeamFrom.PlaceholderText = "number";
             gTextBoxTeamFrom.SelectedText = "";
-            gTextBoxTeamFrom.ShadowDecoration.CustomizableEdges = customizableEdges48;
+            gTextBoxTeamFrom.ShadowDecoration.CustomizableEdges = customizableEdges36;
             gTextBoxTeamFrom.Size = new Size(120, 30);
             gTextBoxTeamFrom.TabIndex = 37;
             // 
@@ -1297,7 +1013,7 @@
             // 
             gButtonTeamAll.BackColor = Color.Transparent;
             gButtonTeamAll.BorderRadius = 5;
-            gButtonTeamAll.CustomizableEdges = customizableEdges49;
+            gButtonTeamAll.CustomizableEdges = customizableEdges37;
             gButtonTeamAll.DisabledState.BorderColor = Color.DarkGray;
             gButtonTeamAll.DisabledState.CustomBorderColor = Color.DarkGray;
             gButtonTeamAll.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -1312,7 +1028,7 @@
             gButtonTeamAll.ImageSize = new Size(35, 35);
             gButtonTeamAll.Location = new Point(255, 17);
             gButtonTeamAll.Name = "gButtonTeamAll";
-            gButtonTeamAll.ShadowDecoration.CustomizableEdges = customizableEdges50;
+            gButtonTeamAll.ShadowDecoration.CustomizableEdges = customizableEdges38;
             gButtonTeamAll.Size = new Size(40, 40);
             gButtonTeamAll.TabIndex = 38;
             // 
@@ -1326,6 +1042,290 @@
             lblTeam.Size = new Size(126, 28);
             lblTeam.TabIndex = 12;
             lblTeam.Text = "NUM TEAM";
+            // 
+            // lblFaculty
+            // 
+            lblFaculty.AutoSize = true;
+            lblFaculty.BackColor = Color.Transparent;
+            lblFaculty.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblFaculty.Location = new Point(30, 22);
+            lblFaculty.Name = "lblFaculty";
+            lblFaculty.Size = new Size(108, 28);
+            lblFaculty.TabIndex = 30;
+            lblFaculty.Text = "FACULTY";
+            // 
+            // gSeparatorFaculty
+            // 
+            gSeparatorFaculty.BackColor = Color.White;
+            gSeparatorFaculty.Location = new Point(30, 64);
+            gSeparatorFaculty.Name = "gSeparatorFaculty";
+            gSeparatorFaculty.Size = new Size(675, 12);
+            gSeparatorFaculty.TabIndex = 31;
+            // 
+            // gButtonFacultySelectAll
+            // 
+            gButtonFacultySelectAll.BackColor = Color.Transparent;
+            gButtonFacultySelectAll.BorderRadius = 5;
+            gButtonFacultySelectAll.CustomizableEdges = customizableEdges39;
+            gButtonFacultySelectAll.DisabledState.BorderColor = Color.DarkGray;
+            gButtonFacultySelectAll.DisabledState.CustomBorderColor = Color.DarkGray;
+            gButtonFacultySelectAll.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            gButtonFacultySelectAll.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            gButtonFacultySelectAll.FillColor = Color.Transparent;
+            gButtonFacultySelectAll.Font = new Font("Segoe UI", 9F);
+            gButtonFacultySelectAll.ForeColor = Color.White;
+            gButtonFacultySelectAll.HoverState.FillColor = Color.White;
+            gButtonFacultySelectAll.HoverState.Image = Properties.Resources.PicItemOff;
+            gButtonFacultySelectAll.Image = Properties.Resources.PicItemOn;
+            gButtonFacultySelectAll.ImageOffset = new Point(1, 0);
+            gButtonFacultySelectAll.ImageSize = new Size(35, 35);
+            gButtonFacultySelectAll.Location = new Point(665, 13);
+            gButtonFacultySelectAll.Name = "gButtonFacultySelectAll";
+            gButtonFacultySelectAll.ShadowDecoration.CustomizableEdges = customizableEdges40;
+            gButtonFacultySelectAll.Size = new Size(40, 40);
+            gButtonFacultySelectAll.TabIndex = 32;
+            // 
+            // clbFaculty
+            // 
+            clbFaculty.BorderStyle = BorderStyle.None;
+            clbFaculty.FormattingEnabled = true;
+            clbFaculty.Items.AddRange(new object[] { "Faculty of Mathematics and Computer Science - Toan - Khoa hoc may tinh", "Faculty of Physics - Vat ly", "Faculty of Chemistry - Hoa hoc", "Faculty of Biology - Sinh hoc", "Faculty of Earth Sciences - Khoa hoc Trai dat", "Faculty of Information Technology - Cong nghe Thong tin", "Faculty of Material Science and Technology - Vat lieu va Cong nghe Vat lieu", "Faculty of Environmental Science and Engineering - Khoa hoc va Ky thuat Moi truong", "Faculty of Electrical and Electronics Engineering - Ky thuat Dien va Dien tu", "Faculty of Mechanical Engineering - Ky thuat Co khi", "Faculty of Chemical Engineering - Ky thuat Hoa hoc", "Faculty of Industrial Engineering - Ky thuat Cong nghiep", "Faculty of Biotechnology - Cong nghe Sinh hoc", "Faculty of Economics - Kinh te", "Faculty of Law - Luat", "Faculty of Humanities and Social Sciences - Nhan van va Khoa hoc Xa hoi", "Faculty of International Studies - Ngoai ngu", "Faculty of Urban Planning - Quy hoach Do thi", "Faculty of Political Science - Khoa hoc Chinh tri", "Faculty of Applied Linguistics - Ngon ngu ung dung", "Faculty of Teacher Education - Dao tao Giao vien" });
+            clbFaculty.Location = new Point(30, 162);
+            clbFaculty.Name = "clbFaculty";
+            clbFaculty.Size = new Size(675, 110);
+            clbFaculty.TabIndex = 33;
+            // 
+            // gTextBoxSearchFaculty
+            // 
+            gTextBoxSearchFaculty.BorderColor = Color.FromArgb(74, 97, 94);
+            gTextBoxSearchFaculty.BorderRadius = 8;
+            gTextBoxSearchFaculty.CustomizableEdges = customizableEdges41;
+            gTextBoxSearchFaculty.DefaultText = "";
+            gTextBoxSearchFaculty.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            gTextBoxSearchFaculty.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            gTextBoxSearchFaculty.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            gTextBoxSearchFaculty.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            gTextBoxSearchFaculty.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            gTextBoxSearchFaculty.Font = new Font("Segoe UI", 9F);
+            gTextBoxSearchFaculty.ForeColor = Color.Black;
+            gTextBoxSearchFaculty.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            gTextBoxSearchFaculty.IconLeft = (Image)resources.GetObject("gTextBoxSearchFaculty.IconLeft");
+            gTextBoxSearchFaculty.IconLeftOffset = new Point(5, 0);
+            gTextBoxSearchFaculty.Location = new Point(187, 13);
+            gTextBoxSearchFaculty.Margin = new Padding(3, 4, 3, 4);
+            gTextBoxSearchFaculty.Name = "gTextBoxSearchFaculty";
+            gTextBoxSearchFaculty.PasswordChar = '\0';
+            gTextBoxSearchFaculty.PlaceholderForeColor = Color.Gray;
+            gTextBoxSearchFaculty.PlaceholderText = "Search faculty";
+            gTextBoxSearchFaculty.SelectedText = "";
+            gTextBoxSearchFaculty.ShadowDecoration.CustomizableEdges = customizableEdges42;
+            gTextBoxSearchFaculty.Size = new Size(287, 40);
+            gTextBoxSearchFaculty.TabIndex = 34;
+            gTextBoxSearchFaculty.TextOffset = new Point(5, 0);
+            // 
+            // lblFacultySelectAll
+            // 
+            lblFacultySelectAll.AutoSize = true;
+            lblFacultySelectAll.BackColor = Color.Transparent;
+            lblFacultySelectAll.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblFacultySelectAll.ForeColor = Color.FromArgb(74, 97, 94);
+            lblFacultySelectAll.Location = new Point(578, 19);
+            lblFacultySelectAll.Name = "lblFacultySelectAll";
+            lblFacultySelectAll.Size = new Size(84, 25);
+            lblFacultySelectAll.TabIndex = 35;
+            lblFacultySelectAll.Text = "select all";
+            // 
+            // gTextBoxFacultySelected
+            // 
+            gTextBoxFacultySelected.BorderColor = Color.FromArgb(74, 97, 94);
+            gTextBoxFacultySelected.BorderRadius = 5;
+            gTextBoxFacultySelected.CustomizableEdges = customizableEdges43;
+            gTextBoxFacultySelected.DefaultText = "";
+            gTextBoxFacultySelected.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            gTextBoxFacultySelected.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            gTextBoxFacultySelected.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            gTextBoxFacultySelected.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            gTextBoxFacultySelected.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            gTextBoxFacultySelected.Font = new Font("Segoe UI", 9F);
+            gTextBoxFacultySelected.ForeColor = Color.Black;
+            gTextBoxFacultySelected.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            gTextBoxFacultySelected.IconLeftOffset = new Point(5, 0);
+            gTextBoxFacultySelected.Location = new Point(30, 83);
+            gTextBoxFacultySelected.Margin = new Padding(3, 4, 3, 4);
+            gTextBoxFacultySelected.Multiline = true;
+            gTextBoxFacultySelected.Name = "gTextBoxFacultySelected";
+            gTextBoxFacultySelected.PasswordChar = '\0';
+            gTextBoxFacultySelected.PlaceholderForeColor = Color.Gray;
+            gTextBoxFacultySelected.PlaceholderText = "Faculty selected @";
+            gTextBoxFacultySelected.ReadOnly = true;
+            gTextBoxFacultySelected.SelectedText = "";
+            gTextBoxFacultySelected.ShadowDecoration.CustomizableEdges = customizableEdges44;
+            gTextBoxFacultySelected.Size = new Size(675, 65);
+            gTextBoxFacultySelected.TabIndex = 36;
+            gTextBoxFacultySelected.TextOffset = new Point(5, 0);
+            // 
+            // gShadowPanelFaculty
+            // 
+            gShadowPanelFaculty.BackColor = Color.Transparent;
+            gShadowPanelFaculty.Controls.Add(gTextBoxFacultySelected);
+            gShadowPanelFaculty.Controls.Add(lblFacultySelectAll);
+            gShadowPanelFaculty.Controls.Add(gTextBoxSearchFaculty);
+            gShadowPanelFaculty.Controls.Add(clbFaculty);
+            gShadowPanelFaculty.Controls.Add(gButtonFacultySelectAll);
+            gShadowPanelFaculty.Controls.Add(gSeparatorFaculty);
+            gShadowPanelFaculty.Controls.Add(lblFaculty);
+            gShadowPanelFaculty.FillColor = Color.White;
+            gShadowPanelFaculty.Location = new Point(368, 364);
+            gShadowPanelFaculty.Name = "gShadowPanelFaculty";
+            gShadowPanelFaculty.Radius = 7;
+            gShadowPanelFaculty.ShadowColor = Color.Black;
+            gShadowPanelFaculty.ShadowDepth = 120;
+            gShadowPanelFaculty.ShadowShift = 7;
+            gShadowPanelFaculty.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
+            gShadowPanelFaculty.Size = new Size(734, 303);
+            gShadowPanelFaculty.TabIndex = 38;
+            // 
+            // lblUniversity
+            // 
+            lblUniversity.AutoSize = true;
+            lblUniversity.BackColor = Color.Transparent;
+            lblUniversity.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblUniversity.Location = new Point(30, 22);
+            lblUniversity.Name = "lblUniversity";
+            lblUniversity.Size = new Size(136, 28);
+            lblUniversity.TabIndex = 30;
+            lblUniversity.Text = "UNIVERSITY";
+            // 
+            // gSeparatorUniversity
+            // 
+            gSeparatorUniversity.BackColor = Color.White;
+            gSeparatorUniversity.Location = new Point(30, 64);
+            gSeparatorUniversity.Name = "gSeparatorUniversity";
+            gSeparatorUniversity.Size = new Size(675, 12);
+            gSeparatorUniversity.TabIndex = 31;
+            // 
+            // gButtonUniversitySelectAll
+            // 
+            gButtonUniversitySelectAll.BackColor = Color.Transparent;
+            gButtonUniversitySelectAll.BorderRadius = 5;
+            gButtonUniversitySelectAll.CustomizableEdges = customizableEdges45;
+            gButtonUniversitySelectAll.DisabledState.BorderColor = Color.DarkGray;
+            gButtonUniversitySelectAll.DisabledState.CustomBorderColor = Color.DarkGray;
+            gButtonUniversitySelectAll.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            gButtonUniversitySelectAll.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            gButtonUniversitySelectAll.FillColor = Color.Transparent;
+            gButtonUniversitySelectAll.Font = new Font("Segoe UI", 9F);
+            gButtonUniversitySelectAll.ForeColor = Color.White;
+            gButtonUniversitySelectAll.HoverState.FillColor = Color.White;
+            gButtonUniversitySelectAll.HoverState.Image = Properties.Resources.PicItemOff;
+            gButtonUniversitySelectAll.Image = Properties.Resources.PicItemOn;
+            gButtonUniversitySelectAll.ImageOffset = new Point(1, 0);
+            gButtonUniversitySelectAll.ImageSize = new Size(35, 35);
+            gButtonUniversitySelectAll.Location = new Point(665, 13);
+            gButtonUniversitySelectAll.Name = "gButtonUniversitySelectAll";
+            gButtonUniversitySelectAll.ShadowDecoration.CustomizableEdges = customizableEdges46;
+            gButtonUniversitySelectAll.Size = new Size(40, 40);
+            gButtonUniversitySelectAll.TabIndex = 32;
+            // 
+            // clbUniversity
+            // 
+            clbUniversity.BorderStyle = BorderStyle.None;
+            clbUniversity.FormattingEnabled = true;
+            clbUniversity.Items.AddRange(new object[] { "Vietnam National University, Hanoi", "Vietnam National University, Ho Chi Minh City", "Hanoi University of Science and Technology", "Ho Chi Minh City University of Technology", "Vietnam National University of Agriculture", "Hue University", "Can Tho University", "Da Nang University of Technology", "Hanoi University of Education", "Hanoi University of Agriculture", "Hue University of Medicine and Pharmacy", "Hue University of Sciences", "Hanoi University of Mining and Geology", "Ho Chi Minh City University of Agriculture and Forestry", "Hanoi University of Pharmacy", "University of Danang - University of Science and Technology", "Thai Nguyen University", "University of Da Nang", "Vietnam National University of Forestry", "Vietnam National University of Art Education", "Thai Nguyen University of Agriculture and Forestry", "Ho Chi Minh City University of Pedagogy", "University of Economics, Ho Chi Minh City", "Hanoi University of Home Affairs", "Hanoi University of Culture", "Hanoi University of Industrial Fine Arts", "Duy Tan University", "Nong Lam University - Ho Chi Minh City", "Industrial University of Ho Chi Minh City", "University of Transport and Communications", "Hanoi University of Natural Resources and Environment", "Posts and Telecommunications Institute of Technology", "Vietnam National University of Music", "Vinh University", "University of Economics and Law - Ho Chi Minh City", "Hue University of Economics", "Vietnam Maritime University", "Vietnam National University of Civil Engineering", "Hanoi National University of Education", "Hoa Sen University", "Hanoi Open University", "Hong Bang International University", "Bach Khoa University - Ho Chi Minh City", "Ton Duc Thang University", "Van Lang University", "Foreign Trade University", "Hanoi Law University", "Hanoi University of Business and Technology", "Phuong Dong University", "Water Resources University", "Hanoi University of Physical Education and Sports", "Banking University of Ho Chi Minh City", "Pham Ngoc Thach University of Medicine", "Foreign Trade University - Ho Chi Minh City", "Vietnam Academy of Social Sciences", "Hanoi Architectural University", "Hanoi University of Science and Technology - Vietnam - France University", "University of Da Nang - University of Economics", "University of Labor and Social Affairs", "Hanoi University of Science", "Hanoi University of Civil Engineering", "Hanoi University of Mining and Geology - University of Science and Technology", "University of Finance and Marketing", "Hanoi Medical University", "Hanoi National University of Education", "Hanoi University of Technology and Business", "Ho Chi Minh City University of Information Technology", "Vietnam National University of Agriculture - International Cooperation Center", "Hanoi University of Agriculture - Sub-Institute for Training and Technology Transfer", "Hung Vuong University", "Lac Hong University", "Hoa Binh University", "Bac Ha International University", "University of Labour and Social Affairs - Ho Chi Minh City", "Vietnam National University of Art Education - International College", "Hanoi University of Business", "Vietnam National University of Civil Engineering - International Training Institute for Infrastructural Safety and Environment", "Tay Bac University", "Hue College of Economics", "Hue College of Medicine and Pharmacy", "Ha Long University", "Hanoi University of Home Affairs - Thai Nguyen University of Politics", "Hanoi University of Public Health", "Hanoi University of Social Sciences and Humanities", "Hanoi University of Technology and Education", "Haiphong University", "Hoa Sen University - International College", "Ho Chi Minh City University of Architecture", "Ho Chi Minh City University of Culture", "Ho Chi Minh City University of Law", "Ho Chi Minh City University of Pedagogy - Dong Thap University", "Ho Chi Minh City University of Technology - Vietnam National University Ho Chi Minh City", "Ho Chi Minh City University of Transport", "Ho Chi Minh City University of Transport - International School", "Hue University of Agriculture and Forestry - Quang Tri Branch", "Hue University of Medicine and Pharmacy - Quang Tri Branch", "Hung Yen University of Technology and Education", "Industrial University of Ho Chi Minh City - Bien Hoa Branch", "International University - Vietnam National University Ho Chi Minh City", "Kien Giang University", "Lac Hong University - Branch in Ho Chi Minh City", "Lac Hong University - Branch in Vung Tau City", "Lac Hong University - Branch in Nha Trang City", "Lac Hong University - Branch in Can Tho City", "Lac Hong University - Branch in Binh Duong Province", "Lac Hong University - Branch in Binh Thuan Province", "Lac Hong University - Branch in Dong Nai Province", "Lac Hong University - Branch in Binh Phuoc Province", "Lac Hong University - Branch in Long An Province", "Lac Hong University - Branch in Da Nang City", "Lac Hong University - Branch in Quang Tri Province", "Lac Hong University - Branch in Lam Dong Province", "Lac Hong University - Branch in Thai Nguyen Province", "Lac Hong University - Branch in Nghe An Province", "Lac Hong University - Branch in Khanh Hoa Province", "Lac Hong University - Branch in Quang Nam Province", "Lac Hong University - Branch in Quang Ngai Province", "Lac Hong University - Branch in Thanh Hoa Province", "Lac Hong University - Branch in Hai Duong Province", "Lac Hong University - Branch in Vinh Phuc Province", "Lac Hong University - Branch in Bac Ninh Province", "Lac Hong University - Branch in Phu Tho Province", "Lac Hong University - Branch in Nam Dinh Province", "Lac Hong University - Branch in Thai Binh Province", "Lac Hong University - Branch in Ninh Binh Province", "Lac Hong University - Branch in Hung Yen Province", "Lac Hong University - Branch in Ha Nam Province", "Lac Hong University - Branch in Yen Bai Province", "Lac Hong University - Branch in Hoa Binh Province", "Lac Hong University - Branch in Son La Province", "Lac Hong University - Branch in Lai Chau Province", "Lac Hong University - Branch in Dien Bien Province", "Lac Hong University - Branch in Lang Son Province", "Lac Hong University - Branch in Cao Bang Province", "Lac Hong University - Branch in Bac Kan Province", "Lac Hong University - Branch in Ha Giang Province", "Lac Hong University - Branch in Tuyen Quang Province", "Lac Hong University - Branch in Bac Giang Province", "Lac Hong University - Branch in Lang Son Province", "Lac Hong University - Branch in Cao Bang Province", "Lac Hong University - Branch in Bac Kan Province", "Lac Hong University - Branch in Ha Giang Province", "Lac Hong University - Branch in Tuyen Quang Province", "Lac Hong University - Branch in Bac Giang Province", "Lac Hong University - Branch in Quang Ninh Province", "Lac Hong University - Branch in Thai Nguyen Province", "Lac Hong University - Branch in Phu Tho Province", "Lac Hong University - Branch in Nam Dinh Province", "Lac Hong University - Branch in Thai Binh Province", "Lac Hong University - Branch in Ninh Binh Province", "Lac Hong University - Branch in Hung Yen Province", "Lac Hong University - Branch in Ha Nam Province", "Lac Hong University - Branch in Yen Bai Province", "Lac Hong University - Branch in Hoa Binh Province", "Lac Hong University - Branch in Son La Province", "Lac Hong University - Branch in Lai Chau Province", "Lac Hong University - Branch in Dien Bien Province", "Lac Hong University - Branch in Lang Son Province", "Lac Hong University - Branch in Cao Bang Province", "Lac Hong University - Branch in Bac Kan Province", "Lac Hong University - Branch in Ha Giang Province", "Lac Hong University - Branch in Tuyen Quang Province", "Lac Hong University - Branch in Bac Giang Province", "Lac Hong University - Branch in Quang Ninh Province", "Lac Hong University - Branch in Binh Duong Province", "Lac Hong University - Branch in Binh Phuoc Province", "Lac Hong University - Branch in Long An Province", "Lac Hong University - Branch in Da Nang City", "Lac Hong University - Branch in Quang Tri Province", "Lac Hong University - Branch in Lam Dong Province", "Lac Hong University - Branch in Thai Nguyen Province", "Lac Hong University - Branch in Nghe An Province", "Lac Hong University - Branch in Khanh Hoa Province", "Lac Hong University - Branch in Quang Nam Province", "Lac Hong University - Branch in Quang Ngai Province", "Lac Hong University - Branch in Thanh Hoa Province", "Lac Hong University - Branch in Hai Duong Province", "Lac Hong University - Branch in Vinh Phuc Province", "Lac Hong University - Branch in Bac Ninh Province", "Lac Hong University - Branch in Quang Ninh Province", "Lac Hong University - Branch in Binh Duong Province", "Lac Hong University - Branch in Binh Phuoc Province", "Lac Hong University - Branch in Long An Province", "Lac Hong University - Branch in Da Nang City", "Lac Hong University - Branch in Quang Tri Province", "Lac Hong University - Branch in Lam Dong Province", "Lac Hong University - Branch in Thai Nguyen Province", "Lac Hong University - Branch in Nghe An Province", "Lac Hong University - Branch in Khanh Hoa Province", "Lac Hong University - Branch in Quang Nam Province", "Lac Hong University - Branch in Quang Ngai Province", "Lac Hong University - Branch in Thanh Hoa Province", "Lac Hong University - Branch in Hai Duong Province", "Lac Hong University - Branch in Vinh Phuc Province", "Lac Hong University - Branch in Bac Ninh Province" });
+            clbUniversity.Location = new Point(30, 162);
+            clbUniversity.Name = "clbUniversity";
+            clbUniversity.Size = new Size(675, 154);
+            clbUniversity.TabIndex = 33;
+            // 
+            // gTextBoxSearchUniversity
+            // 
+            gTextBoxSearchUniversity.BorderColor = Color.FromArgb(74, 97, 94);
+            gTextBoxSearchUniversity.BorderRadius = 8;
+            gTextBoxSearchUniversity.CustomizableEdges = customizableEdges47;
+            gTextBoxSearchUniversity.DefaultText = "";
+            gTextBoxSearchUniversity.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            gTextBoxSearchUniversity.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            gTextBoxSearchUniversity.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            gTextBoxSearchUniversity.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            gTextBoxSearchUniversity.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            gTextBoxSearchUniversity.Font = new Font("Segoe UI", 9F);
+            gTextBoxSearchUniversity.ForeColor = Color.Black;
+            gTextBoxSearchUniversity.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            gTextBoxSearchUniversity.IconLeft = (Image)resources.GetObject("gTextBoxSearchUniversity.IconLeft");
+            gTextBoxSearchUniversity.IconLeftOffset = new Point(5, 0);
+            gTextBoxSearchUniversity.Location = new Point(187, 13);
+            gTextBoxSearchUniversity.Margin = new Padding(3, 4, 3, 4);
+            gTextBoxSearchUniversity.Name = "gTextBoxSearchUniversity";
+            gTextBoxSearchUniversity.PasswordChar = '\0';
+            gTextBoxSearchUniversity.PlaceholderForeColor = Color.Gray;
+            gTextBoxSearchUniversity.PlaceholderText = "Search university";
+            gTextBoxSearchUniversity.SelectedText = "";
+            gTextBoxSearchUniversity.ShadowDecoration.CustomizableEdges = customizableEdges48;
+            gTextBoxSearchUniversity.Size = new Size(287, 40);
+            gTextBoxSearchUniversity.TabIndex = 34;
+            gTextBoxSearchUniversity.TextOffset = new Point(5, 0);
+            // 
+            // lblUniversitySelectAll
+            // 
+            lblUniversitySelectAll.AutoSize = true;
+            lblUniversitySelectAll.BackColor = Color.Transparent;
+            lblUniversitySelectAll.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblUniversitySelectAll.ForeColor = Color.FromArgb(74, 97, 94);
+            lblUniversitySelectAll.Location = new Point(577, 19);
+            lblUniversitySelectAll.Name = "lblUniversitySelectAll";
+            lblUniversitySelectAll.Size = new Size(84, 25);
+            lblUniversitySelectAll.TabIndex = 35;
+            lblUniversitySelectAll.Text = "select all";
+            // 
+            // gTextBoxUniversitySelected
+            // 
+            gTextBoxUniversitySelected.BorderColor = Color.FromArgb(74, 97, 94);
+            gTextBoxUniversitySelected.BorderRadius = 5;
+            gTextBoxUniversitySelected.CustomizableEdges = customizableEdges49;
+            gTextBoxUniversitySelected.DefaultText = "";
+            gTextBoxUniversitySelected.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            gTextBoxUniversitySelected.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            gTextBoxUniversitySelected.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            gTextBoxUniversitySelected.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            gTextBoxUniversitySelected.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            gTextBoxUniversitySelected.Font = new Font("Segoe UI", 9F);
+            gTextBoxUniversitySelected.ForeColor = Color.Black;
+            gTextBoxUniversitySelected.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            gTextBoxUniversitySelected.IconLeftOffset = new Point(5, 0);
+            gTextBoxUniversitySelected.Location = new Point(30, 83);
+            gTextBoxUniversitySelected.Margin = new Padding(3, 4, 3, 4);
+            gTextBoxUniversitySelected.Multiline = true;
+            gTextBoxUniversitySelected.Name = "gTextBoxUniversitySelected";
+            gTextBoxUniversitySelected.PasswordChar = '\0';
+            gTextBoxUniversitySelected.PlaceholderForeColor = Color.Gray;
+            gTextBoxUniversitySelected.PlaceholderText = "University selected @";
+            gTextBoxUniversitySelected.ReadOnly = true;
+            gTextBoxUniversitySelected.SelectedText = "";
+            gTextBoxUniversitySelected.ShadowDecoration.CustomizableEdges = customizableEdges50;
+            gTextBoxUniversitySelected.Size = new Size(675, 65);
+            gTextBoxUniversitySelected.TabIndex = 36;
+            gTextBoxUniversitySelected.TextOffset = new Point(5, 0);
+            // 
+            // gShadowPanelUniversity
+            // 
+            gShadowPanelUniversity.BackColor = Color.Transparent;
+            gShadowPanelUniversity.Controls.Add(gTextBoxUniversitySelected);
+            gShadowPanelUniversity.Controls.Add(lblUniversitySelectAll);
+            gShadowPanelUniversity.Controls.Add(gTextBoxSearchUniversity);
+            gShadowPanelUniversity.Controls.Add(clbUniversity);
+            gShadowPanelUniversity.Controls.Add(gButtonUniversitySelectAll);
+            gShadowPanelUniversity.Controls.Add(gSeparatorUniversity);
+            gShadowPanelUniversity.Controls.Add(lblUniversity);
+            gShadowPanelUniversity.FillColor = Color.White;
+            gShadowPanelUniversity.Location = new Point(368, 12);
+            gShadowPanelUniversity.Name = "gShadowPanelUniversity";
+            gShadowPanelUniversity.Radius = 7;
+            gShadowPanelUniversity.ShadowColor = Color.Black;
+            gShadowPanelUniversity.ShadowDepth = 120;
+            gShadowPanelUniversity.ShadowShift = 7;
+            gShadowPanelUniversity.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
+            gShadowPanelUniversity.Size = new Size(734, 346);
+            gShadowPanelUniversity.TabIndex = 37;
             // 
             // FStudentFilter
             // 
@@ -1350,10 +1350,6 @@
             Name = "FStudentFilter";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Student Filter";
-            gShadowPanelUniversity.ResumeLayout(false);
-            gShadowPanelUniversity.PerformLayout();
-            gShadowPanelFaculty.ResumeLayout(false);
-            gShadowPanelFaculty.PerformLayout();
             gShadowPanelFavorites.ResumeLayout(false);
             gShadowPanelFavorites.PerformLayout();
             gShadowPanelGender.ResumeLayout(false);
@@ -1368,29 +1364,16 @@
             gShadowPanelNumThesis.PerformLayout();
             gShadowPanelNumTeam.ResumeLayout(false);
             gShadowPanelNumTeam.PerformLayout();
+            gShadowPanelFaculty.ResumeLayout(false);
+            gShadowPanelFaculty.PerformLayout();
+            gShadowPanelUniversity.ResumeLayout(false);
+            gShadowPanelUniversity.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2Button gButtonUniversitySelectAll;
-        private Guna.UI2.WinForms.Guna2Separator gSeparatorUniversity;
-        private Label lblUniversity;
-        private Guna.UI2.WinForms.Guna2ShadowPanel gShadowPanelUniversity;
         private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonSave;
         private Guna.UI2.WinForms.Guna2Button gButtonCancel;
-        private CheckedListBox clbUniversity;
-        private Guna.UI2.WinForms.Guna2TextBox gTextBoxSearchUniversity;
-        private Label lblUniversitySelectAll;
-        private Guna.UI2.WinForms.Guna2TextBox gTextBoxUniversitySelected;
-        private Guna.UI2.WinForms.Guna2ShadowPanel gShadowPanelFaculty;
-        private Guna.UI2.WinForms.Guna2TextBox gTextBoxFacultySelected;
-        private Label lblFacultySelectAll;
-        private Guna.UI2.WinForms.Guna2TextBox gTextBoxSearchFaculty;
-        private CheckedListBox clbFaculty;
-        private Guna.UI2.WinForms.Guna2Button gButtonFacultySelectAll;
-        private Guna.UI2.WinForms.Guna2Separator gSeparatorFaculty;
-        private Label lblFaculty;
         private Guna.UI2.WinForms.Guna2ShadowPanel gShadowPanelFavorites;
         private Guna.UI2.WinForms.Guna2Button gButtonStar;
         private Label lblFavorites;
@@ -1410,7 +1393,7 @@
         private Label lblYearAll;
         private Guna.UI2.WinForms.Guna2Button gButtonYearAll;
         private Label lblYear;
-        private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
+        private Guna.UI2.WinForms.Guna2Separator gSeparatorBirthday;
         private Guna.UI2.WinForms.Guna2TextBox gTextBoxYearTo;
         private Label lblYearTo;
         private Guna.UI2.WinForms.Guna2ShadowPanel gShadowPanelNumTopic;
@@ -1442,5 +1425,21 @@
         private Label lblTeam;
         private Guna.UI2.WinForms.Guna2RadioButton gRadioButtonYearFrom;
         private Guna.UI2.WinForms.Guna2RadioButton gRadioButtonYearTo;
+        private Label lblFaculty;
+        private Guna.UI2.WinForms.Guna2Separator gSeparatorFaculty;
+        private Guna.UI2.WinForms.Guna2Button gButtonFacultySelectAll;
+        private CheckedListBox clbFaculty;
+        private Guna.UI2.WinForms.Guna2TextBox gTextBoxSearchFaculty;
+        private Label lblFacultySelectAll;
+        private Guna.UI2.WinForms.Guna2TextBox gTextBoxFacultySelected;
+        private Guna.UI2.WinForms.Guna2ShadowPanel gShadowPanelFaculty;
+        private Label lblUniversity;
+        private Guna.UI2.WinForms.Guna2Separator gSeparatorUniversity;
+        private Guna.UI2.WinForms.Guna2Button gButtonUniversitySelectAll;
+        private CheckedListBox clbUniversity;
+        private Guna.UI2.WinForms.Guna2TextBox gTextBoxSearchUniversity;
+        private Label lblUniversitySelectAll;
+        private Guna.UI2.WinForms.Guna2TextBox gTextBoxUniversitySelected;
+        private Guna.UI2.WinForms.Guna2ShadowPanel gShadowPanelUniversity;
     }
 }

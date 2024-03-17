@@ -13,6 +13,8 @@ namespace ThesisManagementProject
 {
     public partial class UCThesisList : UserControl
     {
+        public event EventHandler ThesisLineClicked;
+
         public UCThesisList()
         {
             InitializeComponent();
@@ -25,6 +27,7 @@ namespace ThesisManagementProject
 
         public void AddThesis(UCThesisLine thesis)
         {
+            thesis.ThesisLineClicked += ThesisLine_Clicked;
             flpDataView.Controls.Add(thesis);
         }
 
@@ -32,6 +35,16 @@ namespace ThesisManagementProject
         {
             FThesisFilter fFilterSetting = new FThesisFilter();
             fFilterSetting.ShowDialog();
+        }
+
+        private void ThesisLine_Clicked(object sender, EventArgs e)
+        {
+            OnThesisLineClicked(EventArgs.Empty);
+        }
+
+        protected virtual void OnThesisLineClicked(EventArgs e)
+        {
+            ThesisLineClicked?.Invoke(this, e);
         }
     }
 }

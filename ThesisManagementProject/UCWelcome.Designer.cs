@@ -233,7 +233,7 @@
             gTextBoxYearOfBirth.Name = "gTextBoxYearOfBirth";
             gTextBoxYearOfBirth.PasswordChar = '\0';
             gTextBoxYearOfBirth.PlaceholderForeColor = Color.FromArgb(125, 137, 149);
-            gTextBoxYearOfBirth.PlaceholderText = "Year of birth";
+            gTextBoxYearOfBirth.PlaceholderText = "Birthday";
             gTextBoxYearOfBirth.SelectedText = "";
             gTextBoxYearOfBirth.ShadowDecoration.CustomizableEdges = customizableEdges10;
             gTextBoxYearOfBirth.Size = new Size(467, 40);

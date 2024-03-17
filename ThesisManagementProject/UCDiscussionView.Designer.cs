@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCDiscussionView));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             gShadowPanelMessage = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            gCirclePictureBoxAvatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             gButtonResources = new Guna.UI2.WinForms.Guna2Button();
             gButtonCopy = new Guna.UI2.WinForms.Guna2Button();
             lblThesisCode = new Label();
@@ -59,14 +59,14 @@
             gButtonSend = new Guna.UI2.WinForms.Guna2Button();
             gTextBoxTexting = new Guna.UI2.WinForms.Guna2TextBox();
             gShadowPanelMessage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)gCirclePictureBoxAvatar).BeginInit();
             gShadowPanelTexting.SuspendLayout();
             SuspendLayout();
             // 
             // gShadowPanelMessage
             // 
             gShadowPanelMessage.BackColor = Color.Transparent;
-            gShadowPanelMessage.Controls.Add(guna2CirclePictureBox1);
+            gShadowPanelMessage.Controls.Add(gCirclePictureBoxAvatar);
             gShadowPanelMessage.Controls.Add(gButtonResources);
             gShadowPanelMessage.Controls.Add(gButtonCopy);
             gShadowPanelMessage.Controls.Add(lblThesisCode);
@@ -85,23 +85,23 @@
             gShadowPanelMessage.Size = new Size(703, 605);
             gShadowPanelMessage.TabIndex = 16;
             // 
-            // guna2CirclePictureBox1
+            // gCirclePictureBoxAvatar
             // 
-            guna2CirclePictureBox1.Image = (Image)resources.GetObject("guna2CirclePictureBox1.Image");
-            guna2CirclePictureBox1.ImageRotate = 0F;
-            guna2CirclePictureBox1.Location = new Point(32, 15);
-            guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges1;
-            guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CirclePictureBox1.Size = new Size(55, 55);
-            guna2CirclePictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            guna2CirclePictureBox1.TabIndex = 35;
-            guna2CirclePictureBox1.TabStop = false;
+            gCirclePictureBoxAvatar.Image = (Image)resources.GetObject("gCirclePictureBoxAvatar.Image");
+            gCirclePictureBoxAvatar.ImageRotate = 0F;
+            gCirclePictureBoxAvatar.Location = new Point(32, 15);
+            gCirclePictureBoxAvatar.Name = "gCirclePictureBoxAvatar";
+            gCirclePictureBoxAvatar.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            gCirclePictureBoxAvatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            gCirclePictureBoxAvatar.Size = new Size(55, 55);
+            gCirclePictureBoxAvatar.SizeMode = PictureBoxSizeMode.StretchImage;
+            gCirclePictureBoxAvatar.TabIndex = 35;
+            gCirclePictureBoxAvatar.TabStop = false;
             // 
             // gButtonResources
             // 
             gButtonResources.BorderRadius = 5;
-            gButtonResources.CustomizableEdges = customizableEdges2;
+            gButtonResources.CustomizableEdges = customizableEdges17;
             gButtonResources.DisabledState.BorderColor = Color.DarkGray;
             gButtonResources.DisabledState.CustomBorderColor = Color.DarkGray;
             gButtonResources.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -115,14 +115,14 @@
             gButtonResources.ImageSize = new Size(30, 30);
             gButtonResources.Location = new Point(617, 22);
             gButtonResources.Name = "gButtonResources";
-            gButtonResources.ShadowDecoration.CustomizableEdges = customizableEdges3;
+            gButtonResources.ShadowDecoration.CustomizableEdges = customizableEdges18;
             gButtonResources.Size = new Size(42, 40);
             gButtonResources.TabIndex = 34;
             // 
             // gButtonCopy
             // 
             gButtonCopy.BorderRadius = 2;
-            gButtonCopy.CustomizableEdges = customizableEdges4;
+            gButtonCopy.CustomizableEdges = customizableEdges19;
             gButtonCopy.DisabledState.BorderColor = Color.DarkGray;
             gButtonCopy.DisabledState.CustomBorderColor = Color.DarkGray;
             gButtonCopy.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -137,7 +137,7 @@
             gButtonCopy.ImageSize = new Size(18, 18);
             gButtonCopy.Location = new Point(198, 48);
             gButtonCopy.Name = "gButtonCopy";
-            gButtonCopy.ShadowDecoration.CustomizableEdges = customizableEdges5;
+            gButtonCopy.ShadowDecoration.CustomizableEdges = customizableEdges20;
             gButtonCopy.Size = new Size(20, 20);
             gButtonCopy.TabIndex = 32;
             // 
@@ -155,7 +155,7 @@
             // gButtonSearch
             // 
             gButtonSearch.BorderRadius = 5;
-            gButtonSearch.CustomizableEdges = customizableEdges6;
+            gButtonSearch.CustomizableEdges = customizableEdges21;
             gButtonSearch.DisabledState.BorderColor = Color.DarkGray;
             gButtonSearch.DisabledState.CustomBorderColor = Color.DarkGray;
             gButtonSearch.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -169,7 +169,7 @@
             gButtonSearch.ImageSize = new Size(27, 27);
             gButtonSearch.Location = new Point(569, 23);
             gButtonSearch.Name = "gButtonSearch";
-            gButtonSearch.ShadowDecoration.CustomizableEdges = customizableEdges7;
+            gButtonSearch.ShadowDecoration.CustomizableEdges = customizableEdges22;
             gButtonSearch.Size = new Size(40, 40);
             gButtonSearch.TabIndex = 31;
             // 
@@ -194,7 +194,7 @@
             // gButtonStar
             // 
             gButtonStar.BorderRadius = 5;
-            gButtonStar.CustomizableEdges = customizableEdges8;
+            gButtonStar.CustomizableEdges = customizableEdges23;
             gButtonStar.DisabledState.BorderColor = Color.DarkGray;
             gButtonStar.DisabledState.CustomBorderColor = Color.DarkGray;
             gButtonStar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -207,7 +207,7 @@
             gButtonStar.ImageSize = new Size(25, 25);
             gButtonStar.Location = new Point(523, 22);
             gButtonStar.Name = "gButtonStar";
-            gButtonStar.ShadowDecoration.CustomizableEdges = customizableEdges9;
+            gButtonStar.ShadowDecoration.CustomizableEdges = customizableEdges24;
             gButtonStar.Size = new Size(40, 40);
             gButtonStar.TabIndex = 28;
             // 
@@ -239,7 +239,7 @@
             // gButtonLink
             // 
             gButtonLink.BorderRadius = 5;
-            gButtonLink.CustomizableEdges = customizableEdges10;
+            gButtonLink.CustomizableEdges = customizableEdges25;
             gButtonLink.DisabledState.BorderColor = Color.DarkGray;
             gButtonLink.DisabledState.CustomBorderColor = Color.DarkGray;
             gButtonLink.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -252,14 +252,14 @@
             gButtonLink.ImageSize = new Size(33, 33);
             gButtonLink.Location = new Point(642, 14);
             gButtonLink.Name = "gButtonLink";
-            gButtonLink.ShadowDecoration.CustomizableEdges = customizableEdges11;
+            gButtonLink.ShadowDecoration.CustomizableEdges = customizableEdges26;
             gButtonLink.Size = new Size(40, 40);
             gButtonLink.TabIndex = 18;
             // 
             // gButtonSend
             // 
             gButtonSend.BorderRadius = 5;
-            gButtonSend.CustomizableEdges = customizableEdges12;
+            gButtonSend.CustomizableEdges = customizableEdges27;
             gButtonSend.DisabledState.BorderColor = Color.DarkGray;
             gButtonSend.DisabledState.CustomBorderColor = Color.DarkGray;
             gButtonSend.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -272,14 +272,14 @@
             gButtonSend.ImageSize = new Size(30, 30);
             gButtonSend.Location = new Point(642, 60);
             gButtonSend.Name = "gButtonSend";
-            gButtonSend.ShadowDecoration.CustomizableEdges = customizableEdges13;
+            gButtonSend.ShadowDecoration.CustomizableEdges = customizableEdges28;
             gButtonSend.Size = new Size(40, 40);
             gButtonSend.TabIndex = 17;
             // 
             // gTextBoxTexting
             // 
             gTextBoxTexting.BorderRadius = 10;
-            gTextBoxTexting.CustomizableEdges = customizableEdges14;
+            gTextBoxTexting.CustomizableEdges = customizableEdges29;
             gTextBoxTexting.DefaultText = "";
             gTextBoxTexting.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxTexting.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -296,7 +296,7 @@
             gTextBoxTexting.PlaceholderForeColor = Color.Gray;
             gTextBoxTexting.PlaceholderText = "Send to @...";
             gTextBoxTexting.SelectedText = "";
-            gTextBoxTexting.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            gTextBoxTexting.ShadowDecoration.CustomizableEdges = customizableEdges30;
             gTextBoxTexting.Size = new Size(621, 80);
             gTextBoxTexting.TabIndex = 16;
             // 
@@ -311,14 +311,14 @@
             Size = new Size(728, 745);
             gShadowPanelMessage.ResumeLayout(false);
             gShadowPanelMessage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)gCirclePictureBoxAvatar).EndInit();
             gShadowPanelTexting.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
         private Guna.UI2.WinForms.Guna2ShadowPanel gShadowPanelMessage;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox gCirclePictureBoxAvatar;
         private Guna.UI2.WinForms.Guna2Button gButtonResources;
         private Guna.UI2.WinForms.Guna2Button gButtonCopy;
         private Label lblThesisCode;

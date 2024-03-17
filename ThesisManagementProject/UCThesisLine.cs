@@ -13,6 +13,8 @@ namespace ThesisManagementProject
 {
     public partial class UCThesisLine : UserControl
     {
+        public event EventHandler ThesisLineClicked;
+
         public UCThesisLine()
         {
             InitializeComponent();
@@ -30,24 +32,36 @@ namespace ThesisManagementProject
 
         private void gButtonEdit_Click(object sender, EventArgs e)
         {
-            FThesisDetails fThesisDetails = new FThesisDetails();
-            fThesisDetails.Show();
+            OnThesisLineClicked(EventArgs.Empty);
         }
 
-        private void UCThesisLine_Click(object sender, EventArgs e)
+        private void SetColor(Color color)
         {
-            FThesisDetails fThesisDetails = new FThesisDetails();
-            fThesisDetails.Show();
+            this.BackColor = color;
+            gTextBoxThesisCode.FillColor = color;
+            gTextBoxPending.FillColor = color;
+            gTextBoxAccepted.FillColor = color;
+            gTextBoxCompleted.FillColor = color;
         }
 
         private void UCThesisLine_MouseEnter(object sender, EventArgs e)
         {
-            this.BackColor = Color.Gainsboro;
+            SetColor(Color.Gainsboro);
         }
 
         private void UCThesisLine_MouseLeave(object sender, EventArgs e)
         {
-            this.BackColor = Color.White;
+            SetColor(Color.White);
+        }
+
+        private void UCThesisLine_Click(object sender, EventArgs e)
+        {
+            OnThesisLineClicked(EventArgs.Empty);
+        }
+
+        public virtual void OnThesisLineClicked(EventArgs e)
+        {
+            ThesisLineClicked?.Invoke(this, e);
         }
     }
 }

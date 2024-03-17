@@ -85,9 +85,9 @@
             gShadowPanelShowInfor = new Guna.UI2.WinForms.Guna2ShadowPanel();
             gShadowPanelAccountAvatar = new Guna.UI2.WinForms.Guna2ShadowPanel();
             gShadowPanelTotalProcess = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            label1 = new Label();
-            guna2CircleProgressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            gPanelTotalProcess = new Guna.UI2.WinForms.Guna2Panel();
+            lblTotalProcess = new Label();
+            gCircleProgressBar = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             gShadowPanelIDAccount.SuspendLayout();
             gShadowPanelOrganizationInfor.SuspendLayout();
             gShadowPanelMemberList.SuspendLayout();
@@ -102,7 +102,7 @@
             ((System.ComponentModel.ISupportInitialize)gPictureBoxItemTopic).BeginInit();
             gShadowPanelAccountAvatar.SuspendLayout();
             gShadowPanelTotalProcess.SuspendLayout();
-            guna2Panel1.SuspendLayout();
+            gPanelTotalProcess.SuspendLayout();
             SuspendLayout();
             // 
             // lblNoteStatisMember
@@ -497,9 +497,9 @@
             lblNoteStatisThesis.ForeColor = Color.Gray;
             lblNoteStatisThesis.Location = new Point(78, 40);
             lblNoteStatisThesis.Name = "lblNoteStatisThesis";
-            lblNoteStatisThesis.Size = new Size(66, 17);
+            lblNoteStatisThesis.Size = new Size(55, 17);
             lblNoteStatisThesis.TabIndex = 9;
-            lblNoteStatisThesis.Text = "thesises";
+            lblNoteStatisThesis.Text = "theses";
             // 
             // gPictureBoxItemThesis
             // 
@@ -609,7 +609,7 @@
             // gShadowPanelTotalProcess
             // 
             gShadowPanelTotalProcess.BackColor = Color.Transparent;
-            gShadowPanelTotalProcess.Controls.Add(guna2Panel1);
+            gShadowPanelTotalProcess.Controls.Add(gPanelTotalProcess);
             gShadowPanelTotalProcess.FillColor = Color.White;
             gShadowPanelTotalProcess.Location = new Point(31, 381);
             gShadowPanelTotalProcess.Name = "gShadowPanelTotalProcess";
@@ -620,53 +620,53 @@
             gShadowPanelTotalProcess.Size = new Size(338, 361);
             gShadowPanelTotalProcess.TabIndex = 36;
             // 
-            // guna2Panel1
+            // gPanelTotalProcess
             // 
-            guna2Panel1.BackColor = Color.Transparent;
-            guna2Panel1.BorderRadius = 20;
-            guna2Panel1.Controls.Add(label1);
-            guna2Panel1.Controls.Add(guna2CircleProgressBar1);
-            guna2Panel1.CustomizableEdges = customizableEdges21;
-            guna2Panel1.FillColor = Color.White;
-            guna2Panel1.Location = new Point(42, 26);
-            guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            guna2Panel1.Size = new Size(252, 270);
-            guna2Panel1.TabIndex = 15;
+            gPanelTotalProcess.BackColor = Color.Transparent;
+            gPanelTotalProcess.BorderRadius = 20;
+            gPanelTotalProcess.Controls.Add(lblTotalProcess);
+            gPanelTotalProcess.Controls.Add(gCircleProgressBar);
+            gPanelTotalProcess.CustomizableEdges = customizableEdges21;
+            gPanelTotalProcess.FillColor = Color.White;
+            gPanelTotalProcess.Location = new Point(42, 26);
+            gPanelTotalProcess.Name = "gPanelTotalProcess";
+            gPanelTotalProcess.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            gPanelTotalProcess.Size = new Size(252, 270);
+            gPanelTotalProcess.TabIndex = 15;
             // 
-            // label1
+            // lblTotalProcess
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(46, 201);
-            label1.Name = "label1";
-            label1.Size = new Size(165, 31);
-            label1.TabIndex = 8;
-            label1.Text = "Total Progress";
+            lblTotalProcess.AutoSize = true;
+            lblTotalProcess.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTotalProcess.Location = new Point(46, 201);
+            lblTotalProcess.Name = "lblTotalProcess";
+            lblTotalProcess.Size = new Size(165, 31);
+            lblTotalProcess.TabIndex = 8;
+            lblTotalProcess.Text = "Total Progress";
             // 
-            // guna2CircleProgressBar1
+            // gCircleProgressBar
             // 
-            guna2CircleProgressBar1.Animated = true;
-            guna2CircleProgressBar1.AnimationSpeed = 0.2F;
-            guna2CircleProgressBar1.FillColor = Color.FromArgb(200, 213, 218, 223);
-            guna2CircleProgressBar1.FillThickness = 20;
-            guna2CircleProgressBar1.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
-            guna2CircleProgressBar1.ForeColor = Color.DimGray;
-            guna2CircleProgressBar1.Location = new Point(46, 23);
-            guna2CircleProgressBar1.Minimum = 0;
-            guna2CircleProgressBar1.Name = "guna2CircleProgressBar1";
-            guna2CircleProgressBar1.ProgressColor = Color.FromArgb(255, 77, 165);
-            guna2CircleProgressBar1.ProgressColor2 = Color.FromArgb(94, 148, 255);
-            guna2CircleProgressBar1.ProgressEndCap = System.Drawing.Drawing2D.LineCap.Round;
-            guna2CircleProgressBar1.ProgressStartCap = System.Drawing.Drawing2D.LineCap.Round;
-            guna2CircleProgressBar1.ProgressThickness = 20;
-            guna2CircleProgressBar1.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            guna2CircleProgressBar1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CircleProgressBar1.ShowText = true;
-            guna2CircleProgressBar1.Size = new Size(162, 162);
-            guna2CircleProgressBar1.TabIndex = 7;
-            guna2CircleProgressBar1.Text = "CircleProgressBar";
-            guna2CircleProgressBar1.Value = 75;
+            gCircleProgressBar.Animated = true;
+            gCircleProgressBar.AnimationSpeed = 0.2F;
+            gCircleProgressBar.FillColor = Color.FromArgb(200, 213, 218, 223);
+            gCircleProgressBar.FillThickness = 20;
+            gCircleProgressBar.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            gCircleProgressBar.ForeColor = Color.DimGray;
+            gCircleProgressBar.Location = new Point(46, 23);
+            gCircleProgressBar.Minimum = 0;
+            gCircleProgressBar.Name = "gCircleProgressBar";
+            gCircleProgressBar.ProgressColor = Color.FromArgb(255, 77, 165);
+            gCircleProgressBar.ProgressColor2 = Color.FromArgb(94, 148, 255);
+            gCircleProgressBar.ProgressEndCap = System.Drawing.Drawing2D.LineCap.Round;
+            gCircleProgressBar.ProgressStartCap = System.Drawing.Drawing2D.LineCap.Round;
+            gCircleProgressBar.ProgressThickness = 20;
+            gCircleProgressBar.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            gCircleProgressBar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            gCircleProgressBar.ShowText = true;
+            gCircleProgressBar.Size = new Size(162, 162);
+            gCircleProgressBar.TabIndex = 7;
+            gCircleProgressBar.Text = "CircleProgressBar";
+            gCircleProgressBar.Value = 75;
             // 
             // FTeamDetails
             // 
@@ -711,8 +711,8 @@
             gShadowPanelAccountAvatar.ResumeLayout(false);
             gShadowPanelAccountAvatar.PerformLayout();
             gShadowPanelTotalProcess.ResumeLayout(false);
-            guna2Panel1.ResumeLayout(false);
-            guna2Panel1.PerformLayout();
+            gPanelTotalProcess.ResumeLayout(false);
+            gPanelTotalProcess.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -750,9 +750,9 @@
         private Guna.UI2.WinForms.Guna2ShadowPanel gShadowPanelAccountAvatar;
         private Guna.UI2.WinForms.Guna2ShadowPanel gShadowPanelTotalProcess;
         private Label lblMember;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Label label1;
-        private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar1;
+        private Guna.UI2.WinForms.Guna2Panel gPanelTotalProcess;
+        private Label lblTotalProcess;
+        private Guna.UI2.WinForms.Guna2CircleProgressBar gCircleProgressBar;
         private FlowLayoutPanel flpMembers;
     }
 }

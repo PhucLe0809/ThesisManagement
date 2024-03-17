@@ -36,7 +36,6 @@ C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\obj\Debug
 C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\obj\Debug\net8.0-windows\ThesisManagementProject.UCThesisCreate.resources
 C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\obj\Debug\net8.0-windows\ThesisManagementProject.FDisplayMain.resources
 C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\obj\Debug\net8.0-windows\ThesisManagementProject.UCThesisStatistical.resources
-C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\obj\Debug\net8.0-windows\ThesisManagementProject.FThesisDetails.resources
 C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\obj\Debug\net8.0-windows\ThesisManagementProject.FTopicDetails.resources
 C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\obj\Debug\net8.0-windows\ThesisManagementProject.UCTopicCreate.resources
 C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\obj\Debug\net8.0-windows\ThesisManagementProject.UCDescussionResource.resources
@@ -46,7 +45,6 @@ C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\obj\Debug
 C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\obj\Debug\net8.0-windows\ThesisManagementProject.UCDiscussionMessage.resources
 C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\obj\Debug\net8.0-windows\ThesisManagementProject.UCAccountInformation.resources
 C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\obj\Debug\net8.0-windows\ThesisManagementProject.UCAccountAvatar.resources
-C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\obj\Debug\net8.0-windows\ThesisManagementProject.FDisplayLogin.resources
 C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\obj\Debug\net8.0-windows\ThesisManagementProject.UCDisplayLecture.resources
 C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\obj\Debug\net8.0-windows\ThesisManagementProject.UCTopicList.resources
 C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\obj\Debug\net8.0-windows\ThesisManagementProject.UCDisplayWelcome.resources
@@ -65,3 +63,8 @@ C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\obj\Debug
 C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\obj\Debug\net8.0-windows\ThesisManagementProject.FTeamCreate.resources
 C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\obj\Debug\net8.0-windows\ThesisManagementProject.UCStudentMiniLine.resources
 C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\obj\Debug\net8.0-windows\ThesisManagementProject.UCStudentItemAdd.resources
+C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\obj\Debug\net8.0-windows\ThesisManagementProject.UCDisplayLogin.resources
+C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\obj\Debug\net8.0-windows\ThesisManagementProject.UCThesisDetails.resources
+C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\obj\Debug\net8.0-windows\ThesisManagementProject.UCDisplayRegister.resources
+C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\obj\Debug\net8.0-windows\ThesisManagementProject.FThesisEdit.resources
+C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\obj\Debug\net8.0-windows\ThesisManagementProject.UCThesisMiniLine.resources

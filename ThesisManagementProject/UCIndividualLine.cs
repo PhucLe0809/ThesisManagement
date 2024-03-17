@@ -21,6 +21,15 @@ namespace ThesisManagementProject
             gButtonStar.Image = Properties.Resources.PicInLineGradientStar;
         }
 
+        private void SetColor(Color color)
+        {
+            this.BackColor = color;
+            gTextBoxStudentCode.FillColor = color;
+            gTextBoxNumTopics.FillColor = color;
+            gTextBoxNumTheses.FillColor = color;
+            gTextBoxNumTeams.FillColor = color;
+        }
+
         private void lblDetails_Click(object sender, EventArgs e)
         {
             FStudentDetails fAccountDetails = new FStudentDetails();
@@ -35,12 +44,12 @@ namespace ThesisManagementProject
 
         private void UCIndividualLine_MouseEnter(object sender, EventArgs e)
         {
-            this.BackColor = Color.Gainsboro;
+            SetColor(Color.Gainsboro);
         }
 
         private void UCIndividualLine_MouseLeave(object sender, EventArgs e)
         {
-            this.BackColor = Color.White;
+            SetColor(Color.White);
         }
     }
 }

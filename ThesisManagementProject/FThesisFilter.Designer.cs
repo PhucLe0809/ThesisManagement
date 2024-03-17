@@ -28,6 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FThesisFilter));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -38,95 +73,87 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges49 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges51 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges52 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges53 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges54 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges55 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges56 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges57 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges58 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges59 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges60 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges61 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges62 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges63 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges64 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges65 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges66 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges67 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges68 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FThesisFilter));
             gButtonCancel = new Guna.UI2.WinForms.Guna2Button();
             gGradientButtonSave = new Guna.UI2.WinForms.Guna2GradientButton();
             gSeparatorTopicThesis = new Guna.UI2.WinForms.Guna2Separator();
             gShadowPanelCreationTime = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            pnlCreation = new Panel();
+            lblCreationEnd = new Label();
+            gRadioButtonCreationLeftIntersect = new Guna.UI2.WinForms.Guna2RadioButton();
+            lblCreationStart = new Label();
+            gRadioButtonCreationContain = new Guna.UI2.WinForms.Guna2RadioButton();
+            gRadioButtonCreationIntersectRight = new Guna.UI2.WinForms.Guna2RadioButton();
+            gDateTimePickerCreationEnd = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            gDateTimePickerCreationStart = new Guna.UI2.WinForms.Guna2DateTimePicker();
             lblCreationSelectAll = new Label();
             gButtonCreationSelectAll = new Guna.UI2.WinForms.Guna2Button();
             gSeparatorCreation = new Guna.UI2.WinForms.Guna2Separator();
             lblCreationTime = new Label();
-            gRadioButtonCreationIntersectRight = new Guna.UI2.WinForms.Guna2RadioButton();
-            gRadioButtonCreationLeftIntersect = new Guna.UI2.WinForms.Guna2RadioButton();
-            gRadioButtonCreationContain = new Guna.UI2.WinForms.Guna2RadioButton();
-            gDateTimePickerCreationEnd = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            lblCreationEnd = new Label();
-            gDateTimePickerCreationStart = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            lblCreationStart = new Label();
-            gShadowPanelDuration = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            lblDurationSelectAll = new Label();
-            gButtonDurationSelectAll = new Guna.UI2.WinForms.Guna2Button();
-            lblThesisDuration = new Label();
-            guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
-            lblThesisStart = new Label();
-            gDateTimePickerThesisStart = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            gRadioButtonIntersectRightThesis = new Guna.UI2.WinForms.Guna2RadioButton();
-            lblThesisEnd = new Label();
-            gRadioButtonIntersectLeftThesis = new Guna.UI2.WinForms.Guna2RadioButton();
-            gDateTimePickerThesisEnd = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            gRadioButtonContainTheis = new Guna.UI2.WinForms.Guna2RadioButton();
-            gShadowPanelHashtagLevel = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            lblHashtagSelectAll = new Label();
-            gButtonHashtagSelectAll = new Guna.UI2.WinForms.Guna2Button();
-            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            label1 = new Label();
-            guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
-            guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            gShadowPanelTopic = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            pnlTopic = new Panel();
+            gTextBoxMembers = new Guna.UI2.WinForms.Guna2TextBox();
+            lblForThisTopic = new Label();
+            lblTechnologyField = new Label();
+            lblMaximum = new Label();
+            gPictureBoxFaculty = new Guna.UI2.WinForms.Guna2PictureBox();
+            gPictureBoxLevel = new Guna.UI2.WinForms.Guna2PictureBox();
+            gComboBoxFaculty = new Guna.UI2.WinForms.Guna2ComboBox();
+            gComboBoxLevel = new Guna.UI2.WinForms.Guna2ComboBox();
+            gSeparatorTopic = new Guna.UI2.WinForms.Guna2Separator();
+            lblTopic = new Label();
+            lblTopicSelectAll = new Label();
+            gButtonTopicSelectAll = new Guna.UI2.WinForms.Guna2Button();
             gShadowPanelTopicFavorites = new Guna.UI2.WinForms.Guna2ShadowPanel();
             gButtonTopicStar = new Guna.UI2.WinForms.Guna2Button();
-            lblTopicFavorites = new Label();
-            gShadowPanelThesisFavorites = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            gButtonThesisStar = new Guna.UI2.WinForms.Guna2Button();
-            lblThesisFavorite = new Label();
-            gShadowPanelTopicCreatedAgo = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            lblTopicAgo = new Label();
-            gComboBoxTopicCreatedAgo = new Guna.UI2.WinForms.Guna2ComboBox();
-            lblTopicCreated = new Label();
-            gPanelThesisCreated = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            lblThesisAgo = new Label();
-            gComboBoxThesisCreatedAgo = new Guna.UI2.WinForms.Guna2ComboBox();
-            lblThesisCreated = new Label();
+            lblThesisFavorites = new Label();
+            gShadowPanelStatus = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            gComboBoxStatus = new Guna.UI2.WinForms.Guna2ComboBox();
+            lblStatus = new Label();
+            gShadowPanelPending = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            gTextBoxPendingTo = new Guna.UI2.WinForms.Guna2TextBox();
+            lblPendingTo = new Label();
+            gSeparatorPending = new Guna.UI2.WinForms.Guna2Separator();
+            gTextBoxPendingFrom = new Guna.UI2.WinForms.Guna2TextBox();
+            lblPendingFrom = new Label();
+            lblPendingAll = new Label();
+            gButtonPendingAll = new Guna.UI2.WinForms.Guna2Button();
+            lblPending = new Label();
+            gShadowPanelAccepted = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            gTextBoxAcceptedTo = new Guna.UI2.WinForms.Guna2TextBox();
+            lblAcceptedTo = new Label();
+            gSeparatorAccepted = new Guna.UI2.WinForms.Guna2Separator();
+            gTextBoxAcceptedFrom = new Guna.UI2.WinForms.Guna2TextBox();
+            lblAcceptedFrom = new Label();
+            lblAcceptedAll = new Label();
+            gButtonAcceptedAll = new Guna.UI2.WinForms.Guna2Button();
+            lblAccepted = new Label();
+            gShadowPanelCompleted = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            gTextBoxCompletedTo = new Guna.UI2.WinForms.Guna2TextBox();
+            lblCompletedTo = new Label();
+            gSeparatorCompleted = new Guna.UI2.WinForms.Guna2Separator();
+            gTextBoxCompletedFrom = new Guna.UI2.WinForms.Guna2TextBox();
+            lblCompletedFrom = new Label();
+            lblCompletedAll = new Label();
+            gButtonCompletedAll = new Guna.UI2.WinForms.Guna2Button();
+            lblCompleted = new Label();
             gShadowPanelCreationTime.SuspendLayout();
-            gShadowPanelDuration.SuspendLayout();
-            gShadowPanelHashtagLevel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
+            pnlCreation.SuspendLayout();
+            gShadowPanelTopic.SuspendLayout();
+            pnlTopic.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)gPictureBoxFaculty).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)gPictureBoxLevel).BeginInit();
             gShadowPanelTopicFavorites.SuspendLayout();
-            gShadowPanelThesisFavorites.SuspendLayout();
-            gShadowPanelTopicCreatedAgo.SuspendLayout();
-            gPanelThesisCreated.SuspendLayout();
+            gShadowPanelStatus.SuspendLayout();
+            gShadowPanelPending.SuspendLayout();
+            gShadowPanelAccepted.SuspendLayout();
+            gShadowPanelCompleted.SuspendLayout();
             SuspendLayout();
             // 
             // gButtonCancel
             // 
             gButtonCancel.BackColor = Color.Transparent;
             gButtonCancel.BorderRadius = 7;
-            gButtonCancel.CustomizableEdges = customizableEdges35;
+            gButtonCancel.CustomizableEdges = customizableEdges1;
             gButtonCancel.DisabledState.BorderColor = Color.DarkGray;
             gButtonCancel.DisabledState.CustomBorderColor = Color.DarkGray;
             gButtonCancel.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -134,9 +161,9 @@
             gButtonCancel.FillColor = Color.Silver;
             gButtonCancel.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             gButtonCancel.ForeColor = Color.White;
-            gButtonCancel.Location = new Point(555, 707);
+            gButtonCancel.Location = new Point(800, 489);
             gButtonCancel.Name = "gButtonCancel";
-            gButtonCancel.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            gButtonCancel.ShadowDecoration.CustomizableEdges = customizableEdges2;
             gButtonCancel.Size = new Size(100, 35);
             gButtonCancel.TabIndex = 25;
             gButtonCancel.Text = "Cancel";
@@ -146,7 +173,7 @@
             // 
             gGradientButtonSave.BackColor = Color.Transparent;
             gGradientButtonSave.BorderRadius = 7;
-            gGradientButtonSave.CustomizableEdges = customizableEdges37;
+            gGradientButtonSave.CustomizableEdges = customizableEdges3;
             gGradientButtonSave.DisabledState.BorderColor = Color.DarkGray;
             gGradientButtonSave.DisabledState.CustomBorderColor = Color.DarkGray;
             gGradientButtonSave.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -156,9 +183,9 @@
             gGradientButtonSave.FillColor2 = Color.FromArgb(94, 148, 255);
             gGradientButtonSave.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             gGradientButtonSave.ForeColor = Color.White;
-            gGradientButtonSave.Location = new Point(661, 707);
+            gGradientButtonSave.Location = new Point(906, 489);
             gGradientButtonSave.Name = "gGradientButtonSave";
-            gGradientButtonSave.ShadowDecoration.CustomizableEdges = customizableEdges38;
+            gGradientButtonSave.ShadowDecoration.CustomizableEdges = customizableEdges4;
             gGradientButtonSave.Size = new Size(100, 35);
             gGradientButtonSave.TabIndex = 24;
             gGradientButtonSave.Text = "Save";
@@ -167,34 +194,161 @@
             // gSeparatorTopicThesis
             // 
             gSeparatorTopicThesis.FillColor = Color.FromArgb(74, 97, 94);
-            gSeparatorTopicThesis.Location = new Point(58, 442);
+            gSeparatorTopicThesis.Location = new Point(40, 468);
             gSeparatorTopicThesis.Name = "gSeparatorTopicThesis";
-            gSeparatorTopicThesis.Size = new Size(680, 15);
+            gSeparatorTopicThesis.Size = new Size(984, 15);
             gSeparatorTopicThesis.TabIndex = 28;
             // 
             // gShadowPanelCreationTime
             // 
             gShadowPanelCreationTime.BackColor = Color.Transparent;
+            gShadowPanelCreationTime.Controls.Add(pnlCreation);
             gShadowPanelCreationTime.Controls.Add(lblCreationSelectAll);
             gShadowPanelCreationTime.Controls.Add(gButtonCreationSelectAll);
             gShadowPanelCreationTime.Controls.Add(gSeparatorCreation);
             gShadowPanelCreationTime.Controls.Add(lblCreationTime);
-            gShadowPanelCreationTime.Controls.Add(gRadioButtonCreationIntersectRight);
-            gShadowPanelCreationTime.Controls.Add(gRadioButtonCreationLeftIntersect);
-            gShadowPanelCreationTime.Controls.Add(gRadioButtonCreationContain);
-            gShadowPanelCreationTime.Controls.Add(gDateTimePickerCreationEnd);
-            gShadowPanelCreationTime.Controls.Add(lblCreationEnd);
-            gShadowPanelCreationTime.Controls.Add(gDateTimePickerCreationStart);
-            gShadowPanelCreationTime.Controls.Add(lblCreationStart);
             gShadowPanelCreationTime.FillColor = Color.White;
-            gShadowPanelCreationTime.Location = new Point(32, 22);
+            gShadowPanelCreationTime.Location = new Point(306, 299);
             gShadowPanelCreationTime.Name = "gShadowPanelCreationTime";
             gShadowPanelCreationTime.Radius = 7;
             gShadowPanelCreationTime.ShadowColor = Color.Black;
             gShadowPanelCreationTime.ShadowShift = 7;
             gShadowPanelCreationTime.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            gShadowPanelCreationTime.Size = new Size(734, 154);
+            gShadowPanelCreationTime.Size = new Size(734, 163);
             gShadowPanelCreationTime.TabIndex = 29;
+            // 
+            // pnlCreation
+            // 
+            pnlCreation.Controls.Add(lblCreationEnd);
+            pnlCreation.Controls.Add(gRadioButtonCreationLeftIntersect);
+            pnlCreation.Controls.Add(lblCreationStart);
+            pnlCreation.Controls.Add(gRadioButtonCreationContain);
+            pnlCreation.Controls.Add(gRadioButtonCreationIntersectRight);
+            pnlCreation.Controls.Add(gDateTimePickerCreationEnd);
+            pnlCreation.Controls.Add(gDateTimePickerCreationStart);
+            pnlCreation.Enabled = false;
+            pnlCreation.Location = new Point(14, 61);
+            pnlCreation.Name = "pnlCreation";
+            pnlCreation.Size = new Size(720, 102);
+            pnlCreation.TabIndex = 38;
+            // 
+            // lblCreationEnd
+            // 
+            lblCreationEnd.AutoSize = true;
+            lblCreationEnd.BackColor = Color.Transparent;
+            lblCreationEnd.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblCreationEnd.Location = new Point(384, 9);
+            lblCreationEnd.Name = "lblCreationEnd";
+            lblCreationEnd.Size = new Size(55, 28);
+            lblCreationEnd.TabIndex = 25;
+            lblCreationEnd.Text = "END";
+            // 
+            // gRadioButtonCreationLeftIntersect
+            // 
+            gRadioButtonCreationLeftIntersect.AutoSize = true;
+            gRadioButtonCreationLeftIntersect.BackColor = Color.Transparent;
+            gRadioButtonCreationLeftIntersect.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
+            gRadioButtonCreationLeftIntersect.CheckedState.BorderThickness = 0;
+            gRadioButtonCreationLeftIntersect.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
+            gRadioButtonCreationLeftIntersect.CheckedState.InnerColor = Color.White;
+            gRadioButtonCreationLeftIntersect.CheckedState.InnerOffset = -4;
+            gRadioButtonCreationLeftIntersect.Location = new Point(190, 52);
+            gRadioButtonCreationLeftIntersect.Name = "gRadioButtonCreationLeftIntersect";
+            gRadioButtonCreationLeftIntersect.Size = new Size(158, 24);
+            gRadioButtonCreationLeftIntersect.TabIndex = 28;
+            gRadioButtonCreationLeftIntersect.Text = "Intersect on the left";
+            gRadioButtonCreationLeftIntersect.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
+            gRadioButtonCreationLeftIntersect.UncheckedState.BorderThickness = 2;
+            gRadioButtonCreationLeftIntersect.UncheckedState.FillColor = Color.Transparent;
+            gRadioButtonCreationLeftIntersect.UncheckedState.InnerColor = Color.Transparent;
+            gRadioButtonCreationLeftIntersect.UseVisualStyleBackColor = false;
+            // 
+            // lblCreationStart
+            // 
+            lblCreationStart.AutoSize = true;
+            lblCreationStart.BackColor = Color.Transparent;
+            lblCreationStart.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblCreationStart.Location = new Point(14, 9);
+            lblCreationStart.Name = "lblCreationStart";
+            lblCreationStart.Size = new Size(78, 28);
+            lblCreationStart.TabIndex = 23;
+            lblCreationStart.Text = "START";
+            // 
+            // gRadioButtonCreationContain
+            // 
+            gRadioButtonCreationContain.AutoSize = true;
+            gRadioButtonCreationContain.BackColor = Color.Transparent;
+            gRadioButtonCreationContain.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
+            gRadioButtonCreationContain.CheckedState.BorderThickness = 0;
+            gRadioButtonCreationContain.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
+            gRadioButtonCreationContain.CheckedState.InnerColor = Color.White;
+            gRadioButtonCreationContain.CheckedState.InnerOffset = -4;
+            gRadioButtonCreationContain.Location = new Point(28, 52);
+            gRadioButtonCreationContain.Name = "gRadioButtonCreationContain";
+            gRadioButtonCreationContain.Size = new Size(156, 24);
+            gRadioButtonCreationContain.TabIndex = 27;
+            gRadioButtonCreationContain.Text = "Contained in range";
+            gRadioButtonCreationContain.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
+            gRadioButtonCreationContain.UncheckedState.BorderThickness = 2;
+            gRadioButtonCreationContain.UncheckedState.FillColor = Color.Transparent;
+            gRadioButtonCreationContain.UncheckedState.InnerColor = Color.Transparent;
+            gRadioButtonCreationContain.UseVisualStyleBackColor = false;
+            // 
+            // gRadioButtonCreationIntersectRight
+            // 
+            gRadioButtonCreationIntersectRight.AutoSize = true;
+            gRadioButtonCreationIntersectRight.BackColor = Color.Transparent;
+            gRadioButtonCreationIntersectRight.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
+            gRadioButtonCreationIntersectRight.CheckedState.BorderThickness = 0;
+            gRadioButtonCreationIntersectRight.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
+            gRadioButtonCreationIntersectRight.CheckedState.InnerColor = Color.White;
+            gRadioButtonCreationIntersectRight.CheckedState.InnerOffset = -4;
+            gRadioButtonCreationIntersectRight.Location = new Point(354, 52);
+            gRadioButtonCreationIntersectRight.Name = "gRadioButtonCreationIntersectRight";
+            gRadioButtonCreationIntersectRight.Size = new Size(167, 24);
+            gRadioButtonCreationIntersectRight.TabIndex = 29;
+            gRadioButtonCreationIntersectRight.Text = "Intersect on the right";
+            gRadioButtonCreationIntersectRight.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
+            gRadioButtonCreationIntersectRight.UncheckedState.BorderThickness = 2;
+            gRadioButtonCreationIntersectRight.UncheckedState.FillColor = Color.Transparent;
+            gRadioButtonCreationIntersectRight.UncheckedState.InnerColor = Color.Transparent;
+            gRadioButtonCreationIntersectRight.UseVisualStyleBackColor = false;
+            // 
+            // gDateTimePickerCreationEnd
+            // 
+            gDateTimePickerCreationEnd.BackColor = Color.White;
+            gDateTimePickerCreationEnd.BorderRadius = 5;
+            gDateTimePickerCreationEnd.Checked = true;
+            gDateTimePickerCreationEnd.CustomizableEdges = customizableEdges5;
+            gDateTimePickerCreationEnd.FillColor = Color.White;
+            gDateTimePickerCreationEnd.Font = new Font("Segoe UI", 9F);
+            gDateTimePickerCreationEnd.Format = DateTimePickerFormat.Long;
+            gDateTimePickerCreationEnd.Location = new Point(445, 3);
+            gDateTimePickerCreationEnd.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            gDateTimePickerCreationEnd.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            gDateTimePickerCreationEnd.Name = "gDateTimePickerCreationEnd";
+            gDateTimePickerCreationEnd.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            gDateTimePickerCreationEnd.Size = new Size(240, 40);
+            gDateTimePickerCreationEnd.TabIndex = 26;
+            gDateTimePickerCreationEnd.Value = new DateTime(2024, 3, 9, 13, 39, 14, 674);
+            // 
+            // gDateTimePickerCreationStart
+            // 
+            gDateTimePickerCreationStart.BackColor = Color.White;
+            gDateTimePickerCreationStart.BorderRadius = 5;
+            gDateTimePickerCreationStart.Checked = true;
+            gDateTimePickerCreationStart.CustomizableEdges = customizableEdges7;
+            gDateTimePickerCreationStart.FillColor = Color.White;
+            gDateTimePickerCreationStart.Font = new Font("Segoe UI", 9F);
+            gDateTimePickerCreationStart.Format = DateTimePickerFormat.Long;
+            gDateTimePickerCreationStart.Location = new Point(98, 3);
+            gDateTimePickerCreationStart.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            gDateTimePickerCreationStart.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            gDateTimePickerCreationStart.Name = "gDateTimePickerCreationStart";
+            gDateTimePickerCreationStart.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            gDateTimePickerCreationStart.Size = new Size(240, 40);
+            gDateTimePickerCreationStart.TabIndex = 24;
+            gDateTimePickerCreationStart.Value = new DateTime(2024, 3, 9, 13, 39, 14, 674);
             // 
             // lblCreationSelectAll
             // 
@@ -202,7 +356,7 @@
             lblCreationSelectAll.BackColor = Color.Transparent;
             lblCreationSelectAll.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblCreationSelectAll.ForeColor = Color.FromArgb(74, 97, 94);
-            lblCreationSelectAll.Location = new Point(571, 21);
+            lblCreationSelectAll.Location = new Point(569, 21);
             lblCreationSelectAll.Name = "lblCreationSelectAll";
             lblCreationSelectAll.Size = new Size(84, 25);
             lblCreationSelectAll.TabIndex = 37;
@@ -212,7 +366,7 @@
             // 
             gButtonCreationSelectAll.BackColor = Color.Transparent;
             gButtonCreationSelectAll.BorderRadius = 5;
-            gButtonCreationSelectAll.CustomizableEdges = customizableEdges39;
+            gButtonCreationSelectAll.CustomizableEdges = customizableEdges9;
             gButtonCreationSelectAll.DisabledState.BorderColor = Color.DarkGray;
             gButtonCreationSelectAll.DisabledState.CustomBorderColor = Color.DarkGray;
             gButtonCreationSelectAll.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -221,15 +375,15 @@
             gButtonCreationSelectAll.Font = new Font("Segoe UI", 9F);
             gButtonCreationSelectAll.ForeColor = Color.White;
             gButtonCreationSelectAll.HoverState.FillColor = Color.White;
-            gButtonCreationSelectAll.HoverState.Image = Properties.Resources.PicItemOff;
             gButtonCreationSelectAll.Image = Properties.Resources.PicItemOn;
             gButtonCreationSelectAll.ImageOffset = new Point(1, 0);
             gButtonCreationSelectAll.ImageSize = new Size(35, 35);
             gButtonCreationSelectAll.Location = new Point(659, 15);
             gButtonCreationSelectAll.Name = "gButtonCreationSelectAll";
-            gButtonCreationSelectAll.ShadowDecoration.CustomizableEdges = customizableEdges40;
+            gButtonCreationSelectAll.ShadowDecoration.CustomizableEdges = customizableEdges10;
             gButtonCreationSelectAll.Size = new Size(40, 40);
             gButtonCreationSelectAll.TabIndex = 36;
+            gButtonCreationSelectAll.Click += gButtonCreationSelectAll_Click;
             // 
             // gSeparatorCreation
             // 
@@ -250,496 +404,246 @@
             lblCreationTime.TabIndex = 30;
             lblCreationTime.Text = "CREATION TIME";
             // 
-            // gRadioButtonCreationIntersectRight
+            // gShadowPanelTopic
             // 
-            gRadioButtonCreationIntersectRight.AutoSize = true;
-            gRadioButtonCreationIntersectRight.BackColor = Color.Transparent;
-            gRadioButtonCreationIntersectRight.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
-            gRadioButtonCreationIntersectRight.CheckedState.BorderThickness = 0;
-            gRadioButtonCreationIntersectRight.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
-            gRadioButtonCreationIntersectRight.CheckedState.InnerColor = Color.White;
-            gRadioButtonCreationIntersectRight.CheckedState.InnerOffset = -4;
-            gRadioButtonCreationIntersectRight.Location = new Point(368, 113);
-            gRadioButtonCreationIntersectRight.Name = "gRadioButtonCreationIntersectRight";
-            gRadioButtonCreationIntersectRight.Size = new Size(167, 24);
-            gRadioButtonCreationIntersectRight.TabIndex = 29;
-            gRadioButtonCreationIntersectRight.Text = "Intersect on the right";
-            gRadioButtonCreationIntersectRight.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
-            gRadioButtonCreationIntersectRight.UncheckedState.BorderThickness = 2;
-            gRadioButtonCreationIntersectRight.UncheckedState.FillColor = Color.Transparent;
-            gRadioButtonCreationIntersectRight.UncheckedState.InnerColor = Color.Transparent;
-            gRadioButtonCreationIntersectRight.UseVisualStyleBackColor = false;
+            gShadowPanelTopic.BackColor = Color.Transparent;
+            gShadowPanelTopic.Controls.Add(pnlTopic);
+            gShadowPanelTopic.Controls.Add(gSeparatorTopic);
+            gShadowPanelTopic.Controls.Add(lblTopic);
+            gShadowPanelTopic.Controls.Add(lblTopicSelectAll);
+            gShadowPanelTopic.Controls.Add(gButtonTopicSelectAll);
+            gShadowPanelTopic.FillColor = Color.White;
+            gShadowPanelTopic.Location = new Point(306, 21);
+            gShadowPanelTopic.Name = "gShadowPanelTopic";
+            gShadowPanelTopic.Radius = 7;
+            gShadowPanelTopic.ShadowColor = Color.Black;
+            gShadowPanelTopic.ShadowShift = 7;
+            gShadowPanelTopic.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
+            gShadowPanelTopic.Size = new Size(734, 201);
+            gShadowPanelTopic.TabIndex = 24;
             // 
-            // gRadioButtonCreationLeftIntersect
+            // pnlTopic
             // 
-            gRadioButtonCreationLeftIntersect.AutoSize = true;
-            gRadioButtonCreationLeftIntersect.BackColor = Color.Transparent;
-            gRadioButtonCreationLeftIntersect.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
-            gRadioButtonCreationLeftIntersect.CheckedState.BorderThickness = 0;
-            gRadioButtonCreationLeftIntersect.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
-            gRadioButtonCreationLeftIntersect.CheckedState.InnerColor = Color.White;
-            gRadioButtonCreationLeftIntersect.CheckedState.InnerOffset = -4;
-            gRadioButtonCreationLeftIntersect.Location = new Point(204, 113);
-            gRadioButtonCreationLeftIntersect.Name = "gRadioButtonCreationLeftIntersect";
-            gRadioButtonCreationLeftIntersect.Size = new Size(158, 24);
-            gRadioButtonCreationLeftIntersect.TabIndex = 28;
-            gRadioButtonCreationLeftIntersect.Text = "Intersect on the left";
-            gRadioButtonCreationLeftIntersect.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
-            gRadioButtonCreationLeftIntersect.UncheckedState.BorderThickness = 2;
-            gRadioButtonCreationLeftIntersect.UncheckedState.FillColor = Color.Transparent;
-            gRadioButtonCreationLeftIntersect.UncheckedState.InnerColor = Color.Transparent;
-            gRadioButtonCreationLeftIntersect.UseVisualStyleBackColor = false;
+            pnlTopic.Controls.Add(gTextBoxMembers);
+            pnlTopic.Controls.Add(lblForThisTopic);
+            pnlTopic.Controls.Add(lblTechnologyField);
+            pnlTopic.Controls.Add(lblMaximum);
+            pnlTopic.Controls.Add(gPictureBoxFaculty);
+            pnlTopic.Controls.Add(gPictureBoxLevel);
+            pnlTopic.Controls.Add(gComboBoxFaculty);
+            pnlTopic.Controls.Add(gComboBoxLevel);
+            pnlTopic.Enabled = false;
+            pnlTopic.Location = new Point(28, 60);
+            pnlTopic.Name = "pnlTopic";
+            pnlTopic.Size = new Size(706, 125);
+            pnlTopic.TabIndex = 56;
             // 
-            // gRadioButtonCreationContain
+            // gTextBoxMembers
             // 
-            gRadioButtonCreationContain.AutoSize = true;
-            gRadioButtonCreationContain.BackColor = Color.Transparent;
-            gRadioButtonCreationContain.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
-            gRadioButtonCreationContain.CheckedState.BorderThickness = 0;
-            gRadioButtonCreationContain.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
-            gRadioButtonCreationContain.CheckedState.InnerColor = Color.White;
-            gRadioButtonCreationContain.CheckedState.InnerOffset = -4;
-            gRadioButtonCreationContain.Location = new Point(42, 113);
-            gRadioButtonCreationContain.Name = "gRadioButtonCreationContain";
-            gRadioButtonCreationContain.Size = new Size(156, 24);
-            gRadioButtonCreationContain.TabIndex = 27;
-            gRadioButtonCreationContain.Text = "Contained in range";
-            gRadioButtonCreationContain.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
-            gRadioButtonCreationContain.UncheckedState.BorderThickness = 2;
-            gRadioButtonCreationContain.UncheckedState.FillColor = Color.Transparent;
-            gRadioButtonCreationContain.UncheckedState.InnerColor = Color.Transparent;
-            gRadioButtonCreationContain.UseVisualStyleBackColor = false;
+            gTextBoxMembers.BorderColor = Color.FromArgb(74, 97, 94);
+            gTextBoxMembers.BorderRadius = 5;
+            gTextBoxMembers.CustomizableEdges = customizableEdges11;
+            gTextBoxMembers.DefaultText = "";
+            gTextBoxMembers.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            gTextBoxMembers.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            gTextBoxMembers.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            gTextBoxMembers.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            gTextBoxMembers.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            gTextBoxMembers.Font = new Font("Segoe UI", 9F);
+            gTextBoxMembers.ForeColor = Color.Black;
+            gTextBoxMembers.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            gTextBoxMembers.IconLeftOffset = new Point(5, 0);
+            gTextBoxMembers.Location = new Point(109, 84);
+            gTextBoxMembers.Margin = new Padding(3, 4, 3, 4);
+            gTextBoxMembers.Name = "gTextBoxMembers";
+            gTextBoxMembers.PasswordChar = '\0';
+            gTextBoxMembers.PlaceholderForeColor = Color.Gray;
+            gTextBoxMembers.PlaceholderText = "num";
+            gTextBoxMembers.SelectedText = "";
+            gTextBoxMembers.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            gTextBoxMembers.Size = new Size(71, 30);
+            gTextBoxMembers.TabIndex = 53;
+            gTextBoxMembers.TextAlign = HorizontalAlignment.Center;
             // 
-            // gDateTimePickerCreationEnd
+            // lblForThisTopic
             // 
-            gDateTimePickerCreationEnd.BackColor = Color.White;
-            gDateTimePickerCreationEnd.BorderRadius = 5;
-            gDateTimePickerCreationEnd.Checked = true;
-            gDateTimePickerCreationEnd.CustomizableEdges = customizableEdges41;
-            gDateTimePickerCreationEnd.FillColor = Color.White;
-            gDateTimePickerCreationEnd.Font = new Font("Segoe UI", 9F);
-            gDateTimePickerCreationEnd.Format = DateTimePickerFormat.Long;
-            gDateTimePickerCreationEnd.Location = new Point(459, 67);
-            gDateTimePickerCreationEnd.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
-            gDateTimePickerCreationEnd.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
-            gDateTimePickerCreationEnd.Name = "gDateTimePickerCreationEnd";
-            gDateTimePickerCreationEnd.ShadowDecoration.CustomizableEdges = customizableEdges42;
-            gDateTimePickerCreationEnd.Size = new Size(240, 40);
-            gDateTimePickerCreationEnd.TabIndex = 26;
-            gDateTimePickerCreationEnd.Value = new DateTime(2024, 3, 9, 13, 39, 14, 674);
+            lblForThisTopic.AutoSize = true;
+            lblForThisTopic.BackColor = Color.Transparent;
+            lblForThisTopic.Font = new Font("Trebuchet MS", 12F, FontStyle.Bold);
+            lblForThisTopic.Location = new Point(184, 86);
+            lblForThisTopic.Name = "lblForThisTopic";
+            lblForThisTopic.Size = new Size(221, 26);
+            lblForThisTopic.TabIndex = 52;
+            lblForThisTopic.Text = "students for this topic";
             // 
-            // lblCreationEnd
+            // lblTechnologyField
             // 
-            lblCreationEnd.AutoSize = true;
-            lblCreationEnd.BackColor = Color.Transparent;
-            lblCreationEnd.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblCreationEnd.Location = new Point(396, 74);
-            lblCreationEnd.Name = "lblCreationEnd";
-            lblCreationEnd.Size = new Size(55, 28);
-            lblCreationEnd.TabIndex = 25;
-            lblCreationEnd.Text = "END";
+            lblTechnologyField.AutoSize = true;
+            lblTechnologyField.BackColor = Color.Transparent;
+            lblTechnologyField.Font = new Font("Trebuchet MS", 12F, FontStyle.Bold);
+            lblTechnologyField.Location = new Point(7, 3);
+            lblTechnologyField.Name = "lblTechnologyField";
+            lblTechnologyField.Size = new Size(166, 26);
+            lblTechnologyField.TabIndex = 51;
+            lblTechnologyField.Text = "Technology field";
             // 
-            // gDateTimePickerCreationStart
+            // lblMaximum
             // 
-            gDateTimePickerCreationStart.BackColor = Color.White;
-            gDateTimePickerCreationStart.BorderRadius = 5;
-            gDateTimePickerCreationStart.Checked = true;
-            gDateTimePickerCreationStart.CustomizableEdges = customizableEdges43;
-            gDateTimePickerCreationStart.FillColor = Color.White;
-            gDateTimePickerCreationStart.Font = new Font("Segoe UI", 9F);
-            gDateTimePickerCreationStart.Format = DateTimePickerFormat.Long;
-            gDateTimePickerCreationStart.Location = new Point(111, 67);
-            gDateTimePickerCreationStart.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
-            gDateTimePickerCreationStart.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
-            gDateTimePickerCreationStart.Name = "gDateTimePickerCreationStart";
-            gDateTimePickerCreationStart.ShadowDecoration.CustomizableEdges = customizableEdges44;
-            gDateTimePickerCreationStart.Size = new Size(240, 40);
-            gDateTimePickerCreationStart.TabIndex = 24;
-            gDateTimePickerCreationStart.Value = new DateTime(2024, 3, 9, 13, 39, 14, 674);
+            lblMaximum.AutoSize = true;
+            lblMaximum.BackColor = Color.Transparent;
+            lblMaximum.Font = new Font("Trebuchet MS", 12F, FontStyle.Bold);
+            lblMaximum.Location = new Point(7, 86);
+            lblMaximum.Name = "lblMaximum";
+            lblMaximum.Size = new Size(101, 26);
+            lblMaximum.TabIndex = 48;
+            lblMaximum.Text = "Maximum";
             // 
-            // lblCreationStart
+            // gPictureBoxFaculty
             // 
-            lblCreationStart.AutoSize = true;
-            lblCreationStart.BackColor = Color.Transparent;
-            lblCreationStart.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblCreationStart.Location = new Point(27, 74);
-            lblCreationStart.Name = "lblCreationStart";
-            lblCreationStart.Size = new Size(78, 28);
-            lblCreationStart.TabIndex = 23;
-            lblCreationStart.Text = "START";
+            gPictureBoxFaculty.BackColor = SystemColors.ControlLight;
+            gPictureBoxFaculty.CustomizableEdges = customizableEdges13;
+            gPictureBoxFaculty.FillColor = SystemColors.ControlLight;
+            gPictureBoxFaculty.Image = (Image)resources.GetObject("gPictureBoxFaculty.Image");
+            gPictureBoxFaculty.ImageRotate = 0F;
+            gPictureBoxFaculty.Location = new Point(17, 43);
+            gPictureBoxFaculty.Name = "gPictureBoxFaculty";
+            gPictureBoxFaculty.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            gPictureBoxFaculty.Size = new Size(21, 21);
+            gPictureBoxFaculty.SizeMode = PictureBoxSizeMode.StretchImage;
+            gPictureBoxFaculty.TabIndex = 49;
+            gPictureBoxFaculty.TabStop = false;
             // 
-            // gShadowPanelDuration
+            // gPictureBoxLevel
             // 
-            gShadowPanelDuration.BackColor = Color.Transparent;
-            gShadowPanelDuration.Controls.Add(lblDurationSelectAll);
-            gShadowPanelDuration.Controls.Add(gButtonDurationSelectAll);
-            gShadowPanelDuration.Controls.Add(lblThesisDuration);
-            gShadowPanelDuration.Controls.Add(guna2Separator2);
-            gShadowPanelDuration.Controls.Add(lblThesisStart);
-            gShadowPanelDuration.Controls.Add(gDateTimePickerThesisStart);
-            gShadowPanelDuration.Controls.Add(gRadioButtonIntersectRightThesis);
-            gShadowPanelDuration.Controls.Add(lblThesisEnd);
-            gShadowPanelDuration.Controls.Add(gRadioButtonIntersectLeftThesis);
-            gShadowPanelDuration.Controls.Add(gDateTimePickerThesisEnd);
-            gShadowPanelDuration.Controls.Add(gRadioButtonContainTheis);
-            gShadowPanelDuration.FillColor = Color.White;
-            gShadowPanelDuration.Location = new Point(32, 466);
-            gShadowPanelDuration.Name = "gShadowPanelDuration";
-            gShadowPanelDuration.Radius = 7;
-            gShadowPanelDuration.ShadowColor = Color.Black;
-            gShadowPanelDuration.ShadowShift = 7;
-            gShadowPanelDuration.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            gShadowPanelDuration.Size = new Size(734, 154);
-            gShadowPanelDuration.TabIndex = 30;
+            gPictureBoxLevel.BackColor = SystemColors.ControlLight;
+            gPictureBoxLevel.CustomizableEdges = customizableEdges15;
+            gPictureBoxLevel.FillColor = Color.Transparent;
+            gPictureBoxLevel.Image = (Image)resources.GetObject("gPictureBoxLevel.Image");
+            gPictureBoxLevel.ImageRotate = 0F;
+            gPictureBoxLevel.Location = new Point(471, 44);
+            gPictureBoxLevel.Name = "gPictureBoxLevel";
+            gPictureBoxLevel.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            gPictureBoxLevel.Size = new Size(20, 20);
+            gPictureBoxLevel.SizeMode = PictureBoxSizeMode.StretchImage;
+            gPictureBoxLevel.TabIndex = 46;
+            gPictureBoxLevel.TabStop = false;
             // 
-            // lblDurationSelectAll
+            // gComboBoxFaculty
             // 
-            lblDurationSelectAll.AutoSize = true;
-            lblDurationSelectAll.BackColor = Color.Transparent;
-            lblDurationSelectAll.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblDurationSelectAll.ForeColor = Color.FromArgb(74, 97, 94);
-            lblDurationSelectAll.Location = new Point(571, 21);
-            lblDurationSelectAll.Name = "lblDurationSelectAll";
-            lblDurationSelectAll.Size = new Size(84, 25);
-            lblDurationSelectAll.TabIndex = 39;
-            lblDurationSelectAll.Text = "select all";
+            gComboBoxFaculty.BackColor = Color.Transparent;
+            gComboBoxFaculty.BorderColor = Color.FromArgb(74, 97, 94);
+            gComboBoxFaculty.BorderRadius = 5;
+            gComboBoxFaculty.CustomizableEdges = customizableEdges17;
+            gComboBoxFaculty.DrawMode = DrawMode.OwnerDrawFixed;
+            gComboBoxFaculty.DropDownStyle = ComboBoxStyle.DropDownList;
+            gComboBoxFaculty.FocusedColor = Color.FromArgb(94, 148, 255);
+            gComboBoxFaculty.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            gComboBoxFaculty.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            gComboBoxFaculty.ForeColor = Color.Black;
+            gComboBoxFaculty.ItemHeight = 34;
+            gComboBoxFaculty.Items.AddRange(new object[] { "Software Development", "Cybersecurity", "Data Science and Analytics", "Artificial Intelligence and Machine Learning", "Cloud Computing", "Internet of Things (IoT)", "Mobile Development", "Web Development", "Computer Networking", "Virtual Reality (VR) and Augmented Reality (AR)", "Big Data", "Blockchain Technology", "Human-Computer Interaction (HCI)", "Quantum Computing", "Bioinformatics" });
+            gComboBoxFaculty.Location = new Point(7, 34);
+            gComboBoxFaculty.Name = "gComboBoxFaculty";
+            gComboBoxFaculty.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            gComboBoxFaculty.Size = new Size(448, 40);
+            gComboBoxFaculty.StartIndex = 0;
+            gComboBoxFaculty.TabIndex = 50;
+            gComboBoxFaculty.TextOffset = new Point(30, 0);
             // 
-            // gButtonDurationSelectAll
+            // gComboBoxLevel
             // 
-            gButtonDurationSelectAll.BackColor = Color.Transparent;
-            gButtonDurationSelectAll.BorderRadius = 5;
-            gButtonDurationSelectAll.CustomizableEdges = customizableEdges45;
-            gButtonDurationSelectAll.DisabledState.BorderColor = Color.DarkGray;
-            gButtonDurationSelectAll.DisabledState.CustomBorderColor = Color.DarkGray;
-            gButtonDurationSelectAll.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            gButtonDurationSelectAll.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            gButtonDurationSelectAll.FillColor = Color.Transparent;
-            gButtonDurationSelectAll.Font = new Font("Segoe UI", 9F);
-            gButtonDurationSelectAll.ForeColor = Color.White;
-            gButtonDurationSelectAll.HoverState.FillColor = Color.White;
-            gButtonDurationSelectAll.HoverState.Image = Properties.Resources.PicItemOff;
-            gButtonDurationSelectAll.Image = Properties.Resources.PicItemOn;
-            gButtonDurationSelectAll.ImageOffset = new Point(1, 0);
-            gButtonDurationSelectAll.ImageSize = new Size(35, 35);
-            gButtonDurationSelectAll.Location = new Point(659, 15);
-            gButtonDurationSelectAll.Name = "gButtonDurationSelectAll";
-            gButtonDurationSelectAll.ShadowDecoration.CustomizableEdges = customizableEdges46;
-            gButtonDurationSelectAll.Size = new Size(40, 40);
-            gButtonDurationSelectAll.TabIndex = 38;
+            gComboBoxLevel.BackColor = Color.Transparent;
+            gComboBoxLevel.BorderColor = Color.FromArgb(74, 97, 94);
+            gComboBoxLevel.BorderRadius = 5;
+            gComboBoxLevel.CustomizableEdges = customizableEdges19;
+            gComboBoxLevel.DrawMode = DrawMode.OwnerDrawFixed;
+            gComboBoxLevel.DropDownStyle = ComboBoxStyle.DropDownList;
+            gComboBoxLevel.FocusedColor = Color.FromArgb(94, 148, 255);
+            gComboBoxLevel.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            gComboBoxLevel.Font = new Font("Segoe UI", 9F);
+            gComboBoxLevel.ForeColor = Color.Black;
+            gComboBoxLevel.ItemHeight = 35;
+            gComboBoxLevel.Items.AddRange(new object[] { "Easy", "Medium", "Difficult" });
+            gComboBoxLevel.Location = new Point(461, 34);
+            gComboBoxLevel.Name = "gComboBoxLevel";
+            gComboBoxLevel.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            gComboBoxLevel.Size = new Size(150, 41);
+            gComboBoxLevel.StartIndex = 0;
+            gComboBoxLevel.TabIndex = 47;
+            gComboBoxLevel.TextOffset = new Point(32, 0);
             // 
-            // lblThesisDuration
+            // gSeparatorTopic
             // 
-            lblThesisDuration.AutoSize = true;
-            lblThesisDuration.BackColor = Color.Transparent;
-            lblThesisDuration.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblThesisDuration.Location = new Point(27, 15);
-            lblThesisDuration.Name = "lblThesisDuration";
-            lblThesisDuration.Size = new Size(201, 28);
-            lblThesisDuration.TabIndex = 30;
-            lblThesisDuration.Text = "THESIS DURATION";
+            gSeparatorTopic.BackColor = Color.White;
+            gSeparatorTopic.Location = new Point(28, 48);
+            gSeparatorTopic.Name = "gSeparatorTopic";
+            gSeparatorTopic.Size = new Size(672, 12);
+            gSeparatorTopic.TabIndex = 55;
             // 
-            // guna2Separator2
+            // lblTopic
             // 
-            guna2Separator2.BackColor = Color.White;
-            guna2Separator2.Location = new Point(27, 49);
-            guna2Separator2.Name = "guna2Separator2";
-            guna2Separator2.Size = new Size(672, 12);
-            guna2Separator2.TabIndex = 31;
+            lblTopic.AutoSize = true;
+            lblTopic.BackColor = Color.Transparent;
+            lblTopic.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTopic.Location = new Point(28, 14);
+            lblTopic.Name = "lblTopic";
+            lblTopic.Size = new Size(155, 28);
+            lblTopic.TabIndex = 54;
+            lblTopic.Text = "THESIS TOPIC";
             // 
-            // lblThesisStart
+            // lblTopicSelectAll
             // 
-            lblThesisStart.AutoSize = true;
-            lblThesisStart.BackColor = Color.Transparent;
-            lblThesisStart.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblThesisStart.Location = new Point(27, 74);
-            lblThesisStart.Name = "lblThesisStart";
-            lblThesisStart.Size = new Size(78, 28);
-            lblThesisStart.TabIndex = 23;
-            lblThesisStart.Text = "START";
+            lblTopicSelectAll.AutoSize = true;
+            lblTopicSelectAll.BackColor = Color.Transparent;
+            lblTopicSelectAll.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTopicSelectAll.ForeColor = Color.FromArgb(74, 97, 94);
+            lblTopicSelectAll.Location = new Point(569, 20);
+            lblTopicSelectAll.Name = "lblTopicSelectAll";
+            lblTopicSelectAll.Size = new Size(84, 25);
+            lblTopicSelectAll.TabIndex = 39;
+            lblTopicSelectAll.Text = "select all";
             // 
-            // gDateTimePickerThesisStart
+            // gButtonTopicSelectAll
             // 
-            gDateTimePickerThesisStart.BackColor = Color.White;
-            gDateTimePickerThesisStart.BorderRadius = 5;
-            gDateTimePickerThesisStart.Checked = true;
-            gDateTimePickerThesisStart.CustomizableEdges = customizableEdges47;
-            gDateTimePickerThesisStart.FillColor = Color.White;
-            gDateTimePickerThesisStart.Font = new Font("Segoe UI", 9F);
-            gDateTimePickerThesisStart.Format = DateTimePickerFormat.Long;
-            gDateTimePickerThesisStart.Location = new Point(111, 67);
-            gDateTimePickerThesisStart.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
-            gDateTimePickerThesisStart.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
-            gDateTimePickerThesisStart.Name = "gDateTimePickerThesisStart";
-            gDateTimePickerThesisStart.ShadowDecoration.CustomizableEdges = customizableEdges48;
-            gDateTimePickerThesisStart.Size = new Size(240, 40);
-            gDateTimePickerThesisStart.TabIndex = 24;
-            gDateTimePickerThesisStart.Value = new DateTime(2024, 3, 9, 13, 39, 14, 674);
-            // 
-            // gRadioButtonIntersectRightThesis
-            // 
-            gRadioButtonIntersectRightThesis.AutoSize = true;
-            gRadioButtonIntersectRightThesis.BackColor = Color.Transparent;
-            gRadioButtonIntersectRightThesis.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
-            gRadioButtonIntersectRightThesis.CheckedState.BorderThickness = 0;
-            gRadioButtonIntersectRightThesis.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
-            gRadioButtonIntersectRightThesis.CheckedState.InnerColor = Color.White;
-            gRadioButtonIntersectRightThesis.CheckedState.InnerOffset = -4;
-            gRadioButtonIntersectRightThesis.Location = new Point(368, 113);
-            gRadioButtonIntersectRightThesis.Name = "gRadioButtonIntersectRightThesis";
-            gRadioButtonIntersectRightThesis.Size = new Size(167, 24);
-            gRadioButtonIntersectRightThesis.TabIndex = 29;
-            gRadioButtonIntersectRightThesis.Text = "Intersect on the right";
-            gRadioButtonIntersectRightThesis.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
-            gRadioButtonIntersectRightThesis.UncheckedState.BorderThickness = 2;
-            gRadioButtonIntersectRightThesis.UncheckedState.FillColor = Color.Transparent;
-            gRadioButtonIntersectRightThesis.UncheckedState.InnerColor = Color.Transparent;
-            gRadioButtonIntersectRightThesis.UseVisualStyleBackColor = false;
-            // 
-            // lblThesisEnd
-            // 
-            lblThesisEnd.AutoSize = true;
-            lblThesisEnd.BackColor = Color.Transparent;
-            lblThesisEnd.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblThesisEnd.Location = new Point(396, 74);
-            lblThesisEnd.Name = "lblThesisEnd";
-            lblThesisEnd.Size = new Size(55, 28);
-            lblThesisEnd.TabIndex = 25;
-            lblThesisEnd.Text = "END";
-            // 
-            // gRadioButtonIntersectLeftThesis
-            // 
-            gRadioButtonIntersectLeftThesis.AutoSize = true;
-            gRadioButtonIntersectLeftThesis.BackColor = Color.Transparent;
-            gRadioButtonIntersectLeftThesis.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
-            gRadioButtonIntersectLeftThesis.CheckedState.BorderThickness = 0;
-            gRadioButtonIntersectLeftThesis.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
-            gRadioButtonIntersectLeftThesis.CheckedState.InnerColor = Color.White;
-            gRadioButtonIntersectLeftThesis.CheckedState.InnerOffset = -4;
-            gRadioButtonIntersectLeftThesis.Location = new Point(204, 113);
-            gRadioButtonIntersectLeftThesis.Name = "gRadioButtonIntersectLeftThesis";
-            gRadioButtonIntersectLeftThesis.Size = new Size(158, 24);
-            gRadioButtonIntersectLeftThesis.TabIndex = 28;
-            gRadioButtonIntersectLeftThesis.Text = "Intersect on the left";
-            gRadioButtonIntersectLeftThesis.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
-            gRadioButtonIntersectLeftThesis.UncheckedState.BorderThickness = 2;
-            gRadioButtonIntersectLeftThesis.UncheckedState.FillColor = Color.Transparent;
-            gRadioButtonIntersectLeftThesis.UncheckedState.InnerColor = Color.Transparent;
-            gRadioButtonIntersectLeftThesis.UseVisualStyleBackColor = false;
-            // 
-            // gDateTimePickerThesisEnd
-            // 
-            gDateTimePickerThesisEnd.BackColor = Color.White;
-            gDateTimePickerThesisEnd.BorderRadius = 5;
-            gDateTimePickerThesisEnd.Checked = true;
-            gDateTimePickerThesisEnd.CustomizableEdges = customizableEdges49;
-            gDateTimePickerThesisEnd.FillColor = Color.White;
-            gDateTimePickerThesisEnd.Font = new Font("Segoe UI", 9F);
-            gDateTimePickerThesisEnd.Format = DateTimePickerFormat.Long;
-            gDateTimePickerThesisEnd.Location = new Point(459, 67);
-            gDateTimePickerThesisEnd.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
-            gDateTimePickerThesisEnd.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
-            gDateTimePickerThesisEnd.Name = "gDateTimePickerThesisEnd";
-            gDateTimePickerThesisEnd.ShadowDecoration.CustomizableEdges = customizableEdges50;
-            gDateTimePickerThesisEnd.Size = new Size(240, 40);
-            gDateTimePickerThesisEnd.TabIndex = 26;
-            gDateTimePickerThesisEnd.Value = new DateTime(2024, 3, 9, 13, 39, 14, 674);
-            // 
-            // gRadioButtonContainTheis
-            // 
-            gRadioButtonContainTheis.AutoSize = true;
-            gRadioButtonContainTheis.BackColor = Color.Transparent;
-            gRadioButtonContainTheis.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
-            gRadioButtonContainTheis.CheckedState.BorderThickness = 0;
-            gRadioButtonContainTheis.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
-            gRadioButtonContainTheis.CheckedState.InnerColor = Color.White;
-            gRadioButtonContainTheis.CheckedState.InnerOffset = -4;
-            gRadioButtonContainTheis.Location = new Point(42, 113);
-            gRadioButtonContainTheis.Name = "gRadioButtonContainTheis";
-            gRadioButtonContainTheis.Size = new Size(156, 24);
-            gRadioButtonContainTheis.TabIndex = 27;
-            gRadioButtonContainTheis.Text = "Contained in range";
-            gRadioButtonContainTheis.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
-            gRadioButtonContainTheis.UncheckedState.BorderThickness = 2;
-            gRadioButtonContainTheis.UncheckedState.FillColor = Color.Transparent;
-            gRadioButtonContainTheis.UncheckedState.InnerColor = Color.Transparent;
-            gRadioButtonContainTheis.UseVisualStyleBackColor = false;
-            // 
-            // gShadowPanelHashtagLevel
-            // 
-            gShadowPanelHashtagLevel.BackColor = Color.Transparent;
-            gShadowPanelHashtagLevel.Controls.Add(lblHashtagSelectAll);
-            gShadowPanelHashtagLevel.Controls.Add(gButtonHashtagSelectAll);
-            gShadowPanelHashtagLevel.Controls.Add(guna2TextBox1);
-            gShadowPanelHashtagLevel.Controls.Add(guna2PictureBox1);
-            gShadowPanelHashtagLevel.Controls.Add(label1);
-            gShadowPanelHashtagLevel.Controls.Add(guna2ComboBox1);
-            gShadowPanelHashtagLevel.Controls.Add(guna2TextBox2);
-            gShadowPanelHashtagLevel.FillColor = Color.White;
-            gShadowPanelHashtagLevel.Location = new Point(32, 253);
-            gShadowPanelHashtagLevel.Name = "gShadowPanelHashtagLevel";
-            gShadowPanelHashtagLevel.Radius = 7;
-            gShadowPanelHashtagLevel.ShadowColor = Color.Black;
-            gShadowPanelHashtagLevel.ShadowShift = 7;
-            gShadowPanelHashtagLevel.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            gShadowPanelHashtagLevel.Size = new Size(734, 183);
-            gShadowPanelHashtagLevel.TabIndex = 24;
-            // 
-            // lblHashtagSelectAll
-            // 
-            lblHashtagSelectAll.AutoSize = true;
-            lblHashtagSelectAll.BackColor = Color.Transparent;
-            lblHashtagSelectAll.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblHashtagSelectAll.ForeColor = Color.FromArgb(74, 97, 94);
-            lblHashtagSelectAll.Location = new Point(571, 11);
-            lblHashtagSelectAll.Name = "lblHashtagSelectAll";
-            lblHashtagSelectAll.Size = new Size(84, 25);
-            lblHashtagSelectAll.TabIndex = 39;
-            lblHashtagSelectAll.Text = "select all";
-            // 
-            // gButtonHashtagSelectAll
-            // 
-            gButtonHashtagSelectAll.BackColor = Color.Transparent;
-            gButtonHashtagSelectAll.BorderRadius = 5;
-            gButtonHashtagSelectAll.CustomizableEdges = customizableEdges51;
-            gButtonHashtagSelectAll.DisabledState.BorderColor = Color.DarkGray;
-            gButtonHashtagSelectAll.DisabledState.CustomBorderColor = Color.DarkGray;
-            gButtonHashtagSelectAll.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            gButtonHashtagSelectAll.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            gButtonHashtagSelectAll.FillColor = Color.Transparent;
-            gButtonHashtagSelectAll.Font = new Font("Segoe UI", 9F);
-            gButtonHashtagSelectAll.ForeColor = Color.White;
-            gButtonHashtagSelectAll.HoverState.FillColor = Color.White;
-            gButtonHashtagSelectAll.HoverState.Image = Properties.Resources.PicItemOff;
-            gButtonHashtagSelectAll.Image = Properties.Resources.PicItemOn;
-            gButtonHashtagSelectAll.ImageOffset = new Point(1, 0);
-            gButtonHashtagSelectAll.ImageSize = new Size(35, 35);
-            gButtonHashtagSelectAll.Location = new Point(659, 5);
-            gButtonHashtagSelectAll.Name = "gButtonHashtagSelectAll";
-            gButtonHashtagSelectAll.ShadowDecoration.CustomizableEdges = customizableEdges52;
-            gButtonHashtagSelectAll.Size = new Size(40, 40);
-            gButtonHashtagSelectAll.TabIndex = 38;
-            // 
-            // guna2TextBox1
-            // 
-            guna2TextBox1.BorderColor = Color.FromArgb(74, 97, 94);
-            guna2TextBox1.BorderRadius = 5;
-            guna2TextBox1.CustomizableEdges = customizableEdges53;
-            guna2TextBox1.DefaultText = "";
-            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Font = new Font("Segoe UI", 9F);
-            guna2TextBox1.ForeColor = Color.Black;
-            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.IconLeftOffset = new Point(5, 0);
-            guna2TextBox1.Location = new Point(26, 97);
-            guna2TextBox1.Margin = new Padding(3, 4, 3, 4);
-            guna2TextBox1.Multiline = true;
-            guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.PasswordChar = '\0';
-            guna2TextBox1.PlaceholderForeColor = Color.Gray;
-            guna2TextBox1.PlaceholderText = "Hashtag list @";
-            guna2TextBox1.ReadOnly = true;
-            guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges54;
-            guna2TextBox1.Size = new Size(673, 65);
-            guna2TextBox1.TabIndex = 28;
-            guna2TextBox1.TextOffset = new Point(5, 0);
-            // 
-            // guna2PictureBox1
-            // 
-            guna2PictureBox1.BackColor = Color.White;
-            guna2PictureBox1.CustomizableEdges = customizableEdges55;
-            guna2PictureBox1.FillColor = Color.Transparent;
-            guna2PictureBox1.ImageRotate = 0F;
-            guna2PictureBox1.Location = new Point(514, 60);
-            guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges56;
-            guna2PictureBox1.Size = new Size(20, 20);
-            guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            guna2PictureBox1.TabIndex = 27;
-            guna2PictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(26, 17);
-            label1.Name = "label1";
-            label1.Size = new Size(232, 28);
-            label1.TabIndex = 26;
-            label1.Text = "HASHTAG and LEVEL";
-            // 
-            // guna2ComboBox1
-            // 
-            guna2ComboBox1.BackColor = Color.Transparent;
-            guna2ComboBox1.BorderColor = Color.FromArgb(74, 97, 94);
-            guna2ComboBox1.BorderRadius = 5;
-            guna2ComboBox1.CustomizableEdges = customizableEdges57;
-            guna2ComboBox1.DrawMode = DrawMode.OwnerDrawFixed;
-            guna2ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            guna2ComboBox1.FocusedColor = Color.FromArgb(94, 148, 255);
-            guna2ComboBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2ComboBox1.Font = new Font("Segoe UI", 9F);
-            guna2ComboBox1.ForeColor = Color.Black;
-            guna2ComboBox1.ItemHeight = 35;
-            guna2ComboBox1.Items.AddRange(new object[] { "Easy", "Medium", "Difficult" });
-            guna2ComboBox1.Location = new Point(505, 49);
-            guna2ComboBox1.Name = "guna2ComboBox1";
-            guna2ComboBox1.ShadowDecoration.CustomizableEdges = customizableEdges58;
-            guna2ComboBox1.Size = new Size(194, 41);
-            guna2ComboBox1.TabIndex = 25;
-            guna2ComboBox1.TextOffset = new Point(32, 0);
-            // 
-            // guna2TextBox2
-            // 
-            guna2TextBox2.BorderColor = Color.FromArgb(74, 97, 94);
-            guna2TextBox2.BorderRadius = 5;
-            guna2TextBox2.CustomizableEdges = customizableEdges59;
-            guna2TextBox2.DefaultText = "";
-            guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox2.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox2.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Font = new Font("Segoe UI", 9F);
-            guna2TextBox2.ForeColor = Color.Black;
-            guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.IconLeft = Properties.Resources.PicAddHashtag;
-            guna2TextBox2.IconLeftOffset = new Point(5, 0);
-            guna2TextBox2.Location = new Point(26, 49);
-            guna2TextBox2.Margin = new Padding(3, 4, 3, 4);
-            guna2TextBox2.Name = "guna2TextBox2";
-            guna2TextBox2.PasswordChar = '\0';
-            guna2TextBox2.PlaceholderForeColor = Color.Gray;
-            guna2TextBox2.PlaceholderText = "Hashtag";
-            guna2TextBox2.SelectedText = "";
-            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges60;
-            guna2TextBox2.Size = new Size(473, 40);
-            guna2TextBox2.TabIndex = 24;
-            guna2TextBox2.TextOffset = new Point(5, 0);
+            gButtonTopicSelectAll.BackColor = Color.Transparent;
+            gButtonTopicSelectAll.BorderRadius = 5;
+            gButtonTopicSelectAll.CustomizableEdges = customizableEdges21;
+            gButtonTopicSelectAll.DisabledState.BorderColor = Color.DarkGray;
+            gButtonTopicSelectAll.DisabledState.CustomBorderColor = Color.DarkGray;
+            gButtonTopicSelectAll.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            gButtonTopicSelectAll.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            gButtonTopicSelectAll.FillColor = Color.Transparent;
+            gButtonTopicSelectAll.Font = new Font("Segoe UI", 9F);
+            gButtonTopicSelectAll.ForeColor = Color.White;
+            gButtonTopicSelectAll.HoverState.FillColor = Color.White;
+            gButtonTopicSelectAll.Image = Properties.Resources.PicItemOn;
+            gButtonTopicSelectAll.ImageOffset = new Point(1, 0);
+            gButtonTopicSelectAll.ImageSize = new Size(35, 35);
+            gButtonTopicSelectAll.Location = new Point(659, 14);
+            gButtonTopicSelectAll.Name = "gButtonTopicSelectAll";
+            gButtonTopicSelectAll.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            gButtonTopicSelectAll.Size = new Size(40, 40);
+            gButtonTopicSelectAll.TabIndex = 38;
+            gButtonTopicSelectAll.Click += gButtonTopicSelectAll_Click;
             // 
             // gShadowPanelTopicFavorites
             // 
             gShadowPanelTopicFavorites.BackColor = Color.Transparent;
             gShadowPanelTopicFavorites.Controls.Add(gButtonTopicStar);
-            gShadowPanelTopicFavorites.Controls.Add(lblTopicFavorites);
+            gShadowPanelTopicFavorites.Controls.Add(lblThesisFavorites);
             gShadowPanelTopicFavorites.FillColor = Color.White;
-            gShadowPanelTopicFavorites.Location = new Point(32, 182);
+            gShadowPanelTopicFavorites.Location = new Point(306, 228);
             gShadowPanelTopicFavorites.Name = "gShadowPanelTopicFavorites";
             gShadowPanelTopicFavorites.Radius = 6;
             gShadowPanelTopicFavorites.ShadowColor = Color.Black;
             gShadowPanelTopicFavorites.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            gShadowPanelTopicFavorites.Size = new Size(357, 65);
+            gShadowPanelTopicFavorites.Size = new Size(390, 65);
             gShadowPanelTopicFavorites.TabIndex = 31;
             // 
             // gButtonTopicStar
             // 
             gButtonTopicStar.BorderRadius = 5;
-            gButtonTopicStar.CustomizableEdges = customizableEdges61;
+            gButtonTopicStar.CustomizableEdges = customizableEdges23;
             gButtonTopicStar.DisabledState.BorderColor = Color.DarkGray;
             gButtonTopicStar.DisabledState.CustomBorderColor = Color.DarkGray;
             gButtonTopicStar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -753,195 +657,527 @@
             gButtonTopicStar.ImageSize = new Size(25, 25);
             gButtonTopicStar.Location = new Point(26, 10);
             gButtonTopicStar.Name = "gButtonTopicStar";
-            gButtonTopicStar.ShadowDecoration.CustomizableEdges = customizableEdges62;
+            gButtonTopicStar.ShadowDecoration.CustomizableEdges = customizableEdges24;
             gButtonTopicStar.Size = new Size(40, 40);
             gButtonTopicStar.TabIndex = 13;
             // 
-            // lblTopicFavorites
+            // lblThesisFavorites
             // 
-            lblTopicFavorites.AutoSize = true;
-            lblTopicFavorites.BackColor = Color.Transparent;
-            lblTopicFavorites.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTopicFavorites.Location = new Point(68, 18);
-            lblTopicFavorites.Name = "lblTopicFavorites";
-            lblTopicFavorites.Size = new Size(219, 28);
-            lblTopicFavorites.TabIndex = 12;
-            lblTopicFavorites.Text = "Is TOPIC FAVORITES";
+            lblThesisFavorites.AutoSize = true;
+            lblThesisFavorites.BackColor = Color.Transparent;
+            lblThesisFavorites.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblThesisFavorites.Location = new Point(68, 18);
+            lblThesisFavorites.Name = "lblThesisFavorites";
+            lblThesisFavorites.Size = new Size(229, 28);
+            lblThesisFavorites.TabIndex = 12;
+            lblThesisFavorites.Text = "Is THESIS FAVORITES";
             // 
-            // gShadowPanelThesisFavorites
+            // gShadowPanelStatus
             // 
-            gShadowPanelThesisFavorites.BackColor = Color.Transparent;
-            gShadowPanelThesisFavorites.Controls.Add(gButtonThesisStar);
-            gShadowPanelThesisFavorites.Controls.Add(lblThesisFavorite);
-            gShadowPanelThesisFavorites.FillColor = Color.White;
-            gShadowPanelThesisFavorites.Location = new Point(32, 626);
-            gShadowPanelThesisFavorites.Name = "gShadowPanelThesisFavorites";
-            gShadowPanelThesisFavorites.Radius = 6;
-            gShadowPanelThesisFavorites.ShadowColor = Color.Black;
-            gShadowPanelThesisFavorites.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            gShadowPanelThesisFavorites.Size = new Size(357, 65);
-            gShadowPanelThesisFavorites.TabIndex = 14;
+            gShadowPanelStatus.BackColor = Color.Transparent;
+            gShadowPanelStatus.Controls.Add(gComboBoxStatus);
+            gShadowPanelStatus.Controls.Add(lblStatus);
+            gShadowPanelStatus.FillColor = Color.White;
+            gShadowPanelStatus.Location = new Point(702, 228);
+            gShadowPanelStatus.Name = "gShadowPanelStatus";
+            gShadowPanelStatus.Radius = 6;
+            gShadowPanelStatus.ShadowColor = Color.Black;
+            gShadowPanelStatus.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
+            gShadowPanelStatus.Size = new Size(338, 65);
+            gShadowPanelStatus.TabIndex = 14;
             // 
-            // gButtonThesisStar
+            // gComboBoxStatus
             // 
-            gButtonThesisStar.BorderRadius = 5;
-            gButtonThesisStar.CustomizableEdges = customizableEdges63;
-            gButtonThesisStar.DisabledState.BorderColor = Color.DarkGray;
-            gButtonThesisStar.DisabledState.CustomBorderColor = Color.DarkGray;
-            gButtonThesisStar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            gButtonThesisStar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            gButtonThesisStar.FillColor = Color.Transparent;
-            gButtonThesisStar.Font = new Font("Segoe UI", 9F);
-            gButtonThesisStar.ForeColor = Color.White;
-            gButtonThesisStar.HoverState.FillColor = SystemColors.ControlLight;
-            gButtonThesisStar.HoverState.Image = Properties.Resources.PicInLineGradientStar;
-            gButtonThesisStar.Image = Properties.Resources.PicInLineStar;
-            gButtonThesisStar.ImageSize = new Size(25, 25);
-            gButtonThesisStar.Location = new Point(26, 10);
-            gButtonThesisStar.Name = "gButtonThesisStar";
-            gButtonThesisStar.ShadowDecoration.CustomizableEdges = customizableEdges64;
-            gButtonThesisStar.Size = new Size(40, 40);
-            gButtonThesisStar.TabIndex = 13;
+            gComboBoxStatus.BackColor = Color.Transparent;
+            gComboBoxStatus.BorderColor = Color.FromArgb(74, 97, 94);
+            gComboBoxStatus.BorderRadius = 5;
+            gComboBoxStatus.CustomizableEdges = customizableEdges25;
+            gComboBoxStatus.DrawMode = DrawMode.OwnerDrawFixed;
+            gComboBoxStatus.DropDownStyle = ComboBoxStyle.DropDownList;
+            gComboBoxStatus.FocusedColor = Color.FromArgb(94, 148, 255);
+            gComboBoxStatus.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            gComboBoxStatus.Font = new Font("Segoe UI", 9F);
+            gComboBoxStatus.ForeColor = Color.Black;
+            gComboBoxStatus.ItemHeight = 35;
+            gComboBoxStatus.Items.AddRange(new object[] { "All", "Published", "Unpublish" });
+            gComboBoxStatus.Location = new Point(112, 9);
+            gComboBoxStatus.Name = "gComboBoxStatus";
+            gComboBoxStatus.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            gComboBoxStatus.Size = new Size(131, 41);
+            gComboBoxStatus.StartIndex = 0;
+            gComboBoxStatus.TabIndex = 15;
+            gComboBoxStatus.TextOffset = new Point(5, 3);
             // 
-            // lblThesisFavorite
+            // lblStatus
             // 
-            lblThesisFavorite.AutoSize = true;
-            lblThesisFavorite.BackColor = Color.Transparent;
-            lblThesisFavorite.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblThesisFavorite.Location = new Point(68, 18);
-            lblThesisFavorite.Name = "lblThesisFavorite";
-            lblThesisFavorite.Size = new Size(229, 28);
-            lblThesisFavorite.TabIndex = 12;
-            lblThesisFavorite.Text = "Is THESIS FAVORITES";
+            lblStatus.AutoSize = true;
+            lblStatus.BackColor = Color.Transparent;
+            lblStatus.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblStatus.Location = new Point(28, 18);
+            lblStatus.Name = "lblStatus";
+            lblStatus.Size = new Size(78, 28);
+            lblStatus.TabIndex = 16;
+            lblStatus.Text = "Status";
             // 
-            // gShadowPanelTopicCreatedAgo
+            // gShadowPanelPending
             // 
-            gShadowPanelTopicCreatedAgo.BackColor = Color.Transparent;
-            gShadowPanelTopicCreatedAgo.Controls.Add(lblTopicAgo);
-            gShadowPanelTopicCreatedAgo.Controls.Add(gComboBoxTopicCreatedAgo);
-            gShadowPanelTopicCreatedAgo.Controls.Add(lblTopicCreated);
-            gShadowPanelTopicCreatedAgo.FillColor = Color.White;
-            gShadowPanelTopicCreatedAgo.Location = new Point(409, 182);
-            gShadowPanelTopicCreatedAgo.Name = "gShadowPanelTopicCreatedAgo";
-            gShadowPanelTopicCreatedAgo.Radius = 6;
-            gShadowPanelTopicCreatedAgo.ShadowColor = Color.Black;
-            gShadowPanelTopicCreatedAgo.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            gShadowPanelTopicCreatedAgo.Size = new Size(357, 65);
-            gShadowPanelTopicCreatedAgo.TabIndex = 14;
+            gShadowPanelPending.BackColor = Color.Transparent;
+            gShadowPanelPending.Controls.Add(gTextBoxPendingTo);
+            gShadowPanelPending.Controls.Add(lblPendingTo);
+            gShadowPanelPending.Controls.Add(gSeparatorPending);
+            gShadowPanelPending.Controls.Add(gTextBoxPendingFrom);
+            gShadowPanelPending.Controls.Add(lblPendingFrom);
+            gShadowPanelPending.Controls.Add(lblPendingAll);
+            gShadowPanelPending.Controls.Add(gButtonPendingAll);
+            gShadowPanelPending.Controls.Add(lblPending);
+            gShadowPanelPending.FillColor = Color.White;
+            gShadowPanelPending.Location = new Point(28, 22);
+            gShadowPanelPending.Name = "gShadowPanelPending";
+            gShadowPanelPending.Radius = 6;
+            gShadowPanelPending.ShadowColor = Color.Black;
+            gShadowPanelPending.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
+            gShadowPanelPending.Size = new Size(259, 140);
+            gShadowPanelPending.TabIndex = 45;
             // 
-            // lblTopicAgo
+            // gTextBoxPendingTo
             // 
-            lblTopicAgo.AutoSize = true;
-            lblTopicAgo.BackColor = Color.Transparent;
-            lblTopicAgo.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTopicAgo.Location = new Point(268, 18);
-            lblTopicAgo.Name = "lblTopicAgo";
-            lblTopicAgo.Size = new Size(49, 28);
-            lblTopicAgo.TabIndex = 17;
-            lblTopicAgo.Text = "ago";
+            gTextBoxPendingTo.BorderColor = Color.FromArgb(74, 97, 94);
+            gTextBoxPendingTo.BorderRadius = 5;
+            gTextBoxPendingTo.CustomizableEdges = customizableEdges27;
+            gTextBoxPendingTo.DefaultText = "";
+            gTextBoxPendingTo.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            gTextBoxPendingTo.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            gTextBoxPendingTo.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            gTextBoxPendingTo.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            gTextBoxPendingTo.Enabled = false;
+            gTextBoxPendingTo.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            gTextBoxPendingTo.Font = new Font("Segoe UI", 9F);
+            gTextBoxPendingTo.ForeColor = Color.Black;
+            gTextBoxPendingTo.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            gTextBoxPendingTo.Location = new Point(172, 74);
+            gTextBoxPendingTo.Margin = new Padding(3, 4, 3, 4);
+            gTextBoxPendingTo.Name = "gTextBoxPendingTo";
+            gTextBoxPendingTo.PasswordChar = '\0';
+            gTextBoxPendingTo.PlaceholderForeColor = Color.Gray;
+            gTextBoxPendingTo.PlaceholderText = "num";
+            gTextBoxPendingTo.SelectedText = "";
+            gTextBoxPendingTo.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            gTextBoxPendingTo.Size = new Size(60, 30);
+            gTextBoxPendingTo.TabIndex = 42;
             // 
-            // gComboBoxTopicCreatedAgo
+            // lblPendingTo
             // 
-            gComboBoxTopicCreatedAgo.BackColor = Color.Transparent;
-            gComboBoxTopicCreatedAgo.BorderColor = Color.FromArgb(74, 97, 94);
-            gComboBoxTopicCreatedAgo.BorderRadius = 5;
-            gComboBoxTopicCreatedAgo.CustomizableEdges = customizableEdges65;
-            gComboBoxTopicCreatedAgo.DrawMode = DrawMode.OwnerDrawFixed;
-            gComboBoxTopicCreatedAgo.DropDownStyle = ComboBoxStyle.DropDownList;
-            gComboBoxTopicCreatedAgo.FocusedColor = Color.FromArgb(94, 148, 255);
-            gComboBoxTopicCreatedAgo.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            gComboBoxTopicCreatedAgo.Font = new Font("Segoe UI", 9F);
-            gComboBoxTopicCreatedAgo.ForeColor = Color.Black;
-            gComboBoxTopicCreatedAgo.ItemHeight = 35;
-            gComboBoxTopicCreatedAgo.Items.AddRange(new object[] { "15 minutes", "1 hour", "3 hours", "6 hours", "24 hours", "1 week", "1 month" });
-            gComboBoxTopicCreatedAgo.Location = new Point(131, 10);
-            gComboBoxTopicCreatedAgo.Name = "gComboBoxTopicCreatedAgo";
-            gComboBoxTopicCreatedAgo.ShadowDecoration.CustomizableEdges = customizableEdges66;
-            gComboBoxTopicCreatedAgo.Size = new Size(131, 41);
-            gComboBoxTopicCreatedAgo.TabIndex = 15;
-            gComboBoxTopicCreatedAgo.TextOffset = new Point(5, 0);
+            lblPendingTo.AutoSize = true;
+            lblPendingTo.BackColor = Color.Transparent;
+            lblPendingTo.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPendingTo.ForeColor = Color.FromArgb(74, 97, 94);
+            lblPendingTo.Location = new Point(136, 76);
+            lblPendingTo.Name = "lblPendingTo";
+            lblPendingTo.Size = new Size(30, 25);
+            lblPendingTo.TabIndex = 43;
+            lblPendingTo.Text = "to";
             // 
-            // lblTopicCreated
+            // gSeparatorPending
             // 
-            lblTopicCreated.AutoSize = true;
-            lblTopicCreated.BackColor = Color.Transparent;
-            lblTopicCreated.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTopicCreated.Location = new Point(23, 18);
-            lblTopicCreated.Name = "lblTopicCreated";
-            lblTopicCreated.Size = new Size(99, 28);
-            lblTopicCreated.TabIndex = 16;
-            lblTopicCreated.Text = "Ceadted";
+            gSeparatorPending.Location = new Point(26, 54);
+            gSeparatorPending.Name = "gSeparatorPending";
+            gSeparatorPending.Size = new Size(200, 12);
+            gSeparatorPending.TabIndex = 41;
             // 
-            // gPanelThesisCreated
+            // gTextBoxPendingFrom
             // 
-            gPanelThesisCreated.BackColor = Color.Transparent;
-            gPanelThesisCreated.Controls.Add(lblThesisAgo);
-            gPanelThesisCreated.Controls.Add(gComboBoxThesisCreatedAgo);
-            gPanelThesisCreated.Controls.Add(lblThesisCreated);
-            gPanelThesisCreated.FillColor = Color.White;
-            gPanelThesisCreated.Location = new Point(409, 626);
-            gPanelThesisCreated.Name = "gPanelThesisCreated";
-            gPanelThesisCreated.Radius = 6;
-            gPanelThesisCreated.ShadowColor = Color.Black;
-            gPanelThesisCreated.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            gPanelThesisCreated.Size = new Size(357, 65);
-            gPanelThesisCreated.TabIndex = 18;
+            gTextBoxPendingFrom.BorderColor = Color.FromArgb(74, 97, 94);
+            gTextBoxPendingFrom.BorderRadius = 5;
+            gTextBoxPendingFrom.CustomizableEdges = customizableEdges29;
+            gTextBoxPendingFrom.DefaultText = "";
+            gTextBoxPendingFrom.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            gTextBoxPendingFrom.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            gTextBoxPendingFrom.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            gTextBoxPendingFrom.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            gTextBoxPendingFrom.Enabled = false;
+            gTextBoxPendingFrom.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            gTextBoxPendingFrom.Font = new Font("Segoe UI", 9F);
+            gTextBoxPendingFrom.ForeColor = Color.Black;
+            gTextBoxPendingFrom.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            gTextBoxPendingFrom.Location = new Point(70, 74);
+            gTextBoxPendingFrom.Margin = new Padding(3, 4, 3, 4);
+            gTextBoxPendingFrom.Name = "gTextBoxPendingFrom";
+            gTextBoxPendingFrom.PasswordChar = '\0';
+            gTextBoxPendingFrom.PlaceholderForeColor = Color.Gray;
+            gTextBoxPendingFrom.PlaceholderText = "num";
+            gTextBoxPendingFrom.SelectedText = "";
+            gTextBoxPendingFrom.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            gTextBoxPendingFrom.Size = new Size(60, 30);
+            gTextBoxPendingFrom.TabIndex = 37;
             // 
-            // lblThesisAgo
+            // lblPendingFrom
             // 
-            lblThesisAgo.AutoSize = true;
-            lblThesisAgo.BackColor = Color.Transparent;
-            lblThesisAgo.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblThesisAgo.Location = new Point(265, 18);
-            lblThesisAgo.Name = "lblThesisAgo";
-            lblThesisAgo.Size = new Size(49, 28);
-            lblThesisAgo.TabIndex = 17;
-            lblThesisAgo.Text = "ago";
+            lblPendingFrom.AutoSize = true;
+            lblPendingFrom.BackColor = Color.Transparent;
+            lblPendingFrom.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPendingFrom.ForeColor = Color.FromArgb(74, 97, 94);
+            lblPendingFrom.Location = new Point(12, 76);
+            lblPendingFrom.Name = "lblPendingFrom";
+            lblPendingFrom.Size = new Size(52, 25);
+            lblPendingFrom.TabIndex = 40;
+            lblPendingFrom.Text = "from";
             // 
-            // gComboBoxThesisCreatedAgo
+            // lblPendingAll
             // 
-            gComboBoxThesisCreatedAgo.BackColor = Color.Transparent;
-            gComboBoxThesisCreatedAgo.BorderColor = Color.FromArgb(74, 97, 94);
-            gComboBoxThesisCreatedAgo.BorderRadius = 5;
-            gComboBoxThesisCreatedAgo.CustomizableEdges = customizableEdges67;
-            gComboBoxThesisCreatedAgo.DrawMode = DrawMode.OwnerDrawFixed;
-            gComboBoxThesisCreatedAgo.DropDownStyle = ComboBoxStyle.DropDownList;
-            gComboBoxThesisCreatedAgo.FocusedColor = Color.FromArgb(94, 148, 255);
-            gComboBoxThesisCreatedAgo.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            gComboBoxThesisCreatedAgo.Font = new Font("Segoe UI", 9F);
-            gComboBoxThesisCreatedAgo.ForeColor = Color.Black;
-            gComboBoxThesisCreatedAgo.ItemHeight = 35;
-            gComboBoxThesisCreatedAgo.Items.AddRange(new object[] { "15 minutes", "1 hour", "3 hours", "6 hours", "24 hours", "1 week", "1 month" });
-            gComboBoxThesisCreatedAgo.Location = new Point(128, 10);
-            gComboBoxThesisCreatedAgo.Name = "gComboBoxThesisCreatedAgo";
-            gComboBoxThesisCreatedAgo.ShadowDecoration.CustomizableEdges = customizableEdges68;
-            gComboBoxThesisCreatedAgo.Size = new Size(131, 41);
-            gComboBoxThesisCreatedAgo.TabIndex = 16;
-            gComboBoxThesisCreatedAgo.TextOffset = new Point(5, 0);
+            lblPendingAll.AutoSize = true;
+            lblPendingAll.BackColor = Color.Transparent;
+            lblPendingAll.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPendingAll.ForeColor = Color.FromArgb(74, 97, 94);
+            lblPendingAll.Location = new Point(166, 23);
+            lblPendingAll.Name = "lblPendingAll";
+            lblPendingAll.Size = new Size(31, 25);
+            lblPendingAll.TabIndex = 39;
+            lblPendingAll.Text = "all";
             // 
-            // lblThesisCreated
+            // gButtonPendingAll
             // 
-            lblThesisCreated.AutoSize = true;
-            lblThesisCreated.BackColor = Color.Transparent;
-            lblThesisCreated.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblThesisCreated.Location = new Point(23, 18);
-            lblThesisCreated.Name = "lblThesisCreated";
-            lblThesisCreated.Size = new Size(99, 28);
-            lblThesisCreated.TabIndex = 15;
-            lblThesisCreated.Text = "Ceadted";
+            gButtonPendingAll.BackColor = Color.Transparent;
+            gButtonPendingAll.BorderRadius = 5;
+            gButtonPendingAll.CustomizableEdges = customizableEdges31;
+            gButtonPendingAll.DisabledState.BorderColor = Color.DarkGray;
+            gButtonPendingAll.DisabledState.CustomBorderColor = Color.DarkGray;
+            gButtonPendingAll.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            gButtonPendingAll.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            gButtonPendingAll.FillColor = Color.Transparent;
+            gButtonPendingAll.Font = new Font("Segoe UI", 9F);
+            gButtonPendingAll.ForeColor = Color.White;
+            gButtonPendingAll.HoverState.FillColor = Color.White;
+            gButtonPendingAll.Image = Properties.Resources.PicItemOn;
+            gButtonPendingAll.ImageOffset = new Point(1, 0);
+            gButtonPendingAll.ImageSize = new Size(35, 35);
+            gButtonPendingAll.Location = new Point(198, 17);
+            gButtonPendingAll.Name = "gButtonPendingAll";
+            gButtonPendingAll.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            gButtonPendingAll.Size = new Size(40, 40);
+            gButtonPendingAll.TabIndex = 38;
+            gButtonPendingAll.Click += gButtonPendingAll_Click;
+            // 
+            // lblPending
+            // 
+            lblPending.AutoSize = true;
+            lblPending.BackColor = Color.Transparent;
+            lblPending.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPending.Location = new Point(10, 22);
+            lblPending.Name = "lblPending";
+            lblPending.Size = new Size(98, 28);
+            lblPending.TabIndex = 12;
+            lblPending.Text = "Pending";
+            // 
+            // gShadowPanelAccepted
+            // 
+            gShadowPanelAccepted.BackColor = Color.Transparent;
+            gShadowPanelAccepted.Controls.Add(gTextBoxAcceptedTo);
+            gShadowPanelAccepted.Controls.Add(lblAcceptedTo);
+            gShadowPanelAccepted.Controls.Add(gSeparatorAccepted);
+            gShadowPanelAccepted.Controls.Add(gTextBoxAcceptedFrom);
+            gShadowPanelAccepted.Controls.Add(lblAcceptedFrom);
+            gShadowPanelAccepted.Controls.Add(lblAcceptedAll);
+            gShadowPanelAccepted.Controls.Add(gButtonAcceptedAll);
+            gShadowPanelAccepted.Controls.Add(lblAccepted);
+            gShadowPanelAccepted.FillColor = Color.White;
+            gShadowPanelAccepted.Location = new Point(28, 172);
+            gShadowPanelAccepted.Name = "gShadowPanelAccepted";
+            gShadowPanelAccepted.Radius = 6;
+            gShadowPanelAccepted.ShadowColor = Color.Black;
+            gShadowPanelAccepted.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
+            gShadowPanelAccepted.Size = new Size(259, 140);
+            gShadowPanelAccepted.TabIndex = 46;
+            // 
+            // gTextBoxAcceptedTo
+            // 
+            gTextBoxAcceptedTo.BorderColor = Color.FromArgb(74, 97, 94);
+            gTextBoxAcceptedTo.BorderRadius = 5;
+            gTextBoxAcceptedTo.CustomizableEdges = customizableEdges33;
+            gTextBoxAcceptedTo.DefaultText = "";
+            gTextBoxAcceptedTo.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            gTextBoxAcceptedTo.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            gTextBoxAcceptedTo.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            gTextBoxAcceptedTo.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            gTextBoxAcceptedTo.Enabled = false;
+            gTextBoxAcceptedTo.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            gTextBoxAcceptedTo.Font = new Font("Segoe UI", 9F);
+            gTextBoxAcceptedTo.ForeColor = Color.Black;
+            gTextBoxAcceptedTo.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            gTextBoxAcceptedTo.Location = new Point(172, 74);
+            gTextBoxAcceptedTo.Margin = new Padding(3, 4, 3, 4);
+            gTextBoxAcceptedTo.Name = "gTextBoxAcceptedTo";
+            gTextBoxAcceptedTo.PasswordChar = '\0';
+            gTextBoxAcceptedTo.PlaceholderForeColor = Color.Gray;
+            gTextBoxAcceptedTo.PlaceholderText = "num";
+            gTextBoxAcceptedTo.SelectedText = "";
+            gTextBoxAcceptedTo.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            gTextBoxAcceptedTo.Size = new Size(60, 30);
+            gTextBoxAcceptedTo.TabIndex = 42;
+            // 
+            // lblAcceptedTo
+            // 
+            lblAcceptedTo.AutoSize = true;
+            lblAcceptedTo.BackColor = Color.Transparent;
+            lblAcceptedTo.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblAcceptedTo.ForeColor = Color.FromArgb(74, 97, 94);
+            lblAcceptedTo.Location = new Point(136, 76);
+            lblAcceptedTo.Name = "lblAcceptedTo";
+            lblAcceptedTo.Size = new Size(30, 25);
+            lblAcceptedTo.TabIndex = 43;
+            lblAcceptedTo.Text = "to";
+            // 
+            // gSeparatorAccepted
+            // 
+            gSeparatorAccepted.Location = new Point(26, 54);
+            gSeparatorAccepted.Name = "gSeparatorAccepted";
+            gSeparatorAccepted.Size = new Size(200, 12);
+            gSeparatorAccepted.TabIndex = 41;
+            // 
+            // gTextBoxAcceptedFrom
+            // 
+            gTextBoxAcceptedFrom.BorderColor = Color.FromArgb(74, 97, 94);
+            gTextBoxAcceptedFrom.BorderRadius = 5;
+            gTextBoxAcceptedFrom.CustomizableEdges = customizableEdges35;
+            gTextBoxAcceptedFrom.DefaultText = "";
+            gTextBoxAcceptedFrom.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            gTextBoxAcceptedFrom.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            gTextBoxAcceptedFrom.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            gTextBoxAcceptedFrom.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            gTextBoxAcceptedFrom.Enabled = false;
+            gTextBoxAcceptedFrom.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            gTextBoxAcceptedFrom.Font = new Font("Segoe UI", 9F);
+            gTextBoxAcceptedFrom.ForeColor = Color.Black;
+            gTextBoxAcceptedFrom.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            gTextBoxAcceptedFrom.Location = new Point(70, 74);
+            gTextBoxAcceptedFrom.Margin = new Padding(3, 4, 3, 4);
+            gTextBoxAcceptedFrom.Name = "gTextBoxAcceptedFrom";
+            gTextBoxAcceptedFrom.PasswordChar = '\0';
+            gTextBoxAcceptedFrom.PlaceholderForeColor = Color.Gray;
+            gTextBoxAcceptedFrom.PlaceholderText = "num";
+            gTextBoxAcceptedFrom.SelectedText = "";
+            gTextBoxAcceptedFrom.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            gTextBoxAcceptedFrom.Size = new Size(60, 30);
+            gTextBoxAcceptedFrom.TabIndex = 37;
+            // 
+            // lblAcceptedFrom
+            // 
+            lblAcceptedFrom.AutoSize = true;
+            lblAcceptedFrom.BackColor = Color.Transparent;
+            lblAcceptedFrom.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblAcceptedFrom.ForeColor = Color.FromArgb(74, 97, 94);
+            lblAcceptedFrom.Location = new Point(12, 76);
+            lblAcceptedFrom.Name = "lblAcceptedFrom";
+            lblAcceptedFrom.Size = new Size(52, 25);
+            lblAcceptedFrom.TabIndex = 40;
+            lblAcceptedFrom.Text = "from";
+            // 
+            // lblAcceptedAll
+            // 
+            lblAcceptedAll.AutoSize = true;
+            lblAcceptedAll.BackColor = Color.Transparent;
+            lblAcceptedAll.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblAcceptedAll.ForeColor = Color.FromArgb(74, 97, 94);
+            lblAcceptedAll.Location = new Point(166, 23);
+            lblAcceptedAll.Name = "lblAcceptedAll";
+            lblAcceptedAll.Size = new Size(31, 25);
+            lblAcceptedAll.TabIndex = 39;
+            lblAcceptedAll.Text = "all";
+            // 
+            // gButtonAcceptedAll
+            // 
+            gButtonAcceptedAll.BackColor = Color.Transparent;
+            gButtonAcceptedAll.BorderRadius = 5;
+            gButtonAcceptedAll.CustomizableEdges = customizableEdges37;
+            gButtonAcceptedAll.DisabledState.BorderColor = Color.DarkGray;
+            gButtonAcceptedAll.DisabledState.CustomBorderColor = Color.DarkGray;
+            gButtonAcceptedAll.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            gButtonAcceptedAll.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            gButtonAcceptedAll.FillColor = Color.Transparent;
+            gButtonAcceptedAll.Font = new Font("Segoe UI", 9F);
+            gButtonAcceptedAll.ForeColor = Color.White;
+            gButtonAcceptedAll.HoverState.FillColor = Color.White;
+            gButtonAcceptedAll.Image = Properties.Resources.PicItemOn;
+            gButtonAcceptedAll.ImageOffset = new Point(1, 0);
+            gButtonAcceptedAll.ImageSize = new Size(35, 35);
+            gButtonAcceptedAll.Location = new Point(198, 17);
+            gButtonAcceptedAll.Name = "gButtonAcceptedAll";
+            gButtonAcceptedAll.ShadowDecoration.CustomizableEdges = customizableEdges38;
+            gButtonAcceptedAll.Size = new Size(40, 40);
+            gButtonAcceptedAll.TabIndex = 38;
+            gButtonAcceptedAll.Click += gButtonAcceptedAll_Click;
+            // 
+            // lblAccepted
+            // 
+            lblAccepted.AutoSize = true;
+            lblAccepted.BackColor = Color.Transparent;
+            lblAccepted.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblAccepted.Location = new Point(10, 22);
+            lblAccepted.Name = "lblAccepted";
+            lblAccepted.Size = new Size(112, 28);
+            lblAccepted.TabIndex = 12;
+            lblAccepted.Text = "Accepted";
+            // 
+            // gShadowPanelCompleted
+            // 
+            gShadowPanelCompleted.BackColor = Color.Transparent;
+            gShadowPanelCompleted.Controls.Add(gTextBoxCompletedTo);
+            gShadowPanelCompleted.Controls.Add(lblCompletedTo);
+            gShadowPanelCompleted.Controls.Add(gSeparatorCompleted);
+            gShadowPanelCompleted.Controls.Add(gTextBoxCompletedFrom);
+            gShadowPanelCompleted.Controls.Add(lblCompletedFrom);
+            gShadowPanelCompleted.Controls.Add(lblCompletedAll);
+            gShadowPanelCompleted.Controls.Add(gButtonCompletedAll);
+            gShadowPanelCompleted.Controls.Add(lblCompleted);
+            gShadowPanelCompleted.FillColor = Color.White;
+            gShadowPanelCompleted.Location = new Point(28, 322);
+            gShadowPanelCompleted.Name = "gShadowPanelCompleted";
+            gShadowPanelCompleted.Radius = 6;
+            gShadowPanelCompleted.ShadowColor = Color.Black;
+            gShadowPanelCompleted.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
+            gShadowPanelCompleted.Size = new Size(259, 140);
+            gShadowPanelCompleted.TabIndex = 47;
+            // 
+            // gTextBoxCompletedTo
+            // 
+            gTextBoxCompletedTo.BorderColor = Color.FromArgb(74, 97, 94);
+            gTextBoxCompletedTo.BorderRadius = 5;
+            gTextBoxCompletedTo.CustomizableEdges = customizableEdges39;
+            gTextBoxCompletedTo.DefaultText = "";
+            gTextBoxCompletedTo.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            gTextBoxCompletedTo.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            gTextBoxCompletedTo.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            gTextBoxCompletedTo.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            gTextBoxCompletedTo.Enabled = false;
+            gTextBoxCompletedTo.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            gTextBoxCompletedTo.Font = new Font("Segoe UI", 9F);
+            gTextBoxCompletedTo.ForeColor = Color.Black;
+            gTextBoxCompletedTo.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            gTextBoxCompletedTo.Location = new Point(172, 74);
+            gTextBoxCompletedTo.Margin = new Padding(3, 4, 3, 4);
+            gTextBoxCompletedTo.Name = "gTextBoxCompletedTo";
+            gTextBoxCompletedTo.PasswordChar = '\0';
+            gTextBoxCompletedTo.PlaceholderForeColor = Color.Gray;
+            gTextBoxCompletedTo.PlaceholderText = "num";
+            gTextBoxCompletedTo.SelectedText = "";
+            gTextBoxCompletedTo.ShadowDecoration.CustomizableEdges = customizableEdges40;
+            gTextBoxCompletedTo.Size = new Size(60, 30);
+            gTextBoxCompletedTo.TabIndex = 42;
+            // 
+            // lblCompletedTo
+            // 
+            lblCompletedTo.AutoSize = true;
+            lblCompletedTo.BackColor = Color.Transparent;
+            lblCompletedTo.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblCompletedTo.ForeColor = Color.FromArgb(74, 97, 94);
+            lblCompletedTo.Location = new Point(136, 76);
+            lblCompletedTo.Name = "lblCompletedTo";
+            lblCompletedTo.Size = new Size(30, 25);
+            lblCompletedTo.TabIndex = 43;
+            lblCompletedTo.Text = "to";
+            // 
+            // gSeparatorCompleted
+            // 
+            gSeparatorCompleted.Location = new Point(26, 54);
+            gSeparatorCompleted.Name = "gSeparatorCompleted";
+            gSeparatorCompleted.Size = new Size(200, 12);
+            gSeparatorCompleted.TabIndex = 41;
+            // 
+            // gTextBoxCompletedFrom
+            // 
+            gTextBoxCompletedFrom.BorderColor = Color.FromArgb(74, 97, 94);
+            gTextBoxCompletedFrom.BorderRadius = 5;
+            gTextBoxCompletedFrom.CustomizableEdges = customizableEdges41;
+            gTextBoxCompletedFrom.DefaultText = "";
+            gTextBoxCompletedFrom.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            gTextBoxCompletedFrom.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            gTextBoxCompletedFrom.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            gTextBoxCompletedFrom.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            gTextBoxCompletedFrom.Enabled = false;
+            gTextBoxCompletedFrom.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            gTextBoxCompletedFrom.Font = new Font("Segoe UI", 9F);
+            gTextBoxCompletedFrom.ForeColor = Color.Black;
+            gTextBoxCompletedFrom.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            gTextBoxCompletedFrom.Location = new Point(70, 74);
+            gTextBoxCompletedFrom.Margin = new Padding(3, 4, 3, 4);
+            gTextBoxCompletedFrom.Name = "gTextBoxCompletedFrom";
+            gTextBoxCompletedFrom.PasswordChar = '\0';
+            gTextBoxCompletedFrom.PlaceholderForeColor = Color.Gray;
+            gTextBoxCompletedFrom.PlaceholderText = "num";
+            gTextBoxCompletedFrom.SelectedText = "";
+            gTextBoxCompletedFrom.ShadowDecoration.CustomizableEdges = customizableEdges42;
+            gTextBoxCompletedFrom.Size = new Size(60, 30);
+            gTextBoxCompletedFrom.TabIndex = 37;
+            // 
+            // lblCompletedFrom
+            // 
+            lblCompletedFrom.AutoSize = true;
+            lblCompletedFrom.BackColor = Color.Transparent;
+            lblCompletedFrom.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblCompletedFrom.ForeColor = Color.FromArgb(74, 97, 94);
+            lblCompletedFrom.Location = new Point(12, 76);
+            lblCompletedFrom.Name = "lblCompletedFrom";
+            lblCompletedFrom.Size = new Size(52, 25);
+            lblCompletedFrom.TabIndex = 40;
+            lblCompletedFrom.Text = "from";
+            // 
+            // lblCompletedAll
+            // 
+            lblCompletedAll.AutoSize = true;
+            lblCompletedAll.BackColor = Color.Transparent;
+            lblCompletedAll.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblCompletedAll.ForeColor = Color.FromArgb(74, 97, 94);
+            lblCompletedAll.Location = new Point(166, 23);
+            lblCompletedAll.Name = "lblCompletedAll";
+            lblCompletedAll.Size = new Size(31, 25);
+            lblCompletedAll.TabIndex = 39;
+            lblCompletedAll.Text = "all";
+            // 
+            // gButtonCompletedAll
+            // 
+            gButtonCompletedAll.BackColor = Color.Transparent;
+            gButtonCompletedAll.BorderRadius = 5;
+            gButtonCompletedAll.CustomizableEdges = customizableEdges43;
+            gButtonCompletedAll.DisabledState.BorderColor = Color.DarkGray;
+            gButtonCompletedAll.DisabledState.CustomBorderColor = Color.DarkGray;
+            gButtonCompletedAll.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            gButtonCompletedAll.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            gButtonCompletedAll.FillColor = Color.Transparent;
+            gButtonCompletedAll.Font = new Font("Segoe UI", 9F);
+            gButtonCompletedAll.ForeColor = Color.White;
+            gButtonCompletedAll.HoverState.FillColor = Color.White;
+            gButtonCompletedAll.Image = Properties.Resources.PicItemOn;
+            gButtonCompletedAll.ImageOffset = new Point(1, 0);
+            gButtonCompletedAll.ImageSize = new Size(35, 35);
+            gButtonCompletedAll.Location = new Point(198, 17);
+            gButtonCompletedAll.Name = "gButtonCompletedAll";
+            gButtonCompletedAll.ShadowDecoration.CustomizableEdges = customizableEdges44;
+            gButtonCompletedAll.Size = new Size(40, 40);
+            gButtonCompletedAll.TabIndex = 38;
+            gButtonCompletedAll.Click += gButtonCompletedAll_Click;
+            // 
+            // lblCompleted
+            // 
+            lblCompleted.AutoSize = true;
+            lblCompleted.BackColor = Color.Transparent;
+            lblCompleted.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblCompleted.Location = new Point(10, 22);
+            lblCompleted.Name = "lblCompleted";
+            lblCompleted.Size = new Size(127, 28);
+            lblCompleted.TabIndex = 12;
+            lblCompleted.Text = "Completed";
             // 
             // FThesisFilter
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonFace;
-            ClientSize = new Size(795, 763);
-            Controls.Add(gPanelThesisCreated);
-            Controls.Add(gShadowPanelTopicCreatedAgo);
-            Controls.Add(gShadowPanelThesisFavorites);
+            ClientSize = new Size(1066, 545);
+            Controls.Add(gShadowPanelCompleted);
+            Controls.Add(gShadowPanelAccepted);
+            Controls.Add(gShadowPanelPending);
+            Controls.Add(gShadowPanelStatus);
             Controls.Add(gShadowPanelTopicFavorites);
-            Controls.Add(gShadowPanelHashtagLevel);
-            Controls.Add(gShadowPanelDuration);
+            Controls.Add(gShadowPanelTopic);
             Controls.Add(gShadowPanelCreationTime);
             Controls.Add(gSeparatorTopicThesis);
             Controls.Add(gButtonCancel);
@@ -953,19 +1189,24 @@
             Text = "Thesis Filter";
             gShadowPanelCreationTime.ResumeLayout(false);
             gShadowPanelCreationTime.PerformLayout();
-            gShadowPanelDuration.ResumeLayout(false);
-            gShadowPanelDuration.PerformLayout();
-            gShadowPanelHashtagLevel.ResumeLayout(false);
-            gShadowPanelHashtagLevel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
+            pnlCreation.ResumeLayout(false);
+            pnlCreation.PerformLayout();
+            gShadowPanelTopic.ResumeLayout(false);
+            gShadowPanelTopic.PerformLayout();
+            pnlTopic.ResumeLayout(false);
+            pnlTopic.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)gPictureBoxFaculty).EndInit();
+            ((System.ComponentModel.ISupportInitialize)gPictureBoxLevel).EndInit();
             gShadowPanelTopicFavorites.ResumeLayout(false);
             gShadowPanelTopicFavorites.PerformLayout();
-            gShadowPanelThesisFavorites.ResumeLayout(false);
-            gShadowPanelThesisFavorites.PerformLayout();
-            gShadowPanelTopicCreatedAgo.ResumeLayout(false);
-            gShadowPanelTopicCreatedAgo.PerformLayout();
-            gPanelThesisCreated.ResumeLayout(false);
-            gPanelThesisCreated.PerformLayout();
+            gShadowPanelStatus.ResumeLayout(false);
+            gShadowPanelStatus.PerformLayout();
+            gShadowPanelPending.ResumeLayout(false);
+            gShadowPanelPending.PerformLayout();
+            gShadowPanelAccepted.ResumeLayout(false);
+            gShadowPanelAccepted.PerformLayout();
+            gShadowPanelCompleted.ResumeLayout(false);
+            gShadowPanelCompleted.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -983,41 +1224,55 @@
         private Label lblCreationEnd;
         private Guna.UI2.WinForms.Guna2DateTimePicker gDateTimePickerCreationStart;
         private Label lblCreationStart;
-        private Guna.UI2.WinForms.Guna2ShadowPanel gShadowPanelDuration;
-        private Label lblThesisDuration;
-        private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
-        private Label lblThesisStart;
-        private Guna.UI2.WinForms.Guna2DateTimePicker gDateTimePickerThesisStart;
-        private Guna.UI2.WinForms.Guna2RadioButton gRadioButtonIntersectRightThesis;
-        private Label lblThesisEnd;
-        private Guna.UI2.WinForms.Guna2RadioButton gRadioButtonIntersectLeftThesis;
-        private Guna.UI2.WinForms.Guna2DateTimePicker gDateTimePickerThesisEnd;
-        private Guna.UI2.WinForms.Guna2RadioButton gRadioButtonContainTheis;
-        private Guna.UI2.WinForms.Guna2ShadowPanel gShadowPanelHashtagLevel;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Label label1;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2ShadowPanel gShadowPanelTopic;
         private Guna.UI2.WinForms.Guna2ShadowPanel gShadowPanelTopicFavorites;
         private Guna.UI2.WinForms.Guna2Button gButtonTopicStar;
-        private Label lblTopicFavorites;
-        private Guna.UI2.WinForms.Guna2ShadowPanel gShadowPanelThesisFavorites;
-        private Guna.UI2.WinForms.Guna2Button gButtonThesisStar;
-        private Label lblThesisFavorite;
-        private Guna.UI2.WinForms.Guna2ShadowPanel gShadowPanelTopicCreatedAgo;
-        private Label lblTopicAgo;
-        private Guna.UI2.WinForms.Guna2ComboBox gComboBoxTopicCreatedAgo;
-        private Label lblTopicCreated;
-        private Guna.UI2.WinForms.Guna2ShadowPanel gPanelThesisCreated;
-        private Label lblThesisAgo;
-        private Guna.UI2.WinForms.Guna2ComboBox gComboBoxThesisCreatedAgo;
-        private Label lblThesisCreated;
+        private Label lblThesisFavorites;
+        private Guna.UI2.WinForms.Guna2ShadowPanel gShadowPanelStatus;
+        private Guna.UI2.WinForms.Guna2ComboBox gComboBoxStatus;
+        private Label lblStatus;
         private Label lblCreationSelectAll;
         private Guna.UI2.WinForms.Guna2Button gButtonCreationSelectAll;
-        private Label lblDurationSelectAll;
-        private Guna.UI2.WinForms.Guna2Button gButtonDurationSelectAll;
-        private Label lblHashtagSelectAll;
-        private Guna.UI2.WinForms.Guna2Button gButtonHashtagSelectAll;
+        private Label lblTopicSelectAll;
+        private Guna.UI2.WinForms.Guna2Button gButtonTopicSelectAll;
+        private Guna.UI2.WinForms.Guna2Separator gSeparatorTopic;
+        private Label lblTopic;
+        private Guna.UI2.WinForms.Guna2ShadowPanel gShadowPanelPending;
+        private Guna.UI2.WinForms.Guna2TextBox gTextBoxPendingTo;
+        private Label lblPendingTo;
+        private Guna.UI2.WinForms.Guna2Separator gSeparatorPending;
+        private Guna.UI2.WinForms.Guna2TextBox gTextBoxPendingFrom;
+        private Label lblPendingFrom;
+        private Label lblPendingAll;
+        private Guna.UI2.WinForms.Guna2Button gButtonPendingAll;
+        private Label lblPending;
+        private Guna.UI2.WinForms.Guna2ShadowPanel gShadowPanelAccepted;
+        private Guna.UI2.WinForms.Guna2TextBox gTextBoxAcceptedTo;
+        private Label lblAcceptedTo;
+        private Guna.UI2.WinForms.Guna2Separator gSeparatorAccepted;
+        private Guna.UI2.WinForms.Guna2TextBox gTextBoxAcceptedFrom;
+        private Label lblAcceptedFrom;
+        private Label lblAcceptedAll;
+        private Guna.UI2.WinForms.Guna2Button gButtonAcceptedAll;
+        private Label lblAccepted;
+        private Guna.UI2.WinForms.Guna2ShadowPanel gShadowPanelCompleted;
+        private Guna.UI2.WinForms.Guna2TextBox gTextBoxCompletedTo;
+        private Label lblCompletedTo;
+        private Guna.UI2.WinForms.Guna2Separator gSeparatorCompleted;
+        private Guna.UI2.WinForms.Guna2TextBox gTextBoxCompletedFrom;
+        private Label lblCompletedFrom;
+        private Label lblCompletedAll;
+        private Guna.UI2.WinForms.Guna2Button gButtonCompletedAll;
+        private Label lblCompleted;
+        private Panel pnlTopic;
+        private Panel pnlCreation;
+        private Guna.UI2.WinForms.Guna2TextBox gTextBoxMembers;
+        private Label lblForThisTopic;
+        private Label lblTechnologyField;
+        private Label lblMaximum;
+        private Guna.UI2.WinForms.Guna2PictureBox gPictureBoxFaculty;
+        private Guna.UI2.WinForms.Guna2PictureBox gPictureBoxLevel;
+        private Guna.UI2.WinForms.Guna2ComboBox gComboBoxFaculty;
+        private Guna.UI2.WinForms.Guna2ComboBox gComboBoxLevel;
     }
 }

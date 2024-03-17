@@ -13,12 +13,14 @@ namespace ThesisManagementProject
 {
     public partial class UCAccountLecture : UserControl
     {
-        UCAccountAvatar uCAccountAvatar = new UCAccountAvatar();
-        UCAccountInformation uCAccountInformation = new UCAccountInformation();
-
         public UCAccountLecture()
         {
             InitializeComponent();
+
+            for (int i = 0; i < 10; i++)
+            {
+                flpTheses.Controls.Add(new UCThesisMiniLine());
+            }
         }
 
         private void gGradientButtonEdit_Click(object sender, EventArgs e)

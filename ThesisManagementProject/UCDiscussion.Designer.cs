@@ -93,6 +93,7 @@
             gComboBoxSearchCeriteria.Name = "gComboBoxSearchCeriteria";
             gComboBoxSearchCeriteria.ShadowDecoration.CustomizableEdges = customizableEdges2;
             gComboBoxSearchCeriteria.Size = new Size(89, 40);
+            gComboBoxSearchCeriteria.StartIndex = 0;
             gComboBoxSearchCeriteria.TabIndex = 7;
             gComboBoxSearchCeriteria.TextOffset = new Point(10, 0);
             // 

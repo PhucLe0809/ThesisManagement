@@ -217,6 +217,12 @@
   <data name="PicItemAddTeamWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PicItemAddTeamWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PicItemBack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicItemBack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicItemBackGradient" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicItemBackGradient.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PicItemCopy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PicItemCopy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -273,6 +279,12 @@
   </data>
   <data name="PicItemUniversity" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PicItemUniversity.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicItemUploadBlack32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicItemUploadBlack32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicItemUploadWhite32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicItemUploadWhite32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PicMiniLineEssay" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PicMiniLineEssay.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

@@ -70,7 +70,7 @@
             gGradientButtonMems = new Guna.UI2.WinForms.Guna2GradientButton();
             gGradientButtonInformation = new Guna.UI2.WinForms.Guna2GradientButton();
             gGradientButtonTool = new Guna.UI2.WinForms.Guna2GradientButton();
-            gGradientButtonNumThesises = new Guna.UI2.WinForms.Guna2GradientButton();
+            gGradientButtonNumTheses = new Guna.UI2.WinForms.Guna2GradientButton();
             gGradientButtonTag = new Guna.UI2.WinForms.Guna2GradientButton();
             gGradientButtonCreateTeam = new Guna.UI2.WinForms.Guna2GradientButton();
             gShadowPanelTeam.SuspendLayout();
@@ -224,7 +224,6 @@
             gGradientButtonNumTopic.Size = new Size(89, 40);
             gGradientButtonNumTopic.TabIndex = 37;
             gGradientButtonNumTopic.Text = "Topics";
-            gGradientButtonNumTopic.TextAlign = HorizontalAlignment.Left;
             // 
             // gGradientButtonTeamCode
             // 
@@ -247,7 +246,6 @@
             gGradientButtonTeamCode.Size = new Size(153, 40);
             gGradientButtonTeamCode.TabIndex = 32;
             gGradientButtonTeamCode.Text = "Team code";
-            gGradientButtonTeamCode.TextAlign = HorizontalAlignment.Left;
             // 
             // gGradientButtonAccount
             // 
@@ -293,7 +291,6 @@
             gGradientButtonStatus.Size = new Size(180, 40);
             gGradientButtonStatus.TabIndex = 33;
             gGradientButtonStatus.Text = "Status";
-            gGradientButtonStatus.TextAlign = HorizontalAlignment.Left;
             // 
             // gGradientButtonMems
             // 
@@ -316,7 +313,6 @@
             gGradientButtonMems.Size = new Size(89, 40);
             gGradientButtonMems.TabIndex = 34;
             gGradientButtonMems.Text = "Mem";
-            gGradientButtonMems.TextAlign = HorizontalAlignment.Left;
             // 
             // gGradientButtonInformation
             // 
@@ -339,7 +335,6 @@
             gGradientButtonInformation.Size = new Size(148, 40);
             gGradientButtonInformation.TabIndex = 36;
             gGradientButtonInformation.Text = "Informations";
-            gGradientButtonInformation.TextAlign = HorizontalAlignment.Left;
             // 
             // gGradientButtonTool
             // 
@@ -362,30 +357,28 @@
             gGradientButtonTool.Size = new Size(79, 40);
             gGradientButtonTool.TabIndex = 35;
             gGradientButtonTool.Text = "Tool";
-            gGradientButtonTool.TextAlign = HorizontalAlignment.Left;
             // 
-            // gGradientButtonNumThesises
+            // gGradientButtonNumTheses
             // 
-            gGradientButtonNumThesises.CustomizableEdges = customizableEdges21;
-            gGradientButtonNumThesises.DisabledState.BorderColor = Color.DarkGray;
-            gGradientButtonNumThesises.DisabledState.CustomBorderColor = Color.DarkGray;
-            gGradientButtonNumThesises.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            gGradientButtonNumThesises.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
-            gGradientButtonNumThesises.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            gGradientButtonNumThesises.FillColor = Color.White;
-            gGradientButtonNumThesises.FillColor2 = Color.White;
-            gGradientButtonNumThesises.Font = new Font("Trebuchet MS", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            gGradientButtonNumThesises.ForeColor = Color.FromArgb(74, 97, 94);
-            gGradientButtonNumThesises.HoverState.FillColor = Color.FromArgb(94, 148, 255);
-            gGradientButtonNumThesises.HoverState.FillColor2 = Color.FromArgb(255, 77, 165);
-            gGradientButtonNumThesises.HoverState.ForeColor = Color.White;
-            gGradientButtonNumThesises.Location = new Point(731, 113);
-            gGradientButtonNumThesises.Name = "gGradientButtonNumThesises";
-            gGradientButtonNumThesises.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            gGradientButtonNumThesises.Size = new Size(89, 40);
-            gGradientButtonNumThesises.TabIndex = 38;
-            gGradientButtonNumThesises.Text = "Theises";
-            gGradientButtonNumThesises.TextAlign = HorizontalAlignment.Left;
+            gGradientButtonNumTheses.CustomizableEdges = customizableEdges21;
+            gGradientButtonNumTheses.DisabledState.BorderColor = Color.DarkGray;
+            gGradientButtonNumTheses.DisabledState.CustomBorderColor = Color.DarkGray;
+            gGradientButtonNumTheses.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            gGradientButtonNumTheses.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            gGradientButtonNumTheses.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            gGradientButtonNumTheses.FillColor = Color.White;
+            gGradientButtonNumTheses.FillColor2 = Color.White;
+            gGradientButtonNumTheses.Font = new Font("Trebuchet MS", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gGradientButtonNumTheses.ForeColor = Color.FromArgb(74, 97, 94);
+            gGradientButtonNumTheses.HoverState.FillColor = Color.FromArgb(94, 148, 255);
+            gGradientButtonNumTheses.HoverState.FillColor2 = Color.FromArgb(255, 77, 165);
+            gGradientButtonNumTheses.HoverState.ForeColor = Color.White;
+            gGradientButtonNumTheses.Location = new Point(731, 113);
+            gGradientButtonNumTheses.Name = "gGradientButtonNumTheses";
+            gGradientButtonNumTheses.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            gGradientButtonNumTheses.Size = new Size(89, 40);
+            gGradientButtonNumTheses.TabIndex = 38;
+            gGradientButtonNumTheses.Text = "Theses";
             // 
             // gGradientButtonTag
             // 
@@ -457,7 +450,7 @@
             Controls.Add(gGradientButtonMems);
             Controls.Add(gGradientButtonInformation);
             Controls.Add(gGradientButtonTool);
-            Controls.Add(gGradientButtonNumThesises);
+            Controls.Add(gGradientButtonNumTheses);
             Controls.Add(gGradientButtonTag);
             Controls.Add(gShadowPanelTeam);
             Controls.Add(gShadowPanelSearch);
@@ -487,7 +480,7 @@
         private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonMems;
         private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonInformation;
         private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonTool;
-        private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonNumThesises;
+        private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonNumTheses;
         private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonTag;
         private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonCreateTeam;
     }

@@ -393,6 +393,26 @@ namespace ThesisManagementProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PicItemBack {
+            get {
+                object obj = ResourceManager.GetObject("PicItemBack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PicItemBackGradient {
+            get {
+                object obj = ResourceManager.GetObject("PicItemBackGradient", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PicItemCopy {
             get {
                 object obj = ResourceManager.GetObject("PicItemCopy", resourceCulture);
@@ -576,6 +596,26 @@ namespace ThesisManagementProject.Properties {
         internal static System.Drawing.Bitmap PicItemUniversity {
             get {
                 object obj = ResourceManager.GetObject("PicItemUniversity", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PicItemUploadBlack32 {
+            get {
+                object obj = ResourceManager.GetObject("PicItemUploadBlack32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PicItemUploadWhite32 {
+            get {
+                object obj = ResourceManager.GetObject("PicItemUploadWhite32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

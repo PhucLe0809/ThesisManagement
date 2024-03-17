@@ -12,6 +12,7 @@ namespace ThesisManagementProject
 {
     public partial class UCThesisCreate : UserControl
     {
+        int btnNowCount = 0;
         public UCThesisCreate()
         {
             InitializeComponent();
@@ -21,6 +22,23 @@ namespace ThesisManagementProject
         {
             FTopicFilter topicFilter = new FTopicFilter();
             topicFilter.ShowDialog();
+        }
+
+        private void gButtonPublishNow_Click(object sender, EventArgs e)
+        {
+            btnNowCount++;
+
+            if (btnNowCount % 2 != 0)
+            {
+                gButtonPublishNow.Image = Properties.Resources.PicItemOff;
+                gDateTimePickerPublish.Enabled = true;
+            }
+            else
+            {
+                gButtonPublishNow.Image = Properties.Resources.PicItemOn;
+                gDateTimePickerPublish.Enabled = false;
+
+            }
         }
     }
 }

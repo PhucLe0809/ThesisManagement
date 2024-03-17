@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace ThesisManagementProject
 {
-    public partial class FThesisDetails : Form
+    public partial class FThesisEdit : Form
     {
-        public FThesisDetails()
+        public FThesisEdit()
         {
             InitializeComponent();
+        }
+
+        private void gGradientButtonSave_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void gButtonCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

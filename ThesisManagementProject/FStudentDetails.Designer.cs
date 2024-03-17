@@ -246,9 +246,9 @@
             lblNoteStatisThesis.ForeColor = Color.Gray;
             lblNoteStatisThesis.Location = new Point(78, 40);
             lblNoteStatisThesis.Name = "lblNoteStatisThesis";
-            lblNoteStatisThesis.Size = new Size(66, 17);
+            lblNoteStatisThesis.Size = new Size(55, 17);
             lblNoteStatisThesis.TabIndex = 9;
-            lblNoteStatisThesis.Text = "thesises";
+            lblNoteStatisThesis.Text = "theses";
             // 
             // gPictureBoxItemThesis
             // 
@@ -535,7 +535,7 @@
             gTextBoxYearOfBirth.Name = "gTextBoxYearOfBirth";
             gTextBoxYearOfBirth.PasswordChar = '\0';
             gTextBoxYearOfBirth.PlaceholderForeColor = Color.FromArgb(125, 137, 149);
-            gTextBoxYearOfBirth.PlaceholderText = "Year of birth";
+            gTextBoxYearOfBirth.PlaceholderText = "Birthday";
             gTextBoxYearOfBirth.ReadOnly = true;
             gTextBoxYearOfBirth.SelectedText = "";
             gTextBoxYearOfBirth.ShadowDecoration.CustomizableEdges = customizableEdges17;

@@ -23,10 +23,24 @@ namespace ThesisManagementProject
             get { return this.gGradientButtonLecture; }
         }
 
+        public Guna2GradientButton GGradientButtonRegister
+        {
+            get { return this.gGradientButtonRegister; }
+        }
+
+        public Guna2Button GButtonLogin
+        {
+            get { return this.gButtonLogin; }
+        }
+
         private void gButtonLogin_Click(object sender, EventArgs e)
         {
-            FDisplayLogin fDisplayLogin = new FDisplayLogin();
-            fDisplayLogin.ShowDialog();
+
+        }
+
+        private void gGradientButtonRegister_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
