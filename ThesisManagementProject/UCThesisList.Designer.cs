@@ -51,6 +51,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             flpDataView = new FlowLayoutPanel();
             gGradientButtonThesisTopic = new Guna.UI2.WinForms.Guna2GradientButton();
             gGradientButtonStatus = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -67,6 +69,8 @@
             gButtonFilter = new Guna.UI2.WinForms.Guna2Button();
             gTextBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
             gGradientButtonTag = new Guna.UI2.WinForms.Guna2GradientButton();
+            lblReset = new Label();
+            gGradientButtonReset = new Guna.UI2.WinForms.Guna2GradientButton();
             gShadowPanelThesis.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)gPictureBoxItemThesis).BeginInit();
             gShadowPanelSearch.SuspendLayout();
@@ -372,11 +376,48 @@
             gGradientButtonTag.TabIndex = 17;
             gGradientButtonTag.Text = "#";
             // 
+            // lblReset
+            // 
+            lblReset.AutoSize = true;
+            lblReset.Font = new Font("Trebuchet MS", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblReset.Location = new Point(984, 28);
+            lblReset.Name = "lblReset";
+            lblReset.Size = new Size(78, 32);
+            lblReset.TabIndex = 18;
+            lblReset.Text = "Reset";
+            // 
+            // gGradientButtonReset
+            // 
+            gGradientButtonReset.BorderRadius = 6;
+            gGradientButtonReset.CustomizableEdges = customizableEdges23;
+            gGradientButtonReset.DisabledState.BorderColor = Color.DarkGray;
+            gGradientButtonReset.DisabledState.CustomBorderColor = Color.DarkGray;
+            gGradientButtonReset.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            gGradientButtonReset.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            gGradientButtonReset.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            gGradientButtonReset.FillColor = Color.White;
+            gGradientButtonReset.FillColor2 = Color.White;
+            gGradientButtonReset.Font = new Font("Trebuchet MS", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gGradientButtonReset.ForeColor = Color.FromArgb(74, 97, 94);
+            gGradientButtonReset.HoverState.FillColor = Color.White;
+            gGradientButtonReset.HoverState.FillColor2 = Color.White;
+            gGradientButtonReset.HoverState.ForeColor = Color.White;
+            gGradientButtonReset.Image = (Image)resources.GetObject("gGradientButtonReset.Image");
+            gGradientButtonReset.ImageSize = new Size(40, 40);
+            gGradientButtonReset.Location = new Point(1065, 19);
+            gGradientButtonReset.Name = "gGradientButtonReset";
+            gGradientButtonReset.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            gGradientButtonReset.Size = new Size(50, 50);
+            gGradientButtonReset.TabIndex = 19;
+            gGradientButtonReset.Click += gGradientButtonReset_Click;
+            // 
             // UCThesisList
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonFace;
+            Controls.Add(gGradientButtonReset);
+            Controls.Add(lblReset);
             Controls.Add(gShadowPanelSearch);
             Controls.Add(gShadowPanelThesis);
             Controls.Add(flpDataView);
@@ -395,6 +436,7 @@
             ((System.ComponentModel.ISupportInitialize)gPictureBoxItemThesis).EndInit();
             gShadowPanelSearch.ResumeLayout(false);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -415,5 +457,7 @@
         private Guna.UI2.WinForms.Guna2Button gButtonFilter;
         private Guna.UI2.WinForms.Guna2TextBox gTextBoxSearch;
         private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonTag;
+        private Label lblReset;
+        private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonReset;
     }
 }

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace ThesisManagementProject
 {
@@ -17,6 +18,8 @@ namespace ThesisManagementProject
         {
             InitializeComponent();
         }
+
+        #region PROPERTIES
 
         public Guna2GradientButton GGradientButtonLecture
         {
@@ -33,6 +36,10 @@ namespace ThesisManagementProject
             get { return this.gButtonLogin; }
         }
 
+        #endregion
+
+        #region METHOD
+
         private void gButtonLogin_Click(object sender, EventArgs e)
         {
 
@@ -42,5 +49,13 @@ namespace ThesisManagementProject
         {
 
         }
+
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        #endregion
+
     }
 }

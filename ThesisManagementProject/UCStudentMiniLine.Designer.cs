@@ -114,6 +114,7 @@
             gButtonAdd.ShadowDecoration.CustomizableEdges = customizableEdges3;
             gButtonAdd.Size = new Size(35, 35);
             gButtonAdd.TabIndex = 14;
+            gButtonAdd.Click += gButtonAdd_Click;
             // 
             // UCStudentMiniLine
             // 

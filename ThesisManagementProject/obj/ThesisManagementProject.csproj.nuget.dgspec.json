@@ -60,6 +60,10 @@
             "MarkdownSharp": {
               "target": "Package",
               "version": "[2.0.5, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.6, )"
             }
           },
           "imports": [

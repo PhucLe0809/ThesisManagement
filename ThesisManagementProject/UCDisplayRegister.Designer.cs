@@ -28,54 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges95 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges96 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges97 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges98 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges99 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges100 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges101 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges102 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges103 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges104 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges105 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges106 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges107 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges108 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges109 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges110 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges111 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges112 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges113 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges114 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges115 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges116 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges88 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges89 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCDisplayRegister));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges90 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges91 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges92 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges93 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges94 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges49 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges51 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges52 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges53 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges54 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges55 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges56 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges57 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges58 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges59 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges60 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges61 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges62 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges63 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges64 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges65 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges66 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             gShadowPanelRegister = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            gShadowPanelPassword = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            lblReminder = new Label();
+            lblConfirmPassword = new Label();
+            lblPassword = new Label();
+            gTextBoxConfirmPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            gTextBoxPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            lblYourPassword = new Label();
             lblAvatar = new Label();
             gShadowPanelOrganizationInfor = new Guna.UI2.WinForms.Guna2ShadowPanel();
             gTextBoxFaculty = new Guna.UI2.WinForms.Guna2TextBox();
             gTextBoxWorkcode = new Guna.UI2.WinForms.Guna2TextBox();
             gTextBoxUniversity = new Guna.UI2.WinForms.Guna2TextBox();
             lblOrganization = new Label();
-            gShadowPanelHandle = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            gRadioButtonStudent = new Guna.UI2.WinForms.Guna2RadioButton();
-            gTextBoxHandle = new Guna.UI2.WinForms.Guna2TextBox();
-            gRadioButtonLecture = new Guna.UI2.WinForms.Guna2RadioButton();
-            lblHandle = new Label();
             gShadowPanelPersonalInfor = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            lblHandle = new Label();
+            gRadioButtonStudent = new Guna.UI2.WinForms.Guna2RadioButton();
+            gRadioButtonLecture = new Guna.UI2.WinForms.Guna2RadioButton();
             gDateTimePickerBirthday = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            gTextBoxHandle = new Guna.UI2.WinForms.Guna2TextBox();
             gPictureBoxGender = new Guna.UI2.WinForms.Guna2PictureBox();
             lblPersonalInfor = new Label();
             gTextBoxPhonenumber = new Guna.UI2.WinForms.Guna2TextBox();
-            gComboBoxBirthday = new Guna.UI2.WinForms.Guna2ComboBox();
+            gComboBoxGender = new Guna.UI2.WinForms.Guna2ComboBox();
             gTextBoxEmail = new Guna.UI2.WinForms.Guna2TextBox();
             gTextBoxCitizencode = new Guna.UI2.WinForms.Guna2TextBox();
             gTextBoxFullname = new Guna.UI2.WinForms.Guna2TextBox();
@@ -85,8 +95,8 @@
             gButtonRegister = new Guna.UI2.WinForms.Guna2Button();
             lblRegister = new Label();
             gShadowPanelRegister.SuspendLayout();
+            gShadowPanelPassword.SuspendLayout();
             gShadowPanelOrganizationInfor.SuspendLayout();
-            gShadowPanelHandle.SuspendLayout();
             gShadowPanelPersonalInfor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)gPictureBoxGender).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gCirclePictureBoxAvatar).BeginInit();
@@ -96,9 +106,9 @@
             // gShadowPanelRegister
             // 
             gShadowPanelRegister.BackColor = Color.Transparent;
+            gShadowPanelRegister.Controls.Add(gShadowPanelPassword);
             gShadowPanelRegister.Controls.Add(lblAvatar);
             gShadowPanelRegister.Controls.Add(gShadowPanelOrganizationInfor);
-            gShadowPanelRegister.Controls.Add(gShadowPanelHandle);
             gShadowPanelRegister.Controls.Add(gShadowPanelPersonalInfor);
             gShadowPanelRegister.Controls.Add(gCirclePictureBoxAvatar);
             gShadowPanelRegister.Controls.Add(gButtonBack);
@@ -114,6 +124,125 @@
             gShadowPanelRegister.ShadowShift = 7;
             gShadowPanelRegister.Size = new Size(1260, 546);
             gShadowPanelRegister.TabIndex = 12;
+            // 
+            // gShadowPanelPassword
+            // 
+            gShadowPanelPassword.BackColor = Color.Transparent;
+            gShadowPanelPassword.Controls.Add(lblReminder);
+            gShadowPanelPassword.Controls.Add(lblConfirmPassword);
+            gShadowPanelPassword.Controls.Add(lblPassword);
+            gShadowPanelPassword.Controls.Add(gTextBoxConfirmPassword);
+            gShadowPanelPassword.Controls.Add(gTextBoxPassword);
+            gShadowPanelPassword.Controls.Add(lblYourPassword);
+            gShadowPanelPassword.FillColor = Color.White;
+            gShadowPanelPassword.Location = new Point(780, 24);
+            gShadowPanelPassword.Name = "gShadowPanelPassword";
+            gShadowPanelPassword.Radius = 7;
+            gShadowPanelPassword.ShadowColor = Color.Black;
+            gShadowPanelPassword.ShadowShift = 0;
+            gShadowPanelPassword.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
+            gShadowPanelPassword.Size = new Size(457, 182);
+            gShadowPanelPassword.TabIndex = 30;
+            // 
+            // lblReminder
+            // 
+            lblReminder.AutoSize = true;
+            lblReminder.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblReminder.ForeColor = Color.RoyalBlue;
+            lblReminder.Location = new Point(12, 146);
+            lblReminder.Name = "lblReminder";
+            lblReminder.Size = new Size(323, 20);
+            lblReminder.TabIndex = 17;
+            lblReminder.Text = "Please remember your password carefully !";
+            // 
+            // lblConfirmPassword
+            // 
+            lblConfirmPassword.AutoSize = true;
+            lblConfirmPassword.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblConfirmPassword.Location = new Point(9, 110);
+            lblConfirmPassword.Name = "lblConfirmPassword";
+            lblConfirmPassword.Size = new Size(157, 19);
+            lblConfirmPassword.TabIndex = 16;
+            lblConfirmPassword.Text = "Confirm password";
+            // 
+            // lblPassword
+            // 
+            lblPassword.AutoSize = true;
+            lblPassword.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPassword.Location = new Point(79, 64);
+            lblPassword.Name = "lblPassword";
+            lblPassword.Size = new Size(87, 19);
+            lblPassword.TabIndex = 15;
+            lblPassword.Text = "Password";
+            // 
+            // gTextBoxConfirmPassword
+            // 
+            gTextBoxConfirmPassword.BackColor = Color.Transparent;
+            gTextBoxConfirmPassword.BorderColor = Color.FromArgb(74, 97, 94);
+            gTextBoxConfirmPassword.BorderRadius = 5;
+            gTextBoxConfirmPassword.CustomizableEdges = customizableEdges34;
+            gTextBoxConfirmPassword.DefaultText = "";
+            gTextBoxConfirmPassword.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            gTextBoxConfirmPassword.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            gTextBoxConfirmPassword.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            gTextBoxConfirmPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            gTextBoxConfirmPassword.FocusedState.BorderColor = Color.RoyalBlue;
+            gTextBoxConfirmPassword.Font = new Font("Segoe UI", 9F);
+            gTextBoxConfirmPassword.ForeColor = Color.Black;
+            gTextBoxConfirmPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            gTextBoxConfirmPassword.IconLeftOffset = new Point(5, 0);
+            gTextBoxConfirmPassword.IconLeftSize = new Size(21, 21);
+            gTextBoxConfirmPassword.Location = new Point(172, 99);
+            gTextBoxConfirmPassword.Margin = new Padding(3, 4, 3, 4);
+            gTextBoxConfirmPassword.Name = "gTextBoxConfirmPassword";
+            gTextBoxConfirmPassword.PasswordChar = '●';
+            gTextBoxConfirmPassword.PlaceholderForeColor = Color.FromArgb(125, 137, 149);
+            gTextBoxConfirmPassword.PlaceholderText = "confirm your password";
+            gTextBoxConfirmPassword.SelectedText = "";
+            gTextBoxConfirmPassword.ShadowDecoration.CustomizableEdges = customizableEdges35;
+            gTextBoxConfirmPassword.Size = new Size(250, 40);
+            gTextBoxConfirmPassword.TabIndex = 14;
+            gTextBoxConfirmPassword.TextOffset = new Point(4, 0);
+            gTextBoxConfirmPassword.UseSystemPasswordChar = true;
+            // 
+            // gTextBoxPassword
+            // 
+            gTextBoxPassword.BackColor = Color.Transparent;
+            gTextBoxPassword.BorderColor = Color.FromArgb(74, 97, 94);
+            gTextBoxPassword.BorderRadius = 5;
+            gTextBoxPassword.CustomizableEdges = customizableEdges36;
+            gTextBoxPassword.DefaultText = "";
+            gTextBoxPassword.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            gTextBoxPassword.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            gTextBoxPassword.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            gTextBoxPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            gTextBoxPassword.FocusedState.BorderColor = Color.RoyalBlue;
+            gTextBoxPassword.Font = new Font("Segoe UI", 9F);
+            gTextBoxPassword.ForeColor = Color.Black;
+            gTextBoxPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            gTextBoxPassword.IconLeftOffset = new Point(5, 0);
+            gTextBoxPassword.Location = new Point(172, 51);
+            gTextBoxPassword.Margin = new Padding(3, 4, 3, 4);
+            gTextBoxPassword.Name = "gTextBoxPassword";
+            gTextBoxPassword.PasswordChar = '●';
+            gTextBoxPassword.PlaceholderForeColor = Color.FromArgb(125, 137, 149);
+            gTextBoxPassword.PlaceholderText = "your password";
+            gTextBoxPassword.SelectedText = "";
+            gTextBoxPassword.ShadowDecoration.CustomizableEdges = customizableEdges37;
+            gTextBoxPassword.Size = new Size(250, 40);
+            gTextBoxPassword.TabIndex = 13;
+            gTextBoxPassword.TextOffset = new Point(5, 0);
+            gTextBoxPassword.UseSystemPasswordChar = true;
+            // 
+            // lblYourPassword
+            // 
+            lblYourPassword.AutoSize = true;
+            lblYourPassword.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblYourPassword.Location = new Point(9, 19);
+            lblYourPassword.Name = "lblYourPassword";
+            lblYourPassword.Size = new Size(128, 28);
+            lblYourPassword.TabIndex = 11;
+            lblYourPassword.Text = "PASSWORD";
             // 
             // lblAvatar
             // 
@@ -133,7 +262,7 @@
             gShadowPanelOrganizationInfor.Controls.Add(gTextBoxUniversity);
             gShadowPanelOrganizationInfor.Controls.Add(lblOrganization);
             gShadowPanelOrganizationInfor.FillColor = Color.White;
-            gShadowPanelOrganizationInfor.Location = new Point(780, 220);
+            gShadowPanelOrganizationInfor.Location = new Point(780, 212);
             gShadowPanelOrganizationInfor.Name = "gShadowPanelOrganizationInfor";
             gShadowPanelOrganizationInfor.Radius = 7;
             gShadowPanelOrganizationInfor.ShadowColor = Color.Black;
@@ -147,7 +276,7 @@
             gTextBoxFaculty.BackColor = Color.Transparent;
             gTextBoxFaculty.BorderColor = Color.FromArgb(74, 97, 94);
             gTextBoxFaculty.BorderRadius = 5;
-            gTextBoxFaculty.CustomizableEdges = customizableEdges95;
+            gTextBoxFaculty.CustomizableEdges = customizableEdges38;
             gTextBoxFaculty.DefaultText = "Faculty of Information Technology";
             gTextBoxFaculty.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxFaculty.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -168,7 +297,7 @@
             gTextBoxFaculty.PlaceholderText = "Faculty of Information Technology";
             gTextBoxFaculty.ReadOnly = true;
             gTextBoxFaculty.SelectedText = "";
-            gTextBoxFaculty.ShadowDecoration.CustomizableEdges = customizableEdges96;
+            gTextBoxFaculty.ShadowDecoration.CustomizableEdges = customizableEdges39;
             gTextBoxFaculty.Size = new Size(413, 40);
             gTextBoxFaculty.TabIndex = 14;
             gTextBoxFaculty.TextOffset = new Point(4, 0);
@@ -178,7 +307,7 @@
             gTextBoxWorkcode.BackColor = Color.Transparent;
             gTextBoxWorkcode.BorderColor = Color.FromArgb(74, 97, 94);
             gTextBoxWorkcode.BorderRadius = 5;
-            gTextBoxWorkcode.CustomizableEdges = customizableEdges97;
+            gTextBoxWorkcode.CustomizableEdges = customizableEdges40;
             gTextBoxWorkcode.DefaultText = "";
             gTextBoxWorkcode.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxWorkcode.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -197,7 +326,7 @@
             gTextBoxWorkcode.PlaceholderForeColor = Color.FromArgb(125, 137, 149);
             gTextBoxWorkcode.PlaceholderText = "Work code";
             gTextBoxWorkcode.SelectedText = "";
-            gTextBoxWorkcode.ShadowDecoration.CustomizableEdges = customizableEdges98;
+            gTextBoxWorkcode.ShadowDecoration.CustomizableEdges = customizableEdges41;
             gTextBoxWorkcode.Size = new Size(413, 40);
             gTextBoxWorkcode.TabIndex = 10;
             gTextBoxWorkcode.TextOffset = new Point(5, 0);
@@ -207,7 +336,7 @@
             gTextBoxUniversity.BackColor = Color.Transparent;
             gTextBoxUniversity.BorderColor = Color.FromArgb(74, 97, 94);
             gTextBoxUniversity.BorderRadius = 5;
-            gTextBoxUniversity.CustomizableEdges = customizableEdges99;
+            gTextBoxUniversity.CustomizableEdges = customizableEdges42;
             gTextBoxUniversity.DefaultText = "HCM City University of Technology and Education";
             gTextBoxUniversity.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxUniversity.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -227,7 +356,7 @@
             gTextBoxUniversity.PlaceholderText = "HCM City University of Technology and Education";
             gTextBoxUniversity.ReadOnly = true;
             gTextBoxUniversity.SelectedText = "";
-            gTextBoxUniversity.ShadowDecoration.CustomizableEdges = customizableEdges100;
+            gTextBoxUniversity.ShadowDecoration.CustomizableEdges = customizableEdges43;
             gTextBoxUniversity.Size = new Size(413, 40);
             gTextBoxUniversity.TabIndex = 13;
             gTextBoxUniversity.TextOffset = new Point(5, 0);
@@ -242,48 +371,109 @@
             lblOrganization.TabIndex = 11;
             lblOrganization.Text = "ORGANIZATION";
             // 
-            // gShadowPanelHandle
+            // gShadowPanelPersonalInfor
             // 
-            gShadowPanelHandle.BackColor = Color.Transparent;
-            gShadowPanelHandle.Controls.Add(gRadioButtonStudent);
-            gShadowPanelHandle.Controls.Add(gTextBoxHandle);
-            gShadowPanelHandle.Controls.Add(gRadioButtonLecture);
-            gShadowPanelHandle.Controls.Add(lblHandle);
-            gShadowPanelHandle.FillColor = Color.White;
-            gShadowPanelHandle.Location = new Point(780, 81);
-            gShadowPanelHandle.Name = "gShadowPanelHandle";
-            gShadowPanelHandle.Radius = 7;
-            gShadowPanelHandle.ShadowColor = Color.Black;
-            gShadowPanelHandle.ShadowShift = 0;
-            gShadowPanelHandle.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            gShadowPanelHandle.Size = new Size(457, 133);
-            gShadowPanelHandle.TabIndex = 29;
+            gShadowPanelPersonalInfor.BackColor = Color.Transparent;
+            gShadowPanelPersonalInfor.Controls.Add(lblHandle);
+            gShadowPanelPersonalInfor.Controls.Add(gRadioButtonStudent);
+            gShadowPanelPersonalInfor.Controls.Add(gRadioButtonLecture);
+            gShadowPanelPersonalInfor.Controls.Add(gDateTimePickerBirthday);
+            gShadowPanelPersonalInfor.Controls.Add(gTextBoxHandle);
+            gShadowPanelPersonalInfor.Controls.Add(gPictureBoxGender);
+            gShadowPanelPersonalInfor.Controls.Add(lblPersonalInfor);
+            gShadowPanelPersonalInfor.Controls.Add(gTextBoxPhonenumber);
+            gShadowPanelPersonalInfor.Controls.Add(gComboBoxGender);
+            gShadowPanelPersonalInfor.Controls.Add(gTextBoxEmail);
+            gShadowPanelPersonalInfor.Controls.Add(gTextBoxCitizencode);
+            gShadowPanelPersonalInfor.Controls.Add(gTextBoxFullname);
+            gShadowPanelPersonalInfor.FillColor = Color.White;
+            gShadowPanelPersonalInfor.Location = new Point(454, 24);
+            gShadowPanelPersonalInfor.Name = "gShadowPanelPersonalInfor";
+            gShadowPanelPersonalInfor.Radius = 7;
+            gShadowPanelPersonalInfor.ShadowColor = Color.Black;
+            gShadowPanelPersonalInfor.ShadowShift = 0;
+            gShadowPanelPersonalInfor.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
+            gShadowPanelPersonalInfor.Size = new Size(320, 473);
+            gShadowPanelPersonalInfor.TabIndex = 27;
+            // 
+            // lblHandle
+            // 
+            lblHandle.AutoSize = true;
+            lblHandle.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblHandle.Location = new Point(10, 341);
+            lblHandle.Name = "lblHandle";
+            lblHandle.Size = new Size(99, 28);
+            lblHandle.TabIndex = 15;
+            lblHandle.Text = "HANDLE";
             // 
             // gRadioButtonStudent
             // 
             gRadioButtonStudent.AutoSize = true;
+            gRadioButtonStudent.Checked = true;
             gRadioButtonStudent.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
             gRadioButtonStudent.CheckedState.BorderThickness = 0;
             gRadioButtonStudent.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
             gRadioButtonStudent.CheckedState.InnerColor = Color.White;
             gRadioButtonStudent.CheckedState.InnerOffset = -4;
             gRadioButtonStudent.Font = new Font("Century Gothic", 10.2F);
-            gRadioButtonStudent.Location = new Point(220, 94);
+            gRadioButtonStudent.Location = new Point(156, 420);
             gRadioButtonStudent.Name = "gRadioButtonStudent";
             gRadioButtonStudent.Size = new Size(137, 25);
             gRadioButtonStudent.TabIndex = 31;
+            gRadioButtonStudent.TabStop = true;
             gRadioButtonStudent.Text = "as a Student";
             gRadioButtonStudent.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
             gRadioButtonStudent.UncheckedState.BorderThickness = 2;
             gRadioButtonStudent.UncheckedState.FillColor = Color.Transparent;
             gRadioButtonStudent.UncheckedState.InnerColor = Color.Transparent;
             // 
+            // gRadioButtonLecture
+            // 
+            gRadioButtonLecture.AutoSize = true;
+            gRadioButtonLecture.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
+            gRadioButtonLecture.CheckedState.BorderThickness = 0;
+            gRadioButtonLecture.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
+            gRadioButtonLecture.CheckedState.InnerColor = Color.White;
+            gRadioButtonLecture.CheckedState.InnerOffset = -4;
+            gRadioButtonLecture.Font = new Font("Century Gothic", 10.2F);
+            gRadioButtonLecture.Location = new Point(15, 420);
+            gRadioButtonLecture.Name = "gRadioButtonLecture";
+            gRadioButtonLecture.Size = new Size(135, 25);
+            gRadioButtonLecture.TabIndex = 30;
+            gRadioButtonLecture.Text = "as a Lecture";
+            gRadioButtonLecture.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
+            gRadioButtonLecture.UncheckedState.BorderThickness = 2;
+            gRadioButtonLecture.UncheckedState.FillColor = Color.Transparent;
+            gRadioButtonLecture.UncheckedState.InnerColor = Color.Transparent;
+            // 
+            // gDateTimePickerBirthday
+            // 
+            gDateTimePickerBirthday.BackColor = Color.White;
+            gDateTimePickerBirthday.BorderColor = Color.FromArgb(74, 97, 94);
+            gDateTimePickerBirthday.BorderRadius = 5;
+            gDateTimePickerBirthday.BorderThickness = 1;
+            gDateTimePickerBirthday.Checked = true;
+            gDateTimePickerBirthday.CustomizableEdges = customizableEdges44;
+            gDateTimePickerBirthday.FillColor = Color.White;
+            gDateTimePickerBirthday.FocusedColor = Color.White;
+            gDateTimePickerBirthday.Font = new Font("Segoe UI", 9F);
+            gDateTimePickerBirthday.Format = DateTimePickerFormat.Long;
+            gDateTimePickerBirthday.Location = new Point(10, 144);
+            gDateTimePickerBirthday.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            gDateTimePickerBirthday.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            gDateTimePickerBirthday.Name = "gDateTimePickerBirthday";
+            gDateTimePickerBirthday.ShadowDecoration.CustomizableEdges = customizableEdges45;
+            gDateTimePickerBirthday.Size = new Size(277, 40);
+            gDateTimePickerBirthday.TabIndex = 0;
+            gDateTimePickerBirthday.TextOffset = new Point(5, 0);
+            gDateTimePickerBirthday.Value = new DateTime(2024, 3, 16, 21, 4, 31, 287);
+            // 
             // gTextBoxHandle
             // 
             gTextBoxHandle.BackColor = Color.Transparent;
             gTextBoxHandle.BorderColor = Color.FromArgb(74, 97, 94);
             gTextBoxHandle.BorderRadius = 5;
-            gTextBoxHandle.CustomizableEdges = customizableEdges101;
+            gTextBoxHandle.CustomizableEdges = customizableEdges46;
             gTextBoxHandle.DefaultText = "";
             gTextBoxHandle.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxHandle.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -296,100 +486,28 @@
             gTextBoxHandle.IconLeft = (Image)resources.GetObject("gTextBoxHandle.IconLeft");
             gTextBoxHandle.IconLeftOffset = new Point(5, 0);
             gTextBoxHandle.IconRightSize = new Size(22, 22);
-            gTextBoxHandle.Location = new Point(11, 47);
+            gTextBoxHandle.Location = new Point(10, 373);
             gTextBoxHandle.Margin = new Padding(3, 4, 3, 4);
             gTextBoxHandle.Name = "gTextBoxHandle";
             gTextBoxHandle.PasswordChar = '\0';
             gTextBoxHandle.PlaceholderForeColor = Color.FromArgb(125, 137, 149);
             gTextBoxHandle.PlaceholderText = "Handle";
             gTextBoxHandle.SelectedText = "";
-            gTextBoxHandle.ShadowDecoration.CustomizableEdges = customizableEdges102;
-            gTextBoxHandle.Size = new Size(411, 40);
+            gTextBoxHandle.ShadowDecoration.CustomizableEdges = customizableEdges47;
+            gTextBoxHandle.Size = new Size(277, 40);
             gTextBoxHandle.TabIndex = 8;
             gTextBoxHandle.TextOffset = new Point(5, 0);
-            // 
-            // gRadioButtonLecture
-            // 
-            gRadioButtonLecture.AutoSize = true;
-            gRadioButtonLecture.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
-            gRadioButtonLecture.CheckedState.BorderThickness = 0;
-            gRadioButtonLecture.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
-            gRadioButtonLecture.CheckedState.InnerColor = Color.White;
-            gRadioButtonLecture.CheckedState.InnerOffset = -4;
-            gRadioButtonLecture.Font = new Font("Century Gothic", 10.2F);
-            gRadioButtonLecture.Location = new Point(24, 94);
-            gRadioButtonLecture.Name = "gRadioButtonLecture";
-            gRadioButtonLecture.Size = new Size(135, 25);
-            gRadioButtonLecture.TabIndex = 30;
-            gRadioButtonLecture.Text = "as a Lecture";
-            gRadioButtonLecture.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
-            gRadioButtonLecture.UncheckedState.BorderThickness = 2;
-            gRadioButtonLecture.UncheckedState.FillColor = Color.Transparent;
-            gRadioButtonLecture.UncheckedState.InnerColor = Color.Transparent;
-            // 
-            // lblHandle
-            // 
-            lblHandle.AutoSize = true;
-            lblHandle.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblHandle.Location = new Point(11, 15);
-            lblHandle.Name = "lblHandle";
-            lblHandle.Size = new Size(99, 28);
-            lblHandle.TabIndex = 9;
-            lblHandle.Text = "HANDLE";
-            // 
-            // gShadowPanelPersonalInfor
-            // 
-            gShadowPanelPersonalInfor.BackColor = Color.Transparent;
-            gShadowPanelPersonalInfor.Controls.Add(gDateTimePickerBirthday);
-            gShadowPanelPersonalInfor.Controls.Add(gPictureBoxGender);
-            gShadowPanelPersonalInfor.Controls.Add(lblPersonalInfor);
-            gShadowPanelPersonalInfor.Controls.Add(gTextBoxPhonenumber);
-            gShadowPanelPersonalInfor.Controls.Add(gComboBoxBirthday);
-            gShadowPanelPersonalInfor.Controls.Add(gTextBoxEmail);
-            gShadowPanelPersonalInfor.Controls.Add(gTextBoxCitizencode);
-            gShadowPanelPersonalInfor.Controls.Add(gTextBoxFullname);
-            gShadowPanelPersonalInfor.FillColor = Color.White;
-            gShadowPanelPersonalInfor.Location = new Point(454, 81);
-            gShadowPanelPersonalInfor.Name = "gShadowPanelPersonalInfor";
-            gShadowPanelPersonalInfor.Radius = 7;
-            gShadowPanelPersonalInfor.ShadowColor = Color.Black;
-            gShadowPanelPersonalInfor.ShadowShift = 0;
-            gShadowPanelPersonalInfor.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            gShadowPanelPersonalInfor.Size = new Size(320, 344);
-            gShadowPanelPersonalInfor.TabIndex = 27;
-            // 
-            // gDateTimePickerBirthday
-            // 
-            gDateTimePickerBirthday.BackColor = Color.White;
-            gDateTimePickerBirthday.BorderColor = Color.FromArgb(74, 97, 94);
-            gDateTimePickerBirthday.BorderRadius = 5;
-            gDateTimePickerBirthday.BorderThickness = 1;
-            gDateTimePickerBirthday.Checked = true;
-            gDateTimePickerBirthday.CustomizableEdges = customizableEdges103;
-            gDateTimePickerBirthday.FillColor = Color.White;
-            gDateTimePickerBirthday.FocusedColor = Color.White;
-            gDateTimePickerBirthday.Font = new Font("Segoe UI", 9F);
-            gDateTimePickerBirthday.Format = DateTimePickerFormat.Long;
-            gDateTimePickerBirthday.Location = new Point(10, 144);
-            gDateTimePickerBirthday.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
-            gDateTimePickerBirthday.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
-            gDateTimePickerBirthday.Name = "gDateTimePickerBirthday";
-            gDateTimePickerBirthday.ShadowDecoration.CustomizableEdges = customizableEdges104;
-            gDateTimePickerBirthday.Size = new Size(277, 40);
-            gDateTimePickerBirthday.TabIndex = 0;
-            gDateTimePickerBirthday.TextOffset = new Point(5, 0);
-            gDateTimePickerBirthday.Value = new DateTime(2024, 3, 16, 21, 4, 31, 287);
             // 
             // gPictureBoxGender
             // 
             gPictureBoxGender.BackColor = Color.White;
-            gPictureBoxGender.CustomizableEdges = customizableEdges105;
+            gPictureBoxGender.CustomizableEdges = customizableEdges48;
             gPictureBoxGender.FillColor = SystemColors.ControlLight;
             gPictureBoxGender.Image = (Image)resources.GetObject("gPictureBoxGender.Image");
             gPictureBoxGender.ImageRotate = 0F;
             gPictureBoxGender.Location = new Point(20, 204);
             gPictureBoxGender.Name = "gPictureBoxGender";
-            gPictureBoxGender.ShadowDecoration.CustomizableEdges = customizableEdges106;
+            gPictureBoxGender.ShadowDecoration.CustomizableEdges = customizableEdges49;
             gPictureBoxGender.Size = new Size(19, 19);
             gPictureBoxGender.SizeMode = PictureBoxSizeMode.StretchImage;
             gPictureBoxGender.TabIndex = 11;
@@ -410,7 +528,7 @@
             gTextBoxPhonenumber.BackColor = Color.Transparent;
             gTextBoxPhonenumber.BorderColor = Color.FromArgb(74, 97, 94);
             gTextBoxPhonenumber.BorderRadius = 5;
-            gTextBoxPhonenumber.CustomizableEdges = customizableEdges107;
+            gTextBoxPhonenumber.CustomizableEdges = customizableEdges50;
             gTextBoxPhonenumber.DefaultText = "";
             gTextBoxPhonenumber.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxPhonenumber.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -429,39 +547,38 @@
             gTextBoxPhonenumber.PlaceholderForeColor = Color.FromArgb(125, 137, 149);
             gTextBoxPhonenumber.PlaceholderText = "Phone number";
             gTextBoxPhonenumber.SelectedText = "";
-            gTextBoxPhonenumber.ShadowDecoration.CustomizableEdges = customizableEdges108;
+            gTextBoxPhonenumber.ShadowDecoration.CustomizableEdges = customizableEdges51;
             gTextBoxPhonenumber.Size = new Size(277, 40);
             gTextBoxPhonenumber.TabIndex = 10;
             gTextBoxPhonenumber.TextOffset = new Point(5, 0);
             // 
-            // gComboBoxBirthday
+            // gComboBoxGender
             // 
-            gComboBoxBirthday.BackColor = Color.Transparent;
-            gComboBoxBirthday.BorderColor = Color.FromArgb(74, 97, 94);
-            gComboBoxBirthday.BorderRadius = 5;
-            gComboBoxBirthday.CustomizableEdges = customizableEdges109;
-            gComboBoxBirthday.DrawMode = DrawMode.OwnerDrawFixed;
-            gComboBoxBirthday.DropDownStyle = ComboBoxStyle.DropDownList;
-            gComboBoxBirthday.FocusedColor = Color.FromArgb(94, 148, 255);
-            gComboBoxBirthday.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            gComboBoxBirthday.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            gComboBoxBirthday.ForeColor = Color.Black;
-            gComboBoxBirthday.ItemHeight = 34;
-            gComboBoxBirthday.Items.AddRange(new object[] { "Male", "Female" });
-            gComboBoxBirthday.Location = new Point(10, 192);
-            gComboBoxBirthday.Name = "gComboBoxBirthday";
-            gComboBoxBirthday.ShadowDecoration.CustomizableEdges = customizableEdges110;
-            gComboBoxBirthday.Size = new Size(277, 40);
-            gComboBoxBirthday.StartIndex = 0;
-            gComboBoxBirthday.TabIndex = 14;
-            gComboBoxBirthday.TextOffset = new Point(31, 0);
+            gComboBoxGender.BackColor = Color.Transparent;
+            gComboBoxGender.BorderColor = Color.FromArgb(74, 97, 94);
+            gComboBoxGender.BorderRadius = 5;
+            gComboBoxGender.CustomizableEdges = customizableEdges52;
+            gComboBoxGender.DrawMode = DrawMode.OwnerDrawFixed;
+            gComboBoxGender.DropDownStyle = ComboBoxStyle.DropDownList;
+            gComboBoxGender.FocusedColor = Color.FromArgb(94, 148, 255);
+            gComboBoxGender.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            gComboBoxGender.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            gComboBoxGender.ForeColor = Color.Black;
+            gComboBoxGender.ItemHeight = 34;
+            gComboBoxGender.Location = new Point(10, 192);
+            gComboBoxGender.Name = "gComboBoxGender";
+            gComboBoxGender.ShadowDecoration.CustomizableEdges = customizableEdges53;
+            gComboBoxGender.Size = new Size(277, 40);
+            gComboBoxGender.StartIndex = 0;
+            gComboBoxGender.TabIndex = 14;
+            gComboBoxGender.TextOffset = new Point(31, 0);
             // 
             // gTextBoxEmail
             // 
             gTextBoxEmail.BackColor = Color.Transparent;
             gTextBoxEmail.BorderColor = Color.FromArgb(74, 97, 94);
             gTextBoxEmail.BorderRadius = 5;
-            gTextBoxEmail.CustomizableEdges = customizableEdges111;
+            gTextBoxEmail.CustomizableEdges = customizableEdges54;
             gTextBoxEmail.DefaultText = "";
             gTextBoxEmail.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxEmail.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -480,7 +597,7 @@
             gTextBoxEmail.PlaceholderForeColor = Color.FromArgb(125, 137, 149);
             gTextBoxEmail.PlaceholderText = "Email";
             gTextBoxEmail.SelectedText = "";
-            gTextBoxEmail.ShadowDecoration.CustomizableEdges = customizableEdges112;
+            gTextBoxEmail.ShadowDecoration.CustomizableEdges = customizableEdges55;
             gTextBoxEmail.Size = new Size(277, 40);
             gTextBoxEmail.TabIndex = 12;
             gTextBoxEmail.TextOffset = new Point(5, 0);
@@ -490,7 +607,7 @@
             gTextBoxCitizencode.BackColor = Color.Transparent;
             gTextBoxCitizencode.BorderColor = Color.FromArgb(74, 97, 94);
             gTextBoxCitizencode.BorderRadius = 5;
-            gTextBoxCitizencode.CustomizableEdges = customizableEdges113;
+            gTextBoxCitizencode.CustomizableEdges = customizableEdges56;
             gTextBoxCitizencode.DefaultText = "";
             gTextBoxCitizencode.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxCitizencode.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -509,7 +626,7 @@
             gTextBoxCitizencode.PlaceholderForeColor = Color.FromArgb(125, 137, 149);
             gTextBoxCitizencode.PlaceholderText = "Citizen code";
             gTextBoxCitizencode.SelectedText = "";
-            gTextBoxCitizencode.ShadowDecoration.CustomizableEdges = customizableEdges114;
+            gTextBoxCitizencode.ShadowDecoration.CustomizableEdges = customizableEdges57;
             gTextBoxCitizencode.Size = new Size(277, 40);
             gTextBoxCitizencode.TabIndex = 8;
             gTextBoxCitizencode.TextOffset = new Point(5, 0);
@@ -519,7 +636,7 @@
             gTextBoxFullname.BackColor = Color.Transparent;
             gTextBoxFullname.BorderColor = Color.FromArgb(74, 97, 94);
             gTextBoxFullname.BorderRadius = 5;
-            gTextBoxFullname.CustomizableEdges = customizableEdges115;
+            gTextBoxFullname.CustomizableEdges = customizableEdges58;
             gTextBoxFullname.DefaultText = "";
             gTextBoxFullname.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxFullname.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -538,18 +655,18 @@
             gTextBoxFullname.PlaceholderForeColor = Color.FromArgb(125, 137, 149);
             gTextBoxFullname.PlaceholderText = "Full name";
             gTextBoxFullname.SelectedText = "";
-            gTextBoxFullname.ShadowDecoration.CustomizableEdges = customizableEdges116;
+            gTextBoxFullname.ShadowDecoration.CustomizableEdges = customizableEdges59;
             gTextBoxFullname.Size = new Size(277, 40);
             gTextBoxFullname.TabIndex = 9;
             gTextBoxFullname.TextOffset = new Point(5, 0);
             // 
             // gCirclePictureBoxAvatar
             // 
-            gCirclePictureBoxAvatar.Image = Properties.Resources.PictureAvatarAccount;
+            gCirclePictureBoxAvatar.Image = (Image)resources.GetObject("gCirclePictureBoxAvatar.Image");
             gCirclePictureBoxAvatar.ImageRotate = 0F;
             gCirclePictureBoxAvatar.Location = new Point(118, 119);
             gCirclePictureBoxAvatar.Name = "gCirclePictureBoxAvatar";
-            gCirclePictureBoxAvatar.ShadowDecoration.CustomizableEdges = customizableEdges88;
+            gCirclePictureBoxAvatar.ShadowDecoration.CustomizableEdges = customizableEdges60;
             gCirclePictureBoxAvatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             gCirclePictureBoxAvatar.Size = new Size(250, 250);
             gCirclePictureBoxAvatar.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -561,7 +678,7 @@
             // gButtonBack
             // 
             gButtonBack.BorderRadius = 5;
-            gButtonBack.CustomizableEdges = customizableEdges89;
+            gButtonBack.CustomizableEdges = customizableEdges61;
             gButtonBack.DisabledState.BorderColor = Color.DarkGray;
             gButtonBack.DisabledState.CustomBorderColor = Color.DarkGray;
             gButtonBack.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -576,7 +693,7 @@
             gButtonBack.ImageSize = new Size(23, 23);
             gButtonBack.Location = new Point(41, 478);
             gButtonBack.Name = "gButtonBack";
-            gButtonBack.ShadowDecoration.CustomizableEdges = customizableEdges90;
+            gButtonBack.ShadowDecoration.CustomizableEdges = customizableEdges62;
             gButtonBack.Size = new Size(90, 30);
             gButtonBack.TabIndex = 9;
             gButtonBack.Text = "Back";
@@ -584,12 +701,12 @@
             // 
             // gPictureBoxLogo
             // 
-            gPictureBoxLogo.CustomizableEdges = customizableEdges91;
+            gPictureBoxLogo.CustomizableEdges = customizableEdges63;
             gPictureBoxLogo.Image = Properties.Resources.LogoThesisManagement;
             gPictureBoxLogo.ImageRotate = 0F;
             gPictureBoxLogo.Location = new Point(30, 27);
             gPictureBoxLogo.Name = "gPictureBoxLogo";
-            gPictureBoxLogo.ShadowDecoration.CustomizableEdges = customizableEdges92;
+            gPictureBoxLogo.ShadowDecoration.CustomizableEdges = customizableEdges64;
             gPictureBoxLogo.Size = new Size(80, 80);
             gPictureBoxLogo.SizeMode = PictureBoxSizeMode.StretchImage;
             gPictureBoxLogo.TabIndex = 2;
@@ -598,7 +715,7 @@
             // gButtonRegister
             // 
             gButtonRegister.BorderRadius = 10;
-            gButtonRegister.CustomizableEdges = customizableEdges93;
+            gButtonRegister.CustomizableEdges = customizableEdges65;
             gButtonRegister.DisabledState.BorderColor = Color.DarkGray;
             gButtonRegister.DisabledState.CustomBorderColor = Color.DarkGray;
             gButtonRegister.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -608,10 +725,11 @@
             gButtonRegister.ForeColor = Color.White;
             gButtonRegister.Location = new Point(1069, 452);
             gButtonRegister.Name = "gButtonRegister";
-            gButtonRegister.ShadowDecoration.CustomizableEdges = customizableEdges94;
+            gButtonRegister.ShadowDecoration.CustomizableEdges = customizableEdges66;
             gButtonRegister.Size = new Size(133, 45);
             gButtonRegister.TabIndex = 6;
             gButtonRegister.Text = "Register";
+            gButtonRegister.Click += gButtonRegister_Click;
             // 
             // lblRegister
             // 
@@ -632,12 +750,13 @@
             Controls.Add(gShadowPanelRegister);
             Name = "UCDisplayRegister";
             Size = new Size(1575, 853);
+            Load += UCDisplayRegister_Load;
             gShadowPanelRegister.ResumeLayout(false);
             gShadowPanelRegister.PerformLayout();
+            gShadowPanelPassword.ResumeLayout(false);
+            gShadowPanelPassword.PerformLayout();
             gShadowPanelOrganizationInfor.ResumeLayout(false);
             gShadowPanelOrganizationInfor.PerformLayout();
-            gShadowPanelHandle.ResumeLayout(false);
-            gShadowPanelHandle.PerformLayout();
             gShadowPanelPersonalInfor.ResumeLayout(false);
             gShadowPanelPersonalInfor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)gPictureBoxGender).EndInit();
@@ -659,20 +778,26 @@
         private Guna.UI2.WinForms.Guna2TextBox gTextBoxWorkcode;
         private Guna.UI2.WinForms.Guna2TextBox gTextBoxUniversity;
         private Label lblOrganization;
-        private Guna.UI2.WinForms.Guna2ShadowPanel gShadowPanelHandle;
         private Guna.UI2.WinForms.Guna2TextBox gTextBoxHandle;
-        private Label lblHandle;
         private Guna.UI2.WinForms.Guna2ShadowPanel gShadowPanelPersonalInfor;
         private Guna.UI2.WinForms.Guna2DateTimePicker gDateTimePickerBirthday;
         private Guna.UI2.WinForms.Guna2PictureBox gPictureBoxGender;
         private Label lblPersonalInfor;
         private Guna.UI2.WinForms.Guna2TextBox gTextBoxPhonenumber;
-        private Guna.UI2.WinForms.Guna2ComboBox gComboBoxBirthday;
+        private Guna.UI2.WinForms.Guna2ComboBox gComboBoxGender;
         private Guna.UI2.WinForms.Guna2TextBox gTextBoxEmail;
         private Guna.UI2.WinForms.Guna2TextBox gTextBoxCitizencode;
         private Guna.UI2.WinForms.Guna2TextBox gTextBoxFullname;
         private Label lblAvatar;
         private Guna.UI2.WinForms.Guna2RadioButton gRadioButtonStudent;
         private Guna.UI2.WinForms.Guna2RadioButton gRadioButtonLecture;
+        private Guna.UI2.WinForms.Guna2ShadowPanel gShadowPanelPassword;
+        private Guna.UI2.WinForms.Guna2TextBox gTextBoxConfirmPassword;
+        private Guna.UI2.WinForms.Guna2TextBox gTextBoxPassword;
+        private Label lblYourPassword;
+        private Label lblHandle;
+        private Label lblPassword;
+        private Label lblConfirmPassword;
+        private Label lblReminder;
     }
 }

@@ -154,6 +154,39 @@
   <data name="PicAddTopicDescription" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PicAddTopicDescription.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PicAvatarDemoUser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicAvatarDemoUser.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicAvatarEight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicAvatarEight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicAvatarFive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicAvatarFive.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicAvatarNine" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicAvatarNine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicAvatarOne" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicAvatarOne.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicAvatarSeven" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicAvatarSeven.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicAvatarSix" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicAvatarSix.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicAvatarTen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicAvatarTen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicAvatarThree" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicAvatarThree.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicAvatarTwo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicAvatarTwo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicAvaterFour" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicAvaterFour.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PicBirthday" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PicBirthday.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -259,6 +292,12 @@
   <data name="PicItemOn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PicItemOn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PicItemPasswordHide" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicItemPasswordHide.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicItemPasswordShow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicItemPasswordShow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PicItemPencil" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PicItemPencil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -270,6 +309,9 @@
   </data>
   <data name="PicItemRemove" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PicItemRemove.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicItemResetGradient" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicItemResetGradient.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PicItemResources" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PicItemResources.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

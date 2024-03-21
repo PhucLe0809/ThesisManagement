@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\thanh\\Desktop\\ThesisManagementProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|c:\\users\\thanh\\desktop\\thesismanagementproject\\thesismanagementproject\\fstudentfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|solutionrelative:thesismanagementproject\\fstudentfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|c:\\users\\thanh\\desktop\\thesismanagementproject\\thesismanagementproject\\ucdisplaywelcome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|solutionrelative:thesismanagementproject\\ucdisplaywelcome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,13 +19,13 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FStudentFilter.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\thanh\\Desktop\\ThesisManagementProject\\ThesisManagementProject\\FStudentFilter.cs",
-              "RelativeDocumentMoniker": "ThesisManagementProject\\FStudentFilter.cs",
-              "ToolTip": "C:\\Users\\thanh\\Desktop\\ThesisManagementProject\\ThesisManagementProject\\FStudentFilter.cs [Design]",
-              "RelativeToolTip": "ThesisManagementProject\\FStudentFilter.cs [Design]",
+              "Title": "UCDisplayWelcome.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\thanh\\Desktop\\ThesisManagementProject\\ThesisManagementProject\\UCDisplayWelcome.cs",
+              "RelativeDocumentMoniker": "ThesisManagementProject\\UCDisplayWelcome.cs",
+              "ToolTip": "C:\\Users\\thanh\\Desktop\\ThesisManagementProject\\ThesisManagementProject\\UCDisplayWelcome.cs [Design]",
+              "RelativeToolTip": "ThesisManagementProject\\UCDisplayWelcome.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T14:56:32.722Z",
+              "WhenOpened": "2024-03-20T20:34:42.051Z",
               "IsPinned": true,
               "EditorCaption": " [Design]"
             },

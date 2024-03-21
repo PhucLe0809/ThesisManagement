@@ -158,7 +158,7 @@
   <data name="resource.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJTSURBVFhH7dZN
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJTSURBVFhH7dZN
         iFZ1FMdxbSQCayEYopvcRApCmxAFSUKJsFUIuvBlJTkEgoIgNTi9QOArtCgietmKuRCElroRRNAgwl0L
         EYZBEUURF2b1kSPnyp3jfR7v40Qk+IULc/7nd87/PGfOvf//nDnPedbAi1iLnfgSn2I3VmNe1f9rYAm+
         xk2DuY3DWFzjZwXGcbe1URTxC77HtziF6y3/HWyreUYGc/NXN1zAhq5W4wW8i7Mt/dGqGwl8kYn+wUQU
@@ -175,7 +175,7 @@
   <data name="gGradientButtonUpLoad.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAALxSURBVFhH7ZZf
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAALxSURBVFhH7ZZf
         iMxRFMdnkRQeFIkXXoRSXiRKjGjNPXd2SxraNffce85sa9tSlNIShtrytzyQ5M+r8KCUR16UFEry5kFq
         20i7kTwsu1b3N3dmf3P2N7szuyK1n/rV/Oacc8/3d+65f1KpGf43crncXEVmGxAe0Iy94PCUYnMoy7g5
         XUzPkf5/jFbm5eDsFWAcBMLRGs9XRXhhV2d+mYyfFsCmCwi/VxIxDmrCR0B4A5y9BmQfAuHnsl0TfgNn
@@ -191,7 +191,7 @@
         W1RES+J+06aWgL/GPxdQLrWcmhn+K34DYQbpV09dsfoAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="gTextBoxTopicDescription.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="gTextBoxDescription.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAANdSURBVFhH7Zbf
@@ -242,7 +242,7 @@
         JK2IJDxa9pGMBff9SPjA7t42dBfR3LGRJzH+AJPGmfIrbqtLAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="gTextBoxFunctionDescription.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="gTextBoxFunctions.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAANdSURBVFhH7Zbf
@@ -263,7 +263,7 @@
         uJxgUv//9Vn/c/wAeSBvQfPfKPEAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="gTextBoxTechnologyDescription.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="gTextBoxTechnology.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAANdSURBVFhH7Zbf
@@ -284,7 +284,7 @@
         uJxgUv//9Vn/c/wAeSBvQfPfKPEAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="gTextBoxRequirementDescription.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="gTextBoxRequirements.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAANdSURBVFhH7Zbf

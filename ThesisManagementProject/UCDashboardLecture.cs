@@ -13,11 +13,20 @@ namespace ThesisManagementProject
 {
     public partial class UCDashboardLecture : UserControl
     {
+        #region User Control
+
         UCThesisList uCThesisList = new UCThesisList();
         UCThesisStatistical uCThesisStatistical = new UCThesisStatistical();
         UCThesisCreate uCThesisCreate = new UCThesisCreate();
-
         UCThesisDetails uCThesisDetails = new UCThesisDetails();
+
+        #endregion
+
+        #region Class
+
+        ThesisDAO thesisDAO = new ThesisDAO();
+
+        #endregion
 
         public UCDashboardLecture()
         {
@@ -25,8 +34,12 @@ namespace ThesisManagementProject
 
             gGradientButtonViewTopic_Click(new object(), new EventArgs());
 
-            uCThesisDetails.GButtonBack.Click += ThesisDetailsButtonBack_Click;
+            uCThesisDetails.GButtonBack.Click += gGradientButtonViewTopic_Click;
+            uCThesisList.GButtonReset.Click += gGradientButtonViewTopic_Click;
+            uCThesisList.GButtonTopic.Click += ByTopic_Clicked;
         }
+
+        #region PRIVATE FUNCTIONS
 
         private void ButtonStandardColor(Guna2GradientButton button)
         {
@@ -50,55 +63,90 @@ namespace ThesisManagementProject
             ButtonStandardColor(gGradientButtonCreateThesis);
         }
 
-        private void gGradientButtonViewTopic_Click(object sender, EventArgs e)
+        private void AddUserControl(Guna2GradientButton button, UserControl userControl)
         {
             AllButtonStandardColor();
-            ButtonSettingColor(gGradientButtonViewThesis);
+            ButtonSettingColor(button);
+            gPanelDataView.Controls.Clear();
+            gPanelDataView.Controls.Add(userControl);
+        }
 
+        #endregion
+
+        #region EVENT gGradientButtonViewTopic
+
+        private void LoadThesisList(List<Thesis> list)
+        {
             uCThesisList.Clear();
-            for (int i = 0; i < 4; i++)
+
+            for (int i = 0; i < list.Count; i++)
             {
-                UCThesisLine thesis = new UCThesisLine();
-                thesis.SetFavorites();
-                thesis.ThesisLineClicked += ThesisLine_Clicked;
-                uCThesisList.AddThesis(thesis);
+                UCThesisLine thesisLine = new UCThesisLine();
+                thesisLine.SetInformation(list[i]);
+                thesisLine.ThesisLineClicked += ThesisLine_Clicked;
+                thesisLine.ThesisDeleteClicked += ThesisDelete_Clicked;
+                uCThesisList.AddThesis(thesisLine);
             }
-            for (int i = 0; i < 12; i++)
-            {
-                UCThesisLine thesis = new UCThesisLine();
-                thesis.ThesisLineClicked += ThesisLine_Clicked;
-                uCThesisList.AddThesis(thesis);
-            }
+            uCThesisList.SetNumThesis(list.Count);
 
             gPanelDataView.Controls.Clear();
             gPanelDataView.Controls.Add(uCThesisList);
         }
 
-        private void gGradientButtonStatistical_Click(object sender, EventArgs e)
+        private void gGradientButtonViewTopic_Click(object sender, EventArgs e)
         {
             AllButtonStandardColor();
-            ButtonSettingColor(gGradientButtonStatistical);
-            gPanelDataView.Controls.Clear();
-            gPanelDataView.Controls.Add(uCThesisStatistical);
+            ButtonSettingColor(gGradientButtonViewThesis);
+
+            LoadThesisList(thesisDAO.Select());
         }
+
+        #endregion
+
+        #region EVENT gGradientButtonStatistical
+
+        private void gGradientButtonStatistical_Click(object sender, EventArgs e)
+        {
+            AddUserControl(gGradientButtonStatistical, uCThesisStatistical);
+        }
+
+        #endregion
+
+        #region EVENT gGradientButtonCreateThesis
 
         private void gGradientButtonCreateThesis_Click(object sender, EventArgs e)
         {
-            AllButtonStandardColor();
-            ButtonSettingColor(gGradientButtonCreateThesis);
-            gPanelDataView.Controls.Clear();
-            gPanelDataView.Controls.Add(uCThesisCreate);
+            AddUserControl(gGradientButtonCreateThesis, uCThesisCreate);
         }
+
+        #endregion
+
+        #region METHOD
 
         private void ThesisLine_Clicked(object sender, EventArgs e)
         {
-            gPanelDataView.Controls.Clear();
-            gPanelDataView.Controls.Add(uCThesisDetails);
-        }
+            UCThesisLine thesisLine = sender as UCThesisLine;
 
-        private void ThesisDetailsButtonBack_Click(object sender, EventArgs e)
+            if (thesisLine != null)
+            {
+                gPanelDataView.Controls.Clear();
+                uCThesisDetails.UpdateThesis(MyProcess.SelectThesis(thesisLine.ID));
+                gPanelDataView.Controls.Add(uCThesisDetails);
+            
+            }
+        }
+        public void ThesisDelete_Clicked(object sender, EventArgs e)
         {
             gGradientButtonViewTopic_Click(new object(), new EventArgs());
         }
+        public void ByTopic_Clicked(object sender, EventArgs e)
+        {
+            List<Thesis> list = thesisDAO.Select();
+            LoadThesisList(list.OrderBy(thesis => thesis.Topic).ToList());
+        }
+
+        #endregion
+
+
     }
 }

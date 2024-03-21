@@ -68,3 +68,10 @@ C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\obj\Debug
 C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\obj\Debug\net8.0-windows\ThesisManagementProject.UCDisplayRegister.resources
 C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\obj\Debug\net8.0-windows\ThesisManagementProject.FThesisEdit.resources
 C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\obj\Debug\net8.0-windows\ThesisManagementProject.UCThesisMiniLine.resources
+C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\bin\Debug\net8.0-windows\ThesisManagementProject.dll.config
+C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

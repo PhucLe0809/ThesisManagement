@@ -70,7 +70,6 @@
             gButtonStar.FillColor = Color.Transparent;
             gButtonStar.Font = new Font("Segoe UI", 9F);
             gButtonStar.ForeColor = Color.White;
-            gButtonStar.HoverState.Image = (Image)resources.GetObject("resource.Image");
             gButtonStar.Image = (Image)resources.GetObject("gButtonStar.Image");
             gButtonStar.ImageSize = new Size(25, 25);
             gButtonStar.Location = new Point(7, 4);
@@ -78,6 +77,7 @@
             gButtonStar.ShadowDecoration.CustomizableEdges = customizableEdges2;
             gButtonStar.Size = new Size(40, 40);
             gButtonStar.TabIndex = 10;
+            gButtonStar.Click += gButtonStar_Click;
             // 
             // gButtonDelete
             // 
@@ -91,7 +91,7 @@
             gButtonDelete.FillColor = Color.Transparent;
             gButtonDelete.Font = new Font("Segoe UI", 9F);
             gButtonDelete.ForeColor = Color.White;
-            gButtonDelete.HoverState.Image = (Image)resources.GetObject("resource.Image1");
+            gButtonDelete.HoverState.Image = (Image)resources.GetObject("resource.Image");
             gButtonDelete.Image = (Image)resources.GetObject("gButtonDelete.Image");
             gButtonDelete.ImageSize = new Size(25, 25);
             gButtonDelete.Location = new Point(1082, 4);
@@ -99,6 +99,7 @@
             gButtonDelete.ShadowDecoration.CustomizableEdges = customizableEdges4;
             gButtonDelete.Size = new Size(40, 40);
             gButtonDelete.TabIndex = 11;
+            gButtonDelete.Click += gButtonDelete_Click;
             // 
             // gButtonEdit
             // 
@@ -112,7 +113,7 @@
             gButtonEdit.FillColor = Color.Transparent;
             gButtonEdit.Font = new Font("Segoe UI", 9F);
             gButtonEdit.ForeColor = Color.White;
-            gButtonEdit.HoverState.Image = (Image)resources.GetObject("resource.Image2");
+            gButtonEdit.HoverState.Image = (Image)resources.GetObject("resource.Image1");
             gButtonEdit.Image = (Image)resources.GetObject("gButtonEdit.Image");
             gButtonEdit.ImageSize = new Size(25, 25);
             gButtonEdit.Location = new Point(1037, 4);

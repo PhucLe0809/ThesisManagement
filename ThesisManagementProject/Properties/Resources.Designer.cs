@@ -183,6 +183,116 @@ namespace ThesisManagementProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PicAvatarDemoUser {
+            get {
+                object obj = ResourceManager.GetObject("PicAvatarDemoUser", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PicAvatarEight {
+            get {
+                object obj = ResourceManager.GetObject("PicAvatarEight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PicAvatarFive {
+            get {
+                object obj = ResourceManager.GetObject("PicAvatarFive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PicAvatarNine {
+            get {
+                object obj = ResourceManager.GetObject("PicAvatarNine", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PicAvatarOne {
+            get {
+                object obj = ResourceManager.GetObject("PicAvatarOne", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PicAvatarSeven {
+            get {
+                object obj = ResourceManager.GetObject("PicAvatarSeven", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PicAvatarSix {
+            get {
+                object obj = ResourceManager.GetObject("PicAvatarSix", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PicAvatarTen {
+            get {
+                object obj = ResourceManager.GetObject("PicAvatarTen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PicAvatarThree {
+            get {
+                object obj = ResourceManager.GetObject("PicAvatarThree", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PicAvatarTwo {
+            get {
+                object obj = ResourceManager.GetObject("PicAvatarTwo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PicAvaterFour {
+            get {
+                object obj = ResourceManager.GetObject("PicAvaterFour", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PicBirthday {
             get {
                 object obj = ResourceManager.GetObject("PicBirthday", resourceCulture);
@@ -533,6 +643,26 @@ namespace ThesisManagementProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PicItemPasswordHide {
+            get {
+                object obj = ResourceManager.GetObject("PicItemPasswordHide", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PicItemPasswordShow {
+            get {
+                object obj = ResourceManager.GetObject("PicItemPasswordShow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PicItemPencil {
             get {
                 object obj = ResourceManager.GetObject("PicItemPencil", resourceCulture);
@@ -566,6 +696,16 @@ namespace ThesisManagementProject.Properties {
         internal static System.Drawing.Bitmap PicItemRemove {
             get {
                 object obj = ResourceManager.GetObject("PicItemRemove", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PicItemResetGradient {
+            get {
+                object obj = ResourceManager.GetObject("PicItemResetGradient", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
