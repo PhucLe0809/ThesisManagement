@@ -13,8 +13,6 @@ namespace ThesisManagementProject
 {
     public partial class UCThesisList : UserControl
     {
-        bool byTopic = false;
-
         public event EventHandler ThesisLineClicked;
         public event EventHandler ThesisDeleteClicked;
 

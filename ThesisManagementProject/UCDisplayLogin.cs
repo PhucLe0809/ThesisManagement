@@ -18,24 +18,41 @@ namespace ThesisManagementProject
             InitializeComponent();
         }
 
+        #region PROPERTIES
+
         public Guna2Button GButtonLogin
         {
             get { return this.gButtonLogin; }
         }
-
         public Guna2Button GButtonBack
         {
             get { return this.gButtonBack; }
         }
-
-        private void gButtonLogin_Click(object sender, EventArgs e)
+        public Guna2TextBox GTextBoxEmail
         {
-
+            get { return this.gTextBoxEmail; }
+        }
+        public Guna2TextBox GTextBoxPassword
+        {
+            get { return this.gTextBoxPassword; }
+        }
+        public Guna2TextBox GTextBoxReminder
+        {
+            get { return this.gTextBoxReminder; }
         }
 
-        private void gButtonBack_Click(object sender, EventArgs e)
-        {
+        #endregion
 
+        #region FUNCTIONS
+
+        public void InitDataControls()
+        {
+            gTextBoxEmail.Text = string.Empty;
+            gTextBoxPassword.Text = string.Empty;
+            gTextBoxReminder.Text = string.Empty;
         }
+
+        #endregion
+
     }
 }

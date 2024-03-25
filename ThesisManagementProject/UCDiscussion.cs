@@ -77,7 +77,7 @@ namespace ThesisManagementProject
         {
             AllButtonStandardColor();
             ButtonSettingColor(gGradientButtonResources);
-            UCDescussionResource uCDescussionResource = new UCDescussionResource();
+            UCDiscussionResource uCDescussionResource = new UCDiscussionResource();
             gPanelDataView.Controls.Clear();
             gPanelDataView.Controls.Add(uCDescussionResource);
         }

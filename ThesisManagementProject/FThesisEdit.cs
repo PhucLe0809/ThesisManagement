@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ThesisManagementProject.Database;
+using ThesisManagementProject.Models;
+using ThesisManagementProject.Process;
 
 namespace ThesisManagementProject
 {
@@ -30,7 +33,6 @@ namespace ThesisManagementProject
             gComboBoxLevel.SelectedItem = thesis.Level;
             gTextBoxMembers.Text = thesis.MaxMembers.ToString();
             gTextBoxDescription.Text = thesis.Description;
-            gTextBoxReference.Text = thesis.Reference;
             gDateTimePickerPublish.Value = thesis.PublishDate;
             gTextBoxTechnology.Text = thesis.Technology;
             gTextBoxFunctions.Text = thesis.Functions;
@@ -47,9 +49,10 @@ namespace ThesisManagementProject
         {
             this.thesis = new Thesis(this.thesis.IdThesis, gTextBoxTopic.Text,
                 (EField)gComboBoxField.SelectedItem, (ELevel)gComboBoxLevel.SelectedItem,
-                MyProcess.ConvertStringToInt32(gTextBoxMembers.Text), gTextBoxDescription.Text, gTextBoxReference.Text,
+                MyProcess.ConvertStringToInt32(gTextBoxMembers.Text), gTextBoxDescription.Text,
                 gDateTimePickerPublish.Value, gTextBoxTechnology.Text, gTextBoxFunctions.Text, gTextBoxRequirements.Text,
                 this.thesis.IdCreator, this.thesis.IsFavorite, this.thesis.NumPending, this.thesis.NumAccepted, this.thesis.NumCompleted);
+            
             thesisDAO.Update(thesis);
 
             this.Close();

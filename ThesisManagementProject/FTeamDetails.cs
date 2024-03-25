@@ -18,7 +18,7 @@ namespace ThesisManagementProject
 
             for (int i = 0;  i < 10; i++)
             {
-                UCStudentMiniLine line = new UCStudentMiniLine();
+                UCPeopleMiniLine line = new UCPeopleMiniLine();
                 line.SetButtonAddImageNull();
                 flpMembers.Controls.Add(line);
             }

@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\thanh\\Desktop\\ThesisManagementProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|c:\\users\\thanh\\desktop\\thesismanagementproject\\thesismanagementproject\\ucdisplaywelcome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|solutionrelative:thesismanagementproject\\ucdisplaywelcome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|c:\\users\\thanh\\desktop\\thesismanagementproject\\thesismanagementproject\\ucthesiscreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|solutionrelative:thesismanagementproject\\ucthesiscreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|c:\\users\\thanh\\desktop\\thesismanagementproject\\thesismanagementproject\\ucthesiscreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|solutionrelative:thesismanagementproject\\ucthesiscreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,20 +18,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UCDisplayWelcome.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\thanh\\Desktop\\ThesisManagementProject\\ThesisManagementProject\\UCDisplayWelcome.cs",
-              "RelativeDocumentMoniker": "ThesisManagementProject\\UCDisplayWelcome.cs",
-              "ToolTip": "C:\\Users\\thanh\\Desktop\\ThesisManagementProject\\ThesisManagementProject\\UCDisplayWelcome.cs [Design]",
-              "RelativeToolTip": "ThesisManagementProject\\UCDisplayWelcome.cs [Design]",
+              "DocumentIndex": 1,
+              "Title": "UCThesisCreate.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\thanh\\Desktop\\ThesisManagementProject\\ThesisManagementProject\\UCThesisCreate.cs",
+              "RelativeDocumentMoniker": "ThesisManagementProject\\UCThesisCreate.cs",
+              "ToolTip": "C:\\Users\\thanh\\Desktop\\ThesisManagementProject\\ThesisManagementProject\\UCThesisCreate.cs [Design]",
+              "RelativeToolTip": "ThesisManagementProject\\UCThesisCreate.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-20T20:34:42.051Z",
+              "WhenOpened": "2024-03-25T03:35:41.097Z",
               "IsPinned": true,
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UCThesisCreate.cs",
+              "DocumentMoniker": "C:\\Users\\thanh\\Desktop\\ThesisManagementProject\\ThesisManagementProject\\UCThesisCreate.cs",
+              "RelativeDocumentMoniker": "ThesisManagementProject\\UCThesisCreate.cs",
+              "ToolTip": "C:\\Users\\thanh\\Desktop\\ThesisManagementProject\\ThesisManagementProject\\UCThesisCreate.cs",
+              "RelativeToolTip": "ThesisManagementProject\\UCThesisCreate.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T03:35:46.512Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",

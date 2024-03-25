@@ -22,9 +22,6 @@
     <Compile Update="FThesisFilter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FTopicFilter.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="FMessageSeeAll.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -34,10 +31,7 @@
     <Compile Update="UCAccountInformation.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UCAccountAvatar.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="UCDescussionResource.cs">
+    <Compile Update="UCDiscussionResource.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UCDiscussionStatistical.cs">
@@ -82,7 +76,7 @@
     <Compile Update="UCTeamList.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UCStudentMiniLine.cs">
+    <Compile Update="UCPeopleMiniLine.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UCThesisCreate.cs">
@@ -103,10 +97,7 @@
     <Compile Update="UCThesisStatistical.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UCTopicCreate.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="UCAccountLecture.cs">
+    <Compile Update="UCAccount.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UCDiscussion.cs">
@@ -118,26 +109,8 @@
     <Compile Update="UCDiscussionLine.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UCTopicStatistical.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="UCTopic.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="UCTopicList.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="UCTopicLine.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="UCTopicMiniLine.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Update="UCWelcome.cs">
       <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="FTopicDetails.cs">
-      <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
 </Project>

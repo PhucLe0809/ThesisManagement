@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ThesisManagementProject.Database;
+using ThesisManagementProject.Models;
 
 namespace ThesisManagementProject
 {
@@ -39,7 +41,7 @@ namespace ThesisManagementProject
             uCThesisList.GButtonTopic.Click += ByTopic_Clicked;
         }
 
-        #region PRIVATE FUNCTIONS
+        #region FUNCTIONS
 
         private void ButtonStandardColor(Guna2GradientButton button)
         {
@@ -98,7 +100,7 @@ namespace ThesisManagementProject
             AllButtonStandardColor();
             ButtonSettingColor(gGradientButtonViewThesis);
 
-            LoadThesisList(thesisDAO.Select());
+            LoadThesisList(thesisDAO.SelectList());
         }
 
         #endregion
@@ -130,7 +132,7 @@ namespace ThesisManagementProject
             if (thesisLine != null)
             {
                 gPanelDataView.Controls.Clear();
-                uCThesisDetails.UpdateThesis(MyProcess.SelectThesis(thesisLine.ID));
+                uCThesisDetails.SetInformation(thesisDAO.SelectOnly(thesisLine.ID));
                 gPanelDataView.Controls.Add(uCThesisDetails);
             
             }
@@ -141,7 +143,7 @@ namespace ThesisManagementProject
         }
         public void ByTopic_Clicked(object sender, EventArgs e)
         {
-            List<Thesis> list = thesisDAO.Select();
+            List<Thesis> list = thesisDAO.SelectList();
             LoadThesisList(list.OrderBy(thesis => thesis.Topic).ToList());
         }
 

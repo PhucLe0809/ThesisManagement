@@ -44,13 +44,11 @@ namespace ThesisManagementProject
         {
 
         }
-
         private void gGradientButtonRegister_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        private void gGradientButtonLecture_Click(object sender, EventArgs e)
         {
 
         }

@@ -143,6 +143,7 @@
             gGradientButtonLecture.Size = new Size(133, 45);
             gGradientButtonLecture.TabIndex = 17;
             gGradientButtonLecture.Text = "Lecture";
+            gGradientButtonLecture.Click += gGradientButtonLecture_Click;
             // 
             // gGradientButtonRegister
             // 

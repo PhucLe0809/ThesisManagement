@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
+using ThesisManagementProject.Database;
+using ThesisManagementProject.Models;
+using ThesisManagementProject.Process;
 
 namespace ThesisManagementProject
 {
@@ -97,7 +100,7 @@ namespace ThesisManagementProject
         private void gButtonEdit_Click(object sender, EventArgs e)
         {
             FThesisEdit fThesisEdit = new FThesisEdit();
-            fThesisEdit.UpdateThesis(MyProcess.SelectThesis(gTextBoxThesisCode.Text));
+            fThesisEdit.UpdateThesis(thesisDAO.SelectOnly(gTextBoxThesisCode.Text));
             fThesisEdit.ShowDialog();
         }
 
@@ -107,7 +110,7 @@ namespace ThesisManagementProject
                                                     "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (result == DialogResult.OK)
             {
-                thesisDAO.Delete(MyProcess.SelectThesis(gTextBoxThesisCode.Text));
+                thesisDAO.Delete(thesisDAO.SelectOnly(gTextBoxThesisCode.Text));
                 OnThesisDeleteClicked(EventArgs.Empty);
             }
         }
@@ -118,15 +121,20 @@ namespace ThesisManagementProject
 
         #endregion
 
+        #region EVENT gButtonStar
+
         private void gButtonStar_Click(object sender, EventArgs e)
         {
             thesis.IsFavorite = !thesis.IsFavorite;
 
             MyProcess.SetItemFavorite(gButtonStar, thesis.IsFavorite);
-            thesisDAO.SQLByCommand(string.Format("Update " + MyDatabase.DBThesis + " Set isfavorite = {0} Where idthesis = '{1}'",
+            thesisDAO.SQLExecuteByCommand(string.Format("Update " + MyDatabase.DBThesis + " Set isfavorite = {0} Where idthesis = '{1}'",
                                     (thesis.IsFavorite)?(1):(0), thesis.IdThesis));
             
             UserControlLoad();
         }
+
+        #endregion
+
     }
 }

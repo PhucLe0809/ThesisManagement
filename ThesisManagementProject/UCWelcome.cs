@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ThesisManagementProject.Models;
+using ThesisManagementProject.Process;
 
 namespace ThesisManagementProject
 {
@@ -15,6 +17,18 @@ namespace ThesisManagementProject
         public UCWelcome()
         {
             InitializeComponent();
+        }
+        public UCWelcome(People people)
+        {
+            InitializeComponent();
+
+            gCirclePictureBoxAvatar.Image = MyProcess.NameToImage(people.AvatarName);
+            lblViewHandle.Text = people.Handle;
+            gTextBoxFullname.Text = people.FullName;
+            gTextBoxCitizencode.Text = people.CitizenCode;
+            gTextBoxBirthday.Text = people.Birthday.ToString("dd/MM/yyyy");
+            gTextBoxEmail.Text = people.Email;
+            gTextBoxPhonenumber.Text = people.PhoneNumber;
         }
     }
 }

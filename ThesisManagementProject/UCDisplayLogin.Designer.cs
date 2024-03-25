@@ -37,14 +37,17 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCDisplayLogin));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCDisplayLogin));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             gPictureBoxLogo = new Guna.UI2.WinForms.Guna2PictureBox();
-            gTextBoxPhonenumber = new Guna.UI2.WinForms.Guna2TextBox();
+            gTextBoxEmail = new Guna.UI2.WinForms.Guna2TextBox();
             gTextBoxPassword = new Guna.UI2.WinForms.Guna2TextBox();
             gButtonLogin = new Guna.UI2.WinForms.Guna2Button();
             lblLogin = new Label();
             gShadowPanelLogin = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            gTextBoxReminder = new Guna.UI2.WinForms.Guna2TextBox();
             gButtonBack = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)gPictureBoxLogo).BeginInit();
             gShadowPanelLogin.SuspendLayout();
@@ -63,34 +66,34 @@
             gPictureBoxLogo.TabIndex = 2;
             gPictureBoxLogo.TabStop = false;
             // 
-            // gTextBoxPhonenumber
+            // gTextBoxEmail
             // 
-            gTextBoxPhonenumber.BackColor = Color.Transparent;
-            gTextBoxPhonenumber.BorderRadius = 10;
-            gTextBoxPhonenumber.CustomizableEdges = customizableEdges3;
-            gTextBoxPhonenumber.DefaultText = "";
-            gTextBoxPhonenumber.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            gTextBoxPhonenumber.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            gTextBoxPhonenumber.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            gTextBoxPhonenumber.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            gTextBoxPhonenumber.FillColor = SystemColors.ButtonFace;
-            gTextBoxPhonenumber.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            gTextBoxPhonenumber.Font = new Font("Segoe UI", 9F);
-            gTextBoxPhonenumber.ForeColor = Color.Black;
-            gTextBoxPhonenumber.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            gTextBoxPhonenumber.IconLeft = Properties.Resources.PicPhonenumber;
-            gTextBoxPhonenumber.IconLeftOffset = new Point(10, 0);
-            gTextBoxPhonenumber.Location = new Point(80, 290);
-            gTextBoxPhonenumber.Margin = new Padding(3, 4, 3, 4);
-            gTextBoxPhonenumber.Name = "gTextBoxPhonenumber";
-            gTextBoxPhonenumber.PasswordChar = '\0';
-            gTextBoxPhonenumber.PlaceholderForeColor = Color.Gray;
-            gTextBoxPhonenumber.PlaceholderText = "Phone number";
-            gTextBoxPhonenumber.SelectedText = "";
-            gTextBoxPhonenumber.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            gTextBoxPhonenumber.Size = new Size(355, 45);
-            gTextBoxPhonenumber.TabIndex = 4;
-            gTextBoxPhonenumber.TextOffset = new Point(5, 0);
+            gTextBoxEmail.BackColor = Color.Transparent;
+            gTextBoxEmail.BorderRadius = 10;
+            gTextBoxEmail.CustomizableEdges = customizableEdges3;
+            gTextBoxEmail.DefaultText = "";
+            gTextBoxEmail.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            gTextBoxEmail.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            gTextBoxEmail.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            gTextBoxEmail.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            gTextBoxEmail.FillColor = SystemColors.ButtonFace;
+            gTextBoxEmail.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            gTextBoxEmail.Font = new Font("Segoe UI", 9F);
+            gTextBoxEmail.ForeColor = Color.Black;
+            gTextBoxEmail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            gTextBoxEmail.IconLeft = Properties.Resources.PicEmail;
+            gTextBoxEmail.IconLeftOffset = new Point(10, 0);
+            gTextBoxEmail.Location = new Point(80, 290);
+            gTextBoxEmail.Margin = new Padding(3, 4, 3, 4);
+            gTextBoxEmail.Name = "gTextBoxEmail";
+            gTextBoxEmail.PasswordChar = '\0';
+            gTextBoxEmail.PlaceholderForeColor = Color.Gray;
+            gTextBoxEmail.PlaceholderText = "Email";
+            gTextBoxEmail.SelectedText = "";
+            gTextBoxEmail.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            gTextBoxEmail.Size = new Size(355, 45);
+            gTextBoxEmail.TabIndex = 4;
+            gTextBoxEmail.TextOffset = new Point(5, 0);
             // 
             // gTextBoxPassword
             // 
@@ -132,13 +135,12 @@
             gButtonLogin.FillColor = Color.FromArgb(2, 0, 214);
             gButtonLogin.Font = new Font("Segoe UI", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
             gButtonLogin.ForeColor = Color.White;
-            gButtonLogin.Location = new Point(194, 412);
+            gButtonLogin.Location = new Point(194, 434);
             gButtonLogin.Name = "gButtonLogin";
             gButtonLogin.ShadowDecoration.CustomizableEdges = customizableEdges8;
             gButtonLogin.Size = new Size(133, 45);
             gButtonLogin.TabIndex = 6;
             gButtonLogin.Text = "Login";
-            gButtonLogin.Click += gButtonLogin_Click;
             // 
             // lblLogin
             // 
@@ -154,9 +156,10 @@
             // gShadowPanelLogin
             // 
             gShadowPanelLogin.BackColor = Color.Transparent;
+            gShadowPanelLogin.Controls.Add(gTextBoxReminder);
             gShadowPanelLogin.Controls.Add(gButtonBack);
             gShadowPanelLogin.Controls.Add(gPictureBoxLogo);
-            gShadowPanelLogin.Controls.Add(gTextBoxPhonenumber);
+            gShadowPanelLogin.Controls.Add(gTextBoxEmail);
             gShadowPanelLogin.Controls.Add(gTextBoxPassword);
             gShadowPanelLogin.Controls.Add(gButtonLogin);
             gShadowPanelLogin.Controls.Add(lblLogin);
@@ -170,10 +173,38 @@
             gShadowPanelLogin.Size = new Size(514, 697);
             gShadowPanelLogin.TabIndex = 11;
             // 
+            // gTextBoxReminder
+            // 
+            gTextBoxReminder.BackColor = Color.Transparent;
+            gTextBoxReminder.BorderRadius = 10;
+            gTextBoxReminder.BorderThickness = 0;
+            gTextBoxReminder.CustomizableEdges = customizableEdges9;
+            gTextBoxReminder.DefaultText = "";
+            gTextBoxReminder.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            gTextBoxReminder.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            gTextBoxReminder.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            gTextBoxReminder.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            gTextBoxReminder.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            gTextBoxReminder.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            gTextBoxReminder.ForeColor = Color.IndianRed;
+            gTextBoxReminder.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            gTextBoxReminder.IconLeftOffset = new Point(10, 0);
+            gTextBoxReminder.Location = new Point(80, 396);
+            gTextBoxReminder.Margin = new Padding(3, 4, 3, 4);
+            gTextBoxReminder.Name = "gTextBoxReminder";
+            gTextBoxReminder.PasswordChar = '\0';
+            gTextBoxReminder.PlaceholderForeColor = Color.Gray;
+            gTextBoxReminder.PlaceholderText = "";
+            gTextBoxReminder.ReadOnly = true;
+            gTextBoxReminder.SelectedText = "";
+            gTextBoxReminder.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            gTextBoxReminder.Size = new Size(355, 31);
+            gTextBoxReminder.TabIndex = 10;
+            // 
             // gButtonBack
             // 
             gButtonBack.BorderRadius = 5;
-            gButtonBack.CustomizableEdges = customizableEdges9;
+            gButtonBack.CustomizableEdges = customizableEdges11;
             gButtonBack.DisabledState.BorderColor = Color.DarkGray;
             gButtonBack.DisabledState.CustomBorderColor = Color.DarkGray;
             gButtonBack.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -188,12 +219,11 @@
             gButtonBack.ImageSize = new Size(23, 23);
             gButtonBack.Location = new Point(373, 590);
             gButtonBack.Name = "gButtonBack";
-            gButtonBack.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            gButtonBack.ShadowDecoration.CustomizableEdges = customizableEdges12;
             gButtonBack.Size = new Size(90, 30);
             gButtonBack.TabIndex = 9;
             gButtonBack.Text = "Back";
             gButtonBack.TextOffset = new Point(2, 0);
-            gButtonBack.Click += gButtonBack_Click;
             // 
             // UCDisplayLogin
             // 
@@ -212,11 +242,12 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2PictureBox gPictureBoxLogo;
-        private Guna.UI2.WinForms.Guna2TextBox gTextBoxPhonenumber;
+        private Guna.UI2.WinForms.Guna2TextBox gTextBoxEmail;
         private Guna.UI2.WinForms.Guna2TextBox gTextBoxPassword;
         private Guna.UI2.WinForms.Guna2Button gButtonLogin;
         private Label lblLogin;
         private Guna.UI2.WinForms.Guna2ShadowPanel gShadowPanelLogin;
         private Guna.UI2.WinForms.Guna2Button gButtonBack;
+        private Guna.UI2.WinForms.Guna2TextBox gTextBoxReminder;
     }
 }
