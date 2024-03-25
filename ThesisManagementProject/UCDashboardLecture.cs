@@ -15,26 +15,19 @@ namespace ThesisManagementProject
 {
     public partial class UCDashboardLecture : UserControl
     {
-        #region User Control
 
-        UCThesisList uCThesisList = new UCThesisList();
-        UCThesisStatistical uCThesisStatistical = new UCThesisStatistical();
-        UCThesisCreate uCThesisCreate = new UCThesisCreate();
-        UCThesisDetails uCThesisDetails = new UCThesisDetails();
+        private UCThesisList uCThesisList = new UCThesisList();
+        private UCThesisStatistical uCThesisStatistical = new UCThesisStatistical();
+        private UCThesisCreate uCThesisCreate = new UCThesisCreate();
+        private UCThesisDetails uCThesisDetails = new UCThesisDetails();
 
-        #endregion
+        private ThesisDAO thesisDAO = new ThesisDAO();
+        private People people = new People();
 
-        #region Class
-
-        ThesisDAO thesisDAO = new ThesisDAO();
-
-        #endregion
 
         public UCDashboardLecture()
         {
-            InitializeComponent();
-
-            gGradientButtonViewTopic_Click(new object(), new EventArgs());
+            InitializeComponent();            
 
             uCThesisDetails.GButtonBack.Click += gGradientButtonViewTopic_Click;
             uCThesisList.GButtonReset.Click += gGradientButtonViewTopic_Click;
@@ -43,6 +36,11 @@ namespace ThesisManagementProject
 
         #region FUNCTIONS
 
+        public void SetInformation(People people)
+        {
+            this.people = people;
+            gGradientButtonViewThesis.PerformClick();
+        }
         private void ButtonStandardColor(Guna2GradientButton button)
         {
             button.FillColor = SystemColors.ControlLight;
@@ -99,8 +97,7 @@ namespace ThesisManagementProject
         {
             AllButtonStandardColor();
             ButtonSettingColor(gGradientButtonViewThesis);
-
-            LoadThesisList(thesisDAO.SelectList());
+            LoadThesisList(thesisDAO.SelectListByIDCreator(this.people.IdAccount));
         }
 
         #endregion

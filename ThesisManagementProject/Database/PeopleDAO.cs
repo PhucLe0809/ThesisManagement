@@ -19,6 +19,9 @@ namespace ThesisManagementProject.Database
         {
             DBConnection.SQLExecuteByCommand(command);
         }
+
+        #region SELECT PEOPLE
+
         public List<People> SelectList()
         {
             DataTable dataTable = DBConnection.Select(string.Format("SELECT * FROM {0}", MyDatabase.DBAccount));
@@ -30,6 +33,21 @@ namespace ThesisManagementProject.Database
             }
 
             return list;
+        }
+        public List<People> SelectListByStatus(string status, string idthesis)
+        {
+            DataTable dataTable = DBConnection.Select("select * from " +
+                "(select idaccount as idstudent from ThesisStatus where sta = '" + status + "' and idthesis = '" + idthesis + "') as Q " +
+                "inner join (select * from Account where role = 'Student') as R on q.idstudent = r.idaccount");
+
+            List<People> list = new List<People>();
+            foreach (DataRow row in dataTable.Rows)
+            {
+                list.Add(GetFromDataRow(row));
+            }
+
+            return list;
+
         }
         public People SelectOnlyByID(string id)
         {
@@ -48,6 +66,11 @@ namespace ThesisManagementProject.Database
             if (dt.Rows.Count > 0) return GetFromDataRow(dt.Rows[0]);
             return null;
         }
+
+        #endregion
+
+        #region Get From Data Row
+
         public People GetFromDataRow(DataRow row)
         {
             string idaccount = row["idaccount"].ToString();
@@ -68,5 +91,8 @@ namespace ThesisManagementProject.Database
 
             return people;
         }
+
+        #endregion
+
     }
 }

@@ -29,12 +29,6 @@ namespace ThesisManagementProject
             pnlAddUserControl.Controls.Clear();
             pnlAddUserControl.Controls.Add(new UCWelcome());
         }
-        public UCDisplayLecture(People people)
-        {
-            InitializeComponent();
-
-            SetInformation(people);
-        }
 
         #region PROPERTIES
 
@@ -96,7 +90,7 @@ namespace ThesisManagementProject
 
         #endregion
 
-        #region CONTROL CLICK
+        #region CONTROLS CLICK
 
         private void gPanelBackAvatar_Click(object sender, EventArgs e)
         {
@@ -106,6 +100,7 @@ namespace ThesisManagementProject
         }
         private void gButtonDashboard_Click(object sender, EventArgs e)
         {
+            uCDashboardLecture.SetInformation(this.people);
             SetButtonClick(gButtonDashboards, Properties.Resources.PictureTaskGradient, uCDashboardLecture);
         }
         private void gButtonStudents_Click(object sender, EventArgs e)

@@ -61,22 +61,10 @@
             gGradientButtonThesisReset = new Guna.UI2.WinForms.Guna2GradientButton();
             gButtonEdit = new Guna.UI2.WinForms.Guna2Button();
             gButtonStar = new Guna.UI2.WinForms.Guna2Button();
-            flpPending = new FlowLayoutPanel();
-            gShadowPanelPending = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            gSeparatorPending = new Guna.UI2.WinForms.Guna2Separator();
-            lblPending = new Label();
-            gShadowPanelAccepted = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            gSeparatorAccepted = new Guna.UI2.WinForms.Guna2Separator();
-            flpAccepted = new FlowLayoutPanel();
-            lblAccepted = new Label();
-            gShadowPanelCompleted = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            gSeparatorCompleted = new Guna.UI2.WinForms.Guna2Separator();
-            flpCompleted = new FlowLayoutPanel();
-            lblCompleted = new Label();
             gShadowPanelTopic = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            gComboBoxMembers = new Guna.UI2.WinForms.Guna2ComboBox();
             gSeparatorTopic = new Guna.UI2.WinForms.Guna2Separator();
             lblLevel = new Label();
-            gTextBoxMembers = new Guna.UI2.WinForms.Guna2TextBox();
             lblMaximum = new Label();
             lblTechnologyField = new Label();
             lblDescription = new Label();
@@ -94,9 +82,6 @@
             gTextBoxTechnology = new Guna.UI2.WinForms.Guna2TextBox();
             lblTechnology = new Label();
             lblFunction = new Label();
-            gShadowPanelPending.SuspendLayout();
-            gShadowPanelAccepted.SuspendLayout();
-            gShadowPanelCompleted.SuspendLayout();
             gShadowPanelTopic.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)gPictureBoxFaculty).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gPictureBoxLevel).BeginInit();
@@ -192,136 +177,13 @@
             gButtonStar.Size = new Size(40, 40);
             gButtonStar.TabIndex = 56;
             // 
-            // flpPending
-            // 
-            flpPending.AutoScroll = true;
-            flpPending.Location = new Point(16, 63);
-            flpPending.Name = "flpPending";
-            flpPending.Size = new Size(350, 65);
-            flpPending.TabIndex = 12;
-            // 
-            // gShadowPanelPending
-            // 
-            gShadowPanelPending.BackColor = Color.Transparent;
-            gShadowPanelPending.Controls.Add(gSeparatorPending);
-            gShadowPanelPending.Controls.Add(flpPending);
-            gShadowPanelPending.Controls.Add(lblPending);
-            gShadowPanelPending.FillColor = SystemColors.ButtonFace;
-            gShadowPanelPending.Location = new Point(9, 55);
-            gShadowPanelPending.Name = "gShadowPanelPending";
-            gShadowPanelPending.Radius = 10;
-            gShadowPanelPending.ShadowColor = Color.Black;
-            gShadowPanelPending.ShadowShift = 0;
-            gShadowPanelPending.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            gShadowPanelPending.Size = new Size(385, 148);
-            gShadowPanelPending.TabIndex = 37;
-            // 
-            // gSeparatorPending
-            // 
-            gSeparatorPending.Location = new Point(16, 43);
-            gSeparatorPending.Name = "gSeparatorPending";
-            gSeparatorPending.Size = new Size(350, 10);
-            gSeparatorPending.TabIndex = 13;
-            // 
-            // lblPending
-            // 
-            lblPending.AutoSize = true;
-            lblPending.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblPending.Location = new Point(16, 12);
-            lblPending.Name = "lblPending";
-            lblPending.Size = new Size(98, 28);
-            lblPending.TabIndex = 11;
-            lblPending.Text = "Pending";
-            // 
-            // gShadowPanelAccepted
-            // 
-            gShadowPanelAccepted.BackColor = Color.Transparent;
-            gShadowPanelAccepted.Controls.Add(gSeparatorAccepted);
-            gShadowPanelAccepted.Controls.Add(flpAccepted);
-            gShadowPanelAccepted.Controls.Add(lblAccepted);
-            gShadowPanelAccepted.FillColor = SystemColors.ButtonFace;
-            gShadowPanelAccepted.Location = new Point(400, 55);
-            gShadowPanelAccepted.Name = "gShadowPanelAccepted";
-            gShadowPanelAccepted.Radius = 10;
-            gShadowPanelAccepted.ShadowColor = Color.Black;
-            gShadowPanelAccepted.ShadowShift = 0;
-            gShadowPanelAccepted.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            gShadowPanelAccepted.Size = new Size(385, 148);
-            gShadowPanelAccepted.TabIndex = 38;
-            // 
-            // gSeparatorAccepted
-            // 
-            gSeparatorAccepted.Location = new Point(16, 43);
-            gSeparatorAccepted.Name = "gSeparatorAccepted";
-            gSeparatorAccepted.Size = new Size(350, 10);
-            gSeparatorAccepted.TabIndex = 14;
-            // 
-            // flpAccepted
-            // 
-            flpAccepted.AutoScroll = true;
-            flpAccepted.Location = new Point(16, 63);
-            flpAccepted.Name = "flpAccepted";
-            flpAccepted.Size = new Size(350, 65);
-            flpAccepted.TabIndex = 12;
-            // 
-            // lblAccepted
-            // 
-            lblAccepted.AutoSize = true;
-            lblAccepted.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblAccepted.Location = new Point(16, 12);
-            lblAccepted.Name = "lblAccepted";
-            lblAccepted.Size = new Size(112, 28);
-            lblAccepted.TabIndex = 11;
-            lblAccepted.Text = "Accepted";
-            // 
-            // gShadowPanelCompleted
-            // 
-            gShadowPanelCompleted.BackColor = Color.Transparent;
-            gShadowPanelCompleted.Controls.Add(gSeparatorCompleted);
-            gShadowPanelCompleted.Controls.Add(flpCompleted);
-            gShadowPanelCompleted.Controls.Add(lblCompleted);
-            gShadowPanelCompleted.FillColor = SystemColors.ButtonFace;
-            gShadowPanelCompleted.Location = new Point(791, 55);
-            gShadowPanelCompleted.Name = "gShadowPanelCompleted";
-            gShadowPanelCompleted.Radius = 10;
-            gShadowPanelCompleted.ShadowColor = Color.Black;
-            gShadowPanelCompleted.ShadowShift = 0;
-            gShadowPanelCompleted.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            gShadowPanelCompleted.Size = new Size(385, 148);
-            gShadowPanelCompleted.TabIndex = 39;
-            // 
-            // gSeparatorCompleted
-            // 
-            gSeparatorCompleted.Location = new Point(16, 43);
-            gSeparatorCompleted.Name = "gSeparatorCompleted";
-            gSeparatorCompleted.Size = new Size(350, 10);
-            gSeparatorCompleted.TabIndex = 14;
-            // 
-            // flpCompleted
-            // 
-            flpCompleted.AutoScroll = true;
-            flpCompleted.Location = new Point(16, 63);
-            flpCompleted.Name = "flpCompleted";
-            flpCompleted.Size = new Size(350, 65);
-            flpCompleted.TabIndex = 12;
-            // 
-            // lblCompleted
-            // 
-            lblCompleted.AutoSize = true;
-            lblCompleted.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblCompleted.Location = new Point(16, 12);
-            lblCompleted.Name = "lblCompleted";
-            lblCompleted.Size = new Size(127, 28);
-            lblCompleted.TabIndex = 11;
-            lblCompleted.Text = "Completed";
-            // 
             // gShadowPanelTopic
             // 
             gShadowPanelTopic.BackColor = Color.Transparent;
+            gShadowPanelTopic.Controls.Add(gComboBoxMembers);
             gShadowPanelTopic.Controls.Add(gGradientButtonThesisReset);
             gShadowPanelTopic.Controls.Add(gSeparatorTopic);
             gShadowPanelTopic.Controls.Add(lblLevel);
-            gShadowPanelTopic.Controls.Add(gTextBoxMembers);
             gShadowPanelTopic.Controls.Add(gButtonEdit);
             gShadowPanelTopic.Controls.Add(lblMaximum);
             gShadowPanelTopic.Controls.Add(lblTechnologyField);
@@ -335,13 +197,36 @@
             gShadowPanelTopic.Controls.Add(lblThesisTopic);
             gShadowPanelTopic.Controls.Add(gTextBoxTopic);
             gShadowPanelTopic.FillColor = Color.White;
-            gShadowPanelTopic.Location = new Point(21, 209);
+            gShadowPanelTopic.Location = new Point(22, 57);
             gShadowPanelTopic.Name = "gShadowPanelTopic";
             gShadowPanelTopic.Radius = 7;
             gShadowPanelTopic.ShadowColor = Color.Black;
             gShadowPanelTopic.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
             gShadowPanelTopic.Size = new Size(510, 527);
             gShadowPanelTopic.TabIndex = 40;
+            // 
+            // gComboBoxMembers
+            // 
+            gComboBoxMembers.BackColor = Color.Transparent;
+            gComboBoxMembers.BorderColor = Color.FromArgb(74, 97, 94);
+            gComboBoxMembers.BorderRadius = 5;
+            gComboBoxMembers.CustomizableEdges = customizableEdges9;
+            gComboBoxMembers.DrawMode = DrawMode.OwnerDrawFixed;
+            gComboBoxMembers.DropDownStyle = ComboBoxStyle.DropDownList;
+            gComboBoxMembers.FocusedColor = Color.FromArgb(94, 148, 255);
+            gComboBoxMembers.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            gComboBoxMembers.Font = new Font("Trebuchet MS", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gComboBoxMembers.ForeColor = Color.Black;
+            gComboBoxMembers.ItemHeight = 35;
+            gComboBoxMembers.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" });
+            gComboBoxMembers.Location = new Point(391, 271);
+            gComboBoxMembers.Name = "gComboBoxMembers";
+            gComboBoxMembers.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            gComboBoxMembers.Size = new Size(71, 41);
+            gComboBoxMembers.StartIndex = 0;
+            gComboBoxMembers.TabIndex = 58;
+            gComboBoxMembers.TextAlign = HorizontalAlignment.Center;
+            gComboBoxMembers.TextOffset = new Point(5, 0);
             // 
             // gSeparatorTopic
             // 
@@ -360,33 +245,6 @@
             lblLevel.Size = new Size(64, 26);
             lblLevel.TabIndex = 49;
             lblLevel.Text = "Level";
-            // 
-            // gTextBoxMembers
-            // 
-            gTextBoxMembers.BorderColor = Color.FromArgb(74, 97, 94);
-            gTextBoxMembers.BorderRadius = 5;
-            gTextBoxMembers.CustomizableEdges = customizableEdges9;
-            gTextBoxMembers.DefaultText = "1";
-            gTextBoxMembers.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            gTextBoxMembers.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            gTextBoxMembers.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            gTextBoxMembers.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            gTextBoxMembers.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            gTextBoxMembers.Font = new Font("Segoe UI", 9F);
-            gTextBoxMembers.ForeColor = Color.Black;
-            gTextBoxMembers.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            gTextBoxMembers.IconLeftOffset = new Point(5, 0);
-            gTextBoxMembers.Location = new Point(391, 271);
-            gTextBoxMembers.Margin = new Padding(3, 4, 3, 4);
-            gTextBoxMembers.Name = "gTextBoxMembers";
-            gTextBoxMembers.PasswordChar = '\0';
-            gTextBoxMembers.PlaceholderForeColor = Color.Gray;
-            gTextBoxMembers.PlaceholderText = "num";
-            gTextBoxMembers.SelectedText = "";
-            gTextBoxMembers.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            gTextBoxMembers.Size = new Size(71, 41);
-            gTextBoxMembers.TabIndex = 48;
-            gTextBoxMembers.TextAlign = HorizontalAlignment.Center;
             // 
             // lblMaximum
             // 
@@ -573,7 +431,7 @@
             gShadowPanelTechFunc.Controls.Add(lblTechnology);
             gShadowPanelTechFunc.Controls.Add(lblFunction);
             gShadowPanelTechFunc.FillColor = Color.White;
-            gShadowPanelTechFunc.Location = new Point(537, 209);
+            gShadowPanelTechFunc.Location = new Point(538, 57);
             gShadowPanelTechFunc.Name = "gShadowPanelTechFunc";
             gShadowPanelTechFunc.Radius = 7;
             gShadowPanelTechFunc.ShadowColor = Color.Black;
@@ -711,19 +569,10 @@
             BackColor = SystemColors.ButtonFace;
             Controls.Add(gShadowPanelTechFunc);
             Controls.Add(gShadowPanelTopic);
-            Controls.Add(gShadowPanelCompleted);
-            Controls.Add(gShadowPanelAccepted);
-            Controls.Add(gShadowPanelPending);
             Controls.Add(gButtonBack);
             Name = "UCThesisDetails";
             Size = new Size(1180, 750);
             Load += UCThesisDetails_Load;
-            gShadowPanelPending.ResumeLayout(false);
-            gShadowPanelPending.PerformLayout();
-            gShadowPanelAccepted.ResumeLayout(false);
-            gShadowPanelAccepted.PerformLayout();
-            gShadowPanelCompleted.ResumeLayout(false);
-            gShadowPanelCompleted.PerformLayout();
             gShadowPanelTopic.ResumeLayout(false);
             gShadowPanelTopic.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)gPictureBoxFaculty).EndInit();
@@ -736,24 +585,11 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Button gButtonBack;
-        private FlowLayoutPanel flpPending;
-        private Guna.UI2.WinForms.Guna2ShadowPanel gShadowPanelPending;
-        private Label lblPending;
-        private Guna.UI2.WinForms.Guna2ShadowPanel gShadowPanelAccepted;
-        private FlowLayoutPanel flpAccepted;
-        private Label lblAccepted;
-        private Guna.UI2.WinForms.Guna2Separator gSeparatorPending;
-        private Guna.UI2.WinForms.Guna2Separator gSeparatorAccepted;
-        private Guna.UI2.WinForms.Guna2ShadowPanel gShadowPanelCompleted;
-        private Guna.UI2.WinForms.Guna2Separator gSeparatorCompleted;
-        private FlowLayoutPanel flpCompleted;
-        private Label lblCompleted;
         private Guna.UI2.WinForms.Guna2Button gButtonEdit;
         private Guna.UI2.WinForms.Guna2Button gButtonStar;
         private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonThesisReset;
         private Guna.UI2.WinForms.Guna2Separator gSeparatorTopic;
         private Label lblLevel;
-        private Guna.UI2.WinForms.Guna2TextBox gTextBoxMembers;
         private Label lblMaximum;
         private Label lblTechnologyField;
         private Label lblDescription;
@@ -772,5 +608,6 @@
         private Label lblTechnology;
         private Label lblFunction;
         private Guna.UI2.WinForms.Guna2ShadowPanel gShadowPanelTopic;
+        private Guna.UI2.WinForms.Guna2ComboBox gComboBoxMembers;
     }
 }

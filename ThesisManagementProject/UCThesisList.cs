@@ -21,6 +21,8 @@ namespace ThesisManagementProject
             InitializeComponent();
         }
 
+        #region PROPERTIES
+
         public Guna2GradientButton GButtonReset
         {
             get { return this.gGradientButtonReset; }
@@ -29,6 +31,8 @@ namespace ThesisManagementProject
         {
             get { return this.gGradientButtonThesisTopic; }
         }
+
+        #endregion
 
         #region FUNCTIONS
 
@@ -69,7 +73,6 @@ namespace ThesisManagementProject
         {
             ThesisLineClicked?.Invoke(this, e);
         }
-
         public virtual void ThesisDelete_Clicked(object sender, EventArgs e)
         {
             OnThesisDeleteClicked(EventArgs.Empty);
@@ -78,7 +81,6 @@ namespace ThesisManagementProject
         {
             ThesisDeleteClicked?.Invoke(this, e);
         }
-
         private void gGradientButtonReset_Click(object sender, EventArgs e)
         {
 

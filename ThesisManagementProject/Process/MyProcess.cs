@@ -48,6 +48,17 @@ namespace ThesisManagementProject.Process
             if (flag) button.Image = Properties.Resources.PicInLineGradientStar;
             else button.Image = Properties.Resources.PicInLineStar;
         }
+        public static void RunCheckDataValid(bool flag, ErrorProvider errorProvider, Control control, string error)
+        {
+            if (flag == false)
+            {
+                errorProvider.SetError(control, error);
+            }
+            else
+            {
+                errorProvider.SetError(control, string.Empty);
+            }
+        }
 
         #region GenIDbyClassify
 

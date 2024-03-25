@@ -24,7 +24,6 @@ namespace ThesisManagementProject.Database
     internal class ThesisDAO
     {
         DBConnection DBConnection = new DBConnection();
-        PeopleDAO peopleDAO = new PeopleDAO();
 
         public ThesisDAO() { }
 
@@ -32,26 +31,49 @@ namespace ThesisManagementProject.Database
         {
             DBConnection.SQLExecuteByCommand(command);
         }
+        public void PendingToAccepted(string command)
+        {
+            DBConnection.SQLExecuteByCommand(command);
+        }
+
+        #region SELECT THESIS
+
         public List<Thesis> SelectList()
         {
-            DataTable dataTable = DBConnection.Select("SELECT * FROM " + MyDatabase.DBThesis);
+            DataTable dataTable = DBConnection.Select(string.Format("SELECT * FROM {0}", MyDatabase.DBThesis));
 
             List<Thesis> list = new List<Thesis>();
             foreach (DataRow row in dataTable.Rows)
             {
-                list.Add(GetThesisFromDataRow(row));
+                list.Add(GetFromDataRow(row));
             }
 
             return list;
         }
-        public Thesis SelectOnly(string id)
+        public List<Thesis> SelectListByIDCreator(string idCreator)
+        {
+            DataTable dataTable = DBConnection.Select(string.Format("SELECT * FROM {0} WHERE idcreator = '{1}'", MyDatabase.DBThesis, idCreator));
+
+            List<Thesis> list = new List<Thesis>();
+            foreach (DataRow row in dataTable.Rows)
+            {
+                list.Add(GetFromDataRow(row));
+            }
+
+            return list;
+        }
+        public Thesis SelectOnly(string idThesis)
         {
             DBConnection db = new DBConnection();
-            DataTable dt = db.Select("SELECT * FROM " + MyDatabase.DBThesis + " WHERE idthesis = " + "'" + id + "'");
+            DataTable dt = db.Select(string.Format("SELECT * FROM {0} WHERE idthesis = '{1}'", MyDatabase.DBThesis, idThesis));
 
-            if (dt.Rows.Count > 0) return GetThesisFromDataRow(dt.Rows[0]);
+            if (dt.Rows.Count > 0) return GetFromDataRow(dt.Rows[0]);
             return new Thesis();
         }
+
+        #endregion
+
+        #region THESIS DAO EXECUTION
 
         public void Insert(Thesis thesis)
         {
@@ -72,27 +94,12 @@ namespace ThesisManagementProject.Database
                 "idcreator = '{11}', isfavorite = {12}, pending = {13}, accepted = {14}, completed = {15} WHERE idthesis = '{1}'",
                 "Update");
         }
-        public void PendingToAccepted(string command)
-        {
-            DBConnection.SQLExecuteByCommand(command);
-        }
 
-        public List<People> SelectByStatus(string status, string idthesis)
-        {
-            DataTable dataTable = DBConnection.Select("select * from " +
-                "(select idaccount as idstudent from ThesisStatus where sta = '" + status + "' and idthesis = '" + idthesis + "') as Q " +
-                "inner join (select * from Account where role = 'Student') as R on q.idstudent = r.idaccount");
+        #endregion
 
-            List<People> list = new List<People>();
-            foreach (DataRow row in dataTable.Rows)
-            {
-                list.Add(peopleDAO.GetFromDataRow(row));
-            }
+        #region Get Thesis From Data Row
 
-            return list;
-
-        }
-        public Thesis GetThesisFromDataRow(DataRow row)
+        public Thesis GetFromDataRow(DataRow row)
         {
             string idThesis = row["idthesis"].ToString();
             string topic = row["topic"].ToString();
@@ -114,5 +121,8 @@ namespace ThesisManagementProject.Database
                                         functions, requirements, idCreator, isFavorite, numPending, numAccepted, numCompleted);
             return thesis;
         }
+
+        #endregion
+
     }
 }

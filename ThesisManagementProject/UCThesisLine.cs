@@ -20,40 +20,38 @@ namespace ThesisManagementProject
         public event EventHandler ThesisDeleteClicked;
 
         private Thesis thesis = new Thesis();
+        private People creator = new People();
         private ThesisDAO thesisDAO = new ThesisDAO();
+        private PeopleDAO peopleDAO = new PeopleDAO();
 
         public UCThesisLine()
         {
             InitializeComponent();
         }
 
-        private void UserControlLoad()
-        {
-            MyProcess.SetItemFavorite(gButtonStar, thesis.IsFavorite);
-
-            lblThesisTopic.Text = MyProcess.FormatStringLength(thesis.Topic, 30);
-            gTextBoxStatus.Text = (MyProcess.ComparePublished(thesis.PublishDate)) ? ("Published") : ("Unpublish");
-            gTextBoxThesisCode.Text = thesis.IdThesis;
-            gTextBoxPending.Text = thesis.NumPending.ToString();
-            gTextBoxAccepted.Text = thesis.NumAccepted.ToString();
-            gTextBoxCompleted.Text = thesis.NumAccepted.ToString();
-        }
-
-        #region METHOD
+        #region FUNCTIONS
 
         public void SetInformation(Thesis thesis)
         {
             this.thesis = thesis;
+            this.creator = peopleDAO.SelectOnlyByID(thesis.IdCreator);
             UserControlLoad();
+        }
+        private void UserControlLoad()
+        {
+            MyProcess.SetItemFavorite(gButtonStar, thesis.IsFavorite);
+
+            lblThesisTopic.Text = MyProcess.FormatStringLength(thesis.Topic, 45);
+            gTextBoxStatus.Text = (MyProcess.ComparePublished(thesis.PublishDate)) ? ("Published") : ("Unpublish");
+            gTextBoxThesisCode.Text = thesis.IdThesis;
+            gCirclePictureBoxCreator.Image = MyProcess.NameToImage(creator.AvatarName);
+            lblCreator.Text = creator.FullName;
         }
 
         private void SetColor(Color color)
         {
             this.BackColor = color;
             gTextBoxThesisCode.FillColor = color;
-            gTextBoxPending.FillColor = color;
-            gTextBoxAccepted.FillColor = color;
-            gTextBoxCompleted.FillColor = color;
         }
 
         #endregion
@@ -77,17 +75,14 @@ namespace ThesisManagementProject
         {
             SetColor(Color.Gainsboro);
         }
-
         private void UCThesisLine_MouseLeave(object sender, EventArgs e)
         {
             SetColor(Color.White);
         }
-
         private void UCThesisLine_Click(object sender, EventArgs e)
         {
             OnThesisLineClicked(EventArgs.Empty);
         }
-
         public virtual void OnThesisLineClicked(EventArgs e)
         {
             ThesisLineClicked?.Invoke(this, e);

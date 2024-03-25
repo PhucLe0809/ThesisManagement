@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using ThesisManagementProject.Database;
 using ThesisManagementProject.Models;
 using ThesisManagementProject.Process;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ThesisManagementProject
 {
@@ -18,6 +19,7 @@ namespace ThesisManagementProject
     {
         private Thesis thesis = new Thesis();
         private ThesisDAO thesisDAO = new ThesisDAO();
+        private bool flagEventEdit = true;
 
         public UCThesisDetails()
         {
@@ -40,36 +42,39 @@ namespace ThesisManagementProject
             InitUserControl();
 
         }
-        private void SetTextBoxReadOnly(Guna2TextBox textBox)
+        private void SetTextBoxReadOnly(Guna2TextBox textBox, int thickness, Color colors, bool flag)
         {
-            textBox.ReadOnly = true;
-            textBox.BorderThickness = 0;
-            textBox.FillColor = SystemColors.ButtonFace;
+            textBox.ReadOnly = flag;
+            textBox.BorderThickness = thickness;
+            textBox.FillColor = colors;
         }
-        private void SetComboBoxReadOnly(Guna2ComboBox comboBox)
+        private void SetComboBoxReadOnly(Guna2ComboBox comboBox, int thickness, Color colors, bool flag)
         {
-            comboBox.DroppedDown = false;
-            comboBox.BorderThickness = 0;
-            comboBox.FillColor = SystemColors.ButtonFace;
+            comboBox.Enabled = !flag;
+            comboBox.BorderThickness = thickness;
+            comboBox.FillColor = colors;
+        }
+        private void SetControlsReadOnly(bool flagReadOnly)
+        {
+            int thickness = flagReadOnly ? 0 : 1;
+            Color colors = flagReadOnly ? SystemColors.ButtonFace : Color.White;
+            Color colorComboBox = flagReadOnly ? Color.Silver : Color.White;
+            SetTextBoxReadOnly(gTextBoxTopic, thickness, colors, flagReadOnly);
+            SetTextBoxReadOnly(gTextBoxDescription, thickness, colors, flagReadOnly);
+            SetTextBoxReadOnly(gTextBoxTechnology, thickness, colors, flagReadOnly);
+            SetTextBoxReadOnly(gTextBoxFunctions, thickness, colors, flagReadOnly);
+            SetTextBoxReadOnly(gTextBoxRequirements, thickness, colors, flagReadOnly);
+
+            SetComboBoxReadOnly(gComboBoxField, thickness, colorComboBox, flagReadOnly);
+            gPictureBoxFaculty.BackColor = colorComboBox;
+            SetComboBoxReadOnly(gComboBoxLevel, thickness, colorComboBox, flagReadOnly);
+            gPictureBoxLevel.BackColor = colorComboBox;
+            SetComboBoxReadOnly(gComboBoxMembers, thickness, colorComboBox, flagReadOnly);
         }
         private void InitUserControl()
         {
-            AddPeopleToFLP(flpPending, thesisDAO.SelectByStatus(EThesisStatus.Pending.ToString(), thesis.IdThesis), false);
-            AddPeopleToFLP(flpAccepted, thesisDAO.SelectByStatus(EThesisStatus.Accepted.ToString(), thesis.IdThesis), true);
-            AddPeopleToFLP(flpCompleted, thesisDAO.SelectByStatus(EThesisStatus.Completed.ToString(), thesis.IdThesis), true);
-
             gGradientButtonThesisReset_Click(new object(), new EventArgs());
-
-            SetTextBoxReadOnly(gTextBoxTopic);
-            SetTextBoxReadOnly(gTextBoxMembers);
-            SetTextBoxReadOnly(gTextBoxDescription);
-            SetTextBoxReadOnly(gTextBoxTechnology);
-            SetTextBoxReadOnly(gTextBoxFunctions);
-            SetTextBoxReadOnly(gTextBoxRequirements);
-            SetComboBoxReadOnly(gComboBoxField);
-            gPictureBoxFaculty.FillColor = SystemColors.ButtonFace;
-            SetComboBoxReadOnly(gComboBoxLevel);
-            gPictureBoxLevel.FillColor = SystemColors.ButtonFace;
+            SetControlsReadOnly(true);
         }
         private void AddPeopleToFLP(FlowLayoutPanel flpanel, List<People> list, bool flag)
         {
@@ -108,9 +113,8 @@ namespace ThesisManagementProject
 
         private void gButtonEdit_Click(object sender, EventArgs e)
         {
-            FThesisEdit fThesisDetails = new FThesisEdit();
-            fThesisDetails.UpdateThesis(thesis);
-            fThesisDetails.ShowDialog();
+            this.flagEventEdit = !this.flagEventEdit;
+            SetControlsReadOnly(flagEventEdit);
         }
 
         #endregion
@@ -129,9 +133,6 @@ namespace ThesisManagementProject
                 {
                     thesisDAO.SQLExecuteByCommand(string.Format("update {0} set sta = '{1}' where idaccount = '{2}' and idthesis = '{3}'",
                         MyDatabase.DBThesisStatus, EThesisStatus.Accepted.ToString(), line.GetPeople.IdAccount, thesis.IdThesis));
-
-                    AddPeopleToFLP(flpPending, thesisDAO.SelectByStatus(EThesisStatus.Pending.ToString(), thesis.IdThesis), false);
-                    AddPeopleToFLP(flpAccepted, thesisDAO.SelectByStatus(EThesisStatus.Accepted.ToString(), thesis.IdThesis), true);
                 }
             }
 
@@ -149,7 +150,7 @@ namespace ThesisManagementProject
             gTextBoxTopic.Text = thesis.Topic;
             gComboBoxField.SelectedItem = thesis.Field.ToString();
             gComboBoxLevel.SelectedItem = thesis.Level.ToString();
-            gTextBoxMembers.Text = thesis.MaxMembers.ToString();
+            gComboBoxMembers.SelectedItem = thesis.MaxMembers.ToString();
             gTextBoxDescription.Text = thesis.Description;
             gTextBoxTechnology.Text = thesis.Technology;
             gTextBoxFunctions.Text = thesis.Functions;

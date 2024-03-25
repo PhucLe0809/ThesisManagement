@@ -153,6 +153,7 @@ namespace ThesisManagementProject.Models
         public string Topic
         {
             get { return topic; }
+            set { topic = value; }
         }
         public EField Field
         {
@@ -169,6 +170,7 @@ namespace ThesisManagementProject.Models
         public string Description
         {
             get { return description; }
+            set { description = value; }
         }
         public DateTime PublishDate
         {
@@ -177,14 +179,17 @@ namespace ThesisManagementProject.Models
         public string Technology
         {
             get { return technology; }
+            set {  technology = value; }
         }
         public string Functions
         {
             get { return functions; }
+            set {  functions = value; }
         }
         public string Requirements
         {
             get { return requirements; }
+            set { requirements = value; }
         }
         public string IdCreator
         {
@@ -206,6 +211,31 @@ namespace ThesisManagementProject.Models
         public int NumCompleted
         {
             get { return numCompleted; }
+        }
+
+        #endregion
+
+        #region CHECK INFORMATIONS
+
+        public bool CheckTopic()
+        {
+            return this.topic != string.Empty;
+        }
+        public bool CheckDesription()
+        {
+            return this.description != string.Empty;
+        }
+        public bool CheckTechnology()
+        {
+            return this.technology != string.Empty;
+        }
+        public bool CheckFunctions()
+        {
+            return this.functions != string.Empty;
+        }
+        public bool CheckRequirements()
+        {
+            return this.requirements != string.Empty;
         }
 
         #endregion
