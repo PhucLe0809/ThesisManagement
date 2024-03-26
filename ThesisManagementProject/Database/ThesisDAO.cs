@@ -10,17 +10,6 @@ using ThesisManagementProject.Process;
 
 namespace ThesisManagementProject.Database
 {
-    #region THESISDAO STATUS
-
-    public enum EThesisStatus
-    {
-        Pending,
-        Accepted,
-        Completed
-    }
-
-    #endregion
-
     internal class ThesisDAO
     {
         DBConnection DBConnection = new DBConnection();
@@ -78,7 +67,7 @@ namespace ThesisManagementProject.Database
         public void Insert(Thesis thesis)
         {
             DBConnection.ExecuteQueryThesis(thesis, "INSERT INTO {0} " +
-                "VALUES ('{1}', '{2}', '{3}', '{4}', {5}, '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', {12}, {13}, {14}, {15})",
+                "VALUES ('{1}', '{2}', '{3}', '{4}', {5}, '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', {12}, '{13}')",
                 "Create");
         }
         public void Delete(Thesis thesis)
@@ -113,12 +102,10 @@ namespace ThesisManagementProject.Database
             string requirements = row["requirements"].ToString();
             string idCreator = row["idcreator"].ToString();
             bool isFavorite = row["isfavorite"].ToString() == "True" ? true : false;
-            int numPending = int.Parse(row["pending"].ToString());
-            int numAccepted = int.Parse(row["accepted"].ToString());
-            int numCompleted = int.Parse(row["completed"].ToString());
+            EThesisStatus status = MyProcess.GetEnumFromDisplayName<EThesisStatus>(row["status"].ToString());
 
             Thesis thesis = new Thesis(idThesis, topic, field, level, maxMembers, description, publishDate, technology,
-                                        functions, requirements, idCreator, isFavorite, numPending, numAccepted, numCompleted);
+                                        functions, requirements, idCreator, isFavorite, status);
             return thesis;
         }
 

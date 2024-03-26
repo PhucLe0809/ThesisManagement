@@ -228,7 +228,7 @@
             gTextBoxConfirmPassword.SelectedText = "";
             gTextBoxConfirmPassword.ShadowDecoration.CustomizableEdges = customizableEdges2;
             gTextBoxConfirmPassword.Size = new Size(250, 40);
-            gTextBoxConfirmPassword.TabIndex = 14;
+            gTextBoxConfirmPassword.TabIndex = 8;
             gTextBoxConfirmPassword.TextOffset = new Point(4, 0);
             gTextBoxConfirmPassword.UseSystemPasswordChar = true;
             gTextBoxConfirmPassword.TextChanged += gTextBoxConfirmPassword_TextChanged;
@@ -258,7 +258,7 @@
             gTextBoxPassword.SelectedText = "";
             gTextBoxPassword.ShadowDecoration.CustomizableEdges = customizableEdges4;
             gTextBoxPassword.Size = new Size(250, 40);
-            gTextBoxPassword.TabIndex = 13;
+            gTextBoxPassword.TabIndex = 7;
             gTextBoxPassword.TextOffset = new Point(5, 0);
             gTextBoxPassword.UseSystemPasswordChar = true;
             gTextBoxPassword.TextChanged += gTextBoxPassword_TextChanged;
@@ -328,7 +328,7 @@
             gTextBoxFaculty.SelectedText = "";
             gTextBoxFaculty.ShadowDecoration.CustomizableEdges = customizableEdges6;
             gTextBoxFaculty.Size = new Size(413, 40);
-            gTextBoxFaculty.TabIndex = 14;
+            gTextBoxFaculty.TabIndex = 16;
             gTextBoxFaculty.TextOffset = new Point(4, 0);
             // 
             // gTextBoxWorkcode
@@ -357,7 +357,7 @@
             gTextBoxWorkcode.SelectedText = "";
             gTextBoxWorkcode.ShadowDecoration.CustomizableEdges = customizableEdges8;
             gTextBoxWorkcode.Size = new Size(413, 40);
-            gTextBoxWorkcode.TabIndex = 10;
+            gTextBoxWorkcode.TabIndex = 9;
             gTextBoxWorkcode.TextOffset = new Point(5, 0);
             gTextBoxWorkcode.TextChanged += gTextBoxWorkcode_TextChanged;
             // 
@@ -388,7 +388,7 @@
             gTextBoxUniversity.SelectedText = "";
             gTextBoxUniversity.ShadowDecoration.CustomizableEdges = customizableEdges10;
             gTextBoxUniversity.Size = new Size(413, 40);
-            gTextBoxUniversity.TabIndex = 13;
+            gTextBoxUniversity.TabIndex = 15;
             gTextBoxUniversity.TextOffset = new Point(5, 0);
             // 
             // lblOrganization
@@ -494,7 +494,7 @@
             gDateTimePickerBirthday.Name = "gDateTimePickerBirthday";
             gDateTimePickerBirthday.ShadowDecoration.CustomizableEdges = customizableEdges12;
             gDateTimePickerBirthday.Size = new Size(277, 40);
-            gDateTimePickerBirthday.TabIndex = 0;
+            gDateTimePickerBirthday.TabIndex = 2;
             gDateTimePickerBirthday.TextOffset = new Point(5, 0);
             gDateTimePickerBirthday.Value = new DateTime(2024, 3, 24, 22, 1, 39, 0);
             gDateTimePickerBirthday.ValueChanged += gDateTimePickerBirthday_ValueChanged;
@@ -526,7 +526,7 @@
             gTextBoxHandle.SelectedText = "";
             gTextBoxHandle.ShadowDecoration.CustomizableEdges = customizableEdges14;
             gTextBoxHandle.Size = new Size(277, 40);
-            gTextBoxHandle.TabIndex = 8;
+            gTextBoxHandle.TabIndex = 6;
             gTextBoxHandle.TextOffset = new Point(5, 0);
             gTextBoxHandle.TextChanged += gTextBoxHandle_TextChanged;
             // 
@@ -581,7 +581,7 @@
             gTextBoxPhonenumber.SelectedText = "";
             gTextBoxPhonenumber.ShadowDecoration.CustomizableEdges = customizableEdges18;
             gTextBoxPhonenumber.Size = new Size(277, 40);
-            gTextBoxPhonenumber.TabIndex = 10;
+            gTextBoxPhonenumber.TabIndex = 5;
             gTextBoxPhonenumber.TextOffset = new Point(5, 0);
             gTextBoxPhonenumber.TextChanged += gTextBoxPhonenumber_TextChanged;
             // 
@@ -602,7 +602,7 @@
             gComboBoxGender.Name = "gComboBoxGender";
             gComboBoxGender.ShadowDecoration.CustomizableEdges = customizableEdges20;
             gComboBoxGender.Size = new Size(277, 40);
-            gComboBoxGender.TabIndex = 14;
+            gComboBoxGender.TabIndex = 3;
             gComboBoxGender.TextOffset = new Point(31, 0);
             gComboBoxGender.SelectedIndexChanged += gComboBoxGender_SelectedIndexChanged;
             // 
@@ -632,7 +632,7 @@
             gTextBoxEmail.SelectedText = "";
             gTextBoxEmail.ShadowDecoration.CustomizableEdges = customizableEdges22;
             gTextBoxEmail.Size = new Size(277, 40);
-            gTextBoxEmail.TabIndex = 12;
+            gTextBoxEmail.TabIndex = 4;
             gTextBoxEmail.TextOffset = new Point(5, 0);
             gTextBoxEmail.TextChanged += gTextBoxEmail_TextChanged;
             // 
@@ -662,7 +662,7 @@
             gTextBoxCitizencode.SelectedText = "";
             gTextBoxCitizencode.ShadowDecoration.CustomizableEdges = customizableEdges24;
             gTextBoxCitizencode.Size = new Size(277, 40);
-            gTextBoxCitizencode.TabIndex = 8;
+            gTextBoxCitizencode.TabIndex = 1;
             gTextBoxCitizencode.TextOffset = new Point(5, 0);
             gTextBoxCitizencode.TextChanged += gTextBoxCitizencode_TextChanged;
             // 
@@ -692,7 +692,7 @@
             gTextBoxFullname.SelectedText = "";
             gTextBoxFullname.ShadowDecoration.CustomizableEdges = customizableEdges26;
             gTextBoxFullname.Size = new Size(277, 40);
-            gTextBoxFullname.TabIndex = 9;
+            gTextBoxFullname.TabIndex = 0;
             gTextBoxFullname.TextOffset = new Point(5, 0);
             gTextBoxFullname.TextChanged += gTextBoxFullname_TextChanged;
             // 

@@ -132,7 +132,7 @@ namespace ThesisManagementProject
                 if (result == DialogResult.OK)
                 {
                     thesisDAO.SQLExecuteByCommand(string.Format("update {0} set sta = '{1}' where idaccount = '{2}' and idthesis = '{3}'",
-                        MyDatabase.DBThesisStatus, EThesisStatus.Accepted.ToString(), line.GetPeople.IdAccount, thesis.IdThesis));
+                        MyDatabase.DBThesisStatus, EThesisStatus.Processing.ToString(), line.GetPeople.IdAccount, thesis.IdThesis));
                 }
             }
 

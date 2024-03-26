@@ -29,6 +29,7 @@ namespace ThesisManagementProject
             gPanelDisplay.Controls.Add(uCDisplayWelcome);
 
             uCDisplayWelcome.GGradientButtonLecture.Click += DWelcomeButtonLecture_Click;
+            uCDisplayWelcome.GGradientButtonStudent.Click += DWelcomeButtonStudent_Click;
             uCDisplayWelcome.GGradientButtonRegister.Click += DWelcomeButtonRegister_Click;
             uCDisplayWelcome.GButtonLogin.Click += DWelcomeButtonToLogin_Click;
 
@@ -67,6 +68,10 @@ namespace ThesisManagementProject
         private void DWelcomeButtonLecture_Click(object sender, EventArgs e)
         {
             SetDisplay(uCDisplayLecture);
+        }
+        private void DWelcomeButtonStudent_Click(object sender, EventArgs e)
+        {
+            SetDisplay(uCDisplayStudent);
         }
         private void DWelcomeButtonRegister_Click(object sender, EventArgs e)
         {

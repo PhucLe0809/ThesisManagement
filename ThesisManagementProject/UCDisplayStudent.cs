@@ -58,6 +58,8 @@ namespace ThesisManagementProject
             lblHandle.Text = people.Handle;
             lblRole.Text = people.Role.ToString();
 
+            AllDirectButtonStandardColor();
+
             pnlAddUserControl.Controls.Clear();
             pnlAddUserControl.Controls.Add(new UCWelcome(people));
         }

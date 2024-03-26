@@ -68,7 +68,6 @@
             gButtonLogin.Size = new Size(133, 45);
             gButtonLogin.TabIndex = 12;
             gButtonLogin.Text = "Login";
-            gButtonLogin.Click += gButtonLogin_Click;
             // 
             // gProgressBarToLine
             // 
@@ -143,7 +142,6 @@
             gGradientButtonLecture.Size = new Size(133, 45);
             gGradientButtonLecture.TabIndex = 17;
             gGradientButtonLecture.Text = "Lecture";
-            gGradientButtonLecture.Click += gGradientButtonLecture_Click;
             // 
             // gGradientButtonRegister
             // 
@@ -170,7 +168,6 @@
             gGradientButtonRegister.Size = new Size(133, 45);
             gGradientButtonRegister.TabIndex = 18;
             gGradientButtonRegister.Text = "Register";
-            gGradientButtonRegister.Click += gGradientButtonRegister_Click;
             // 
             // gGradientButtonStudent
             // 

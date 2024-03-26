@@ -27,9 +27,25 @@ namespace ThesisManagementProject
         {
             get { return this.gGradientButtonReset; }
         }
+        public Guna2GradientButton GButtonFavorite
+        {
+            get { return this.GButtonFavorite; }
+        }
         public Guna2GradientButton GButtonTopic
         {
             get { return this.gGradientButtonThesisTopic; }
+        }
+        public Guna2GradientButton GButtonStatus
+        {
+            get { return this.gGradientButtonStatus; }
+        }
+        public Guna2GradientButton GButtonThesisCode
+        {
+            get { return this.gGradientButtonThesisCode; }
+        }
+        public Guna2GradientButton GButtonCreator
+        {
+            get { return this.gGradientButtonCreator; }
         }
 
         #endregion

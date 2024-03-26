@@ -45,7 +45,6 @@ namespace ThesisManagementProject.Models
         [Display(Name = "Bioinformatics")]
         Bioinformatics
     }
-
     public enum ELevel
     {
         [Display(Name = "Easy")]
@@ -54,6 +53,17 @@ namespace ThesisManagementProject.Models
         Medium,
         [Display(Name = "Difficult")]
         Difficult
+    }
+    public enum EThesisStatus
+    {
+        [Display(Name = "Published")]
+        Published,
+        [Display(Name = "Registered")]
+        Registered,
+        [Display(Name = "Processing")]
+        Processing,
+        [Display(Name = "Completed")]
+        Completed
     }
 
     #endregion
@@ -74,9 +84,7 @@ namespace ThesisManagementProject.Models
         private string requirements;
         private string idCreator;
         private bool isFavorite;
-        private int numPending;
-        private int numAccepted;
-        private int numCompleted;
+        private EThesisStatus status;
 
         #endregion
 
@@ -96,9 +104,7 @@ namespace ThesisManagementProject.Models
             this.requirements = string.Empty;
             this.idCreator = string.Empty;
             this.isFavorite = false;
-            this.numPending = 0;
-            this.numAccepted = 0;
-            this.numCompleted = 0;
+            this.status = EThesisStatus.Published;
         }
 
         public Thesis(string topic, EField field, ELevel level, int maxMembers, string desciption,
@@ -116,14 +122,11 @@ namespace ThesisManagementProject.Models
             this.requirements = requirements;
             this.idCreator = idCreator;
             this.isFavorite = false;
-            this.numPending = 0;
-            this.numAccepted = 0;
-            this.numCompleted = 0;
+            this.status = EThesisStatus.Published;
         }
 
-        public Thesis(string idThesis, string topic, EField field, ELevel level, int maxMembers, string desciption,
-                        DateTime publishDate, string technology, string functions, string requirements,
-                        string idCreator, bool isFavorite, int numPending, int numAccepted, int numCompleted)
+        public Thesis(string idThesis, string topic, EField field, ELevel level, int maxMembers, string desciption, DateTime publishDate, 
+                        string technology, string functions, string requirements, string idCreator, bool isFavorite, EThesisStatus status)
         {
             this.idThesis = idThesis;
             this.topic = topic;
@@ -137,9 +140,7 @@ namespace ThesisManagementProject.Models
             this.requirements = requirements;
             this.idCreator = idCreator;
             this.isFavorite = isFavorite;
-            this.numPending = numPending;
-            this.numAccepted = numAccepted;
-            this.numCompleted = numCompleted;
+            this.status = status;
         }
 
         #endregion
@@ -200,17 +201,10 @@ namespace ThesisManagementProject.Models
             get { return isFavorite; }
             set { isFavorite = value; }
         }
-        public int NumPending
+        public EThesisStatus Status
         {
-            get { return numPending; }
-        }
-        public int NumAccepted
-        {
-            get { return numAccepted; }
-        }
-        public int NumCompleted
-        {
-            get { return numCompleted; }
+            get { return status; }
+            set { status = value; }
         }
 
         #endregion

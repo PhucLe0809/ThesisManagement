@@ -25,32 +25,17 @@ namespace ThesisManagementProject
         {
             get { return this.gGradientButtonLecture; }
         }
-
+        public Guna2GradientButton GGradientButtonStudent
+        {
+            get { return this.gGradientButtonStudent; }
+        }
         public Guna2GradientButton GGradientButtonRegister
         {
             get { return this.gGradientButtonRegister; }
         }
-
         public Guna2Button GButtonLogin
         {
             get { return this.gButtonLogin; }
-        }
-
-        #endregion
-
-        #region METHOD
-
-        private void gButtonLogin_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void gGradientButtonRegister_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void gGradientButtonLecture_Click(object sender, EventArgs e)
-        {
-
         }
 
         #endregion

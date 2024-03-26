@@ -68,7 +68,7 @@ namespace ThesisManagementProject.Database
             string sqlStr = string.Format(command, MyDatabase.DBThesis,
                 thesis.IdThesis, thesis.Topic, thesis.Field.ToString(), thesis.Level.ToString(),
                 thesis.MaxMembers, thesis.Description, thesis.PublishDate.ToString(), thesis.Technology, thesis.Functions, thesis.Requirements,
-                thesis.IdCreator, thesis.IsFavorite ? 1 : 0, thesis.NumPending, thesis.NumAccepted, thesis.NumCompleted);
+                thesis.IdCreator, thesis.IsFavorite ? 1 : 0, thesis.Status);
 
             ExecuteQuery(sqlStr, typeExecution, true);
         }

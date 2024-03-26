@@ -51,7 +51,7 @@ namespace ThesisManagementProject
                 (EField)gComboBoxField.SelectedItem, (ELevel)gComboBoxLevel.SelectedItem,
                 MyProcess.ConvertStringToInt32(gTextBoxMembers.Text), gTextBoxDescription.Text,
                 gDateTimePickerPublish.Value, gTextBoxTechnology.Text, gTextBoxFunctions.Text, gTextBoxRequirements.Text,
-                this.thesis.IdCreator, this.thesis.IsFavorite, this.thesis.NumPending, this.thesis.NumAccepted, this.thesis.NumCompleted);
+                this.thesis.IdCreator, this.thesis.IsFavorite, this.thesis.Status);
             
             thesisDAO.Update(thesis);
 

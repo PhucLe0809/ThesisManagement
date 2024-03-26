@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\thanh\\Desktop\\ThesisManagementProject\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|c:\\users\\thanh\\desktop\\thesismanagementproject\\thesismanagementproject\\ucthesislist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|solutionrelative:thesismanagementproject\\ucthesislist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|c:\\users\\thanh\\desktop\\thesismanagementproject\\thesismanagementproject\\ucthesislist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|solutionrelative:thesismanagementproject\\ucthesislist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
@@ -14,11 +18,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "UCThesisList.cs [Design]",
               "DocumentMoniker": "C:\\Users\\thanh\\Desktop\\ThesisManagementProject\\ThesisManagementProject\\UCThesisList.cs",
               "RelativeDocumentMoniker": "ThesisManagementProject\\UCThesisList.cs",
@@ -28,6 +32,20 @@
               "WhenOpened": "2024-03-25T14:42:33.385Z",
               "IsPinned": true,
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UCThesisList.cs",
+              "DocumentMoniker": "C:\\Users\\thanh\\Desktop\\ThesisManagementProject\\ThesisManagementProject\\UCThesisList.cs",
+              "RelativeDocumentMoniker": "ThesisManagementProject\\UCThesisList.cs",
+              "ToolTip": "C:\\Users\\thanh\\Desktop\\ThesisManagementProject\\ThesisManagementProject\\UCThesisList.cs",
+              "RelativeToolTip": "ThesisManagementProject\\UCThesisList.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-26T00:38:27.857Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
