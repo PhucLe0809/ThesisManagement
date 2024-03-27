@@ -43,7 +43,7 @@ namespace ThesisManagementProject.Database
 
         #region with EXECUTE QUERY
 
-        private void ExecuteQuery(string sqlStr, string typeExecution, bool flag)
+        public void ExecuteQuery(string sqlStr, string typeExecution, bool flag)
         {
             try
             {

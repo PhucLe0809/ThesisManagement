@@ -31,6 +31,8 @@ namespace ThesisManagementProject
             UserControlLoad();
         }
 
+        #region PROPERTIES
+
         public Guna2Button GButtonAdd
         {
             get { return this.gButtonAdd; }
@@ -39,6 +41,10 @@ namespace ThesisManagementProject
         {
             get { return this.people; }
         }
+
+        #endregion
+
+        #region FUNCTIONS
 
         private void UserControlLoad()
         {
@@ -52,7 +58,6 @@ namespace ThesisManagementProject
             gButtonAdd.HoverState.Image = null;
             gButtonAdd.Enabled = false;
         }
-
         private void ShowPeopleInformation()
         {
             FStudentDetails fStudentDetails = new FStudentDetails();
@@ -60,24 +65,28 @@ namespace ThesisManagementProject
             fStudentDetails.ShowDialog();
         }
 
+        #endregion
+
+        #region EVENT CONTROLS
+
         private void gCirclePictureBoxAvatar_Click(object sender, EventArgs e)
         {
             ShowPeopleInformation();
         }
-
         private void gShadowPanelBack_Click(object sender, EventArgs e)
         {
             ShowPeopleInformation();
         }
-
         private void gButtonAdd_Click(object sender, EventArgs e)
         {
             OnThesisMiniLineClicked(EventArgs.Empty);
         }
-
         public virtual void OnThesisMiniLineClicked(EventArgs e)
         {
             ThesisMiniLineClicked?.Invoke(this, e);
         }
+
+        #endregion
+
     }
 }

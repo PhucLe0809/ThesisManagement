@@ -67,5 +67,7 @@ C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\obj\Debug
 C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\obj\Debug\net8.0-windows\ThesisManagementProject.UCAccount.resources
 C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\obj\Debug\net8.0-windows\ThesisManagementProject.UCDisplayStudent.resources
 C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\obj\Debug\net8.0-windows\ThesisManagementProject.FThesisEdit.resources
-C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\obj\Debug\net8.0-windows\ThesisManagementProject.UCThesisSolveRegistered.resources
 C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\obj\Debug\net8.0-windows\ThesisManagementProject.UCTeamMiniLine.resources
+C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\obj\Debug\net8.0-windows\ThesisManagementProject.UCThesisDetailsGeneral.resources
+C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\obj\Debug\net8.0-windows\ThesisManagementProject.UCThesisDetailsRegistered.resources
+C:\Users\thanh\Desktop\ThesisManagementProject\ThesisManagementProject\obj\Debug\net8.0-windows\ThesisManagementProject.UCThesisDetailsTeam.resources

@@ -288,10 +288,10 @@ namespace ThesisManagementProject.Process
 
         #region SET BUTTON COLOR as CARD
 
-        public void ButtonStandardColor(Guna2GradientButton button)
+        public void ButtonStandardColor(Guna2GradientButton button, Color one, Color two)
         {
-            button.FillColor = SystemColors.ControlLight;
-            button.FillColor2 = SystemColors.ButtonFace;
+            button.FillColor = one;
+            button.FillColor2 = two;
             button.ForeColor = Color.Black;
             button.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
         }

@@ -38,7 +38,7 @@
             gShadowPanelBack = new Guna.UI2.WinForms.Guna2ShadowPanel();
             gTextBoxTeamMemebrs = new Guna.UI2.WinForms.Guna2TextBox();
             lblTeamCode = new Label();
-            lblUserName = new Label();
+            lblTeamName = new Label();
             gCirclePictureBoxAvatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             gShadowPanelBack.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)gCirclePictureBoxAvatar).BeginInit();
@@ -65,13 +65,14 @@
             gButtonAdd.ShadowDecoration.CustomizableEdges = customizableEdges2;
             gButtonAdd.Size = new Size(35, 35);
             gButtonAdd.TabIndex = 14;
+            gButtonAdd.Click += gButtonAdd_Click;
             // 
             // gShadowPanelBack
             // 
             gShadowPanelBack.BackColor = Color.Transparent;
             gShadowPanelBack.Controls.Add(gTextBoxTeamMemebrs);
             gShadowPanelBack.Controls.Add(lblTeamCode);
-            gShadowPanelBack.Controls.Add(lblUserName);
+            gShadowPanelBack.Controls.Add(lblTeamName);
             gShadowPanelBack.Controls.Add(gCirclePictureBoxAvatar);
             gShadowPanelBack.Controls.Add(gButtonAdd);
             gShadowPanelBack.FillColor = SystemColors.ButtonFace;
@@ -83,6 +84,7 @@
             gShadowPanelBack.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
             gShadowPanelBack.Size = new Size(520, 60);
             gShadowPanelBack.TabIndex = 29;
+            gShadowPanelBack.Click += gShadowPanelBack_Click;
             // 
             // gTextBoxTeamMemebrs
             // 
@@ -109,7 +111,7 @@
             gTextBoxTeamMemebrs.ReadOnly = true;
             gTextBoxTeamMemebrs.SelectedText = "";
             gTextBoxTeamMemebrs.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            gTextBoxTeamMemebrs.Size = new Size(125, 25);
+            gTextBoxTeamMemebrs.Size = new Size(115, 25);
             gTextBoxTeamMemebrs.TabIndex = 57;
             gTextBoxTeamMemebrs.TextAlign = HorizontalAlignment.Center;
             // 
@@ -124,15 +126,15 @@
             lblTeamCode.TabIndex = 56;
             lblTeamCode.Text = "team code";
             // 
-            // lblUserName
+            // lblTeamName
             // 
-            lblUserName.AutoSize = true;
-            lblUserName.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblUserName.Location = new Point(75, 6);
-            lblUserName.Name = "lblUserName";
-            lblUserName.Size = new Size(98, 23);
-            lblUserName.TabIndex = 55;
-            lblUserName.Text = "Team name";
+            lblTeamName.AutoSize = true;
+            lblTeamName.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTeamName.Location = new Point(75, 6);
+            lblTeamName.Name = "lblTeamName";
+            lblTeamName.Size = new Size(98, 23);
+            lblTeamName.TabIndex = 55;
+            lblTeamName.Text = "Team name";
             // 
             // gCirclePictureBoxAvatar
             // 
@@ -166,7 +168,7 @@
         private Guna.UI2.WinForms.Guna2Button gButtonAdd;
         private Guna.UI2.WinForms.Guna2ShadowPanel gShadowPanelBack;
         private Label lblTeamCode;
-        private Label lblUserName;
+        private Label lblTeamName;
         private Guna.UI2.WinForms.Guna2CirclePictureBox gCirclePictureBoxAvatar;
         private Guna.UI2.WinForms.Guna2TextBox gTextBoxTeamMemebrs;
     }

@@ -33,9 +33,9 @@ namespace ThesisManagementProject
         }
         private void AllButtonStandardColor()
         {
-            myProcess.ButtonStandardColor(gGradientButtonDiscuss);
-            myProcess.ButtonStandardColor(gGradientButtonStatistical);
-            myProcess.ButtonStandardColor(gGradientButtonResources);
+            myProcess.ButtonStandardColor(gGradientButtonDiscuss, SystemColors.ControlLight, SystemColors.ButtonFace);
+            myProcess.ButtonStandardColor(gGradientButtonStatistical, SystemColors.ControlLight, SystemColors.ButtonFace);
+            myProcess.ButtonStandardColor(gGradientButtonResources, SystemColors.ControlLight, SystemColors.ButtonFace);
         }
 
         private void gGradientButtonDiscuss_Click(object sender, EventArgs e)

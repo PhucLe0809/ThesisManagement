@@ -55,6 +55,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             gButtonBack = new Guna.UI2.WinForms.Guna2Button();
             gButtonEdit = new Guna.UI2.WinForms.Guna2Button();
             gButtonStar = new Guna.UI2.WinForms.Guna2Button();
@@ -77,6 +79,7 @@
             gPanelDataView = new Guna.UI2.WinForms.Guna2Panel();
             gGradientButtonRegistered = new Guna.UI2.WinForms.Guna2GradientButton();
             gShadowPanelTeam = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            gGradientButtonGeneral = new Guna.UI2.WinForms.Guna2GradientButton();
             gShadowPanelTopic.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)gPictureBoxFaculty).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gPictureBoxLevel).BeginInit();
@@ -425,7 +428,7 @@
             // 
             // gShadowPanelBack
             // 
-            gShadowPanelBack.BackColor = Color.Transparent;
+            gShadowPanelBack.BackColor = Color.White;
             gShadowPanelBack.Controls.Add(gPanelDataView);
             gShadowPanelBack.FillColor = Color.White;
             gShadowPanelBack.Location = new Point(525, 68);
@@ -463,7 +466,7 @@
             gGradientButtonRegistered.HoverState.FillColor2 = Color.FromArgb(255, 77, 165);
             gGradientButtonRegistered.HoverState.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             gGradientButtonRegistered.HoverState.ForeColor = Color.White;
-            gGradientButtonRegistered.Location = new Point(1000, 37);
+            gGradientButtonRegistered.Location = new Point(1003, 37);
             gGradientButtonRegistered.Name = "gGradientButtonRegistered";
             gGradientButtonRegistered.ShadowDecoration.CustomizableEdges = customizableEdges26;
             gGradientButtonRegistered.Size = new Size(117, 40);
@@ -483,6 +486,32 @@
             gShadowPanelTeam.Size = new Size(495, 117);
             gShadowPanelTeam.TabIndex = 42;
             // 
+            // gGradientButtonGeneral
+            // 
+            gGradientButtonGeneral.BackColor = Color.Transparent;
+            gGradientButtonGeneral.BorderRadius = 10;
+            gGradientButtonGeneral.CustomizableEdges = customizableEdges27;
+            gGradientButtonGeneral.DisabledState.BorderColor = Color.DarkGray;
+            gGradientButtonGeneral.DisabledState.CustomBorderColor = Color.DarkGray;
+            gGradientButtonGeneral.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            gGradientButtonGeneral.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            gGradientButtonGeneral.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            gGradientButtonGeneral.FillColor = Color.White;
+            gGradientButtonGeneral.FillColor2 = Color.White;
+            gGradientButtonGeneral.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gGradientButtonGeneral.ForeColor = Color.Black;
+            gGradientButtonGeneral.HoverState.FillColor = Color.FromArgb(94, 148, 255);
+            gGradientButtonGeneral.HoverState.FillColor2 = Color.FromArgb(255, 77, 165);
+            gGradientButtonGeneral.HoverState.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gGradientButtonGeneral.HoverState.ForeColor = Color.White;
+            gGradientButtonGeneral.Location = new Point(555, 37);
+            gGradientButtonGeneral.Name = "gGradientButtonGeneral";
+            gGradientButtonGeneral.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            gGradientButtonGeneral.Size = new Size(117, 40);
+            gGradientButtonGeneral.TabIndex = 43;
+            gGradientButtonGeneral.Text = "General";
+            gGradientButtonGeneral.Click += gGradientButtonGeneral_Click;
+            // 
             // UCThesisDetails
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -493,6 +522,7 @@
             Controls.Add(gShadowPanelTopic);
             Controls.Add(gButtonBack);
             Controls.Add(gGradientButtonRegistered);
+            Controls.Add(gGradientButtonGeneral);
             Name = "UCThesisDetails";
             Size = new Size(1180, 750);
             Load += UCThesisDetails_Load;
@@ -528,5 +558,6 @@
         private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonRegistered;
         private Guna.UI2.WinForms.Guna2Panel gPanelDataView;
         private Guna.UI2.WinForms.Guna2ShadowPanel gShadowPanelTeam;
+        private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonGeneral;
     }
 }

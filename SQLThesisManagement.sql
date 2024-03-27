@@ -76,17 +76,17 @@ create table ThesisStatus
 	idthesis nvarchar(50) not null,
 	status nvarchar(50) not null,
 );
--- drop table ThesisRegister
+-- drop table ThesisStatus
 
 INSERT INTO ThesisStatus
 VALUES 
-('245500001', '243300001', 'Registered'),
-('245500002', '243300002', 'Registered'),
-('245500003', '243300001', 'Registered'),
-('245500004', '243300002', 'Registered'),
-('245500005', '243300003', 'Processing'),
-('245500006', '243300004', 'Processing'),
-('245500007', '243300005', 'Completed');
+('245500001', '244400001', 'Registered'),
+('245500002', '244400002', 'Registered'),
+('245500003', '244400001', 'Registered'),
+('245500004', '244400002', 'Registered'),
+('245500005', '244400003', 'Processing'),
+('245500006', '244400004', 'Processing'),
+('245500007', '244400005', 'Completed');
 
 -- RENAME COLUM
 -- EXEC sp_rename 'Thesis.level', 'tslevel', 'COLUMN';

@@ -18,11 +18,15 @@ namespace ThesisManagementProject
     public partial class UCThesisDetails : UserControl
     {
         private MyProcess myProcess = new MyProcess();
+        private DBConnection dBConnection = new DBConnection();
+
         private Thesis thesis = new Thesis();
         private ThesisDAO thesisDAO = new ThesisDAO();
         private PeopleDAO peopleDAO = new PeopleDAO();
+        private TeamDAO teamDAO = new TeamDAO();
 
-        private UCThesisSolveRegistered uCThesisSolveRegistered = new UCThesisSolveRegistered();
+        private UCThesisDetailsRegistered uCThesisDetailsRegistered = new UCThesisDetailsRegistered();
+        private UCThesisDetailsGeneral uCThesisDetailsGeneral = new UCThesisDetailsGeneral();
 
         public UCThesisDetails()
         {
@@ -45,9 +49,8 @@ namespace ThesisManagementProject
         }
         private void InitUserControl()
         {
-            ResetThesis();   
+            ResetThesis();
             SetControlsReadOnly(true);
-            gGradientButtonRegistered_Click(new object(), new EventArgs());
         }
         private void ResetThesis()
         {
@@ -61,6 +64,8 @@ namespace ThesisManagementProject
             gComboBoxLevel.SelectedItem = thesis.Level;
             gComboBoxMembers.SelectedItem = thesis.MaxMembers.ToString();
             gTextBoxDescription.Text = thesis.Description;
+
+            SetTeamAndMode(thesis.Status == EThesisStatus.Processing || thesis.Status == EThesisStatus.Completed);
         }
         private void SetControlsReadOnly(bool flagReadOnly)
         {
@@ -76,20 +81,36 @@ namespace ThesisManagementProject
             gPictureBoxLevel.BackColor = colorComboBox;
             myProcess.SetComboBoxReadOnly(gComboBoxMembers, thickness, colorComboBox, flagReadOnly);
         }
+        private void SetTeamAndMode(bool flagShow)
+        {
+            gShadowPanelTeam.Controls.Clear();
+
+            if (flagShow)
+            {
+                string command = string.Format("SELECT * FROM {0} WHERE idthesis = '{1}' and status = '{2}'",
+                                                MyDatabase.DBThesisStatus, thesis.IdThesis, thesis.Status.ToString());
+                DataTable table = dBConnection.Select(command);
+                Team team = teamDAO.SelectOnly(table.Rows[0]["idteam"].ToString());
+                if (team != null)
+                {
+                    UCThesisDetailsTeam showTeam = new UCThesisDetailsTeam(team);
+                    showTeam.Location = new Point(5, 5);
+                    gShadowPanelTeam.Controls.Add(showTeam);
+
+                    gGradientButtonRegistered.Hide();
+                    gGradientButtonGeneral.PerformClick();
+                }
+            }
+            else
+            {
+                gGradientButtonRegistered.Show();
+                gGradientButtonRegistered.PerformClick();
+            }
+        }
         private void AllButtonStandardColor()
         {
-            myProcess.ButtonStandardColor(gGradientButtonRegistered);
-        }
-        private void AddPeopleToFLP(FlowLayoutPanel flpanel, List<People> list, bool flag)
-        {
-            flpanel.Controls.Clear();
-            foreach (People people in list)
-            {
-                UCPeopleMiniLine line = new UCPeopleMiniLine(people);
-                if (flag) line.SetButtonAddImageNull();
-                // line.ThesisMiniLineClicked += GButtonAdd_Click;
-                flpanel.Controls.Add(line);
-            }
+            myProcess.ButtonStandardColor(gGradientButtonRegistered, Color.White, Color.White);
+            myProcess.ButtonStandardColor(gGradientButtonGeneral, Color.White, Color.White);
         }
 
         #endregion
@@ -146,20 +167,65 @@ namespace ThesisManagementProject
         #endregion
 
         #region EVENT gGradientButtonRegistered
-        
+
         private void gGradientButtonRegistered_Click(object sender, EventArgs e)
         {
             AllButtonStandardColor();
             myProcess.ButtonSettingColor(gGradientButtonRegistered);
             gPanelDataView.Controls.Clear();
 
-            uCThesisSolveRegistered.Clear();
-            for (int i = 0; i < 10; i++)
+            string command = string.Format("SELECT * FROM {0} WHERE idthesis = '{1}'", MyDatabase.DBThesisStatus, thesis.IdThesis);
+            List<Team> listTeam = teamDAO.SelectList(command);
+
+            uCThesisDetailsRegistered.Clear();
+            foreach (Team team in listTeam)
             {
-                uCThesisSolveRegistered.AddRegistered(new UCTeamMiniLine());
+                UCTeamMiniLine line = new UCTeamMiniLine(team);
+                line.ThesisAddAccepted += ThesisAddAccepted_Clicked;
+                uCThesisDetailsRegistered.AddTeam(line);
             }
 
-            gPanelDataView.Controls.Add(uCThesisSolveRegistered);
+            gPanelDataView.Controls.Add(uCThesisDetailsRegistered);
+        }
+        private void ThesisAddAccepted_Clicked(object sender, EventArgs e)
+        {
+            UCTeamMiniLine line = sender as UCTeamMiniLine;
+
+            if (line != null)
+            {
+                Team team = line.GetTeam;
+                DialogResult result = MessageBox.Show("Are you sure you want to accept team " + team.TeamName,
+                                                        "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (result == DialogResult.OK)
+                {
+                    string command = string.Empty;
+                    this.thesis.Status = EThesisStatus.Processing;
+
+                    command = string.Format("UPDATE {0} SET status = '{1}' WHERE idthesis = '{2}'",
+                                            MyDatabase.DBThesis, thesis.Status.ToString(), thesis.IdThesis);
+                    dBConnection.ExecuteQuery(command, "Accept", false);
+
+                    command = string.Format("UPDATE {0} SET status = '{1}' WHERE idthesis = '{2}' and idteam = '{3}'",
+                                            MyDatabase.DBThesisStatus, thesis.Status.ToString(), thesis.IdThesis, team.IDTeam);
+                    dBConnection.ExecuteQuery(command, "Accept", false);
+
+                    SetTeamAndMode(thesis.Status == EThesisStatus.Processing || thesis.Status == EThesisStatus.Completed);
+                    gTextBoxStatus.Text = thesis.Status.ToString();
+                    gTextBoxStatus.FillColor = thesis.GetStatusColor();
+                }
+            }
+        }
+
+        #endregion
+
+        #region EVENT gGradientButtonGeneral
+
+        private void gGradientButtonGeneral_Click(object sender, EventArgs e)
+        {
+            AllButtonStandardColor();
+            myProcess.ButtonSettingColor(gGradientButtonGeneral);
+            gPanelDataView.Controls.Clear();
+            gPanelDataView.Controls.Add(uCThesisDetailsGeneral);
         }
 
         #endregion
