@@ -17,6 +17,8 @@ namespace ThesisManagementProject
 {
     public partial class UCDisplayRegister : UserControl
     {
+        private MyProcess myProcess = new MyProcess();
+
         private People people = new People();
         private Image pictureAvatar = Properties.Resources.PicAvatarDemoUser;
 
@@ -74,15 +76,15 @@ namespace ThesisManagementProject
         }
         private bool CheckInformationValid()
         {
-            MyProcess.RunCheckDataValid(people.CheckFullName(), erpFullName, gTextBoxFullname, "Name cannot be empty");
-            MyProcess.RunCheckDataValid(people.CheckCitizenCode(), erpCitizenCode, gTextBoxCitizencode, "Citizen code is already exists or empty");
-            MyProcess.RunCheckDataValid(people.CheckBirthday(), erpBirthday, gDateTimePickerBirthday, "Not yet 18 years old");
-            MyProcess.RunCheckDataValid(people.CheckGender(), erpGender, gComboBoxGender, "Gender cannot be empty");
-            MyProcess.RunCheckDataValid(people.CheckEmail(), erpEmail, gTextBoxEmail, "Email is already exists or invalid");
-            MyProcess.RunCheckDataValid(people.CheckPhoneNumber(), erpPhonenumber, gTextBoxPhonenumber, "Phone number is already exists or invalid");
-            MyProcess.RunCheckDataValid(people.CheckHandle(), erpHandle, gTextBoxHandle, "Handle is already exists or invalid");
-            MyProcess.RunCheckDataValid(people.CheckPassWord(), erpConfirmPassword, gTextBoxConfirmPassword, "Confirmation password does not match");
-            MyProcess.RunCheckDataValid(people.CheckWorkCode(), erpWorkCode, gTextBoxWorkcode, "Work code is already exists or invalid");
+            myProcess.RunCheckDataValid(people.CheckFullName(), erpFullName, gTextBoxFullname, "Name cannot be empty");
+            myProcess.RunCheckDataValid(people.CheckCitizenCode(), erpCitizenCode, gTextBoxCitizencode, "Citizen code is already exists or empty");
+            myProcess.RunCheckDataValid(people.CheckBirthday(), erpBirthday, gDateTimePickerBirthday, "Not yet 18 years old");
+            myProcess.RunCheckDataValid(people.CheckGender(), erpGender, gComboBoxGender, "Gender cannot be empty");
+            myProcess.RunCheckDataValid(people.CheckEmail(), erpEmail, gTextBoxEmail, "Email is already exists or invalid");
+            myProcess.RunCheckDataValid(people.CheckPhoneNumber(), erpPhonenumber, gTextBoxPhonenumber, "Phone number is already exists or invalid");
+            myProcess.RunCheckDataValid(people.CheckHandle(), erpHandle, gTextBoxHandle, "Handle is already exists or invalid");
+            myProcess.RunCheckDataValid(people.CheckPassWord(), erpConfirmPassword, gTextBoxConfirmPassword, "Confirmation password does not match");
+            myProcess.RunCheckDataValid(people.CheckWorkCode(), erpWorkCode, gTextBoxWorkcode, "Work code is already exists or invalid");
 
             return people.CheckFullName() && people.CheckCitizenCode() && people.CheckBirthday() && people.CheckGender() && people.CheckEmail()
                     && people.CheckPhoneNumber() && people.CheckHandle() && people.CheckPassWord() && people.CheckWorkCode();
@@ -105,7 +107,7 @@ namespace ThesisManagementProject
 
         private void UCDisplayRegister_Load(object sender, EventArgs e)
         {
-            MyProcess.AddEnumsToComboBox(gComboBoxGender, typeof(EGender));
+            myProcess.AddEnumsToComboBox(gComboBoxGender, typeof(EGender));
         }
 
         #endregion
@@ -147,7 +149,7 @@ namespace ThesisManagementProject
         {
             this.people = new People(gTextBoxFullname.Text, gTextBoxCitizencode.Text, gDateTimePickerBirthday.Value, (EGender)gComboBoxGender.SelectedItem,
                 gTextBoxEmail.Text, gTextBoxPhonenumber.Text, gTextBoxHandle.Text, GetRole(), gTextBoxWorkcode.Text, gTextBoxPassword.Text, gTextBoxConfirmPassword.Text,
-                MyProcess.ImageToName(gCirclePictureBoxAvatar.Image), GetClassify());
+                myProcess.ImageToName(gCirclePictureBoxAvatar.Image), GetClassify());
 
             if (CheckInformationValid())
             {
@@ -182,52 +184,52 @@ namespace ThesisManagementProject
         private void gTextBoxFullname_TextChanged(object sender, EventArgs e)
         {
             this.people.FullName = gTextBoxFullname.Text;
-            MyProcess.RunCheckDataValid(people.CheckFullName(), erpFullName, gTextBoxFullname, "Name cannot be empty");
+            myProcess.RunCheckDataValid(people.CheckFullName(), erpFullName, gTextBoxFullname, "Name cannot be empty");
         }
         private void gTextBoxCitizencode_TextChanged(object sender, EventArgs e)
         {
             this.people.CitizenCode = gTextBoxCitizencode.Text;
-            MyProcess.RunCheckDataValid(people.CheckCitizenCode(), erpCitizenCode, gTextBoxCitizencode, "Citizen code is already exists or empty");
+            myProcess.RunCheckDataValid(people.CheckCitizenCode(), erpCitizenCode, gTextBoxCitizencode, "Citizen code is already exists or empty");
         }
         private void gDateTimePickerBirthday_ValueChanged(object sender, EventArgs e)
         {
             this.people.Birthday = gDateTimePickerBirthday.Value;
-            MyProcess.RunCheckDataValid(people.CheckBirthday(), erpBirthday, gDateTimePickerBirthday, "Not yet 18 years old");
+            myProcess.RunCheckDataValid(people.CheckBirthday(), erpBirthday, gDateTimePickerBirthday, "Not yet 18 years old");
         }
         private void gComboBoxGender_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.people.Gender = (EGender)MyProcess.ConvertStringToEnum(gComboBoxGender, typeof(EGender));
-            MyProcess.RunCheckDataValid(people.CheckGender(), erpGender, gComboBoxGender, "Gender cannot be empty");
+            this.people.Gender = (EGender)myProcess.ConvertStringToEnum(gComboBoxGender, typeof(EGender));
+            myProcess.RunCheckDataValid(people.CheckGender(), erpGender, gComboBoxGender, "Gender cannot be empty");
         }
         private void gTextBoxEmail_TextChanged(object sender, EventArgs e)
         {
             this.people.Email = gTextBoxEmail.Text;
-            MyProcess.RunCheckDataValid(people.CheckEmail(), erpEmail, gTextBoxEmail, "Email is already exists or invalid");
+            myProcess.RunCheckDataValid(people.CheckEmail(), erpEmail, gTextBoxEmail, "Email is already exists or invalid");
         }
         private void gTextBoxPhonenumber_TextChanged(object sender, EventArgs e)
         {
             this.people.PhoneNumber = gTextBoxPhonenumber.Text;
-            MyProcess.RunCheckDataValid(people.CheckPhoneNumber(), erpPhonenumber, gTextBoxPhonenumber, "Phone number is already exists or invalid");
+            myProcess.RunCheckDataValid(people.CheckPhoneNumber(), erpPhonenumber, gTextBoxPhonenumber, "Phone number is already exists or invalid");
         }
         private void gTextBoxHandle_TextChanged(object sender, EventArgs e)
         {
             this.people.Handle = gTextBoxHandle.Text;
-            MyProcess.RunCheckDataValid(people.CheckHandle(), erpHandle, gTextBoxHandle, "Handle is already exists or invalid");
+            myProcess.RunCheckDataValid(people.CheckHandle(), erpHandle, gTextBoxHandle, "Handle is already exists or invalid");
         }
         private void gTextBoxPassword_TextChanged(object sender, EventArgs e)
         {
             this.people.Password = gTextBoxPassword.Text;
-            MyProcess.RunCheckDataValid(people.CheckPassWord(), erpConfirmPassword, gTextBoxConfirmPassword, "Confirmation password does not match");
+            myProcess.RunCheckDataValid(people.CheckPassWord(), erpConfirmPassword, gTextBoxConfirmPassword, "Confirmation password does not match");
         }
         private void gTextBoxConfirmPassword_TextChanged(object sender, EventArgs e)
         {
             this.people.ConfirmPassword = gTextBoxConfirmPassword.Text;
-            MyProcess.RunCheckDataValid(people.CheckPassWord(), erpConfirmPassword, gTextBoxConfirmPassword, "Confirmation password does not match");
+            myProcess.RunCheckDataValid(people.CheckPassWord(), erpConfirmPassword, gTextBoxConfirmPassword, "Confirmation password does not match");
         }
         private void gTextBoxWorkcode_TextChanged(object sender, EventArgs e)
         {
             this.people.WorkCode = gTextBoxWorkcode.Text;
-            MyProcess.RunCheckDataValid(people.CheckWorkCode(), erpWorkCode, gTextBoxWorkcode, "Work code is already exists or invalid");
+            myProcess.RunCheckDataValid(people.CheckWorkCode(), erpWorkCode, gTextBoxWorkcode, "Work code is already exists or invalid");
         }
 
         #endregion

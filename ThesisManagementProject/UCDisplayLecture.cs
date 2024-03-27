@@ -15,6 +15,7 @@ namespace ThesisManagementProject
 {
     public partial class UCDisplayLecture : UserControl
     {
+        private MyProcess myProcess = new MyProcess();
         private People people = new People();
 
         UCDashboardLecture uCDashboardLecture = new UCDashboardLecture();
@@ -48,9 +49,11 @@ namespace ThesisManagementProject
         }
         private void UserControlLoad()
         {
-            gCirclePictureBoxAvatar.Image = MyProcess.NameToImage(people.AvatarName);
+            gCirclePictureBoxAvatar.Image = myProcess.NameToImage(people.AvatarName);
             lblHandle.Text = people.Handle;
             lblRole.Text = people.Role.ToString();
+
+            AllDirectButtonStandardColor();
 
             pnlAddUserControl.Controls.Clear();
             pnlAddUserControl.Controls.Add(new UCWelcome(people));

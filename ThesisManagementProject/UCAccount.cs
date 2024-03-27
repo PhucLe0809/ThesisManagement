@@ -15,6 +15,7 @@ namespace ThesisManagementProject
 {
     public partial class UCAccount : UserControl
     {
+        private MyProcess myProcess = new MyProcess();
         private People people = new People();
 
         public UCAccount()
@@ -37,7 +38,7 @@ namespace ThesisManagementProject
         }
         private void InitUserControl()
         {
-            gCirclePictureBoxAvatar.Image = MyProcess.NameToImage(people.AvatarName);
+            gCirclePictureBoxAvatar.Image = myProcess.NameToImage(people.AvatarName);
             lblViewHandle.Text = people.Handle;
             lblViewRole.Text = people.Role.ToString();
 
@@ -76,7 +77,7 @@ namespace ThesisManagementProject
 
         private void gCirclePictureBoxAvatar_MouseLeave(object sender, EventArgs e)
         {
-            gCirclePictureBoxAvatar.Image = MyProcess.NameToImage(people.AvatarName);
+            gCirclePictureBoxAvatar.Image = myProcess.NameToImage(people.AvatarName);
         }
 
         #endregion

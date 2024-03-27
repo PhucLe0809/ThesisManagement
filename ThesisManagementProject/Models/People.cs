@@ -31,6 +31,7 @@ namespace ThesisManagementProject.Models
 
     public class People
     {
+        private MyProcess myProcess = new MyProcess();
         DBConnection dBConnection = new DBConnection();
 
         #region PEOPLE ATTRIBUTES
@@ -84,7 +85,7 @@ namespace ThesisManagementProject.Models
         public People(string fullName, string citizenCode, DateTime birthday, EGender gender, string email, string phoneNumber,
                         string handle, ERole role, string workCode, string password, EClassify eClassify)
         {
-            this.idAccount = MyProcess.GenIDClassify(eClassify);
+            this.idAccount = myProcess.GenIDClassify(eClassify);
             this.fullName = fullName;
             this.citizenCode = citizenCode;
             this.birthday = birthday;
@@ -107,7 +108,7 @@ namespace ThesisManagementProject.Models
         public People(string fullName, string citizenCode, DateTime birthday, EGender gender, string email, string phoneNumber,
                         string handle, ERole role, string workCode, string password, string confirmPassword, string avatarName, EClassify eClassify)
         {
-            this.idAccount = MyProcess.GenIDClassify(eClassify);
+            this.idAccount = myProcess.GenIDClassify(eClassify);
             this.fullName = fullName;
             this.citizenCode = citizenCode;
             this.birthday = birthday;

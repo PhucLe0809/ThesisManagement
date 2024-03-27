@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,50 +16,31 @@ namespace ThesisManagementProject
 {
     public partial class FThesisEdit : Form
     {
-        private Thesis thesis = new Thesis();
-        private ThesisDAO thesisDAO = new ThesisDAO();
+        private UCThesisCreate uCThesisCreate = new UCThesisCreate();
 
         public FThesisEdit()
         {
             InitializeComponent();
-        }
 
-        private void UserControlLoad()
+            gPanelEdit.Controls.Clear();
+            gPanelEdit.Controls.Add(new UCThesisCreate());
+        }
+        public FThesisEdit(People people, Thesis thesis)
         {
-            MyProcess.AddEnumsToComboBox(gComboBoxField, typeof(EField));
-            MyProcess.AddEnumsToComboBox(gComboBoxLevel, typeof(ELevel));
+            InitializeComponent();
 
-            gTextBoxTopic.Text = thesis.Topic;
-            gComboBoxField.SelectedItem = thesis.Field;
-            gComboBoxLevel.SelectedItem = thesis.Level;
-            gTextBoxMembers.Text = thesis.MaxMembers.ToString();
-            gTextBoxDescription.Text = thesis.Description;
-            gDateTimePickerPublish.Value = thesis.PublishDate;
-            gTextBoxTechnology.Text = thesis.Technology;
-            gTextBoxFunctions.Text = thesis.Functions;
-            gTextBoxRequirements.Text = thesis.Requirements;
+            InitUserControl(people, thesis);
         }
 
-        public void UpdateThesis(Thesis thesis)
+        public void InitUserControl(People people, Thesis thesis)
         {
-            this.thesis = thesis;
-            UserControlLoad();
+            gPanelEdit.Controls.Clear();
+            uCThesisCreate.SetEditState(people, thesis);
+            gPanelEdit.Controls.Add(uCThesisCreate);
+
+            uCThesisCreate.GButtonCancel.Click += ButtonCancel_Clicked;
         }
-
-        private void gGradientButtonSave_Click(object sender, EventArgs e)
-        {
-            this.thesis = new Thesis(this.thesis.IdThesis, gTextBoxTopic.Text,
-                (EField)gComboBoxField.SelectedItem, (ELevel)gComboBoxLevel.SelectedItem,
-                MyProcess.ConvertStringToInt32(gTextBoxMembers.Text), gTextBoxDescription.Text,
-                gDateTimePickerPublish.Value, gTextBoxTechnology.Text, gTextBoxFunctions.Text, gTextBoxRequirements.Text,
-                this.thesis.IdCreator, this.thesis.IsFavorite, this.thesis.NumPending, this.thesis.NumAccepted, this.thesis.NumCompleted);
-            
-            thesisDAO.Update(thesis);
-
-            this.Close();
-        }
-
-        private void gButtonCancel_Click(object sender, EventArgs e)
+        private void ButtonCancel_Clicked(object sender, EventArgs e)
         {
             this.Close();
         }

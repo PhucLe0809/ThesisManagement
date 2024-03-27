@@ -7,6 +7,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Linq;
 using System.Resources;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using ThesisManagementProject.Database;
@@ -28,13 +29,9 @@ namespace ThesisManagementProject.Process
 
     internal class MyProcess
     {
-        private static DBConnection dBConnection = new DBConnection();
+        private DBConnection dBConnection = new DBConnection();
 
-        public static bool ComparePublished(DateTime timer)
-        {
-            return timer <= DateTime.Now;
-        }
-        public static string FormatStringLength(string str, int length)
+        public string FormatStringLength(string str, int length)
         {
             if (str.Length <= length)
             {
@@ -43,12 +40,12 @@ namespace ThesisManagementProject.Process
 
             return str.Substring(0, length - 3) + "...";
         }
-        public static void SetItemFavorite(Guna2Button button, bool flag)
+        public void SetItemFavorite(Guna2Button button, bool flag)
         {
             if (flag) button.Image = Properties.Resources.PicInLineGradientStar;
             else button.Image = Properties.Resources.PicInLineStar;
         }
-        public static void RunCheckDataValid(bool flag, ErrorProvider errorProvider, Control control, string error)
+        public void RunCheckDataValid(bool flag, ErrorProvider errorProvider, Control control, string error)
         {
             if (flag == false)
             {
@@ -62,21 +59,35 @@ namespace ThesisManagementProject.Process
 
         #region GenIDbyClassify
 
-        public static string GenIDClassify(EClassify eClassify)
+        private int GetLastestID(string field, string command)
+        {
+            DataTable dataTable = dBConnection.Select(command);
+            int ind = dataTable.Rows.Count;
+            string str = dataTable.Rows[ind - 1][field].ToString();
+            return Convert.ToInt32(str.Substring(str.Length - 5));
+        }
+        public string GenIDClassify(EClassify eClassify)
         {
             int year = DateTime.Now.Year % 100;
             string classify = ((int)eClassify).ToString().PadLeft(2, '0');
 
-            string command = string.Empty;
-            if (eClassify == EClassify.Thesis)
+            int cntAccount = 0;
+            switch (eClassify)
             {
-                command = string.Format("SELECT * FROM {0}", MyDatabase.DBThesis);
+                case EClassify.Lecture:
+                    cntAccount = GetLastestID("idaccount", string.Format("SELECT * FROM {0} WHERE role = '{1}'", MyDatabase.DBAccount, EClassify.Lecture.ToString()));
+                    break;
+                case EClassify.Student:
+                    cntAccount = GetLastestID("idaccount", string.Format("SELECT * FROM {0} WHERE role = '{1}'", MyDatabase.DBAccount, EClassify.Student.ToString()));
+                    break;
+                case EClassify.Team:
+                    cntAccount = GetLastestID("idteam", string.Format("SELECT * FROM {0}", MyDatabase.DBTeam));
+                    break;
+                case EClassify.Thesis:
+                    cntAccount = GetLastestID("idthesis", string.Format("SELECT * FROM {0}", MyDatabase.DBThesis));
+                    break;
             }
-            else
-            {
-                command = string.Format("SELECT * FROM {0} WHERE role = '{1}'", MyDatabase.DBAccount, eClassify.ToString());
-            }
-            int cntAccount = dBConnection.Select(command).Rows.Count + 1;
+            cntAccount++;
             string counterStr = cntAccount.ToString().PadLeft(5, '0');
 
             if (cntAccount > 99999)
@@ -93,7 +104,7 @@ namespace ThesisManagementProject.Process
 
         #region ConvertStringToInt32
 
-        public static int ConvertStringToInt32(string input)
+        public int ConvertStringToInt32(string input)
         {
             try
             {
@@ -121,7 +132,7 @@ namespace ThesisManagementProject.Process
 
         #region ImageToName
 
-        public static string ImageToName(Image image)
+        public string ImageToName(Image image)
         {
             if (ImageEquals(image, Properties.Resources.PicAvatarOne)) return "PicAvatarOne";
             if (ImageEquals(image, Properties.Resources.PicAvatarTwo)) return "PicAvatarTwo";
@@ -134,7 +145,7 @@ namespace ThesisManagementProject.Process
             if (ImageEquals(image, Properties.Resources.PicAvatarTen)) return "PicAvatarTen";
             return "PicAvatarDemoUser";
         }
-        private static bool ImageEquals(Image img1, Image img2)
+        private bool ImageEquals(Image img1, Image img2)
         {
             if (img1 == null || img2 == null)
                 return false;
@@ -154,7 +165,7 @@ namespace ThesisManagementProject.Process
         #endregion
 
         #region NameToImage
-        public static Image NameToImage(string imageName)
+        public Image NameToImage(string imageName)
         {
             if (imageName.Equals("PicAvatarOne")) return Properties.Resources.PicAvatarOne;
             if (imageName.Equals("PicAvatarTwo")) return Properties.Resources.PicAvatarTwo;
@@ -172,14 +183,14 @@ namespace ThesisManagementProject.Process
 
         #region FUNCTIONS ENUM
 
-        public static string GetEnumDescription(Enum enumValue)
+        public string GetEnumDescription(Enum enumValue)
         {
             var fieldInfo = enumValue.GetType().GetField(enumValue.ToString());
             var descriptionAttribute = (DescriptionAttribute)Attribute.GetCustomAttribute(fieldInfo, typeof(DescriptionAttribute));
             return descriptionAttribute.Description;
         }
 
-        public static void AddEnumsToComboBox(Guna2ComboBox comboBox, Type enumType)
+        public void AddEnumsToComboBox(Guna2ComboBox comboBox, Type enumType)
         {
             comboBox.Items.Clear();
             comboBox.DisplayMember = "Name";
@@ -192,7 +203,7 @@ namespace ThesisManagementProject.Process
             comboBox.SelectedIndex = 0;
         }
 
-        public static TEnum GetEnumFromDisplayName<TEnum>(string displayName) where TEnum : Enum
+        public TEnum GetEnumFromDisplayName<TEnum>(string displayName) where TEnum : Enum
         {
             var enumType = typeof(TEnum);
             var enumNames = Enum.GetNames(enumType);
@@ -210,7 +221,7 @@ namespace ThesisManagementProject.Process
             throw new ArgumentException($"There is no enum value with Display Name: {displayName}");
         }
 
-        public static Enum ConvertStringToEnum(Guna2ComboBox comboBox, Type enumType)
+        public Enum ConvertStringToEnum(Guna2ComboBox comboBox, Type enumType)
         {
             try
             {
@@ -258,6 +269,53 @@ namespace ThesisManagementProject.Process
 
         #endregion
 
+        #region FUNCTIONS OFF ON EDIT
+
+        public void SetTextBoxReadOnly(Guna2TextBox textBox, int thickness, Color colors, bool flag)
+        {
+            textBox.ReadOnly = flag;
+            textBox.BorderThickness = thickness;
+            textBox.FillColor = colors;
+        }
+        public void SetComboBoxReadOnly(Guna2ComboBox comboBox, int thickness, Color colors, bool flag)
+        {
+            comboBox.Enabled = !flag;
+            comboBox.BorderThickness = thickness;
+            comboBox.FillColor = colors;
+        }
+
+        #endregion
+
+        #region SET BUTTON COLOR as CARD
+
+        public void ButtonStandardColor(Guna2GradientButton button)
+        {
+            button.FillColor = SystemColors.ControlLight;
+            button.FillColor2 = SystemColors.ButtonFace;
+            button.ForeColor = Color.Black;
+            button.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+        }
+        public void ButtonSettingColor(Guna2GradientButton button)
+        {
+            button.FillColor = Color.FromArgb(94, 148, 255);
+            button.FillColor2 = Color.FromArgb(255, 77, 165);
+            button.ForeColor = Color.White;
+            button.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+        }
+
+        #endregion
+
+        #region EXTEND
+
+        //public void InitializeObjectCode()
+        //{
+        //    this.cntThesis = GetLastestID("idthesis", string.Format("SELECT * FROM {0}", MyDatabase.DBThesis));
+        //    this.cntLecture = GetLastestID("idaccount", string.Format("SELECT * FROM {0} WHERE role = '{1}'", MyDatabase.DBAccount, EClassify.Lecture.ToString()));
+        //    this.cntStudent = GetLastestID("idaccount", string.Format("SELECT * FROM {0} WHERE role = '{1}'", MyDatabase.DBAccount, EClassify.Student.ToString()));
+        //    this.cntTeam = GetLastestID("idteam", string.Format("SELECT * FROM {0}", MyDatabase.DBTeam));
+        //}
+
+        #endregion
 
     }
 }

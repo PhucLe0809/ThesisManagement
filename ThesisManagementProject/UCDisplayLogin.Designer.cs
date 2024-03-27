@@ -115,7 +115,7 @@
             gTextBoxPassword.Location = new Point(80, 343);
             gTextBoxPassword.Margin = new Padding(3, 4, 3, 4);
             gTextBoxPassword.Name = "gTextBoxPassword";
-            gTextBoxPassword.PasswordChar = '*';
+            gTextBoxPassword.PasswordChar = '●';
             gTextBoxPassword.PlaceholderForeColor = Color.Gray;
             gTextBoxPassword.PlaceholderText = "Password";
             gTextBoxPassword.SelectedText = "";
@@ -123,6 +123,7 @@
             gTextBoxPassword.Size = new Size(355, 45);
             gTextBoxPassword.TabIndex = 5;
             gTextBoxPassword.TextOffset = new Point(5, 0);
+            gTextBoxPassword.UseSystemPasswordChar = true;
             // 
             // gButtonLogin
             // 
@@ -219,6 +220,7 @@
             gButtonBack.ImageSize = new Size(23, 23);
             gButtonBack.Location = new Point(373, 590);
             gButtonBack.Name = "gButtonBack";
+            gButtonBack.PressedColor = Color.White;
             gButtonBack.ShadowDecoration.CustomizableEdges = customizableEdges12;
             gButtonBack.Size = new Size(90, 30);
             gButtonBack.TabIndex = 9;

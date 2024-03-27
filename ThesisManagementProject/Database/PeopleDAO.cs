@@ -11,6 +11,7 @@ namespace ThesisManagementProject.Database
 {
     internal class PeopleDAO
     {
+        private MyProcess myProcess = new MyProcess();
         DBConnection DBConnection = new DBConnection();
 
         public PeopleDAO() { }
@@ -77,11 +78,11 @@ namespace ThesisManagementProject.Database
             string fullname = row["fullname"].ToString();
             string citizenCode = row["citizencode"].ToString();
             DateTime birthday = DateTime.Parse(row["birthday"].ToString());
-            EGender gender = MyProcess.GetEnumFromDisplayName<EGender>(row["gender"].ToString());
+            EGender gender = myProcess.GetEnumFromDisplayName<EGender>(row["gender"].ToString());
             string email = row["email"].ToString();
             string phoneNumber = row["phonenumber"].ToString();
             string handle = row["handle"].ToString();
-            ERole role = MyProcess.GetEnumFromDisplayName<ERole>(row["role"].ToString());
+            ERole role = myProcess.GetEnumFromDisplayName<ERole>(row["role"].ToString());
             string workCode = row["workcode"].ToString();
             string password = row["password"].ToString();
             string avatarName = row["avatarname"].ToString();

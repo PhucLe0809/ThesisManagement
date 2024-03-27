@@ -10,6 +10,7 @@ namespace ThesisManagementProject.Database
     {
         public static string DBAccount = "Account";
         public static string DBThesis = "Thesis";
+        public static string DBTeam = "Team";
         public static string DBThesisStatus = "ThesisStatus";
     }
 }

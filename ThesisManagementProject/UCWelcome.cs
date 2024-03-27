@@ -14,6 +14,8 @@ namespace ThesisManagementProject
 {
     public partial class UCWelcome : UserControl
     {
+        private MyProcess myProcess = new MyProcess();
+
         public UCWelcome()
         {
             InitializeComponent();
@@ -22,7 +24,7 @@ namespace ThesisManagementProject
         {
             InitializeComponent();
 
-            gCirclePictureBoxAvatar.Image = MyProcess.NameToImage(people.AvatarName);
+            gCirclePictureBoxAvatar.Image = myProcess.NameToImage(people.AvatarName);
             lblViewHandle.Text = people.Handle;
             gTextBoxFullname.Text = people.FullName;
             gTextBoxCitizencode.Text = people.CitizenCode;

@@ -82,6 +82,9 @@
     <Compile Update="UCPeopleMiniLine.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="UCTeamMiniLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UCThesisCreate.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -95,6 +98,9 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UCThesisMiniLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCThesisSolveRegistered.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UCThesisStatistical.cs">

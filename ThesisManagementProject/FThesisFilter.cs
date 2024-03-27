@@ -13,10 +13,6 @@ namespace ThesisManagementProject
 {
     public partial class FThesisFilter : Form
     {
-
-        int cntPending = 0;
-        int cntAccepted = 0;
-        int cntCompleted = 0;
         int cntTopic = 0;
         int cntCreation = 0;
 
@@ -67,24 +63,6 @@ namespace ThesisManagementProject
                     picture.BackColor = SystemColors.ControlLight;
                 }
             }
-        }
-
-        private void gButtonPendingAll_Click(object sender, EventArgs e)
-        {
-            ScanTextBoxOffOn(new List<Control> { gTextBoxPendingFrom, gTextBoxPendingTo },
-                ref cntPending, gButtonPendingAll, new List<PictureBox> { });
-        }
-
-        private void gButtonAcceptedAll_Click(object sender, EventArgs e)
-        {
-            ScanTextBoxOffOn(new List<Control> { gTextBoxAcceptedFrom, gTextBoxAcceptedTo },
-                ref cntAccepted, gButtonAcceptedAll, new List<PictureBox> { });
-        }
-
-        private void gButtonCompletedAll_Click(object sender, EventArgs e)
-        {
-            ScanTextBoxOffOn(new List<Control> { gTextBoxCompletedFrom, gTextBoxCompletedTo },
-                ref cntCompleted, gButtonCompletedAll, new List<PictureBox> { });
         }
 
         private void gButtonTopicSelectAll_Click(object sender, EventArgs e)

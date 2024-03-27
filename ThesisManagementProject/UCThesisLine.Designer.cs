@@ -69,6 +69,7 @@
             gButtonStar.ImageSize = new Size(25, 25);
             gButtonStar.Location = new Point(7, 4);
             gButtonStar.Name = "gButtonStar";
+            gButtonStar.PressedColor = SystemColors.ButtonFace;
             gButtonStar.ShadowDecoration.CustomizableEdges = customizableEdges2;
             gButtonStar.Size = new Size(40, 40);
             gButtonStar.TabIndex = 10;
@@ -144,7 +145,7 @@
             gTextBoxStatus.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             gTextBoxStatus.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             gTextBoxStatus.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            gTextBoxStatus.FillColor = Color.FromArgb(21, 134, 254);
+            gTextBoxStatus.FillColor = Color.Gray;
             gTextBoxStatus.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             gTextBoxStatus.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             gTextBoxStatus.ForeColor = Color.White;
@@ -191,6 +192,8 @@
             // 
             // gCirclePictureBoxCreator
             // 
+            gCirclePictureBoxCreator.BackColor = Color.Transparent;
+            gCirclePictureBoxCreator.FillColor = Color.Transparent;
             gCirclePictureBoxCreator.Image = Properties.Resources.PictureAvatarAccount;
             gCirclePictureBoxCreator.ImageRotate = 0F;
             gCirclePictureBoxCreator.Location = new Point(808, 4);
@@ -226,6 +229,7 @@
             Controls.Add(gButtonEdit);
             Controls.Add(gButtonDelete);
             Controls.Add(gButtonStar);
+            DoubleBuffered = true;
             Name = "UCThesisLine";
             Size = new Size(1130, 50);
             Click += UCThesisLine_Click;

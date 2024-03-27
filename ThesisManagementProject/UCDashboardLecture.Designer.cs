@@ -92,7 +92,7 @@
             gGradientButtonViewThesis.Size = new Size(117, 40);
             gGradientButtonViewThesis.TabIndex = 4;
             gGradientButtonViewThesis.Text = "View thesis";
-            gGradientButtonViewThesis.Click += gGradientButtonViewTopic_Click;
+            gGradientButtonViewThesis.Click += gGradientButtonViewThesis_Click;
             // 
             // gGradientButtonStatistical
             // 

@@ -8,28 +8,65 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
+using ThesisManagementProject.Models;
+using ThesisManagementProject.Process;
 
 namespace ThesisManagementProject
 {
     public partial class UCThesisList : UserControl
     {
+        private MyProcess myProcess = new MyProcess();
         public event EventHandler ThesisLineClicked;
+        public event EventHandler ThesisEditClicked;
         public event EventHandler ThesisDeleteClicked;
+        private bool selectAllField = true;
 
         public UCThesisList()
         {
             InitializeComponent();
+
+            myProcess.AddEnumsToComboBox(gComboBoxField, typeof(EField));
+            gComboBoxField.StartIndex = 0;
+            SetSelectAllField();
         }
 
         #region PROPERTIES
 
-        public Guna2GradientButton GButtonReset
+        public Guna2GradientButton GButtonFavorite
         {
-            get { return this.gGradientButtonReset; }
+            get { return this.gGradientButtonTag; }
         }
         public Guna2GradientButton GButtonTopic
         {
             get { return this.gGradientButtonThesisTopic; }
+        }
+        public Guna2GradientButton GButtonStatus
+        {
+            get { return this.gGradientButtonStatus; }
+        }
+        public Guna2GradientButton GButtonThesisCode
+        {
+            get { return this.gGradientButtonThesisCode; }
+        }
+        public Guna2GradientButton GButtonCreator
+        {
+            get { return this.gGradientButtonCreator; }
+        }
+        public Guna2TextBox GTextBoxSearch
+        {
+            get { return this.gTextBoxSearch; }
+        }
+        public bool SelectAllField
+        {
+            get { return this.selectAllField; }
+        }
+        public Guna2Button GButtonFieldFilter
+        {
+            get { return this.gButtonTopicSelectAll; }
+        }
+        public Guna2ComboBox GComboBoxField
+        {
+            get { return this.gComboBoxField; }
         }
 
         #endregion
@@ -38,17 +75,34 @@ namespace ThesisManagementProject
 
         public void Clear()
         {
-            flpDataView.Controls.Clear();
+            flpThesisList.Controls.Clear();
         }
         public void AddThesis(UCThesisLine thesisLine)
         {
             thesisLine.ThesisLineClicked += ThesisLine_Clicked;
             thesisLine.ThesisDeleteClicked += ThesisDelete_Clicked;
-            flpDataView.Controls.Add(thesisLine);
+            flpThesisList.Controls.Add(thesisLine);
         }
         public void SetNumThesis(int num)
         {
             lblNumThesis.Text = num.ToString();
+        }
+        public void SetSelectAllField()
+        {
+            selectAllField = !selectAllField;
+
+            gComboBoxField.Enabled = selectAllField;
+            gPictureBoxField.Enabled = selectAllField;
+            if (selectAllField)
+            {
+                gButtonTopicSelectAll.Image = Properties.Resources.PicItemOn;
+                gPictureBoxField.BackColor = Color.White;
+            }
+            else
+            {
+                gButtonTopicSelectAll.Image = Properties.Resources.PicItemOff;
+                gPictureBoxField.BackColor = SystemColors.ControlLight;
+            }
         }
 
         #endregion
@@ -73,6 +127,14 @@ namespace ThesisManagementProject
         {
             ThesisLineClicked?.Invoke(this, e);
         }
+        public virtual void ThesisEdit_Clicked(object sender, EventArgs e)
+        {
+            OnThesisEditClicked(EventArgs.Empty);
+        }
+        public virtual void OnThesisEditClicked(EventArgs e)
+        {
+            ThesisEditClicked?.Invoke(this, e);
+        }
         public virtual void ThesisDelete_Clicked(object sender, EventArgs e)
         {
             OnThesisDeleteClicked(EventArgs.Empty);
@@ -80,10 +142,6 @@ namespace ThesisManagementProject
         public virtual void OnThesisDeleteClicked(EventArgs e)
         {
             ThesisDeleteClicked?.Invoke(this, e);
-        }
-        private void gGradientButtonReset_Click(object sender, EventArgs e)
-        {
-
         }
 
         #endregion

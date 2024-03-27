@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ThesisManagementProject.Database;
 using ThesisManagementProject.Models;
+using ThesisManagementProject.Process;
 
 namespace ThesisManagementProject
 {
     public partial class FDisplayMain : Form
     {
+        private MyProcess myProcess = new MyProcess();
         UCDisplayLecture uCDisplayLecture = new UCDisplayLecture();
         UCDisplayStudent uCDisplayStudent = new UCDisplayStudent();
         UCDisplayWelcome uCDisplayWelcome = new UCDisplayWelcome();
@@ -29,6 +31,7 @@ namespace ThesisManagementProject
             gPanelDisplay.Controls.Add(uCDisplayWelcome);
 
             uCDisplayWelcome.GGradientButtonLecture.Click += DWelcomeButtonLecture_Click;
+            uCDisplayWelcome.GGradientButtonStudent.Click += DWelcomeButtonStudent_Click;
             uCDisplayWelcome.GGradientButtonRegister.Click += DWelcomeButtonRegister_Click;
             uCDisplayWelcome.GButtonLogin.Click += DWelcomeButtonToLogin_Click;
 
@@ -66,7 +69,17 @@ namespace ThesisManagementProject
 
         private void DWelcomeButtonLecture_Click(object sender, EventArgs e)
         {
+            Lecture lecture = new Lecture();
+            lecture.IdAccount = "242200001";
+            uCDisplayLecture.SetInformation(lecture);
             SetDisplay(uCDisplayLecture);
+        }
+        private void DWelcomeButtonStudent_Click(object sender, EventArgs e)
+        {
+            Student student = new Student();
+            student.IdAccount = "243300002";
+            uCDisplayStudent.SetInformation(student);
+            SetDisplay(uCDisplayStudent);
         }
         private void DWelcomeButtonRegister_Click(object sender, EventArgs e)
         {

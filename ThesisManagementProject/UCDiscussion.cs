@@ -8,11 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ThesisManagementProject.Database;
+using ThesisManagementProject.Process;
 
 namespace ThesisManagementProject
 {
     public partial class UCDiscussion : UserControl
     {
+        private MyProcess myProcess = new MyProcess();
         UCDiscussionView uCDiscussionView = new UCDiscussionView();
         UCDiscussionStatistical uCDiscussionStatistical = new UCDiscussionStatistical();
 
@@ -28,33 +31,17 @@ namespace ThesisManagementProject
 
             gGradientButtonDiscuss_Click(new object(), new EventArgs());
         }
-        private void ButtonStandardColor(Guna2GradientButton button)
-        {
-            button.FillColor = SystemColors.ControlLight;
-            button.FillColor2 = SystemColors.ButtonFace;
-            button.ForeColor = Color.Black;
-            button.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-        }
-
-        private void ButtonSettingColor(Guna2GradientButton button)
-        {
-            button.FillColor = Color.FromArgb(94, 148, 255);
-            button.FillColor2 = Color.FromArgb(255, 77, 165);
-            button.ForeColor = Color.White;
-            button.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-        }
-
         private void AllButtonStandardColor()
         {
-            ButtonStandardColor(gGradientButtonDiscuss);
-            ButtonStandardColor(gGradientButtonStatistical);
-            ButtonStandardColor(gGradientButtonResources);
+            myProcess.ButtonStandardColor(gGradientButtonDiscuss);
+            myProcess.ButtonStandardColor(gGradientButtonStatistical);
+            myProcess.ButtonStandardColor(gGradientButtonResources);
         }
 
         private void gGradientButtonDiscuss_Click(object sender, EventArgs e)
         {
             AllButtonStandardColor();
-            ButtonSettingColor(gGradientButtonDiscuss);
+            myProcess.ButtonSettingColor(gGradientButtonDiscuss);
             gPanelDataView.Controls.Clear();
 
             uCDiscussionView.Clear();
@@ -68,7 +55,7 @@ namespace ThesisManagementProject
         private void gGradientButtonStatistical_Click(object sender, EventArgs e)
         {
             AllButtonStandardColor();
-            ButtonSettingColor(gGradientButtonStatistical);
+            myProcess.ButtonSettingColor(gGradientButtonStatistical);
             gPanelDataView.Controls.Clear();
             gPanelDataView.Controls.Add(uCDiscussionStatistical);
         }
@@ -76,7 +63,7 @@ namespace ThesisManagementProject
         private void gGradientButtonResources_Click(object sender, EventArgs e)
         {
             AllButtonStandardColor();
-            ButtonSettingColor(gGradientButtonResources);
+            myProcess.ButtonSettingColor(gGradientButtonResources);
             UCDiscussionResource uCDescussionResource = new UCDiscussionResource();
             gPanelDataView.Controls.Clear();
             gPanelDataView.Controls.Add(uCDescussionResource);

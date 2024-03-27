@@ -16,7 +16,9 @@ namespace ThesisManagementProject
 {
     public partial class UCThesisLine : UserControl
     {
+        private MyProcess myProcess = new MyProcess();
         public event EventHandler ThesisLineClicked;
+        public event EventHandler ThesisEditClicked;
         public event EventHandler ThesisDeleteClicked;
 
         private Thesis thesis = new Thesis();
@@ -39,15 +41,15 @@ namespace ThesisManagementProject
         }
         private void UserControlLoad()
         {
-            MyProcess.SetItemFavorite(gButtonStar, thesis.IsFavorite);
+            myProcess.SetItemFavorite(gButtonStar, thesis.IsFavorite);
 
-            lblThesisTopic.Text = MyProcess.FormatStringLength(thesis.Topic, 45);
-            gTextBoxStatus.Text = (MyProcess.ComparePublished(thesis.PublishDate)) ? ("Published") : ("Unpublish");
+            lblThesisTopic.Text = myProcess.FormatStringLength(thesis.Topic, 45);
+            gTextBoxStatus.Text = thesis.Status.ToString();
+            gTextBoxStatus.FillColor = thesis.GetStatusColor();
             gTextBoxThesisCode.Text = thesis.IdThesis;
-            gCirclePictureBoxCreator.Image = MyProcess.NameToImage(creator.AvatarName);
+            gCirclePictureBoxCreator.Image = myProcess.NameToImage(creator.AvatarName);
             lblCreator.Text = creator.FullName;
         }
-
         private void SetColor(Color color)
         {
             this.BackColor = color;
@@ -95,8 +97,13 @@ namespace ThesisManagementProject
         private void gButtonEdit_Click(object sender, EventArgs e)
         {
             FThesisEdit fThesisEdit = new FThesisEdit();
-            fThesisEdit.UpdateThesis(thesisDAO.SelectOnly(gTextBoxThesisCode.Text));
+            fThesisEdit.InitUserControl(creator, thesis);
             fThesisEdit.ShowDialog();
+            OnThesisEditClicked(EventArgs.Empty);
+        }
+        public virtual void OnThesisEditClicked(EventArgs e)
+        {
+            ThesisEditClicked?.Invoke(this, e);
         }
 
         private void gButtonDelete_Click(object sender, EventArgs e)
@@ -122,7 +129,7 @@ namespace ThesisManagementProject
         {
             thesis.IsFavorite = !thesis.IsFavorite;
 
-            MyProcess.SetItemFavorite(gButtonStar, thesis.IsFavorite);
+            myProcess.SetItemFavorite(gButtonStar, thesis.IsFavorite);
             thesisDAO.SQLExecuteByCommand(string.Format("Update " + MyDatabase.DBThesis + " Set isfavorite = {0} Where idthesis = '{1}'",
                                     (thesis.IsFavorite)?(1):(0), thesis.IdThesis));
             

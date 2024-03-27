@@ -55,7 +55,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             gButtonCancel = new Guna.UI2.WinForms.Guna2Button();
-            gGradientButtonCreate = new Guna.UI2.WinForms.Guna2GradientButton();
+            gButtonCreateOrEdit = new Guna.UI2.WinForms.Guna2GradientButton();
             gPictureBoxFaculty = new Guna.UI2.WinForms.Guna2PictureBox();
             gComboBoxField = new Guna.UI2.WinForms.Guna2ComboBox();
             lblDescription = new Label();
@@ -112,27 +112,27 @@
             gButtonCancel.TabIndex = 8;
             gButtonCancel.Text = "Cancel";
             // 
-            // gGradientButtonCreate
+            // gButtonCreateOrEdit
             // 
-            gGradientButtonCreate.BackColor = Color.Transparent;
-            gGradientButtonCreate.BorderRadius = 7;
-            gGradientButtonCreate.CustomizableEdges = customizableEdges3;
-            gGradientButtonCreate.DisabledState.BorderColor = Color.DarkGray;
-            gGradientButtonCreate.DisabledState.CustomBorderColor = Color.DarkGray;
-            gGradientButtonCreate.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            gGradientButtonCreate.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
-            gGradientButtonCreate.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            gGradientButtonCreate.FillColor = Color.FromArgb(2, 0, 214);
-            gGradientButtonCreate.FillColor2 = Color.FromArgb(94, 148, 255);
-            gGradientButtonCreate.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            gGradientButtonCreate.ForeColor = Color.White;
-            gGradientButtonCreate.Location = new Point(1012, 673);
-            gGradientButtonCreate.Name = "gGradientButtonCreate";
-            gGradientButtonCreate.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            gGradientButtonCreate.Size = new Size(100, 35);
-            gGradientButtonCreate.TabIndex = 7;
-            gGradientButtonCreate.Text = "Create";
-            gGradientButtonCreate.Click += gGradientButtonCreate_Click;
+            gButtonCreateOrEdit.BackColor = Color.Transparent;
+            gButtonCreateOrEdit.BorderRadius = 7;
+            gButtonCreateOrEdit.CustomizableEdges = customizableEdges3;
+            gButtonCreateOrEdit.DisabledState.BorderColor = Color.DarkGray;
+            gButtonCreateOrEdit.DisabledState.CustomBorderColor = Color.DarkGray;
+            gButtonCreateOrEdit.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            gButtonCreateOrEdit.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            gButtonCreateOrEdit.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            gButtonCreateOrEdit.FillColor = Color.FromArgb(2, 0, 214);
+            gButtonCreateOrEdit.FillColor2 = Color.FromArgb(94, 148, 255);
+            gButtonCreateOrEdit.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gButtonCreateOrEdit.ForeColor = Color.White;
+            gButtonCreateOrEdit.Location = new Point(1012, 673);
+            gButtonCreateOrEdit.Name = "gButtonCreateOrEdit";
+            gButtonCreateOrEdit.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            gButtonCreateOrEdit.Size = new Size(100, 35);
+            gButtonCreateOrEdit.TabIndex = 7;
+            gButtonCreateOrEdit.Text = "Create";
+            gButtonCreateOrEdit.Click += gButtonCreateOrEdit_Click;
             // 
             // gPictureBoxFaculty
             // 
@@ -553,7 +553,7 @@
             BackColor = SystemColors.ButtonFace;
             Controls.Add(gShadowPanelTechFunc);
             Controls.Add(gShadowPanelTopic);
-            Controls.Add(gGradientButtonCreate);
+            Controls.Add(gButtonCreateOrEdit);
             Controls.Add(gButtonCancel);
             Name = "UCThesisCreate";
             Size = new Size(1180, 750);
@@ -574,7 +574,7 @@
 
         #endregion
         private Guna.UI2.WinForms.Guna2Button gButtonCancel;
-        private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonCreate;
+        private Guna.UI2.WinForms.Guna2GradientButton gButtonCreateOrEdit;
         private Label lblDescription;
         private Guna.UI2.WinForms.Guna2TextBox gTextBoxDescription;
         private Guna.UI2.WinForms.Guna2ShadowPanel gShadowPanelTopic;
