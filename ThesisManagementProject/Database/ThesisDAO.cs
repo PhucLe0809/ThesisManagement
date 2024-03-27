@@ -91,7 +91,11 @@ namespace ThesisManagementProject.Database
             string requirements = row["requirements"].ToString();
             string idCreator = row["idcreator"].ToString();
             bool isFavorite = row["isfavorite"].ToString() == "True" ? true : false;
+<<<<<<< HEAD
             EThesisStatus status = myProcess.GetEnumFromDisplayName<EThesisStatus>(row["status"].ToString());
+=======
+            EThesisStatus status = MyProcess.GetEnumFromDisplayName<EThesisStatus>(row["status"].ToString());
+>>>>>>> fc16c9125eadc08d3b2f0e878131e290d403669f
 
             Thesis thesis = new Thesis(idThesis, topic, field, level, maxMembers, description, publishDate, technology,
                                         functions, requirements, idCreator, isFavorite, status);

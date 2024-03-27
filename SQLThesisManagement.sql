@@ -41,7 +41,11 @@ create table Thesis (
     requirements text not null,
 	idcreator nvarchar(50) not null,
 	isfavorite bit not null default 0,
+<<<<<<< HEAD
 	status nvarchar(50) not null,
+=======
+	status nvarchar(50) not null
+>>>>>>> fc16c9125eadc08d3b2f0e878131e290d403669f
 );
 -- drop table Thesis
 
@@ -158,7 +162,11 @@ VALUES ('244400001',
         'Technologies include Artificial Intelligence, IoT, Blockchain, Big Data, and Machine Learning for production processes and resource management.', 
         'Functions include weather monitoring, crop management, sensor data recording, yield prediction, schedule and resource management, and farmer-market connectivity.', 
         'Requirements: Agricultural knowledge, programming skills, understanding of AI and data analysis, logical thinking, and creativity in technology application in agriculture.',
+<<<<<<< HEAD
 		'242200001', 1, 'Registered');
+=======
+		'242200001', 1, 'Published');
+>>>>>>> fc16c9125eadc08d3b2f0e878131e290d403669f
 
 -- Thesis 2
 INSERT INTO Thesis 
@@ -172,7 +180,11 @@ VALUES ('244400002',
         'Technologies include Machine Learning, Deep Learning, Natural Language Processing, and Pattern Recognition for analyzing network traffic and identifying potential threats.', 
         'Functions include anomaly detection, intrusion detection, malware analysis, threat intelligence integration, and automated response mechanisms.', 
         'Requirements: Strong understanding of cybersecurity principles, programming expertise in Python or Java, familiarity with network protocols and security tools, and analytical skills.',
+<<<<<<< HEAD
 		'242200001', 0, 'Registered');
+=======
+		'242200001', 0, 'Published');
+>>>>>>> fc16c9125eadc08d3b2f0e878131e290d403669f
 
 -- Thesis 3
 INSERT INTO Thesis 
@@ -186,7 +198,11 @@ VALUES ('244400003',
         'Technologies include Predictive Analytics, Machine Learning, Data Visualization, and Time Series Analysis for analyzing equipment sensor data and predicting maintenance needs.', 
         'Functions include data preprocessing, model training, feature selection, anomaly detection, and maintenance schedule optimization.', 
         'Requirements: Understanding of manufacturing processes, proficiency in data analysis tools like Python or R, knowledge of statistical techniques, and familiarity with industrial sensors and IoT.',
+<<<<<<< HEAD
 		'242200001', 1, 'Processing');
+=======
+		'242200001', 1, 'Published');
+>>>>>>> fc16c9125eadc08d3b2f0e878131e290d403669f
 
 -- Thesis 4
 INSERT INTO Thesis 
@@ -200,7 +216,11 @@ VALUES ('244400004',
         'Technologies include Natural Language Processing, Machine Learning algorithms, and Chatbot frameworks for understanding user queries and generating appropriate responses.', 
         'Functions include intent recognition, context handling, response generation, and integration with backend systems.', 
         'Requirements: Proficiency in NLP libraries like NLTK or spaCy, experience in building chatbots using frameworks like Dialogflow or Rasa, and knowledge of RESTful APIs for backend integration.',
+<<<<<<< HEAD
 		'242200001', 0, 'Processing');
+=======
+		'242200001', 0, 'Published');
+>>>>>>> fc16c9125eadc08d3b2f0e878131e290d403669f
 
 -- Thesis 5
 INSERT INTO Thesis 
@@ -214,7 +234,11 @@ VALUES ('244400005',
         'Technologies include AWS, Azure, Google Cloud Platform, and Kubernetes for building scalable and resilient cloud architectures.', 
         'Functions include data migration, cluster management, performance optimization, security configuration, and cost monitoring.', 
         'Requirements: Familiarity with cloud platforms, experience in deploying and managing cloud services, understanding of networking and security principles, and knowledge of DevOps practices.',
+<<<<<<< HEAD
 		'242200001', 1, 'Completed');
+=======
+		'242200001', 1, 'Published');
+>>>>>>> fc16c9125eadc08d3b2f0e878131e290d403669f
 
 -- Thesis 6
 INSERT INTO Thesis 
@@ -285,6 +309,33 @@ VALUES ('244400010',
         'Functions include gesture recognition, object tracking, spatial mapping, user feedback analysis, and usability testing for AR interfaces.', 
         'Requirements: Proficiency in AR development frameworks, understanding of human-centered design principles, experience in UI/UX design, and creativity in AR content creation.',
 		'242200001', 0, 'Published');
+<<<<<<< HEAD
+=======
+
+-- INSERT ThesisStatus
+-- delete from ThesisStatus
+
+INSERT INTO ThesisStatus
+VALUES 
+('243300001', '244400001', 'Registered'),
+('243300002', '244400002', 'Processing'),
+('243300003', '244400003', 'Completed'),
+('243300004', '244400004', 'Registered'),
+('243300005', '244400005', 'Processing'),
+('243300006', '244400006', 'Completed'),
+('243300007', '244400007', 'Registered'),
+('243300008', '244400008', 'Processing'),
+('243300009', '244400009', 'Completed'),
+('243300010', '244400010', 'Registered');
+
+
+
+
+
+
+
+
+>>>>>>> fc16c9125eadc08d3b2f0e878131e290d403669f
 
 -- INSERT TABLE
 
