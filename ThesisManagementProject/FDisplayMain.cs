@@ -76,12 +76,9 @@ namespace ThesisManagementProject
         }
         private void DWelcomeButtonStudent_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             Student student = new Student();
             student.IdAccount = "243300002";
             uCDisplayStudent.SetInformation(student);
-=======
->>>>>>> fc16c9125eadc08d3b2f0e878131e290d403669f
             SetDisplay(uCDisplayStudent);
         }
         private void DWelcomeButtonRegister_Click(object sender, EventArgs e)

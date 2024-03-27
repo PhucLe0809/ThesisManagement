@@ -40,25 +40,7 @@ namespace ThesisManagementProject
 
             uCThesisCreate.GButtonCancel.Click += ButtonCancel_Clicked;
         }
-<<<<<<< HEAD
         private void ButtonCancel_Clicked(object sender, EventArgs e)
-=======
-
-        private void gGradientButtonSave_Click(object sender, EventArgs e)
-        {
-            this.thesis = new Thesis(this.thesis.IdThesis, gTextBoxTopic.Text,
-                (EField)gComboBoxField.SelectedItem, (ELevel)gComboBoxLevel.SelectedItem,
-                MyProcess.ConvertStringToInt32(gTextBoxMembers.Text), gTextBoxDescription.Text,
-                gDateTimePickerPublish.Value, gTextBoxTechnology.Text, gTextBoxFunctions.Text, gTextBoxRequirements.Text,
-                this.thesis.IdCreator, this.thesis.IsFavorite, this.thesis.Status);
-            
-            thesisDAO.Update(thesis);
-
-            this.Close();
-        }
-
-        private void gButtonCancel_Click(object sender, EventArgs e)
->>>>>>> fc16c9125eadc08d3b2f0e878131e290d403669f
         {
             this.Close();
         }

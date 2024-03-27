@@ -36,10 +36,6 @@ namespace ThesisManagementProject
         {
             get { return this.gGradientButtonTag; }
         }
-        public Guna2GradientButton GButtonFavorite
-        {
-            get { return this.GButtonFavorite; }
-        }
         public Guna2GradientButton GButtonTopic
         {
             get { return this.gGradientButtonThesisTopic; }
@@ -56,7 +52,6 @@ namespace ThesisManagementProject
         {
             get { return this.gGradientButtonCreator; }
         }
-<<<<<<< HEAD
         public Guna2TextBox GTextBoxSearch
         {
             get { return this.gTextBoxSearch; }
@@ -73,8 +68,6 @@ namespace ThesisManagementProject
         {
             get { return this.gComboBoxField; }
         }
-=======
->>>>>>> fc16c9125eadc08d3b2f0e878131e290d403669f
 
         #endregion
 

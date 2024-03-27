@@ -136,11 +136,7 @@ namespace ThesisManagementProject
                                                     "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (result == DialogResult.OK)
                 {
-<<<<<<< HEAD
                     thesisDAO.SQLExecuteByCommand(string.Format("UPDATE {0} SET status = '{1}' where idteam = '{2}' and idthesis = '{3}'",
-=======
-                    thesisDAO.SQLExecuteByCommand(string.Format("update {0} set sta = '{1}' where idaccount = '{2}' and idthesis = '{3}'",
->>>>>>> fc16c9125eadc08d3b2f0e878131e290d403669f
                         MyDatabase.DBThesisStatus, EThesisStatus.Processing.ToString(), line.GetPeople.IdAccount, thesis.IdThesis));
                 }
             }

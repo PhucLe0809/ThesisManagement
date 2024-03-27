@@ -3,25 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\thanh\\Desktop\\ThesisManagementProject\\",
   "Documents": [
     {
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|c:\\users\\thanh\\desktop\\thesismanagementproject\\thesismanagementproject\\ucthesissolveregistered.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|solutionrelative:thesismanagementproject\\ucthesissolveregistered.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|c:\\users\\thanh\\desktop\\thesismanagementproject\\thesismanagementproject\\ucteamminiline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|C:\\Users\\thanh\\Desktop\\ThesisManagementProject\\thesismanagementproject\\ucteamminiline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|solutionrelative:thesismanagementproject\\ucteamminiline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|c:\\users\\thanh\\desktop\\thesismanagementproject\\thesismanagementproject\\ucthesissolveregistered.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|C:\\Users\\thanh\\Desktop\\ThesisManagementProject\\thesismanagementproject\\ucthesissolveregistered.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|solutionrelative:thesismanagementproject\\ucthesissolveregistered.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-      "AbsoluteMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|c:\\users\\thanh\\desktop\\thesismanagementproject\\thesismanagementproject\\ucthesislist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|solutionrelative:thesismanagementproject\\ucthesislist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|c:\\users\\thanh\\desktop\\thesismanagementproject\\thesismanagementproject\\ucthesislist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|solutionrelative:thesismanagementproject\\ucthesislist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
->>>>>>> fc16c9125eadc08d3b2f0e878131e290d403669f
+      "AbsoluteMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|c:\\users\\thanh\\desktop\\thesismanagementproject\\thesismanagementproject\\ucthesissolveregistered.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|solutionrelative:thesismanagementproject\\ucthesissolveregistered.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,25 +22,16 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "UCThesisSolveRegistered.cs [Design]",
               "DocumentMoniker": "C:\\Users\\thanh\\Desktop\\ThesisManagementProject\\ThesisManagementProject\\UCThesisSolveRegistered.cs",
               "RelativeDocumentMoniker": "ThesisManagementProject\\UCThesisSolveRegistered.cs",
               "ToolTip": "C:\\Users\\thanh\\Desktop\\ThesisManagementProject\\ThesisManagementProject\\UCThesisSolveRegistered.cs [Design]",
               "RelativeToolTip": "ThesisManagementProject\\UCThesisSolveRegistered.cs [Design]",
-=======
-              "DocumentIndex": 1,
-              "Title": "UCThesisList.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\thanh\\Desktop\\ThesisManagementProject\\ThesisManagementProject\\UCThesisList.cs",
-              "RelativeDocumentMoniker": "ThesisManagementProject\\UCThesisList.cs",
-              "ToolTip": "C:\\Users\\thanh\\Desktop\\ThesisManagementProject\\ThesisManagementProject\\UCThesisList.cs [Design]",
-              "RelativeToolTip": "ThesisManagementProject\\UCThesisList.cs [Design]",
->>>>>>> fc16c9125eadc08d3b2f0e878131e290d403669f
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-27T08:45:08.782Z",
               "IsPinned": true,
@@ -57,13 +39,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "UCThesisSolveRegistered.cs",
               "DocumentMoniker": "C:\\Users\\thanh\\Desktop\\ThesisManagementProject\\ThesisManagementProject\\UCThesisSolveRegistered.cs",
               "RelativeDocumentMoniker": "ThesisManagementProject\\UCThesisSolveRegistered.cs",
               "ToolTip": "C:\\Users\\thanh\\Desktop\\ThesisManagementProject\\ThesisManagementProject\\UCThesisSolveRegistered.cs",
               "RelativeToolTip": "ThesisManagementProject\\UCThesisSolveRegistered.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAvAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-27T09:02:40.915Z",
               "IsPinned": true,
@@ -71,7 +53,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "UCTeamMiniLine.cs [Design]",
               "DocumentMoniker": "C:\\Users\\thanh\\Desktop\\ThesisManagementProject\\ThesisManagementProject\\UCTeamMiniLine.cs",
               "RelativeDocumentMoniker": "ThesisManagementProject\\UCTeamMiniLine.cs",
@@ -81,20 +63,6 @@
               "WhenOpened": "2024-03-27T09:05:57.059Z",
               "IsPinned": true,
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UCThesisList.cs",
-              "DocumentMoniker": "C:\\Users\\thanh\\Desktop\\ThesisManagementProject\\ThesisManagementProject\\UCThesisList.cs",
-              "RelativeDocumentMoniker": "ThesisManagementProject\\UCThesisList.cs",
-              "ToolTip": "C:\\Users\\thanh\\Desktop\\ThesisManagementProject\\ThesisManagementProject\\UCThesisList.cs",
-              "RelativeToolTip": "ThesisManagementProject\\UCThesisList.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-26T00:38:27.857Z",
-              "IsPinned": true,
-              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
