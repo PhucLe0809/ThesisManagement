@@ -1,31 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="FStudentDetails.cs">
+    <Compile Update="Forms\FStudentDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FDisplayMain.cs">
+    <Compile Update="Forms\FDisplayMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FStudentFilter.cs">
+    <Compile Update="Forms\FStudentFilter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FTeamCreate.cs">
+    <Compile Update="Forms\FTeamCreate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FTeamFilter.cs">
+    <Compile Update="Forms\FTeamFilter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FThesisEdit.cs">
+    <Compile Update="Forms\FThesisEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FThesisFilter.cs">
+    <Compile Update="Forms\FThesisFilter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FMessageSeeAll.cs">
+    <Compile Update="Forms\FMessageSeeAll.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FTeamDetails.cs">
+    <Compile Update="Forms\FTeamDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\FThesisView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UCAccountInformation.cs">
@@ -98,6 +101,9 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UCThesisList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCThesisMiniBoard.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UCThesisMiniLine.cs">

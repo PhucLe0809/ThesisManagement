@@ -443,6 +443,16 @@ namespace ThesisManagementProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PicIteamGoto {
+            get {
+                object obj = ResourceManager.GetObject("PicIteamGoto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PicIteamGradientLinked {
             get {
                 object obj = ResourceManager.GetObject("PicIteamGradientLinked", resourceCulture);
@@ -556,6 +566,16 @@ namespace ThesisManagementProject.Properties {
         internal static System.Drawing.Bitmap PicItemFilter {
             get {
                 object obj = ResourceManager.GetObject("PicItemFilter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PicItemGotoGradient {
+            get {
+                object obj = ResourceManager.GetObject("PicItemGotoGradient", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -996,6 +1016,16 @@ namespace ThesisManagementProject.Properties {
         internal static System.Drawing.Bitmap PictureEditPencil {
             get {
                 object obj = ResourceManager.GetObject("PictureEditPencil", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PictureEmptyState {
+            get {
+                object obj = ResourceManager.GetObject("PictureEmptyState", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

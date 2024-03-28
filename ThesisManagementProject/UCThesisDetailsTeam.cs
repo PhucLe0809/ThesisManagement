@@ -16,6 +16,7 @@ namespace ThesisManagementProject
     {
         private MyProcess myProcess = new MyProcess();
         private Team team = new Team();
+        private Thesis thesis = new Thesis();
 
         public UCThesisDetailsTeam()
         {
@@ -25,12 +26,19 @@ namespace ThesisManagementProject
         {
             InitializeComponent();
 
-            SetInformation(team);
+            SetInformation(team, new Thesis());
+        }
+        public UCThesisDetailsTeam(Team team, Thesis thesis)
+        {
+            InitializeComponent();
+
+            SetInformation(team, thesis);
         }
 
-        public void SetInformation(Team team)
+        public void SetInformation(Team team, Thesis thesis)
         {
             this.team = team;
+            this.thesis = thesis;
             InitUserControl();
         }
         private void InitUserControl()
@@ -42,7 +50,7 @@ namespace ThesisManagementProject
         }
         private void ShowTeam()
         {
-            FTeamDetails fTeamDetails = new FTeamDetails(team);
+            FTeamDetails fTeamDetails = new FTeamDetails(team, thesis);
             fTeamDetails.ShowDialog();
         }
 

@@ -59,7 +59,7 @@ namespace ThesisManagementProject
 
         private void gShadowPanelBack_Click(object sender, EventArgs e)
         {
-            FTeamDetails fTeamDetails = new FTeamDetails(team);
+            FTeamDetails fTeamDetails = new FTeamDetails(team, new Thesis());
             fTeamDetails.ShowDialog();
         }
         private void gButtonAdd_Click(object sender, EventArgs e)

@@ -57,6 +57,21 @@ namespace ThesisManagementProject.Process
             }
         }
 
+        public Guna2PictureBox CreatePictureBoxEmptyState()
+        {
+            Guna2PictureBox pictureBox = new Guna2PictureBox();
+
+            pictureBox.ImageRotate = 0F;
+            pictureBox.Image = Properties.Resources.PictureEmptyState;
+            pictureBox.Name = "pictureBox";
+            pictureBox.Size = new Size(399, 266);
+            pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox.TabIndex = 0;
+            pictureBox.TabStop = false;
+
+            return pictureBox;
+        }
+
         #region GenIDbyClassify
 
         private int GetLastestID(string field, string command)

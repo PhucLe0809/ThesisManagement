@@ -60,12 +60,12 @@ namespace ThesisManagementProject
             gTextBoxStatus.Text = thesis.Status.ToString();
             gTextBoxStatus.FillColor = thesis.GetStatusColor();
             gTextBoxTopic.Text = thesis.Topic;
-            gComboBoxField.SelectedItem = thesis.Field;
-            gComboBoxLevel.SelectedItem = thesis.Level;
-            gComboBoxMembers.SelectedItem = thesis.MaxMembers.ToString();
+            gTextBoxField.Text = thesis.Field.ToString();
+            gTextBoxLevel.Text = thesis.Level.ToString();
+            gTextBoxMembers.Text = thesis.MaxMembers.ToString();
             gTextBoxDescription.Text = thesis.Description;
 
-            SetTeamAndMode(thesis.Status == EThesisStatus.Processing || thesis.Status == EThesisStatus.Completed);
+            SetThesisDetailsMode();
         }
         private void SetControlsReadOnly(bool flagReadOnly)
         {
@@ -74,14 +74,17 @@ namespace ThesisManagementProject
             Color colorComboBox = flagReadOnly ? Color.Silver : Color.White;
             myProcess.SetTextBoxReadOnly(gTextBoxTopic, thickness, colors, flagReadOnly);
             myProcess.SetTextBoxReadOnly(gTextBoxDescription, thickness, colors, flagReadOnly);
-
-            myProcess.SetComboBoxReadOnly(gComboBoxField, thickness, colorComboBox, flagReadOnly);
-            gPictureBoxFaculty.BackColor = colorComboBox;
-            myProcess.SetComboBoxReadOnly(gComboBoxLevel, thickness, colorComboBox, flagReadOnly);
-            gPictureBoxLevel.BackColor = colorComboBox;
-            myProcess.SetComboBoxReadOnly(gComboBoxMembers, thickness, colorComboBox, flagReadOnly);
+            myProcess.SetTextBoxReadOnly(gTextBoxField, thickness, colors, flagReadOnly);
+            myProcess.SetTextBoxReadOnly(gTextBoxLevel, thickness, colors, flagReadOnly);
+            myProcess.SetTextBoxReadOnly(gTextBoxMembers, thickness, colors, flagReadOnly);
         }
-        private void SetTeamAndMode(bool flagShow)
+        private void SetThesisDetailsMode()
+        {
+            bool flagShow = thesis.Status == EThesisStatus.Processing || thesis.Status == EThesisStatus.Completed;
+            SetTeamMode(flagShow);
+            SetViewButtonMode(flagShow);
+        }
+        private void SetTeamMode(bool flagShow)
         {
             gShadowPanelTeam.Controls.Clear();
 
@@ -93,16 +96,23 @@ namespace ThesisManagementProject
                 Team team = teamDAO.SelectOnly(table.Rows[0]["idteam"].ToString());
                 if (team != null)
                 {
-                    UCThesisDetailsTeam showTeam = new UCThesisDetailsTeam(team);
+                    UCThesisDetailsTeam showTeam = new UCThesisDetailsTeam(team, thesis);
                     showTeam.Location = new Point(5, 5);
                     gShadowPanelTeam.Controls.Add(showTeam);
-
-                    gGradientButtonRegistered.Hide();
-                    gGradientButtonGeneral.PerformClick();
                 }
+            }
+        }
+        private void SetViewButtonMode(bool flagShow) 
+        { 
+            if (flagShow)
+            {
+                gGradientButtonRegistered.Hide();
+                gGradientButtonGeneral.Show();
+                gGradientButtonGeneral.PerformClick();
             }
             else
             {
+                gGradientButtonGeneral.Hide();
                 gGradientButtonRegistered.Show();
                 gGradientButtonRegistered.PerformClick();
             }
@@ -120,16 +130,6 @@ namespace ThesisManagementProject
         public Guna2Button GButtonBack
         {
             get { return this.gButtonBack; }
-        }
-
-        #endregion
-
-        #region EVENT FORM
-
-        private void UCThesisDetails_Load(object sender, EventArgs e)
-        {
-            myProcess.AddEnumsToComboBox(gComboBoxField, typeof(EField));
-            myProcess.AddEnumsToComboBox(gComboBoxLevel, typeof(ELevel));
         }
 
         #endregion
@@ -209,7 +209,7 @@ namespace ThesisManagementProject
                                             MyDatabase.DBThesisStatus, thesis.Status.ToString(), thesis.IdThesis, team.IDTeam);
                     dBConnection.ExecuteQuery(command, "Accept", false);
 
-                    SetTeamAndMode(thesis.Status == EThesisStatus.Processing || thesis.Status == EThesisStatus.Completed);
+                    SetThesisDetailsMode();
                     gTextBoxStatus.Text = thesis.Status.ToString();
                     gTextBoxStatus.FillColor = thesis.GetStatusColor();
                 }

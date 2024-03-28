@@ -232,6 +232,9 @@
   <data name="PicInLineStar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PicInLineStar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PicIteamGoto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicIteamGoto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PicIteamGradientLinked" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PicIteamGradientLinked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -267,6 +270,9 @@
   </data>
   <data name="PicItemFilter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PicItemFilter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PicItemGotoGradient" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicItemGotoGradient.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PicItemGradientCopy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PicItemGradientCopy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -399,6 +405,9 @@
   </data>
   <data name="PictureEditPencil" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PictureEditPencil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PictureEmptyState" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PictureEmptyState.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PictureLogOut" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PictureLogOut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
