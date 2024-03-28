@@ -137,6 +137,8 @@ namespace ThesisManagementProject
         }
         private void DRegisterBack_Click(object sender, EventArgs e)
         {
+            uCDisplayRegister.FlagCheck = true;
+            uCDisplayRegister.RunCheckInformation();
             SetDisplay(uCDisplayWelcome);
         }
 

@@ -10,14 +10,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ThesisManagementProject.Database;
 using ThesisManagementProject.Models;
+using ThesisManagementProject.Process;
 
 namespace ThesisManagementProject
 {
     public partial class UCPeopleMiniLine : UserControl
     {
         public event EventHandler ThesisMiniLineClicked;
+        private MyProcess myProcess = new MyProcess();
         private People people = new People();
-        private PeopleDAO peopleDAO = new PeopleDAO();
+        private Color uCBackColor = Color.White;
+        private Color uCHoverColor = SystemColors.ButtonFace;
 
         public UCPeopleMiniLine()
         {
@@ -27,8 +30,7 @@ namespace ThesisManagementProject
         {
             InitializeComponent();
 
-            this.people = people;
-            UserControlLoad();
+            SetInformation(people);
         }
 
         #region PROPERTIES
@@ -46,22 +48,39 @@ namespace ThesisManagementProject
 
         #region FUNCTIONS
 
-        private void UserControlLoad()
+        public void SetInformation(People people)
         {
-            lblUserName.Text = people.Handle;
-            lblGender.Text = people.Gender.ToString();
+            this.people = people;
+            InitUserControl();
         }
-
+        private void InitUserControl()
+        {
+            gCirclePictureBoxAvatar.Image = myProcess.NameToImage(people.AvatarName);
+            lblUserName.Text = people.Handle;
+            lblPeopleCode.Text = people.IdAccount;
+            gButtonAdd.Show();
+        }
         public void SetButtonAddImageNull()
         {
-            gButtonAdd.Image = null;
-            gButtonAdd.HoverState.Image = null;
-            gButtonAdd.Enabled = false;
+            gButtonAdd.Hide();
         }
+        public void SetBackGroundColor(Color color)
+        {
+            this.uCBackColor = color;
+            this.uCHoverColor = (this.BackColor == Color.White) ? SystemColors.ButtonFace : Color.White;
+            ExecuteBackGroundColor(color);
+        }
+        private void ExecuteBackGroundColor(Color color)
+        {
+            gShadowPanelBack.FillColor = color;
+            gCirclePictureBoxAvatar.BackColor = color;
+            lblUserName.BackColor = color;
+            lblPeopleCode.BackColor = color;
+        }
+
         private void ShowPeopleInformation()
         {
-            FStudentDetails fStudentDetails = new FStudentDetails();
-            fStudentDetails.UpdateStudent(peopleDAO.SelectOnlyByID(people.IdAccount));
+            FStudentDetails fStudentDetails = new FStudentDetails(people);
             fStudentDetails.ShowDialog();
         }
 
@@ -84,6 +103,15 @@ namespace ThesisManagementProject
         public virtual void OnThesisMiniLineClicked(EventArgs e)
         {
             ThesisMiniLineClicked?.Invoke(this, e);
+        }
+
+        private void gShadowPanelBack_MouseEnter(object sender, EventArgs e)
+        {
+            ExecuteBackGroundColor(uCHoverColor);
+        }
+        private void gShadowPanelBack_MouseLeave(object sender, EventArgs e)
+        {
+            ExecuteBackGroundColor(uCBackColor);
         }
 
         #endregion

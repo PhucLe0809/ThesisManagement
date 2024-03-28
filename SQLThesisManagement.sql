@@ -6,7 +6,7 @@
 use ThesisManagement
 go
 
--- drop table Account, Thesis, Team, ThesisStatus
+drop table Account, Thesis, Team, ThesisStatus
 
 -- CREATE TABLE ACCOUNT
 create table Account (
@@ -58,16 +58,26 @@ create table Team
 
 INSERT INTO Team
 VALUES 
-('245500001', '243300001', 'Team One', '2024-03-25', 'PicAvatarOne'),
-('245500001', '243300002', 'Team One', '2024-03-17', 'PicAvatarOne'),
-('245500002', '243300003', 'Team Two', '2024-03-18', 'PicAvatarTwo'),
-('245500002', '243300004', 'Team Two', '2024-03-20', 'PicAvatarTwo'),
-('245500003', '243300005', 'Team Three', '2024-03-05', 'PicAvatarThree'),
-('245500003', '243300006', 'Team Three', '2024-03-27', 'PicAvatarThree'),
-('245500004', '243300007', 'Team Four', '2024-03-27', 'PicAvatarDemoUser'),
-('245500005', '243300008', 'Team Five', '2024-03-27', 'PicAvatarFive'),
-('245500006', '243300009', 'Team Six', '2024-03-27', 'PicAvatarSix'),
-('245500007', '243300010', 'Team Seven', '2024-03-27', 'PicAvatarSeven');
+('245500001', '243300001', 'Code Crusaders', '2024-03-25', 'PicAvatarOne'),
+('245500001', '243300002', 'Code Crusaders', '2024-03-25', 'PicAvatarOne'),
+('245500001', '243300003', 'Code Crusaders', '2024-03-25', 'PicAvatarOne'),
+('245500001', '243300004', 'Code Crusaders', '2024-03-25', 'PicAvatarOne'),
+('245500001', '243300005', 'Code Crusaders', '2024-03-25', 'PicAvatarOne'),
+('245500002', '243300006', 'Digital Dynamos', '2024-03-26', 'PicAvatarTwo'),
+('245500002', '243300007', 'Digital Dynamos', '2024-03-26', 'PicAvatarTwo'),
+('245500002', '243300008', 'Digital Dynamos', '2024-03-26', 'PicAvatarTwo'),
+('245500003', '243300009', 'Byte Busters', '2024-03-27', 'PicAvatarThree'),
+('245500003', '243300010', 'Byte Busters', '2024-03-27', 'PicAvatarThree'),
+('245500004', '243300011', 'Tech Titans', '2024-03-28', 'PicAvatarDemoUser'),
+('245500004', '243300012', 'Tech Titans', '2024-03-28', 'PicAvatarDemoUser'),
+('245500005', '243300013', 'Cyber Savants', '2024-03-20', 'PicAvatarFive'),
+('245500005', '243300014', 'Cyber Savants', '2024-03-20', 'PicAvatarFive'),
+('245500006', '243300015', 'Data Wizards', '2024-03-21', 'PicAvatarSix'),
+('245500006', '243300016', 'Data Wizards', '2024-03-22', 'PicAvatarSix'),
+('245500007', '243300017', 'Innovation Squad', '2024-03-23', 'PicAvatarSeven'),
+('245500008', '243300018', 'Network Ninjas', '2024-03-24', 'PicAvatarEight'),
+('245500009', '243300019', 'Digital Mavericks', '2024-03-25', 'PicAvatarNine'),
+('245500010', '243300020', 'Pixel Pioneers', '2024-03-26', 'PicAvatarTen');
 
 -- CREATE TABLE THESISREGISTER
 create table ThesisStatus
@@ -84,9 +94,12 @@ VALUES
 ('245500002', '244400002', 'Registered'),
 ('245500003', '244400001', 'Registered'),
 ('245500004', '244400002', 'Registered'),
-('245500005', '244400003', 'Processing'),
-('245500006', '244400004', 'Processing'),
-('245500007', '244400005', 'Completed');
+('245500005', '244400001', 'Registered'),
+('245500006', '244400003', 'Registered'),
+('245500007', '244400003', 'Registered'),
+('245500008', '244400004', 'Processing'),
+('245500009', '244400005', 'Processing'),
+('245500010', '244400006', 'Completed');
 
 -- RENAME COLUM
 -- EXEC sp_rename 'Thesis.level', 'tslevel', 'COLUMN';
@@ -97,23 +110,23 @@ VALUES
     ('242200001', 'David Lee', '072352117212', '1995-03-15', 'Male', 'david', '0375676599', 'DavidL', 'Lecture', 
      'HCM City University of Technology and Education', 'Faculty of Information Technology', '5373538693', 'abc', 'PicAvatarOne'),
     ('242200002', 'Alice Johnson', '095216398243', '1994-08-22', 'Female', 'alice@gmail.com', '0652145893', 'AliceJ', 'Lecture', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '9236492347', 'xyz456', 'PicAvatarDemoUser'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '9236492347', 'xyz456', 'PicAvatarTwo'),
     ('242200003', 'John Smith', '093578641325', '1996-12-10', 'Male', 'john@gmail.com', '0845763214', 'JohnS', 'Lecture', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '1325678942', 'qwerty', 'PicAvatarDemoUser'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '1325678942', 'qwerty', 'PicAvatarThree'),
     ('242200004', 'Emily Brown', '086547932156', '1993-05-29', 'Female', 'emily@gmail.com', '0213546879', 'EmilyB', 'Lecture', 
      'HCM City University of Technology and Education', 'Faculty of Information Technology', '4287651293', 'pass123', 'PicAvatarDemoUser'),
     ('242200005', 'Michael Davis', '073859216843', '1997-09-17', 'Male', 'michael@gmail.com', '0397546821', 'MichaelD', 'Lecture', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '9284756123', 'secure789', 'PicAvatarDemoUser'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '9284756123', 'secure789', 'PicAvatarFive'),
     ('242200006', 'Sophia Taylor', '094621837595', '1992-11-05', 'Female', 'sophia@gmail.com', '0874651239', 'SophiaT', 'Lecture', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '3547829101', 'passpass', 'PicAvatarDemoUser'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '3547829101', 'passpass', 'PicAvatarSix'),
     ('242200007', 'William Clark', '085239614780', '1998-02-25', 'Male', 'william@gmail.com', '0987543210', 'WilliamC', 'Lecture', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '9134678251', 'abcxyz', 'PicAvatarDemoUser'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '9134678251', 'abcxyz', 'PicAvatarSeven'),
     ('242200008', 'Olivia Martinez', '092763514789', '1991-07-08', 'Female', 'olivia@gmail.com', '0239654781', 'OliviaM', 'Lecture', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '7391856420', 'password', 'PicAvatarDemoUser'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '7391856420', 'password', 'PicAvatarEight'),
     ('242200009', 'Daniel Anderson', '083715932641', '1999-04-12', 'Male', 'daniel@gmail.com', '0946582713', 'DanielA', 'Lecture', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '5281479632', 'abc123xyz', 'PicAvatarDemoUser'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '5281479632', 'abc123xyz', 'PicAvatarNine'),
     ('242200010', 'Isabella Wilson', '096347812530', '1990-10-03', 'Female', 'isabella@gmail.com', '0357894216', 'IsabellaW', 'Lecture', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '3948572160', 'passpass123', 'PicAvatarDemoUser');
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '3948572160', 'passpass123', 'PicAvatarTen');
 	 
 -- INSERT Student
 -- delete from Account where role = 'Student'
@@ -123,25 +136,49 @@ VALUES
 INSERT INTO Account
 VALUES 
     ('243300001', 'Emma Watson', '093482139832', '2003-03-15', 'Female', 'emma@gmail.com', '0976523421', 'EmmaW', 'Student', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '5372535694', 'pass123', 'PicAvatarDemoUser'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '5372535694', 'pass123', 'PicAvatarOne'),
     ('243300002', 'Chris Evans', '096321587439', '2002-08-22', 'Male', 'chris', '0654321987', 'ChrisE', 'Student', 
      'HCM City University of Technology and Education', 'Faculty of Information Technology', '9236754210', 'abc', 'PicAvatarFive'),
     ('243300003', 'Scarlett Johansson', '093654827615', '2004-12-10', 'Female', 'scarlett@gmail.com', '0845672310', 'ScarlettJ', 'Student', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '1325647892', 'qwerty', 'PicAvatarDemoUser'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '1325647892', 'qwerty', 'PicAvatarTwo'),
     ('243300004', 'Tom Holland', '096527384519', '2003-05-29', 'Male', 'tom@gmail.com', '0213546789', 'TomH', 'Student', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '4287396152', 'secure789', 'PicAvatarDemoUser'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '4287396152', 'secure789', 'PicAvatarThree'),
     ('243300005', 'Zendaya', '093741258639', '2003-09-17', 'Female', 'zendaya@gmail.com', '0397546821', 'Zendaya', 'Student', 
      'HCM City University of Technology and Education', 'Faculty of Information Technology', '9284756123', 'passpass', 'PicAvatarDemoUser'),
     ('243300006', 'Robert Downey Jr.', '096374815236', '2002-11-05', 'Male', 'robert@gmail.com', '0874651239', 'RobertDJ', 'Student', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '3547829101', 'pass123', 'PicAvatarDemoUser'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '3547829101', 'pass123', 'PicAvatarSix'),
     ('243300007', 'Gal Gadot', '095261398712', '2004-02-25', 'Female', 'gal@gmail.com', '0987543210', 'GalG', 'Student', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '9134678251', 'abcxyz', 'PicAvatarDemoUser'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '9134678251', 'abcxyz', 'PicAvatarSeven'),
     ('243300008', 'Chris Pratt', '093658274916', '2001-07-08', 'Male', 'chrisp@gmail.com', '0239654781', 'ChrisP', 'Student', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '7391856420', 'password', 'PicAvatarDemoUser'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '7391856420', 'password', 'PicAvatarEight'),
     ('243300009', 'Brie Larson', '096347819520', '2003-04-12', 'Female', 'brie@gmail.com', '0946582713', 'BrieL', 'Student', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '5281479632', 'abc123xyz', 'PicAvatarDemoUser'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '5281479632', 'abc123xyz', 'PicAvatarNine'),
     ('243300010', 'Tom Hiddleston', '096347812530', '2002-10-03', 'Male', 'tomh@gmail.com', '0357894216', 'TomH', 'Student', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '3948572160', 'passpass123', 'PicAvatarDemoUser');
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '3948572160', 'passpass123', 'PicAvatarTen');
+	 
+-- Student 11 - 20
+INSERT INTO Account
+VALUES 
+    ('243300011', 'Natalie Portman', '093482139832', '2000-03-15', 'Female', 'natalie.portman@gmail.com', '0976523421', 'NatalieP', 'Student', 
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '5372535694', 'pass123', 'PicAvatarOne'),
+    ('243300012', 'Brad Pitt', '096321587439', '2001-08-22', 'Male', 'brad.pitt@gmail.com', '0654321987', 'BradP', 'Student', 
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '9236754210', 'xyz456', 'PicAvatarTwo'),
+    ('243300013', 'Angelina Jolie', '093654827615', '2003-12-10', 'Female', 'angelina.jolie@gmail.com', '0845672310', 'AngelinaJ', 'Student', 
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '1325647892', 'qwerty', 'PicAvatarTen'),
+    ('243300014', 'Leonardo DiCaprio', '096527384519', '2000-05-29', 'Male', 'leonardo.dicaprio@gmail.com', '0213546789', 'LeonardoD', 'Student', 
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '4287396152', 'secure789', 'PicAvatarThree'),
+    ('243300015', 'Emma Watson', '093741258639', '2000-09-17', 'Female', 'emma.watson@gmail.com', '0397546821', 'EmmaW', 'Student', 
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '9284756123', 'passpass', 'PicAvatarDemoUser'),
+    ('243300016', 'Chris Hemsworth', '096374815236', '2001-11-05', 'Male', 'chris.hemsworth@gmail.com', '0874651239', 'ChrisH', 'Student', 
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '3547829101', 'pass123', 'PicAvatarFive'),
+    ('243300017', 'Jennifer Lawrence', '095261398712', '2003-02-25', 'Female', 'jennifer.lawrence@gmail.com', '0987543210', 'JenniferL', 'Student', 
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '9134678251', 'abcxyz', 'PicAvatarSix'),
+    ('243300018', 'Matthew McConaughey', '093658274916', '2002-07-08', 'Male', 'matthew.mcconaughey@gmail.com', '0239654781', 'MatthewMc', 'Student', 
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '7391856420', 'password', 'PicAvatarSeven'),
+    ('243300019', 'Brie Larson', '096347819520', '2001-04-12', 'Female', 'brie.larson@gmail.com', '0946582713', 'BrieL', 'Student', 
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '5281479632', 'abc123xyz', 'PicAvatarEight'),
+    ('243300020', 'Tom Hiddleston', '096347812530', '2000-10-03', 'Male', 'tom.hiddleston@gmail.com', '0357894216', 'TomH', 'Student', 
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '3948572160', 'passpass123', 'PicAvatarNine');
 
 -- INSERT Thesis
 -- update Thesis set maxmembers = 5 where ...
@@ -186,7 +223,7 @@ VALUES ('244400003',
         'Technologies include Predictive Analytics, Machine Learning, Data Visualization, and Time Series Analysis for analyzing equipment sensor data and predicting maintenance needs.', 
         'Functions include data preprocessing, model training, feature selection, anomaly detection, and maintenance schedule optimization.', 
         'Requirements: Understanding of manufacturing processes, proficiency in data analysis tools like Python or R, knowledge of statistical techniques, and familiarity with industrial sensors and IoT.',
-	'242200001', 1, 'Processing');
+	'242200001', 1, 'Registered');
 
 -- Thesis 4
 INSERT INTO Thesis 
@@ -214,7 +251,7 @@ VALUES ('244400005',
         'Technologies include AWS, Azure, Google Cloud Platform, and Kubernetes for building scalable and resilient cloud architectures.', 
         'Functions include data migration, cluster management, performance optimization, security configuration, and cost monitoring.', 
         'Requirements: Familiarity with cloud platforms, experience in deploying and managing cloud services, understanding of networking and security principles, and knowledge of DevOps practices.',
-	'242200001', 1, 'Completed');
+	'242200001', 1, 'Processing');
 
 -- Thesis 6
 INSERT INTO Thesis 
@@ -228,7 +265,7 @@ VALUES ('244400006',
         'Technologies include Arduino, Raspberry Pi, MQTT, and Zigbee for building IoT devices and communication protocols.', 
         'Functions include sensor integration, real-time data processing, energy usage analysis, automated control systems, and user interface design for energy monitoring.', 
         'Requirements: Knowledge of IoT protocols and platforms, proficiency in hardware programming, experience in energy management systems, and understanding of building automation principles.',
-		'242200001', 0, 'Published');
+		'242200001', 0, 'Completed');
 
 -- Thesis 7
 INSERT INTO Thesis 

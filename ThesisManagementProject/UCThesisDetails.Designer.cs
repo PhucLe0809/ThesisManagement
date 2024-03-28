@@ -174,7 +174,7 @@
             gShadowPanelTopic.Controls.Add(lblThesisTopic);
             gShadowPanelTopic.Controls.Add(gTextBoxTopic);
             gShadowPanelTopic.FillColor = Color.White;
-            gShadowPanelTopic.Location = new Point(24, 68);
+            gShadowPanelTopic.Location = new Point(24, 191);
             gShadowPanelTopic.Name = "gShadowPanelTopic";
             gShadowPanelTopic.Radius = 7;
             gShadowPanelTopic.ShadowColor = Color.Black;
@@ -428,7 +428,7 @@
             // 
             // gShadowPanelBack
             // 
-            gShadowPanelBack.BackColor = Color.White;
+            gShadowPanelBack.BackColor = Color.Transparent;
             gShadowPanelBack.Controls.Add(gPanelDataView);
             gShadowPanelBack.FillColor = Color.White;
             gShadowPanelBack.Location = new Point(525, 68);
@@ -478,7 +478,7 @@
             // 
             gShadowPanelTeam.BackColor = Color.Transparent;
             gShadowPanelTeam.FillColor = Color.White;
-            gShadowPanelTeam.Location = new Point(24, 611);
+            gShadowPanelTeam.Location = new Point(24, 68);
             gShadowPanelTeam.Name = "gShadowPanelTeam";
             gShadowPanelTeam.Radius = 7;
             gShadowPanelTeam.ShadowColor = Color.Black;

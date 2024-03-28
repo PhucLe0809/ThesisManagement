@@ -36,9 +36,23 @@ namespace ThesisManagementProject
         private void InitUserControl()
         {
             gCirclePictureBoxAvatar.Image = myProcess.NameToImage(team.AvatarName);
-            lblTeamName.Text = team.TeamName;
-            lblTeamCode.Text = team.IDTeam;
+            lblTeamName.Text = myProcess.FormatStringLength(team.TeamName, 15);
+            gTextBoxTeamCode.Text = team.IDTeam;
             gTextBoxTeamMemebrs.Text = team.Members.Count.ToString() + " members";
+        }
+        private void ShowTeam()
+        {
+            FTeamDetails fTeamDetails = new FTeamDetails(team);
+            fTeamDetails.ShowDialog();
+        }
+
+        private void UCThesisDetailsTeam_Click(object sender, EventArgs e)
+        {
+            ShowTeam();
+        }
+        private void gCirclePictureBoxAvatar_Click(object sender, EventArgs e)
+        {
+            ShowTeam();
         }
     }
 }

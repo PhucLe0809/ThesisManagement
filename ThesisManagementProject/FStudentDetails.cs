@@ -8,26 +8,34 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ThesisManagementProject.Models;
+using ThesisManagementProject.Process;
 
 namespace ThesisManagementProject
 {
     public partial class FStudentDetails : Form
     {
+        private MyProcess myProcess = new MyProcess();
         private People people = new People();
 
         public FStudentDetails()
         {
             InitializeComponent();
         }
-
-        public void UpdateStudent(People people)
+        public FStudentDetails(People people)
         {
-            this.people = people;
-            UserControlLoad();
+            InitializeComponent();
+
+            SetInformation(people);
         }
 
-        private void UserControlLoad()
+        public void SetInformation(People people)
         {
+            this.people = people;
+            InitUserControl();
+        }
+        private void InitUserControl()
+        {
+            gCirclePictureBoxAvatar.Image = myProcess.NameToImage(people.AvatarName);
             lblViewHandle.Text = people.Handle;
             lblViewRole.Text = people.Role.ToString();
             lblNumTopic.Text = "0";

@@ -92,7 +92,7 @@
             gTextBoxEmail.SelectedText = "";
             gTextBoxEmail.ShadowDecoration.CustomizableEdges = customizableEdges4;
             gTextBoxEmail.Size = new Size(355, 45);
-            gTextBoxEmail.TabIndex = 4;
+            gTextBoxEmail.TabIndex = 0;
             gTextBoxEmail.TextOffset = new Point(5, 0);
             // 
             // gTextBoxPassword
@@ -121,7 +121,7 @@
             gTextBoxPassword.SelectedText = "";
             gTextBoxPassword.ShadowDecoration.CustomizableEdges = customizableEdges6;
             gTextBoxPassword.Size = new Size(355, 45);
-            gTextBoxPassword.TabIndex = 5;
+            gTextBoxPassword.TabIndex = 1;
             gTextBoxPassword.TextOffset = new Point(5, 0);
             gTextBoxPassword.UseSystemPasswordChar = true;
             // 

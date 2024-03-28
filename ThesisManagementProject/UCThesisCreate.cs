@@ -22,7 +22,7 @@ namespace ThesisManagementProject
         private People people = new People();
         private Thesis thesis = new Thesis();
         private ThesisDAO thesisDAO = new ThesisDAO();
-        private bool flagToCheck = false;
+        private bool flagCheck = false;
         private bool flagCreate = false;
         private bool flagEdit = false;
 
@@ -104,11 +104,11 @@ namespace ThesisManagementProject
         }
         private bool CheckInformationValid()
         {
-            myProcess.RunCheckDataValid(thesis.CheckTopic() || flagToCheck, erpTopic, gTextBoxTopic, "Topic cannot be empty");
-            myProcess.RunCheckDataValid(thesis.CheckDesription() || flagToCheck, erpDescription, gTextBoxDescription, "Description cannot be empty");
-            myProcess.RunCheckDataValid(thesis.CheckTechnology() || flagToCheck, erpTechnology, gTextBoxTechnology, "Technologies cannot be empty");
-            myProcess.RunCheckDataValid(thesis.CheckFunctions() || flagToCheck, erpFunctions, gTextBoxFunctions, "Functions cannot be empty");
-            myProcess.RunCheckDataValid(thesis.CheckRequirements() || flagToCheck, erpRequirements, gTextBoxRequirements, "Requirements cannot be empty");
+            myProcess.RunCheckDataValid(thesis.CheckTopic() || flagCheck, erpTopic, gTextBoxTopic, "Topic cannot be empty");
+            myProcess.RunCheckDataValid(thesis.CheckDesription() || flagCheck, erpDescription, gTextBoxDescription, "Description cannot be empty");
+            myProcess.RunCheckDataValid(thesis.CheckTechnology() || flagCheck, erpTechnology, gTextBoxTechnology, "Technologies cannot be empty");
+            myProcess.RunCheckDataValid(thesis.CheckFunctions() || flagCheck, erpFunctions, gTextBoxFunctions, "Functions cannot be empty");
+            myProcess.RunCheckDataValid(thesis.CheckRequirements() || flagCheck, erpRequirements, gTextBoxRequirements, "Requirements cannot be empty");
 
             return thesis.CheckTopic() && thesis.CheckDesription()
                     && thesis.CheckTechnology() && thesis.CheckFunctions() && thesis.CheckRequirements();
@@ -135,11 +135,11 @@ namespace ThesisManagementProject
                 myProcess.ConvertStringToInt32(gComboBoxMembers.SelectedItem.ToString()), gTextBoxDescription.Text,
                 DateTime.Now, gTextBoxTechnology.Text, gTextBoxFunctions.Text, gTextBoxRequirements.Text, this.people.IdAccount);
 
-            this.flagToCheck = false;
+            this.flagCheck = false;
             if (CheckInformationValid())
             {
                 thesisDAO.Insert(thesis);
-                this.flagToCheck = true;
+                this.flagCheck = true;
                 InitUserControl();
             }
         }
@@ -151,11 +151,11 @@ namespace ThesisManagementProject
                 DateTime.Now, gTextBoxTechnology.Text, gTextBoxFunctions.Text, gTextBoxRequirements.Text,
                 this.thesis.IdCreator, this.thesis.IsFavorite, this.thesis.Status);
 
-            this.flagToCheck = false;
+            this.flagCheck = false;
             if (CheckInformationValid())
             {
                 thesisDAO.Update(thesis);
-                this.flagToCheck = true;
+                this.flagCheck = true;
                 this.thesis = thesisDAO.SelectOnly(thesis.IdThesis);
                 gButtonCancel.PerformClick();
             }            
@@ -179,27 +179,27 @@ namespace ThesisManagementProject
         private void gTextBoxTopic_TextChanged(object sender, EventArgs e)
         {
             thesis.Topic = gTextBoxTopic.Text;
-            myProcess.RunCheckDataValid(thesis.CheckTopic() || flagToCheck, erpTopic, gTextBoxTopic, "Topic cannot be empty");
+            myProcess.RunCheckDataValid(thesis.CheckTopic() || flagCheck, erpTopic, gTextBoxTopic, "Topic cannot be empty");
         }
         private void gTextBoxDescription_TextChanged(object sender, EventArgs e)
         {
             thesis.Description = gTextBoxDescription.Text;
-            myProcess.RunCheckDataValid(thesis.CheckDesription() || flagToCheck, erpDescription, gTextBoxDescription, "Description cannot be empty");
+            myProcess.RunCheckDataValid(thesis.CheckDesription() || flagCheck, erpDescription, gTextBoxDescription, "Description cannot be empty");
         }
         private void gTextBoxTechnology_TextChanged(object sender, EventArgs e)
         {
             thesis.Technology = gTextBoxTechnology.Text;
-            myProcess.RunCheckDataValid(thesis.CheckTechnology() || flagToCheck, erpTechnology, gTextBoxTechnology, "Technologies cannot be empty");
+            myProcess.RunCheckDataValid(thesis.CheckTechnology() || flagCheck, erpTechnology, gTextBoxTechnology, "Technologies cannot be empty");
         }
         private void gTextBoxFunctions_TextChanged(object sender, EventArgs e)
         {
             thesis.Functions = gTextBoxFunctions.Text;
-            myProcess.RunCheckDataValid(thesis.CheckFunctions() || flagToCheck, erpFunctions, gTextBoxFunctions, "Functions cannot be empty");
+            myProcess.RunCheckDataValid(thesis.CheckFunctions() || flagCheck, erpFunctions, gTextBoxFunctions, "Functions cannot be empty");
         }
         private void gTextBoxRequirements_TextChanged(object sender, EventArgs e)
         {
             thesis.Requirements = gTextBoxRequirements.Text;
-            myProcess.RunCheckDataValid(thesis.CheckRequirements() || flagToCheck, erpRequirements, gTextBoxRequirements, "Requirements cannot be empty");
+            myProcess.RunCheckDataValid(thesis.CheckRequirements() || flagCheck, erpRequirements, gTextBoxRequirements, "Requirements cannot be empty");
         }
 
         #endregion
