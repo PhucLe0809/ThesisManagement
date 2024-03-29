@@ -1,10 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\thanh\\Desktop\\ThesisManagementProject\\",
+  "WorkspaceRootPath": "F:\\WORKSPACE\\SCHOOL\\NAM 2\\HK2\\ThesisManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|c:\\users\\thanh\\desktop\\thesismanagementproject\\thesismanagementproject\\ucthesisdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|solutionrelative:thesismanagementproject\\ucthesisdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|f:\\workspace\\school\\nam 2\\hk2\\thesismanagement\\thesismanagementproject\\ucthesisdetailscreatedteam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|solutionrelative:thesismanagementproject\\ucthesisdetailscreatedteam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|F:\\WORKSPACE\\SCHOOL\\NAM 2\\HK2\\ThesisManagement\\thesismanagementproject\\forms\\fteamcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|solutionrelative:thesismanagementproject\\forms\\fteamcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|F:\\WORKSPACE\\SCHOOL\\NAM 2\\HK2\\ThesisManagement\\thesismanagementproject\\ucthesiscreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|solutionrelative:thesismanagementproject\\ucthesiscreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|F:\\WORKSPACE\\SCHOOL\\NAM 2\\HK2\\ThesisManagement\\thesismanagementproject\\ucthesisdetailscreatedteam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|solutionrelative:thesismanagementproject\\ucthesisdetailscreatedteam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|F:\\WORKSPACE\\SCHOOL\\NAM 2\\HK2\\ThesisManagement\\thesismanagementproject\\ucdashboardstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|solutionrelative:thesismanagementproject\\ucdashboardstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|F:\\WORKSPACE\\SCHOOL\\NAM 2\\HK2\\ThesisManagement\\thesismanagementproject\\ucdashboardstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|solutionrelative:thesismanagementproject\\ucdashboardstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|F:\\WORKSPACE\\SCHOOL\\NAM 2\\HK2\\ThesisManagement\\thesismanagementproject\\ucdisplaystudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|solutionrelative:thesismanagementproject\\ucdisplaystudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|F:\\WORKSPACE\\SCHOOL\\NAM 2\\HK2\\ThesisManagement\\thesismanagementproject\\ucdisplaystudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CF98B6B-6D3E-44D4-9784-A101FD85C107}|ThesisManagementProject\\ThesisManagementProject.csproj|solutionrelative:thesismanagementproject\\ucdisplaystudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -13,29 +41,116 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 195,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UCThesisDetails.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\thanh\\Desktop\\ThesisManagementProject\\ThesisManagementProject\\UCThesisDetails.cs",
-              "RelativeDocumentMoniker": "ThesisManagementProject\\UCThesisDetails.cs",
-              "ToolTip": "C:\\Users\\thanh\\Desktop\\ThesisManagementProject\\ThesisManagementProject\\UCThesisDetails.cs [Design]",
-              "RelativeToolTip": "ThesisManagementProject\\UCThesisDetails.cs [Design]",
+              "DocumentIndex": 6,
+              "Title": "UCDisplayStudent.cs [Design]",
+              "DocumentMoniker": "F:\\WORKSPACE\\SCHOOL\\NAM 2\\HK2\\ThesisManagement\\ThesisManagementProject\\UCDisplayStudent.cs",
+              "RelativeDocumentMoniker": "ThesisManagementProject\\UCDisplayStudent.cs",
+              "ToolTip": "F:\\WORKSPACE\\SCHOOL\\NAM 2\\HK2\\ThesisManagement\\ThesisManagementProject\\UCDisplayStudent.cs [Design]",
+              "RelativeToolTip": "ThesisManagementProject\\UCDisplayStudent.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-28T08:26:47.665Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-03-29T15:11:16.574Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UCDisplayStudent.cs",
+              "DocumentMoniker": "F:\\WORKSPACE\\SCHOOL\\NAM 2\\HK2\\ThesisManagement\\ThesisManagementProject\\UCDisplayStudent.cs",
+              "RelativeDocumentMoniker": "ThesisManagementProject\\UCDisplayStudent.cs",
+              "ToolTip": "F:\\WORKSPACE\\SCHOOL\\NAM 2\\HK2\\ThesisManagement\\ThesisManagementProject\\UCDisplayStudent.cs",
+              "RelativeToolTip": "ThesisManagementProject\\UCDisplayStudent.cs",
+              "ViewState": "AQIAAFwAAAAAAAAAAAAiwHEAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T15:11:34.655Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UCDashboardStudent.cs [Design]",
+              "DocumentMoniker": "F:\\WORKSPACE\\SCHOOL\\NAM 2\\HK2\\ThesisManagement\\ThesisManagementProject\\UCDashboardStudent.cs",
+              "RelativeDocumentMoniker": "ThesisManagementProject\\UCDashboardStudent.cs",
+              "ToolTip": "F:\\WORKSPACE\\SCHOOL\\NAM 2\\HK2\\ThesisManagement\\ThesisManagementProject\\UCDashboardStudent.cs [Design]",
+              "RelativeToolTip": "ThesisManagementProject\\UCDashboardStudent.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T15:13:05.759Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UCDashboardStudent.cs",
+              "DocumentMoniker": "F:\\WORKSPACE\\SCHOOL\\NAM 2\\HK2\\ThesisManagement\\ThesisManagementProject\\UCDashboardStudent.cs",
+              "RelativeDocumentMoniker": "ThesisManagementProject\\UCDashboardStudent.cs",
+              "ToolTip": "F:\\WORKSPACE\\SCHOOL\\NAM 2\\HK2\\ThesisManagement\\ThesisManagementProject\\UCDashboardStudent.cs",
+              "RelativeToolTip": "ThesisManagementProject\\UCDashboardStudent.cs",
+              "ViewState": "AQIAAGoAAAAAAAAAAIAwwIAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T15:13:55.558Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FTeamCreate.cs [Design]",
+              "DocumentMoniker": "F:\\WORKSPACE\\SCHOOL\\NAM 2\\HK2\\ThesisManagement\\ThesisManagementProject\\Forms\\FTeamCreate.cs",
+              "RelativeDocumentMoniker": "ThesisManagementProject\\Forms\\FTeamCreate.cs",
+              "ToolTip": "F:\\WORKSPACE\\SCHOOL\\NAM 2\\HK2\\ThesisManagement\\ThesisManagementProject\\Forms\\FTeamCreate.cs [Design]",
+              "RelativeToolTip": "ThesisManagementProject\\Forms\\FTeamCreate.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T16:23:14.25Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UCThesisDetailsCreatedTeam.cs [Design]",
+              "DocumentMoniker": "F:\\WORKSPACE\\SCHOOL\\NAM 2\\HK2\\ThesisManagement\\ThesisManagementProject\\UCThesisDetailsCreatedTeam.cs",
+              "RelativeDocumentMoniker": "ThesisManagementProject\\UCThesisDetailsCreatedTeam.cs",
+              "ToolTip": "F:\\WORKSPACE\\SCHOOL\\NAM 2\\HK2\\ThesisManagement\\ThesisManagementProject\\UCThesisDetailsCreatedTeam.cs [Design]",
+              "RelativeToolTip": "ThesisManagementProject\\UCThesisDetailsCreatedTeam.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T16:20:12.504Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UCThesisCreate.cs [Design]",
+              "DocumentMoniker": "F:\\WORKSPACE\\SCHOOL\\NAM 2\\HK2\\ThesisManagement\\ThesisManagementProject\\UCThesisCreate.cs",
+              "RelativeDocumentMoniker": "ThesisManagementProject\\UCThesisCreate.cs",
+              "ToolTip": "F:\\WORKSPACE\\SCHOOL\\NAM 2\\HK2\\ThesisManagement\\ThesisManagementProject\\UCThesisCreate.cs [Design]",
+              "RelativeToolTip": "ThesisManagementProject\\UCThesisCreate.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T16:22:56.539Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UCThesisDetailsCreatedTeam.cs",
+              "DocumentMoniker": "F:\\WORKSPACE\\SCHOOL\\NAM 2\\HK2\\ThesisManagement\\ThesisManagementProject\\UCThesisDetailsCreatedTeam.cs",
+              "RelativeDocumentMoniker": "ThesisManagementProject\\UCThesisDetailsCreatedTeam.cs",
+              "ToolTip": "F:\\WORKSPACE\\SCHOOL\\NAM 2\\HK2\\ThesisManagement\\ThesisManagementProject\\UCThesisDetailsCreatedTeam.cs",
+              "RelativeToolTip": "ThesisManagementProject\\UCThesisDetailsCreatedTeam.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAhwBUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T16:20:43.781Z"
             }
           ]
         }

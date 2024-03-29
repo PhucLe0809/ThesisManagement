@@ -37,6 +37,9 @@
     <Compile Update="UCDashboardLecture.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="UCDashboardStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UCDiscussionResource.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -92,6 +95,9 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UCThesisDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCThesisDetailsCreatedTeam.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UCThesisDetailsGeneral.cs">
