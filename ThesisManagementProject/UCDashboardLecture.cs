@@ -158,7 +158,7 @@ namespace ThesisManagementProject
             if (thesisLine != null)
             {
                 gPanelDataView.Controls.Clear();
-                uCThesisDetails.SetInformation(thesisDAO.SelectOnly(thesisLine.ID));
+                uCThesisDetails.SetInformation(thesisDAO.SelectOnly(thesisLine.ID), this.people);
                 gPanelDataView.Controls.Add(uCThesisDetails);
             
             }

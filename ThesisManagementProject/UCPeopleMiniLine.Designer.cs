@@ -84,15 +84,16 @@
             gShadowPanelBack.BackColor = Color.Transparent;
             gShadowPanelBack.Controls.Add(gButtonAdd);
             gShadowPanelBack.FillColor = Color.White;
-            gShadowPanelBack.Location = new Point(0, 0);
+            gShadowPanelBack.Location = new Point(3, 0);
             gShadowPanelBack.Name = "gShadowPanelBack";
             gShadowPanelBack.Radius = 5;
             gShadowPanelBack.ShadowColor = Color.Black;
             gShadowPanelBack.ShadowShift = 4;
             gShadowPanelBack.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            gShadowPanelBack.Size = new Size(320, 60);
+            gShadowPanelBack.Size = new Size(255, 60);
             gShadowPanelBack.TabIndex = 28;
             gShadowPanelBack.Click += gShadowPanelBack_Click;
+            gShadowPanelBack.Paint += gShadowPanelBack_Paint;
             gShadowPanelBack.MouseEnter += gShadowPanelBack_MouseEnter;
             gShadowPanelBack.MouseLeave += gShadowPanelBack_MouseLeave;
             // 
@@ -112,7 +113,7 @@
             gButtonAdd.HoverState.Image = (Image)resources.GetObject("resource.Image");
             gButtonAdd.Image = (Image)resources.GetObject("gButtonAdd.Image");
             gButtonAdd.ImageSize = new Size(22, 22);
-            gButtonAdd.Location = new Point(271, 11);
+            gButtonAdd.Location = new Point(198, 11);
             gButtonAdd.Name = "gButtonAdd";
             gButtonAdd.ShadowDecoration.CustomizableEdges = customizableEdges3;
             gButtonAdd.Size = new Size(35, 35);
@@ -128,8 +129,9 @@
             Controls.Add(lblUserName);
             Controls.Add(gCirclePictureBoxAvatar);
             Controls.Add(gShadowPanelBack);
+            DoubleBuffered = true;
             Name = "UCPeopleMiniLine";
-            Size = new Size(320, 60);
+            Size = new Size(255, 60);
             ((System.ComponentModel.ISupportInitialize)gCirclePictureBoxAvatar).EndInit();
             gShadowPanelBack.ResumeLayout(false);
             ResumeLayout(false);

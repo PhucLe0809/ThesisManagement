@@ -25,7 +25,7 @@ namespace ThesisManagementProject
             for (int i = 0; i < 15; i++)
             {
                 UCStudentItemAdd item = new UCStudentItemAdd();
-                flpStudentAvatar.Controls.Add(item);    
+                flpStudentAvatar.Controls.Add(item);
             }
         }
 

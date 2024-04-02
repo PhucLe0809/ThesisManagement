@@ -19,6 +19,7 @@ namespace ThesisManagementProject
         private People people = new People();
 
         UCDashboardStudent uCDashboardStudent = new UCDashboardStudent();
+        UCMyTheses uCMyTheses = new UCMyTheses();
         UCStudents uCStudents = new UCStudents();
         UCDiscussion uCDiscussion = new UCDiscussion();
         UCAccount uCAccountLecture = new UCAccount();
@@ -79,11 +80,13 @@ namespace ThesisManagementProject
         private void AllDirectButtonStandardColor()
         {
             DirectButtonStandardColor(gButtonDashboards);
+            DirectButtonStandardColor(gButtonMyTheses);
             DirectButtonStandardColor(gButtonDiscussions);
             DirectButtonStandardColor(gButtonAccount);
             DirectButtonStandardColor(gButtonStudents);
 
             gButtonDashboards.CustomImages.Image = Properties.Resources.PictureTask;
+            gButtonMyTheses.CustomImages.Image = Properties.Resources.PictureTask;
             gButtonDiscussions.CustomImages.Image = Properties.Resources.PictureDiscussion;
             gButtonAccount.CustomImages.Image = Properties.Resources.PictureAccount;
             gButtonStudents.CustomImages.Image = Properties.Resources.PictureStudent;
@@ -111,6 +114,11 @@ namespace ThesisManagementProject
         {
             uCDashboardStudent.SetInformation(this.people);
             SetButtonClick(gButtonDashboards, Properties.Resources.PictureTaskGradient, uCDashboardStudent);
+        }
+        private void gButtonMyTheses_Click(object sender, EventArgs e)
+        {
+            uCMyTheses.SetInformation(this.people);
+            SetButtonClick(gButtonMyTheses, Properties.Resources.PictureTaskGradient, uCMyTheses);
         }
         private void gButtonStudents_Click(object sender, EventArgs e)
         {

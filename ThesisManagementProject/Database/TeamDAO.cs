@@ -14,6 +14,10 @@ namespace ThesisManagementProject.Database
         DBConnection DBConnection = new DBConnection();
 
         public TeamDAO() { }
+        public void SQLExecuteByCommand(string command)
+        {
+            DBConnection.SQLExecuteByCommand(command);
+        }
 
         #region SELECT TEAM
 

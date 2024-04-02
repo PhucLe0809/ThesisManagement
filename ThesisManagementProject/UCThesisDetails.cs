@@ -21,11 +21,14 @@ namespace ThesisManagementProject
         private DBConnection dBConnection = new DBConnection();
 
         private Thesis thesis = new Thesis();
+        private People people = new People();
         private ThesisDAO thesisDAO = new ThesisDAO();
+        private ThesisStatusDAO thesisStatusDAO = new ThesisStatusDAO();
         private PeopleDAO peopleDAO = new PeopleDAO();
         private TeamDAO teamDAO = new TeamDAO();
 
         private UCThesisDetailsRegistered uCThesisDetailsRegistered = new UCThesisDetailsRegistered();
+        private UCThesisDetailsCreatedTeam uCThesisDetailsCreatedTeam;
         private UCThesisDetailsGeneral uCThesisDetailsGeneral = new UCThesisDetailsGeneral();
 
         public UCThesisDetails()
@@ -33,18 +36,21 @@ namespace ThesisManagementProject
             InitializeComponent();
 
         }
-        public UCThesisDetails(Thesis thesis)
+        public UCThesisDetails(Thesis thesis, People people)
         {
             InitializeComponent();
 
-            SetInformation(thesis);
+            SetInformation(thesis, people);
+
+
         }
 
         #region FUNCTIONS
 
-        public void SetInformation(Thesis thesis)
+        public void SetInformation(Thesis thesis, People people)
         {
             this.thesis = thesis;
+            this.people = people;
             InitUserControl();
         }
         private void InitUserControl()
@@ -80,9 +86,20 @@ namespace ThesisManagementProject
         }
         private void SetThesisDetailsMode()
         {
-            bool flagShow = thesis.Status == EThesisStatus.Processing || thesis.Status == EThesisStatus.Completed;
-            SetTeamMode(flagShow);
-            SetViewButtonMode(flagShow);
+            if (people.Role == ERole.Lecture)
+            {
+                bool flagShow = thesis.Status == EThesisStatus.Processing || thesis.Status == EThesisStatus.Completed;
+                SetTeamMode(flagShow);
+                SetViewButtonMode(flagShow);
+            }
+            else if (people.Role == ERole.Student)
+            {
+                this.gGradientButtonGeneral.Hide();
+                this.gGradientButtonRegistered.Hide();
+                this.gButtonEdit.Hide();
+                uCThesisDetailsCreatedTeam = new UCThesisDetailsCreatedTeam(this.people, this.thesis);
+                gPanelDataView.Controls.Add(uCThesisDetailsCreatedTeam);
+            }
         }
         private void SetTeamMode(bool flagShow)
         {
@@ -103,7 +120,7 @@ namespace ThesisManagementProject
             }
         }
         private void SetViewButtonMode(bool flagShow) 
-        { 
+        {
             if (flagShow)
             {
                 gGradientButtonRegistered.Hide();
@@ -131,6 +148,7 @@ namespace ThesisManagementProject
         {
             get { return this.gButtonBack; }
         }
+        public Guna2GradientButton GButtonApply { get => gGradientButtonRegistered; }
 
         #endregion
 
@@ -186,6 +204,28 @@ namespace ThesisManagementProject
             }
 
             gPanelDataView.Controls.Add(uCThesisDetailsRegistered);
+        }
+        private void gGradientButtonApply_Click(object sender, EventArgs e, List<People> members)
+        {
+            this.thesis.Status = EThesisStatus.Registered;
+            // Sửa status trong thesis thành Registered
+            string command = string.Format("UPDATE {0} SET status = '{1}' WHERE idthesis = '{2}'", 
+                                            MyDatabase.DBThesis, EThesisStatus.Registered, this.thesis.IdThesis);
+            thesisDAO.SQLExecuteByCommand(command);
+            // Thêm vào ThesisStatus (idteam, idthesis, status)
+            Team team = new Team(members);
+            command = string.Format("INSERT INTO {0} VALUES('{1}', '{2}', '{3}')",
+                                            MyDatabase.DBThesisStatus, team.IDTeam, this.thesis.IdThesis, this.thesis.Status);
+            thesisStatusDAO.SQLExecuteByCommand(command);
+            // Thêm vào team từng thành viên trong members
+            foreach(People member in team.Members) 
+            {
+                command = string.Format("INSERT INTO {0} VALUES('{1}', '{2}', '{3}', '{4}', '{5}')",
+                                            MyDatabase.DBTeam, team.IDTeam, member.IdAccount, team.TeamName, team.Created, team.AvatarName);
+                teamDAO.SQLExecuteByCommand(command);
+            }
+            MessageBox.Show("Apply successfuly");
+            this.gGradientButtonRegistered.Enabled = false;
         }
         private void ThesisAddAccepted_Clicked(object sender, EventArgs e)
         {
