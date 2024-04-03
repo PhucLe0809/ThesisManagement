@@ -30,6 +30,12 @@ bld/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
+# File in .vs/ Visual Studio 2022
+*.bin
+*.v2
+*.vsidx
+*.suo
+*json
 # Uncomment if you have tasks that create the project's static files in wwwroot
 #wwwroot/
 
