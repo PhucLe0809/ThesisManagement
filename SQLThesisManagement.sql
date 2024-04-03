@@ -110,23 +110,23 @@ VALUES
     ('242200001', 'David Lee', '072352117212', '1995-03-15', 'Male', 'david', '0375676599', 'DavidL', 'Lecture', 
      'HCM City University of Technology and Education', 'Faculty of Information Technology', '5373538693', 'abc', 'PicAvatarOne'),
     ('242200002', 'Alice Johnson', '095216398243', '1994-08-22', 'Female', 'alice@gmail.com', '0652145893', 'AliceJ', 'Lecture', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '9236492347', 'xyz456', 'PicAvatarTwo'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '9236492347', 'abc', 'PicAvatarTwo'),
     ('242200003', 'John Smith', '093578641325', '1996-12-10', 'Male', 'john@gmail.com', '0845763214', 'JohnS', 'Lecture', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '1325678942', 'qwerty', 'PicAvatarThree'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '1325678942', 'abc', 'PicAvatarThree'),
     ('242200004', 'Emily Brown', '086547932156', '1993-05-29', 'Female', 'emily@gmail.com', '0213546879', 'EmilyB', 'Lecture', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '4287651293', 'pass123', 'PicAvatarDemoUser'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '4287651293', 'abc', 'PicAvatarDemoUser'),
     ('242200005', 'Michael Davis', '073859216843', '1997-09-17', 'Male', 'michael@gmail.com', '0397546821', 'MichaelD', 'Lecture', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '9284756123', 'secure789', 'PicAvatarFive'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '9284756123', 'abc', 'PicAvatarFive'),
     ('242200006', 'Sophia Taylor', '094621837595', '1992-11-05', 'Female', 'sophia@gmail.com', '0874651239', 'SophiaT', 'Lecture', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '3547829101', 'passpass', 'PicAvatarSix'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '3547829101', 'abc', 'PicAvatarSix'),
     ('242200007', 'William Clark', '085239614780', '1998-02-25', 'Male', 'william@gmail.com', '0987543210', 'WilliamC', 'Lecture', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '9134678251', 'abcxyz', 'PicAvatarSeven'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '9134678251', 'abc', 'PicAvatarSeven'),
     ('242200008', 'Olivia Martinez', '092763514789', '1991-07-08', 'Female', 'olivia@gmail.com', '0239654781', 'OliviaM', 'Lecture', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '7391856420', 'password', 'PicAvatarEight'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '7391856420', 'abc', 'PicAvatarEight'),
     ('242200009', 'Daniel Anderson', '083715932641', '1999-04-12', 'Male', 'daniel@gmail.com', '0946582713', 'DanielA', 'Lecture', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '5281479632', 'abc123xyz', 'PicAvatarNine'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '5281479632', 'abc', 'PicAvatarNine'),
     ('242200010', 'Isabella Wilson', '096347812530', '1990-10-03', 'Female', 'isabella@gmail.com', '0357894216', 'IsabellaW', 'Lecture', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '3948572160', 'passpass123', 'PicAvatarTen');
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '3948572160', 'abc', 'PicAvatarTen');
 	 
 -- INSERT Student
 -- delete from Account where role = 'Student'
@@ -136,49 +136,49 @@ VALUES
 INSERT INTO Account
 VALUES 
     ('243300001', 'Emma Watson', '093482139832', '2003-03-15', 'Female', 'emma@gmail.com', '0976523421', 'EmmaW', 'Student', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '5372535694', 'pass123', 'PicAvatarOne'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '5372535694', 'abc', 'PicAvatarOne'),
     ('243300002', 'Chris Evans', '096321587439', '2002-08-22', 'Male', 'chris', '0654321987', 'ChrisE', 'Student', 
      'HCM City University of Technology and Education', 'Faculty of Information Technology', '9236754210', 'abc', 'PicAvatarFive'),
     ('243300003', 'Scarlett Johansson', '093654827615', '2004-12-10', 'Female', 'scarlett@gmail.com', '0845672310', 'ScarlettJ', 'Student', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '1325647892', 'qwerty', 'PicAvatarTwo'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '1325647892', 'abc', 'PicAvatarTwo'),
     ('243300004', 'Tom Holland', '096527384519', '2003-05-29', 'Male', 'tom@gmail.com', '0213546789', 'TomH', 'Student', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '4287396152', 'secure789', 'PicAvatarThree'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '4287396152', 'abc', 'PicAvatarThree'),
     ('243300005', 'Zendaya', '093741258639', '2003-09-17', 'Female', 'zendaya@gmail.com', '0397546821', 'Zendaya', 'Student', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '9284756123', 'passpass', 'PicAvatarDemoUser'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '9284756123', 'abc', 'PicAvatarDemoUser'),
     ('243300006', 'Robert Downey Jr.', '096374815236', '2002-11-05', 'Male', 'robert@gmail.com', '0874651239', 'RobertDJ', 'Student', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '3547829101', 'pass123', 'PicAvatarSix'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '3547829101', 'abc', 'PicAvatarSix'),
     ('243300007', 'Gal Gadot', '095261398712', '2004-02-25', 'Female', 'gal@gmail.com', '0987543210', 'GalG', 'Student', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '9134678251', 'abcxyz', 'PicAvatarSeven'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '9134678251', 'abc', 'PicAvatarSeven'),
     ('243300008', 'Chris Pratt', '093658274916', '2001-07-08', 'Male', 'chrisp@gmail.com', '0239654781', 'ChrisP', 'Student', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '7391856420', 'password', 'PicAvatarEight'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '7391856420', 'abc', 'PicAvatarEight'),
     ('243300009', 'Brie Larson', '096347819520', '2003-04-12', 'Female', 'brie@gmail.com', '0946582713', 'BrieL', 'Student', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '5281479632', 'abc123xyz', 'PicAvatarNine'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '5281479632', 'abc', 'PicAvatarNine'),
     ('243300010', 'Tom Hiddleston', '096347812530', '2002-10-03', 'Male', 'tomh@gmail.com', '0357894216', 'TomH', 'Student', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '3948572160', 'passpass123', 'PicAvatarTen');
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '3948572160', 'abc', 'PicAvatarTen');
 	 
 -- Student 11 - 20
 INSERT INTO Account
 VALUES 
     ('243300011', 'Natalie Portman', '093482139832', '2000-03-15', 'Female', 'natalie.portman@gmail.com', '0976523421', 'NatalieP', 'Student', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '5372535694', 'pass123', 'PicAvatarOne'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '5372535694', 'abc', 'PicAvatarOne'),
     ('243300012', 'Brad Pitt', '096321587439', '2001-08-22', 'Male', 'brad.pitt@gmail.com', '0654321987', 'BradP', 'Student', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '9236754210', 'xyz456', 'PicAvatarTwo'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '9236754210', 'abc', 'PicAvatarTwo'),
     ('243300013', 'Angelina Jolie', '093654827615', '2003-12-10', 'Female', 'angelina.jolie@gmail.com', '0845672310', 'AngelinaJ', 'Student', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '1325647892', 'qwerty', 'PicAvatarTen'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '1325647892', 'abc', 'PicAvatarTen'),
     ('243300014', 'Leonardo DiCaprio', '096527384519', '2000-05-29', 'Male', 'leonardo.dicaprio@gmail.com', '0213546789', 'LeonardoD', 'Student', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '4287396152', 'secure789', 'PicAvatarThree'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '4287396152', 'abc', 'PicAvatarThree'),
     ('243300015', 'Emma Watson', '093741258639', '2000-09-17', 'Female', 'emma.watson@gmail.com', '0397546821', 'EmmaW', 'Student', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '9284756123', 'passpass', 'PicAvatarDemoUser'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '9284756123', 'abc', 'PicAvatarDemoUser'),
     ('243300016', 'Chris Hemsworth', '096374815236', '2001-11-05', 'Male', 'chris.hemsworth@gmail.com', '0874651239', 'ChrisH', 'Student', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '3547829101', 'pass123', 'PicAvatarFive'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '3547829101', 'abc', 'PicAvatarFive'),
     ('243300017', 'Jennifer Lawrence', '095261398712', '2003-02-25', 'Female', 'jennifer.lawrence@gmail.com', '0987543210', 'JenniferL', 'Student', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '9134678251', 'abcxyz', 'PicAvatarSix'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '9134678251', 'abc', 'PicAvatarSix'),
     ('243300018', 'Matthew McConaughey', '093658274916', '2002-07-08', 'Male', 'matthew.mcconaughey@gmail.com', '0239654781', 'MatthewMc', 'Student', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '7391856420', 'password', 'PicAvatarSeven'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '7391856420', 'abc', 'PicAvatarSeven'),
     ('243300019', 'Brie Larson', '096347819520', '2001-04-12', 'Female', 'brie.larson@gmail.com', '0946582713', 'BrieL', 'Student', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '5281479632', 'abc123xyz', 'PicAvatarEight'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '5281479632', 'abc', 'PicAvatarEight'),
     ('243300020', 'Tom Hiddleston', '096347812530', '2000-10-03', 'Male', 'tom.hiddleston@gmail.com', '0357894216', 'TomH', 'Student', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '3948572160', 'passpass123', 'PicAvatarNine');
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '3948572160', 'abc', 'PicAvatarNine');
 
 -- INSERT Thesis
 -- update Thesis set maxmembers = 5 where ...

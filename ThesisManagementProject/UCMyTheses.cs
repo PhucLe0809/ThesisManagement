@@ -129,7 +129,8 @@ namespace ThesisManagementProject
 
         #endregion
 
-        #region THESIS LINE 
+        #region THESIS LINE
+
         private void ThesisLine_Clicked(object sender, EventArgs e)
         {
             UCThesisLine thesisLine = sender as UCThesisLine;
@@ -137,7 +138,9 @@ namespace ThesisManagementProject
             if (thesisLine != null)
             {
                 gPanelDataView.Controls.Clear();
-                uCThesisDetails.SetInformation(thesisDAO.SelectOnly(thesisLine.ID), people);
+                Thesis thesis = thesisDAO.SelectOnly(thesisLine.ID);
+                uCThesisDetails.FlagWaiting = (thesis.Status == EThesisStatus.Registered || thesis.Status == EThesisStatus.Published);
+                uCThesisDetails.SetInformation(thesis, people);
                 gPanelDataView.Controls.Add(uCThesisDetails);
             }
         }

@@ -37,6 +37,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             flpTeam = new FlowLayoutPanel();
             gSeparatorTopic = new Guna.UI2.WinForms.Guna2Separator();
             lblRegisteredList = new Label();
@@ -47,8 +49,9 @@
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             gCirclePictureBoxAvatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            gGradientButtonApply = new Guna.UI2.WinForms.Guna2GradientButton();
+            gGradientButtonRegister = new Guna.UI2.WinForms.Guna2GradientButton();
             erpTeamName = new ErrorProvider(components);
+            gGradientButtonPerform = new Guna.UI2.WinForms.Guna2GradientButton();
             guna2ShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)gCirclePictureBoxAvatar).BeginInit();
             guna2ShadowPanel2.SuspendLayout();
@@ -184,7 +187,7 @@
             // guna2ShadowPanel2
             // 
             guna2ShadowPanel2.BackColor = Color.Transparent;
-            guna2ShadowPanel2.Controls.Add(gGradientButtonApply);
+            guna2ShadowPanel2.Controls.Add(gGradientButtonRegister);
             guna2ShadowPanel2.Controls.Add(gTextBoxTeamName);
             guna2ShadowPanel2.Controls.Add(gCirclePictureBoxAvatar);
             guna2ShadowPanel2.FillColor = Color.White;
@@ -196,41 +199,68 @@
             guna2ShadowPanel2.Size = new Size(575, 142);
             guna2ShadowPanel2.TabIndex = 60;
             // 
-            // gGradientButtonApply
+            // gGradientButtonRegister
             // 
-            gGradientButtonApply.BackColor = Color.Transparent;
-            gGradientButtonApply.BorderRadius = 10;
-            gGradientButtonApply.CustomizableEdges = customizableEdges6;
-            gGradientButtonApply.DisabledState.BorderColor = Color.DarkGray;
-            gGradientButtonApply.DisabledState.CustomBorderColor = Color.DarkGray;
-            gGradientButtonApply.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            gGradientButtonApply.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
-            gGradientButtonApply.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            gGradientButtonApply.FillColor = SystemColors.ButtonFace;
-            gGradientButtonApply.FillColor2 = SystemColors.ButtonFace;
-            gGradientButtonApply.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            gGradientButtonApply.ForeColor = Color.Black;
-            gGradientButtonApply.HoverState.FillColor = Color.FromArgb(94, 148, 255);
-            gGradientButtonApply.HoverState.FillColor2 = Color.FromArgb(255, 77, 165);
-            gGradientButtonApply.HoverState.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            gGradientButtonApply.HoverState.ForeColor = Color.White;
-            gGradientButtonApply.Location = new Point(428, 48);
-            gGradientButtonApply.Name = "gGradientButtonApply";
-            gGradientButtonApply.ShadowDecoration.CustomizableEdges = customizableEdges7;
-            gGradientButtonApply.Size = new Size(106, 40);
-            gGradientButtonApply.TabIndex = 61;
-            gGradientButtonApply.Text = "Apply";
-            gGradientButtonApply.Click += gGradientButtonApply_Click;
+            gGradientButtonRegister.BackColor = Color.Transparent;
+            gGradientButtonRegister.BorderRadius = 10;
+            gGradientButtonRegister.CustomizableEdges = customizableEdges6;
+            gGradientButtonRegister.DisabledState.BorderColor = Color.DarkGray;
+            gGradientButtonRegister.DisabledState.CustomBorderColor = Color.DarkGray;
+            gGradientButtonRegister.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            gGradientButtonRegister.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            gGradientButtonRegister.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            gGradientButtonRegister.FillColor = SystemColors.ButtonFace;
+            gGradientButtonRegister.FillColor2 = SystemColors.ButtonFace;
+            gGradientButtonRegister.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gGradientButtonRegister.ForeColor = Color.Black;
+            gGradientButtonRegister.HoverState.FillColor = Color.FromArgb(94, 148, 255);
+            gGradientButtonRegister.HoverState.FillColor2 = Color.FromArgb(255, 77, 165);
+            gGradientButtonRegister.HoverState.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gGradientButtonRegister.HoverState.ForeColor = Color.White;
+            gGradientButtonRegister.Location = new Point(428, 48);
+            gGradientButtonRegister.Name = "gGradientButtonRegister";
+            gGradientButtonRegister.ShadowDecoration.CustomizableEdges = customizableEdges7;
+            gGradientButtonRegister.Size = new Size(106, 40);
+            gGradientButtonRegister.TabIndex = 61;
+            gGradientButtonRegister.Text = "Register";
+            gGradientButtonRegister.Click += gGradientButtonApply_Click;
             // 
             // erpTeamName
             // 
             erpTeamName.ContainerControl = this;
+            // 
+            // gGradientButtonPerform
+            // 
+            gGradientButtonPerform.BackColor = Color.Transparent;
+            gGradientButtonPerform.BorderRadius = 10;
+            gGradientButtonPerform.CustomizableEdges = customizableEdges8;
+            gGradientButtonPerform.DisabledState.BorderColor = Color.DarkGray;
+            gGradientButtonPerform.DisabledState.CustomBorderColor = Color.DarkGray;
+            gGradientButtonPerform.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            gGradientButtonPerform.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            gGradientButtonPerform.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            gGradientButtonPerform.FillColor = SystemColors.ButtonFace;
+            gGradientButtonPerform.FillColor2 = SystemColors.ButtonFace;
+            gGradientButtonPerform.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gGradientButtonPerform.ForeColor = Color.Black;
+            gGradientButtonPerform.HoverState.FillColor = Color.FromArgb(94, 148, 255);
+            gGradientButtonPerform.HoverState.FillColor2 = Color.FromArgb(255, 77, 165);
+            gGradientButtonPerform.HoverState.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gGradientButtonPerform.HoverState.ForeColor = Color.White;
+            gGradientButtonPerform.Location = new Point(445, 245);
+            gGradientButtonPerform.Name = "gGradientButtonPerform";
+            gGradientButtonPerform.ShadowDecoration.CustomizableEdges = customizableEdges9;
+            gGradientButtonPerform.Size = new Size(106, 40);
+            gGradientButtonPerform.TabIndex = 62;
+            gGradientButtonPerform.Text = "Perform";
+            gGradientButtonPerform.Click += gGradientButtonPerform_Click;
             // 
             // UCThesisDetailsCreatedTeam
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(gGradientButtonPerform);
             Controls.Add(guna2ShadowPanel2);
             Controls.Add(guna2ShadowPanel1);
             Controls.Add(gTextBoxSearch);
@@ -259,7 +289,8 @@
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private Guna.UI2.WinForms.Guna2CirclePictureBox gCirclePictureBoxAvatar;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
-        private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonApply;
+        private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonRegister;
         private ErrorProvider erpTeamName;
+        private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonPerform;
     }
 }

@@ -63,9 +63,29 @@ namespace ThesisManagementProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GifCompleted {
+            get {
+                object obj = ResourceManager.GetObject("GifCompleted", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap GifSleep {
             get {
                 object obj = ResourceManager.GetObject("GifSleep", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GiftWaiting {
+            get {
+                object obj = ResourceManager.GetObject("GiftWaiting", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -546,6 +566,26 @@ namespace ThesisManagementProject.Properties {
         internal static System.Drawing.Bitmap PicItemCopy {
             get {
                 object obj = ResourceManager.GetObject("PicItemCopy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PicItemDetail {
+            get {
+                object obj = ResourceManager.GetObject("PicItemDetail", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PicItemDetailGradient {
+            get {
+                object obj = ResourceManager.GetObject("PicItemDetailGradient", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

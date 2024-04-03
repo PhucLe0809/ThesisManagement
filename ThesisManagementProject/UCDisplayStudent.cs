@@ -83,13 +83,13 @@ namespace ThesisManagementProject
             DirectButtonStandardColor(gButtonMyTheses);
             DirectButtonStandardColor(gButtonDiscussions);
             DirectButtonStandardColor(gButtonAccount);
-            DirectButtonStandardColor(gButtonStudents);
+            DirectButtonStandardColor(gButtonMyTeams);
 
             gButtonDashboards.CustomImages.Image = Properties.Resources.PictureTask;
-            gButtonMyTheses.CustomImages.Image = Properties.Resources.PictureTask;
+            gButtonMyTheses.CustomImages.Image = Properties.Resources.PictureThesis;
             gButtonDiscussions.CustomImages.Image = Properties.Resources.PictureDiscussion;
             gButtonAccount.CustomImages.Image = Properties.Resources.PictureAccount;
-            gButtonStudents.CustomImages.Image = Properties.Resources.PictureStudent;
+            gButtonMyTeams.CustomImages.Image = Properties.Resources.PictureStudent;
         }
         private void SetButtonClick(Guna2Button button, Image image, UserControl userControl)
         {
@@ -118,11 +118,11 @@ namespace ThesisManagementProject
         private void gButtonMyTheses_Click(object sender, EventArgs e)
         {
             uCMyTheses.SetInformation(this.people);
-            SetButtonClick(gButtonMyTheses, Properties.Resources.PictureTaskGradient, uCMyTheses);
+            SetButtonClick(gButtonMyTheses, Properties.Resources.PictureThesisGradient, uCMyTheses);
         }
         private void gButtonStudents_Click(object sender, EventArgs e)
         {
-            SetButtonClick(gButtonStudents, Properties.Resources.PictureStudentGradient, uCStudents);
+            SetButtonClick(gButtonMyTeams, Properties.Resources.PictureStudentGradient, uCStudents);
         }
         private void gButtonDiscuss_Click(object sender, EventArgs e)
         {

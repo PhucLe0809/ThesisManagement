@@ -17,8 +17,10 @@ namespace ThesisManagementProject
 {
     public partial class UCThesisDetailsCreatedTeam : UserControl
     {
-        private People people;
-        private Thesis thesis;
+        public event EventHandler RegisteredPerform;
+
+        private People people = new People();
+        private Thesis thesis = new Thesis();
         private List<People> listPeople = new List<People>();
         private List<People> members = new List<People>();
         private Image pictureAvatar;
@@ -34,24 +36,35 @@ namespace ThesisManagementProject
         public UCThesisDetailsCreatedTeam()
         {
             InitializeComponent();
-            this.flpSearch.Location = new Point(11, 14);
+            InitUserControl();
         }
         public UCThesisDetailsCreatedTeam(People people, Thesis thesis)
         {
             InitializeComponent();
             this.people = people;
             this.thesis = thesis;
-            pictureAvatar = Properties.Resources.PicAvatarDemoUser;
-            this.flpSearch.Location = new Point(11, 14);
             InitUserControl();
         }
         #endregion
 
+        #region PROPERTIES
+
+        public Guna2GradientButton GPerform
+        {
+            get { return this.gGradientButtonPerform; }
+        }
+
+        #endregion
+
         #region FUNTION
+
         void InitUserControl()
         {
-            gGradientButtonApply.Enabled = true;
+            pictureAvatar = Properties.Resources.PicAvatarDemoUser;
+            gGradientButtonRegister.Enabled = true;
+            flpSearch.Location = new Point(11, 14);
             flpSearch.Hide();
+            gGradientButtonPerform.Hide();
             AddMember(this.people);
         }
         void AddMember(People people)
@@ -93,6 +106,10 @@ namespace ThesisManagementProject
             }
             flpSearch.Show();
             flpSearch.BringToFront();
+        }
+        public bool CheckEmpty(string text)
+        {
+            return !string.IsNullOrEmpty(text);
         }
         #endregion
 
@@ -143,7 +160,8 @@ namespace ThesisManagementProject
 
         #endregion
 
-        #region gGradientButtonApply
+        #region EVENT gGradientButtonRegister
+
         private void gGradientButtonApply_Click(object sender, EventArgs e)
         {
             if (CheckEmpty(gTextBoxTeamName.Text))
@@ -166,10 +184,17 @@ namespace ThesisManagementProject
                                                 MyDatabase.DBTeam, team.IDTeam, member.IdAccount, team.TeamName, team.Created, team.AvatarName);
                     teamDAO.SQLExecuteByCommand(command);
                 }
-                MessageBox.Show("Apply successfuly");
-                this.gGradientButtonApply.Enabled = false;
+
+                MessageBox.Show("Registered successfuly", "Notification", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                this.gGradientButtonRegister.Enabled = false;
+                gGradientButtonPerform.PerformClick();
+            } 
+            else
+            {
+                gTextBoxTeamName_TextChanged(gTextBoxTeamName, new EventArgs());
             }
         }
+
         #endregion
 
         #region EVENT gCirclePictureBoxAvatar
@@ -199,15 +224,28 @@ namespace ThesisManagementProject
 
         #endregion
 
-        public bool CheckEmpty(string text)
-        {
-            return !string.IsNullOrEmpty(text);
-        }
+        #region EVENT gTextBoxTeamName
 
         private void gTextBoxTeamName_TextChanged(object sender, EventArgs e)
         {
             Guna2TextBox textBox = (Guna2TextBox)sender;
             myProcess.RunCheckDataValid(CheckEmpty(textBox.Text) || flagCheck, erpTeamName, gTextBoxTeamName, "Name can not empty");
         }
+
+        #endregion
+
+        #region EVENT gGradientButtonPerform
+
+        private void gGradientButtonPerform_Click(object sender, EventArgs e)
+        {
+            OnRegisterClicked(EventArgs.Empty);
+        }
+        public virtual void OnRegisterClicked(EventArgs e)
+        {
+            RegisteredPerform?.Invoke(this, e);
+        }
+
+        #endregion
+
     }
 }

@@ -49,8 +49,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             gShadowPanelTechFunc = new Guna.UI2.WinForms.Guna2ShadowPanel();
             gTextBoxRequirements = new Guna.UI2.WinForms.Guna2TextBox();
             gTextBoxFunctions = new Guna.UI2.WinForms.Guna2TextBox();
@@ -65,7 +63,6 @@
             gTextBoxStatus = new Guna.UI2.WinForms.Guna2TextBox();
             gSeparatorTopic = new Guna.UI2.WinForms.Guna2Separator();
             lblLevel = new Label();
-            gButtonEdit = new Guna.UI2.WinForms.Guna2Button();
             lblMaximum = new Label();
             lblTechnologyField = new Label();
             gButtonStar = new Guna.UI2.WinForms.Guna2Button();
@@ -230,7 +227,6 @@
             gShadowPanelTopic.Controls.Add(gTextBoxStatus);
             gShadowPanelTopic.Controls.Add(gSeparatorTopic);
             gShadowPanelTopic.Controls.Add(lblLevel);
-            gShadowPanelTopic.Controls.Add(gButtonEdit);
             gShadowPanelTopic.Controls.Add(lblMaximum);
             gShadowPanelTopic.Controls.Add(lblTechnologyField);
             gShadowPanelTopic.Controls.Add(gButtonStar);
@@ -385,27 +381,6 @@
             lblLevel.TabIndex = 49;
             lblLevel.Text = "Level";
             // 
-            // gButtonEdit
-            // 
-            gButtonEdit.BorderRadius = 5;
-            gButtonEdit.CustomizableEdges = customizableEdges15;
-            gButtonEdit.DisabledState.BorderColor = Color.DarkGray;
-            gButtonEdit.DisabledState.CustomBorderColor = Color.DarkGray;
-            gButtonEdit.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            gButtonEdit.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            gButtonEdit.FillColor = Color.Transparent;
-            gButtonEdit.Font = new Font("Segoe UI", 9F);
-            gButtonEdit.ForeColor = Color.White;
-            gButtonEdit.HoverState.Image = (Image)resources.GetObject("resource.Image");
-            gButtonEdit.Image = (Image)resources.GetObject("gButtonEdit.Image");
-            gButtonEdit.ImageSize = new Size(25, 25);
-            gButtonEdit.Location = new Point(422, 14);
-            gButtonEdit.Name = "gButtonEdit";
-            gButtonEdit.PressedColor = SystemColors.ButtonFace;
-            gButtonEdit.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            gButtonEdit.Size = new Size(40, 40);
-            gButtonEdit.TabIndex = 57;
-            // 
             // lblMaximum
             // 
             lblMaximum.AutoSize = true;
@@ -431,7 +406,7 @@
             // gButtonStar
             // 
             gButtonStar.BorderRadius = 5;
-            gButtonStar.CustomizableEdges = customizableEdges17;
+            gButtonStar.CustomizableEdges = customizableEdges15;
             gButtonStar.DisabledState.BorderColor = Color.DarkGray;
             gButtonStar.DisabledState.CustomBorderColor = Color.DarkGray;
             gButtonStar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -445,7 +420,7 @@
             gButtonStar.Location = new Point(27, 14);
             gButtonStar.Name = "gButtonStar";
             gButtonStar.PressedColor = Color.White;
-            gButtonStar.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            gButtonStar.ShadowDecoration.CustomizableEdges = customizableEdges16;
             gButtonStar.Size = new Size(40, 40);
             gButtonStar.TabIndex = 56;
             // 
@@ -465,7 +440,7 @@
             gTextBoxDescription.AutoScroll = true;
             gTextBoxDescription.BorderColor = Color.FromArgb(74, 97, 94);
             gTextBoxDescription.BorderRadius = 5;
-            gTextBoxDescription.CustomizableEdges = customizableEdges19;
+            gTextBoxDescription.CustomizableEdges = customizableEdges17;
             gTextBoxDescription.DefaultText = "";
             gTextBoxDescription.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxDescription.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -487,7 +462,7 @@
             gTextBoxDescription.PlaceholderText = "Topic description";
             gTextBoxDescription.ReadOnly = true;
             gTextBoxDescription.SelectedText = "";
-            gTextBoxDescription.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            gTextBoxDescription.ShadowDecoration.CustomizableEdges = customizableEdges18;
             gTextBoxDescription.Size = new Size(435, 120);
             gTextBoxDescription.TabIndex = 6;
             gTextBoxDescription.TextOffset = new Point(5, 0);
@@ -508,7 +483,7 @@
             gTextBoxTopic.AutoScroll = true;
             gTextBoxTopic.BorderColor = Color.FromArgb(74, 97, 94);
             gTextBoxTopic.BorderRadius = 5;
-            gTextBoxTopic.CustomizableEdges = customizableEdges21;
+            gTextBoxTopic.CustomizableEdges = customizableEdges19;
             gTextBoxTopic.DefaultText = "";
             gTextBoxTopic.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxTopic.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -529,9 +504,9 @@
             gTextBoxTopic.PlaceholderText = "Thesis topic";
             gTextBoxTopic.ReadOnly = true;
             gTextBoxTopic.SelectedText = "";
-            gTextBoxTopic.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            gTextBoxTopic.ShadowDecoration.CustomizableEdges = customizableEdges20;
             gTextBoxTopic.Size = new Size(435, 92);
-            gTextBoxTopic.TabIndex = 7;
+            gTextBoxTopic.TabIndex = 1;
             gTextBoxTopic.TextOffset = new Point(5, 0);
             // 
             // FThesisView
@@ -568,7 +543,6 @@
         private Guna.UI2.WinForms.Guna2TextBox gTextBoxStatus;
         private Guna.UI2.WinForms.Guna2Separator gSeparatorTopic;
         private Label lblLevel;
-        private Guna.UI2.WinForms.Guna2Button gButtonEdit;
         private Label lblMaximum;
         private Label lblTechnologyField;
         private Guna.UI2.WinForms.Guna2Button gButtonStar;

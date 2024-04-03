@@ -26,10 +26,13 @@ namespace ThesisManagementProject
         private ThesisStatusDAO thesisStatusDAO = new ThesisStatusDAO();
         private PeopleDAO peopleDAO = new PeopleDAO();
         private TeamDAO teamDAO = new TeamDAO();
+        private bool flagWaiting = false;
 
         private UCThesisDetailsRegistered uCThesisDetailsRegistered = new UCThesisDetailsRegistered();
         private UCThesisDetailsCreatedTeam uCThesisDetailsCreatedTeam;
         private UCThesisDetailsGeneral uCThesisDetailsGeneral = new UCThesisDetailsGeneral();
+
+        #region CONTRUCTOR
 
         public UCThesisDetails()
         {
@@ -45,6 +48,17 @@ namespace ThesisManagementProject
 
         }
 
+        #endregion
+
+        #region PROPERTIES
+
+        public bool FlagWaiting
+        {
+            set { this.flagWaiting = value; }
+        }
+
+        #endregion
+
         #region FUNCTIONS
 
         public void SetInformation(Thesis thesis, People people)
@@ -57,6 +71,7 @@ namespace ThesisManagementProject
         {
             ResetThesis();
             SetControlsReadOnly(true);
+            SetWaiting();
         }
         private void ResetThesis()
         {
@@ -84,21 +99,27 @@ namespace ThesisManagementProject
             myProcess.SetTextBoxReadOnly(gTextBoxLevel, thickness, colors, flagReadOnly);
             myProcess.SetTextBoxReadOnly(gTextBoxMembers, thickness, colors, flagReadOnly);
         }
+        private void SetWaiting()
+        {
+            if (this.flagWaiting == false) return;
+
+            HideAllButtonMode();
+            gPictureBoxState.Image = Properties.Resources.GiftWaiting;
+            gTextBoxState.Text = "Please wait !";
+            gPanelDataView.Controls.Clear();
+            gPanelDataView.Controls.Add(gPictureBoxState);
+            gPanelDataView.Controls.Add(gTextBoxState);
+        }
         private void SetThesisDetailsMode()
         {
-            if (people.Role == ERole.Lecture)
+            bool flagShow = thesis.Status == EThesisStatus.Processing || thesis.Status == EThesisStatus.Completed;
+
+            SetTeamMode(flagShow);
+            SetViewButtonMode(flagShow);
+
+            if (people.Role == ERole.Student)
             {
-                bool flagShow = thesis.Status == EThesisStatus.Processing || thesis.Status == EThesisStatus.Completed;
-                SetTeamMode(flagShow);
-                SetViewButtonMode(flagShow);
-            }
-            else if (people.Role == ERole.Student)
-            {
-                this.gGradientButtonGeneral.Hide();
-                this.gGradientButtonRegistered.Hide();
-                this.gButtonEdit.Hide();
-                uCThesisDetailsCreatedTeam = new UCThesisDetailsCreatedTeam(this.people, this.thesis);
-                gPanelDataView.Controls.Add(uCThesisDetailsCreatedTeam);
+                if (!flagShow) SetStudentRegister();
             }
         }
         private void SetTeamMode(bool flagShow)
@@ -119,7 +140,7 @@ namespace ThesisManagementProject
                 }
             }
         }
-        private void SetViewButtonMode(bool flagShow) 
+        private void SetViewButtonMode(bool flagShow)
         {
             if (flagShow)
             {
@@ -133,6 +154,21 @@ namespace ThesisManagementProject
                 gGradientButtonRegistered.Show();
                 gGradientButtonRegistered.PerformClick();
             }
+        }
+        private void SetStudentRegister()
+        {
+            HideAllButtonMode();
+
+            uCThesisDetailsCreatedTeam = new UCThesisDetailsCreatedTeam(this.people, this.thesis);
+            uCThesisDetailsCreatedTeam.GPerform.Click += GPerformState_Click;
+            gPanelDataView.Controls.Clear();
+            gPanelDataView.Controls.Add(uCThesisDetailsCreatedTeam);
+        }
+        private void HideAllButtonMode()
+        {
+            gButtonEdit.Hide();
+            gGradientButtonGeneral.Hide();
+            gGradientButtonRegistered.Hide();
         }
         private void AllButtonStandardColor()
         {
@@ -209,7 +245,7 @@ namespace ThesisManagementProject
         {
             this.thesis.Status = EThesisStatus.Registered;
             // Sửa status trong thesis thành Registered
-            string command = string.Format("UPDATE {0} SET status = '{1}' WHERE idthesis = '{2}'", 
+            string command = string.Format("UPDATE {0} SET status = '{1}' WHERE idthesis = '{2}'",
                                             MyDatabase.DBThesis, EThesisStatus.Registered, this.thesis.IdThesis);
             thesisDAO.SQLExecuteByCommand(command);
             // Thêm vào ThesisStatus (idteam, idthesis, status)
@@ -218,7 +254,7 @@ namespace ThesisManagementProject
                                             MyDatabase.DBThesisStatus, team.IDTeam, this.thesis.IdThesis, this.thesis.Status);
             thesisStatusDAO.SQLExecuteByCommand(command);
             // Thêm vào team từng thành viên trong members
-            foreach(People member in team.Members) 
+            foreach (People member in team.Members)
             {
                 command = string.Format("INSERT INTO {0} VALUES('{1}', '{2}', '{3}', '{4}', '{5}')",
                                             MyDatabase.DBTeam, team.IDTeam, member.IdAccount, team.TeamName, team.Created, team.AvatarName);
@@ -268,6 +304,19 @@ namespace ThesisManagementProject
             gPanelDataView.Controls.Add(uCThesisDetailsGeneral);
         }
 
+        #endregion
+
+        #region EVENTHANDER GPerformState
+
+        private void GPerformState_Click(object? sender, EventArgs e)
+        {
+            gPanelDataView.Controls.Clear();
+            gPictureBoxState.Image = Properties.Resources.GifCompleted;
+            gTextBoxState.Text = "You have successfully registered !";
+            gPanelDataView.Controls.Add(gPictureBoxState);
+            gPanelDataView.Controls.Add(gTextBoxState);
+        }
+        
         #endregion
 
     }
