@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCDisplayStudent));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -41,10 +41,13 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             gPanelTaskbar = new Guna.UI2.WinForms.Guna2Panel();
+            gButtonMyTheses = new Guna.UI2.WinForms.Guna2Button();
             gButtonLogOut = new Guna.UI2.WinForms.Guna2Button();
             gButtonStudents = new Guna.UI2.WinForms.Guna2Button();
             gSeparatorLogOut = new Guna.UI2.WinForms.Guna2Separator();
@@ -67,6 +70,7 @@
             gPanelTaskbar.BackColor = Color.Transparent;
             gPanelTaskbar.BackgroundImage = (Image)resources.GetObject("gPanelTaskbar.BackgroundImage");
             gPanelTaskbar.BackgroundImageLayout = ImageLayout.Stretch;
+            gPanelTaskbar.Controls.Add(gButtonMyTheses);
             gPanelTaskbar.Controls.Add(gButtonLogOut);
             gPanelTaskbar.Controls.Add(gButtonStudents);
             gPanelTaskbar.Controls.Add(gSeparatorLogOut);
@@ -75,23 +79,53 @@
             gPanelTaskbar.Controls.Add(gButtonDiscussions);
             gPanelTaskbar.Controls.Add(gButtonDashboards);
             gPanelTaskbar.Controls.Add(gPanelBackAvatar);
-            gPanelTaskbar.CustomizableEdges = customizableEdges14;
+            gPanelTaskbar.CustomizableEdges = customizableEdges16;
             gPanelTaskbar.Dock = DockStyle.Left;
             gPanelTaskbar.Location = new Point(0, 0);
             gPanelTaskbar.Name = "gPanelTaskbar";
-            gPanelTaskbar.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            gPanelTaskbar.ShadowDecoration.CustomizableEdges = customizableEdges17;
             gPanelTaskbar.Size = new Size(315, 853);
             gPanelTaskbar.TabIndex = 2;
+            // 
+            // gButtonMyTheses
+            // 
+            gButtonMyTheses.BackColor = Color.Transparent;
+            gButtonMyTheses.BorderRadius = 20;
+            gButtonMyTheses.CustomImages.HoveredImage = (Image)resources.GetObject("resource.HoveredImage");
+            gButtonMyTheses.CustomImages.Image = (Image)resources.GetObject("resource.Image");
+            gButtonMyTheses.CustomImages.ImageAlign = HorizontalAlignment.Left;
+            gButtonMyTheses.CustomImages.ImageOffset = new Point(20, 0);
+            gButtonMyTheses.CustomImages.ImageSize = new Size(30, 30);
+            gButtonMyTheses.CustomizableEdges = customizableEdges1;
+            gButtonMyTheses.DisabledState.BorderColor = Color.DarkGray;
+            gButtonMyTheses.DisabledState.CustomBorderColor = Color.DarkGray;
+            gButtonMyTheses.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            gButtonMyTheses.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            gButtonMyTheses.FillColor = Color.Transparent;
+            gButtonMyTheses.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            gButtonMyTheses.ForeColor = Color.White;
+            gButtonMyTheses.HoverState.FillColor = Color.White;
+            gButtonMyTheses.HoverState.Font = new Font("Trebuchet MS", 10.8F, FontStyle.Bold);
+            gButtonMyTheses.HoverState.ForeColor = Color.Black;
+            gButtonMyTheses.Location = new Point(22, 234);
+            gButtonMyTheses.Name = "gButtonMyTheses";
+            gButtonMyTheses.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            gButtonMyTheses.Size = new Size(271, 56);
+            gButtonMyTheses.TabIndex = 11;
+            gButtonMyTheses.Text = "My Theses";
+            gButtonMyTheses.TextAlign = HorizontalAlignment.Left;
+            gButtonMyTheses.TextOffset = new Point(60, 0);
+            gButtonMyTheses.Click += gButtonMyTheses_Click;
             // 
             // gButtonLogOut
             // 
             gButtonLogOut.BackColor = Color.Transparent;
             gButtonLogOut.BorderRadius = 15;
-            gButtonLogOut.CustomImages.HoveredImage = (Image)resources.GetObject("resource.HoveredImage");
-            gButtonLogOut.CustomImages.Image = (Image)resources.GetObject("resource.Image");
+            gButtonLogOut.CustomImages.HoveredImage = (Image)resources.GetObject("resource.HoveredImage1");
+            gButtonLogOut.CustomImages.Image = (Image)resources.GetObject("resource.Image1");
             gButtonLogOut.CustomImages.ImageAlign = HorizontalAlignment.Left;
             gButtonLogOut.CustomImages.ImageSize = new Size(30, 30);
-            gButtonLogOut.CustomizableEdges = customizableEdges1;
+            gButtonLogOut.CustomizableEdges = customizableEdges3;
             gButtonLogOut.DisabledState.BorderColor = Color.DarkGray;
             gButtonLogOut.DisabledState.CustomBorderColor = Color.DarkGray;
             gButtonLogOut.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -104,7 +138,7 @@
             gButtonLogOut.HoverState.ForeColor = Color.Black;
             gButtonLogOut.Location = new Point(87, 742);
             gButtonLogOut.Name = "gButtonLogOut";
-            gButtonLogOut.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            gButtonLogOut.ShadowDecoration.CustomizableEdges = customizableEdges4;
             gButtonLogOut.Size = new Size(140, 50);
             gButtonLogOut.TabIndex = 9;
             gButtonLogOut.Text = "Log out";
@@ -115,12 +149,12 @@
             // 
             gButtonStudents.BackColor = Color.Transparent;
             gButtonStudents.BorderRadius = 20;
-            gButtonStudents.CustomImages.HoveredImage = (Image)resources.GetObject("resource.HoveredImage1");
-            gButtonStudents.CustomImages.Image = (Image)resources.GetObject("resource.Image1");
+            gButtonStudents.CustomImages.HoveredImage = (Image)resources.GetObject("resource.HoveredImage2");
+            gButtonStudents.CustomImages.Image = (Image)resources.GetObject("resource.Image2");
             gButtonStudents.CustomImages.ImageAlign = HorizontalAlignment.Left;
             gButtonStudents.CustomImages.ImageOffset = new Point(20, 0);
             gButtonStudents.CustomImages.ImageSize = new Size(30, 30);
-            gButtonStudents.CustomizableEdges = customizableEdges3;
+            gButtonStudents.CustomizableEdges = customizableEdges5;
             gButtonStudents.DisabledState.BorderColor = Color.DarkGray;
             gButtonStudents.DisabledState.CustomBorderColor = Color.DarkGray;
             gButtonStudents.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -131,9 +165,9 @@
             gButtonStudents.HoverState.FillColor = Color.White;
             gButtonStudents.HoverState.Font = new Font("Trebuchet MS", 10.8F, FontStyle.Bold);
             gButtonStudents.HoverState.ForeColor = Color.Black;
-            gButtonStudents.Location = new Point(22, 234);
+            gButtonStudents.Location = new Point(22, 296);
             gButtonStudents.Name = "gButtonStudents";
-            gButtonStudents.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            gButtonStudents.ShadowDecoration.CustomizableEdges = customizableEdges6;
             gButtonStudents.Size = new Size(271, 56);
             gButtonStudents.TabIndex = 10;
             gButtonStudents.Text = "Students";
@@ -161,12 +195,12 @@
             // 
             gButtonAccount.BackColor = Color.Transparent;
             gButtonAccount.BorderRadius = 20;
-            gButtonAccount.CustomImages.HoveredImage = (Image)resources.GetObject("resource.HoveredImage2");
-            gButtonAccount.CustomImages.Image = (Image)resources.GetObject("resource.Image2");
+            gButtonAccount.CustomImages.HoveredImage = (Image)resources.GetObject("resource.HoveredImage3");
+            gButtonAccount.CustomImages.Image = (Image)resources.GetObject("resource.Image3");
             gButtonAccount.CustomImages.ImageAlign = HorizontalAlignment.Left;
             gButtonAccount.CustomImages.ImageOffset = new Point(20, 0);
             gButtonAccount.CustomImages.ImageSize = new Size(30, 30);
-            gButtonAccount.CustomizableEdges = customizableEdges5;
+            gButtonAccount.CustomizableEdges = customizableEdges7;
             gButtonAccount.DisabledState.BorderColor = Color.DarkGray;
             gButtonAccount.DisabledState.CustomBorderColor = Color.DarkGray;
             gButtonAccount.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -177,9 +211,9 @@
             gButtonAccount.HoverState.FillColor = Color.White;
             gButtonAccount.HoverState.Font = new Font("Trebuchet MS", 10.8F, FontStyle.Bold);
             gButtonAccount.HoverState.ForeColor = Color.Black;
-            gButtonAccount.Location = new Point(22, 358);
+            gButtonAccount.Location = new Point(22, 420);
             gButtonAccount.Name = "gButtonAccount";
-            gButtonAccount.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            gButtonAccount.ShadowDecoration.CustomizableEdges = customizableEdges8;
             gButtonAccount.Size = new Size(271, 56);
             gButtonAccount.TabIndex = 6;
             gButtonAccount.Text = "Account";
@@ -191,12 +225,12 @@
             // 
             gButtonDiscussions.BackColor = Color.Transparent;
             gButtonDiscussions.BorderRadius = 20;
-            gButtonDiscussions.CustomImages.HoveredImage = (Image)resources.GetObject("resource.HoveredImage3");
-            gButtonDiscussions.CustomImages.Image = (Image)resources.GetObject("resource.Image3");
+            gButtonDiscussions.CustomImages.HoveredImage = (Image)resources.GetObject("resource.HoveredImage4");
+            gButtonDiscussions.CustomImages.Image = (Image)resources.GetObject("resource.Image4");
             gButtonDiscussions.CustomImages.ImageAlign = HorizontalAlignment.Left;
             gButtonDiscussions.CustomImages.ImageOffset = new Point(20, 0);
             gButtonDiscussions.CustomImages.ImageSize = new Size(30, 30);
-            gButtonDiscussions.CustomizableEdges = customizableEdges7;
+            gButtonDiscussions.CustomizableEdges = customizableEdges9;
             gButtonDiscussions.DisabledState.BorderColor = Color.DarkGray;
             gButtonDiscussions.DisabledState.CustomBorderColor = Color.DarkGray;
             gButtonDiscussions.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -207,9 +241,9 @@
             gButtonDiscussions.HoverState.FillColor = Color.White;
             gButtonDiscussions.HoverState.Font = new Font("Trebuchet MS", 10.8F, FontStyle.Bold);
             gButtonDiscussions.HoverState.ForeColor = Color.Black;
-            gButtonDiscussions.Location = new Point(22, 296);
+            gButtonDiscussions.Location = new Point(22, 358);
             gButtonDiscussions.Name = "gButtonDiscussions";
-            gButtonDiscussions.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            gButtonDiscussions.ShadowDecoration.CustomizableEdges = customizableEdges10;
             gButtonDiscussions.Size = new Size(271, 56);
             gButtonDiscussions.TabIndex = 5;
             gButtonDiscussions.Text = "Discussions";
@@ -221,12 +255,12 @@
             // 
             gButtonDashboards.BackColor = Color.Transparent;
             gButtonDashboards.BorderRadius = 20;
-            gButtonDashboards.CustomImages.HoveredImage = (Image)resources.GetObject("resource.HoveredImage4");
-            gButtonDashboards.CustomImages.Image = (Image)resources.GetObject("resource.Image4");
+            gButtonDashboards.CustomImages.HoveredImage = (Image)resources.GetObject("resource.HoveredImage5");
+            gButtonDashboards.CustomImages.Image = (Image)resources.GetObject("resource.Image5");
             gButtonDashboards.CustomImages.ImageAlign = HorizontalAlignment.Left;
             gButtonDashboards.CustomImages.ImageOffset = new Point(20, 0);
             gButtonDashboards.CustomImages.ImageSize = new Size(30, 30);
-            gButtonDashboards.CustomizableEdges = customizableEdges9;
+            gButtonDashboards.CustomizableEdges = customizableEdges11;
             gButtonDashboards.DisabledState.BorderColor = Color.DarkGray;
             gButtonDashboards.DisabledState.CustomBorderColor = Color.DarkGray;
             gButtonDashboards.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -239,7 +273,7 @@
             gButtonDashboards.HoverState.ForeColor = Color.Black;
             gButtonDashboards.Location = new Point(22, 172);
             gButtonDashboards.Name = "gButtonDashboards";
-            gButtonDashboards.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            gButtonDashboards.ShadowDecoration.CustomizableEdges = customizableEdges12;
             gButtonDashboards.Size = new Size(271, 56);
             gButtonDashboards.TabIndex = 4;
             gButtonDashboards.Text = "Dashboards";
@@ -253,11 +287,11 @@
             gPanelBackAvatar.Controls.Add(lblRole);
             gPanelBackAvatar.Controls.Add(lblHandle);
             gPanelBackAvatar.Controls.Add(gCirclePictureBoxAvatar);
-            gPanelBackAvatar.CustomizableEdges = customizableEdges12;
+            gPanelBackAvatar.CustomizableEdges = customizableEdges14;
             gPanelBackAvatar.FillColor = Color.White;
             gPanelBackAvatar.Location = new Point(22, 24);
             gPanelBackAvatar.Name = "gPanelBackAvatar";
-            gPanelBackAvatar.ShadowDecoration.CustomizableEdges = customizableEdges13;
+            gPanelBackAvatar.ShadowDecoration.CustomizableEdges = customizableEdges15;
             gPanelBackAvatar.Size = new Size(271, 103);
             gPanelBackAvatar.TabIndex = 3;
             gPanelBackAvatar.Click += gPanelBackAvatar_Click;
@@ -290,7 +324,7 @@
             gCirclePictureBoxAvatar.ImageRotate = 0F;
             gCirclePictureBoxAvatar.Location = new Point(16, 16);
             gCirclePictureBoxAvatar.Name = "gCirclePictureBoxAvatar";
-            gCirclePictureBoxAvatar.ShadowDecoration.CustomizableEdges = customizableEdges11;
+            gCirclePictureBoxAvatar.ShadowDecoration.CustomizableEdges = customizableEdges13;
             gCirclePictureBoxAvatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             gCirclePictureBoxAvatar.Size = new Size(70, 70);
             gCirclePictureBoxAvatar.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -335,5 +369,6 @@
         private Label lblHandle;
         private Guna.UI2.WinForms.Guna2CirclePictureBox gCirclePictureBoxAvatar;
         private Panel pnlAddUserControl;
+        private Guna.UI2.WinForms.Guna2Button gButtonMyTheses;
     }
 }

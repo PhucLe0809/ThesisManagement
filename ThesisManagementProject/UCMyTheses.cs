@@ -5,29 +5,25 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ThesisManagementProject.Database;
 using ThesisManagementProject.Models;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ThesisManagementProject
 {
-    public partial class UCDashboardLecture : UserControl
+    public partial class UCMyTheses : UserControl
     {
-
         private UCThesisList uCThesisList = new UCThesisList();
-        private UCThesisCreate uCThesisCreate = new UCThesisCreate();
         private UCThesisDetails uCThesisDetails = new UCThesisDetails();
 
         private ThesisDAO thesisDAO = new ThesisDAO();
         private People people = new People();
         private List<Thesis> listThesis = new List<Thesis>();
-
-
-        public UCDashboardLecture()
+        public UCMyTheses()
         {
             InitializeComponent();
 
@@ -42,15 +38,9 @@ namespace ThesisManagementProject
             uCThesisList.GTextBoxSearch.TextChanged += SearchThesisTopic_TextChanged;
             uCThesisList.GButtonFieldFilter.Click += FieldFilter_Clicked;
             uCThesisList.GComboBoxField.SelectedIndexChanged += Field_SelectedIndexChanged;
-
-            uCThesisCreate.GButtonCancel.Click += gGradientButtonViewThesis_Click;
-
             #endregion
-
         }
-
         #region FUNCTIONS
-
         public void SetInformation(People people)
         {
             this.people = people;
@@ -68,7 +58,9 @@ namespace ThesisManagementProject
         }
         private void UpdateThesisList()
         {
-            string command = string.Format("SELECT * FROM {0} WHERE idcreator = '{1}'", MyDatabase.DBThesis, people.IdAccount);
+            string command = string.Format("SELECT {0}.* FROM {0} INNER JOIN {1} ON {0}.idthesis = {1}.idthesis " +
+                                           "WHERE {1}.idteam IN (SELECT idteam FROM {2} WHERE idaccount = '{3}')", 
+                                            MyDatabase.DBThesis, MyDatabase.DBThesisStatus, MyDatabase.DBTeam, this.people.IdAccount);
             this.listThesis = thesisDAO.SelectList(command);
         }
         private void ButtonStandardColor(Guna2GradientButton button)
@@ -89,7 +81,6 @@ namespace ThesisManagementProject
         {
             ButtonStandardColor(gGradientButtonViewThesis);
             ButtonStandardColor(gGradientButtonStatistical);
-            ButtonStandardColor(gGradientButtonCreateThesis);
         }
         private void AddUserControl(Guna2GradientButton button, UserControl userControl)
         {
@@ -107,13 +98,12 @@ namespace ThesisManagementProject
                 UCThesisLine thesisLine = new UCThesisLine();
                 thesisLine.SetInformation(listThesis[i]);
                 thesisLine.ThesisLineClicked += ThesisLine_Clicked;
-                thesisLine.ThesisEditClicked += ThesisEdit_Clicked;
-                thesisLine.ThesisDeleteClicked += ThesisDelete_Clicked;
+                thesisLine.GetGButtonEdit.Visible = false;
+                thesisLine.GetGButtonDelete.Visible = false;
                 uCThesisList.AddThesis(thesisLine);
             }
             uCThesisList.SetNumThesis(listThesis.Count);
         }
-
         #endregion
 
         #region EVENT gGradientButtonViewThesis
@@ -139,18 +129,7 @@ namespace ThesisManagementProject
 
         #endregion
 
-        #region EVENT gGradientButtonCreateThesis
-
-        private void gGradientButtonCreateThesis_Click(object sender, EventArgs e)
-        {
-            uCThesisCreate.SetInformation(people);
-            AddUserControl(gGradientButtonCreateThesis, uCThesisCreate);
-        }
-
-        #endregion
-
         #region THESIS LINE 
-
         private void ThesisLine_Clicked(object sender, EventArgs e)
         {
             UCThesisLine thesisLine = sender as UCThesisLine;
@@ -158,20 +137,10 @@ namespace ThesisManagementProject
             if (thesisLine != null)
             {
                 gPanelDataView.Controls.Clear();
-                uCThesisDetails.SetInformation(thesisDAO.SelectOnly(thesisLine.ID), this.people);
+                uCThesisDetails.SetInformation(thesisDAO.SelectOnly(thesisLine.ID), people);
                 gPanelDataView.Controls.Add(uCThesisDetails);
-            
             }
         }
-        private void ThesisDelete_Clicked(object sender, EventArgs e)
-        {
-            gGradientButtonViewThesis_Click(new object(), new EventArgs());
-        }
-        private void ThesisEdit_Clicked(object sender, EventArgs e)
-        {
-            gGradientButtonViewThesis_Click(new object(), new EventArgs());
-        }
-
         #endregion
 
         #region FUNCTIONS SORT
@@ -207,8 +176,11 @@ namespace ThesisManagementProject
 
             if (textBox != null)
             {
-                string command = string.Format("SELECT * FROM {0} WHERE idcreator = '{1}' and topic LIKE '{2}%'",
-                                    MyDatabase.DBThesis, people.IdAccount, textBox.Text);
+                string command = string.Format("SELECT {0}.* FROM {0} " +
+                                               "INNER JOIN {1} ON {0}.idthesis = {1}.idthesis " +
+                                               "INNER JOIN {2} ON {1}.idteam = {2}.idteam " +
+                                               "WHERE {2}.idaccount = '{3}' AND {0}.topic LIKE '{4}%'",
+                                               MyDatabase.DBThesis, MyDatabase.DBThesisStatus, MyDatabase.DBTeam, this.people.IdAccount, textBox.Text);
                 this.listThesis = thesisDAO.SelectList(command);
                 LoadThesisList();
             }
@@ -220,9 +192,11 @@ namespace ThesisManagementProject
 
         private void Field_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string command = string.Format("SELECT * FROM {0} WHERE idcreator = '{1}' and field = '{2}'",
-                                    MyDatabase.DBThesis, people.IdAccount, uCThesisList.GComboBoxField.SelectedItem.ToString());
-
+            string command = string.Format("SELECT {0}.* FROM {0} " +
+                                           "INNER JOIN {1} ON {0}.idthesis = {1}.idthesis " +
+                                           "INNER JOIN {2} ON {1}.idteam = {2}.idteam " +
+                                           "WHERE {2}.idaccount = '{3}' AND {0}.field = '{4}'",
+                                           MyDatabase.DBThesis, MyDatabase.DBThesisStatus, MyDatabase.DBTeam, this.people.IdAccount, uCThesisList.GComboBoxField.SelectedItem.ToString());
             InitThesisListWithCommand(command);
         }
         private void FieldFilter_Clicked(object sender, EventArgs e)
@@ -235,12 +209,11 @@ namespace ThesisManagementProject
             }
             else
             {
-                string command = string.Format("SELECT * FROM {0} WHERE idcreator = '{1}'", MyDatabase.DBThesis, people.IdAccount);
-                InitThesisListWithCommand(command);
+                UpdateThesisList();
+                LoadThesisList();
             }
         }
 
         #endregion
-
     }
 }

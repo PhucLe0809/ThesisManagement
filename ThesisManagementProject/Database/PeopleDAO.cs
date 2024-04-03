@@ -35,6 +35,18 @@ namespace ThesisManagementProject.Database
 
             return list;
         }
+        public List<People> SelectList(string command)
+        {
+            DataTable dataTable = DBConnection.Select(command);
+
+            List<People> list = new List<People>();
+            foreach (DataRow row in dataTable.Rows)
+            {
+                list.Add(GetFromDataRow(row));
+            }
+
+            return list;
+        }
         public List<People> SelectListByStatus(string status, string idthesis)
         {
             DataTable dataTable = DBConnection.Select("select * from " +

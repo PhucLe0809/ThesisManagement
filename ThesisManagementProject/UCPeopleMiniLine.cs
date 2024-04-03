@@ -17,6 +17,9 @@ namespace ThesisManagementProject
     public partial class UCPeopleMiniLine : UserControl
     {
         public event EventHandler ThesisMiniLineClicked;
+        public event EventHandler ButtonAddClicked;
+        public event EventHandler ButtonDeleteClicked;
+
         private MyProcess myProcess = new MyProcess();
         private People people = new People();
         private Color uCBackColor = Color.White;
@@ -64,6 +67,15 @@ namespace ThesisManagementProject
         {
             gButtonAdd.Hide();
         }
+        public void SetButtonDelete()
+        {
+            gButtonAdd.Image = Properties.Resources.PicItemRemove;
+            gButtonAdd.FillColor = this.uCBackColor;
+            gButtonAdd.BackColor = this.uCBackColor;
+            gButtonAdd.HoverState.FillColor = this.uCBackColor;
+            gButtonAdd.HoverState.Image = gButtonAdd.Image;
+            gButtonAdd.Click += gButtonDelete_Click;
+        }
         public void SetBackGroundColor(Color color)
         {
             this.uCBackColor = color;
@@ -76,6 +88,8 @@ namespace ThesisManagementProject
             gCirclePictureBoxAvatar.BackColor = color;
             lblUserName.BackColor = color;
             lblPeopleCode.BackColor = color;
+            gButtonAdd.FillColor = color;
+            gButtonAdd.BackColor = color;
         }
 
         private void ShowPeopleInformation()
@@ -98,13 +112,24 @@ namespace ThesisManagementProject
         }
         private void gButtonAdd_Click(object sender, EventArgs e)
         {
-            OnThesisMiniLineClicked(EventArgs.Empty);
+            OnButtonAddClicked(EventArgs.Empty);
+        }
+        private void gButtonDelete_Click(object sender, EventArgs e)
+        {
+            OnButtonDeleteClicked(EventArgs.Empty);
         }
         public virtual void OnThesisMiniLineClicked(EventArgs e)
         {
             ThesisMiniLineClicked?.Invoke(this, e);
         }
-
+        public virtual void OnButtonAddClicked(EventArgs e)
+        {
+            ButtonAddClicked?.Invoke(this, e);
+        }
+        public virtual void OnButtonDeleteClicked(EventArgs e)
+        {
+            ButtonDeleteClicked?.Invoke(this, e);
+        }
         private void gShadowPanelBack_MouseEnter(object sender, EventArgs e)
         {
             ExecuteBackGroundColor(uCHoverColor);
@@ -116,5 +141,9 @@ namespace ThesisManagementProject
 
         #endregion
 
+        private void gShadowPanelBack_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

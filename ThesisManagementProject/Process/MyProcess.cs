@@ -49,11 +49,12 @@ namespace ThesisManagementProject.Process
         {
             if (flag == false)
             {
+                control.Focus();
                 errorProvider.SetError(control, error);
             }
             else
             {
-                errorProvider.SetError(control, string.Empty);
+                errorProvider.SetError(control, null);
             }
         }
 

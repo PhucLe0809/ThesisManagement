@@ -25,8 +25,8 @@ namespace ThesisManagementProject.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-4FIVTNT\\SQLEXPRESS;Initial Catalog=ThesisManagement;Integrate" +
-            "d Security=True;Encrypt=False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=HUY\\SQLEXPRESS;Initial Catalog=ThesisManagement;Integrated Security=T" +
+            "rue;Encrypt=False")]
         public string conStr {
             get {
                 return ((string)(this["conStr"]));

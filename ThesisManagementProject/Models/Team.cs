@@ -31,6 +31,22 @@ namespace ThesisManagementProject.Models
             this.created = DateTime.Now;
             this.members = new List<People>();
         }
+        public Team(List<People> members)
+        {
+            this.idteam = myProcess.GenIDClassify(EClassify.Team);
+            this.teamName = "Anonymous";
+            this.avatarName = "PicAvatarDemoUser";
+            this.created = DateTime.Now;
+            this.members = members;
+        }
+        public Team(string teamName, string avatarName, List<People> members)
+        {
+            this.idteam = myProcess.GenIDClassify(EClassify.Team);
+            this.teamName = teamName;
+            this.avatarName = avatarName;
+            this.created = DateTime.Now;
+            this.members = members;
+        }
         public Team(string teamName, string avatarName, DateTime created, List<People> members)
         {
             this.idteam = myProcess.GenIDClassify(EClassify.Team);

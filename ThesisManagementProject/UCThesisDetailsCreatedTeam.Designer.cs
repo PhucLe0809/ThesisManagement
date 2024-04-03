@@ -1,0 +1,265 @@
+﻿namespace ThesisManagementProject
+{
+    partial class UCThesisDetailsCreatedTeam
+    {
+        /// <summary> 
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary> 
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Component Designer generated code
+
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            components = new System.ComponentModel.Container();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCThesisDetailsCreatedTeam));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            flpTeam = new FlowLayoutPanel();
+            gSeparatorTopic = new Guna.UI2.WinForms.Guna2Separator();
+            lblRegisteredList = new Label();
+            gTextBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            flpSearch = new FlowLayoutPanel();
+            guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(components);
+            gTextBoxTeamName = new Guna.UI2.WinForms.Guna2TextBox();
+            guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            gCirclePictureBoxAvatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            gGradientButtonApply = new Guna.UI2.WinForms.Guna2GradientButton();
+            erpTeamName = new ErrorProvider(components);
+            guna2ShadowPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)gCirclePictureBoxAvatar).BeginInit();
+            guna2ShadowPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)erpTeamName).BeginInit();
+            SuspendLayout();
+            // 
+            // flpTeam
+            // 
+            flpTeam.AutoScroll = true;
+            flpTeam.BackColor = SystemColors.ButtonFace;
+            flpTeam.Location = new Point(11, 14);
+            flpTeam.Name = "flpTeam";
+            flpTeam.Size = new Size(553, 264);
+            flpTeam.TabIndex = 55;
+            // 
+            // gSeparatorTopic
+            // 
+            gSeparatorTopic.Location = new Point(25, 61);
+            gSeparatorTopic.Name = "gSeparatorTopic";
+            gSeparatorTopic.Size = new Size(555, 12);
+            gSeparatorTopic.TabIndex = 54;
+            // 
+            // lblRegisteredList
+            // 
+            lblRegisteredList.AutoSize = true;
+            lblRegisteredList.BackColor = Color.Transparent;
+            lblRegisteredList.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblRegisteredList.Location = new Point(25, 25);
+            lblRegisteredList.Name = "lblRegisteredList";
+            lblRegisteredList.Size = new Size(159, 28);
+            lblRegisteredList.TabIndex = 53;
+            lblRegisteredList.Text = "CREATE TEAM\r\n";
+            // 
+            // gTextBoxSearch
+            // 
+            gTextBoxSearch.BorderColor = Color.FromArgb(74, 97, 94);
+            gTextBoxSearch.BorderRadius = 8;
+            gTextBoxSearch.CustomizableEdges = customizableEdges1;
+            gTextBoxSearch.DefaultText = "";
+            gTextBoxSearch.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            gTextBoxSearch.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            gTextBoxSearch.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            gTextBoxSearch.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            gTextBoxSearch.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            gTextBoxSearch.Font = new Font("Segoe UI", 9F);
+            gTextBoxSearch.ForeColor = Color.Black;
+            gTextBoxSearch.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            gTextBoxSearch.IconLeft = (Image)resources.GetObject("gTextBoxSearch.IconLeft");
+            gTextBoxSearch.IconLeftOffset = new Point(5, 0);
+            gTextBoxSearch.Location = new Point(25, 245);
+            gTextBoxSearch.Margin = new Padding(3, 4, 3, 4);
+            gTextBoxSearch.Name = "gTextBoxSearch";
+            gTextBoxSearch.PasswordChar = '\0';
+            gTextBoxSearch.PlaceholderForeColor = Color.Gray;
+            gTextBoxSearch.PlaceholderText = "Search user handle name";
+            gTextBoxSearch.SelectedText = "";
+            gTextBoxSearch.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            gTextBoxSearch.Size = new Size(260, 40);
+            gTextBoxSearch.TabIndex = 9;
+            gTextBoxSearch.TextOffset = new Point(5, 0);
+            gTextBoxSearch.TextChanged += gTextBoxSearch_TextChanged;
+            // 
+            // flpSearch
+            // 
+            flpSearch.AutoScroll = true;
+            flpSearch.BackColor = SystemColors.ButtonFace;
+            flpSearch.Location = new Point(8, 284);
+            flpSearch.Name = "flpSearch";
+            flpSearch.Size = new Size(553, 242);
+            flpSearch.TabIndex = 56;
+            // 
+            // gTextBoxTeamName
+            // 
+            gTextBoxTeamName.BorderColor = Color.FromArgb(74, 97, 94);
+            gTextBoxTeamName.BorderRadius = 8;
+            gTextBoxTeamName.BorderThickness = 0;
+            gTextBoxTeamName.CustomizableEdges = customizableEdges3;
+            gTextBoxTeamName.DefaultText = "";
+            gTextBoxTeamName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            gTextBoxTeamName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            gTextBoxTeamName.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            gTextBoxTeamName.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            gTextBoxTeamName.FillColor = SystemColors.ButtonFace;
+            gTextBoxTeamName.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            gTextBoxTeamName.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gTextBoxTeamName.ForeColor = Color.FromArgb(74, 97, 94);
+            gTextBoxTeamName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            gTextBoxTeamName.IconLeftOffset = new Point(5, 0);
+            gTextBoxTeamName.Location = new Point(159, 48);
+            gTextBoxTeamName.Margin = new Padding(3, 4, 3, 4);
+            gTextBoxTeamName.Name = "gTextBoxTeamName";
+            gTextBoxTeamName.PasswordChar = '\0';
+            gTextBoxTeamName.PlaceholderForeColor = Color.Gray;
+            gTextBoxTeamName.PlaceholderText = "Team name";
+            gTextBoxTeamName.SelectedText = "";
+            gTextBoxTeamName.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            gTextBoxTeamName.Size = new Size(237, 40);
+            gTextBoxTeamName.TabIndex = 57;
+            gTextBoxTeamName.TextOffset = new Point(5, 0);
+            gTextBoxTeamName.TextChanged += gTextBoxTeamName_TextChanged;
+            // 
+            // guna2ShadowPanel1
+            // 
+            guna2ShadowPanel1.BackColor = Color.Transparent;
+            guna2ShadowPanel1.Controls.Add(flpSearch);
+            guna2ShadowPanel1.Controls.Add(flpTeam);
+            guna2ShadowPanel1.FillColor = SystemColors.ButtonFace;
+            guna2ShadowPanel1.Location = new Point(17, 297);
+            guna2ShadowPanel1.Name = "guna2ShadowPanel1";
+            guna2ShadowPanel1.Radius = 10;
+            guna2ShadowPanel1.ShadowColor = Color.Black;
+            guna2ShadowPanel1.ShadowShift = 0;
+            guna2ShadowPanel1.Size = new Size(575, 311);
+            guna2ShadowPanel1.TabIndex = 58;
+            // 
+            // gCirclePictureBoxAvatar
+            // 
+            gCirclePictureBoxAvatar.FillColor = SystemColors.ButtonFace;
+            gCirclePictureBoxAvatar.Image = Properties.Resources.PicAvatarDemoUser;
+            gCirclePictureBoxAvatar.ImageRotate = 0F;
+            gCirclePictureBoxAvatar.Location = new Point(53, 26);
+            gCirclePictureBoxAvatar.Name = "gCirclePictureBoxAvatar";
+            gCirclePictureBoxAvatar.ShadowDecoration.CustomizableEdges = customizableEdges5;
+            gCirclePictureBoxAvatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            gCirclePictureBoxAvatar.Size = new Size(90, 90);
+            gCirclePictureBoxAvatar.SizeMode = PictureBoxSizeMode.Zoom;
+            gCirclePictureBoxAvatar.TabIndex = 59;
+            gCirclePictureBoxAvatar.TabStop = false;
+            gCirclePictureBoxAvatar.Click += gCirclePictureBoxAvatar_Click;
+            gCirclePictureBoxAvatar.MouseEnter += gCirclePictureBoxAvatar_MouseEnter;
+            gCirclePictureBoxAvatar.MouseLeave += gCirclePictureBoxAvatar_MouseLeave;
+            // 
+            // guna2ShadowPanel2
+            // 
+            guna2ShadowPanel2.BackColor = Color.Transparent;
+            guna2ShadowPanel2.Controls.Add(gGradientButtonApply);
+            guna2ShadowPanel2.Controls.Add(gTextBoxTeamName);
+            guna2ShadowPanel2.Controls.Add(gCirclePictureBoxAvatar);
+            guna2ShadowPanel2.FillColor = Color.White;
+            guna2ShadowPanel2.Location = new Point(17, 87);
+            guna2ShadowPanel2.Name = "guna2ShadowPanel2";
+            guna2ShadowPanel2.Radius = 10;
+            guna2ShadowPanel2.ShadowColor = Color.Black;
+            guna2ShadowPanel2.ShadowShift = 6;
+            guna2ShadowPanel2.Size = new Size(575, 142);
+            guna2ShadowPanel2.TabIndex = 60;
+            // 
+            // gGradientButtonApply
+            // 
+            gGradientButtonApply.BackColor = Color.Transparent;
+            gGradientButtonApply.BorderRadius = 10;
+            gGradientButtonApply.CustomizableEdges = customizableEdges6;
+            gGradientButtonApply.DisabledState.BorderColor = Color.DarkGray;
+            gGradientButtonApply.DisabledState.CustomBorderColor = Color.DarkGray;
+            gGradientButtonApply.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            gGradientButtonApply.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            gGradientButtonApply.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            gGradientButtonApply.FillColor = SystemColors.ButtonFace;
+            gGradientButtonApply.FillColor2 = SystemColors.ButtonFace;
+            gGradientButtonApply.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gGradientButtonApply.ForeColor = Color.Black;
+            gGradientButtonApply.HoverState.FillColor = Color.FromArgb(94, 148, 255);
+            gGradientButtonApply.HoverState.FillColor2 = Color.FromArgb(255, 77, 165);
+            gGradientButtonApply.HoverState.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gGradientButtonApply.HoverState.ForeColor = Color.White;
+            gGradientButtonApply.Location = new Point(428, 48);
+            gGradientButtonApply.Name = "gGradientButtonApply";
+            gGradientButtonApply.ShadowDecoration.CustomizableEdges = customizableEdges7;
+            gGradientButtonApply.Size = new Size(106, 40);
+            gGradientButtonApply.TabIndex = 61;
+            gGradientButtonApply.Text = "Apply";
+            gGradientButtonApply.Click += gGradientButtonApply_Click;
+            // 
+            // erpTeamName
+            // 
+            erpTeamName.ContainerControl = this;
+            // 
+            // UCThesisDetailsCreatedTeam
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            Controls.Add(guna2ShadowPanel2);
+            Controls.Add(guna2ShadowPanel1);
+            Controls.Add(gTextBoxSearch);
+            Controls.Add(gSeparatorTopic);
+            Controls.Add(lblRegisteredList);
+            DoubleBuffered = true;
+            Name = "UCThesisDetailsCreatedTeam";
+            Size = new Size(608, 635);
+            guna2ShadowPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)gCirclePictureBoxAvatar).EndInit();
+            guna2ShadowPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)erpTeamName).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        #endregion
+
+        private FlowLayoutPanel flpTeam;
+        private Guna.UI2.WinForms.Guna2Separator gSeparatorTopic;
+        private Label lblRegisteredList;
+        private Guna.UI2.WinForms.Guna2TextBox gTextBoxSearch;
+        private FlowLayoutPanel flpSearch;
+        private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
+        private Guna.UI2.WinForms.Guna2TextBox gTextBoxTeamName;
+        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox gCirclePictureBoxAvatar;
+        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
+        private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonApply;
+        private ErrorProvider erpTeamName;
+    }
+}

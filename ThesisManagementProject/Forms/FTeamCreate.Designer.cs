@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FTeamCreate));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             gShadowPanelSearch = new Guna.UI2.WinForms.Guna2ShadowPanel();
             gButtonFilter = new Guna.UI2.WinForms.Guna2Button();
             gTextBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
@@ -68,7 +68,7 @@
             // 
             gButtonFilter.BackColor = Color.White;
             gButtonFilter.BorderRadius = 5;
-            gButtonFilter.CustomizableEdges = customizableEdges1;
+            gButtonFilter.CustomizableEdges = customizableEdges9;
             gButtonFilter.DisabledState.BorderColor = Color.DarkGray;
             gButtonFilter.DisabledState.CustomBorderColor = Color.DarkGray;
             gButtonFilter.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -81,7 +81,7 @@
             gButtonFilter.ImageSize = new Size(30, 30);
             gButtonFilter.Location = new Point(308, 18);
             gButtonFilter.Name = "gButtonFilter";
-            gButtonFilter.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            gButtonFilter.ShadowDecoration.CustomizableEdges = customizableEdges10;
             gButtonFilter.Size = new Size(40, 40);
             gButtonFilter.TabIndex = 10;
             gButtonFilter.Click += gButtonFilter_Click;
@@ -90,7 +90,7 @@
             // 
             gTextBoxSearch.BorderColor = Color.FromArgb(74, 97, 94);
             gTextBoxSearch.BorderRadius = 8;
-            gTextBoxSearch.CustomizableEdges = customizableEdges3;
+            gTextBoxSearch.CustomizableEdges = customizableEdges11;
             gTextBoxSearch.DefaultText = "";
             gTextBoxSearch.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxSearch.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -109,7 +109,7 @@
             gTextBoxSearch.PlaceholderForeColor = Color.Gray;
             gTextBoxSearch.PlaceholderText = "Search user name";
             gTextBoxSearch.SelectedText = "";
-            gTextBoxSearch.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            gTextBoxSearch.ShadowDecoration.CustomizableEdges = customizableEdges12;
             gTextBoxSearch.Size = new Size(287, 40);
             gTextBoxSearch.TabIndex = 9;
             gTextBoxSearch.TextOffset = new Point(5, 0);
@@ -154,7 +154,7 @@
             // 
             gButtonCancel.BackColor = Color.Transparent;
             gButtonCancel.BorderRadius = 7;
-            gButtonCancel.CustomizableEdges = customizableEdges5;
+            gButtonCancel.CustomizableEdges = customizableEdges13;
             gButtonCancel.DisabledState.BorderColor = Color.DarkGray;
             gButtonCancel.DisabledState.CustomBorderColor = Color.DarkGray;
             gButtonCancel.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -164,7 +164,7 @@
             gButtonCancel.ForeColor = Color.White;
             gButtonCancel.Location = new Point(609, 476);
             gButtonCancel.Name = "gButtonCancel";
-            gButtonCancel.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            gButtonCancel.ShadowDecoration.CustomizableEdges = customizableEdges14;
             gButtonCancel.Size = new Size(100, 35);
             gButtonCancel.TabIndex = 33;
             gButtonCancel.Text = "Cancel";
@@ -174,7 +174,7 @@
             // 
             gGradientButtonCreate.BackColor = Color.Transparent;
             gGradientButtonCreate.BorderRadius = 7;
-            gGradientButtonCreate.CustomizableEdges = customizableEdges7;
+            gGradientButtonCreate.CustomizableEdges = customizableEdges15;
             gGradientButtonCreate.DisabledState.BorderColor = Color.DarkGray;
             gGradientButtonCreate.DisabledState.CustomBorderColor = Color.DarkGray;
             gGradientButtonCreate.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -186,7 +186,7 @@
             gGradientButtonCreate.ForeColor = Color.White;
             gGradientButtonCreate.Location = new Point(715, 476);
             gGradientButtonCreate.Name = "gGradientButtonCreate";
-            gGradientButtonCreate.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            gGradientButtonCreate.ShadowDecoration.CustomizableEdges = customizableEdges16;
             gGradientButtonCreate.Size = new Size(100, 35);
             gGradientButtonCreate.TabIndex = 32;
             gGradientButtonCreate.Text = "Create";

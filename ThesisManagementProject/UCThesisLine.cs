@@ -64,6 +64,14 @@ namespace ThesisManagementProject
         {
             get { return this.gButtonStar; }
         }
+        public Guna2Button GetGButtonEdit 
+        { 
+            get => gButtonEdit; 
+        }
+        public Guna2Button GetGButtonDelete
+        {
+            get => gButtonDelete;
+        }
         public string ID
         {
             get { return this.gTextBoxThesisCode.Text; }
