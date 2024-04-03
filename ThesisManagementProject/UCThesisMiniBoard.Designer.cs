@@ -37,11 +37,14 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             gTextBoxStatus = new Guna.UI2.WinForms.Guna2TextBox();
             gButtonStar = new Guna.UI2.WinForms.Guna2Button();
             gTextBoxTopic = new Guna.UI2.WinForms.Guna2TextBox();
             lblTechnologyField = new Label();
             gTextBoxField = new Guna.UI2.WinForms.Guna2TextBox();
+            gButtonDetails = new Guna.UI2.WinForms.Guna2Button();
             SuspendLayout();
             // 
             // gTextBoxStatus
@@ -163,11 +166,37 @@
             gTextBoxField.TabIndex = 67;
             gTextBoxField.TextOffset = new Point(5, 0);
             // 
+            // gButtonDetails
+            // 
+            gButtonDetails.BorderRadius = 5;
+            gButtonDetails.CustomizableEdges = customizableEdges9;
+            gButtonDetails.DisabledState.BorderColor = Color.DarkGray;
+            gButtonDetails.DisabledState.CustomBorderColor = Color.DarkGray;
+            gButtonDetails.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            gButtonDetails.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            gButtonDetails.FillColor = Color.White;
+            gButtonDetails.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gButtonDetails.ForeColor = Color.FromArgb(74, 97, 94);
+            gButtonDetails.HoverState.FillColor = Color.White;
+            gButtonDetails.HoverState.ForeColor = Color.FromArgb(199, 25, 230);
+            gButtonDetails.HoverState.Image = (Image)resources.GetObject("resource.Image");
+            gButtonDetails.Image = (Image)resources.GetObject("gButtonDetails.Image");
+            gButtonDetails.ImageSize = new Size(30, 30);
+            gButtonDetails.Location = new Point(271, 11);
+            gButtonDetails.Name = "gButtonDetails";
+            gButtonDetails.PressedColor = Color.White;
+            gButtonDetails.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            gButtonDetails.Size = new Size(102, 40);
+            gButtonDetails.TabIndex = 68;
+            gButtonDetails.Text = "Details";
+            gButtonDetails.Click += gButtonDetails_Click;
+            // 
             // UCThesisMiniBoard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(gButtonDetails);
             Controls.Add(gTextBoxField);
             Controls.Add(lblTechnologyField);
             Controls.Add(gTextBoxStatus);
@@ -175,7 +204,6 @@
             Controls.Add(gTextBoxTopic);
             Name = "UCThesisMiniBoard";
             Size = new Size(399, 266);
-            Click += UCThesisMiniBoard_Click;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -187,5 +215,6 @@
         private Guna.UI2.WinForms.Guna2TextBox gTextBoxTopic;
         private Label lblTechnologyField;
         private Guna.UI2.WinForms.Guna2TextBox gTextBoxField;
+        private Guna.UI2.WinForms.Guna2Button gButtonDetails;
     }
 }

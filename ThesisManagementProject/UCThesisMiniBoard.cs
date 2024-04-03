@@ -38,8 +38,7 @@ namespace ThesisManagementProject
             FThesisView fThesisView = new FThesisView(thesis);
             fThesisView.ShowDialog();
         }
-
-        private void UCThesisMiniBoard_Click(object sender, EventArgs e)
+        private void gButtonDetails_Click(object sender, EventArgs e)
         {
             SetThesisView();
         }

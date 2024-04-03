@@ -49,7 +49,7 @@
             gPanelTaskbar = new Guna.UI2.WinForms.Guna2Panel();
             gButtonMyTheses = new Guna.UI2.WinForms.Guna2Button();
             gButtonLogOut = new Guna.UI2.WinForms.Guna2Button();
-            gButtonStudents = new Guna.UI2.WinForms.Guna2Button();
+            gButtonMyTeams = new Guna.UI2.WinForms.Guna2Button();
             gSeparatorLogOut = new Guna.UI2.WinForms.Guna2Separator();
             gSeparatorAvatar = new Guna.UI2.WinForms.Guna2Separator();
             gButtonAccount = new Guna.UI2.WinForms.Guna2Button();
@@ -72,7 +72,7 @@
             gPanelTaskbar.BackgroundImageLayout = ImageLayout.Stretch;
             gPanelTaskbar.Controls.Add(gButtonMyTheses);
             gPanelTaskbar.Controls.Add(gButtonLogOut);
-            gPanelTaskbar.Controls.Add(gButtonStudents);
+            gPanelTaskbar.Controls.Add(gButtonMyTeams);
             gPanelTaskbar.Controls.Add(gSeparatorLogOut);
             gPanelTaskbar.Controls.Add(gSeparatorAvatar);
             gPanelTaskbar.Controls.Add(gButtonAccount);
@@ -91,8 +91,8 @@
             // 
             gButtonMyTheses.BackColor = Color.Transparent;
             gButtonMyTheses.BorderRadius = 20;
-            gButtonMyTheses.CustomImages.HoveredImage = (Image)resources.GetObject("resource.HoveredImage");
-            gButtonMyTheses.CustomImages.Image = (Image)resources.GetObject("resource.Image");
+            gButtonMyTheses.CustomImages.HoveredImage = Properties.Resources.PictureThesisGradient;
+            gButtonMyTheses.CustomImages.Image = Properties.Resources.PictureThesis;
             gButtonMyTheses.CustomImages.ImageAlign = HorizontalAlignment.Left;
             gButtonMyTheses.CustomImages.ImageOffset = new Point(20, 0);
             gButtonMyTheses.CustomImages.ImageSize = new Size(30, 30);
@@ -121,8 +121,8 @@
             // 
             gButtonLogOut.BackColor = Color.Transparent;
             gButtonLogOut.BorderRadius = 15;
-            gButtonLogOut.CustomImages.HoveredImage = (Image)resources.GetObject("resource.HoveredImage1");
-            gButtonLogOut.CustomImages.Image = (Image)resources.GetObject("resource.Image1");
+            gButtonLogOut.CustomImages.HoveredImage = (Image)resources.GetObject("resource.HoveredImage");
+            gButtonLogOut.CustomImages.Image = (Image)resources.GetObject("resource.Image");
             gButtonLogOut.CustomImages.ImageAlign = HorizontalAlignment.Left;
             gButtonLogOut.CustomImages.ImageSize = new Size(30, 30);
             gButtonLogOut.CustomizableEdges = customizableEdges3;
@@ -145,35 +145,35 @@
             gButtonLogOut.TextAlign = HorizontalAlignment.Left;
             gButtonLogOut.TextOffset = new Point(40, 0);
             // 
-            // gButtonStudents
+            // gButtonMyTeams
             // 
-            gButtonStudents.BackColor = Color.Transparent;
-            gButtonStudents.BorderRadius = 20;
-            gButtonStudents.CustomImages.HoveredImage = (Image)resources.GetObject("resource.HoveredImage2");
-            gButtonStudents.CustomImages.Image = (Image)resources.GetObject("resource.Image2");
-            gButtonStudents.CustomImages.ImageAlign = HorizontalAlignment.Left;
-            gButtonStudents.CustomImages.ImageOffset = new Point(20, 0);
-            gButtonStudents.CustomImages.ImageSize = new Size(30, 30);
-            gButtonStudents.CustomizableEdges = customizableEdges5;
-            gButtonStudents.DisabledState.BorderColor = Color.DarkGray;
-            gButtonStudents.DisabledState.CustomBorderColor = Color.DarkGray;
-            gButtonStudents.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            gButtonStudents.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            gButtonStudents.FillColor = Color.Transparent;
-            gButtonStudents.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            gButtonStudents.ForeColor = Color.White;
-            gButtonStudents.HoverState.FillColor = Color.White;
-            gButtonStudents.HoverState.Font = new Font("Trebuchet MS", 10.8F, FontStyle.Bold);
-            gButtonStudents.HoverState.ForeColor = Color.Black;
-            gButtonStudents.Location = new Point(22, 296);
-            gButtonStudents.Name = "gButtonStudents";
-            gButtonStudents.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            gButtonStudents.Size = new Size(271, 56);
-            gButtonStudents.TabIndex = 10;
-            gButtonStudents.Text = "Students";
-            gButtonStudents.TextAlign = HorizontalAlignment.Left;
-            gButtonStudents.TextOffset = new Point(60, 0);
-            gButtonStudents.Click += gButtonStudents_Click;
+            gButtonMyTeams.BackColor = Color.Transparent;
+            gButtonMyTeams.BorderRadius = 20;
+            gButtonMyTeams.CustomImages.HoveredImage = (Image)resources.GetObject("resource.HoveredImage1");
+            gButtonMyTeams.CustomImages.Image = (Image)resources.GetObject("resource.Image1");
+            gButtonMyTeams.CustomImages.ImageAlign = HorizontalAlignment.Left;
+            gButtonMyTeams.CustomImages.ImageOffset = new Point(20, 0);
+            gButtonMyTeams.CustomImages.ImageSize = new Size(30, 30);
+            gButtonMyTeams.CustomizableEdges = customizableEdges5;
+            gButtonMyTeams.DisabledState.BorderColor = Color.DarkGray;
+            gButtonMyTeams.DisabledState.CustomBorderColor = Color.DarkGray;
+            gButtonMyTeams.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            gButtonMyTeams.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            gButtonMyTeams.FillColor = Color.Transparent;
+            gButtonMyTeams.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            gButtonMyTeams.ForeColor = Color.White;
+            gButtonMyTeams.HoverState.FillColor = Color.White;
+            gButtonMyTeams.HoverState.Font = new Font("Trebuchet MS", 10.8F, FontStyle.Bold);
+            gButtonMyTeams.HoverState.ForeColor = Color.Black;
+            gButtonMyTeams.Location = new Point(22, 296);
+            gButtonMyTeams.Name = "gButtonMyTeams";
+            gButtonMyTeams.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            gButtonMyTeams.Size = new Size(271, 56);
+            gButtonMyTeams.TabIndex = 10;
+            gButtonMyTeams.Text = "My Teams";
+            gButtonMyTeams.TextAlign = HorizontalAlignment.Left;
+            gButtonMyTeams.TextOffset = new Point(60, 0);
+            gButtonMyTeams.Click += gButtonStudents_Click;
             // 
             // gSeparatorLogOut
             // 
@@ -195,8 +195,8 @@
             // 
             gButtonAccount.BackColor = Color.Transparent;
             gButtonAccount.BorderRadius = 20;
-            gButtonAccount.CustomImages.HoveredImage = (Image)resources.GetObject("resource.HoveredImage3");
-            gButtonAccount.CustomImages.Image = (Image)resources.GetObject("resource.Image3");
+            gButtonAccount.CustomImages.HoveredImage = (Image)resources.GetObject("resource.HoveredImage2");
+            gButtonAccount.CustomImages.Image = (Image)resources.GetObject("resource.Image2");
             gButtonAccount.CustomImages.ImageAlign = HorizontalAlignment.Left;
             gButtonAccount.CustomImages.ImageOffset = new Point(20, 0);
             gButtonAccount.CustomImages.ImageSize = new Size(30, 30);
@@ -225,8 +225,8 @@
             // 
             gButtonDiscussions.BackColor = Color.Transparent;
             gButtonDiscussions.BorderRadius = 20;
-            gButtonDiscussions.CustomImages.HoveredImage = (Image)resources.GetObject("resource.HoveredImage4");
-            gButtonDiscussions.CustomImages.Image = (Image)resources.GetObject("resource.Image4");
+            gButtonDiscussions.CustomImages.HoveredImage = (Image)resources.GetObject("resource.HoveredImage3");
+            gButtonDiscussions.CustomImages.Image = (Image)resources.GetObject("resource.Image3");
             gButtonDiscussions.CustomImages.ImageAlign = HorizontalAlignment.Left;
             gButtonDiscussions.CustomImages.ImageOffset = new Point(20, 0);
             gButtonDiscussions.CustomImages.ImageSize = new Size(30, 30);
@@ -255,8 +255,8 @@
             // 
             gButtonDashboards.BackColor = Color.Transparent;
             gButtonDashboards.BorderRadius = 20;
-            gButtonDashboards.CustomImages.HoveredImage = (Image)resources.GetObject("resource.HoveredImage5");
-            gButtonDashboards.CustomImages.Image = (Image)resources.GetObject("resource.Image5");
+            gButtonDashboards.CustomImages.HoveredImage = (Image)resources.GetObject("resource.HoveredImage4");
+            gButtonDashboards.CustomImages.Image = (Image)resources.GetObject("resource.Image4");
             gButtonDashboards.CustomImages.ImageAlign = HorizontalAlignment.Left;
             gButtonDashboards.CustomImages.ImageOffset = new Point(20, 0);
             gButtonDashboards.CustomImages.ImageSize = new Size(30, 30);
@@ -358,7 +358,7 @@
 
         private Guna.UI2.WinForms.Guna2Panel gPanelTaskbar;
         private Guna.UI2.WinForms.Guna2Button gButtonLogOut;
-        private Guna.UI2.WinForms.Guna2Button gButtonStudents;
+        private Guna.UI2.WinForms.Guna2Button gButtonMyTeams;
         private Guna.UI2.WinForms.Guna2Separator gSeparatorLogOut;
         private Guna.UI2.WinForms.Guna2Separator gSeparatorAvatar;
         private Guna.UI2.WinForms.Guna2Button gButtonAccount;

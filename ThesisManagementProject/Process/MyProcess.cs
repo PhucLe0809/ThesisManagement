@@ -57,13 +57,12 @@ namespace ThesisManagementProject.Process
                 errorProvider.SetError(control, null);
             }
         }
-
-        public Guna2PictureBox CreatePictureBoxEmptyState()
+        public Guna2PictureBox CreatePictureBox(Image image)
         {
             Guna2PictureBox pictureBox = new Guna2PictureBox();
 
             pictureBox.ImageRotate = 0F;
-            pictureBox.Image = Properties.Resources.PictureEmptyState;
+            pictureBox.Image = image;
             pictureBox.Name = "pictureBox";
             pictureBox.Size = new Size(399, 266);
             pictureBox.SizeMode = PictureBoxSizeMode.Zoom;

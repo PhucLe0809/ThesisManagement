@@ -45,7 +45,7 @@ namespace ThesisManagementProject
             if (this.thesis.IdThesis == "xxx")
             {
                 gShadowPanelThesis.Controls.Clear();
-                gShadowPanelThesis.Controls.Add(myProcess.CreatePictureBoxEmptyState());
+                gShadowPanelThesis.Controls.Add(myProcess.CreatePictureBox(Properties.Resources.PictureEmptyState));
             }
             else
             {

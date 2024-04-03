@@ -27,6 +27,7 @@ namespace ThesisManagementProject
         public UCDashboardStudent()
         {
             InitializeComponent();
+
             #region Record EVENT User control
 
             uCThesisDetails.GButtonBack.Click += gGradientButtonViewThesis_Click;
@@ -42,6 +43,7 @@ namespace ThesisManagementProject
         }
 
         #region FUNCTIONS
+
         public void SetInformation(People people)
         {
             this.people = people;
@@ -131,7 +133,8 @@ namespace ThesisManagementProject
 
         #endregion
 
-        #region THESIS LINE 
+        #region THESIS LINE
+
         private void ThesisLine_Clicked(object sender, EventArgs e)
         {
             UCThesisLine thesisLine = sender as UCThesisLine;
@@ -144,6 +147,7 @@ namespace ThesisManagementProject
                 gPanelDataView.Controls.Add(uCThesisDetails);
             }
         }
+
         #endregion
 
         #region FUNCTIONS SORT
