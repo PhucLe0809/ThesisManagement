@@ -61,11 +61,7 @@ namespace ThesisManagementProject
         }
         private void UpdateThesisList()
         {
-            string command = string.Format("SELECT * FROM {0} WHERE status IN ('Published', 'Registered') " +
-                                           "AND NOT EXISTS(SELECT 1 FROM {1} WHERE {1}.idthesis = {0}.idthesis " +
-                                           "AND idteam IN (SELECT idteam FROM {2} WHERE idaccount = '{3}'))", 
-                                           MyDatabase.DBThesis, MyDatabase.DBThesisStatus, MyDatabase.DBTeam, this.people.IdAccount);
-            this.listThesis = thesisDAO.SelectList(command);
+            this.listThesis = thesisDAO.SelectThesesForStudentDashboard(this.people.IdAccount);
         }
         private void ButtonStandardColor(Guna2GradientButton button)
         {
@@ -183,11 +179,7 @@ namespace ThesisManagementProject
 
             if (textBox != null)
             {
-                string command = string.Format("SELECT * FROM {0} WHERE topic LIKE '{1}%' and status IN ('Published', 'Registered') " +
-                                               "AND NOT EXISTS(SELECT 1 FROM {2} WHERE {2}.idthesis = {0}.idthesis " +
-                                               "AND idteam IN (SELECT idteam FROM {3} WHERE idaccount = '{4}'))",
-                                               MyDatabase.DBThesis, textBox.Text, MyDatabase.DBThesisStatus, MyDatabase.DBTeam, this.people.IdAccount);
-                this.listThesis = thesisDAO.SelectList(command);
+                this.listThesis = thesisDAO.SelectThesesForStudentDashboardByKeyword(this.people.IdAccount, textBox.Text);
                 LoadThesisList();
             }
         }
@@ -198,11 +190,8 @@ namespace ThesisManagementProject
 
         private void Field_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string command = string.Format("SELECT * FROM {0} WHERE field = '{1}' and status IN ('Published', 'Registered') " +
-                               "AND NOT EXISTS(SELECT 1 FROM {2} WHERE {2}.idthesis = {0}.idthesis " +
-                               "AND idteam IN (SELECT idteam FROM {3} WHERE idaccount = '{4}'))",
-                               MyDatabase.DBThesis, uCThesisList.GComboBoxField.SelectedItem.ToString(), MyDatabase.DBThesisStatus, MyDatabase.DBTeam, this.people.IdAccount);
-            InitThesisListWithCommand(command);
+            listThesis = thesisDAO.SelectThesesForStudentDashboardByField(this.people.IdAccount, uCThesisList.GComboBoxField.SelectedItem.ToString());
+            LoadThesisList();
         }
         private void FieldFilter_Clicked(object sender, EventArgs e)
         {
