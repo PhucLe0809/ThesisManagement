@@ -58,10 +58,7 @@ namespace ThesisManagementProject
         }
         private void UpdateThesisList()
         {
-            string command = string.Format("SELECT {0}.* FROM {0} INNER JOIN {1} ON {0}.idthesis = {1}.idthesis " +
-                                           "WHERE {1}.idteam IN (SELECT idteam FROM {2} WHERE idaccount = '{3}')", 
-                                            MyDatabase.DBThesis, MyDatabase.DBThesisStatus, MyDatabase.DBTeam, this.people.IdAccount);
-            this.listThesis = thesisDAO.SelectList(command);
+            this.listThesis = thesisDAO.SelectMyTheses(this.people.IdAccount);
         }
         private void ButtonStandardColor(Guna2GradientButton button)
         {
@@ -176,12 +173,7 @@ namespace ThesisManagementProject
 
             if (textBox != null)
             {
-                string command = string.Format("SELECT {0}.* FROM {0} " +
-                                               "INNER JOIN {1} ON {0}.idthesis = {1}.idthesis " +
-                                               "INNER JOIN {2} ON {1}.idteam = {2}.idteam " +
-                                               "WHERE {2}.idaccount = '{3}' AND {0}.topic LIKE '{4}%'",
-                                               MyDatabase.DBThesis, MyDatabase.DBThesisStatus, MyDatabase.DBTeam, this.people.IdAccount, textBox.Text);
-                this.listThesis = thesisDAO.SelectList(command);
+                this.listThesis = thesisDAO.SelecMyThesesByKeyword(this.people.IdAccount, textBox.Text);
                 LoadThesisList();
             }
         }
@@ -192,12 +184,8 @@ namespace ThesisManagementProject
 
         private void Field_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string command = string.Format("SELECT {0}.* FROM {0} " +
-                                           "INNER JOIN {1} ON {0}.idthesis = {1}.idthesis " +
-                                           "INNER JOIN {2} ON {1}.idteam = {2}.idteam " +
-                                           "WHERE {2}.idaccount = '{3}' AND {0}.field = '{4}'",
-                                           MyDatabase.DBThesis, MyDatabase.DBThesisStatus, MyDatabase.DBTeam, this.people.IdAccount, uCThesisList.GComboBoxField.SelectedItem.ToString());
-            InitThesisListWithCommand(command);
+            this.listThesis = thesisDAO.SelectMyThesesByField(this.people.IdAccount, uCThesisList.GComboBoxField.SelectedItem.ToString());
+            LoadThesisList();
         }
         private void FieldFilter_Clicked(object sender, EventArgs e)
         {

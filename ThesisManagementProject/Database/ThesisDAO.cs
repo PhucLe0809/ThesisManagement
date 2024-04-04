@@ -40,6 +40,61 @@ namespace ThesisManagementProject.Database
 
             return list;
         }
+        #region SELECT LIST THESES FOR STUDENT DASHBOARD
+        public List<Thesis> SelectThesesForStudentDashboard(string idAccount)
+        {
+            string command = string.Format("SELECT * FROM {0} WHERE status IN ('Published', 'Registered') " +
+                                          "AND NOT EXISTS(SELECT 1 FROM {1} WHERE {1}.idthesis = {0}.idthesis " +
+                                          "AND idteam IN (SELECT idteam FROM {2} WHERE idaccount = '{3}'))",
+                                          MyDatabase.DBThesis, MyDatabase.DBThesisStatus, MyDatabase.DBTeam, idAccount);
+            return SelectList(command);
+        }
+        public List<Thesis> SelectThesesForStudentDashboardByField(string idAccount, string field)
+        {
+            string command = string.Format("SELECT * FROM {0} WHERE field = '{1}' and status IN ('Published', 'Registered') " +
+                   "AND NOT EXISTS(SELECT 1 FROM {2} WHERE {2}.idthesis = {0}.idthesis " +
+                   "AND idteam IN (SELECT idteam FROM {3} WHERE idaccount = '{4}'))",
+                   MyDatabase.DBThesis, field, MyDatabase.DBThesisStatus, MyDatabase.DBTeam, idAccount);
+            return SelectList(command);
+        }
+        public List<Thesis> SelectThesesForStudentDashboardByKeyword(string idAccount, string keyword)
+        {
+            string command = string.Format("SELECT * FROM {0} WHERE topic LIKE '{1}%' and status IN ('Published', 'Registered') " +
+                               "AND NOT EXISTS(SELECT 1 FROM {2} WHERE {2}.idthesis = {0}.idthesis " +
+                               "AND idteam IN (SELECT idteam FROM {3} WHERE idaccount = '{4}'))",
+                               MyDatabase.DBThesis, keyword, MyDatabase.DBThesisStatus, MyDatabase.DBTeam, idAccount);
+            return SelectList(command);
+        }
+        #endregion
+
+        #region SELECT MY LIST THESES 
+        public List<Thesis> SelectMyTheses(string idAccount)
+        {
+            string command = string.Format("SELECT {0}.* FROM {0} INNER JOIN {1} ON {0}.idthesis = {1}.idthesis " +
+                               "WHERE {1}.idteam IN (SELECT idteam FROM {2} WHERE idaccount = '{3}')",
+                                MyDatabase.DBThesis, MyDatabase.DBThesisStatus, MyDatabase.DBTeam, idAccount);
+            return SelectList(command);
+        }
+        public List<Thesis> SelectMyThesesByField(string idAccount, string field)
+        {
+            string command = string.Format("SELECT {0}.* FROM {0} " +
+                               "INNER JOIN {1} ON {0}.idthesis = {1}.idthesis " +
+                               "INNER JOIN {2} ON {1}.idteam = {2}.idteam " +
+                               "WHERE {2}.idaccount = '{3}' AND {0}.field = '{4}'",
+                               MyDatabase.DBThesis, MyDatabase.DBThesisStatus, MyDatabase.DBTeam, idAccount, field);
+            return SelectList(command);
+        }
+        public List<Thesis> SelecMyThesesByKeyword(string idAccount, string keyword)
+        {
+            string command = string.Format("SELECT {0}.* FROM {0} " +
+                               "INNER JOIN {1} ON {0}.idthesis = {1}.idthesis " +
+                               "INNER JOIN {2} ON {1}.idteam = {2}.idteam " +
+                               "WHERE {2}.idaccount = '{3}' AND {0}.topic LIKE '{4}%'",
+                               MyDatabase.DBThesis, MyDatabase.DBThesisStatus, MyDatabase.DBTeam, idAccount, keyword);
+            return SelectList(command);
+        }
+        #endregion
+
         public Thesis SelectOnly(string idThesis)
         {
             DBConnection db = new DBConnection();
