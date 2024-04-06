@@ -61,11 +61,6 @@ namespace ThesisManagementProject
             gCirclePictureBoxAvatar.Image = myProcess.NameToImage(people.AvatarName);
             lblUserName.Text = people.Handle;
             lblPeopleCode.Text = people.IdAccount;
-            gButtonAdd.Show();
-        }
-        public void SetButtonAddImageNull()
-        {
-            gButtonAdd.Hide();
         }
         public void SetButtonDelete()
         {
@@ -81,6 +76,11 @@ namespace ThesisManagementProject
             this.uCBackColor = color;
             this.uCHoverColor = (this.BackColor == Color.White) ? SystemColors.ButtonFace : Color.White;
             ExecuteBackGroundColor(color);
+        }
+        public void SetSize(Size size)
+        {
+            this.Size = size;
+            gShadowPanelBack.Size = size;
         }
         private void ExecuteBackGroundColor(Color color)
         {
@@ -139,11 +139,7 @@ namespace ThesisManagementProject
             ExecuteBackGroundColor(uCBackColor);
         }
 
-        #endregion
-
-        private void gShadowPanelBack_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+#endregion
+    
     }
 }

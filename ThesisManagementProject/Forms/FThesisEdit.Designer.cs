@@ -50,7 +50,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonFace;
-            ClientSize = new Size(1181, 752);
+            ClientSize = new Size(1182, 768);
             Controls.Add(gPanelEdit);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;

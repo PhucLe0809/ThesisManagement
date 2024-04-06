@@ -74,7 +74,7 @@ namespace ThesisManagementProject
             gComboBoxGender.StartIndex = 0;
             gTextBoxEmail.Text = string.Empty;
             gTextBoxPhonenumber.Text = string.Empty;
-            gTextBoxHandle.Text = string.Empty;
+            gTextBoxUserName.Text = string.Empty;
             gTextBoxPassword.Text = string.Empty;
             gTextBoxConfirmPassword.Text = string.Empty;
             gTextBoxWorkcode.Text = string.Empty;
@@ -87,7 +87,7 @@ namespace ThesisManagementProject
             myProcess.RunCheckDataValid(people.CheckGender() || flagCheck, erpGender, gComboBoxGender, "Gender cannot be empty");
             myProcess.RunCheckDataValid(people.CheckEmail() || flagCheck, erpEmail, gTextBoxEmail, "Email is already exists or invalid");
             myProcess.RunCheckDataValid(people.CheckPhoneNumber() || flagCheck, erpPhonenumber, gTextBoxPhonenumber, "Phone number is already exists or invalid");
-            myProcess.RunCheckDataValid(people.CheckHandle() || flagCheck, erpHandle, gTextBoxHandle, "Handle is already exists or invalid");
+            myProcess.RunCheckDataValid(people.CheckHandle() || flagCheck, erpHandle, gTextBoxUserName, "Handle is already exists or invalid");
             myProcess.RunCheckDataValid(people.CheckPassWord() || flagCheck, erpConfirmPassword, gTextBoxConfirmPassword, "Confirmation password does not match");
             myProcess.RunCheckDataValid(people.CheckWorkCode() || flagCheck, erpWorkCode, gTextBoxWorkcode, "Work code is already exists or invalid");
         }
@@ -157,7 +157,7 @@ namespace ThesisManagementProject
         private void gButtonRegister_Click(object sender, EventArgs e)
         {
             this.people = new People(gTextBoxFullname.Text, gTextBoxCitizencode.Text, gDateTimePickerBirthday.Value, (EGender)gComboBoxGender.SelectedItem,
-                gTextBoxEmail.Text, gTextBoxPhonenumber.Text, gTextBoxHandle.Text, GetRole(), gTextBoxWorkcode.Text, gTextBoxPassword.Text, gTextBoxConfirmPassword.Text,
+                gTextBoxEmail.Text, gTextBoxPhonenumber.Text, gTextBoxUserName.Text, GetRole(), gTextBoxWorkcode.Text, gTextBoxPassword.Text, gTextBoxConfirmPassword.Text,
                 myProcess.ImageToName(gCirclePictureBoxAvatar.Image), GetClassify());
 
             this.flagCheck = false;
@@ -224,18 +224,20 @@ namespace ThesisManagementProject
         }
         private void gTextBoxHandle_TextChanged(object sender, EventArgs e)
         {
-            this.people.Handle = gTextBoxHandle.Text;
-            myProcess.RunCheckDataValid(people.CheckHandle() || flagCheck, erpHandle, gTextBoxHandle, "Handle is already exists or invalid");
+            this.people.Handle = gTextBoxUserName.Text;
+            myProcess.RunCheckDataValid(people.CheckHandle() || flagCheck, erpHandle, gTextBoxUserName, "Handle is already exists or invalid");
         }
         private void gTextBoxPassword_TextChanged(object sender, EventArgs e)
         {
             this.people.Password = gTextBoxPassword.Text;
-            myProcess.RunCheckDataValid(people.CheckPassWord() || flagCheck, erpConfirmPassword, gTextBoxConfirmPassword, "Confirmation password does not match");
+            myProcess.RunCheckDataValid(people.CheckPassWord() || flagCheck, erpPassword, gTextBoxPassword, "Confirmation password does not match");
+            if (people.CheckPassWord() || flagCheck) erpConfirmPassword.SetError(gTextBoxConfirmPassword, null);
         }
         private void gTextBoxConfirmPassword_TextChanged(object sender, EventArgs e)
         {
             this.people.ConfirmPassword = gTextBoxConfirmPassword.Text;
             myProcess.RunCheckDataValid(people.CheckPassWord() || flagCheck, erpConfirmPassword, gTextBoxConfirmPassword, "Confirmation password does not match");
+            if (people.CheckPassWord() || flagCheck) erpPassword.SetError(gTextBoxPassword, null);
         }
         private void gTextBoxWorkcode_TextChanged(object sender, EventArgs e)
         {

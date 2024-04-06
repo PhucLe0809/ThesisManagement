@@ -18,7 +18,7 @@ namespace ThesisManagementProject
         private MyProcess myProcess = new MyProcess();
         private People people = new People();
 
-        UCDashboardLecture uCDashboardLecture = new UCDashboardLecture();
+        UCDashboard UCDashboard = new UCDashboard();
         UCStudents uCStudents = new UCStudents();
         UCDiscussion uCDiscussion = new UCDiscussion();
         UCAccount uCAccountLecture = new UCAccount();
@@ -103,8 +103,8 @@ namespace ThesisManagementProject
         }
         private void gButtonDashboard_Click(object sender, EventArgs e)
         {
-            uCDashboardLecture.SetInformation(this.people);
-            SetButtonClick(gButtonDashboards, Properties.Resources.PictureTaskGradient, uCDashboardLecture);
+            UCDashboard.SetInformation(this.people);
+            SetButtonClick(gButtonDashboards, Properties.Resources.PictureTaskGradient, UCDashboard);
         }
         private void gButtonStudents_Click(object sender, EventArgs e)
         {

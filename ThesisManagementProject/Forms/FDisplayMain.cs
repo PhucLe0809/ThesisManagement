@@ -16,6 +16,7 @@ namespace ThesisManagementProject
     public partial class FDisplayMain : Form
     {
         private MyProcess myProcess = new MyProcess();
+        private PeopleDAO peopleDAO = new PeopleDAO();
         UCDisplayLecture uCDisplayLecture = new UCDisplayLecture();
         UCDisplayStudent uCDisplayStudent = new UCDisplayStudent();
         UCDisplayWelcome uCDisplayWelcome = new UCDisplayWelcome();
@@ -69,16 +70,14 @@ namespace ThesisManagementProject
 
         private void DWelcomeButtonLecture_Click(object sender, EventArgs e)
         {
-            Lecture lecture = new Lecture();
-            lecture.IdAccount = "242200001";
-            uCDisplayLecture.SetInformation(lecture);
+            People people = peopleDAO.SelectOnlyByID("242200001");
+            uCDisplayLecture.SetInformation(people);
             SetDisplay(uCDisplayLecture);
         }
         private void DWelcomeButtonStudent_Click(object sender, EventArgs e)
         {
-            Student student = new Student();
-            student.IdAccount = "243300002";
-            uCDisplayStudent.SetInformation(student);
+            People people = peopleDAO.SelectOnlyByID("243300002");
+            uCDisplayStudent.SetInformation(people);
             SetDisplay(uCDisplayStudent);
         }
         private void DWelcomeButtonRegister_Click(object sender, EventArgs e)

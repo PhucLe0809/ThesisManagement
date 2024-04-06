@@ -67,7 +67,7 @@ namespace ThesisManagementProject
             {
                 UCPeopleMiniLine line = new UCPeopleMiniLine(people);
                 line.SetBackGroundColor(SystemColors.ButtonFace);
-                line.SetButtonAddImageNull();
+                line.GButtonAdd.Hide();
                 flpMembers.Controls.Add(line);
             }
         }

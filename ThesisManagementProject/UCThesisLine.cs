@@ -23,6 +23,7 @@ namespace ThesisManagementProject
 
         private Thesis thesis = new Thesis();
         private People creator = new People();
+        private People instructor = new People();
         private ThesisDAO thesisDAO = new ThesisDAO();
         private PeopleDAO peopleDAO = new PeopleDAO();
 
@@ -37,33 +38,33 @@ namespace ThesisManagementProject
         {
             this.thesis = thesis;
             this.creator = peopleDAO.SelectOnlyByID(thesis.IdCreator);
+            this.instructor = peopleDAO.SelectOnlyByID(thesis.IdInstructor);
             UserControlLoad();
         }
         private void UserControlLoad()
         {
             myProcess.SetItemFavorite(gButtonStar, thesis.IsFavorite);
 
-            lblThesisTopic.Text = myProcess.FormatStringLength(thesis.Topic, 45);
+            lblThesisTopic.Text = myProcess.FormatStringLength(thesis.Topic, 120);
             gTextBoxStatus.Text = thesis.Status.ToString();
             gTextBoxStatus.FillColor = thesis.GetStatusColor();
-            gTextBoxThesisCode.Text = thesis.IdThesis;
-            gCirclePictureBoxCreator.Image = myProcess.NameToImage(creator.AvatarName);
             lblCreator.Text = creator.FullName;
+            lblInstructor.Text = instructor.FullName;
         }
         private void SetColor(Color color)
         {
             this.BackColor = color;
-            gTextBoxThesisCode.FillColor = color;
+        }
+        public void HideToolBar()
+        {
+            gButtonEdit.Hide();
+            gButtonDelete.Hide();
         }
 
         #endregion
 
         #region PROPERTIES
 
-        public Guna2Button GetGButtonStar
-        {
-            get { return this.gButtonStar; }
-        }
         public Guna2Button GetGButtonEdit 
         { 
             get => gButtonEdit; 
@@ -74,7 +75,7 @@ namespace ThesisManagementProject
         }
         public string ID
         {
-            get { return this.gTextBoxThesisCode.Text; }
+            get { return this.thesis.IdThesis; }
         }
 
         #endregion
@@ -104,8 +105,7 @@ namespace ThesisManagementProject
 
         private void gButtonEdit_Click(object sender, EventArgs e)
         {
-            FThesisEdit fThesisEdit = new FThesisEdit();
-            fThesisEdit.InitUserControl(creator, thesis);
+            FThesisEdit fThesisEdit = new FThesisEdit(instructor, thesis);
             fThesisEdit.ShowDialog();
             OnThesisEditClicked(EventArgs.Empty);
         }
@@ -113,14 +113,13 @@ namespace ThesisManagementProject
         {
             ThesisEditClicked?.Invoke(this, e);
         }
-
         private void gButtonDelete_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to delete thesis " + gTextBoxThesisCode.Text,
+            DialogResult result = MessageBox.Show("Are you sure you want to delete thesis " + thesis.IdThesis,
                                                     "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (result == DialogResult.OK)
             {
-                thesisDAO.Delete(thesisDAO.SelectOnly(gTextBoxThesisCode.Text));
+                thesisDAO.Delete(thesisDAO.SelectOnly(thesis.IdThesis));
                 OnThesisDeleteClicked(EventArgs.Empty);
             }
         }
@@ -140,8 +139,6 @@ namespace ThesisManagementProject
             myProcess.SetItemFavorite(gButtonStar, thesis.IsFavorite);
             thesisDAO.SQLExecuteByCommand(string.Format("Update " + MyDatabase.DBThesis + " Set isfavorite = {0} Where idthesis = '{1}'",
                                     (thesis.IsFavorite)?(1):(0), thesis.IdThesis));
-            
-            UserControlLoad();
         }
 
         #endregion

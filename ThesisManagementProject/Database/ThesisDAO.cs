@@ -21,10 +21,6 @@ namespace ThesisManagementProject.Database
         {
             DBConnection.SQLExecuteByCommand(command);
         }
-        public void PendingToAccepted(string command)
-        {
-            DBConnection.SQLExecuteByCommand(command);
-        }
 
         #region SELECT THESIS
 
@@ -56,7 +52,7 @@ namespace ThesisManagementProject.Database
         public void Insert(Thesis thesis)
         {
             DBConnection.ExecuteQueryThesis(thesis, "INSERT INTO {0} " +
-                "VALUES ('{1}', '{2}', '{3}', '{4}', {5}, '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', {12}, '{13}')",
+                "VALUES ('{1}', '{2}', '{3}', '{4}', {5}, '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', {12}, '{13}', '{14}')",
                 "Create");
         }
         public void Delete(Thesis thesis)
@@ -69,7 +65,7 @@ namespace ThesisManagementProject.Database
             DBConnection.ExecuteQueryThesis(thesis, "UPDATE {0} SET " +
                 "idthesis = '{1}', topic = '{2}', field = '{3}', tslevel = '{4}', maxmembers = {5}, " +
                 "description = '{6}', publishdate = '{7}', technology = '{8}', functions = '{9}', requirements = '{10}', " +
-                "idcreator = '{11}', isfavorite = {12}, status = '{13}' WHERE idthesis = '{1}'",
+                "idcreator = '{11}', isfavorite = {12}, status = '{13}', idinstructor = '{14}' WHERE idthesis = '{1}'",
                 "Update");
         }
 
@@ -92,9 +88,10 @@ namespace ThesisManagementProject.Database
             string idCreator = row["idcreator"].ToString();
             bool isFavorite = row["isfavorite"].ToString() == "True" ? true : false;
             EThesisStatus status = myProcess.GetEnumFromDisplayName<EThesisStatus>(row["status"].ToString());
+            string idInstructor = row["idinstructor"].ToString();
 
             Thesis thesis = new Thesis(idThesis, topic, field, level, maxMembers, description, publishDate, technology,
-                                        functions, requirements, idCreator, isFavorite, status);
+                                        functions, requirements, idCreator, isFavorite, status, idInstructor);
             return thesis;
         }
 

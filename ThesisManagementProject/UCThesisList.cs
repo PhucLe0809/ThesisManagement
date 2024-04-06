@@ -24,10 +24,6 @@ namespace ThesisManagementProject
         public UCThesisList()
         {
             InitializeComponent();
-
-            myProcess.AddEnumsToComboBox(gComboBoxField, typeof(EField));
-            gComboBoxField.StartIndex = 0;
-            SetSelectAllField();
         }
 
         #region PROPERTIES
@@ -40,33 +36,17 @@ namespace ThesisManagementProject
         {
             get { return this.gGradientButtonThesisTopic; }
         }
-        public Guna2GradientButton GButtonStatus
+        public Guna2GradientButton GButtonFilter
         {
-            get { return this.gGradientButtonStatus; }
-        }
-        public Guna2GradientButton GButtonThesisCode
-        {
-            get { return this.gGradientButtonThesisCode; }
-        }
-        public Guna2GradientButton GButtonCreator
-        {
-            get { return this.gGradientButtonCreator; }
+            get { return this.gGradientButtonFilter; }
         }
         public Guna2TextBox GTextBoxSearch
         {
             get { return this.gTextBoxSearch; }
         }
-        public bool SelectAllField
+        public Guna2Button GButtonReset
         {
-            get { return this.selectAllField; }
-        }
-        public Guna2Button GButtonFieldFilter
-        {
-            get { return this.gButtonTopicSelectAll; }
-        }
-        public Guna2ComboBox GComboBoxField
-        {
-            get { return this.gComboBoxField; }
+            get { return this.gButtonResetList; }
         }
 
         #endregion
@@ -86,33 +66,6 @@ namespace ThesisManagementProject
         public void SetNumThesis(int num)
         {
             lblNumThesis.Text = num.ToString();
-        }
-        public void SetSelectAllField()
-        {
-            selectAllField = !selectAllField;
-
-            gComboBoxField.Enabled = selectAllField;
-            gPictureBoxField.Enabled = selectAllField;
-            if (selectAllField)
-            {
-                gButtonTopicSelectAll.Image = Properties.Resources.PicItemOn;
-                gPictureBoxField.BackColor = Color.White;
-            }
-            else
-            {
-                gButtonTopicSelectAll.Image = Properties.Resources.PicItemOff;
-                gPictureBoxField.BackColor = SystemColors.ControlLight;
-            }
-        }
-
-        #endregion
-
-        #region EVENT gButtonFilter
-
-        private void gButtonFilter_Click(object sender, EventArgs e)
-        {
-            FThesisFilter fFilterSetting = new FThesisFilter();
-            fFilterSetting.ShowDialog();
         }
 
         #endregion

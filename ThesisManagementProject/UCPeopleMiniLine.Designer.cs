@@ -93,7 +93,6 @@
             gShadowPanelBack.Size = new Size(255, 60);
             gShadowPanelBack.TabIndex = 28;
             gShadowPanelBack.Click += gShadowPanelBack_Click;
-            gShadowPanelBack.Paint += gShadowPanelBack_Paint;
             gShadowPanelBack.MouseEnter += gShadowPanelBack_MouseEnter;
             gShadowPanelBack.MouseLeave += gShadowPanelBack_MouseLeave;
             // 

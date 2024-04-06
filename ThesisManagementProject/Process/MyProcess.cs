@@ -71,6 +71,22 @@ namespace ThesisManagementProject.Process
 
             return pictureBox;
         }
+        public Label CreateLabel(string content)
+        {
+            Label label = new Label();
+
+            label.AutoSize = true;
+            label.BackColor = Color.Transparent;
+            label.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label.ForeColor = Color.RoyalBlue;
+            label.Name = "label";
+            label.Size = new Size(315, 62);
+            label.TabIndex = 5;
+            label.Text = content;
+
+            return label;
+
+        }
 
         #region GenIDbyClassify
 

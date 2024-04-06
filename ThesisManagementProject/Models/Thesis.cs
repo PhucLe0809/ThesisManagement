@@ -88,6 +88,7 @@ namespace ThesisManagementProject.Models
         private string idCreator;
         private bool isFavorite;
         private EThesisStatus status;
+        private string idInstructor;
 
         #endregion
 
@@ -108,10 +109,10 @@ namespace ThesisManagementProject.Models
             this.idCreator = string.Empty;
             this.isFavorite = false;
             this.status = EThesisStatus.Published;
+            this.idInstructor = string.Empty;
         }
-
         public Thesis(string topic, EField field, ELevel level, int maxMembers, string desciption,
-                        DateTime publishDate, string technology, string functions, string requirements, string idCreator)
+                        DateTime publishDate, string technology, string functions, string requirements, string idCreator, string idInstructor)
         {
             this.idThesis = myProcess.GenIDClassify(EClassify.Thesis);
             this.topic = topic;
@@ -126,10 +127,10 @@ namespace ThesisManagementProject.Models
             this.idCreator = idCreator;
             this.isFavorite = false;
             this.status = EThesisStatus.Published;
+            this.idInstructor = idInstructor;
         }
-
         public Thesis(string idThesis, string topic, EField field, ELevel level, int maxMembers, string desciption, DateTime publishDate, 
-                        string technology, string functions, string requirements, string idCreator, bool isFavorite, EThesisStatus status)
+                        string technology, string functions, string requirements, string idCreator, bool isFavorite, EThesisStatus status, string idInstructor)
         {
             this.idThesis = idThesis;
             this.topic = topic;
@@ -144,6 +145,7 @@ namespace ThesisManagementProject.Models
             this.idCreator = idCreator;
             this.isFavorite = isFavorite;
             this.status = status;
+            this.idInstructor = idInstructor;
         }
 
         #endregion
@@ -209,6 +211,11 @@ namespace ThesisManagementProject.Models
             get { return status; }
             set { status = value; }
         }
+        public string IdInstructor
+        {
+            get { return idInstructor; }
+            set { idInstructor = value; }
+        }
 
         #endregion
 
@@ -233,6 +240,10 @@ namespace ThesisManagementProject.Models
         public bool CheckRequirements()
         {
             return this.requirements != string.Empty;
+        }
+        public bool CheckInstructor()
+        {
+            return this.idInstructor != string.Empty;
         }
 
         #endregion

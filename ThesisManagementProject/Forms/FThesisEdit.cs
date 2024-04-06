@@ -21,9 +21,6 @@ namespace ThesisManagementProject
         public FThesisEdit()
         {
             InitializeComponent();
-
-            gPanelEdit.Controls.Clear();
-            gPanelEdit.Controls.Add(new UCThesisCreate());
         }
         public FThesisEdit(People people, Thesis thesis)
         {
@@ -32,7 +29,7 @@ namespace ThesisManagementProject
             InitUserControl(people, thesis);
         }
 
-        public void InitUserControl(People people, Thesis thesis)
+        private void InitUserControl(People people, Thesis thesis)
         {
             gPanelEdit.Controls.Clear();
             uCThesisCreate.SetEditState(people, thesis);

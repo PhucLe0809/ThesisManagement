@@ -36,21 +36,18 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             gButtonStar = new Guna.UI2.WinForms.Guna2Button();
             gButtonDelete = new Guna.UI2.WinForms.Guna2Button();
             gButtonEdit = new Guna.UI2.WinForms.Guna2Button();
             lblThesisTopic = new Label();
             gElipse = new Guna.UI2.WinForms.Guna2Elipse(components);
             gTextBoxStatus = new Guna.UI2.WinForms.Guna2TextBox();
-            gTextBoxThesisCode = new Guna.UI2.WinForms.Guna2TextBox();
-            gCirclePictureBoxCreator = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            lblInstructor = new Label();
+            lblIns = new Label();
+            lblCre = new Label();
             lblCreator = new Label();
-            ((System.ComponentModel.ISupportInitialize)gCirclePictureBoxCreator).BeginInit();
             SuspendLayout();
             // 
             // gButtonStar
@@ -67,7 +64,7 @@
             gButtonStar.ForeColor = Color.White;
             gButtonStar.Image = (Image)resources.GetObject("gButtonStar.Image");
             gButtonStar.ImageSize = new Size(25, 25);
-            gButtonStar.Location = new Point(7, 4);
+            gButtonStar.Location = new Point(7, 20);
             gButtonStar.Name = "gButtonStar";
             gButtonStar.PressedColor = SystemColors.ButtonFace;
             gButtonStar.ShadowDecoration.CustomizableEdges = customizableEdges2;
@@ -90,7 +87,7 @@
             gButtonDelete.HoverState.Image = (Image)resources.GetObject("resource.Image");
             gButtonDelete.Image = (Image)resources.GetObject("gButtonDelete.Image");
             gButtonDelete.ImageSize = new Size(25, 25);
-            gButtonDelete.Location = new Point(1082, 4);
+            gButtonDelete.Location = new Point(1082, 20);
             gButtonDelete.Name = "gButtonDelete";
             gButtonDelete.ShadowDecoration.CustomizableEdges = customizableEdges4;
             gButtonDelete.Size = new Size(40, 40);
@@ -112,7 +109,7 @@
             gButtonEdit.HoverState.Image = (Image)resources.GetObject("resource.Image1");
             gButtonEdit.Image = (Image)resources.GetObject("gButtonEdit.Image");
             gButtonEdit.ImageSize = new Size(25, 25);
-            gButtonEdit.Location = new Point(1037, 4);
+            gButtonEdit.Location = new Point(1037, 20);
             gButtonEdit.Name = "gButtonEdit";
             gButtonEdit.ShadowDecoration.CustomizableEdges = customizableEdges6;
             gButtonEdit.Size = new Size(40, 40);
@@ -124,7 +121,7 @@
             lblThesisTopic.AutoSize = true;
             lblThesisTopic.BackColor = Color.Transparent;
             lblThesisTopic.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblThesisTopic.Location = new Point(63, 14);
+            lblThesisTopic.Location = new Point(63, 11);
             lblThesisTopic.Name = "lblThesisTopic";
             lblThesisTopic.Size = new Size(99, 23);
             lblThesisTopic.TabIndex = 13;
@@ -139,7 +136,7 @@
             gTextBoxStatus.BackColor = Color.Transparent;
             gTextBoxStatus.BorderRadius = 10;
             gTextBoxStatus.BorderThickness = 0;
-            gTextBoxStatus.CustomizableEdges = customizableEdges10;
+            gTextBoxStatus.CustomizableEdges = customizableEdges7;
             gTextBoxStatus.DefaultText = "Published";
             gTextBoxStatus.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxStatus.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -150,71 +147,64 @@
             gTextBoxStatus.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             gTextBoxStatus.ForeColor = Color.White;
             gTextBoxStatus.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            gTextBoxStatus.Location = new Point(521, 12);
+            gTextBoxStatus.Location = new Point(63, 42);
             gTextBoxStatus.Margin = new Padding(3, 4, 3, 4);
             gTextBoxStatus.Name = "gTextBoxStatus";
             gTextBoxStatus.PasswordChar = '\0';
             gTextBoxStatus.PlaceholderText = "";
             gTextBoxStatus.ReadOnly = true;
             gTextBoxStatus.SelectedText = "";
-            gTextBoxStatus.ShadowDecoration.CustomizableEdges = customizableEdges11;
+            gTextBoxStatus.ShadowDecoration.CustomizableEdges = customizableEdges8;
             gTextBoxStatus.Size = new Size(110, 25);
             gTextBoxStatus.TabIndex = 32;
             gTextBoxStatus.TextAlign = HorizontalAlignment.Center;
             // 
-            // gTextBoxThesisCode
+            // lblInstructor
             // 
-            gTextBoxThesisCode.BackColor = Color.Transparent;
-            gTextBoxThesisCode.BorderRadius = 5;
-            gTextBoxThesisCode.BorderThickness = 0;
-            gTextBoxThesisCode.CustomizableEdges = customizableEdges8;
-            gTextBoxThesisCode.DefaultText = "";
-            gTextBoxThesisCode.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            gTextBoxThesisCode.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            gTextBoxThesisCode.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            gTextBoxThesisCode.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            gTextBoxThesisCode.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            gTextBoxThesisCode.Font = new Font("Segoe UI", 9F);
-            gTextBoxThesisCode.ForeColor = Color.Gray;
-            gTextBoxThesisCode.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            gTextBoxThesisCode.Location = new Point(648, 4);
-            gTextBoxThesisCode.Margin = new Padding(3, 4, 3, 4);
-            gTextBoxThesisCode.Name = "gTextBoxThesisCode";
-            gTextBoxThesisCode.PasswordChar = '\0';
-            gTextBoxThesisCode.PlaceholderForeColor = Color.Gray;
-            gTextBoxThesisCode.PlaceholderText = "thesis code";
-            gTextBoxThesisCode.ReadOnly = true;
-            gTextBoxThesisCode.SelectedText = "";
-            gTextBoxThesisCode.ShadowDecoration.CustomizableEdges = customizableEdges9;
-            gTextBoxThesisCode.Size = new Size(120, 40);
-            gTextBoxThesisCode.TabIndex = 33;
-            gTextBoxThesisCode.TextAlign = HorizontalAlignment.Center;
+            lblInstructor.AutoSize = true;
+            lblInstructor.BackColor = Color.Transparent;
+            lblInstructor.Font = new Font("Century Gothic", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            lblInstructor.ForeColor = Color.Black;
+            lblInstructor.Location = new Point(897, 47);
+            lblInstructor.Name = "lblInstructor";
+            lblInstructor.Size = new Size(92, 18);
+            lblInstructor.TabIndex = 35;
+            lblInstructor.Text = "Anonymous";
             // 
-            // gCirclePictureBoxCreator
+            // lblIns
             // 
-            gCirclePictureBoxCreator.BackColor = Color.Transparent;
-            gCirclePictureBoxCreator.FillColor = Color.Transparent;
-            gCirclePictureBoxCreator.Image = Properties.Resources.PictureAvatarAccount;
-            gCirclePictureBoxCreator.ImageRotate = 0F;
-            gCirclePictureBoxCreator.Location = new Point(808, 4);
-            gCirclePictureBoxCreator.Name = "gCirclePictureBoxCreator";
-            gCirclePictureBoxCreator.ShadowDecoration.CustomizableEdges = customizableEdges7;
-            gCirclePictureBoxCreator.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            gCirclePictureBoxCreator.Size = new Size(40, 40);
-            gCirclePictureBoxCreator.SizeMode = PictureBoxSizeMode.StretchImage;
-            gCirclePictureBoxCreator.TabIndex = 34;
-            gCirclePictureBoxCreator.TabStop = false;
+            lblIns.AutoSize = true;
+            lblIns.BackColor = Color.Transparent;
+            lblIns.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblIns.ForeColor = Color.FromArgb(74, 97, 94);
+            lblIns.Location = new Point(813, 46);
+            lblIns.Name = "lblIns";
+            lblIns.Size = new Size(83, 20);
+            lblIns.TabIndex = 36;
+            lblIns.Text = "Instructor :";
+            // 
+            // lblCre
+            // 
+            lblCre.AutoSize = true;
+            lblCre.BackColor = Color.Transparent;
+            lblCre.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblCre.ForeColor = Color.FromArgb(74, 97, 94);
+            lblCre.Location = new Point(186, 44);
+            lblCre.Name = "lblCre";
+            lblCre.Size = new Size(68, 20);
+            lblCre.TabIndex = 37;
+            lblCre.Text = "Creator :";
             // 
             // lblCreator
             // 
             lblCreator.AutoSize = true;
             lblCreator.BackColor = Color.Transparent;
-            lblCreator.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblCreator.Location = new Point(854, 12);
+            lblCreator.Font = new Font("Century Gothic", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            lblCreator.Location = new Point(254, 45);
             lblCreator.Name = "lblCreator";
-            lblCreator.Size = new Size(64, 20);
-            lblCreator.TabIndex = 35;
-            lblCreator.Text = "creator";
+            lblCreator.Size = new Size(92, 18);
+            lblCreator.TabIndex = 38;
+            lblCreator.Text = "Anonymous";
             // 
             // UCThesisLine
             // 
@@ -222,8 +212,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             Controls.Add(lblCreator);
-            Controls.Add(gCirclePictureBoxCreator);
-            Controls.Add(gTextBoxThesisCode);
+            Controls.Add(lblCre);
+            Controls.Add(lblIns);
+            Controls.Add(lblInstructor);
             Controls.Add(gTextBoxStatus);
             Controls.Add(lblThesisTopic);
             Controls.Add(gButtonEdit);
@@ -231,11 +222,10 @@
             Controls.Add(gButtonStar);
             DoubleBuffered = true;
             Name = "UCThesisLine";
-            Size = new Size(1130, 50);
+            Size = new Size(1130, 80);
             Click += UCThesisLine_Click;
             MouseEnter += UCThesisLine_MouseEnter;
             MouseLeave += UCThesisLine_MouseLeave;
-            ((System.ComponentModel.ISupportInitialize)gCirclePictureBoxCreator).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -248,8 +238,9 @@
         private Label lblThesisTopic;
         private Guna.UI2.WinForms.Guna2Elipse gElipse;
         private Guna.UI2.WinForms.Guna2TextBox gTextBoxStatus;
-        private Guna.UI2.WinForms.Guna2TextBox gTextBoxThesisCode;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox gCirclePictureBoxCreator;
+        private Label lblInstructor;
+        private Label lblIns;
+        private Label lblCre;
         private Label lblCreator;
     }
 }
