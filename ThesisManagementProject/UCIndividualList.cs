@@ -29,8 +29,6 @@ namespace ThesisManagementProject
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            FStudentFilter fStudentFilter = new FStudentFilter();
-            fStudentFilter.ShowDialog();
         }
     }
 }

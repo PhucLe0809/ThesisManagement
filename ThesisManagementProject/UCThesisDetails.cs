@@ -23,33 +23,24 @@ namespace ThesisManagementProject
 
         private Thesis thesis = new Thesis();
         private People people = new People();
+        private Team team = new Team();
         private ThesisDAO thesisDAO = new ThesisDAO();
         private PeopleDAO peopleDAO = new PeopleDAO();
         private TeamDAO teamDAO = new TeamDAO();
         private bool flagWaiting = false;
         private List<Team> listTeam = new List<Team>();
 
+        private UCThesisLine thesisLine = new UCThesisLine();
+        UCThesisDetailsTeam showTeam = new UCThesisDetailsTeam();
         private UCThesisDetailsRegistered uCThesisDetailsRegistered = new UCThesisDetailsRegistered();
         private UCThesisDetailsCreatedTeam uCThesisDetailsCreatedTeam;
-        private UCThesisDetailsGeneral uCThesisDetailsGeneral = new UCThesisDetailsGeneral();
-
-        #region CONTRUCTOR
+        private UCThesisDetailsTasks uCThesisDetailsTasks = new UCThesisDetailsTasks();
 
         public UCThesisDetails()
         {
             InitializeComponent();
 
         }
-        public UCThesisDetails(Thesis thesis, People people)
-        {
-            InitializeComponent();
-
-            SetInformation(thesis, people);
-
-
-        }
-
-        #endregion
 
         #region PROPERTIES
 
@@ -57,25 +48,36 @@ namespace ThesisManagementProject
         {
             set { this.flagWaiting = value; }
         }
+        public Guna2Button GButtonBack
+        {
+            get { return this.gButtonBack; }
+        }
 
         #endregion
 
         #region FUNCTIONS
 
-        public void SetInformation(Thesis thesis, People people)
+        public void SetInformation(UCThesisLine thesisLine, Thesis thesis, People people)
         {
             this.thesis = thesis;
             this.people = people;
+            this.thesisLine = thesisLine;
             InitUserControl();
         }
         private void InitUserControl()
         {
-            ResetThesis();
+            gShadowPanelTeam.Controls.Add(showTeam);
+            ResetUserControl();
             SetControlsReadOnly(true);
             SetWaiting();
             SetButtonEditOrDetails();
         }
-        private void ResetThesis()
+        private void ResetUserControl()
+        {
+            ResetThesisInfor();
+            SetThesisDetailsMode();
+        }
+        private void ResetThesisInfor()
         {
             this.thesis = thesisDAO.SelectOnly(thesis.IdThesis);
 
@@ -87,8 +89,6 @@ namespace ThesisManagementProject
             gTextBoxLevel.Text = thesis.Level.ToString();
             gTextBoxMembers.Text = thesis.MaxMembers.ToString();
             gTextBoxDescription.Text = thesis.Description;
-
-            SetThesisDetailsMode();
         }
         private void SetControlsReadOnly(bool flagReadOnly)
         {
@@ -125,20 +125,22 @@ namespace ThesisManagementProject
         }
         private void SetTeamMode(bool flagShow)
         {
-            gShadowPanelTeam.Controls.Clear();
-
             if (flagShow)
             {
                 string command = string.Format("SELECT * FROM {0} WHERE idthesis = '{1}' and status = '{2}'",
                                                 MyDatabase.DBThesisStatus, thesis.IdThesis, thesis.Status.ToString());
                 DataTable table = dBConnection.Select(command);
-                Team team = teamDAO.SelectOnly(table.Rows[0]["idteam"].ToString());
+                this.team = teamDAO.SelectOnly(table.Rows[0]["idteam"].ToString());
                 if (team != null)
                 {
-                    UCThesisDetailsTeam showTeam = new UCThesisDetailsTeam(team, thesis);
+                    showTeam.SetInformation(team, thesis);
                     showTeam.Location = new Point(5, 5);
-                    gShadowPanelTeam.Controls.Add(showTeam);
+                    SetTeamHere(true);
                 }
+            }
+            else
+            {
+                SetTeamHere(false);
             }
         }
         private void SetViewButtonMode(bool flagShow)
@@ -146,28 +148,42 @@ namespace ThesisManagementProject
             if (flagShow)
             {
                 gGradientButtonRegistered.Hide();
-                gGradientButtonGeneral.Show();
-                gGradientButtonGeneral.PerformClick();
+                gGradientButtonTasks.Show();
+                gGradientButtonStatistical.Show();
+                gGradientButtonTasks.PerformClick();
             }
             else
             {
-                gGradientButtonGeneral.Hide();
+                gGradientButtonTasks.Hide();
+                gGradientButtonStatistical.Hide();
                 gGradientButtonRegistered.Show();
                 gGradientButtonRegistered.PerformClick();
             }
         }
         private void SetButtonEditOrDetails()
         {
-            if (people.Role == ERole.Lecture)
+            if (people.Role == ERole.Student || thesis.Status == EThesisStatus.Completed)
             {
-                gButtonDetails.Hide();
+                gButtonEdit.Hide();
+            }
+            else
+            {
                 gButtonEdit.Show();
             }
-            if (people.Role == ERole.Student)
+        }
+        private void SetTeamHere(bool flag)
+        {
+            if (flag)
             {
-                gButtonDetails.Show();
-                gButtonEdit.Hide();
-                gButtonDetails.Location = new Point(360, 14);
+                ptbEmptyState.Hide();
+                lblThere.Hide();
+                showTeam.Show();
+            }
+            else
+            {
+                showTeam.Hide();
+                ptbEmptyState.Show();
+                lblThere.Show();
             }
 
         }
@@ -182,26 +198,15 @@ namespace ThesisManagementProject
         }
         private void HideAllButtonMode()
         {
-            gButtonEdit.Hide();
-            gButtonDetails.Hide();
-            gGradientButtonGeneral.Hide();
+            gGradientButtonTasks.Hide();
+            gGradientButtonStatistical.Hide();
             gGradientButtonRegistered.Hide();
         }
         private void AllButtonStandardColor()
         {
             myProcess.ButtonStandardColor(gGradientButtonRegistered, Color.White, Color.White);
-            myProcess.ButtonStandardColor(gGradientButtonGeneral, Color.White, Color.White);
+            myProcess.ButtonStandardColor(gGradientButtonTasks, Color.White, Color.White);
         }
-
-        #endregion
-
-        #region PROPERTIES
-
-        public Guna2Button GButtonBack
-        {
-            get { return this.gButtonBack; }
-        }
-        public Guna2GradientButton GButtonApply { get => gGradientButtonRegistered; }
 
         #endregion
 
@@ -211,7 +216,8 @@ namespace ThesisManagementProject
         {
             FThesisEdit fThesisView = new FThesisEdit(peopleDAO.SelectOnlyByID(thesis.IdCreator), thesis);
             fThesisView.ShowDialog();
-            ResetThesis();
+            ResetThesisInfor();
+            this.thesisLine.SetInformation(this.thesis);
         }
 
         #endregion
@@ -243,6 +249,19 @@ namespace ThesisManagementProject
                 }
             }
 
+        }
+
+        #endregion
+
+        #region EVENT gGradientButtonTasks
+
+        private void gGradientButtonTasks_Click(object sender, EventArgs e)
+        {
+            AllButtonStandardColor();
+            myProcess.ButtonSettingColor(gGradientButtonTasks);
+            uCThesisDetailsTasks.SetUpUserControl(people, team, thesis.Status == EThesisStatus.Processing);
+            gPanelDataView.Controls.Clear();
+            gPanelDataView.Controls.Add(uCThesisDetailsTasks);
         }
 
         #endregion
@@ -302,18 +321,6 @@ namespace ThesisManagementProject
                     gTextBoxStatus.FillColor = thesis.GetStatusColor();
                 }
             }
-        }
-
-        #endregion
-
-        #region EVENT gGradientButtonGeneral
-
-        private void gGradientButtonGeneral_Click(object sender, EventArgs e)
-        {
-            AllButtonStandardColor();
-            myProcess.ButtonSettingColor(gGradientButtonGeneral);
-            gPanelDataView.Controls.Clear();
-            gPanelDataView.Controls.Add(uCThesisDetailsGeneral);
         }
 
         #endregion

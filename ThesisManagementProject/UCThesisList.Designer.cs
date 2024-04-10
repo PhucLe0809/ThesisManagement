@@ -28,21 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCThesisList));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCThesisList));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             gGradientButtonThesisTopic = new Guna.UI2.WinForms.Guna2GradientButton();
             gGradientButtonFilter = new Guna.UI2.WinForms.Guna2GradientButton();
             gGradientButtonToolbar = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -51,11 +53,12 @@
             gPictureBoxItemThesis = new Guna.UI2.WinForms.Guna2PictureBox();
             lblNumThesis = new Label();
             gShadowPanelSearch = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            gButtonResetList = new Guna.UI2.WinForms.Guna2Button();
             gTextBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            lblResetList = new Label();
             gGradientButtonTag = new Guna.UI2.WinForms.Guna2GradientButton();
             flpThesisList = new FlowLayoutPanel();
-            gButtonResetList = new Guna.UI2.WinForms.Guna2Button();
-            lblResetList = new Label();
+            gGradientButtonCreateThesis = new Guna.UI2.WinForms.Guna2GradientButton();
             gShadowPanelThesis.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)gPictureBoxItemThesis).BeginInit();
             gShadowPanelSearch.SuspendLayout();
@@ -63,7 +66,7 @@
             // 
             // gGradientButtonThesisTopic
             // 
-            gGradientButtonThesisTopic.CustomizableEdges = customizableEdges15;
+            gGradientButtonThesisTopic.CustomizableEdges = customizableEdges1;
             gGradientButtonThesisTopic.DisabledState.BorderColor = Color.DarkGray;
             gGradientButtonThesisTopic.DisabledState.CustomBorderColor = Color.DarkGray;
             gGradientButtonThesisTopic.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -78,7 +81,7 @@
             gGradientButtonThesisTopic.HoverState.ForeColor = Color.White;
             gGradientButtonThesisTopic.Location = new Point(63, 99);
             gGradientButtonThesisTopic.Name = "gGradientButtonThesisTopic";
-            gGradientButtonThesisTopic.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            gGradientButtonThesisTopic.ShadowDecoration.CustomizableEdges = customizableEdges2;
             gGradientButtonThesisTopic.Size = new Size(977, 40);
             gGradientButtonThesisTopic.TabIndex = 3;
             gGradientButtonThesisTopic.Text = "Thesis topics";
@@ -87,32 +90,32 @@
             // gGradientButtonFilter
             // 
             gGradientButtonFilter.BorderRadius = 6;
-            gGradientButtonFilter.CustomizableEdges = customizableEdges17;
+            gGradientButtonFilter.CustomizableEdges = customizableEdges3;
             gGradientButtonFilter.DisabledState.BorderColor = Color.DarkGray;
             gGradientButtonFilter.DisabledState.CustomBorderColor = Color.DarkGray;
             gGradientButtonFilter.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             gGradientButtonFilter.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
             gGradientButtonFilter.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            gGradientButtonFilter.FillColor = SystemColors.ButtonFace;
-            gGradientButtonFilter.FillColor2 = SystemColors.ButtonFace;
+            gGradientButtonFilter.FillColor = Color.White;
+            gGradientButtonFilter.FillColor2 = Color.White;
             gGradientButtonFilter.Font = new Font("Trebuchet MS", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             gGradientButtonFilter.ForeColor = Color.FromArgb(74, 97, 94);
-            gGradientButtonFilter.HoverState.FillColor = SystemColors.ButtonFace;
-            gGradientButtonFilter.HoverState.FillColor2 = SystemColors.ButtonFace;
+            gGradientButtonFilter.HoverState.FillColor = Color.White;
+            gGradientButtonFilter.HoverState.FillColor2 = Color.White;
             gGradientButtonFilter.HoverState.ForeColor = Color.White;
             gGradientButtonFilter.HoverState.Image = Properties.Resources.PicItemGradientFilter;
             gGradientButtonFilter.Image = Properties.Resources.PicItemFilter;
             gGradientButtonFilter.ImageSize = new Size(30, 30);
-            gGradientButtonFilter.Location = new Point(359, 17);
+            gGradientButtonFilter.Location = new Point(355, 17);
             gGradientButtonFilter.Name = "gGradientButtonFilter";
             gGradientButtonFilter.PressedColor = SystemColors.ButtonFace;
-            gGradientButtonFilter.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            gGradientButtonFilter.ShadowDecoration.CustomizableEdges = customizableEdges4;
             gGradientButtonFilter.Size = new Size(40, 40);
             gGradientButtonFilter.TabIndex = 4;
             // 
             // gGradientButtonToolbar
             // 
-            gGradientButtonToolbar.CustomizableEdges = customizableEdges19;
+            gGradientButtonToolbar.CustomizableEdges = customizableEdges5;
             gGradientButtonToolbar.DisabledState.BorderColor = Color.DarkGray;
             gGradientButtonToolbar.DisabledState.CustomBorderColor = Color.DarkGray;
             gGradientButtonToolbar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -127,7 +130,7 @@
             gGradientButtonToolbar.HoverState.ForeColor = Color.White;
             gGradientButtonToolbar.Location = new Point(1041, 99);
             gGradientButtonToolbar.Name = "gGradientButtonToolbar";
-            gGradientButtonToolbar.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            gGradientButtonToolbar.ShadowDecoration.CustomizableEdges = customizableEdges6;
             gGradientButtonToolbar.Size = new Size(98, 40);
             gGradientButtonToolbar.TabIndex = 7;
             gGradientButtonToolbar.Text = "Tool bar";
@@ -161,13 +164,13 @@
             // 
             // gPictureBoxItemThesis
             // 
-            gPictureBoxItemThesis.CustomizableEdges = customizableEdges21;
+            gPictureBoxItemThesis.CustomizableEdges = customizableEdges7;
             gPictureBoxItemThesis.FillColor = Color.Transparent;
             gPictureBoxItemThesis.Image = (Image)resources.GetObject("gPictureBoxItemThesis.Image");
             gPictureBoxItemThesis.ImageRotate = 0F;
             gPictureBoxItemThesis.Location = new Point(17, 12);
             gPictureBoxItemThesis.Name = "gPictureBoxItemThesis";
-            gPictureBoxItemThesis.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            gPictureBoxItemThesis.ShadowDecoration.CustomizableEdges = customizableEdges8;
             gPictureBoxItemThesis.Size = new Size(50, 50);
             gPictureBoxItemThesis.SizeMode = PictureBoxSizeMode.StretchImage;
             gPictureBoxItemThesis.TabIndex = 10;
@@ -186,7 +189,9 @@
             // gShadowPanelSearch
             // 
             gShadowPanelSearch.BackColor = Color.Transparent;
+            gShadowPanelSearch.Controls.Add(gButtonResetList);
             gShadowPanelSearch.Controls.Add(gTextBoxSearch);
+            gShadowPanelSearch.Controls.Add(lblResetList);
             gShadowPanelSearch.Controls.Add(gGradientButtonFilter);
             gShadowPanelSearch.FillColor = Color.White;
             gShadowPanelSearch.Location = new Point(281, 7);
@@ -194,14 +199,38 @@
             gShadowPanelSearch.Radius = 7;
             gShadowPanelSearch.ShadowColor = Color.Black;
             gShadowPanelSearch.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            gShadowPanelSearch.Size = new Size(431, 80);
+            gShadowPanelSearch.Size = new Size(675, 80);
             gShadowPanelSearch.TabIndex = 3;
+            // 
+            // gButtonResetList
+            // 
+            gButtonResetList.BackColor = Color.Transparent;
+            gButtonResetList.BorderRadius = 5;
+            gButtonResetList.CustomizableEdges = customizableEdges9;
+            gButtonResetList.DisabledState.BorderColor = Color.DarkGray;
+            gButtonResetList.DisabledState.CustomBorderColor = Color.DarkGray;
+            gButtonResetList.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            gButtonResetList.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            gButtonResetList.FillColor = Color.Transparent;
+            gButtonResetList.Font = new Font("Segoe UI", 9F);
+            gButtonResetList.ForeColor = Color.White;
+            gButtonResetList.HoverState.FillColor = Color.White;
+            gButtonResetList.HoverState.Image = Properties.Resources.PicItemResetGradient;
+            gButtonResetList.Image = (Image)resources.GetObject("gButtonResetList.Image");
+            gButtonResetList.ImageOffset = new Point(1, 0);
+            gButtonResetList.ImageSize = new Size(35, 35);
+            gButtonResetList.Location = new Point(597, 17);
+            gButtonResetList.Name = "gButtonResetList";
+            gButtonResetList.PressedColor = SystemColors.ButtonFace;
+            gButtonResetList.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            gButtonResetList.Size = new Size(40, 40);
+            gButtonResetList.TabIndex = 66;
             // 
             // gTextBoxSearch
             // 
             gTextBoxSearch.BorderColor = Color.FromArgb(74, 97, 94);
             gTextBoxSearch.BorderRadius = 8;
-            gTextBoxSearch.CustomizableEdges = customizableEdges23;
+            gTextBoxSearch.CustomizableEdges = customizableEdges11;
             gTextBoxSearch.DefaultText = "";
             gTextBoxSearch.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxSearch.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -220,14 +249,25 @@
             gTextBoxSearch.PlaceholderForeColor = Color.Gray;
             gTextBoxSearch.PlaceholderText = "Search thesis topics";
             gTextBoxSearch.SelectedText = "";
-            gTextBoxSearch.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            gTextBoxSearch.ShadowDecoration.CustomizableEdges = customizableEdges12;
             gTextBoxSearch.Size = new Size(332, 40);
             gTextBoxSearch.TabIndex = 0;
             gTextBoxSearch.TextOffset = new Point(5, 0);
             // 
+            // lblResetList
+            // 
+            lblResetList.AutoSize = true;
+            lblResetList.BackColor = Color.Transparent;
+            lblResetList.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblResetList.Location = new Point(461, 23);
+            lblResetList.Name = "lblResetList";
+            lblResetList.Size = new Size(130, 28);
+            lblResetList.TabIndex = 65;
+            lblResetList.Text = "RESET LIST";
+            // 
             // gGradientButtonTag
             // 
-            gGradientButtonTag.CustomizableEdges = customizableEdges25;
+            gGradientButtonTag.CustomizableEdges = customizableEdges13;
             gGradientButtonTag.DisabledState.BorderColor = Color.DarkGray;
             gGradientButtonTag.DisabledState.CustomBorderColor = Color.DarkGray;
             gGradientButtonTag.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -242,7 +282,7 @@
             gGradientButtonTag.HoverState.ForeColor = Color.White;
             gGradientButtonTag.Location = new Point(11, 99);
             gGradientButtonTag.Name = "gGradientButtonTag";
-            gGradientButtonTag.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            gGradientButtonTag.ShadowDecoration.CustomizableEdges = customizableEdges14;
             gGradientButtonTag.Size = new Size(51, 40);
             gGradientButtonTag.TabIndex = 17;
             gGradientButtonTag.Text = "#";
@@ -255,46 +295,40 @@
             flpThesisList.Size = new Size(1165, 605);
             flpThesisList.TabIndex = 21;
             // 
-            // gButtonResetList
+            // gGradientButtonCreateThesis
             // 
-            gButtonResetList.BackColor = Color.Transparent;
-            gButtonResetList.BorderRadius = 5;
-            gButtonResetList.CustomizableEdges = customizableEdges27;
-            gButtonResetList.DisabledState.BorderColor = Color.DarkGray;
-            gButtonResetList.DisabledState.CustomBorderColor = Color.DarkGray;
-            gButtonResetList.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            gButtonResetList.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            gButtonResetList.FillColor = Color.Transparent;
-            gButtonResetList.Font = new Font("Segoe UI", 9F);
-            gButtonResetList.ForeColor = Color.White;
-            gButtonResetList.HoverState.FillColor = Color.White;
-            gButtonResetList.Image = Properties.Resources.PicItemResetGradient;
-            gButtonResetList.ImageOffset = new Point(1, 0);
-            gButtonResetList.ImageSize = new Size(35, 35);
-            gButtonResetList.Location = new Point(1052, 23);
-            gButtonResetList.Name = "gButtonResetList";
-            gButtonResetList.ShadowDecoration.CustomizableEdges = customizableEdges28;
-            gButtonResetList.Size = new Size(40, 40);
-            gButtonResetList.TabIndex = 66;
-            // 
-            // lblResetList
-            // 
-            lblResetList.AutoSize = true;
-            lblResetList.BackColor = Color.Transparent;
-            lblResetList.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblResetList.Location = new Point(916, 28);
-            lblResetList.Name = "lblResetList";
-            lblResetList.Size = new Size(130, 28);
-            lblResetList.TabIndex = 65;
-            lblResetList.Text = "RESET LIST";
+            gGradientButtonCreateThesis.BackColor = Color.Transparent;
+            gGradientButtonCreateThesis.BorderColor = Color.Silver;
+            gGradientButtonCreateThesis.BorderRadius = 10;
+            gGradientButtonCreateThesis.BorderThickness = 1;
+            gGradientButtonCreateThesis.CustomizableEdges = customizableEdges15;
+            gGradientButtonCreateThesis.DisabledState.BorderColor = Color.DarkGray;
+            gGradientButtonCreateThesis.DisabledState.CustomBorderColor = Color.DarkGray;
+            gGradientButtonCreateThesis.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            gGradientButtonCreateThesis.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            gGradientButtonCreateThesis.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            gGradientButtonCreateThesis.FillColor = Color.White;
+            gGradientButtonCreateThesis.FillColor2 = Color.White;
+            gGradientButtonCreateThesis.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gGradientButtonCreateThesis.ForeColor = Color.Black;
+            gGradientButtonCreateThesis.HoverState.BorderColor = SystemColors.ButtonFace;
+            gGradientButtonCreateThesis.HoverState.FillColor = Color.FromArgb(94, 148, 255);
+            gGradientButtonCreateThesis.HoverState.FillColor2 = Color.FromArgb(255, 77, 165);
+            gGradientButtonCreateThesis.HoverState.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gGradientButtonCreateThesis.HoverState.ForeColor = Color.White;
+            gGradientButtonCreateThesis.Location = new Point(1007, 24);
+            gGradientButtonCreateThesis.Name = "gGradientButtonCreateThesis";
+            gGradientButtonCreateThesis.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            gGradientButtonCreateThesis.Size = new Size(132, 40);
+            gGradientButtonCreateThesis.TabIndex = 67;
+            gGradientButtonCreateThesis.Text = "Create thesis";
             // 
             // UCThesisList
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonFace;
-            Controls.Add(gButtonResetList);
-            Controls.Add(lblResetList);
+            Controls.Add(gGradientButtonCreateThesis);
             Controls.Add(flpThesisList);
             Controls.Add(gShadowPanelSearch);
             Controls.Add(gShadowPanelThesis);
@@ -308,8 +342,8 @@
             gShadowPanelThesis.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)gPictureBoxItemThesis).EndInit();
             gShadowPanelSearch.ResumeLayout(false);
+            gShadowPanelSearch.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -326,5 +360,6 @@
         private FlowLayoutPanel flpThesisList;
         private Guna.UI2.WinForms.Guna2Button gButtonResetList;
         private Label lblResetList;
+        private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonCreateThesis;
     }
 }

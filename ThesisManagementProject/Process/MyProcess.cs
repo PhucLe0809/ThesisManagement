@@ -23,6 +23,8 @@ namespace ThesisManagementProject.Process
         Student = 33,
         Thesis = 44,
         Team = 55,
+        Task = 66,
+        Comment = 77,
     }
 
     #endregion
@@ -30,6 +32,9 @@ namespace ThesisManagementProject.Process
     internal class MyProcess
     {
         private DBConnection dBConnection = new DBConnection();
+
+
+        #region UTILS
 
         public string FormatStringLength(string str, int length)
         {
@@ -78,15 +83,34 @@ namespace ThesisManagementProject.Process
             label.AutoSize = true;
             label.BackColor = Color.Transparent;
             label.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label.ForeColor = Color.RoyalBlue;
+            label.ForeColor = Color.Gray;
             label.Name = "label";
             label.Size = new Size(315, 62);
             label.TabIndex = 5;
             label.Text = content;
 
             return label;
-
         }
+        public void SetTextBoxState(List<Guna2TextBox> list, bool flag)
+        {
+            foreach (Guna2TextBox textBox in list)
+            {
+                textBox.ReadOnly = flag;
+
+                if (flag)
+                {
+                    textBox.BorderThickness = 0;
+                    textBox.FillColor = SystemColors.ButtonFace;
+                }
+                else
+                {
+                    textBox.BorderThickness = 1;
+                    textBox.FillColor = Color.White;
+                }
+            }
+        }
+
+        #endregion
 
         #region GenIDbyClassify
 
@@ -116,6 +140,12 @@ namespace ThesisManagementProject.Process
                     break;
                 case EClassify.Thesis:
                     cntAccount = GetLastestID("idthesis", string.Format("SELECT * FROM {0}", MyDatabase.DBThesis));
+                    break;
+                case EClassify.Task:
+                    cntAccount = GetLastestID("idtask", string.Format("SELECT * FROM {0}", MyDatabase.DBTask));
+                    break;
+                case EClassify.Comment:
+                    cntAccount = GetLastestID("idcomment", string.Format("SELECT * FROM {0}", MyDatabase.DBComment));
                     break;
             }
             cntAccount++;
@@ -168,6 +198,7 @@ namespace ThesisManagementProject.Process
             if (ImageEquals(image, Properties.Resources.PicAvatarOne)) return "PicAvatarOne";
             if (ImageEquals(image, Properties.Resources.PicAvatarTwo)) return "PicAvatarTwo";
             if (ImageEquals(image, Properties.Resources.PicAvatarThree)) return "PicAvatarThree";
+            if (ImageEquals(image, Properties.Resources.PicAvatarFour)) return "PicAvatarFour";
             if (ImageEquals(image, Properties.Resources.PicAvatarFive)) return "PicAvatarFive";
             if (ImageEquals(image, Properties.Resources.PicAvatarSix)) return "PicAvatarSix";
             if (ImageEquals(image, Properties.Resources.PicAvatarSeven)) return "PicAvatarSeven";
@@ -196,11 +227,13 @@ namespace ThesisManagementProject.Process
         #endregion
 
         #region NameToImage
+
         public Image NameToImage(string imageName)
         {
             if (imageName.Equals("PicAvatarOne")) return Properties.Resources.PicAvatarOne;
             if (imageName.Equals("PicAvatarTwo")) return Properties.Resources.PicAvatarTwo;
             if (imageName.Equals("PicAvatarThree")) return Properties.Resources.PicAvatarThree;
+            if (imageName.Equals("PicAvatarFour")) return Properties.Resources.PicAvatarFour;
             if (imageName.Equals("PicAvatarFive")) return Properties.Resources.PicAvatarFive;
             if (imageName.Equals("PicAvatarSix")) return Properties.Resources.PicAvatarSix;
             if (imageName.Equals("PicAvatarSeven")) return Properties.Resources.PicAvatarSeven;
@@ -319,6 +352,13 @@ namespace ThesisManagementProject.Process
 
         #region SET BUTTON COLOR as CARD
 
+        public void ButtonStandardColor(Guna2GradientButton button)
+        {
+            button.FillColor = SystemColors.ControlLight;
+            button.FillColor2 = SystemColors.ButtonFace;
+            button.ForeColor = Color.Black;
+            button.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+        }
         public void ButtonStandardColor(Guna2GradientButton button, Color one, Color two)
         {
             button.FillColor = one;
@@ -336,15 +376,9 @@ namespace ThesisManagementProject.Process
 
         #endregion
 
-        #region EXTEND
+        #region ADD AVATAR LIST
 
-        //public void InitializeObjectCode()
-        //{
-        //    this.cntThesis = GetLastestID("idthesis", string.Format("SELECT * FROM {0}", MyDatabase.DBThesis));
-        //    this.cntLecture = GetLastestID("idaccount", string.Format("SELECT * FROM {0} WHERE role = '{1}'", MyDatabase.DBAccount, EClassify.Lecture.ToString()));
-        //    this.cntStudent = GetLastestID("idaccount", string.Format("SELECT * FROM {0} WHERE role = '{1}'", MyDatabase.DBAccount, EClassify.Student.ToString()));
-        //    this.cntTeam = GetLastestID("idteam", string.Format("SELECT * FROM {0}", MyDatabase.DBTeam));
-        //}
+
 
         #endregion
 

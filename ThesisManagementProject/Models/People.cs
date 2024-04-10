@@ -62,7 +62,7 @@ namespace ThesisManagementProject.Models
 
         public People()
         {
-            idAccount = "xxx";
+            idAccount = string.Empty;
             fullName = string.Empty;
             citizenCode = string.Empty;
             birthday = DateTime.Now;

@@ -12,16 +12,16 @@ using ThesisManagementProject.Process;
 
 namespace ThesisManagementProject
 {
-    public partial class FStudentDetails : Form
+    public partial class FPeopleDetails : Form
     {
         private MyProcess myProcess = new MyProcess();
         private People people = new People();
 
-        public FStudentDetails()
+        public FPeopleDetails()
         {
             InitializeComponent();
         }
-        public FStudentDetails(People people)
+        public FPeopleDetails(People people)
         {
             InitializeComponent();
 

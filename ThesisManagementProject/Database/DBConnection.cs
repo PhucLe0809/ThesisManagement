@@ -63,14 +63,14 @@ namespace ThesisManagementProject.Database
                 conn.Close();
             }
         }
-        public void ExecuteQueryThesis(Thesis thesis, string command, string typeExecution)
+        public void ExecuteQueryThesis(Thesis thesis, string command, string typeExecution, bool flag)
         {
             string sqlStr = string.Format(command, MyDatabase.DBThesis,
                 thesis.IdThesis, thesis.Topic, thesis.Field.ToString(), thesis.Level.ToString(),
                 thesis.MaxMembers, thesis.Description, thesis.PublishDate.ToString(), thesis.Technology, thesis.Functions, thesis.Requirements,
                 thesis.IdCreator, thesis.IsFavorite ? 1 : 0, thesis.Status, thesis.IdInstructor);
 
-            ExecuteQuery(sqlStr, typeExecution, true);
+            ExecuteQuery(sqlStr, typeExecution, flag);
         }
         public void ExecuteQueryPeople(People people, string command, string typeExecution, bool flag)
         {
@@ -78,6 +78,21 @@ namespace ThesisManagementProject.Database
                 people.IdAccount, people.FullName, people.CitizenCode, people.Birthday.ToString("yyyy-MM-dd"), people.Gender.ToString(),
                 people.Email, people.PhoneNumber, people.Handle, people.Role.ToString(), people.University, people.Faculty,
                 people.WorkCode, people.Password, people.AvatarName);
+
+            ExecuteQuery(sqlStr, typeExecution, flag);
+        }
+        public void ExecuteQueryTask(Tasks tasks, string command, string typeExecution, bool flag)
+        {
+            string sqlStr = string.Format(command, MyDatabase.DBTask,
+                tasks.IdTask, tasks.Title, tasks.Description, tasks.IdCreator, tasks.IdTeam, tasks.IsFavorite ? 1 : 0,
+                tasks.Progress, tasks.CreatedDate.ToString("yyyy-MM-dd hh:mm:ss"));
+
+            ExecuteQuery(sqlStr, typeExecution, flag);
+        }
+        public void ExecuteQueryComment(Comment comment, string command, string typeExecution, bool flag)
+        {
+            string sqlStr = string.Format(command, MyDatabase.DBComment, 
+                comment.IdComment, comment.IdTask, comment.IdCreator, comment.Content, comment.Emoji, comment.Created.ToString("yyyy-MM-dd hh:mm:ss"));
 
             ExecuteQuery(sqlStr, typeExecution, flag);
         }
@@ -134,5 +149,6 @@ namespace ThesisManagementProject.Database
         }
 
         #endregion
+
     }
 }

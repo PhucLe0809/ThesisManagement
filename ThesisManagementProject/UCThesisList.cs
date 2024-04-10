@@ -15,11 +15,8 @@ namespace ThesisManagementProject
 {
     public partial class UCThesisList : UserControl
     {
-        private MyProcess myProcess = new MyProcess();
         public event EventHandler ThesisLineClicked;
-        public event EventHandler ThesisEditClicked;
-        public event EventHandler ThesisDeleteClicked;
-        private bool selectAllField = true;
+        private int numThesis = 0;
 
         public UCThesisList()
         {
@@ -28,6 +25,10 @@ namespace ThesisManagementProject
 
         #region PROPERTIES
 
+        public Guna2GradientButton GButtonCreateThesis
+        {
+            get { return this.gGradientButtonCreateThesis; }
+        }
         public Guna2GradientButton GButtonFavorite
         {
             get { return this.gGradientButtonTag; }
@@ -62,10 +63,27 @@ namespace ThesisManagementProject
             thesisLine.ThesisLineClicked += ThesisLine_Clicked;
             thesisLine.ThesisDeleteClicked += ThesisDelete_Clicked;
             flpThesisList.Controls.Add(thesisLine);
+            SetNumThesis(1, false);
         }
-        public void SetNumThesis(int num)
+        public void SetNumThesis(int num, bool flagReset)
         {
-            lblNumThesis.Text = num.ToString();
+            if (flagReset) numThesis = num; else numThesis += num;
+            lblNumThesis.Text = numThesis.ToString();
+        }
+        public void SetFilter(bool flag)
+        {
+            if (flag)
+            {
+                gGradientButtonFilter.Image = Properties.Resources.PicItemGradientFilter;
+                gGradientButtonFilter.FillColor = SystemColors.ButtonFace;
+                gGradientButtonFilter.FillColor2 = SystemColors.ButtonFace;
+            }
+            else
+            {
+                gGradientButtonFilter.Image = Properties.Resources.PicItemFilter;
+                gGradientButtonFilter.FillColor = Color.White;
+                gGradientButtonFilter.FillColor2 = Color.White;
+            }
         }
 
         #endregion
@@ -80,21 +98,27 @@ namespace ThesisManagementProject
         {
             ThesisLineClicked?.Invoke(this, e);
         }
-        public virtual void ThesisEdit_Clicked(object sender, EventArgs e)
+        public void ThesisDelete_Clicked(object sender, EventArgs e)
         {
-            OnThesisEditClicked(EventArgs.Empty);
-        }
-        public virtual void OnThesisEditClicked(EventArgs e)
-        {
-            ThesisEditClicked?.Invoke(this, e);
-        }
-        public virtual void ThesisDelete_Clicked(object sender, EventArgs e)
-        {
-            OnThesisDeleteClicked(EventArgs.Empty);
-        }
-        public virtual void OnThesisDeleteClicked(EventArgs e)
-        {
-            ThesisDeleteClicked?.Invoke(this, e);
+            UCThesisLine line = sender as UCThesisLine;
+
+            if (line != null)
+            {
+                foreach (Control control in flpThesisList.Controls)
+                {
+                    if (control.GetType() == typeof(UCThesisLine))
+                    {
+                        UCThesisLine thesisLine = (UCThesisLine)control;
+                        if (thesisLine == line)
+                        {
+                            flpThesisList.Controls.Remove(control);
+                            control.Dispose();
+                            SetNumThesis(-1, false);
+                            break;
+                        }
+                    }
+                }
+            }
         }
 
         #endregion

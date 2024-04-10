@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ThesisManagementProject
 {
-    public partial class UCThesisDetailsGeneral : UserControl
+    public partial class UCThesisDetailsStatistical : UserControl
     {
-        public UCThesisDetailsGeneral()
+        public UCThesisDetailsStatistical()
         {
             InitializeComponent();
         }

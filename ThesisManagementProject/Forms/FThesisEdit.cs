@@ -25,7 +25,6 @@ namespace ThesisManagementProject
         public FThesisEdit(People people, Thesis thesis)
         {
             InitializeComponent();
-
             InitUserControl(people, thesis);
         }
 

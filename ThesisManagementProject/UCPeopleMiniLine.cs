@@ -62,6 +62,11 @@ namespace ThesisManagementProject
             lblUserName.Text = people.Handle;
             lblPeopleCode.Text = people.IdAccount;
         }
+        public void SetDeleteMode(bool deleteMode)
+        {
+            if (deleteMode) gButtonAdd.Show();
+            else gButtonAdd.Hide();
+        }
         public void SetButtonDelete()
         {
             gButtonAdd.Image = Properties.Resources.PicItemRemove;
@@ -80,7 +85,7 @@ namespace ThesisManagementProject
         public void SetSize(Size size)
         {
             this.Size = size;
-            gShadowPanelBack.Size = size;
+            gShadowPanelBack.Size = new Size(size.Width - 5, size.Height);
         }
         private void ExecuteBackGroundColor(Color color)
         {
@@ -90,11 +95,12 @@ namespace ThesisManagementProject
             lblPeopleCode.BackColor = color;
             gButtonAdd.FillColor = color;
             gButtonAdd.BackColor = color;
+            gButtonAdd.PressedColor = color;
         }
 
         private void ShowPeopleInformation()
         {
-            FStudentDetails fStudentDetails = new FStudentDetails(people);
+            FPeopleDetails fStudentDetails = new FPeopleDetails(people);
             fStudentDetails.ShowDialog();
         }
 

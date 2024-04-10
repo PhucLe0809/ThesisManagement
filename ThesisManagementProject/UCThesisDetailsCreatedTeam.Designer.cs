@@ -64,7 +64,7 @@
             flpTeam.BackColor = SystemColors.ButtonFace;
             flpTeam.Location = new Point(11, 14);
             flpTeam.Name = "flpTeam";
-            flpTeam.Size = new Size(553, 264);
+            flpTeam.Size = new Size(553, 267);
             flpTeam.TabIndex = 55;
             // 
             // gSeparatorTopic
@@ -101,7 +101,7 @@
             gTextBoxSearch.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             gTextBoxSearch.IconLeft = (Image)resources.GetObject("gTextBoxSearch.IconLeft");
             gTextBoxSearch.IconLeftOffset = new Point(5, 0);
-            gTextBoxSearch.Location = new Point(25, 245);
+            gTextBoxSearch.Location = new Point(25, 222);
             gTextBoxSearch.Margin = new Padding(3, 4, 3, 4);
             gTextBoxSearch.Name = "gTextBoxSearch";
             gTextBoxSearch.PasswordChar = '\0';
@@ -118,9 +118,9 @@
             // 
             flpSearch.AutoScroll = true;
             flpSearch.BackColor = SystemColors.ButtonFace;
-            flpSearch.Location = new Point(8, 284);
+            flpSearch.Location = new Point(11, 290);
             flpSearch.Name = "flpSearch";
-            flpSearch.Size = new Size(553, 242);
+            flpSearch.Size = new Size(553, 300);
             flpSearch.TabIndex = 56;
             // 
             // gTextBoxTeamName
@@ -140,7 +140,7 @@
             gTextBoxTeamName.ForeColor = Color.FromArgb(74, 97, 94);
             gTextBoxTeamName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             gTextBoxTeamName.IconLeftOffset = new Point(5, 0);
-            gTextBoxTeamName.Location = new Point(159, 48);
+            gTextBoxTeamName.Location = new Point(113, 35);
             gTextBoxTeamName.Margin = new Padding(3, 4, 3, 4);
             gTextBoxTeamName.Name = "gTextBoxTeamName";
             gTextBoxTeamName.PasswordChar = '\0';
@@ -159,12 +159,12 @@
             guna2ShadowPanel1.Controls.Add(flpSearch);
             guna2ShadowPanel1.Controls.Add(flpTeam);
             guna2ShadowPanel1.FillColor = SystemColors.ButtonFace;
-            guna2ShadowPanel1.Location = new Point(17, 297);
+            guna2ShadowPanel1.Location = new Point(17, 274);
             guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             guna2ShadowPanel1.Radius = 10;
             guna2ShadowPanel1.ShadowColor = Color.Black;
             guna2ShadowPanel1.ShadowShift = 0;
-            guna2ShadowPanel1.Size = new Size(575, 311);
+            guna2ShadowPanel1.Size = new Size(575, 345);
             guna2ShadowPanel1.TabIndex = 58;
             // 
             // gCirclePictureBoxAvatar
@@ -172,11 +172,11 @@
             gCirclePictureBoxAvatar.FillColor = SystemColors.ButtonFace;
             gCirclePictureBoxAvatar.Image = Properties.Resources.PicAvatarDemoUser;
             gCirclePictureBoxAvatar.ImageRotate = 0F;
-            gCirclePictureBoxAvatar.Location = new Point(53, 26);
+            gCirclePictureBoxAvatar.Location = new Point(33, 22);
             gCirclePictureBoxAvatar.Name = "gCirclePictureBoxAvatar";
             gCirclePictureBoxAvatar.ShadowDecoration.CustomizableEdges = customizableEdges5;
             gCirclePictureBoxAvatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            gCirclePictureBoxAvatar.Size = new Size(90, 90);
+            gCirclePictureBoxAvatar.Size = new Size(70, 70);
             gCirclePictureBoxAvatar.SizeMode = PictureBoxSizeMode.Zoom;
             gCirclePictureBoxAvatar.TabIndex = 59;
             gCirclePictureBoxAvatar.TabStop = false;
@@ -196,7 +196,7 @@
             guna2ShadowPanel2.Radius = 10;
             guna2ShadowPanel2.ShadowColor = Color.Black;
             guna2ShadowPanel2.ShadowShift = 6;
-            guna2ShadowPanel2.Size = new Size(575, 142);
+            guna2ShadowPanel2.Size = new Size(575, 116);
             guna2ShadowPanel2.TabIndex = 60;
             // 
             // gGradientButtonRegister
@@ -217,7 +217,7 @@
             gGradientButtonRegister.HoverState.FillColor2 = Color.FromArgb(255, 77, 165);
             gGradientButtonRegister.HoverState.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             gGradientButtonRegister.HoverState.ForeColor = Color.White;
-            gGradientButtonRegister.Location = new Point(428, 48);
+            gGradientButtonRegister.Location = new Point(428, 35);
             gGradientButtonRegister.Name = "gGradientButtonRegister";
             gGradientButtonRegister.ShadowDecoration.CustomizableEdges = customizableEdges7;
             gGradientButtonRegister.Size = new Size(106, 40);
@@ -247,7 +247,7 @@
             gGradientButtonPerform.HoverState.FillColor2 = Color.FromArgb(255, 77, 165);
             gGradientButtonPerform.HoverState.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             gGradientButtonPerform.HoverState.ForeColor = Color.White;
-            gGradientButtonPerform.Location = new Point(445, 245);
+            gGradientButtonPerform.Location = new Point(445, 222);
             gGradientButtonPerform.Name = "gGradientButtonPerform";
             gGradientButtonPerform.ShadowDecoration.CustomizableEdges = customizableEdges9;
             gGradientButtonPerform.Size = new Size(106, 40);

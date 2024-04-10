@@ -18,7 +18,6 @@ namespace ThesisManagementProject
     {
         private MyProcess myProcess = new MyProcess();
         public event EventHandler ThesisLineClicked;
-        public event EventHandler ThesisEditClicked;
         public event EventHandler ThesisDeleteClicked;
 
         private Thesis thesis = new Thesis();
@@ -39,9 +38,9 @@ namespace ThesisManagementProject
             this.thesis = thesis;
             this.creator = peopleDAO.SelectOnlyByID(thesis.IdCreator);
             this.instructor = peopleDAO.SelectOnlyByID(thesis.IdInstructor);
-            UserControlLoad();
+            InitUserControl();
         }
-        private void UserControlLoad()
+        private void InitUserControl()
         {
             myProcess.SetItemFavorite(gButtonStar, thesis.IsFavorite);
 
@@ -107,11 +106,8 @@ namespace ThesisManagementProject
         {
             FThesisEdit fThesisEdit = new FThesisEdit(instructor, thesis);
             fThesisEdit.ShowDialog();
-            OnThesisEditClicked(EventArgs.Empty);
-        }
-        public virtual void OnThesisEditClicked(EventArgs e)
-        {
-            ThesisEditClicked?.Invoke(this, e);
+            this.thesis = thesisDAO.SelectOnly(thesis.IdThesis);
+            InitUserControl();
         }
         private void gButtonDelete_Click(object sender, EventArgs e)
         {

@@ -96,7 +96,7 @@ namespace ThesisManagementProject.Models
 
         public Thesis()
         {
-            this.idThesis = "xxx";
+            this.idThesis = string.Empty;
             this.topic = string.Empty;
             this.field = EField.SoftwareDevelopment;
             this.level = ELevel.Easy;

@@ -33,6 +33,7 @@ namespace ThesisManagementProject
         private MyProcess myProcess = new MyProcess();
 
         #region CONTRUCTERS
+
         public UCThesisDetailsCreatedTeam()
         {
             InitializeComponent();
@@ -45,6 +46,7 @@ namespace ThesisManagementProject
             this.thesis = thesis;
             InitUserControl();
         }
+
         #endregion
 
         #region PROPERTIES
@@ -56,7 +58,7 @@ namespace ThesisManagementProject
 
         #endregion
 
-        #region FUNTION
+        #region FUNCTIONS
 
         void InitUserControl()
         {
@@ -73,8 +75,15 @@ namespace ThesisManagementProject
             {
                 UCPeopleMiniLine line = new UCPeopleMiniLine(people);
                 line.SetBackGroundColor(Color.White);
-                line.SetButtonDelete();
-                line.ButtonDeleteClicked += (sender, e) => ButtonDelete_Clicked(sender, e, line);
+                if (people.IdAccount == this.people.IdAccount)
+                {
+                    line.SetDeleteMode(false);
+                }
+                else
+                {
+                    line.SetButtonDelete();
+                    line.ButtonDeleteClicked += (sender, e) => ButtonDelete_Clicked(sender, e, line);
+                }
                 flpTeam.Controls.Add(line);
                 members.Add(people);
             }

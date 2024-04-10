@@ -63,6 +63,16 @@ namespace ThesisManagementProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap EmojiInLove {
+            get {
+                object obj = ResourceManager.GetObject("EmojiInLove", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap GifCompleted {
             get {
                 object obj = ResourceManager.GetObject("GifCompleted", resourceCulture);
@@ -243,6 +253,16 @@ namespace ThesisManagementProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PicAvatarFour {
+            get {
+                object obj = ResourceManager.GetObject("PicAvatarFour", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PicAvatarNine {
             get {
                 object obj = ResourceManager.GetObject("PicAvatarNine", resourceCulture);
@@ -306,16 +326,6 @@ namespace ThesisManagementProject.Properties {
         internal static System.Drawing.Bitmap PicAvatarTwo {
             get {
                 object obj = ResourceManager.GetObject("PicAvatarTwo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap PicAvaterFour {
-            get {
-                object obj = ResourceManager.GetObject("PicAvaterFour", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -773,6 +783,16 @@ namespace ThesisManagementProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PicItemReset {
+            get {
+                object obj = ResourceManager.GetObject("PicItemReset", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PicItemResetGradient {
             get {
                 object obj = ResourceManager.GetObject("PicItemResetGradient", resourceCulture);
@@ -1096,6 +1116,16 @@ namespace ThesisManagementProject.Properties {
         internal static System.Drawing.Bitmap PictureNullBackground {
             get {
                 object obj = ResourceManager.GetObject("PictureNullBackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PictureRegistered {
+            get {
+                object obj = ResourceManager.GetObject("PictureRegistered", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

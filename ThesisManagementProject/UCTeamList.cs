@@ -29,14 +29,10 @@ namespace ThesisManagementProject
 
         private void gButtonFilter_Click(object sender, EventArgs e)
         {
-            FTeamFilter filter = new FTeamFilter();
-            filter.ShowDialog();
         }
 
         private void gGradientButtonCreateTeam_Click(object sender, EventArgs e)
         {
-            FTeamCreate fTeamCreate = new FTeamCreate();
-            fTeamCreate.ShowDialog();
         }
     }
 }

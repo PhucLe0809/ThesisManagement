@@ -32,13 +32,13 @@ namespace ThesisManagementProject
 
         private void lblDetails_Click(object sender, EventArgs e)
         {
-            FStudentDetails fAccountDetails = new FStudentDetails();
+            FPeopleDetails fAccountDetails = new FPeopleDetails();
             fAccountDetails.Show();
         }
 
         private void UCIndividualLine_Click(object sender, EventArgs e)
         {
-            FStudentDetails fAccountDetails = new FStudentDetails();
+            FPeopleDetails fAccountDetails = new FPeopleDetails();
             fAccountDetails.ShowDialog();
         }
 

@@ -719,12 +719,14 @@
             gButtonResetFilter.FillColor = Color.Transparent;
             gButtonResetFilter.Font = new Font("Segoe UI", 9F);
             gButtonResetFilter.ForeColor = Color.White;
-            gButtonResetFilter.HoverState.FillColor = Color.White;
-            gButtonResetFilter.Image = Properties.Resources.PicItemResetGradient;
+            gButtonResetFilter.HoverState.FillColor = SystemColors.ButtonFace;
+            gButtonResetFilter.HoverState.Image = Properties.Resources.PicItemResetGradient;
+            gButtonResetFilter.Image = Properties.Resources.PicItemReset;
             gButtonResetFilter.ImageOffset = new Point(1, 0);
             gButtonResetFilter.ImageSize = new Size(35, 35);
             gButtonResetFilter.Location = new Point(681, 8);
             gButtonResetFilter.Name = "gButtonResetFilter";
+            gButtonResetFilter.PressedColor = SystemColors.ButtonFace;
             gButtonResetFilter.ShadowDecoration.CustomizableEdges = customizableEdges26;
             gButtonResetFilter.Size = new Size(40, 40);
             gButtonResetFilter.TabIndex = 64;

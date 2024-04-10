@@ -90,7 +90,7 @@
             gShadowPanelBack.ShadowColor = Color.Black;
             gShadowPanelBack.ShadowShift = 4;
             gShadowPanelBack.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            gShadowPanelBack.Size = new Size(255, 60);
+            gShadowPanelBack.Size = new Size(250, 60);
             gShadowPanelBack.TabIndex = 28;
             gShadowPanelBack.Click += gShadowPanelBack_Click;
             gShadowPanelBack.MouseEnter += gShadowPanelBack_MouseEnter;
@@ -114,6 +114,7 @@
             gButtonAdd.ImageSize = new Size(22, 22);
             gButtonAdd.Location = new Point(198, 11);
             gButtonAdd.Name = "gButtonAdd";
+            gButtonAdd.PressedColor = Color.White;
             gButtonAdd.ShadowDecoration.CustomizableEdges = customizableEdges3;
             gButtonAdd.Size = new Size(35, 35);
             gButtonAdd.TabIndex = 14;

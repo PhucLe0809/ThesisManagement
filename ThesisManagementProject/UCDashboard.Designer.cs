@@ -36,13 +36,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             gPanelBack = new Guna.UI2.WinForms.Guna2Panel();
             gPanelDataView = new Guna.UI2.WinForms.Guna2Panel();
             gGradientButtonViewThesis = new Guna.UI2.WinForms.Guna2GradientButton();
             gGradientButtonStatistical = new Guna.UI2.WinForms.Guna2GradientButton();
-            gGradientButtonCreateThesis = new Guna.UI2.WinForms.Guna2GradientButton();
             gPanelBack.SuspendLayout();
             SuspendLayout();
             // 
@@ -120,33 +117,7 @@
             gGradientButtonStatistical.Text = "Statistical";
             gGradientButtonStatistical.Click += gGradientButtonStatistical_Click;
             // 
-            // gGradientButtonCreateThesis
-            // 
-            gGradientButtonCreateThesis.BackColor = Color.Transparent;
-            gGradientButtonCreateThesis.BorderRadius = 10;
-            gGradientButtonCreateThesis.CustomizableEdges = customizableEdges9;
-            gGradientButtonCreateThesis.DisabledState.BorderColor = Color.DarkGray;
-            gGradientButtonCreateThesis.DisabledState.CustomBorderColor = Color.DarkGray;
-            gGradientButtonCreateThesis.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            gGradientButtonCreateThesis.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
-            gGradientButtonCreateThesis.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            gGradientButtonCreateThesis.FillColor = SystemColors.ControlLight;
-            gGradientButtonCreateThesis.FillColor2 = SystemColors.ButtonFace;
-            gGradientButtonCreateThesis.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            gGradientButtonCreateThesis.ForeColor = Color.Black;
-            gGradientButtonCreateThesis.HoverState.FillColor = Color.FromArgb(94, 148, 255);
-            gGradientButtonCreateThesis.HoverState.FillColor2 = Color.FromArgb(255, 77, 165);
-            gGradientButtonCreateThesis.HoverState.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            gGradientButtonCreateThesis.HoverState.ForeColor = Color.White;
-            gGradientButtonCreateThesis.Location = new Point(1050, 9);
-            gGradientButtonCreateThesis.Name = "gGradientButtonCreateThesis";
-            gGradientButtonCreateThesis.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            gGradientButtonCreateThesis.Size = new Size(132, 40);
-            gGradientButtonCreateThesis.TabIndex = 6;
-            gGradientButtonCreateThesis.Text = "Create thesis";
-            gGradientButtonCreateThesis.Click += gGradientButtonCreateThesis_Click;
-            // 
-            // UCDashboardLecture
+            // UCDashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -155,8 +126,7 @@
             Controls.Add(gPanelBack);
             Controls.Add(gGradientButtonViewThesis);
             Controls.Add(gGradientButtonStatistical);
-            Controls.Add(gGradientButtonCreateThesis);
-            Name = "UCDashboardLecture";
+            Name = "UCDashboard";
             Size = new Size(1230, 829);
             gPanelBack.ResumeLayout(false);
             ResumeLayout(false);
@@ -166,7 +136,6 @@
         private Guna.UI2.WinForms.Guna2Panel gPanelBack;
         private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonViewThesis;
         private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonStatistical;
-        private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonCreateThesis;
         private Guna.UI2.WinForms.Guna2Panel gPanelDataView;
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace ThesisManagementProject
 {
-    partial class UCThesisDetailsGeneral
+    partial class UCTaskEvaluate
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             SuspendLayout();
             // 
-            // UCThesisDetailsGeneral
+            // UCTaskEvaluate
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            Name = "UCThesisDetailsGeneral";
-            Size = new Size(608, 635);
+            Name = "UCTaskEvaluate";
+            Size = new Size(680, 490);
             ResumeLayout(false);
         }
 

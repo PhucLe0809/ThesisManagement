@@ -12,13 +12,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ThesisManagementProject.Database;
 using ThesisManagementProject.Models;
+using ThesisManagementProject.Process;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ThesisManagementProject
 {
     public partial class UCDashboard : UserControl
     {
-
+        private MyProcess myProcess = new MyProcess();
         private UCThesisList uCThesisList = new UCThesisList();
         private UCThesisCreate uCThesisCreate = new UCThesisCreate();
         private UCThesisDetails uCThesisDetails = new UCThesisDetails();
@@ -38,6 +39,7 @@ namespace ThesisManagementProject
 
             uCThesisDetails.GButtonBack.Click += ThesisDetailsBack_Clicked;
 
+            uCThesisList.GButtonCreateThesis.Click += gGradientButtonCreateThesis_Click;
             uCThesisList.GButtonFavorite.Click += ByFavorite_Clicked;
             uCThesisList.GButtonTopic.Click += ByTopic_Clicked;
             uCThesisList.GButtonFilter.Click += ByFilter_Clicked;
@@ -104,30 +106,15 @@ namespace ThesisManagementProject
             this.currentList = thesisDAO.SelectList(command);
             this.listThesis = currentList;
         }
-        private void ButtonStandardColor(Guna2GradientButton button)
-        {
-            button.FillColor = SystemColors.ControlLight;
-            button.FillColor2 = SystemColors.ButtonFace;
-            button.ForeColor = Color.Black;
-            button.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-        }
-        private void ButtonSettingColor(Guna2GradientButton button)
-        {
-            button.FillColor = Color.FromArgb(94, 148, 255);
-            button.FillColor2 = Color.FromArgb(255, 77, 165);
-            button.ForeColor = Color.White;
-            button.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-        }
         private void AllButtonStandardColor()
         {
-            ButtonStandardColor(gGradientButtonViewThesis);
-            ButtonStandardColor(gGradientButtonStatistical);
-            ButtonStandardColor(gGradientButtonCreateThesis);
+            myProcess.ButtonStandardColor(gGradientButtonViewThesis);
+            myProcess.ButtonStandardColor(gGradientButtonStatistical);
         }
         private void AddUserControl(Guna2GradientButton button, UserControl userControl)
         {
             AllButtonStandardColor();
-            ButtonSettingColor(button);
+            myProcess.ButtonSettingColor(button);
             gPanelDataView.Controls.Clear();
             gPanelDataView.Controls.Add(userControl);
         }
@@ -140,12 +127,10 @@ namespace ThesisManagementProject
                 UCThesisLine thesisLine = new UCThesisLine();
                 thesisLine.SetInformation(listThesis[i]);
                 thesisLine.ThesisLineClicked += ThesisLine_Clicked;
-                thesisLine.ThesisEditClicked += ThesisListPreviousState;
-                thesisLine.ThesisDeleteClicked += ThesisListPreviousState;
                 if (people.Role == ERole.Student) thesisLine.HideToolBar();
                 uCThesisList.AddThesis(thesisLine);
             }
-            uCThesisList.SetNumThesis(listThesis.Count);
+            uCThesisList.SetNumThesis(listThesis.Count, true);
         }
 
         #endregion
@@ -155,10 +140,11 @@ namespace ThesisManagementProject
         private void gGradientButtonViewThesis_Click(object sender, EventArgs e)
         {
             AllButtonStandardColor();
-            ButtonSettingColor(gGradientButtonViewThesis);
+            myProcess.ButtonSettingColor(gGradientButtonViewThesis);
             UpdateThesisList();
 
             gPanelDataView.Controls.Clear();
+            uCThesisList.SetFilter(false);
             gPanelDataView.Controls.Add(uCThesisList);
             ByStatus_Clicked(sender, e);
             fThesisFilter.SetUpFilter(people);
@@ -180,17 +166,7 @@ namespace ThesisManagementProject
         private void gGradientButtonCreateThesis_Click(object sender, EventArgs e)
         {
             uCThesisCreate.SetCreateState(people);
-            AddUserControl(gGradientButtonCreateThesis, uCThesisCreate);
-        }
-
-        #endregion
-
-        #region EVENT ThesisListPreviousState
-
-        private void ThesisListPreviousState(object sender, EventArgs e)
-        {
-            UpdateThesisList();
-            GFilter_Click(sender, e);
+            AddUserControl(new Guna2GradientButton(), uCThesisCreate);
         }
 
         #endregion
@@ -199,7 +175,6 @@ namespace ThesisManagementProject
 
         private void ThesisDetailsBack_Clicked(object sender, EventArgs e)
         {
-            ThesisListPreviousState(sender, e);
             gPanelDataView.Controls.Clear();
             gPanelDataView.Controls.Add(uCThesisList);
         }
@@ -217,7 +192,7 @@ namespace ThesisManagementProject
                 gPanelDataView.Controls.Clear();
                 Thesis thesis = thesisDAO.SelectOnly(thesisLine.ID);
                 uCThesisDetails.FlagWaiting = this.flagStuMyTheses && (thesis.Status == EThesisStatus.Registered || thesis.Status == EThesisStatus.Published);
-                uCThesisDetails.SetInformation(thesis, people);
+                uCThesisDetails.SetInformation(thesisLine, thesis, people);
                 gPanelDataView.Controls.Add(uCThesisDetails);
             }
         }
@@ -257,13 +232,14 @@ namespace ThesisManagementProject
         }
         private void GFilter_Click(object sender, EventArgs e)
         {
+            uCThesisList.SetFilter(true);
             List<Thesis> listFilter = fThesisFilter.ListThesis;
             this.listThesis = currentList.Where(t => listFilter.Any(t2 => t2.IdThesis == t.IdThesis)).ToList();
             LoadThesisList();
         }
         private void ResetThesisList_Clicked(object sender, EventArgs e)
         {
-            fThesisFilter.GButtonSave.PerformClick();
+            gGradientButtonViewThesis_Click(sender, e);
         }
 
         #endregion

@@ -52,17 +52,17 @@ namespace ThesisManagementProject
 
         private void InitAvatarList()
         {
-            // gShadowPanelAvatar.Hide();
             flpAvatarList.Controls.Clear();
-            flpAvatarList.Controls.Add(CreateAvatarPictureBox(Properties.Resources.PicAvatarOne));
+            flpAvatarList.Controls.Add(CreateAvatarPictureBox(Properties.Resources.PicAvatarNine));
             flpAvatarList.Controls.Add(CreateAvatarPictureBox(Properties.Resources.PicAvatarTwo));
+            flpAvatarList.Controls.Add(CreateAvatarPictureBox(Properties.Resources.PicAvatarSeven));
+            flpAvatarList.Controls.Add(CreateAvatarPictureBox(Properties.Resources.PicAvatarSix));
+            flpAvatarList.Controls.Add(CreateAvatarPictureBox(Properties.Resources.PicAvatarTen));
+            flpAvatarList.Controls.Add(CreateAvatarPictureBox(Properties.Resources.PicAvatarFour));
             flpAvatarList.Controls.Add(CreateAvatarPictureBox(Properties.Resources.PicAvatarThree));
             flpAvatarList.Controls.Add(CreateAvatarPictureBox(Properties.Resources.PicAvatarFive));
-            flpAvatarList.Controls.Add(CreateAvatarPictureBox(Properties.Resources.PicAvatarSix));
-            flpAvatarList.Controls.Add(CreateAvatarPictureBox(Properties.Resources.PicAvatarSeven));
+            flpAvatarList.Controls.Add(CreateAvatarPictureBox(Properties.Resources.PicAvatarOne));
             flpAvatarList.Controls.Add(CreateAvatarPictureBox(Properties.Resources.PicAvatarEight));
-            flpAvatarList.Controls.Add(CreateAvatarPictureBox(Properties.Resources.PicAvatarNine));
-            flpAvatarList.Controls.Add(CreateAvatarPictureBox(Properties.Resources.PicAvatarTen));
             flpAvatarList.Controls.Add(CreateAvatarPictureBox(Properties.Resources.PicAvatarDemoUser));
         }
         public void InitDataControls()
@@ -181,7 +181,6 @@ namespace ThesisManagementProject
             PictureBox pictureBox = sender as PictureBox;
             this.pictureAvatar = pictureBox.Image;
             gCirclePictureBoxAvatar.Image = this.pictureAvatar;
-            // gShadowPanelAvatar.Hide();
         }
         private void gCirclePictureBoxAvatar_Click(object sender, EventArgs e)
         {

@@ -53,12 +53,12 @@ namespace ThesisManagementProject.Database
         {
             DBConnection.ExecuteQueryThesis(thesis, "INSERT INTO {0} " +
                 "VALUES ('{1}', '{2}', '{3}', '{4}', {5}, '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', {12}, '{13}', '{14}')",
-                "Create");
+                "Create", true);
         }
         public void Delete(Thesis thesis)
         {
             DBConnection.ExecuteQueryThesis(thesis, "DELETE FROM {0} WHERE idthesis = '{1}'",
-                "Delete");
+                "Delete", false);
         }
         public void Update(Thesis thesis)
         {
@@ -66,7 +66,7 @@ namespace ThesisManagementProject.Database
                 "idthesis = '{1}', topic = '{2}', field = '{3}', tslevel = '{4}', maxmembers = {5}, " +
                 "description = '{6}', publishdate = '{7}', technology = '{8}', functions = '{9}', requirements = '{10}', " +
                 "idcreator = '{11}', isfavorite = {12}, status = '{13}', idinstructor = '{14}' WHERE idthesis = '{1}'",
-                "Update");
+                "Update", false);
         }
 
         #endregion

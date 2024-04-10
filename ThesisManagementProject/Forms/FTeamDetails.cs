@@ -42,7 +42,7 @@ namespace ThesisManagementProject
         {
             SetTeam(this.team);
 
-            if (this.thesis.IdThesis == "xxx")
+            if (this.thesis.IdThesis == string.Empty)
             {
                 gShadowPanelThesis.Controls.Clear();
                 gShadowPanelThesis.Controls.Add(myProcess.CreatePictureBox(Properties.Resources.PictureEmptyState));
@@ -67,6 +67,7 @@ namespace ThesisManagementProject
             {
                 UCPeopleMiniLine line = new UCPeopleMiniLine(people);
                 line.SetBackGroundColor(SystemColors.ButtonFace);
+                line.SetSize(new Size(340, 60));
                 line.GButtonAdd.Hide();
                 flpMembers.Controls.Add(line);
             }

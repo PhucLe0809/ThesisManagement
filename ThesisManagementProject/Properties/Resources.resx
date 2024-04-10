@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="EmojiInLove" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EmojiInLove.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="GifCompleted" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GifCompleted.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -172,6 +175,9 @@
   <data name="PicAvatarFive" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PicAvatarFive.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PicAvatarFour" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicAvatarFour.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PicAvatarNine" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PicAvatarNine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -192,9 +198,6 @@
   </data>
   <data name="PicAvatarTwo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PicAvatarTwo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="PicAvaterFour" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PicAvaterFour.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PicBirthday" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PicBirthday.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -331,6 +334,9 @@
   <data name="PicItemRemove" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PicItemRemove.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PicItemReset" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PicItemReset.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PicItemResetGradient" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PicItemResetGradient.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -429,6 +435,9 @@
   </data>
   <data name="PictureNullBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PictureNullBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PictureRegistered" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PictureRegistered.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PictureStudent" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PictureStudent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

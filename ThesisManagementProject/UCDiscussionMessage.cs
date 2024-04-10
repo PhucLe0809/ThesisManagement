@@ -19,8 +19,6 @@ namespace ThesisManagementProject
 
         private void gGradientButtonSeeAll_Click(object sender, EventArgs e)
         {
-            FMessageSeeAll fMessageSeeAll = new FMessageSeeAll();
-            fMessageSeeAll.ShowDialog();
         }
     }
 }

@@ -32,7 +32,6 @@ namespace ThesisManagementProject.Forms
 
         private void SetInformation(Thesis thesis)
         {
-            myProcess.SetItemFavorite(gButtonStar, thesis.IsFavorite);
             gTextBoxStatus.Text = thesis.Status.ToString();
             gTextBoxStatus.FillColor = thesis.GetStatusColor();
             gTextBoxTopic.Text = thesis.Topic;
@@ -52,6 +51,8 @@ namespace ThesisManagementProject.Forms
             DataTable table = dBConnection.Select(command);
             gTextBoxTeamRegistered.FillColor = gTextBoxStatus.FillColor;
             gTextBoxTeamRegistered.Text = table.Rows.Count.ToString() + " teams";
+
+            myProcess.SetItemFavorite(gButtonStar, thesis.IsFavorite);
         }
         private void AddPeopleLine(People people, FlowLayoutPanel flowLayoutPanel)
         {

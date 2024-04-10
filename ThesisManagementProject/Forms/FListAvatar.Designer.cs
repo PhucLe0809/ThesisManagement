@@ -39,9 +39,9 @@
             // flpAvatarList
             // 
             flpAvatarList.AutoScroll = true;
-            flpAvatarList.Location = new Point(98, 47);
+            flpAvatarList.Location = new Point(40, 47);
             flpAvatarList.Name = "flpAvatarList";
-            flpAvatarList.Size = new Size(1090, 110);
+            flpAvatarList.Size = new Size(1180, 110);
             flpAvatarList.TabIndex = 32;
             // 
             // gShadowPanelAvatar

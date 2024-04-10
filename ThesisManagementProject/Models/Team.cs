@@ -11,7 +11,7 @@ namespace ThesisManagementProject.Models
     {
         private MyProcess myProcess = new MyProcess();
 
-        #region ATTRIBUTES
+        #region TEAM ATTRIBUTES
 
         private string idteam;
         private string teamName;
@@ -21,11 +21,11 @@ namespace ThesisManagementProject.Models
 
         #endregion
 
-        #region CONTRUCTOR
+        #region TEAM CONTRUCTOR
 
         public Team()
         {
-            this.idteam = "xxx";
+            this.idteam = string.Empty;
             this.teamName = "Anonymous";
             this.avatarName = "PicAvatarDemoUser";
             this.created = DateTime.Now;
@@ -66,7 +66,7 @@ namespace ThesisManagementProject.Models
 
         #endregion
 
-        #region PROPERTIES
+        #region TEAM PROPERTIES
 
         public string IDTeam
         {

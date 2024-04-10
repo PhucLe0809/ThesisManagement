@@ -4,19 +4,13 @@
     <Compile Update="Forms\FListAvatar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\FStudentDetails.cs">
+    <Compile Update="Forms\FPeopleDetails.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\FDisplayMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\FStudentFilter.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Forms\FTeamCreate.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Forms\FTeamFilter.cs">
+    <Compile Update="Forms\FTaskDetails.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\FThesisEdit.cs">
@@ -25,16 +19,13 @@
     <Compile Update="Forms\FThesisFilter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\FMessageSeeAll.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Forms\FTeamDetails.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\FThesisView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="UCAccountInformation.cs">
+    <Compile Update="UCCommentLine.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UCDashboard.cs">
@@ -79,6 +70,18 @@
     <Compile Update="UCStudentStatistical.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="UCTaskComment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCTaskCreate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCTaskEvaluate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCTaskMiniLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UCTeamLine.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -100,7 +103,10 @@
     <Compile Update="UCThesisDetailsCreatedTeam.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UCThesisDetailsGeneral.cs">
+    <Compile Update="UCThesisDetailsStatistical.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCThesisDetailsTasks.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UCThesisLine.cs">
