@@ -30,7 +30,7 @@ bld/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
-obj/
+obj/Debug/net8.0-windows/*.exe
 # File in .vs/ Visual Studio 2022
 *.exe
 *.bin
