@@ -10,14 +10,22 @@ using ThesisManagementProject.Process;
 
 namespace ThesisManagementProject.Database
 {
-    internal class ThesisStatusDAO
+    internal class ThesisStatusDAO : DBConnection
     {
-        DBConnection DBConnection = new DBConnection();
         public ThesisStatusDAO() { }
 
-        public void SQLExecuteByCommand(string command)
+        public void Insert(Thesis thesis, Team team)
         {
-            DBConnection.SQLExecuteByCommand(command);
+            string command = string.Format("INSERT INTO {0} VALUES('{1}', '{2}', '{3}')",
+                                            MyDatabase.DBThesisStatus, team.IDTeam, thesis.IdThesis, thesis.Status.ToString());
+            SQLExecuteByCommand(command);
+        }
+        public void UpdateThesisStatus(string idPeople, string idThesis)
+        {
+            string command = string.Format("UPDATE {0} SET status = '{1}' where idteam = '{2}' and idthesis = '{3}'",
+                        MyDatabase.DBThesisStatus, EThesisStatus.Processing.ToString(), idPeople, idThesis);
+            SQLExecuteByCommand(command);
+
         }
     }
 }

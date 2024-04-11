@@ -32,7 +32,6 @@ namespace ThesisManagementProject
         public UCPeopleMiniLine(People people)
         {
             InitializeComponent();
-
             SetInformation(people);
         }
 
