@@ -19,7 +19,6 @@ namespace ThesisManagementProject
     public partial class UCThesisDetails : UserControl
     {
         private MyProcess myProcess = new MyProcess();
-        private DBConnection dBConnection = new DBConnection();
 
         private Thesis thesis = new Thesis();
         private People people = new People();
@@ -27,11 +26,12 @@ namespace ThesisManagementProject
         private ThesisDAO thesisDAO = new ThesisDAO();
         private PeopleDAO peopleDAO = new PeopleDAO();
         private TeamDAO teamDAO = new TeamDAO();
+        private ThesisStatusDAO thesisStatusDAO = new ThesisStatusDAO();
         private bool flagWaiting = false;
         private List<Team> listTeam = new List<Team>();
 
         private UCThesisLine thesisLine = new UCThesisLine();
-        UCThesisDetailsTeam showTeam = new UCThesisDetailsTeam();
+        private UCThesisDetailsTeam showTeam = new UCThesisDetailsTeam();
         private UCThesisDetailsRegistered uCThesisDetailsRegistered = new UCThesisDetailsRegistered();
         private UCThesisDetailsCreatedTeam uCThesisDetailsCreatedTeam;
         private UCThesisDetailsTasks uCThesisDetailsTasks = new UCThesisDetailsTasks();
@@ -127,10 +127,7 @@ namespace ThesisManagementProject
         {
             if (flagShow)
             {
-                string command = string.Format("SELECT * FROM {0} WHERE idthesis = '{1}' and status = '{2}'",
-                                                MyDatabase.DBThesisStatus, thesis.IdThesis, thesis.Status.ToString());
-                DataTable table = dBConnection.Select(command);
-                this.team = teamDAO.SelectOnly(table.Rows[0]["idteam"].ToString());
+                this.team = teamDAO.SelectFollowThesis(this.thesis);
                 if (team != null)
                 {
                     showTeam.SetInformation(team, thesis);
@@ -232,27 +229,6 @@ namespace ThesisManagementProject
 
         #endregion
 
-        #region EVENT gButtonAdd
-
-        private void GButtonAdd_Click(object sender, EventArgs e)
-        {
-            UCPeopleMiniLine line = sender as UCPeopleMiniLine;
-
-            if (line != null)
-            {
-                DialogResult result = MessageBox.Show("Are you sure you want to accept " + line.GetPeople.Handle,
-                                                    "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                if (result == DialogResult.OK)
-                {
-                    thesisDAO.SQLExecuteByCommand(string.Format("UPDATE {0} SET status = '{1}' where idteam = '{2}' and idthesis = '{3}'",
-                        MyDatabase.DBThesisStatus, EThesisStatus.Processing.ToString(), line.GetPeople.IdAccount, thesis.IdThesis));
-                }
-            }
-
-        }
-
-        #endregion
-
         #region EVENT gGradientButtonTasks
 
         private void gGradientButtonTasks_Click(object sender, EventArgs e)
@@ -274,8 +250,7 @@ namespace ThesisManagementProject
             myProcess.ButtonSettingColor(gGradientButtonRegistered);
             gPanelDataView.Controls.Clear();
 
-            string command = string.Format("SELECT * FROM {0} WHERE idthesis = '{1}'", MyDatabase.DBThesisStatus, thesis.IdThesis);
-            this.listTeam = teamDAO.SelectList(command);
+            this.listTeam = teamDAO.SelectList(this.thesis.IdThesis);
 
             uCThesisDetailsRegistered.Clear();
             foreach (Team team in listTeam)
@@ -298,23 +273,10 @@ namespace ThesisManagementProject
                                                         "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (result == DialogResult.OK)
                 {
-                    string command = string.Empty;
                     this.thesis.Status = EThesisStatus.Processing;
-
-                    foreach (Team teamLine in listTeam)
-                    {
-                        command = string.Format("DELETE FROM {0} WHERE idteam = '{1}' AND idthesis = '{2}'",
-                                            MyDatabase.DBThesisStatus, teamLine.IDTeam, thesis.IdThesis);
-                        dBConnection.ExecuteQuery(command, "Delete", false);
-                    }
-
-                    command = string.Format("INSERT INTO {0} VALUES ('{1}', '{2}', '{3}')",
-                                            MyDatabase.DBThesisStatus, team.IDTeam, thesis.IdThesis, thesis.Status.ToString());
-                    dBConnection.ExecuteQuery(command, "Insert", false);
-
-                    command = string.Format("UPDATE {0} SET status = '{1}' WHERE idthesis = '{2}'",
-                                            MyDatabase.DBThesis, thesis.Status.ToString(), thesis.IdThesis);
-                    dBConnection.ExecuteQuery(command, "Accept", false);
+                    teamDAO.Delete(this.listTeam, this.thesis.IdThesis);
+                    thesisStatusDAO.Insert(this.thesis, team);
+                    thesisDAO.UpdateStatus(this.thesis, EThesisStatus.Processing);
 
                     SetThesisDetailsMode();
                     gTextBoxStatus.Text = thesis.Status.ToString();

@@ -33,8 +33,7 @@ namespace ThesisManagementProject.Process
     {
         private DBConnection dBConnection = new DBConnection();
 
-
-        #region UTILS
+        #region MY UTILS
 
         public string FormatStringLength(string str, int length)
         {
@@ -62,35 +61,6 @@ namespace ThesisManagementProject.Process
                 errorProvider.SetError(control, null);
             }
         }
-        public Guna2PictureBox CreatePictureBox(Image image)
-        {
-            Guna2PictureBox pictureBox = new Guna2PictureBox();
-
-            pictureBox.ImageRotate = 0F;
-            pictureBox.Image = image;
-            pictureBox.Name = "pictureBox";
-            pictureBox.Size = new Size(399, 266);
-            pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox.TabIndex = 0;
-            pictureBox.TabStop = false;
-
-            return pictureBox;
-        }
-        public Label CreateLabel(string content)
-        {
-            Label label = new Label();
-
-            label.AutoSize = true;
-            label.BackColor = Color.Transparent;
-            label.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label.ForeColor = Color.Gray;
-            label.Name = "label";
-            label.Size = new Size(315, 62);
-            label.TabIndex = 5;
-            label.Text = content;
-
-            return label;
-        }
         public void SetTextBoxState(List<Guna2TextBox> list, bool flag)
         {
             foreach (Guna2TextBox textBox in list)
@@ -112,7 +82,46 @@ namespace ThesisManagementProject.Process
 
         #endregion
 
-        #region GenIDbyClassify
+        #region CREATE WINFORM CONTROL
+
+        public Label CreateLabel(string content)
+        {
+            Label label = new Label();
+
+            label.AutoSize = true;
+            label.BackColor = Color.Transparent;
+            label.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label.ForeColor = Color.Gray;
+            label.Name = "label";
+            label.Size = new Size(315, 62);
+            label.TabIndex = 5;
+            label.Text = content;
+
+            return label;
+        }
+
+        #endregion
+
+        #region CREATE GUNA2 CONTROL
+
+        public Guna2PictureBox CreatePictureBox(Image image)
+        {
+            Guna2PictureBox pictureBox = new Guna2PictureBox();
+
+            pictureBox.ImageRotate = 0F;
+            pictureBox.Image = image;
+            pictureBox.Name = "pictureBox";
+            pictureBox.Size = new Size(399, 266);
+            pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox.TabIndex = 0;
+            pictureBox.TabStop = false;
+
+            return pictureBox;
+        }
+
+        #endregion
+
+        #region FUNCTIONS GenIDbyClassify
 
         private int GetLastestID(string field, string command)
         {
@@ -163,7 +172,7 @@ namespace ThesisManagementProject.Process
 
         #endregion
 
-        #region ConvertStringToInt32
+        #region FUNCTIONS with STRING and INT32T
 
         public int ConvertStringToInt32(string input)
         {
@@ -191,7 +200,7 @@ namespace ThesisManagementProject.Process
 
         #endregion
 
-        #region ImageToName
+        #region FUNCTIONS IMAGE and AVATAR NAME
 
         public string ImageToName(Image image)
         {
@@ -223,11 +232,6 @@ namespace ThesisManagementProject.Process
                 return StructuralComparisons.StructuralEqualityComparer.Equals(img1Bytes, img2Bytes);
             }
         }
-
-        #endregion
-
-        #region NameToImage
-
         public Image NameToImage(string imageName)
         {
             if (imageName.Equals("PicAvatarOne")) return Properties.Resources.PicAvatarOne;
@@ -350,7 +354,7 @@ namespace ThesisManagementProject.Process
 
         #endregion
 
-        #region SET BUTTON COLOR as CARD
+        #region FUNCTIONS SET BUTTON COLOR as CARD
 
         public void ButtonStandardColor(Guna2GradientButton button)
         {
@@ -373,12 +377,6 @@ namespace ThesisManagementProject.Process
             button.ForeColor = Color.White;
             button.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
         }
-
-        #endregion
-
-        #region ADD AVATAR LIST
-
-
 
         #endregion
 

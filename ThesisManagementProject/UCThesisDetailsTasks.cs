@@ -34,7 +34,7 @@ namespace ThesisManagementProject
             this.people = people;
             this.team = team;
             this.isProcessing = isProcessing;
-            InitUserControl();            
+            InitUserControl();
         }
         private void InitUserControl()
         {
@@ -61,6 +61,9 @@ namespace ThesisManagementProject
         private void UCTaskCreate_TasksCreateClicked(object? sender, EventArgs e)
         {
             Tasks tasks = taskDAO.SelectOnly(uCTaskCreate.GetTasks.IdTask);
+            //MessageBox.Show(uCTaskCreate.GetTasks.IdTask);
+
+            this.listTask.Add(tasks);
             UCTaskMiniLine line = new UCTaskMiniLine(people, tasks, isProcessing);
             line.TasksDeleteClicked += GButtonDelete_Click;
             flpTaskList.Controls.Add(line);
@@ -68,9 +71,8 @@ namespace ThesisManagementProject
         }
         private void UpdateTaskList()
         {
-            string command = string.Format("SELECT * FROM {0} WHERE idteam = '{1}' ORDER BY created DESC",
-                                            MyDatabase.DBTask, team.IDTeam);
-            this.listTask = taskDAO.SelectList(command);
+            this.listTask.Clear();
+            this.listTask = taskDAO.SelectListByTeam(this.team.IDTeam);
         }
         private void LoadTaskList()
         {
@@ -96,6 +98,7 @@ namespace ThesisManagementProject
                         if (taskLine == line)
                         {
                             flpTaskList.Controls.Remove(control);
+                            this.listTask.Remove(line.GetTask);
                             control.Dispose();
                             break;
                         }
@@ -125,10 +128,7 @@ namespace ThesisManagementProject
 
         private void gTextBoxSearch_TextChanged(object sender, EventArgs e)
         {
-            string command = string.Format("SELECT * FROM {0} WHERE idteam = '{1}' and title LIKE '{2}%' ORDER BY created DESC",
-                                MyDatabase.DBTask, team.IDTeam, gTextBoxSearch.Text);
-
-            this.listTask = taskDAO.SelectList(command);
+            this.listTask = taskDAO.SearchTaskTitle(this.team.IDTeam, gTextBoxSearch.Text);
             LoadTaskList();
         }
 

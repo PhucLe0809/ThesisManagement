@@ -25,6 +25,7 @@ namespace ThesisManagementProject
         private People instructor = new People();
         private ThesisDAO thesisDAO = new ThesisDAO();
         private PeopleDAO peopleDAO = new PeopleDAO();
+        private TeamDAO teamDAO = new TeamDAO();
 
         public UCThesisLine()
         {
@@ -116,6 +117,9 @@ namespace ThesisManagementProject
             if (result == DialogResult.OK)
             {
                 thesisDAO.Delete(thesisDAO.SelectOnly(thesis.IdThesis));
+                List<Team> listTeam = teamDAO.SelectList(this.thesis.IdThesis);
+                teamDAO.Delete(listTeam, this.thesis.IdThesis);
+
                 OnThesisDeleteClicked(EventArgs.Empty);
             }
         }
@@ -133,8 +137,7 @@ namespace ThesisManagementProject
             thesis.IsFavorite = !thesis.IsFavorite;
 
             myProcess.SetItemFavorite(gButtonStar, thesis.IsFavorite);
-            thesisDAO.SQLExecuteByCommand(string.Format("Update " + MyDatabase.DBThesis + " Set isfavorite = {0} Where idthesis = '{1}'",
-                                    (thesis.IsFavorite)?(1):(0), thesis.IdThesis));
+            thesisDAO.UpdateFavorite(this.thesis);
         }
 
         #endregion

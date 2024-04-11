@@ -9,23 +9,20 @@ using ThesisManagementProject.Process;
 
 namespace ThesisManagementProject.Database
 {
-    internal class PeopleDAO
+    internal class PeopleDAO : DBConnection
     {
         private MyProcess myProcess = new MyProcess();
-        DBConnection dBConnection = new DBConnection();
 
         public PeopleDAO() { }
 
-        public void SQLExecuteByCommand(string command)
-        {
-            dBConnection.SQLExecuteByCommand(command);
-        }
-
         #region SELECT PEOPLE
 
-        public List<People> SelectList()
+        public List<People> SelectListByUserName(string username, ERole role)
         {
-            DataTable dataTable = dBConnection.Select(string.Format("SELECT * FROM {0}", MyDatabase.DBAccount));
+            string command = string.Format("SELECT * FROM {0} WHERE handle LIKE '{1}%' and role = '{2}'",
+                                MyDatabase.DBAccount, username, role);
+
+            DataTable dataTable = Select(command);
 
             List<People> list = new List<People>();
             foreach (DataRow row in dataTable.Rows)
@@ -34,44 +31,17 @@ namespace ThesisManagementProject.Database
             }
 
             return list;
-        }
-        public List<People> SelectList(string command)
-        {
-            DataTable dataTable = dBConnection.Select(command);
-
-            List<People> list = new List<People>();
-            foreach (DataRow row in dataTable.Rows)
-            {
-                list.Add(GetFromDataRow(row));
-            }
-
-            return list;
-        }
-        public List<People> SelectListByStatus(string status, string idthesis)
-        {
-            DataTable dataTable = dBConnection.Select("select * from " +
-                "(select idaccount as idstudent from ThesisStatus where sta = '" + status + "' and idthesis = '" + idthesis + "') as Q " +
-                "inner join (select * from Account where role = 'Student') as R on q.idstudent = r.idaccount");
-
-            List<People> list = new List<People>();
-            foreach (DataRow row in dataTable.Rows)
-            {
-                list.Add(GetFromDataRow(row));
-            }
-
-            return list;
-
         }
         public People SelectOnlyByID(string id)
         {
-            DataTable dt = dBConnection.Select(string.Format("SELECT * FROM {0} WHERE idaccount = '{1}'", MyDatabase.DBAccount, id));
+            DataTable dt = Select(string.Format("SELECT * FROM {0} WHERE idaccount = '{1}'", MyDatabase.DBAccount, id));
 
             if (dt.Rows.Count > 0) return GetFromDataRow(dt.Rows[0]);
             return new People();
         }
         public People SelectOnlyByEmailAndPassword(string email, string password)
         {
-            DataTable dt = dBConnection.Select(string.Format("SELECT * FROM {0} WHERE email = '{1}' and password = '{2}'",
+            DataTable dt = Select(string.Format("SELECT * FROM {0} WHERE email = '{1}' and password = '{2}'",
                                         MyDatabase.DBAccount, email, password));
 
             if (dt.Rows.Count > 0) return GetFromDataRow(dt.Rows[0]);
@@ -85,7 +55,7 @@ namespace ThesisManagementProject.Database
         public List<string> SelectListID(ERole role)
         {
             string command = string.Format("SELECT idaccount FROM {0} WHERE role = '{1}'", MyDatabase.DBAccount, role.ToString());
-            DataTable table = dBConnection.Select(command);
+            DataTable table = Select(command);
             List<string> list = new List<string>();
 
             foreach (DataRow row in table.Rows)

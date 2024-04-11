@@ -37,6 +37,10 @@ namespace ThesisManagementProject
             this.isProcessing = isProcessing;
             InitUserControl();
         }
+        public Tasks GetTask
+        {
+            get { return this.tasks; }
+        }
         private void InitUserControl()
         {
             creator = peopleDAO.SelectOnlyByID(tasks.IdCreator);
@@ -77,8 +81,7 @@ namespace ThesisManagementProject
             tasks.IsFavorite = !tasks.IsFavorite;
 
             myProcess.SetItemFavorite(gButtonStar, tasks.IsFavorite);
-            tasksDAO.SQLExecuteByCommand(string.Format("Update " + MyDatabase.DBTask + " Set isfavorite = {0} Where idtask = '{1}'",
-                                    (tasks.IsFavorite) ? (1) : (0), tasks.IdTask));
+            tasksDAO.UpdateIsFavorite(tasks);
         }
         private void gButtonDelete_Click(object sender, EventArgs e)
         {

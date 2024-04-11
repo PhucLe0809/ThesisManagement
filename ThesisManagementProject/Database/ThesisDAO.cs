@@ -10,23 +10,17 @@ using ThesisManagementProject.Process;
 
 namespace ThesisManagementProject.Database
 {
-    internal class ThesisDAO
+    internal class ThesisDAO : DBConnection
     {
         private MyProcess myProcess = new MyProcess();
-        DBConnection DBConnection = new DBConnection();
 
         public ThesisDAO() { }
-
-        public void SQLExecuteByCommand(string command)
-        {
-            DBConnection.SQLExecuteByCommand(command);
-        }
 
         #region SELECT THESIS
 
         public List<Thesis> SelectList(string command)
         {
-            DataTable dataTable = DBConnection.Select(command);
+            DataTable dataTable = Select(command);
 
             List<Thesis> list = new List<Thesis>();
             foreach (DataRow row in dataTable.Rows)
@@ -38,11 +32,30 @@ namespace ThesisManagementProject.Database
         }
         public Thesis SelectOnly(string idThesis)
         {
-            DBConnection db = new DBConnection();
-            DataTable dt = db.Select(string.Format("SELECT * FROM {0} WHERE idthesis = '{1}'", MyDatabase.DBThesis, idThesis));
+            DataTable dt = Select(string.Format("SELECT * FROM {0} WHERE idthesis = '{1}'", MyDatabase.DBThesis, idThesis));
 
             if (dt.Rows.Count > 0) return GetFromDataRow(dt.Rows[0]);
             return new Thesis();
+        }
+        public List<Thesis> SelectListRoleLecture(string idAccount)
+        {
+            string command = string.Format("SELECT * FROM {0} WHERE idinstructor = '{1}'", MyDatabase.DBThesis, idAccount);
+            return SelectList(command);
+        }
+        public List<Thesis> SelectListRoleStudent(string idAccount)
+        {
+            string command = string.Format("SELECT * FROM {0} WHERE status IN ('Published', 'Registered') " +
+                                           "AND NOT EXISTS(SELECT 1 FROM {1} WHERE {1}.idthesis = {0}.idthesis " +
+                                           "AND idteam IN (SELECT idteam FROM {2} WHERE idaccount = '{3}'))",
+                                           MyDatabase.DBThesis, MyDatabase.DBThesisStatus, MyDatabase.DBTeam, idAccount);
+            return SelectList(command);
+        }
+        public List<Thesis> SelectListModeMyTheses(string idAccount)
+        {
+            string command = string.Format("SELECT {0}.* FROM {0} INNER JOIN {1} ON {0}.idthesis = {1}.idthesis " +
+                                           "WHERE {1}.idteam IN (SELECT idteam FROM {2} WHERE idaccount = '{3}')",
+                                            MyDatabase.DBThesis, MyDatabase.DBThesisStatus, MyDatabase.DBTeam, idAccount);
+            return SelectList(command);
         }
 
         #endregion
@@ -51,22 +64,48 @@ namespace ThesisManagementProject.Database
 
         public void Insert(Thesis thesis)
         {
-            DBConnection.ExecuteQueryThesis(thesis, "INSERT INTO {0} " +
+            ExecuteQueryThesis(thesis, "INSERT INTO {0} " +
                 "VALUES ('{1}', '{2}', '{3}', '{4}', {5}, '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', {12}, '{13}', '{14}')",
                 "Create", true);
         }
         public void Delete(Thesis thesis)
         {
-            DBConnection.ExecuteQueryThesis(thesis, "DELETE FROM {0} WHERE idthesis = '{1}'",
+            ExecuteQueryThesis(thesis, "DELETE FROM {0} WHERE idthesis = '{1}'",
                 "Delete", false);
         }
         public void Update(Thesis thesis)
         {
-            DBConnection.ExecuteQueryThesis(thesis, "UPDATE {0} SET " +
+            ExecuteQueryThesis(thesis, "UPDATE {0} SET " +
                 "idthesis = '{1}', topic = '{2}', field = '{3}', tslevel = '{4}', maxmembers = {5}, " +
                 "description = '{6}', publishdate = '{7}', technology = '{8}', functions = '{9}', requirements = '{10}', " +
                 "idcreator = '{11}', isfavorite = {12}, status = '{13}', idinstructor = '{14}' WHERE idthesis = '{1}'",
                 "Update", false);
+        }
+        public void UpdateStatus(Thesis thesis, EThesisStatus status)
+        {
+            string command = string.Format("UPDATE {0} SET status = '{1}' WHERE idthesis = '{2}'",
+                                                MyDatabase.DBThesis, status.ToString(), thesis.IdThesis);
+            SQLExecuteByCommand(command);
+        }
+        public void UpdateFavorite(Thesis thesis)
+        {
+            string command = string.Format("UPDATE {0} SET isfavorite = {1} WHERE idthesis = '{2}'",
+                                                MyDatabase.DBThesis, thesis.IsFavorite ? 1 : 0, thesis.IdThesis);
+            SQLExecuteByCommand(command);
+        }
+        public List<Thesis> SearchRoleLecture(string idAccount, string topic)
+        {
+            string command = string.Format("SELECT * FROM {0} WHERE idinstructor = '{1}' and topic LIKE '{2}%'",
+                                MyDatabase.DBThesis, idAccount, topic);
+            return SelectList(command);
+
+        }
+        public List<Thesis> SearchRoleStudent(string topic)
+        {
+            string command = string.Format("SELECT * FROM {0} WHERE status IN ('{1}', '{2}') and topic LIKE '{3}%'",
+                                    MyDatabase.DBThesis, EThesisStatus.Published.ToString(), EThesisStatus.Registered.ToString(), topic);
+            return SelectList(command);
+
         }
 
         #endregion

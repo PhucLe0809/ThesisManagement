@@ -85,25 +85,17 @@ namespace ThesisManagementProject
         }
         private void UpdateThesisListLecture()
         {
-            string command = string.Format("SELECT * FROM {0} WHERE idinstructor = '{1}'", MyDatabase.DBThesis, people.IdAccount);
-            this.currentList = thesisDAO.SelectList(command);
+            this.currentList = thesisDAO.SelectListRoleLecture(this.people.IdAccount);
             this.listThesis = currentList;
         }
         private void UpdateThesisListStudent()
         {
-            string command = string.Format("SELECT * FROM {0} WHERE status IN ('Published', 'Registered') " +
-                                           "AND NOT EXISTS(SELECT 1 FROM {1} WHERE {1}.idthesis = {0}.idthesis " +
-                                           "AND idteam IN (SELECT idteam FROM {2} WHERE idaccount = '{3}'))",
-                                           MyDatabase.DBThesis, MyDatabase.DBThesisStatus, MyDatabase.DBTeam, this.people.IdAccount);
-            this.currentList = thesisDAO.SelectList(command);
+            this.currentList = thesisDAO.SelectListRoleStudent(this.people.IdAccount);
             this.listThesis = currentList;
         }
         private void UpdateThesisListStuMyTheses()
         {
-            string command = string.Format("SELECT {0}.* FROM {0} INNER JOIN {1} ON {0}.idthesis = {1}.idthesis " +
-                                           "WHERE {1}.idteam IN (SELECT idteam FROM {2} WHERE idaccount = '{3}')",
-                                            MyDatabase.DBThesis, MyDatabase.DBThesisStatus, MyDatabase.DBTeam, this.people.IdAccount);
-            this.currentList = thesisDAO.SelectList(command);
+            this.currentList = thesisDAO.SelectListModeMyTheses(this.people.IdAccount);
             this.listThesis = currentList;
         }
         private void AllButtonStandardColor()
@@ -248,18 +240,15 @@ namespace ThesisManagementProject
 
         private List<Thesis> GetThesisListByTopic(Guna2TextBox textBox)
         {
-            string command = string.Empty;
             if (people.Role == ERole.Lecture)
             {
-                command = string.Format("SELECT * FROM {0} WHERE idinstructor = '{1}' and topic LIKE '{2}%'",
-                                    MyDatabase.DBThesis, people.IdAccount, textBox.Text);
+
+                return thesisDAO.SearchRoleLecture(this.people.IdAccount, textBox.Text);
             }
             else
             {
-                command = string.Format("SELECT * FROM {0} WHERE status IN ('{1}', '{2}') and topic LIKE '{3}%'",
-                                    MyDatabase.DBThesis, EThesisStatus.Published.ToString(), EThesisStatus.Registered.ToString(), textBox.Text);
+                return thesisDAO.SearchRoleStudent(textBox.Text);
             }
-            return thesisDAO.SelectList(command);
         }
         private void SearchThesisTopic_TextChanged(object sender, EventArgs e)
         {

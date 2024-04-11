@@ -137,8 +137,7 @@ namespace ThesisManagementProject
             }
             else
             {
-                MessageBox.Show("Cannot delete yourself",
-                                                    "OK", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                MessageBox.Show("Cannot delete yourself", "OK", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
         }
         #endregion
@@ -151,9 +150,7 @@ namespace ThesisManagementProject
 
             if (!string.IsNullOrEmpty(textBox.Text))
             {
-                string command = string.Format("SELECT * FROM {0} WHERE handle LIKE '{1}%' and role = '{2}'",
-                                    MyDatabase.DBAccount, textBox.Text, people.Role);
-                this.listPeople = peopleDAO.SelectList(command);
+                this.listPeople = peopleDAO.SelectListByUserName(textBox.Text, people.Role);
                 flpTeam.Hide();
                 LoadPeopleList();
             }
@@ -176,23 +173,13 @@ namespace ThesisManagementProject
             if (CheckEmpty(gTextBoxTeamName.Text))
             {
                 this.thesis.Status = EThesisStatus.Registered;
-                // Sửa status trong thesis thành Registered
-                string command = string.Format("UPDATE {0} SET status = '{1}' WHERE idthesis = '{2}'",
-                                                MyDatabase.DBThesis, EThesisStatus.Registered, this.thesis.IdThesis);
-                thesisDAO.SQLExecuteByCommand(command);
-                // Thêm vào ThesisStatus (idteam, idthesis, status)
+
+                thesisDAO.UpdateStatus(this.thesis, EThesisStatus.Registered);
 
                 Team team = new Team(gTextBoxTeamName.Text, myProcess.ImageToName(pictureAvatar), members);
-                command = string.Format("INSERT INTO {0} VALUES('{1}', '{2}', '{3}')",
-                                                MyDatabase.DBThesisStatus, team.IDTeam, this.thesis.IdThesis, this.thesis.Status);
-                thesisStatusDAO.SQLExecuteByCommand(command);
-                // Thêm vào team từng thành viên trong members
-                foreach (People member in team.Members)
-                {
-                    command = string.Format("INSERT INTO {0} VALUES('{1}', '{2}', '{3}', '{4}', '{5}')",
-                                                MyDatabase.DBTeam, team.IDTeam, member.IdAccount, team.TeamName, team.Created, team.AvatarName);
-                    teamDAO.SQLExecuteByCommand(command);
-                }
+                thesisStatusDAO.Insert(this.thesis, team);
+
+                teamDAO.Insert(team);
 
                 MessageBox.Show("Registered successfuly", "Notification", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                 this.gGradientButtonRegister.Enabled = false;

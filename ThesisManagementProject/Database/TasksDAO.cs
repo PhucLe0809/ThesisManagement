@@ -8,21 +8,15 @@ using ThesisManagementProject.Models;
 
 namespace ThesisManagementProject.Database
 {
-    internal class TasksDAO
+    internal class TasksDAO : DBConnection
     {
-        DBConnection DBConnection = new DBConnection();
-
         public TasksDAO() { }
-        public void SQLExecuteByCommand(string command)
-        {
-            DBConnection.SQLExecuteByCommand(command);
-        }
 
         #region SELECT TASKS
 
         public List<Tasks> SelectList(string command)
         {
-            DataTable dataTable = DBConnection.Select(command);
+            DataTable dataTable = Select(command);
 
             List<Tasks> list = new List<Tasks>();
             foreach (DataRow row in dataTable.Rows)
@@ -33,10 +27,15 @@ namespace ThesisManagementProject.Database
 
             return list;
         }
+        public List<Tasks> SelectListByTeam(string idTeam)
+        {
+            string command = string.Format("SELECT * FROM {0} WHERE idteam = '{1}' ORDER BY created DESC",
+                                            MyDatabase.DBTask, idTeam);
+            return SelectList(command);
+        }
         public Tasks SelectOnly(string idTask)
         {
-            DBConnection db = new DBConnection();
-            DataTable dt = db.Select(string.Format("SELECT * FROM {0} WHERE idtask = '{1}'", MyDatabase.DBTask, idTask));
+            DataTable dt = Select(string.Format("SELECT * FROM {0} WHERE idtask = '{1}'", MyDatabase.DBTask, idTask));
 
             if (dt.Rows.Count > 0) return GetFromDataRow(dt.Rows[0]);
             return new Tasks();
@@ -48,20 +47,32 @@ namespace ThesisManagementProject.Database
 
         public void Insert(Tasks tasks)
         {
-            DBConnection.ExecuteQueryTask(tasks, "INSERT INTO {0} VALUES ('{1}', '{2}', '{3}', '{4}', '{5}', {6}, {7}, '{8}')",
+            ExecuteQueryTask(tasks, "INSERT INTO {0} VALUES ('{1}', '{2}', '{3}', '{4}', '{5}', {6}, {7}, '{8}')",
                 "Create", true);
         }
         public void Delete(Tasks tasks)
         {
-            DBConnection.ExecuteQueryTask(tasks, "DELETE FROM {0} WHERE idtask = '{1}'",
+            ExecuteQueryTask(tasks, "DELETE FROM {0} WHERE idtask = '{1}'",
                 "Delete", false);
         }
         public void Update(Tasks tasks)
         {
-            DBConnection.ExecuteQueryTask(tasks, "UPDATE {0} SET " +
+            ExecuteQueryTask(tasks, "UPDATE {0} SET " +
                 "idtask = '{1}', title = '{2}', description = '{3}', idcreator = '{4}', idteam = '{5}', " +
                 "isfavorite = {6}, progress = {7}, created = '{8}' WHERE idtask = '{1}'",
                 "Update", false);
+        }
+        public void UpdateIsFavorite(Tasks tasks)
+        {
+            SQLExecuteByCommand(string.Format("UPDATE " + MyDatabase.DBTask + " SET isfavorite = {0} WHERE idtask = '{1}'",
+                                    (tasks.IsFavorite) ? (1) : (0), tasks.IdTask));
+        }
+        public List<Tasks> SearchTaskTitle(string idTeam, string title)
+        {
+            string command = string.Format("SELECT * FROM {0} WHERE idteam = '{1}' and title LIKE '{2}%' ORDER BY created DESC",
+                                MyDatabase.DBTask, idTeam, title);
+            return SelectList(command);
+
         }
 
         #endregion
