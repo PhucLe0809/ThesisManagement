@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ThesisManagementProject.Database;
+using ThesisManagementProject.DAOs;
 using ThesisManagementProject.Models;
 using ThesisManagementProject.Process;
 
@@ -23,6 +23,7 @@ namespace ThesisManagementProject
         private People creator = new People();
         private Team team = new Team();
         private TasksDAO tasksDAO = new TasksDAO();
+        private EvaluationDAO evaluationDAO = new EvaluationDAO();
         private bool flagCheck = false;
 
         public UCTaskCreate()
@@ -77,12 +78,13 @@ namespace ThesisManagementProject
             if (CheckInformationValid())
             {
                 tasksDAO.Insert(tasks);
+                evaluationDAO.InsertFollowTeam(tasks.IdTask, team);
                 this.flagCheck = true;
                 InitUserControl();
                 OnTasksCreateClicked(EventArgs.Empty);
             }
         }
-        public virtual void OnTasksCreateClicked(EventArgs e)
+        private void OnTasksCreateClicked(EventArgs e)
         {
             TasksCreateClicked?.Invoke(this, e);
         }

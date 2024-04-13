@@ -53,7 +53,7 @@
             gPanelBack.Location = new Point(12, 41);
             gPanelBack.Name = "gPanelBack";
             gPanelBack.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            gPanelBack.Size = new Size(1204, 776);
+            gPanelBack.Size = new Size(1303, 776);
             gPanelBack.TabIndex = 1;
             // 
             // gPanelDataView
@@ -62,7 +62,7 @@
             gPanelDataView.Location = new Point(12, 13);
             gPanelDataView.Name = "gPanelDataView";
             gPanelDataView.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            gPanelDataView.Size = new Size(1180, 750);
+            gPanelDataView.Size = new Size(1280, 750);
             gPanelDataView.TabIndex = 0;
             // 
             // gGradientButtonViewThesis
@@ -127,7 +127,7 @@
             Controls.Add(gGradientButtonViewThesis);
             Controls.Add(gGradientButtonStatistical);
             Name = "UCDashboard";
-            Size = new Size(1230, 829);
+            Size = new Size(1329, 829);
             gPanelBack.ResumeLayout(false);
             ResumeLayout(false);
         }

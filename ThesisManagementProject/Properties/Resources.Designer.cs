@@ -573,6 +573,16 @@ namespace ThesisManagementProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PicItemComplete {
+            get {
+                object obj = ResourceManager.GetObject("PicItemComplete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PicItemCopy {
             get {
                 object obj = ResourceManager.GetObject("PicItemCopy", resourceCulture);
@@ -696,6 +706,16 @@ namespace ThesisManagementProject.Properties {
         internal static System.Drawing.Bitmap PicItemMember {
             get {
                 object obj = ResourceManager.GetObject("PicItemMember", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PicItemNonComplete {
+            get {
+                object obj = ResourceManager.GetObject("PicItemNonComplete", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1106,6 +1126,26 @@ namespace ThesisManagementProject.Properties {
         internal static System.Drawing.Bitmap PictureLogOutGradient {
             get {
                 object obj = ResourceManager.GetObject("PictureLogOutGradient", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PictureNotification {
+            get {
+                object obj = ResourceManager.GetObject("PictureNotification", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PictureNotificationGradient {
+            get {
+                object obj = ResourceManager.GetObject("PictureNotificationGradient", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

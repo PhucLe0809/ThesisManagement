@@ -101,12 +101,12 @@
             gShadowPanelTopic.Controls.Add(lblTaskTitle);
             gShadowPanelTopic.Controls.Add(gTextBoxTitle);
             gShadowPanelTopic.FillColor = Color.White;
-            gShadowPanelTopic.Location = new Point(23, 23);
+            gShadowPanelTopic.Location = new Point(23, 17);
             gShadowPanelTopic.Name = "gShadowPanelTopic";
             gShadowPanelTopic.Radius = 7;
             gShadowPanelTopic.ShadowColor = Color.Black;
             gShadowPanelTopic.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            gShadowPanelTopic.Size = new Size(473, 537);
+            gShadowPanelTopic.Size = new Size(473, 551);
             gShadowPanelTopic.TabIndex = 41;
             // 
             // gButtonSave
@@ -123,7 +123,7 @@
             gButtonSave.FillColor2 = Color.FromArgb(94, 148, 255);
             gButtonSave.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             gButtonSave.ForeColor = Color.White;
-            gButtonSave.Location = new Point(323, 457);
+            gButtonSave.Location = new Point(323, 470);
             gButtonSave.Name = "gButtonSave";
             gButtonSave.ShadowDecoration.CustomizableEdges = customizableEdges2;
             gButtonSave.Size = new Size(100, 35);
@@ -143,7 +143,7 @@
             gButtonCancel.FillColor = Color.Silver;
             gButtonCancel.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             gButtonCancel.ForeColor = Color.White;
-            gButtonCancel.Location = new Point(194, 457);
+            gButtonCancel.Location = new Point(194, 470);
             gButtonCancel.Name = "gButtonCancel";
             gButtonCancel.ShadowDecoration.CustomizableEdges = customizableEdges4;
             gButtonCancel.Size = new Size(100, 35);
@@ -167,7 +167,7 @@
             gTextBoxProgress.ForeColor = Color.Black;
             gTextBoxProgress.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             gTextBoxProgress.IconLeftOffset = new Point(5, 0);
-            gTextBoxProgress.Location = new Point(345, 384);
+            gTextBoxProgress.Location = new Point(345, 397);
             gTextBoxProgress.Margin = new Padding(3, 4, 3, 4);
             gTextBoxProgress.Name = "gTextBoxProgress";
             gTextBoxProgress.PasswordChar = '\0';
@@ -186,7 +186,7 @@
             lblProgress.AutoSize = true;
             lblProgress.BackColor = Color.Transparent;
             lblProgress.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblProgress.Location = new Point(27, 388);
+            lblProgress.Location = new Point(27, 401);
             lblProgress.Name = "lblProgress";
             lblProgress.Size = new Size(104, 28);
             lblProgress.TabIndex = 64;
@@ -239,7 +239,7 @@
             // 
             gProgressBarToLine.BorderRadius = 8;
             gProgressBarToLine.CustomizableEdges = customizableEdges8;
-            gProgressBarToLine.Location = new Point(139, 393);
+            gProgressBarToLine.Location = new Point(139, 406);
             gProgressBarToLine.Name = "gProgressBarToLine";
             gProgressBarToLine.ProgressColor = Color.FromArgb(94, 148, 255);
             gProgressBarToLine.ProgressColor2 = Color.FromArgb(255, 77, 165);
@@ -332,7 +332,7 @@
             gTextBoxDescription.ReadOnly = true;
             gTextBoxDescription.SelectedText = "";
             gTextBoxDescription.ShadowDecoration.CustomizableEdges = customizableEdges15;
-            gTextBoxDescription.Size = new Size(396, 120);
+            gTextBoxDescription.Size = new Size(396, 135);
             gTextBoxDescription.TabIndex = 9;
             gTextBoxDescription.TextOffset = new Point(5, 0);
             gTextBoxDescription.TextChanged += gTextBoxDescription_TextChanged;
@@ -385,7 +385,7 @@
             gShadowPanelBack.BackColor = Color.Transparent;
             gShadowPanelBack.Controls.Add(gShadowPanelView);
             gShadowPanelBack.FillColor = Color.White;
-            gShadowPanelBack.Location = new Point(502, 54);
+            gShadowPanelBack.Location = new Point(502, 48);
             gShadowPanelBack.Name = "gShadowPanelBack";
             gShadowPanelBack.Radius = 7;
             gShadowPanelBack.ShadowColor = Color.Black;
@@ -438,7 +438,7 @@
             gGradientButtonComment.HoverState.FillColor2 = Color.FromArgb(255, 77, 165);
             gGradientButtonComment.HoverState.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             gGradientButtonComment.HoverState.ForeColor = Color.White;
-            gGradientButtonComment.Location = new Point(529, 23);
+            gGradientButtonComment.Location = new Point(529, 17);
             gGradientButtonComment.Name = "gGradientButtonComment";
             gGradientButtonComment.ShadowDecoration.CustomizableEdges = customizableEdges19;
             gGradientButtonComment.Size = new Size(117, 40);
@@ -464,7 +464,7 @@
             gGradientButtonEvaluate.HoverState.FillColor2 = Color.FromArgb(255, 77, 165);
             gGradientButtonEvaluate.HoverState.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             gGradientButtonEvaluate.HoverState.ForeColor = Color.White;
-            gGradientButtonEvaluate.Location = new Point(645, 23);
+            gGradientButtonEvaluate.Location = new Point(645, 17);
             gGradientButtonEvaluate.Name = "gGradientButtonEvaluate";
             gGradientButtonEvaluate.ShadowDecoration.CustomizableEdges = customizableEdges21;
             gGradientButtonEvaluate.Size = new Size(117, 40);

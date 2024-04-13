@@ -59,7 +59,7 @@
             gButtonAdd.HoverState.Image = (Image)resources.GetObject("resource.Image");
             gButtonAdd.Image = (Image)resources.GetObject("gButtonAdd.Image");
             gButtonAdd.ImageSize = new Size(22, 22);
-            gButtonAdd.Location = new Point(463, 10);
+            gButtonAdd.Location = new Point(576, 10);
             gButtonAdd.Name = "gButtonAdd";
             gButtonAdd.PressedColor = SystemColors.ButtonFace;
             gButtonAdd.ShadowDecoration.CustomizableEdges = customizableEdges2;
@@ -82,7 +82,7 @@
             gShadowPanelBack.ShadowColor = Color.Black;
             gShadowPanelBack.ShadowShift = 4;
             gShadowPanelBack.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            gShadowPanelBack.Size = new Size(520, 60);
+            gShadowPanelBack.Size = new Size(630, 60);
             gShadowPanelBack.TabIndex = 29;
             gShadowPanelBack.Click += gShadowPanelBack_Click;
             // 
@@ -102,7 +102,7 @@
             gTextBoxTeamMemebrs.Font = new Font("Trebuchet MS", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             gTextBoxTeamMemebrs.ForeColor = Color.White;
             gTextBoxTeamMemebrs.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            gTextBoxTeamMemebrs.Location = new Point(287, 15);
+            gTextBoxTeamMemebrs.Location = new Point(400, 15);
             gTextBoxTeamMemebrs.Margin = new Padding(4);
             gTextBoxTeamMemebrs.Name = "gTextBoxTeamMemebrs";
             gTextBoxTeamMemebrs.PasswordChar = '\0';
@@ -156,7 +156,7 @@
             BackColor = Color.White;
             Controls.Add(gShadowPanelBack);
             Name = "UCTeamMiniLine";
-            Size = new Size(520, 60);
+            Size = new Size(630, 60);
             gShadowPanelBack.ResumeLayout(false);
             gShadowPanelBack.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)gCirclePictureBoxAvatar).EndInit();

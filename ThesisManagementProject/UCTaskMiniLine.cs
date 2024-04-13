@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ThesisManagementProject.Database;
+using ThesisManagementProject.DAOs;
 using ThesisManagementProject.Forms;
 using ThesisManagementProject.Models;
 using ThesisManagementProject.Process;
@@ -21,18 +21,20 @@ namespace ThesisManagementProject
         public event EventHandler TasksDeleteClicked;
 
         private People creator = new People();
+        private People instructor = new People();
         private Team team = new Team();
         private Tasks tasks = new Tasks();
-        private People people = new People();
+        private People host = new People();
         private PeopleDAO peopleDAO = new PeopleDAO();
         private TeamDAO teamDAO = new TeamDAO();
         private TasksDAO tasksDAO = new TasksDAO();
         private bool isProcessing = false;
 
-        public UCTaskMiniLine(People people, Tasks tasks, bool isProcessing)
+        public UCTaskMiniLine(People host, People instructor, Tasks tasks, bool isProcessing)
         {
             InitializeComponent();
-            this.people = people;
+            this.host = host;
+            this.instructor = instructor;
             this.tasks = tasks;
             this.isProcessing = isProcessing;
             InitUserControl();
@@ -46,12 +48,12 @@ namespace ThesisManagementProject
             creator = peopleDAO.SelectOnlyByID(tasks.IdCreator);
             team = teamDAO.SelectOnly(tasks.IdTeam);
 
-            lblTaskTitle.Text = myProcess.FormatStringLength(tasks.Title, 45);
+            lblTaskTitle.Text = myProcess.FormatStringLength(tasks.Title, 60);
             lblCreator.Text = creator.FullName;
             gProgressBarToLine.Value = tasks.Progress;
             myProcess.SetItemFavorite(gButtonStar, tasks.IsFavorite);
 
-            if (!isProcessing || (people.Role == ERole.Student && tasks.IdCreator != people.IdAccount))
+            if (!isProcessing || (host.Role == ERole.Student && tasks.IdCreator != host.IdAccount))
             {
                 gButtonDelete.Hide();
                 lblTaskTitle.Text = myProcess.FormatStringLength(tasks.Title, 53);
@@ -59,7 +61,7 @@ namespace ThesisManagementProject
         }
         private void gShadowPanelTeam_Click(object sender, EventArgs e)
         {
-            FTaskDetails fTaskDetails = new FTaskDetails(people, tasks, creator, team, isProcessing);
+            FTaskDetails fTaskDetails = new FTaskDetails(host, instructor, tasks, creator, team, isProcessing);
             fTaskDetails.FormClosed += FTaskDetails_FormClosed;
             fTaskDetails.ShowDialog();
         }

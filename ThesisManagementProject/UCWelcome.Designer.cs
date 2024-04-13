@@ -69,7 +69,7 @@
             pnlAddUserControl.Controls.Add(gProgressBarToLine);
             pnlAddUserControl.Controls.Add(lblThesisManagement);
             pnlAddUserControl.Controls.Add(lblWelcome);
-            pnlAddUserControl.Location = new Point(15, 27);
+            pnlAddUserControl.Location = new Point(61, 27);
             pnlAddUserControl.Name = "pnlAddUserControl";
             pnlAddUserControl.Size = new Size(587, 220);
             pnlAddUserControl.TabIndex = 2;
@@ -145,7 +145,7 @@
             gShadowPanelUser.Controls.Add(gCirclePictureBoxAvatar);
             gShadowPanelUser.Controls.Add(lblViewHandle);
             gShadowPanelUser.FillColor = Color.White;
-            gShadowPanelUser.Location = new Point(618, 27);
+            gShadowPanelUser.Location = new Point(664, 27);
             gShadowPanelUser.Name = "gShadowPanelUser";
             gShadowPanelUser.Radius = 20;
             gShadowPanelUser.ShadowColor = Color.Black;
@@ -344,7 +344,7 @@
             Controls.Add(gShadowPanelUser);
             Controls.Add(pnlAddUserControl);
             Name = "UCWelcome";
-            Size = new Size(1230, 829);
+            Size = new Size(1329, 829);
             pnlAddUserControl.ResumeLayout(false);
             pnlAddUserControl.PerformLayout();
             gShadowPanelUser.ResumeLayout(false);

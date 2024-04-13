@@ -88,7 +88,7 @@
             gTextBoxDescription.PlaceholderText = "Task description";
             gTextBoxDescription.SelectedText = "";
             gTextBoxDescription.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            gTextBoxDescription.Size = new Size(492, 149);
+            gTextBoxDescription.Size = new Size(626, 163);
             gTextBoxDescription.TabIndex = 11;
             gTextBoxDescription.TextOffset = new Point(5, 0);
             gTextBoxDescription.TextChanged += gTextBoxDescription_TextChanged;
@@ -130,7 +130,7 @@
             gTextBoxTitle.PlaceholderText = "Task title";
             gTextBoxTitle.SelectedText = "";
             gTextBoxTitle.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            gTextBoxTitle.Size = new Size(492, 90);
+            gTextBoxTitle.Size = new Size(626, 90);
             gTextBoxTitle.TabIndex = 9;
             gTextBoxTitle.TextOffset = new Point(5, 0);
             gTextBoxTitle.TextChanged += gTextBoxTitle_TextChanged;
@@ -149,7 +149,7 @@
             gButtonCreate.FillColor2 = Color.FromArgb(94, 148, 255);
             gButtonCreate.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             gButtonCreate.ForeColor = Color.White;
-            gButtonCreate.Location = new Point(408, 371);
+            gButtonCreate.Location = new Point(506, 373);
             gButtonCreate.Name = "gButtonCreate";
             gButtonCreate.ShadowDecoration.CustomizableEdges = customizableEdges6;
             gButtonCreate.Size = new Size(100, 35);
@@ -169,7 +169,7 @@
             gButtonCancel.FillColor = Color.Silver;
             gButtonCancel.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             gButtonCancel.ForeColor = Color.White;
-            gButtonCancel.Location = new Point(279, 371);
+            gButtonCancel.Location = new Point(377, 373);
             gButtonCancel.Name = "gButtonCancel";
             gButtonCancel.ShadowDecoration.CustomizableEdges = customizableEdges8;
             gButtonCancel.Size = new Size(100, 35);
@@ -198,7 +198,7 @@
             Controls.Add(lblTaskTitle);
             Controls.Add(gTextBoxTitle);
             Name = "UCTaskCreate";
-            Size = new Size(550, 458);
+            Size = new Size(660, 458);
             ((System.ComponentModel.ISupportInitialize)erpTitle).EndInit();
             ((System.ComponentModel.ISupportInitialize)erpDescription).EndInit();
             ResumeLayout(false);

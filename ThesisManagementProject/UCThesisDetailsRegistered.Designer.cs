@@ -48,7 +48,7 @@
             // 
             gSeparatorTopic.Location = new Point(25, 61);
             gSeparatorTopic.Name = "gSeparatorTopic";
-            gSeparatorTopic.Size = new Size(555, 12);
+            gSeparatorTopic.Size = new Size(662, 12);
             gSeparatorTopic.TabIndex = 51;
             // 
             // flpTeamRegistered
@@ -56,10 +56,10 @@
             flpTeamRegistered.AutoScroll = true;
             flpTeamRegistered.Location = new Point(25, 79);
             flpTeamRegistered.Name = "flpTeamRegistered";
-            flpTeamRegistered.Size = new Size(555, 395);
+            flpTeamRegistered.Size = new Size(662, 395);
             flpTeamRegistered.TabIndex = 52;
             // 
-            // UCThesisSolveRegistered
+            // UCThesisDetailsRegistered
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -67,8 +67,9 @@
             Controls.Add(flpTeamRegistered);
             Controls.Add(gSeparatorTopic);
             Controls.Add(lblRegisteredList);
-            Name = "UCThesisSolveRegistered";
-            Size = new Size(608, 635);
+            DoubleBuffered = true;
+            Name = "UCThesisDetailsRegistered";
+            Size = new Size(715, 635);
             ResumeLayout(false);
             PerformLayout();
         }

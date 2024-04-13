@@ -25,6 +25,8 @@ namespace ThesisManagementProject.Process
         Team = 55,
         Task = 66,
         Comment = 77,
+        Evaluation = 88,
+        Notification = 99,
     }
 
     #endregion
@@ -123,11 +125,10 @@ namespace ThesisManagementProject.Process
 
         #region FUNCTIONS GenIDbyClassify
 
-        private int GetLastestID(string field, string command)
+        private int GetLastestID(string command)
         {
             DataTable dataTable = dBConnection.Select(command);
-            int ind = dataTable.Rows.Count;
-            string str = dataTable.Rows[ind - 1][field].ToString();
+            string str = dataTable.Rows[0]["MaxID"].ToString();
             return Convert.ToInt32(str.Substring(str.Length - 5));
         }
         public string GenIDClassify(EClassify eClassify)
@@ -139,22 +140,28 @@ namespace ThesisManagementProject.Process
             switch (eClassify)
             {
                 case EClassify.Lecture:
-                    cntAccount = GetLastestID("idaccount", string.Format("SELECT * FROM {0} WHERE role = '{1}'", MyDatabase.DBAccount, EClassify.Lecture.ToString()));
+                    cntAccount = GetLastestID(string.Format("SELECT max(idaccount) as MaxID FROM {0} WHERE role = '{1}'", MyDatabase.DBAccount, EClassify.Lecture.ToString()));
                     break;
                 case EClassify.Student:
-                    cntAccount = GetLastestID("idaccount", string.Format("SELECT * FROM {0} WHERE role = '{1}'", MyDatabase.DBAccount, EClassify.Student.ToString()));
+                    cntAccount = GetLastestID(string.Format("SELECT max(idaccount) as MaxID FROM {0} WHERE role = '{1}'", MyDatabase.DBAccount, EClassify.Student.ToString()));
                     break;
                 case EClassify.Team:
-                    cntAccount = GetLastestID("idteam", string.Format("SELECT * FROM {0}", MyDatabase.DBTeam));
+                    cntAccount = GetLastestID(string.Format("SELECT max(idteam) as MaxID FROM {0}", MyDatabase.DBTeam));
                     break;
                 case EClassify.Thesis:
-                    cntAccount = GetLastestID("idthesis", string.Format("SELECT * FROM {0}", MyDatabase.DBThesis));
+                    cntAccount = GetLastestID(string.Format("SELECT max(idthesis) as MaxID FROM {0}", MyDatabase.DBThesis));
                     break;
                 case EClassify.Task:
-                    cntAccount = GetLastestID("idtask", string.Format("SELECT * FROM {0}", MyDatabase.DBTask));
+                    cntAccount = GetLastestID(string.Format("SELECT max(idtask) as MaxID FROM {0}", MyDatabase.DBTask));
                     break;
                 case EClassify.Comment:
-                    cntAccount = GetLastestID("idcomment", string.Format("SELECT * FROM {0}", MyDatabase.DBComment));
+                    cntAccount = GetLastestID(string.Format("SELECT max(idcomment) as MaxID FROM {0}", MyDatabase.DBComment));
+                    break;
+                case EClassify.Evaluation:
+                    cntAccount = GetLastestID(string.Format("SELECT max(idevaluation) as MaxID FROM {0}", MyDatabase.DBEvaluation));
+                    break;
+                case EClassify.Notification:
+                    cntAccount = GetLastestID(string.Format("SELECT max(idnotification) as MaxID FROM {0}", MyDatabase.DBNotification));
                     break;
             }
             cntAccount++;
@@ -172,7 +179,7 @@ namespace ThesisManagementProject.Process
 
         #endregion
 
-        #region FUNCTIONS with STRING and INT32T
+        #region FUNCTIONS with STRING and INT32T FLOAT
 
         public int ConvertStringToInt32(string input)
         {
@@ -189,6 +196,29 @@ namespace ThesisManagementProject.Process
             catch (OverflowException)
             {
                 MessageBox.Show("The input string is too long or exceeds the limit of a 32-bit integer.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+        }
+        public float ConvertStringToFloat(string input)
+        {
+            try
+            {
+                float number = float.Parse(input);
+                return number;
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("The input string is not a valid float.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+            catch (OverflowException)
+            {
+                MessageBox.Show("The input string is too long or exceeds the limit of a float number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return 0;
             }
             catch (Exception ex)
@@ -354,7 +384,7 @@ namespace ThesisManagementProject.Process
 
         #endregion
 
-        #region FUNCTIONS SET BUTTON COLOR as CARD
+        #region FUNCTIONS SET GUNA2 BUTTON
 
         public void ButtonStandardColor(Guna2GradientButton button)
         {
@@ -376,6 +406,29 @@ namespace ThesisManagementProject.Process
             button.FillColor2 = Color.FromArgb(255, 77, 165);
             button.ForeColor = Color.White;
             button.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+        }
+        public void ButtonStandardColor(Guna2Button button)
+        {
+            button.FillColor = Color.Transparent;
+            button.ForeColor = Color.White;
+            button.Font = new System.Drawing.Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+        }
+        public void ButtonSettingColor(Guna2Button button)
+        {
+            button.FillColor = Color.White;
+            button.ForeColor = Color.Black;
+            button.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, FontStyle.Bold);
+        }
+        public void AllButtonStandardColor(List<Guna2Button> listButton, List<Image> listImage)
+        {
+            if (listButton.Count != listImage.Count) return;
+
+            for (int i = 0; i < listButton.Count; i++)
+            {
+                Guna2Button button = listButton[i];
+                ButtonStandardColor(button);
+                button.CustomImages.Image = listImage[i];
+            }
         }
 
         #endregion

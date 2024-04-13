@@ -42,7 +42,7 @@
             gPanelEdit.Location = new Point(0, 0);
             gPanelEdit.Name = "gPanelEdit";
             gPanelEdit.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            gPanelEdit.Size = new Size(1180, 750);
+            gPanelEdit.Size = new Size(1280, 750);
             gPanelEdit.TabIndex = 0;
             // 
             // FThesisEdit
@@ -50,7 +50,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonFace;
-            ClientSize = new Size(1182, 768);
+            ClientSize = new Size(1282, 768);
             Controls.Add(gPanelEdit);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;

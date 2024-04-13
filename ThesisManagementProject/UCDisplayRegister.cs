@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ThesisManagementProject.DAOs;
 using ThesisManagementProject.Database;
 using ThesisManagementProject.Models;
 using ThesisManagementProject.Process;
@@ -18,7 +19,9 @@ namespace ThesisManagementProject
     public partial class UCDisplayRegister : UserControl
     {
         private MyProcess myProcess = new MyProcess();
+
         private People people = new People();
+        private PeopleDAO peopleDAO = new PeopleDAO();
         private bool flagCheck = false;
 
         private Image pictureAvatar = Properties.Resources.PicAvatarDemoUser;
@@ -26,9 +29,7 @@ namespace ThesisManagementProject
         public UCDisplayRegister()
         {
             InitializeComponent();
-
-            InitAvatarList();
-            gButtonLoadLogin.Hide();
+            SetUpUserControl();
         }
 
         #region PROPERTIES
@@ -50,6 +51,12 @@ namespace ThesisManagementProject
 
         #region FUNCTIONS
 
+        private void SetUpUserControl()
+        {
+            myProcess.AddEnumsToComboBox(gComboBoxGender, typeof(EGender));
+            gButtonLoadLogin.Hide();
+            InitAvatarList();
+        }
         private void InitAvatarList()
         {
             flpAvatarList.Controls.Clear();
@@ -78,6 +85,7 @@ namespace ThesisManagementProject
             gTextBoxPassword.Text = string.Empty;
             gTextBoxConfirmPassword.Text = string.Empty;
             gTextBoxWorkcode.Text = string.Empty;
+            gCirclePictureBoxAvatar.Image = Properties.Resources.PicAvatarDemoUser;
         }
         public void RunCheckInformation()
         {
@@ -108,15 +116,6 @@ namespace ThesisManagementProject
             pictureBox.Click += PictureBoxAvatar_Clicked;
 
             return pictureBox;
-        }
-
-        #endregion
-
-        #region EVENT FORM
-
-        private void UCDisplayRegister_Load(object sender, EventArgs e)
-        {
-            myProcess.AddEnumsToComboBox(gComboBoxGender, typeof(EGender));
         }
 
         #endregion
@@ -163,10 +162,7 @@ namespace ThesisManagementProject
             this.flagCheck = false;
             if (CheckInformationValid())
             {
-                DBConnection execute = new DBConnection();
-                execute.ExecuteQueryPeople(this.people,
-                    "INSERT INTO {0} VALUES ('{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}'," +
-                    " '{10}', '{11}', '{12}', '{13}', '{14}')", "Register", false);
+                peopleDAO.Insert(this.people);
                 this.flagCheck = true;
                 gButtonLoadLogin.PerformClick();
             }

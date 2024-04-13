@@ -17,10 +17,6 @@ namespace ThesisManagementProject
         private MyProcess myProcess = new MyProcess();
         private People people = new People();
 
-        public FPeopleDetails()
-        {
-            InitializeComponent();
-        }
         public FPeopleDetails(People people)
         {
             InitializeComponent();

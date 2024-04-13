@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ThesisManagementProject.Models;
 using ThesisManagementProject.Process;
-using ThesisManagementProject.Properties;
 
 namespace ThesisManagementProject
 {
@@ -22,11 +21,6 @@ namespace ThesisManagementProject
         {
             InitializeComponent();
             InitUserControl();
-        }
-        public UCAccount(People people)
-        {
-            InitializeComponent();
-            SetInformation(people);
         }
 
         #region FUNCTIONS FORM
@@ -52,12 +46,7 @@ namespace ThesisManagementProject
             gTextBoxWorkcode.Text = people.WorkCode;
 
             gPanelEditInfor.Enabled = false;
-            gPictureBoxGender.BackColor = Color.Gainsboro;
-
-            for (int i = 0; i < 10; i++)
-            {
-                flpTheses.Controls.Add(new UCThesisMiniLine());
-            }
+            gPictureBoxGender.BackColor = Color.Gainsboro;           
         }
 
         #endregion
@@ -69,12 +58,10 @@ namespace ThesisManagementProject
             gPanelEditInfor.Enabled = true;
             gPictureBoxGender.BackColor = Color.White;
         }
-
         private void gCirclePictureBoxAvatar_MouseEnter(object sender, EventArgs e)
         {
             gCirclePictureBoxAvatar.Image = Properties.Resources.PictureCameraHover;
         }
-
         private void gCirclePictureBoxAvatar_MouseLeave(object sender, EventArgs e)
         {
             gCirclePictureBoxAvatar.Image = myProcess.NameToImage(people.AvatarName);

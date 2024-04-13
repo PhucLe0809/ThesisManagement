@@ -18,10 +18,6 @@ namespace ThesisManagementProject
     {
         private UCThesisCreate uCThesisCreate = new UCThesisCreate();
 
-        public FThesisEdit()
-        {
-            InitializeComponent();
-        }
         public FThesisEdit(People people, Thesis thesis)
         {
             InitializeComponent();
@@ -40,6 +36,5 @@ namespace ThesisManagementProject
         {
             this.Close();
         }
-
     }
 }

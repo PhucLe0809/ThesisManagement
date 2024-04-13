@@ -31,18 +31,6 @@
     <Compile Update="UCDashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UCDiscussionResource.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="UCDiscussionStatistical.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="UCDiscussionView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="UCDiscussionMessage.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Update="UCDisplayLecture.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -55,19 +43,13 @@
     <Compile Update="UCDisplayWelcome.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UCIndividualLine.cs">
+    <Compile Update="UCDashboardStatistical.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UCIndividualList.cs">
+    <Compile Update="UCNotification.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UCStudentItemAdd.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="UCStudents.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="UCStudentStatistical.cs">
+    <Compile Update="UCNotificationLine.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UCTaskComment.cs">
@@ -76,7 +58,10 @@
     <Compile Update="UCTaskCreate.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UCTaskEvaluate.cs">
+    <Compile Update="UCTaskEvaluateDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCTaskEvaluateList.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UCTaskMiniLine.cs">
@@ -131,12 +116,6 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UCAccount.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="UCDiscussion.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="UCDiscussionLine.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UCWelcome.cs">

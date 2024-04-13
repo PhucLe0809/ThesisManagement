@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ThesisManagementProject.Database;
+using ThesisManagementProject.DAOs;
 using ThesisManagementProject.Models;
 using ThesisManagementProject.Process;
 
@@ -15,7 +15,6 @@ namespace ThesisManagementProject
 {
     public partial class FDisplayMain : Form
     {
-        private MyProcess myProcess = new MyProcess();
         private PeopleDAO peopleDAO = new PeopleDAO();
         UCDisplayLecture uCDisplayLecture = new UCDisplayLecture();
         UCDisplayStudent uCDisplayStudent = new UCDisplayStudent();

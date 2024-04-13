@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
+using ThesisManagementProject.DAOs;
 using ThesisManagementProject.Database;
 using ThesisManagementProject.Models;
 using ThesisManagementProject.Process;
@@ -18,8 +20,13 @@ namespace ThesisManagementProject
         private MyProcess myProcess = new MyProcess();
 
         private People people = new People();
+        private People instructor = new People();
         private Tasks tasks = new Tasks();
+        private Team team = new Team();
+        private Comment comment = new Comment();
+        private TeamDAO teamDAO = new TeamDAO();
         private CommentDAO commentDAO = new CommentDAO();
+        private NotificationDAO notificationDAO = new NotificationDAO();
         private bool isProcessing = true;
 
         public UCTaskComment()
@@ -29,14 +36,16 @@ namespace ThesisManagementProject
 
         #region FUNCTIONS
 
-        public void SetInformation(People people, Tasks tasks, bool isProcessing)
+        public void SetUpUserControl(People people, People instructor, Tasks tasks, bool isProcessing)
         {
             this.people = people;
             this.tasks = tasks;
+            this.instructor = instructor;
             this.isProcessing = isProcessing;
-            SetUpUserControl();
+            this.team = teamDAO.SelectOnly(tasks.IdTeam);
+            InitUserControl();
         }
-        private void SetUpUserControl()
+        private void InitUserControl()
         {
             gCirclePictureBoxCommentator.Image = myProcess.NameToImage(people.AvatarName);
             if (!isProcessing)
@@ -52,9 +61,7 @@ namespace ThesisManagementProject
         }
         private void LoadTaskComment()
         {
-            string command = string.Format("SELECT * FROM {0} WHERE idtask = '{1}' ORDER BY created",
-                                            MyDatabase.DBComment, tasks.IdTask);
-            List<Comment> listComment = commentDAO.SelectList(command);
+            List<Comment> listComment = commentDAO.SelectList(this.tasks);
 
             flpComment.Controls.Clear();
             UCCommentLine line = new UCCommentLine();
@@ -74,13 +81,32 @@ namespace ThesisManagementProject
         {
             if (gTextBoxComment.Text != string.Empty)
             {
-                Comment comment = new Comment(tasks.IdTask, people.IdAccount, gTextBoxComment.Text, "EmojiLike", DateTime.Now);
+                this.comment = new Comment(tasks.IdTask, people.IdAccount, gTextBoxComment.Text, "EmojiLike", DateTime.Now);
                 UCCommentLine line = new UCCommentLine(comment);
                 flpComment.Controls.Add(line);
                 flpComment.ScrollControlIntoView(line);
                 commentDAO.Insert(comment);
+                SendNotification();
                 gTextBoxComment.Clear();
             }
+        }
+        private void SendNotification()
+        {
+            string content = string.Format("{0} commented [{1}] in [{2}] task", people.FullName, comment.Content, tasks.Title);
+            if (instructor.IdAccount != people.IdAccount)
+            {
+                notificationDAO.Insert(new Notification(instructor.IdAccount, people.IdAccount, comment.IdComment, content, DateTime.Now, false, false));
+            }
+
+            foreach (People member in team.Members)
+            {
+                if (member.IdAccount != people.IdAccount)
+                {
+                    notificationDAO.Insert(new Notification(member.IdAccount, people.IdAccount, comment.IdComment, content, DateTime.Now, false, false));
+                }
+
+            }
+
         }
         private void gButtonSend_Click(object sender, EventArgs e)
         {

@@ -3,16 +3,16 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ThesisManagementProject.Database;
+using ThesisManagementProject.DAOs;
 using ThesisManagementProject.Forms;
 using ThesisManagementProject.Models;
 using ThesisManagementProject.Process;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ThesisManagementProject
 {
@@ -21,8 +21,9 @@ namespace ThesisManagementProject
         private MyProcess myProcess = new MyProcess();
 
         private Thesis thesis = new Thesis();
-        private People people = new People();
+        private People host = new People();
         private Team team = new Team();
+        private People instructor = new People();
         private ThesisDAO thesisDAO = new ThesisDAO();
         private PeopleDAO peopleDAO = new PeopleDAO();
         private TeamDAO teamDAO = new TeamDAO();
@@ -30,16 +31,18 @@ namespace ThesisManagementProject
         private bool flagWaiting = false;
         private List<Team> listTeam = new List<Team>();
 
-        private UCThesisLine thesisLine = new UCThesisLine();
-        private UCThesisDetailsTeam showTeam = new UCThesisDetailsTeam();
+        private UCThesisDetailsTeam showTeam = new UCThesisDetailsTeam();        
         private UCThesisDetailsRegistered uCThesisDetailsRegistered = new UCThesisDetailsRegistered();
-        private UCThesisDetailsCreatedTeam uCThesisDetailsCreatedTeam;
+        private UCThesisDetailsCreatedTeam uCThesisDetailsCreatedTeam = new UCThesisDetailsCreatedTeam();
         private UCThesisDetailsTasks uCThesisDetailsTasks = new UCThesisDetailsTasks();
+        private UCThesisDetailsStatistical uCThesisDetailsStatistical = new UCThesisDetailsStatistical();
+
+        private bool flagEdited = false;
+        private bool flagDeleted = false;
 
         public UCThesisDetails()
         {
             InitializeComponent();
-
         }
 
         #region PROPERTIES
@@ -47,6 +50,18 @@ namespace ThesisManagementProject
         public bool FlagWaiting
         {
             set { this.flagWaiting = value; }
+        }
+        public bool ThesisEdited
+        {
+            get { return this.flagEdited; }
+        }
+        public bool ThesisDeleted
+        {
+            get { return this.flagDeleted; }
+        }
+        public Thesis GetThesis
+        {
+            get { return this.thesis; }
         }
         public Guna2Button GButtonBack
         {
@@ -57,15 +72,16 @@ namespace ThesisManagementProject
 
         #region FUNCTIONS
 
-        public void SetInformation(UCThesisLine thesisLine, Thesis thesis, People people)
+        public void SetInformation(Thesis thesis, People host)
         {
             this.thesis = thesis;
-            this.people = people;
-            this.thesisLine = thesisLine;
+            this.host = host;
+            this.instructor = peopleDAO.SelectOnlyByID(thesis.IdInstructor);
             InitUserControl();
         }
         private void InitUserControl()
         {
+            this.flagEdited = false;
             gShadowPanelTeam.Controls.Add(showTeam);
             ResetUserControl();
             SetControlsReadOnly(true);
@@ -118,7 +134,7 @@ namespace ThesisManagementProject
             SetTeamMode(flagShow);
             SetViewButtonMode(flagShow);
 
-            if (people.Role == ERole.Student && !flagShow)
+            if (host.Role == ERole.Student && !flagShow)
             {
                 SetStudentRegister();
             }
@@ -159,7 +175,7 @@ namespace ThesisManagementProject
         }
         private void SetButtonEditOrDetails()
         {
-            if (people.Role == ERole.Student || thesis.Status == EThesisStatus.Completed)
+            if (host.Role == ERole.Student || thesis.Status == EThesisStatus.Completed)
             {
                 gButtonEdit.Hide();
             }
@@ -188,7 +204,7 @@ namespace ThesisManagementProject
         {
             HideAllButtonMode();
 
-            uCThesisDetailsCreatedTeam = new UCThesisDetailsCreatedTeam(this.people, this.thesis);
+            uCThesisDetailsCreatedTeam = new UCThesisDetailsCreatedTeam(this.host, this.thesis);
             uCThesisDetailsCreatedTeam.GPerform.Click += GPerformState_Click;
             gPanelDataView.Controls.Clear();
             gPanelDataView.Controls.Add(uCThesisDetailsCreatedTeam);
@@ -203,6 +219,7 @@ namespace ThesisManagementProject
         {
             myProcess.ButtonStandardColor(gGradientButtonRegistered, Color.White, Color.White);
             myProcess.ButtonStandardColor(gGradientButtonTasks, Color.White, Color.White);
+            myProcess.ButtonStandardColor(gGradientButtonStatistical, Color.White, Color.White);
         }
 
         #endregion
@@ -214,7 +231,8 @@ namespace ThesisManagementProject
             FThesisEdit fThesisView = new FThesisEdit(peopleDAO.SelectOnlyByID(thesis.IdCreator), thesis);
             fThesisView.ShowDialog();
             ResetThesisInfor();
-            this.thesisLine.SetInformation(this.thesis);
+            this.flagEdited = true;
+            this.thesis = thesisDAO.SelectOnly(thesis.IdThesis);
         }
 
         #endregion
@@ -235,9 +253,21 @@ namespace ThesisManagementProject
         {
             AllButtonStandardColor();
             myProcess.ButtonSettingColor(gGradientButtonTasks);
-            uCThesisDetailsTasks.SetUpUserControl(people, team, thesis.Status == EThesisStatus.Processing);
+            uCThesisDetailsTasks.SetUpUserControl(host, instructor, team, thesis.Status == EThesisStatus.Processing);
             gPanelDataView.Controls.Clear();
             gPanelDataView.Controls.Add(uCThesisDetailsTasks);
+        }
+
+        #endregion
+
+        #region EVENT gGradientButtonStatistical
+
+        private void gGradientButtonStatistical_Click(object sender, EventArgs e)
+        {
+            AllButtonStandardColor();
+            myProcess.ButtonSettingColor(gGradientButtonStatistical);
+            gPanelDataView.Controls.Clear();
+            gPanelDataView.Controls.Add(uCThesisDetailsStatistical);
         }
 
         #endregion
@@ -273,6 +303,7 @@ namespace ThesisManagementProject
                                                         "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (result == DialogResult.OK)
                 {
+                    this.flagEdited = true;
                     this.thesis.Status = EThesisStatus.Processing;
                     teamDAO.Delete(this.listTeam, this.thesis.IdThesis);
                     thesisStatusDAO.Insert(this.thesis, team);
@@ -296,6 +327,10 @@ namespace ThesisManagementProject
             gTextBoxState.Text = "You have successfully registered !";
             gPanelDataView.Controls.Add(gPictureBoxState);
             gPanelDataView.Controls.Add(gTextBoxState);
+            this.flagDeleted = true;
+            this.thesis = thesisDAO.SelectOnly(thesis.IdThesis);
+            gTextBoxStatus.Text = thesis.Status.ToString();
+            gTextBoxStatus.FillColor = thesis.GetStatusColor();
         }
 
         #endregion

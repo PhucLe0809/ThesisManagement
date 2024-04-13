@@ -29,9 +29,11 @@
         private void InitializeComponent()
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lblThesisTopic = new Label();
-            gCircleButtonLevel = new Guna.UI2.WinForms.Guna2CircleButton();
             gShadowPanelBack = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            gTextBoxStatus = new Guna.UI2.WinForms.Guna2TextBox();
+            gShadowPanelBack.SuspendLayout();
             SuspendLayout();
             // 
             // lblThesisTopic
@@ -45,26 +47,10 @@
             lblThesisTopic.TabIndex = 14;
             lblThesisTopic.Text = "Thesis topic";
             // 
-            // gCircleButtonLevel
-            // 
-            gCircleButtonLevel.BackColor = Color.White;
-            gCircleButtonLevel.DisabledState.BorderColor = Color.DarkGray;
-            gCircleButtonLevel.DisabledState.CustomBorderColor = Color.DarkGray;
-            gCircleButtonLevel.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            gCircleButtonLevel.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            gCircleButtonLevel.FillColor = Color.Silver;
-            gCircleButtonLevel.Font = new Font("Segoe UI", 9F);
-            gCircleButtonLevel.ForeColor = Color.White;
-            gCircleButtonLevel.Location = new Point(213, 10);
-            gCircleButtonLevel.Name = "gCircleButtonLevel";
-            gCircleButtonLevel.ShadowDecoration.CustomizableEdges = customizableEdges1;
-            gCircleButtonLevel.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            gCircleButtonLevel.Size = new Size(25, 25);
-            gCircleButtonLevel.TabIndex = 15;
-            // 
             // gShadowPanelBack
             // 
             gShadowPanelBack.BackColor = Color.Transparent;
+            gShadowPanelBack.Controls.Add(gTextBoxStatus);
             gShadowPanelBack.FillColor = Color.White;
             gShadowPanelBack.Location = new Point(0, 0);
             gShadowPanelBack.Name = "gShadowPanelBack";
@@ -72,27 +58,56 @@
             gShadowPanelBack.ShadowColor = Color.Black;
             gShadowPanelBack.ShadowShift = 3;
             gShadowPanelBack.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            gShadowPanelBack.Size = new Size(255, 50);
+            gShadowPanelBack.Size = new Size(345, 50);
             gShadowPanelBack.TabIndex = 16;
+            gShadowPanelBack.Click += UCThesisMiniLine_Click;
+            // 
+            // gTextBoxStatus
+            // 
+            gTextBoxStatus.BackColor = Color.Transparent;
+            gTextBoxStatus.BorderRadius = 10;
+            gTextBoxStatus.BorderThickness = 0;
+            gTextBoxStatus.CustomizableEdges = customizableEdges1;
+            gTextBoxStatus.DefaultText = "Published";
+            gTextBoxStatus.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            gTextBoxStatus.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            gTextBoxStatus.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            gTextBoxStatus.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            gTextBoxStatus.FillColor = Color.Gray;
+            gTextBoxStatus.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            gTextBoxStatus.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gTextBoxStatus.ForeColor = Color.White;
+            gTextBoxStatus.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            gTextBoxStatus.Location = new Point(218, 10);
+            gTextBoxStatus.Margin = new Padding(3, 4, 3, 4);
+            gTextBoxStatus.Name = "gTextBoxStatus";
+            gTextBoxStatus.PasswordChar = '\0';
+            gTextBoxStatus.PlaceholderText = "";
+            gTextBoxStatus.ReadOnly = true;
+            gTextBoxStatus.SelectedText = "";
+            gTextBoxStatus.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            gTextBoxStatus.Size = new Size(110, 25);
+            gTextBoxStatus.TabIndex = 60;
+            gTextBoxStatus.TextAlign = HorizontalAlignment.Center;
             // 
             // UCThesisMiniLine
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonFace;
-            Controls.Add(gCircleButtonLevel);
             Controls.Add(lblThesisTopic);
             Controls.Add(gShadowPanelBack);
             Name = "UCThesisMiniLine";
-            Size = new Size(255, 50);
+            Size = new Size(350, 50);
             Click += UCThesisMiniLine_Click;
+            gShadowPanelBack.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
         private Label lblThesisTopic;
-        private Guna.UI2.WinForms.Guna2CircleButton gCircleButtonLevel;
         private Guna.UI2.WinForms.Guna2ShadowPanel gShadowPanelBack;
+        private Guna.UI2.WinForms.Guna2TextBox gTextBoxStatus;
     }
 }

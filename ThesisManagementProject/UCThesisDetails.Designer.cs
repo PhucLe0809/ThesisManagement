@@ -112,7 +112,7 @@
             gButtonBack.HoverState.Image = (Image)resources.GetObject("resource.Image");
             gButtonBack.Image = (Image)resources.GetObject("gButtonBack.Image");
             gButtonBack.ImageSize = new Size(23, 23);
-            gButtonBack.Location = new Point(39, 21);
+            gButtonBack.Location = new Point(39, 22);
             gButtonBack.Name = "gButtonBack";
             gButtonBack.PressedColor = Color.Transparent;
             gButtonBack.ShadowDecoration.CustomizableEdges = customizableEdges2;
@@ -184,7 +184,7 @@
             gShadowPanelTopic.Controls.Add(lblThesisTopic);
             gShadowPanelTopic.Controls.Add(gTextBoxTopic);
             gShadowPanelTopic.FillColor = Color.White;
-            gShadowPanelTopic.Location = new Point(24, 191);
+            gShadowPanelTopic.Location = new Point(19, 191);
             gShadowPanelTopic.Name = "gShadowPanelTopic";
             gShadowPanelTopic.Radius = 7;
             gShadowPanelTopic.ShadowColor = Color.Black;
@@ -467,12 +467,12 @@
             gShadowPanelBack.BackColor = Color.Transparent;
             gShadowPanelBack.Controls.Add(gPanelDataView);
             gShadowPanelBack.FillColor = Color.White;
-            gShadowPanelBack.Location = new Point(525, 68);
+            gShadowPanelBack.Location = new Point(520, 68);
             gShadowPanelBack.Name = "gShadowPanelBack";
             gShadowPanelBack.Radius = 7;
             gShadowPanelBack.ShadowColor = Color.Black;
             gShadowPanelBack.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            gShadowPanelBack.Size = new Size(635, 660);
+            gShadowPanelBack.Size = new Size(745, 660);
             gShadowPanelBack.TabIndex = 41;
             // 
             // gPanelDataView
@@ -483,7 +483,7 @@
             gPanelDataView.Location = new Point(10, 10);
             gPanelDataView.Name = "gPanelDataView";
             gPanelDataView.ShadowDecoration.CustomizableEdges = customizableEdges26;
-            gPanelDataView.Size = new Size(608, 635);
+            gPanelDataView.Size = new Size(715, 635);
             gPanelDataView.TabIndex = 1;
             // 
             // gTextBoxState
@@ -500,7 +500,7 @@
             gTextBoxState.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             gTextBoxState.ForeColor = Color.FromArgb(0, 192, 192);
             gTextBoxState.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            gTextBoxState.Location = new Point(77, 267);
+            gTextBoxState.Location = new Point(136, 267);
             gTextBoxState.Margin = new Padding(5, 6, 5, 6);
             gTextBoxState.Name = "gTextBoxState";
             gTextBoxState.PasswordChar = '\0';
@@ -517,7 +517,7 @@
             gPictureBoxState.CustomizableEdges = customizableEdges23;
             gPictureBoxState.Image = Properties.Resources.GiftWaiting;
             gPictureBoxState.ImageRotate = 0F;
-            gPictureBoxState.Location = new Point(199, 54);
+            gPictureBoxState.Location = new Point(262, 54);
             gPictureBoxState.Name = "gPictureBoxState";
             gPictureBoxState.ShadowDecoration.CustomizableEdges = customizableEdges24;
             gPictureBoxState.Size = new Size(210, 210);
@@ -543,7 +543,7 @@
             gGradientButtonRegistered.HoverState.FillColor2 = Color.FromArgb(255, 77, 165);
             gGradientButtonRegistered.HoverState.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             gGradientButtonRegistered.HoverState.ForeColor = Color.White;
-            gGradientButtonRegistered.Location = new Point(1003, 37);
+            gGradientButtonRegistered.Location = new Point(1096, 37);
             gGradientButtonRegistered.Name = "gGradientButtonRegistered";
             gGradientButtonRegistered.ShadowDecoration.CustomizableEdges = customizableEdges28;
             gGradientButtonRegistered.Size = new Size(117, 40);
@@ -557,7 +557,7 @@
             gShadowPanelTeam.Controls.Add(lblThere);
             gShadowPanelTeam.Controls.Add(ptbEmptyState);
             gShadowPanelTeam.FillColor = Color.White;
-            gShadowPanelTeam.Location = new Point(24, 68);
+            gShadowPanelTeam.Location = new Point(19, 68);
             gShadowPanelTeam.Name = "gShadowPanelTeam";
             gShadowPanelTeam.Radius = 7;
             gShadowPanelTeam.ShadowColor = Color.Black;
@@ -605,7 +605,7 @@
             gGradientButtonTasks.HoverState.FillColor2 = Color.FromArgb(255, 77, 165);
             gGradientButtonTasks.HoverState.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             gGradientButtonTasks.HoverState.ForeColor = Color.White;
-            gGradientButtonTasks.Location = new Point(555, 37);
+            gGradientButtonTasks.Location = new Point(560, 36);
             gGradientButtonTasks.Name = "gGradientButtonTasks";
             gGradientButtonTasks.ShadowDecoration.CustomizableEdges = customizableEdges30;
             gGradientButtonTasks.Size = new Size(117, 40);
@@ -631,12 +631,13 @@
             gGradientButtonStatistical.HoverState.FillColor2 = Color.FromArgb(255, 77, 165);
             gGradientButtonStatistical.HoverState.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             gGradientButtonStatistical.HoverState.ForeColor = Color.White;
-            gGradientButtonStatistical.Location = new Point(671, 37);
+            gGradientButtonStatistical.Location = new Point(677, 37);
             gGradientButtonStatistical.Name = "gGradientButtonStatistical";
             gGradientButtonStatistical.ShadowDecoration.CustomizableEdges = customizableEdges32;
             gGradientButtonStatistical.Size = new Size(117, 40);
             gGradientButtonStatistical.TabIndex = 44;
             gGradientButtonStatistical.Text = "Statistical";
+            gGradientButtonStatistical.Click += gGradientButtonStatistical_Click;
             // 
             // UCThesisDetails
             // 
@@ -651,7 +652,7 @@
             Controls.Add(gGradientButtonTasks);
             Controls.Add(gGradientButtonStatistical);
             Name = "UCThesisDetails";
-            Size = new Size(1180, 750);
+            Size = new Size(1280, 750);
             gShadowPanelTopic.ResumeLayout(false);
             gShadowPanelTopic.PerformLayout();
             gShadowPanelBack.ResumeLayout(false);

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ThesisManagementProject.DAOs;
 using ThesisManagementProject.Database;
 using ThesisManagementProject.Models;
 using ThesisManagementProject.Process;
@@ -16,13 +17,9 @@ namespace ThesisManagementProject.Forms
     public partial class FThesisView : Form
     {
         private MyProcess myProcess = new MyProcess();
-        private DBConnection dBConnection = new DBConnection();
         private PeopleDAO peopleDAO = new PeopleDAO();
+        private ThesisStatusDAO thesisStatusDAO = new ThesisStatusDAO();
 
-        public FThesisView()
-        {
-            InitializeComponent();
-        }
         public FThesisView(Thesis thesis)
         {
             InitializeComponent();
@@ -46,11 +43,8 @@ namespace ThesisManagementProject.Forms
             AddPeopleLine(peopleDAO.SelectOnlyByID(thesis.IdCreator), flpCreator);
             AddPeopleLine(peopleDAO.SelectOnlyByID(thesis.IdInstructor), flpInstructor);
 
-            string command = string.Format("SELECT * FROM {0} WHERE idthesis = '{1}' and status = '{2}'",
-                                            MyDatabase.DBThesisStatus, thesis.IdThesis, thesis.Status.ToString());
-            DataTable table = dBConnection.Select(command);
             gTextBoxTeamRegistered.FillColor = gTextBoxStatus.FillColor;
-            gTextBoxTeamRegistered.Text = table.Rows.Count.ToString() + " teams";
+            gTextBoxTeamRegistered.Text = thesisStatusDAO.CountTeamFollowState(thesis).ToString() + " teams";
 
             myProcess.SetItemFavorite(gButtonStar, thesis.IsFavorite);
         }
@@ -60,6 +54,7 @@ namespace ThesisManagementProject.Forms
             uCPeople.GButtonAdd.Hide();
             uCPeople.SetBackGroundColor(SystemColors.ButtonFace);
             uCPeople.SetInformation(people);
+            uCPeople.SetSize(new Size(270, 60));
             flowLayoutPanel.Controls.Clear();
             flowLayoutPanel.Controls.Add(uCPeople);
         }

@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ThesisManagementProject.Database;
+using ThesisManagementProject.DAOs;
 using ThesisManagementProject.Forms;
 using ThesisManagementProject.Models;
 using ThesisManagementProject.Process;
@@ -45,6 +45,7 @@ namespace ThesisManagementProject
             this.people = people;
             this.thesis = thesis;
             InitUserControl();
+            AddMember(this.people);
         }
 
         #endregion
@@ -60,21 +61,21 @@ namespace ThesisManagementProject
 
         #region FUNCTIONS
 
-        void InitUserControl()
+        private void InitUserControl()
         {
             pictureAvatar = Properties.Resources.PicAvatarDemoUser;
             gGradientButtonRegister.Enabled = true;
             flpSearch.Location = new Point(11, 14);
             flpSearch.Hide();
             gGradientButtonPerform.Hide();
-            AddMember(this.people);
         }
-        void AddMember(People people)
+        private void AddMember(People people)
         {
             if (members.Count < this.thesis.MaxMembers)
             {
                 UCPeopleMiniLine line = new UCPeopleMiniLine(people);
                 line.SetBackGroundColor(Color.White);
+                line.SetSize(new Size(310, 60));
                 if (people.IdAccount == this.people.IdAccount)
                 {
                     line.SetDeleteMode(false);
@@ -110,6 +111,7 @@ namespace ThesisManagementProject
             {
                 People people = listPeople[i];
                 UCPeopleMiniLine uCPeopleMiniLine = new UCPeopleMiniLine(people);
+                uCPeopleMiniLine.SetSize(new Size(310, 60));
                 uCPeopleMiniLine.ButtonAddClicked += (sender, e) => ButtonAdd_Clicked(sender, e, people);
                 flpSearch.Controls.Add(uCPeopleMiniLine);
             }
@@ -123,6 +125,7 @@ namespace ThesisManagementProject
         #endregion
 
         #region PEOPLE MINI LINE
+
         private void ButtonAdd_Clicked(object sender, EventArgs e, People people)
         {
             AddMember(people);

@@ -16,7 +16,6 @@ namespace ThesisManagementProject
         {
             InitializeComponent();
         }
-
         public void SetFavorites()
         {
             gButtonStar.Image = Properties.Resources.PicInLineGradientStar;
@@ -35,12 +34,10 @@ namespace ThesisManagementProject
             FTeamDetails fTeamDetails = new FTeamDetails();
             fTeamDetails.Show();
         }
-
         private void UCTeamLine_MouseEnter(object sender, EventArgs e)
         {
             SetColor(Color.Gainsboro);
         }
-
         private void UCTeamLine_MouseLeave(object sender, EventArgs e)
         {
             SetColor(Color.White);

@@ -62,7 +62,7 @@
             gButtonLogin.FillColor = Color.FromArgb(2, 0, 214);
             gButtonLogin.Font = new Font("Segoe UI", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
             gButtonLogin.ForeColor = Color.White;
-            gButtonLogin.Location = new Point(1202, 386);
+            gButtonLogin.Location = new Point(1259, 386);
             gButtonLogin.Name = "gButtonLogin";
             gButtonLogin.ShadowDecoration.CustomizableEdges = customizableEdges2;
             gButtonLogin.Size = new Size(133, 45);
@@ -73,7 +73,7 @@
             // 
             gProgressBarToLine.BorderRadius = 5;
             gProgressBarToLine.CustomizableEdges = customizableEdges3;
-            gProgressBarToLine.Location = new Point(700, 347);
+            gProgressBarToLine.Location = new Point(757, 347);
             gProgressBarToLine.Name = "gProgressBarToLine";
             gProgressBarToLine.ProgressColor = Color.FromArgb(94, 148, 255);
             gProgressBarToLine.ProgressColor2 = Color.FromArgb(255, 77, 165);
@@ -88,7 +88,7 @@
             lblThesisManagement.AutoSize = true;
             lblThesisManagement.BackColor = Color.White;
             lblThesisManagement.Font = new Font("Trebuchet MS", 40.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblThesisManagement.Location = new Point(685, 261);
+            lblThesisManagement.Location = new Point(742, 261);
             lblThesisManagement.Name = "lblThesisManagement";
             lblThesisManagement.Size = new Size(652, 84);
             lblThesisManagement.TabIndex = 15;
@@ -98,7 +98,7 @@
             // 
             lblWelcome.AutoSize = true;
             lblWelcome.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblWelcome.Location = new Point(697, 224);
+            lblWelcome.Location = new Point(754, 224);
             lblWelcome.Name = "lblWelcome";
             lblWelcome.Size = new Size(176, 38);
             lblWelcome.TabIndex = 14;
@@ -109,7 +109,7 @@
             gPictureBoxLogo.CustomizableEdges = customizableEdges5;
             gPictureBoxLogo.Image = Properties.Resources.LogoThesisManagement;
             gPictureBoxLogo.ImageRotate = 0F;
-            gPictureBoxLogo.Location = new Point(230, 104);
+            gPictureBoxLogo.Location = new Point(287, 104);
             gPictureBoxLogo.Name = "gPictureBoxLogo";
             gPictureBoxLogo.ShadowDecoration.CustomizableEdges = customizableEdges6;
             gPictureBoxLogo.Size = new Size(410, 410);
@@ -136,7 +136,7 @@
             gGradientButtonLecture.HoverState.FillColor = Color.FromArgb(94, 148, 255);
             gGradientButtonLecture.HoverState.FillColor2 = Color.FromArgb(255, 77, 165);
             gGradientButtonLecture.HoverState.ForeColor = Color.White;
-            gGradientButtonLecture.Location = new Point(700, 386);
+            gGradientButtonLecture.Location = new Point(757, 386);
             gGradientButtonLecture.Name = "gGradientButtonLecture";
             gGradientButtonLecture.ShadowDecoration.CustomizableEdges = customizableEdges8;
             gGradientButtonLecture.Size = new Size(133, 45);
@@ -162,7 +162,7 @@
             gGradientButtonRegister.HoverState.FillColor = Color.FromArgb(94, 148, 255);
             gGradientButtonRegister.HoverState.FillColor2 = Color.FromArgb(255, 77, 165);
             gGradientButtonRegister.HoverState.ForeColor = Color.White;
-            gGradientButtonRegister.Location = new Point(1063, 386);
+            gGradientButtonRegister.Location = new Point(1120, 386);
             gGradientButtonRegister.Name = "gGradientButtonRegister";
             gGradientButtonRegister.ShadowDecoration.CustomizableEdges = customizableEdges10;
             gGradientButtonRegister.Size = new Size(133, 45);
@@ -188,7 +188,7 @@
             gGradientButtonStudent.HoverState.FillColor = Color.FromArgb(94, 148, 255);
             gGradientButtonStudent.HoverState.FillColor2 = Color.FromArgb(255, 77, 165);
             gGradientButtonStudent.HoverState.ForeColor = Color.White;
-            gGradientButtonStudent.Location = new Point(839, 386);
+            gGradientButtonStudent.Location = new Point(896, 386);
             gGradientButtonStudent.Name = "gGradientButtonStudent";
             gGradientButtonStudent.ShadowDecoration.CustomizableEdges = customizableEdges12;
             gGradientButtonStudent.Size = new Size(133, 45);
@@ -209,7 +209,7 @@
             Controls.Add(gPictureBoxLogo);
             Controls.Add(gButtonLogin);
             Name = "UCDisplayWelcome";
-            Size = new Size(1575, 853);
+            Size = new Size(1681, 853);
             ((System.ComponentModel.ISupportInitialize)gPictureBoxLogo).EndInit();
             ResumeLayout(false);
             PerformLayout();

@@ -82,7 +82,7 @@
             gGradientButtonThesisTopic.Location = new Point(63, 99);
             gGradientButtonThesisTopic.Name = "gGradientButtonThesisTopic";
             gGradientButtonThesisTopic.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            gGradientButtonThesisTopic.Size = new Size(977, 40);
+            gGradientButtonThesisTopic.Size = new Size(1060, 40);
             gGradientButtonThesisTopic.TabIndex = 3;
             gGradientButtonThesisTopic.Text = "Thesis topics";
             gGradientButtonThesisTopic.TextAlign = HorizontalAlignment.Left;
@@ -106,7 +106,7 @@
             gGradientButtonFilter.HoverState.Image = Properties.Resources.PicItemGradientFilter;
             gGradientButtonFilter.Image = Properties.Resources.PicItemFilter;
             gGradientButtonFilter.ImageSize = new Size(30, 30);
-            gGradientButtonFilter.Location = new Point(355, 17);
+            gGradientButtonFilter.Location = new Point(400, 17);
             gGradientButtonFilter.Name = "gGradientButtonFilter";
             gGradientButtonFilter.PressedColor = SystemColors.ButtonFace;
             gGradientButtonFilter.ShadowDecoration.CustomizableEdges = customizableEdges4;
@@ -128,10 +128,10 @@
             gGradientButtonToolbar.HoverState.FillColor = Color.FromArgb(94, 148, 255);
             gGradientButtonToolbar.HoverState.FillColor2 = Color.FromArgb(255, 77, 165);
             gGradientButtonToolbar.HoverState.ForeColor = Color.White;
-            gGradientButtonToolbar.Location = new Point(1041, 99);
+            gGradientButtonToolbar.Location = new Point(1124, 99);
             gGradientButtonToolbar.Name = "gGradientButtonToolbar";
             gGradientButtonToolbar.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            gGradientButtonToolbar.Size = new Size(98, 40);
+            gGradientButtonToolbar.Size = new Size(115, 40);
             gGradientButtonToolbar.TabIndex = 7;
             gGradientButtonToolbar.Text = "Tool bar";
             // 
@@ -199,7 +199,7 @@
             gShadowPanelSearch.Radius = 7;
             gShadowPanelSearch.ShadowColor = Color.Black;
             gShadowPanelSearch.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            gShadowPanelSearch.Size = new Size(675, 80);
+            gShadowPanelSearch.Size = new Size(708, 80);
             gShadowPanelSearch.TabIndex = 3;
             // 
             // gButtonResetList
@@ -219,7 +219,7 @@
             gButtonResetList.Image = (Image)resources.GetObject("gButtonResetList.Image");
             gButtonResetList.ImageOffset = new Point(1, 0);
             gButtonResetList.ImageSize = new Size(35, 35);
-            gButtonResetList.Location = new Point(597, 17);
+            gButtonResetList.Location = new Point(621, 17);
             gButtonResetList.Name = "gButtonResetList";
             gButtonResetList.PressedColor = SystemColors.ButtonFace;
             gButtonResetList.ShadowDecoration.CustomizableEdges = customizableEdges10;
@@ -250,7 +250,7 @@
             gTextBoxSearch.PlaceholderText = "Search thesis topics";
             gTextBoxSearch.SelectedText = "";
             gTextBoxSearch.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            gTextBoxSearch.Size = new Size(332, 40);
+            gTextBoxSearch.Size = new Size(377, 40);
             gTextBoxSearch.TabIndex = 0;
             gTextBoxSearch.TextOffset = new Point(5, 0);
             // 
@@ -259,7 +259,7 @@
             lblResetList.AutoSize = true;
             lblResetList.BackColor = Color.Transparent;
             lblResetList.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblResetList.Location = new Point(461, 23);
+            lblResetList.Location = new Point(485, 23);
             lblResetList.Name = "lblResetList";
             lblResetList.Size = new Size(130, 28);
             lblResetList.TabIndex = 65;
@@ -292,7 +292,7 @@
             flpThesisList.AutoScroll = true;
             flpThesisList.Location = new Point(8, 135);
             flpThesisList.Name = "flpThesisList";
-            flpThesisList.Size = new Size(1165, 605);
+            flpThesisList.Size = new Size(1262, 605);
             flpThesisList.TabIndex = 21;
             // 
             // gGradientButtonCreateThesis
@@ -316,7 +316,7 @@
             gGradientButtonCreateThesis.HoverState.FillColor2 = Color.FromArgb(255, 77, 165);
             gGradientButtonCreateThesis.HoverState.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             gGradientButtonCreateThesis.HoverState.ForeColor = Color.White;
-            gGradientButtonCreateThesis.Location = new Point(1007, 24);
+            gGradientButtonCreateThesis.Location = new Point(1057, 24);
             gGradientButtonCreateThesis.Name = "gGradientButtonCreateThesis";
             gGradientButtonCreateThesis.ShadowDecoration.CustomizableEdges = customizableEdges16;
             gGradientButtonCreateThesis.Size = new Size(132, 40);
@@ -337,7 +337,7 @@
             Controls.Add(gGradientButtonTag);
             DoubleBuffered = true;
             Name = "UCThesisList";
-            Size = new Size(1180, 750);
+            Size = new Size(1280, 750);
             gShadowPanelThesis.ResumeLayout(false);
             gShadowPanelThesis.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)gPictureBoxItemThesis).EndInit();

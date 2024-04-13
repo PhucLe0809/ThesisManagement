@@ -40,7 +40,7 @@
             gPanelDisplay.Location = new Point(0, 0);
             gPanelDisplay.Name = "gPanelDisplay";
             gPanelDisplay.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            gPanelDisplay.Size = new Size(1575, 853);
+            gPanelDisplay.Size = new Size(1681, 853);
             gPanelDisplay.TabIndex = 0;
             // 
             // FDisplayMain
@@ -48,7 +48,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1575, 853);
+            ClientSize = new Size(1682, 853);
             Controls.Add(gPanelDisplay);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;

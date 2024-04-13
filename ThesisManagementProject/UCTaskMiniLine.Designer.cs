@@ -60,7 +60,7 @@
             gShadowPanelTeam.Radius = 5;
             gShadowPanelTeam.ShadowColor = Color.Black;
             gShadowPanelTeam.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            gShadowPanelTeam.Size = new Size(515, 70);
+            gShadowPanelTeam.Size = new Size(625, 70);
             gShadowPanelTeam.TabIndex = 43;
             gShadowPanelTeam.Click += gShadowPanelTeam_Click;
             // 
@@ -73,7 +73,7 @@
             gProgressBarToLine.ProgressColor = Color.FromArgb(94, 148, 255);
             gProgressBarToLine.ProgressColor2 = Color.FromArgb(255, 77, 165);
             gProgressBarToLine.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            gProgressBarToLine.Size = new Size(170, 15);
+            gProgressBarToLine.Size = new Size(250, 15);
             gProgressBarToLine.TabIndex = 58;
             gProgressBarToLine.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             gProgressBarToLine.Value = 75;
@@ -138,7 +138,7 @@
             gButtonDelete.HoverState.Image = (Image)resources.GetObject("resource.Image");
             gButtonDelete.Image = (Image)resources.GetObject("gButtonDelete.Image");
             gButtonDelete.ImageSize = new Size(25, 25);
-            gButtonDelete.Location = new Point(452, 12);
+            gButtonDelete.Location = new Point(562, 12);
             gButtonDelete.Name = "gButtonDelete";
             gButtonDelete.PressedColor = Color.White;
             gButtonDelete.ShadowDecoration.CustomizableEdges = customizableEdges6;
@@ -165,7 +165,7 @@
             Controls.Add(gShadowPanelTeam);
             DoubleBuffered = true;
             Name = "UCTaskMiniLine";
-            Size = new Size(520, 70);
+            Size = new Size(630, 70);
             gShadowPanelTeam.ResumeLayout(false);
             gShadowPanelTeam.PerformLayout();
             ResumeLayout(false);

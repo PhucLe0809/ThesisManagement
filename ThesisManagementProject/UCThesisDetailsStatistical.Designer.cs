@@ -30,13 +30,13 @@
         {
             SuspendLayout();
             // 
-            // UCThesisDetailsGeneral
+            // UCThesisDetailsStatistical
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
-            Name = "UCThesisDetailsGeneral";
-            Size = new Size(608, 635);
+            BackColor = Color.Silver;
+            Name = "UCThesisDetailsStatistical";
+            Size = new Size(715, 635);
             ResumeLayout(false);
         }
 

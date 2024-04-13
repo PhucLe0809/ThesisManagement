@@ -40,10 +40,10 @@ namespace ThesisManagementProject.Database
         }
 
         #endregion
-
+        
         #region with EXECUTE QUERY
 
-        public void ExecuteQuery(string sqlStr, string typeExecution, bool flag)
+        protected void ExecuteQuery(string sqlStr, string typeExecution, bool flag)
         {
             try
             {
@@ -63,7 +63,7 @@ namespace ThesisManagementProject.Database
                 conn.Close();
             }
         }
-        public void ExecuteQueryThesis(Thesis thesis, string command, string typeExecution, bool flag)
+        protected void ExecuteQueryThesis(Thesis thesis, string command, string typeExecution, bool flag)
         {
             string sqlStr = string.Format(command, MyDatabase.DBThesis,
                 thesis.IdThesis, thesis.Topic, thesis.Field.ToString(), thesis.Level.ToString(),
@@ -72,7 +72,7 @@ namespace ThesisManagementProject.Database
 
             ExecuteQuery(sqlStr, typeExecution, flag);
         }
-        public void ExecuteQueryPeople(People people, string command, string typeExecution, bool flag)
+        protected void ExecuteQueryPeople(People people, string command, string typeExecution, bool flag)
         {
             string sqlStr = string.Format(command, MyDatabase.DBAccount,
                 people.IdAccount, people.FullName, people.CitizenCode, people.Birthday.ToString("yyyy-MM-dd"), people.Gender.ToString(),
@@ -81,7 +81,7 @@ namespace ThesisManagementProject.Database
 
             ExecuteQuery(sqlStr, typeExecution, flag);
         }
-        public void ExecuteQueryTask(Tasks tasks, string command, string typeExecution, bool flag)
+        protected void ExecuteQueryTask(Tasks tasks, string command, string typeExecution, bool flag)
         {
             string sqlStr = string.Format(command, MyDatabase.DBTask,
                 tasks.IdTask, tasks.Title, tasks.Description, tasks.IdCreator, tasks.IdTeam, tasks.IsFavorite ? 1 : 0,
@@ -89,10 +89,26 @@ namespace ThesisManagementProject.Database
 
             ExecuteQuery(sqlStr, typeExecution, flag);
         }
-        public void ExecuteQueryComment(Comment comment, string command, string typeExecution, bool flag)
+        protected void ExecuteQueryComment(Comment comment, string command, string typeExecution, bool flag)
         {
             string sqlStr = string.Format(command, MyDatabase.DBComment, 
                 comment.IdComment, comment.IdTask, comment.IdCreator, comment.Content, comment.Emoji, comment.Created.ToString("yyyy-MM-dd hh:mm:ss"));
+
+            ExecuteQuery(sqlStr, typeExecution, flag);
+        }
+        protected void ExecuteQueryEvaluation(Evaluation evaluation, string command, string typeExecution, bool flag)
+        {
+            string sqlStr = string.Format(command, MyDatabase.DBEvaluation,
+                evaluation.IdEvaluation, evaluation.IdTask, evaluation.IdPeople, evaluation.Content, evaluation.Contribute,
+                evaluation.Scores, evaluation.Created.ToString("yyyy-MM-dd hh:mm:ss"), evaluation.IsEvaluated ? 1 : 0);
+
+            ExecuteQuery(sqlStr, typeExecution, flag);
+        }
+        protected void ExecuteQueryNotification(Notification notifi, string command, string typeExecution, bool flag)
+        {
+            string sqlStr = string.Format(command, MyDatabase.DBNotification,
+                notifi.IdNotification, notifi.IdHost, notifi.IdSender, notifi.IdObject, notifi.Content, notifi.Type.ToString(),
+                notifi.Created.ToString("yyyy-MM-dd hh:mm:ss"), notifi.IsFavorite ? 1 : 0, notifi.IsSaw ? 1 : 0);
 
             ExecuteQuery(sqlStr, typeExecution, flag);
         }
@@ -101,7 +117,7 @@ namespace ThesisManagementProject.Database
 
         #region SQL Execute by Command
 
-        public void SQLExecuteByCommand(string command)
+        protected void SQLExecuteByCommand(string command)
         {
             try
             {
@@ -125,7 +141,7 @@ namespace ThesisManagementProject.Database
 
         #region SQL Check Exist
 
-        public bool SQLCheckNonExist(string command)
+        protected bool SQLCheckNonExist(string command)
         {
             try
             {

@@ -3,12 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ThesisManagementProject.Database;
+using ThesisManagementProject.DAOs;
 using ThesisManagementProject.Models;
 using ThesisManagementProject.Process;
 
@@ -18,22 +19,28 @@ namespace ThesisManagementProject.Forms
     {
         private MyProcess myProcess = new MyProcess();
 
-        private People people = new People();
+        private People host = new People();
+        private People instructor = new People();
         private Tasks tasks = new Tasks();
         private People creator = new People();
         private Team team = new Team();
         private Tasks dynamicTask = new Tasks();
         private TasksDAO tasksDAO = new TasksDAO();
+        private EvaluationDAO evaluationDAO = new EvaluationDAO();
+
         private UCTaskComment uCTaskComment = new UCTaskComment();
-        private UCTaskEvaluate uCTaskEvaluate = new UCTaskEvaluate();
+        private UCTaskEvaluateList uCTaskEvaluateList = new UCTaskEvaluateList();
+        private UCTaskEvaluateDetails uCTaskEvaluateDetails = new UCTaskEvaluateDetails();
+        private UCPeopleMiniLine peopleLineClicked = new UCPeopleMiniLine();
         private bool isProcessing = true;
         private bool flagCheck = false;
         private bool edited = false;
 
-        public FTaskDetails(People people, Tasks tasks, People creator, Team team, bool isProcessing)
+        public FTaskDetails(People host, People instructor, Tasks tasks, People creator, Team team, bool isProcessing)
         {
             InitializeComponent();
-            this.people = people;
+            this.host = host;
+            this.instructor = instructor;
             this.tasks = tasks;
             this.creator = creator;
             this.team = team;
@@ -67,15 +74,22 @@ namespace ThesisManagementProject.Forms
             gCirclePictureBoxCreator.Image = myProcess.NameToImage(creator.AvatarName);
             myProcess.SetItemFavorite(gButtonStar, tasks.IsFavorite);
 
-            if (!isProcessing || tasks.IdCreator != people.IdAccount)
+            if (!isProcessing || tasks.IdCreator != host.IdAccount)
             {
                 gButtonEdit.Hide();
                 gButtonStar.Location = new Point(383, 17);
             }
 
-            uCTaskComment.SetInformation(people, tasks, isProcessing);
+            uCTaskComment.SetUpUserControl(host, instructor, tasks, isProcessing);
             gShadowPanelView.Controls.Add(uCTaskComment);
-            gShadowPanelView.Controls.Add(uCTaskEvaluate);
+
+            uCTaskEvaluateList.SetUpUserControl(tasks, team, host);
+            uCTaskEvaluateList.ClickEvaluate += Line_ClickEvaluate;
+            gShadowPanelView.Controls.Add(uCTaskEvaluateList);
+
+            uCTaskEvaluateDetails.GButtonBack.Click += GButtonBack_Click;
+            gShadowPanelView.Controls.Add(uCTaskEvaluateDetails);
+
             gGradientButtonComment.PerformClick();
         }
         private void SetViewState()
@@ -94,9 +108,12 @@ namespace ThesisManagementProject.Forms
         {
             myProcess.RunCheckDataValid(tasks.CheckTitle() || flagCheck, erpTitle, gTextBoxTitle, "Title cannot be empty");
             myProcess.RunCheckDataValid(tasks.CheckDescription() || flagCheck, erpDescription, gTextBoxDescription, "Description cannot be empty");
-            myProcess.RunCheckDataValid((gTextBoxProgress.Text != string.Empty && tasks.CheckProgress()) || flagCheck, erpProgress, gTextBoxProgress, "Can only take values from 0 to 100");
+            int progress = 0;
+            bool checkProgress = int.TryParse(gTextBoxProgress.Text, out progress);
+            if (checkProgress) tasks.Progress = progress;
+            myProcess.RunCheckDataValid((checkProgress && tasks.CheckProgress()) || flagCheck, erpProgress, gTextBoxProgress, "Can only take values from 0 to 100");
 
-            return tasks.CheckTitle() && tasks.CheckDescription() && (gTextBoxProgress.Text != string.Empty && tasks.CheckProgress());
+            return tasks.CheckTitle() && tasks.CheckDescription() && (checkProgress && tasks.CheckProgress());
         }
         private void AllButtonStandardColor()
         {
@@ -121,12 +138,12 @@ namespace ThesisManagementProject.Forms
         }
         private void gButtonSave_Click(object sender, EventArgs e)
         {
-            this.tasks = new Tasks(tasks.IdTask, gTextBoxTitle.Text, gTextBoxDescription.Text, this.creator.IdAccount, this.team.IDTeam,
-                                        tasks.IsFavorite, int.Parse(gTextBoxProgress.Text.ToString()), tasks.CreatedDate);
-
             this.flagCheck = false;
             if (CheckInformationValid())
             {
+                this.tasks = new Tasks(tasks.IdTask, gTextBoxTitle.Text, gTextBoxDescription.Text, this.creator.IdAccount, this.team.IDTeam,
+                                            tasks.IsFavorite, int.Parse(gTextBoxProgress.Text.ToString()), tasks.CreatedDate);
+
                 tasksDAO.Update(tasks);
                 this.flagCheck = true;
                 this.edited = true;
@@ -137,15 +154,17 @@ namespace ThesisManagementProject.Forms
         {
             AllButtonStandardColor();
             myProcess.ButtonSettingColor(gGradientButtonComment);
-            uCTaskEvaluate.Hide();
+            uCTaskEvaluateList.Hide();
+            uCTaskEvaluateDetails.Hide();
             uCTaskComment.Show();
         }
         private void gGradientButtonEvaluate_Click(object sender, EventArgs e)
         {
             AllButtonStandardColor();
             myProcess.ButtonSettingColor(gGradientButtonEvaluate);
-            uCTaskEvaluate.Show();
             uCTaskComment.Hide();
+            uCTaskEvaluateDetails.Hide();
+            uCTaskEvaluateList.Show();
         }
 
         #endregion
@@ -164,13 +183,38 @@ namespace ThesisManagementProject.Forms
         }
         private void gTextBoxProgress_TextChanged(object sender, EventArgs e)
         {
-            if (gTextBoxProgress.Text != string.Empty)
+            int progress = 0;
+            bool checkProgress = int.TryParse(gTextBoxProgress.Text, out progress);
+            if (checkProgress)
             {
-                this.dynamicTask.Progress = myProcess.ConvertStringToInt32(gTextBoxProgress.Text);
+                tasks.Progress = progress;
+                gProgressBarToLine.Value = progress;
             }
-            bool isValid = (gTextBoxProgress.Text != string.Empty && dynamicTask.CheckProgress()) || flagCheck;
-            myProcess.RunCheckDataValid(isValid, erpProgress, gTextBoxProgress, "Can only take values from 0 to 100");
-            if (isValid) gProgressBarToLine.Value = dynamicTask.Progress;
+            myProcess.RunCheckDataValid((checkProgress && tasks.CheckProgress()) || flagCheck, erpProgress, gTextBoxProgress, "Can only take values from 0 to 100");
+        }
+
+        #endregion
+
+        #region METHOD UCTASK EVALUATE
+
+        private void Line_ClickEvaluate(object sender, EventArgs e)
+        {
+            UCPeopleMiniLine line = uCTaskEvaluateList.GetPeopleLine;
+
+            if (line != null)
+            {
+                this.peopleLineClicked = line;
+                uCTaskEvaluateDetails.SetUpUserControl(this.tasks, line.GetPeople, line.GetEvaluation, host, isProcessing);
+                uCTaskComment.Hide();
+                uCTaskEvaluateList.Hide();
+                uCTaskEvaluateDetails.Show();
+            }
+        }
+        private void GButtonBack_Click(object sender, EventArgs e)
+        {
+            Evaluation evaluation = evaluationDAO.SelectOnly(tasks.IdTask, this.peopleLineClicked.GetPeople.IdAccount);
+            this.peopleLineClicked.SetEvaluateMode(evaluation, true);
+            gGradientButtonEvaluate.PerformClick();
         }
 
         #endregion

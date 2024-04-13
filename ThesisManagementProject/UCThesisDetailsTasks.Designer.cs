@@ -54,7 +54,7 @@
             gShadowPanelBack.ShadowColor = Color.Black;
             gShadowPanelBack.ShadowShift = 0;
             gShadowPanelBack.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            gShadowPanelBack.Size = new Size(575, 495);
+            gShadowPanelBack.Size = new Size(685, 495);
             gShadowPanelBack.TabIndex = 43;
             // 
             // flpTaskList
@@ -62,14 +62,14 @@
             flpTaskList.AutoScroll = true;
             flpTaskList.Location = new Point(12, 12);
             flpTaskList.Name = "flpTaskList";
-            flpTaskList.Size = new Size(550, 458);
+            flpTaskList.Size = new Size(660, 458);
             flpTaskList.TabIndex = 13;
             // 
             // gSeparatorUnderHeader
             // 
             gSeparatorUnderHeader.Location = new Point(31, 56);
             gSeparatorUnderHeader.Name = "gSeparatorUnderHeader";
-            gSeparatorUnderHeader.Size = new Size(550, 12);
+            gSeparatorUnderHeader.Size = new Size(670, 12);
             gSeparatorUnderHeader.TabIndex = 45;
             // 
             // lblTaskList
@@ -130,7 +130,7 @@
             gGradientButtonAddTask.HoverState.FillColor2 = Color.FromArgb(255, 77, 165);
             gGradientButtonAddTask.HoverState.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             gGradientButtonAddTask.HoverState.ForeColor = Color.White;
-            gGradientButtonAddTask.Location = new Point(461, 74);
+            gGradientButtonAddTask.Location = new Point(571, 74);
             gGradientButtonAddTask.Name = "gGradientButtonAddTask";
             gGradientButtonAddTask.ShadowDecoration.CustomizableEdges = customizableEdges4;
             gGradientButtonAddTask.Size = new Size(117, 40);
@@ -162,7 +162,7 @@
             Controls.Add(gShadowPanelBack);
             DoubleBuffered = true;
             Name = "UCThesisDetailsTasks";
-            Size = new Size(608, 635);
+            Size = new Size(715, 635);
             gShadowPanelBack.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();

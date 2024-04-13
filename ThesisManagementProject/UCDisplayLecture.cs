@@ -18,10 +18,12 @@ namespace ThesisManagementProject
         private MyProcess myProcess = new MyProcess();
         private People people = new People();
 
-        UCDashboard UCDashboard = new UCDashboard();
-        UCStudents uCStudents = new UCStudents();
-        UCDiscussion uCDiscussion = new UCDiscussion();
-        UCAccount uCAccountLecture = new UCAccount();
+        private UCDashboard uCDashboard = new UCDashboard();
+        private UCNotification uCNotification = new UCNotification();
+        private UCAccount uCAccount = new UCAccount();
+
+        private List<Guna2Button> listButton = new List<Guna2Button>();
+        private List<Image> listImage = new List<Image>();
 
         public UCDisplayLecture()
         {
@@ -29,6 +31,8 @@ namespace ThesisManagementProject
 
             pnlAddUserControl.Controls.Clear();
             pnlAddUserControl.Controls.Add(new UCWelcome());
+            this.listButton = new List<Guna2Button> { gButtonDashboards, gButtonNotification, gButtonAccount };
+            this.listImage = new List<Image> { Properties.Resources.PictureTask, Properties.Resources.PictureNotification, Properties.Resources.PictureAccount };
         }
 
         #region PROPERTIES
@@ -53,39 +57,15 @@ namespace ThesisManagementProject
             lblHandle.Text = people.Handle;
             lblRole.Text = people.Role.ToString();
 
-            AllDirectButtonStandardColor();
+            myProcess.AllButtonStandardColor(this.listButton, this.listImage);
 
             pnlAddUserControl.Controls.Clear();
             pnlAddUserControl.Controls.Add(new UCWelcome(people));
         }
-        private void DirectButtonStandardColor(Guna2Button button)
-        {
-            button.FillColor = Color.Transparent;
-            button.ForeColor = Color.White;
-            button.Font = new System.Drawing.Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-        }
-        private void DirectButtonSettingColor(Guna2Button button)
-        {
-            button.FillColor = Color.White;
-            button.ForeColor = Color.Black;
-            button.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, FontStyle.Bold);
-        }
-        private void AllDirectButtonStandardColor()
-        {
-            DirectButtonStandardColor(gButtonDashboards);
-            DirectButtonStandardColor(gButtonDiscussions);
-            DirectButtonStandardColor(gButtonAccount);
-            DirectButtonStandardColor(gButtonStudents);
-
-            gButtonDashboards.CustomImages.Image = Properties.Resources.PictureTask;
-            gButtonDiscussions.CustomImages.Image = Properties.Resources.PictureDiscussion;
-            gButtonAccount.CustomImages.Image = Properties.Resources.PictureAccount;
-            gButtonStudents.CustomImages.Image = Properties.Resources.PictureStudent;
-        }
         private void SetButtonClick(Guna2Button button, Image image, UserControl userControl)
         {
-            AllDirectButtonStandardColor();
-            DirectButtonSettingColor(button);
+            myProcess.AllButtonStandardColor(this.listButton, this.listImage);
+            myProcess.ButtonSettingColor(button);
             button.CustomImages.Image = image;
             pnlAddUserControl.Controls.Clear();
             pnlAddUserControl.Controls.Add(userControl);
@@ -97,27 +77,24 @@ namespace ThesisManagementProject
 
         private void gPanelBackAvatar_Click(object sender, EventArgs e)
         {
-            AllDirectButtonStandardColor();
+            myProcess.AllButtonStandardColor(this.listButton, this.listImage);
             pnlAddUserControl.Controls.Clear();
             pnlAddUserControl.Controls.Add(new UCWelcome(this.people));
         }
         private void gButtonDashboard_Click(object sender, EventArgs e)
         {
-            UCDashboard.SetInformation(this.people);
-            SetButtonClick(gButtonDashboards, Properties.Resources.PictureTaskGradient, UCDashboard);
+            uCDashboard.SetInformation(this.people);
+            SetButtonClick(gButtonDashboards, Properties.Resources.PictureTaskGradient, uCDashboard);
         }
-        private void gButtonStudents_Click(object sender, EventArgs e)
+        private void gButtonNotification_Click(object sender, EventArgs e)
         {
-            SetButtonClick(gButtonStudents, Properties.Resources.PictureStudentGradient, uCStudents);
-        }
-        private void gButtonDiscuss_Click(object sender, EventArgs e)
-        {
-            SetButtonClick(gButtonDiscussions, Properties.Resources.PictureDiscussionGradient, uCDiscussion);
+            uCNotification.SetInformation(people);
+            SetButtonClick(gButtonNotification, Properties.Resources.PictureNotificationGradient, uCNotification);
         }
         private void gButtonAccount_Click(object sender, EventArgs e)
         {
-            uCAccountLecture.SetInformation(people);
-            SetButtonClick(gButtonAccount, Properties.Resources.PictureAccountGradient, uCAccountLecture);
+            uCAccount.SetInformation(people);
+            SetButtonClick(gButtonAccount, Properties.Resources.PictureAccountGradient, uCAccount);
         }
 
         #endregion

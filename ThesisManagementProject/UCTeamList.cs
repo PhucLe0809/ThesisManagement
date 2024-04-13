@@ -21,18 +21,17 @@ namespace ThesisManagementProject
         {
             flpDataView.Controls.Clear();
         }
-
         public void AddTeam(UCTeamLine line)
         {
             flpDataView.Controls.Add(line);
         }
-
         private void gButtonFilter_Click(object sender, EventArgs e)
         {
-        }
 
+        }
         private void gGradientButtonCreateTeam_Click(object sender, EventArgs e)
         {
+
         }
     }
 }

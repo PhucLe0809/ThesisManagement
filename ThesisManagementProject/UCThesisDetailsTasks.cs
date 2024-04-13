@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ThesisManagementProject.Database;
+using ThesisManagementProject.DAOs;
 using ThesisManagementProject.Models;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -16,6 +16,7 @@ namespace ThesisManagementProject
     public partial class UCThesisDetailsTasks : UserControl
     {
         private People people = new People();
+        private People instructor = new People();
         private Team team = new Team();
         private TasksDAO taskDAO = new TasksDAO();
         private List<Tasks> listTask = new List<Tasks>();
@@ -29,9 +30,10 @@ namespace ThesisManagementProject
 
         #region FUNCTIONS
 
-        public void SetUpUserControl(People people, Team team, bool isProcessing)
+        public void SetUpUserControl(People people, People instructor, Team team, bool isProcessing)
         {
             this.people = people;
+            this.instructor = instructor;
             this.team = team;
             this.isProcessing = isProcessing;
             InitUserControl();
@@ -61,10 +63,9 @@ namespace ThesisManagementProject
         private void UCTaskCreate_TasksCreateClicked(object? sender, EventArgs e)
         {
             Tasks tasks = taskDAO.SelectOnly(uCTaskCreate.GetTasks.IdTask);
-            //MessageBox.Show(uCTaskCreate.GetTasks.IdTask);
 
             this.listTask.Add(tasks);
-            UCTaskMiniLine line = new UCTaskMiniLine(people, tasks, isProcessing);
+            UCTaskMiniLine line = new UCTaskMiniLine(people, instructor, tasks, isProcessing);
             line.TasksDeleteClicked += GButtonDelete_Click;
             flpTaskList.Controls.Add(line);
             flpTaskList.Controls.SetChildIndex(line, 0);
@@ -79,7 +80,7 @@ namespace ThesisManagementProject
             flpTaskList.Controls.Clear();
             foreach (Tasks tasks in listTask)
             {
-                UCTaskMiniLine line = new UCTaskMiniLine(people, tasks, isProcessing);
+                UCTaskMiniLine line = new UCTaskMiniLine(people, instructor, tasks, isProcessing);
                 line.TasksDeleteClicked += GButtonDelete_Click;
                 flpTaskList.Controls.Add(line);
             }

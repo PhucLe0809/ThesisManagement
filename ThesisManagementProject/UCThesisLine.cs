@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
-using ThesisManagementProject.Database;
+using ThesisManagementProject.DAOs;
 using ThesisManagementProject.Models;
 using ThesisManagementProject.Process;
 
@@ -32,6 +32,19 @@ namespace ThesisManagementProject
             InitializeComponent();
         }
 
+        #region PROPERTIES
+
+        public Guna2Button GetGButtonDelete
+        {
+            get => gButtonDelete;
+        }
+        public string ID
+        {
+            get { return this.thesis.IdThesis; }
+        }
+
+        #endregion
+
         #region FUNCTIONS
 
         public void SetInformation(Thesis thesis)
@@ -45,7 +58,7 @@ namespace ThesisManagementProject
         {
             myProcess.SetItemFavorite(gButtonStar, thesis.IsFavorite);
 
-            lblThesisTopic.Text = myProcess.FormatStringLength(thesis.Topic, 120);
+            lblThesisTopic.Text = myProcess.FormatStringLength(thesis.Topic, 130);
             gTextBoxStatus.Text = thesis.Status.ToString();
             gTextBoxStatus.FillColor = thesis.GetStatusColor();
             lblCreator.Text = creator.FullName;
@@ -60,22 +73,13 @@ namespace ThesisManagementProject
             gButtonEdit.Hide();
             gButtonDelete.Hide();
         }
-
-        #endregion
-
-        #region PROPERTIES
-
-        public Guna2Button GetGButtonEdit 
-        { 
-            get => gButtonEdit; 
-        }
-        public Guna2Button GetGButtonDelete
+        public void RemoveThesis()
         {
-            get => gButtonDelete;
-        }
-        public string ID
-        {
-            get { return this.thesis.IdThesis; }
+            thesisDAO.Delete(thesisDAO.SelectOnly(thesis.IdThesis));
+            List<Team> listTeam = teamDAO.SelectList(this.thesis.IdThesis);
+            teamDAO.Delete(listTeam, this.thesis.IdThesis);
+
+            OnThesisDeleteClicked(EventArgs.Empty);
         }
 
         #endregion
@@ -94,7 +98,7 @@ namespace ThesisManagementProject
         {
             OnThesisLineClicked(EventArgs.Empty);
         }
-        public virtual void OnThesisLineClicked(EventArgs e)
+        private void OnThesisLineClicked(EventArgs e)
         {
             ThesisLineClicked?.Invoke(this, e);
         }
@@ -116,11 +120,7 @@ namespace ThesisManagementProject
                                                     "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (result == DialogResult.OK)
             {
-                thesisDAO.Delete(thesisDAO.SelectOnly(thesis.IdThesis));
-                List<Team> listTeam = teamDAO.SelectList(this.thesis.IdThesis);
-                teamDAO.Delete(listTeam, this.thesis.IdThesis);
-
-                OnThesisDeleteClicked(EventArgs.Empty);
+                RemoveThesis();
             }
         }
         public virtual void OnThesisDeleteClicked(EventArgs e)

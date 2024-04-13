@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ThesisManagementProject.DAOs;
 using ThesisManagementProject.Database;
 using ThesisManagementProject.Process;
 
@@ -32,7 +33,7 @@ namespace ThesisManagementProject.Models
     public class People
     {
         private MyProcess myProcess = new MyProcess();
-        DBConnection dBConnection = new DBConnection();
+        private PeopleDAO peopleDAO = new PeopleDAO();
 
         #region PEOPLE ATTRIBUTES
 
@@ -258,8 +259,7 @@ namespace ThesisManagementProject.Models
         public bool CheckCitizenCode()
         {
             return this.citizenCode != string.Empty
-                    && dBConnection.SQLCheckNonExist(string.Format("SELECT * FROM {0} WHERE {1} = '{2}'",
-                                    MyDatabase.DBAccount, "citizencode", this.citizenCode));
+                    && peopleDAO.CheckNonExist("citizencode", this.citizenCode);
         }
         public bool CheckBirthday()
         {
@@ -274,20 +274,17 @@ namespace ThesisManagementProject.Models
         public bool CheckEmail()
         {
             return this.email != string.Empty
-                    && dBConnection.SQLCheckNonExist(string.Format("SELECT * FROM {0} WHERE {1} = '{2}'",
-                                    MyDatabase.DBAccount, "email", this.email));
+                    && peopleDAO.CheckNonExist("email", this.email);
         }
         public bool CheckPhoneNumber()
         {
             return this.phoneNumber != string.Empty && this.phoneNumber.All(char.IsDigit)
-                    && dBConnection.SQLCheckNonExist(string.Format("SELECT * FROM {0} WHERE {1} = '{2}'",
-                                    MyDatabase.DBAccount, "phonenumber", this.phoneNumber));
+                    && peopleDAO.CheckNonExist("phonenumber", this.phoneNumber);
         }
         public bool CheckHandle()
         {
             return this.handle != string.Empty
-                    && dBConnection.SQLCheckNonExist(string.Format("SELECT * FROM {0} WHERE {1} = '{2}'",
-                                    MyDatabase.DBAccount, "handle", this.handle));
+                    && peopleDAO.CheckNonExist("handle", this.handle);
         }
         public bool CheckRole()
         {
@@ -296,8 +293,7 @@ namespace ThesisManagementProject.Models
         public bool CheckWorkCode()
         {
             return this.workCode != string.Empty
-                    && dBConnection.SQLCheckNonExist(string.Format("SELECT * FROM {0} WHERE {1} = '{2}'",
-                                    MyDatabase.DBAccount, "workcode", this.workCode));
+                    && peopleDAO.CheckNonExist("workcode", this.workCode);
         }
         public bool CheckPassWord()
         {

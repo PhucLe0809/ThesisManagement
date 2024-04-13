@@ -10,7 +10,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ThesisManagementProject.Database;
+using ThesisManagementProject.DAOs;
 using ThesisManagementProject.Models;
 using ThesisManagementProject.Process;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -23,9 +23,11 @@ namespace ThesisManagementProject
         private UCThesisList uCThesisList = new UCThesisList();
         private UCThesisCreate uCThesisCreate = new UCThesisCreate();
         private UCThesisDetails uCThesisDetails = new UCThesisDetails();
+        private UCThesisLine thesisLineClicked = new UCThesisLine();
 
-        private ThesisDAO thesisDAO = new ThesisDAO();
+        private Thesis thesisClicked = new Thesis();
         private People people = new People();
+        private ThesisDAO thesisDAO = new ThesisDAO();
         private FThesisFilter fThesisFilter = new FThesisFilter();
         private List<Thesis> currentList = new List<Thesis>();
         private List<Thesis> listThesis = new List<Thesis>();
@@ -81,6 +83,13 @@ namespace ThesisManagementProject
             {
                 if (people.Role == ERole.Lecture) UpdateThesisListLecture();
                 else UpdateThesisListStudent();
+            }
+        }
+        private void UpdateUCThesisLine(bool flag, Thesis newThesis)
+        {
+            if (flag)
+            {
+                this.thesisLineClicked.SetInformation(newThesis);
             }
         }
         private void UpdateThesisListLecture()
@@ -148,7 +157,7 @@ namespace ThesisManagementProject
 
         private void gGradientButtonStatistical_Click(object sender, EventArgs e)
         {
-            AddUserControl(gGradientButtonStatistical, new UCStudentStatistical());
+            AddUserControl(gGradientButtonStatistical, new UCDashboardStatistical());
         }
 
         #endregion
@@ -167,6 +176,8 @@ namespace ThesisManagementProject
 
         private void ThesisDetailsBack_Clicked(object sender, EventArgs e)
         {
+            UpdateUCThesisLine(uCThesisDetails.ThesisEdited, uCThesisDetails.GetThesis);
+            if (uCThesisDetails.ThesisDeleted) uCThesisList.ThesisDelete_Clicked(this.thesisLineClicked, e);
             gPanelDataView.Controls.Clear();
             gPanelDataView.Controls.Add(uCThesisList);
         }
@@ -182,9 +193,10 @@ namespace ThesisManagementProject
             if (thesisLine != null)
             {
                 gPanelDataView.Controls.Clear();
-                Thesis thesis = thesisDAO.SelectOnly(thesisLine.ID);
-                uCThesisDetails.FlagWaiting = this.flagStuMyTheses && (thesis.Status == EThesisStatus.Registered || thesis.Status == EThesisStatus.Published);
-                uCThesisDetails.SetInformation(thesisLine, thesis, people);
+                this.thesisClicked = thesisDAO.SelectOnly(thesisLine.ID);
+                this.thesisLineClicked = thesisLine;
+                uCThesisDetails.FlagWaiting = this.flagStuMyTheses && (thesisClicked.Status == EThesisStatus.Registered || thesisClicked.Status == EThesisStatus.Published);
+                uCThesisDetails.SetInformation(this.thesisClicked, people);
                 gPanelDataView.Controls.Add(uCThesisDetails);
             }
         }

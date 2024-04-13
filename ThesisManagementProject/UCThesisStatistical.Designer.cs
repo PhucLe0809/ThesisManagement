@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             gShadowPanelGenerate = new Guna.UI2.WinForms.Guna2ShadowPanel();
             gPanelInformation = new Guna.UI2.WinForms.Guna2ShadowPanel();
             gShadowPanelProcess = new Guna.UI2.WinForms.Guna2ShadowPanel();
@@ -52,7 +52,7 @@
             gShadowPanelGenerate.ShadowColor = Color.Black;
             gShadowPanelGenerate.ShadowShift = 8;
             gShadowPanelGenerate.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            gShadowPanelGenerate.Size = new Size(788, 341);
+            gShadowPanelGenerate.Size = new Size(899, 341);
             gShadowPanelGenerate.TabIndex = 3;
             // 
             // gPanelInformation
@@ -65,7 +65,7 @@
             gPanelInformation.ShadowColor = Color.Black;
             gPanelInformation.ShadowShift = 8;
             gPanelInformation.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            gPanelInformation.Size = new Size(1143, 352);
+            gPanelInformation.Size = new Size(1241, 352);
             gPanelInformation.TabIndex = 4;
             // 
             // gShadowPanelProcess
@@ -73,7 +73,7 @@
             gShadowPanelProcess.BackColor = Color.Transparent;
             gShadowPanelProcess.Controls.Add(gCircleProgressBarThree);
             gShadowPanelProcess.FillColor = Color.White;
-            gShadowPanelProcess.Location = new Point(825, 19);
+            gShadowPanelProcess.Location = new Point(923, 20);
             gShadowPanelProcess.Name = "gShadowPanelProcess";
             gShadowPanelProcess.Radius = 7;
             gShadowPanelProcess.ShadowColor = Color.Black;
@@ -100,7 +100,7 @@
             gCircleProgressBarThree.ProgressEndCap = System.Drawing.Drawing2D.LineCap.Round;
             gCircleProgressBarThree.ProgressStartCap = System.Drawing.Drawing2D.LineCap.Round;
             gCircleProgressBarThree.ProgressThickness = 25;
-            gCircleProgressBarThree.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            gCircleProgressBarThree.ShadowDecoration.CustomizableEdges = customizableEdges3;
             gCircleProgressBarThree.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             gCircleProgressBarThree.Size = new Size(260, 260);
             gCircleProgressBarThree.TabIndex = 1;
@@ -124,7 +124,7 @@
             gCircleProgressBarTwo.ProgressEndCap = System.Drawing.Drawing2D.LineCap.Round;
             gCircleProgressBarTwo.ProgressStartCap = System.Drawing.Drawing2D.LineCap.Round;
             gCircleProgressBarTwo.ProgressThickness = 17;
-            gCircleProgressBarTwo.ShadowDecoration.CustomizableEdges = customizableEdges5;
+            gCircleProgressBarTwo.ShadowDecoration.CustomizableEdges = customizableEdges2;
             gCircleProgressBarTwo.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             gCircleProgressBarTwo.Size = new Size(150, 150);
             gCircleProgressBarTwo.TabIndex = 1;
@@ -147,7 +147,7 @@
             gCircleProgressBarOne.ProgressEndCap = System.Drawing.Drawing2D.LineCap.Round;
             gCircleProgressBarOne.ProgressStartCap = System.Drawing.Drawing2D.LineCap.Round;
             gCircleProgressBarOne.ProgressThickness = 12;
-            gCircleProgressBarOne.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            gCircleProgressBarOne.ShadowDecoration.CustomizableEdges = customizableEdges1;
             gCircleProgressBarOne.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             gCircleProgressBarOne.ShowText = true;
             gCircleProgressBarOne.Size = new Size(80, 80);
@@ -163,7 +163,7 @@
             Controls.Add(gPanelInformation);
             Controls.Add(gShadowPanelGenerate);
             Name = "UCThesisStatistical";
-            Size = new Size(1180, 750);
+            Size = new Size(1280, 750);
             gShadowPanelProcess.ResumeLayout(false);
             gCircleProgressBarThree.ResumeLayout(false);
             gCircleProgressBarTwo.ResumeLayout(false);

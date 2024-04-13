@@ -87,7 +87,7 @@
             gButtonDelete.HoverState.Image = (Image)resources.GetObject("resource.Image");
             gButtonDelete.Image = (Image)resources.GetObject("gButtonDelete.Image");
             gButtonDelete.ImageSize = new Size(25, 25);
-            gButtonDelete.Location = new Point(1082, 20);
+            gButtonDelete.Location = new Point(1167, 20);
             gButtonDelete.Name = "gButtonDelete";
             gButtonDelete.ShadowDecoration.CustomizableEdges = customizableEdges4;
             gButtonDelete.Size = new Size(40, 40);
@@ -109,7 +109,7 @@
             gButtonEdit.HoverState.Image = (Image)resources.GetObject("resource.Image1");
             gButtonEdit.Image = (Image)resources.GetObject("gButtonEdit.Image");
             gButtonEdit.ImageSize = new Size(25, 25);
-            gButtonEdit.Location = new Point(1037, 20);
+            gButtonEdit.Location = new Point(1122, 20);
             gButtonEdit.Name = "gButtonEdit";
             gButtonEdit.ShadowDecoration.CustomizableEdges = customizableEdges6;
             gButtonEdit.Size = new Size(40, 40);
@@ -165,7 +165,7 @@
             lblInstructor.BackColor = Color.Transparent;
             lblInstructor.Font = new Font("Century Gothic", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
             lblInstructor.ForeColor = Color.Black;
-            lblInstructor.Location = new Point(897, 47);
+            lblInstructor.Location = new Point(981, 47);
             lblInstructor.Name = "lblInstructor";
             lblInstructor.Size = new Size(92, 18);
             lblInstructor.TabIndex = 35;
@@ -177,7 +177,7 @@
             lblIns.BackColor = Color.Transparent;
             lblIns.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblIns.ForeColor = Color.FromArgb(74, 97, 94);
-            lblIns.Location = new Point(813, 46);
+            lblIns.Location = new Point(897, 46);
             lblIns.Name = "lblIns";
             lblIns.Size = new Size(83, 20);
             lblIns.TabIndex = 36;
@@ -222,7 +222,7 @@
             Controls.Add(gButtonStar);
             DoubleBuffered = true;
             Name = "UCThesisLine";
-            Size = new Size(1130, 80);
+            Size = new Size(1230, 80);
             Click += UCThesisLine_Click;
             MouseEnter += UCThesisLine_MouseEnter;
             MouseLeave += UCThesisLine_MouseLeave;

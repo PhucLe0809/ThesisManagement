@@ -121,7 +121,7 @@
             gButtonCancel.FillColor = Color.Silver;
             gButtonCancel.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             gButtonCancel.ForeColor = Color.White;
-            gButtonCancel.Location = new Point(883, 699);
+            gButtonCancel.Location = new Point(979, 696);
             gButtonCancel.Name = "gButtonCancel";
             gButtonCancel.ShadowDecoration.CustomizableEdges = customizableEdges2;
             gButtonCancel.Size = new Size(100, 35);
@@ -142,7 +142,7 @@
             gButtonCreateOrEdit.FillColor2 = Color.FromArgb(94, 148, 255);
             gButtonCreateOrEdit.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             gButtonCreateOrEdit.ForeColor = Color.White;
-            gButtonCreateOrEdit.Location = new Point(1012, 699);
+            gButtonCreateOrEdit.Location = new Point(1108, 696);
             gButtonCreateOrEdit.Name = "gButtonCreateOrEdit";
             gButtonCreateOrEdit.ShadowDecoration.CustomizableEdges = customizableEdges4;
             gButtonCreateOrEdit.Size = new Size(100, 35);
@@ -246,7 +246,7 @@
             gShadowPanelTopic.Controls.Add(lblThesisTopic);
             gShadowPanelTopic.Controls.Add(gTextBoxTopic);
             gShadowPanelTopic.FillColor = Color.White;
-            gShadowPanelTopic.Location = new Point(20, 19);
+            gShadowPanelTopic.Location = new Point(19, 19);
             gShadowPanelTopic.Name = "gShadowPanelTopic";
             gShadowPanelTopic.Radius = 7;
             gShadowPanelTopic.ShadowColor = Color.Black;
@@ -406,12 +406,12 @@
             gShadowPanelTechFunc.Controls.Add(lblTechnology);
             gShadowPanelTechFunc.Controls.Add(lblFunction);
             gShadowPanelTechFunc.FillColor = Color.White;
-            gShadowPanelTechFunc.Location = new Point(537, 19);
+            gShadowPanelTechFunc.Location = new Point(536, 19);
             gShadowPanelTechFunc.Name = "gShadowPanelTechFunc";
             gShadowPanelTechFunc.Radius = 7;
             gShadowPanelTechFunc.ShadowColor = Color.Black;
             gShadowPanelTechFunc.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            gShadowPanelTechFunc.Size = new Size(622, 666);
+            gShadowPanelTechFunc.Size = new Size(724, 666);
             gShadowPanelTechFunc.TabIndex = 27;
             // 
             // gButtonTechnologyClear
@@ -426,7 +426,7 @@
             gButtonTechnologyClear.FillColor = Color.Silver;
             gButtonTechnologyClear.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             gButtonTechnologyClear.ForeColor = Color.White;
-            gButtonTechnologyClear.Location = new Point(475, 49);
+            gButtonTechnologyClear.Location = new Point(572, 49);
             gButtonTechnologyClear.Name = "gButtonTechnologyClear";
             gButtonTechnologyClear.ShadowDecoration.CustomizableEdges = customizableEdges20;
             gButtonTechnologyClear.Size = new Size(100, 31);
@@ -450,7 +450,7 @@
             gComboBoxTechnology.Location = new Point(25, 49);
             gComboBoxTechnology.Name = "gComboBoxTechnology";
             gComboBoxTechnology.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            gComboBoxTechnology.Size = new Size(444, 31);
+            gComboBoxTechnology.Size = new Size(541, 31);
             gComboBoxTechnology.TabIndex = 14;
             gComboBoxTechnology.TextOffset = new Point(5, 0);
             gComboBoxTechnology.SelectedIndexChanged += gComboBoxTechnology_SelectedIndexChanged;
@@ -482,7 +482,7 @@
             gTextBoxRequirements.PlaceholderText = "requirements";
             gTextBoxRequirements.SelectedText = "";
             gTextBoxRequirements.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            gTextBoxRequirements.Size = new Size(550, 170);
+            gTextBoxRequirements.Size = new Size(648, 170);
             gTextBoxRequirements.TabIndex = 7;
             gTextBoxRequirements.TextOffset = new Point(5, 0);
             gTextBoxRequirements.TextChanged += gTextBoxRequirements_TextChanged;
@@ -514,7 +514,7 @@
             gTextBoxFunctions.PlaceholderText = "functions";
             gTextBoxFunctions.SelectedText = "";
             gTextBoxFunctions.ShadowDecoration.CustomizableEdges = customizableEdges26;
-            gTextBoxFunctions.Size = new Size(550, 170);
+            gTextBoxFunctions.Size = new Size(648, 170);
             gTextBoxFunctions.TabIndex = 12;
             gTextBoxFunctions.TextOffset = new Point(5, 0);
             gTextBoxFunctions.TextChanged += gTextBoxFunctions_TextChanged;
@@ -556,7 +556,7 @@
             gTextBoxTechnology.PlaceholderText = "technology";
             gTextBoxTechnology.SelectedText = "";
             gTextBoxTechnology.ShadowDecoration.CustomizableEdges = customizableEdges28;
-            gTextBoxTechnology.Size = new Size(550, 120);
+            gTextBoxTechnology.Size = new Size(648, 120);
             gTextBoxTechnology.TabIndex = 7;
             gTextBoxTechnology.TextOffset = new Point(5, 0);
             gTextBoxTechnology.TextChanged += gTextBoxTechnology_TextChanged;
@@ -614,7 +614,7 @@
             gShadowPanelInstructor.Controls.Add(lblIdLecture);
             gShadowPanelInstructor.Controls.Add(lblInstructor);
             gShadowPanelInstructor.FillColor = Color.White;
-            gShadowPanelInstructor.Location = new Point(20, 590);
+            gShadowPanelInstructor.Location = new Point(19, 590);
             gShadowPanelInstructor.Name = "gShadowPanelInstructor";
             gShadowPanelInstructor.Radius = 7;
             gShadowPanelInstructor.ShadowColor = Color.Black;
@@ -694,7 +694,7 @@
             Controls.Add(gButtonCreateOrEdit);
             Controls.Add(gButtonCancel);
             Name = "UCThesisCreate";
-            Size = new Size(1180, 750);
+            Size = new Size(1280, 750);
             ((System.ComponentModel.ISupportInitialize)gPictureBoxFaculty).EndInit();
             gShadowPanelTopic.ResumeLayout(false);
             gShadowPanelTopic.PerformLayout();

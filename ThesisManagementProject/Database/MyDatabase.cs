@@ -13,6 +13,8 @@ namespace ThesisManagementProject.Database
         public static string DBTeam = "Team";
         public static string DBTask = "Task";
         public static string DBComment = "Comment";
+        public static string DBEvaluation = "Evaluation";
+        public static string DBNotification = "Notification";
         public static string DBThesisStatus = "ThesisStatus";
         public static string DBTechnology = "Technology";
     }
