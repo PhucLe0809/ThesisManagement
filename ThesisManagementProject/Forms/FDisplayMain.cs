@@ -16,11 +16,12 @@ namespace ThesisManagementProject
     public partial class FDisplayMain : Form
     {
         private PeopleDAO peopleDAO = new PeopleDAO();
-        UCDisplayLecture uCDisplayLecture = new UCDisplayLecture();
-        UCDisplayStudent uCDisplayStudent = new UCDisplayStudent();
-        UCDisplayWelcome uCDisplayWelcome = new UCDisplayWelcome();
-        UCDisplayLogin uCDisplayLogin = new UCDisplayLogin();
-        UCDisplayRegister uCDisplayRegister = new UCDisplayRegister();
+
+        private UCDisplayLecture uCDisplayLecture = new UCDisplayLecture();
+        private UCDisplayStudent uCDisplayStudent = new UCDisplayStudent();
+        private UCDisplayWelcome uCDisplayWelcome = new UCDisplayWelcome();
+        private UCDisplayLogin uCDisplayLogin = new UCDisplayLogin();
+        private UCDisplayRegister uCDisplayRegister = new UCDisplayRegister();
 
         public FDisplayMain()
         {

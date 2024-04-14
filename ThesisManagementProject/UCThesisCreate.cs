@@ -23,8 +23,11 @@ namespace ThesisManagementProject
 
         private People people = new People();
         private Thesis thesis = new Thesis();
+
         private PeopleDAO peopleDAO = new PeopleDAO();
         private ThesisDAO thesisDAO = new ThesisDAO();
+        private NotificationDAO notificationDAO = new NotificationDAO();
+
         private UCPeopleMiniLine uCPeopleMiniLine = new UCPeopleMiniLine();
         private bool flagCheck = false;
         private bool flagCreate = false;
@@ -158,6 +161,11 @@ namespace ThesisManagementProject
             if (CheckInformationValid())
             {
                 thesisDAO.Insert(thesis);
+                if (thesis.IdCreator != thesis.IdInstructor)
+                {
+                    string content = Notification.GetContentTypeThesis(people.FullName, thesis.Topic);
+                    notificationDAO.Insert(new Notification(thesis.IdInstructor, thesis.IdCreator, thesis.IdThesis, content, DateTime.Now, false, false));
+                }
                 this.flagCheck = true;
                 InitCreateState();
             }

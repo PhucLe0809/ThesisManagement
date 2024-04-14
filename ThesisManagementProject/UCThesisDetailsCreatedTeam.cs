@@ -17,20 +17,22 @@ namespace ThesisManagementProject
 {
     public partial class UCThesisDetailsCreatedTeam : UserControl
     {
+        private MyProcess myProcess = new MyProcess();
         public event EventHandler RegisteredPerform;
 
         private People people = new People();
         private Thesis thesis = new Thesis();
         private List<People> listPeople = new List<People>();
         private List<People> members = new List<People>();
-        private Image pictureAvatar;
-        private bool flagCheck = false;
 
         private PeopleDAO peopleDAO = new PeopleDAO();
         private ThesisDAO thesisDAO = new ThesisDAO();
-        private ThesisStatusDAO thesisStatusDAO = new ThesisStatusDAO();
         private TeamDAO teamDAO = new TeamDAO();
-        private MyProcess myProcess = new MyProcess();
+        private ThesisStatusDAO thesisStatusDAO = new ThesisStatusDAO();
+        private NotificationDAO notificationDAO = new NotificationDAO();
+
+        private Image pictureAvatar;
+        private bool flagCheck = false;
 
         #region CONTRUCTERS
 
@@ -178,11 +180,15 @@ namespace ThesisManagementProject
                 this.thesis.Status = EThesisStatus.Registered;
 
                 thesisDAO.UpdateStatus(this.thesis, EThesisStatus.Registered);
-
                 Team team = new Team(gTextBoxTeamName.Text, myProcess.ImageToName(pictureAvatar), members);
                 thesisStatusDAO.Insert(this.thesis, team);
-
                 teamDAO.Insert(team);
+
+                string content = Notification.GetContentTypeRegistered(team.TeamName, thesis.Topic);
+                notificationDAO.Insert(new Notification(thesis.IdInstructor, people.IdAccount, thesis.IdThesis, content, DateTime.Now, false, false));
+
+                string message = Notification.GetContentRegisteredMembers(people.FullName, team.TeamName, thesis.Topic);
+                notificationDAO.InsertFollowListPeople(people.IdAccount, thesis.IdThesis, message, team.Members);
 
                 MessageBox.Show("Registered successfuly", "Notification", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                 this.gGradientButtonRegister.Enabled = false;

@@ -22,19 +22,6 @@ namespace ThesisManagementProject
         {
             InitializeComponent();
         }
-        public UCThesisDetailsTeam(Team team)
-        {
-            InitializeComponent();
-
-            SetInformation(team, new Thesis());
-        }
-        public UCThesisDetailsTeam(Team team, Thesis thesis)
-        {
-            InitializeComponent();
-
-            SetInformation(team, thesis);
-        }
-
         public void SetInformation(Team team, Thesis thesis)
         {
             this.team = team;

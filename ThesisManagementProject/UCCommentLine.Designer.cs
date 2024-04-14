@@ -95,6 +95,7 @@
             BackColor = Color.White;
             Controls.Add(gShadowPanelTeam);
             Controls.Add(gCirclePictureBoxCreator);
+            DoubleBuffered = true;
             Name = "UCCommentLine";
             Size = new Size(640, 108);
             ((System.ComponentModel.ISupportInitialize)gCirclePictureBoxCreator).EndInit();

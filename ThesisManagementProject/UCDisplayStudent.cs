@@ -26,7 +26,6 @@ namespace ThesisManagementProject
         private List<Guna2Button> listButton = new List<Guna2Button>();
         private List<Image> listImage = new List<Image>();
 
-
         public UCDisplayStudent()
         {
             InitializeComponent();

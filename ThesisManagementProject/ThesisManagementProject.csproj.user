@@ -67,12 +67,6 @@
     <Compile Update="UCTaskMiniLine.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UCTeamLine.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="UCTeamList.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Update="UCPeopleMiniLine.cs">
       <SubType>UserControl</SubType>
     </Compile>

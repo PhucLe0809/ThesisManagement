@@ -651,6 +651,7 @@
             Controls.Add(gGradientButtonRegistered);
             Controls.Add(gGradientButtonTasks);
             Controls.Add(gGradientButtonStatistical);
+            DoubleBuffered = true;
             Name = "UCThesisDetails";
             Size = new Size(1280, 750);
             gShadowPanelTopic.ResumeLayout(false);

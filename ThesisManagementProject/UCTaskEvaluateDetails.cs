@@ -22,7 +22,10 @@ namespace ThesisManagementProject
         private People student = new People();
         private People host = new People();
         private Evaluation evaluation = new Evaluation();
+
         private EvaluationDAO evaluationDAO = new EvaluationDAO();
+        private NotificationDAO notificationDAO = new NotificationDAO();
+
         private bool isProcessing = true;
         private bool flagCheck = false;
 
@@ -147,6 +150,11 @@ namespace ThesisManagementProject
                                             int.Parse(gTextBoxContribute.Text), float.Parse(gTextBoxScores.Text), DateTime.Now, host.Role == ERole.Lecture);
 
                 evaluationDAO.Update(evaluation);
+                if (host.Role == ERole.Lecture && evaluation.IsEvaluated)
+                {
+                    string content = Notification.GetContentTypeEvaluation(host.FullName, tasks.Title);
+                    notificationDAO.Insert(new Notification(student.IdAccount, host.IdAccount, evaluation.IdEvaluation, content, DateTime.Now, false, false));
+                }
                 this.flagCheck = true;
                 SetEditState(false);
             }

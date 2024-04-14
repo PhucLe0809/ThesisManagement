@@ -202,6 +202,7 @@
             Controls.Add(gTextBoxStatus);
             Controls.Add(gButtonStar);
             Controls.Add(gTextBoxTopic);
+            DoubleBuffered = true;
             Name = "UCThesisMiniBoard";
             Size = new Size(399, 266);
             ResumeLayout(false);

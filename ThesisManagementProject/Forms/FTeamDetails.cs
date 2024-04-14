@@ -28,10 +28,8 @@ namespace ThesisManagementProject
         public FTeamDetails(Team team, Thesis thesis)
         {
             InitializeComponent();
-
             SetInformation(team, thesis);
         }
-
         private void SetInformation(Team team, Thesis thesis)
         {
             this.team = team;

@@ -677,6 +677,7 @@
             Controls.Add(gPanelThesisList);
             Controls.Add(gPanelInformation);
             Controls.Add(gPanelEditInfor);
+            DoubleBuffered = true;
             Name = "UCAccount";
             Size = new Size(1329, 829);
             gPanelInformation.ResumeLayout(false);

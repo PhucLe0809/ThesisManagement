@@ -11,6 +11,7 @@ using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using ThesisManagementProject.Database;
+using ThesisManagementProject.Models;
 
 namespace ThesisManagementProject.Process
 {

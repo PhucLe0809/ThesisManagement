@@ -18,8 +18,10 @@ namespace ThesisManagementProject
         private People people = new People();
         private People instructor = new People();
         private Team team = new Team();
-        private TasksDAO taskDAO = new TasksDAO();
+        private Thesis thesis = new Thesis();
         private List<Tasks> listTask = new List<Tasks>();
+
+        private TasksDAO taskDAO = new TasksDAO();
         private UCTaskCreate uCTaskCreate = new UCTaskCreate();
         private bool isProcessing = true;
 
@@ -30,18 +32,19 @@ namespace ThesisManagementProject
 
         #region FUNCTIONS
 
-        public void SetUpUserControl(People people, People instructor, Team team, bool isProcessing)
+        public void SetUpUserControl(People people, People instructor, Team team, Thesis thesis, bool isProcessing)
         {
             this.people = people;
             this.instructor = instructor;
             this.team = team;
+            this.thesis = thesis;
             this.isProcessing = isProcessing;
             InitUserControl();
         }
         private void InitUserControl()
         {
             flpTaskList.Location = new Point(12, 12);
-            uCTaskCreate.SetUpUserControl(people, team);
+            uCTaskCreate.SetUpUserControl(people, instructor, team, thesis);
             uCTaskCreate.Location = new Point(12, 12);
             uCTaskCreate.GButtonCancel.Click += GButtonCancel_Click;
             uCTaskCreate.TasksCreateClicked += UCTaskCreate_TasksCreateClicked;
@@ -60,7 +63,7 @@ namespace ThesisManagementProject
             UpdateTaskList();
             LoadTaskList();
         }
-        private void UCTaskCreate_TasksCreateClicked(object? sender, EventArgs e)
+        private void UCTaskCreate_TasksCreateClicked(object sender, EventArgs e)
         {
             Tasks tasks = taskDAO.SelectOnly(uCTaskCreate.GetTasks.IdTask);
 

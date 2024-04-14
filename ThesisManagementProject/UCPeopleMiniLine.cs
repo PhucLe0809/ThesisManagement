@@ -25,9 +25,9 @@ namespace ThesisManagementProject
         private MyProcess myProcess = new MyProcess();
         private People people = new People();
         private Evaluation evaluation = new Evaluation();
+        private bool isEvaluate = false;
         private Color uCBackColor = Color.White;
         private Color uCHoverColor = SystemColors.ButtonFace;
-        private bool isEvaluate = false;
 
         public UCPeopleMiniLine()
         {

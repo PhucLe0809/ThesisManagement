@@ -18,10 +18,6 @@ namespace ThesisManagementProject
         public event EventHandler ThesisAddAccepted;
         private Team team = new Team();
 
-        public UCTeamMiniLine()
-        {
-            InitializeComponent();
-        }
         public UCTeamMiniLine(Team team)
         {
             InitializeComponent();

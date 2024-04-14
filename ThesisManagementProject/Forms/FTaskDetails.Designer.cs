@@ -482,6 +482,7 @@
             Controls.Add(gGradientButtonComment);
             Controls.Add(gShadowPanelTopic);
             Controls.Add(gGradientButtonEvaluate);
+            DoubleBuffered = true;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "FTaskDetails";

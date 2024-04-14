@@ -48,6 +48,16 @@ namespace ThesisManagementProject.DAOs
             ExecuteQueryNotification(notification, "INSERT INTO {0} VALUES ('{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', {8}, {9})",
                 "Create", false);
         }
+        public void InsertFollowListPeople(string idSender, string idObject, string content, List<People> peoples)
+        {
+            foreach (People people in peoples)
+            {
+                if (people.IdAccount != idSender)
+                {
+                    Insert(new Notification(people.IdAccount, idSender, idObject, content, DateTime.Now, false, false));
+                }
+            }
+        }
         public void Delete(Notification notification)
         {
             ExecuteQueryNotification(notification, "DELETE FROM {0} WHERE idnotification = '{1}'",

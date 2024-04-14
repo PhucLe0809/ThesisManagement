@@ -388,6 +388,7 @@
             BackColor = Color.White;
             Controls.Add(gShadowPanelEvaluate);
             Controls.Add(gButtonBack);
+            DoubleBuffered = true;
             Name = "UCTaskEvaluateDetails";
             Size = new Size(680, 490);
             gShadowPanelEvaluate.ResumeLayout(false);

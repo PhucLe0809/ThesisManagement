@@ -693,6 +693,7 @@
             Controls.Add(gShadowPanelTopic);
             Controls.Add(gButtonCreateOrEdit);
             Controls.Add(gButtonCancel);
+            DoubleBuffered = true;
             Name = "UCThesisCreate";
             Size = new Size(1280, 750);
             ((System.ComponentModel.ISupportInitialize)gPictureBoxFaculty).EndInit();

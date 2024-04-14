@@ -20,10 +20,8 @@ namespace ThesisManagementProject
         public FPeopleDetails(People people)
         {
             InitializeComponent();
-
             SetInformation(people);
         }
-
         public void SetInformation(People people)
         {
             this.people = people;

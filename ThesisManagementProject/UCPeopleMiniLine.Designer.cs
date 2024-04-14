@@ -30,19 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCPeopleMiniLine));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lblPeopleCode = new Label();
             lblUserName = new Label();
             gCirclePictureBoxAvatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             gShadowPanelBack = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            gButtonComplete = new Guna.UI2.WinForms.Guna2Button();
             gProgressBarToLine = new Guna.UI2.WinForms.Guna2ProgressBar();
             gButtonAdd = new Guna.UI2.WinForms.Guna2Button();
-            gButtonComplete = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)gCirclePictureBoxAvatar).BeginInit();
             gShadowPanelBack.SuspendLayout();
             SuspendLayout();
@@ -104,6 +104,29 @@
             gShadowPanelBack.MouseEnter += gShadowPanelBack_MouseEnter;
             gShadowPanelBack.MouseLeave += gShadowPanelBack_MouseLeave;
             // 
+            // gButtonComplete
+            // 
+            gButtonComplete.BackColor = Color.White;
+            gButtonComplete.BorderRadius = 5;
+            gButtonComplete.CustomizableEdges = customizableEdges2;
+            gButtonComplete.DisabledState.BorderColor = Color.White;
+            gButtonComplete.DisabledState.CustomBorderColor = Color.White;
+            gButtonComplete.DisabledState.FillColor = Color.White;
+            gButtonComplete.DisabledState.ForeColor = Color.White;
+            gButtonComplete.FillColor = Color.White;
+            gButtonComplete.Font = new Font("Segoe UI", 9F);
+            gButtonComplete.ForeColor = Color.White;
+            gButtonComplete.HoverState.FillColor = Color.White;
+            gButtonComplete.HoverState.Image = (Image)resources.GetObject("resource.Image");
+            gButtonComplete.Image = (Image)resources.GetObject("gButtonComplete.Image");
+            gButtonComplete.ImageSize = new Size(25, 25);
+            gButtonComplete.Location = new Point(547, 9);
+            gButtonComplete.Name = "gButtonComplete";
+            gButtonComplete.PressedColor = Color.White;
+            gButtonComplete.ShadowDecoration.CustomizableEdges = customizableEdges3;
+            gButtonComplete.Size = new Size(35, 35);
+            gButtonComplete.TabIndex = 61;
+            // 
             // gProgressBarToLine
             // 
             gProgressBarToLine.BorderRadius = 8;
@@ -142,29 +165,6 @@
             gButtonAdd.Size = new Size(35, 35);
             gButtonAdd.TabIndex = 14;
             gButtonAdd.Click += gButtonAdd_Click;
-            // 
-            // gButtonComplete
-            // 
-            gButtonComplete.BackColor = Color.White;
-            gButtonComplete.BorderRadius = 5;
-            gButtonComplete.CustomizableEdges = customizableEdges2;
-            gButtonComplete.DisabledState.BorderColor = Color.White;
-            gButtonComplete.DisabledState.CustomBorderColor = Color.White;
-            gButtonComplete.DisabledState.FillColor = Color.White;
-            gButtonComplete.DisabledState.ForeColor = Color.White;
-            gButtonComplete.FillColor = Color.White;
-            gButtonComplete.Font = new Font("Segoe UI", 9F);
-            gButtonComplete.ForeColor = Color.White;
-            gButtonComplete.HoverState.FillColor = Color.White;
-            gButtonComplete.HoverState.Image = (Image)resources.GetObject("resource.Image");
-            gButtonComplete.Image = (Image)resources.GetObject("gButtonComplete.Image");
-            gButtonComplete.ImageSize = new Size(25, 25);
-            gButtonComplete.Location = new Point(547, 9);
-            gButtonComplete.Name = "gButtonComplete";
-            gButtonComplete.PressedColor = Color.White;
-            gButtonComplete.ShadowDecoration.CustomizableEdges = customizableEdges3;
-            gButtonComplete.Size = new Size(35, 35);
-            gButtonComplete.TabIndex = 61;
             // 
             // UCPeopleMiniLine
             // 

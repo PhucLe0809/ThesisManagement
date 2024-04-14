@@ -343,6 +343,7 @@
             BackColor = Color.White;
             Controls.Add(gShadowPanelUser);
             Controls.Add(pnlAddUserControl);
+            DoubleBuffered = true;
             Name = "UCWelcome";
             Size = new Size(1329, 829);
             pnlAddUserControl.ResumeLayout(false);

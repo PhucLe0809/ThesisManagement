@@ -162,6 +162,7 @@
             Controls.Add(gShadowPanelProcess);
             Controls.Add(gShadowPanelDataView);
             Controls.Add(gShadowPanelGeneral);
+            DoubleBuffered = true;
             Name = "UCDashboardStatistical";
             Size = new Size(1280, 750);
             gShadowPanelProcess.ResumeLayout(false);

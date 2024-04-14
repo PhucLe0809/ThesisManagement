@@ -35,6 +35,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Silver;
+            DoubleBuffered = true;
             Name = "UCThesisDetailsStatistical";
             Size = new Size(715, 635);
             ResumeLayout(false);

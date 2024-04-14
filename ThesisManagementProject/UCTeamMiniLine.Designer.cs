@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCTeamMiniLine));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             gButtonAdd = new Guna.UI2.WinForms.Guna2Button();
             gShadowPanelBack = new Guna.UI2.WinForms.Guna2ShadowPanel();
             gTextBoxTeamMemebrs = new Guna.UI2.WinForms.Guna2TextBox();
@@ -47,7 +47,7 @@
             // gButtonAdd
             // 
             gButtonAdd.BorderRadius = 5;
-            gButtonAdd.CustomizableEdges = customizableEdges1;
+            gButtonAdd.CustomizableEdges = customizableEdges6;
             gButtonAdd.DisabledState.BorderColor = Color.White;
             gButtonAdd.DisabledState.CustomBorderColor = Color.White;
             gButtonAdd.DisabledState.FillColor = Color.White;
@@ -62,7 +62,7 @@
             gButtonAdd.Location = new Point(576, 10);
             gButtonAdd.Name = "gButtonAdd";
             gButtonAdd.PressedColor = SystemColors.ButtonFace;
-            gButtonAdd.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            gButtonAdd.ShadowDecoration.CustomizableEdges = customizableEdges7;
             gButtonAdd.Size = new Size(35, 35);
             gButtonAdd.TabIndex = 14;
             gButtonAdd.Click += gButtonAdd_Click;
@@ -91,7 +91,7 @@
             gTextBoxTeamMemebrs.BackColor = SystemColors.ButtonFace;
             gTextBoxTeamMemebrs.BorderRadius = 10;
             gTextBoxTeamMemebrs.BorderThickness = 0;
-            gTextBoxTeamMemebrs.CustomizableEdges = customizableEdges3;
+            gTextBoxTeamMemebrs.CustomizableEdges = customizableEdges8;
             gTextBoxTeamMemebrs.DefaultText = "5 members";
             gTextBoxTeamMemebrs.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxTeamMemebrs.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -110,7 +110,7 @@
             gTextBoxTeamMemebrs.PlaceholderText = "";
             gTextBoxTeamMemebrs.ReadOnly = true;
             gTextBoxTeamMemebrs.SelectedText = "";
-            gTextBoxTeamMemebrs.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            gTextBoxTeamMemebrs.ShadowDecoration.CustomizableEdges = customizableEdges9;
             gTextBoxTeamMemebrs.Size = new Size(115, 25);
             gTextBoxTeamMemebrs.TabIndex = 57;
             gTextBoxTeamMemebrs.TextAlign = HorizontalAlignment.Center;
@@ -142,7 +142,7 @@
             gCirclePictureBoxAvatar.ImageRotate = 0F;
             gCirclePictureBoxAvatar.Location = new Point(17, 8);
             gCirclePictureBoxAvatar.Name = "gCirclePictureBoxAvatar";
-            gCirclePictureBoxAvatar.ShadowDecoration.CustomizableEdges = customizableEdges5;
+            gCirclePictureBoxAvatar.ShadowDecoration.CustomizableEdges = customizableEdges10;
             gCirclePictureBoxAvatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             gCirclePictureBoxAvatar.Size = new Size(40, 40);
             gCirclePictureBoxAvatar.SizeMode = PictureBoxSizeMode.Zoom;
@@ -155,6 +155,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             Controls.Add(gShadowPanelBack);
+            DoubleBuffered = true;
             Name = "UCTeamMiniLine";
             Size = new Size(630, 60);
             gShadowPanelBack.ResumeLayout(false);

@@ -208,6 +208,7 @@
             Controls.Add(lblWelcome);
             Controls.Add(gPictureBoxLogo);
             Controls.Add(gButtonLogin);
+            DoubleBuffered = true;
             Name = "UCDisplayWelcome";
             Size = new Size(1681, 853);
             ((System.ComponentModel.ISupportInitialize)gPictureBoxLogo).EndInit();

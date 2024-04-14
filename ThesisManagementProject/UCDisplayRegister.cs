@@ -19,11 +19,10 @@ namespace ThesisManagementProject
     public partial class UCDisplayRegister : UserControl
     {
         private MyProcess myProcess = new MyProcess();
-
         private People people = new People();
         private PeopleDAO peopleDAO = new PeopleDAO();
-        private bool flagCheck = false;
 
+        private bool flagCheck = false;
         private Image pictureAvatar = Properties.Resources.PicAvatarDemoUser;
 
         public UCDisplayRegister()

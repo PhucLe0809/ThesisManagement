@@ -749,6 +749,7 @@
             Controls.Add(gSeparatorTopicThesis);
             Controls.Add(gButtonCancel);
             Controls.Add(gGradientButtonSave);
+            DoubleBuffered = true;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "FThesisFilter";

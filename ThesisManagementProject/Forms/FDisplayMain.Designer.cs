@@ -50,6 +50,7 @@
             BackColor = Color.White;
             ClientSize = new Size(1682, 853);
             Controls.Add(gPanelDisplay);
+            DoubleBuffered = true;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "FDisplayMain";

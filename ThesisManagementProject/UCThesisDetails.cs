@@ -24,12 +24,13 @@ namespace ThesisManagementProject
         private People host = new People();
         private Team team = new Team();
         private People instructor = new People();
+        private List<Team> listTeam = new List<Team>();
+
         private ThesisDAO thesisDAO = new ThesisDAO();
         private PeopleDAO peopleDAO = new PeopleDAO();
         private TeamDAO teamDAO = new TeamDAO();
         private ThesisStatusDAO thesisStatusDAO = new ThesisStatusDAO();
-        private bool flagWaiting = false;
-        private List<Team> listTeam = new List<Team>();
+        private NotificationDAO notificationDAO = new NotificationDAO();
 
         private UCThesisDetailsTeam showTeam = new UCThesisDetailsTeam();        
         private UCThesisDetailsRegistered uCThesisDetailsRegistered = new UCThesisDetailsRegistered();
@@ -39,6 +40,7 @@ namespace ThesisManagementProject
 
         private bool flagEdited = false;
         private bool flagDeleted = false;
+        private bool flagWaiting = false;
 
         public UCThesisDetails()
         {
@@ -253,7 +255,7 @@ namespace ThesisManagementProject
         {
             AllButtonStandardColor();
             myProcess.ButtonSettingColor(gGradientButtonTasks);
-            uCThesisDetailsTasks.SetUpUserControl(host, instructor, team, thesis.Status == EThesisStatus.Processing);
+            uCThesisDetailsTasks.SetUpUserControl(host, instructor, team, thesis, thesis.Status == EThesisStatus.Processing);
             gPanelDataView.Controls.Clear();
             gPanelDataView.Controls.Add(uCThesisDetailsTasks);
         }
@@ -305,9 +307,14 @@ namespace ThesisManagementProject
                 {
                     this.flagEdited = true;
                     this.thesis.Status = EThesisStatus.Processing;
-                    teamDAO.Delete(this.listTeam, this.thesis.IdThesis);
+                    teamDAO.DeleteListTeam(this.listTeam);
+                    teamDAO.Insert(team);
+                    thesisStatusDAO.DeleteListTeam(this.listTeam, this.thesis.IdThesis);
                     thesisStatusDAO.Insert(this.thesis, team);
                     thesisDAO.UpdateStatus(this.thesis, EThesisStatus.Processing);
+
+                    string content = Notification.GetContentTypeAccepted(host.FullName, thesis.Topic);
+                    notificationDAO.InsertFollowListPeople(host.IdAccount, thesis.IdThesis, content, team.Members);
 
                     SetThesisDetailsMode();
                     gTextBoxStatus.Text = thesis.Status.ToString();
