@@ -17,12 +17,14 @@ namespace ThesisManagementProject
     public partial class UCThesisLine : UserControl
     {
         private MyProcess myProcess = new MyProcess();
+        public event EventHandler NotificationJump;
         public event EventHandler ThesisLineClicked;
         public event EventHandler ThesisDeleteClicked;
 
         private Thesis thesis = new Thesis();
         private People creator = new People();
         private People instructor = new People();
+        private Notification notification = new Notification();
 
         private ThesisDAO thesisDAO = new ThesisDAO();
         private PeopleDAO peopleDAO = new PeopleDAO();
@@ -36,13 +38,13 @@ namespace ThesisManagementProject
 
         #region PROPERTIES
 
-        public Guna2Button GetGButtonDelete
-        {
-            get => gButtonDelete;
-        }
-        public string ID
+        public string GetIdThesis
         {
             get { return this.thesis.IdThesis; }
+        }
+        public Notification GetNotification
+        {
+            get { return this.notification; }
         }
 
         #endregion
@@ -82,6 +84,15 @@ namespace ThesisManagementProject
             thesisStatusDAO.DeleteListTeam(listTeam, this.thesis.IdThesis);
 
             OnThesisDeleteClicked(EventArgs.Empty);
+        }
+        public void PerformNotificationClick(Notification notification)
+        {
+            this.notification = notification;
+            OnNotificationJump(EventArgs.Empty);
+        }
+        private void OnNotificationJump(EventArgs e)
+        {
+            NotificationJump?.Invoke(this, e);
         }
 
         #endregion

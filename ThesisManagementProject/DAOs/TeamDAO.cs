@@ -47,6 +47,21 @@ namespace ThesisManagementProject.DAOs
             DataTable table = Select(command);
             return SelectOnly(table.Rows[0]["idteam"].ToString());
         }
+        public List<Team> SelectFollowPeople(People people)
+        {
+            string command = string.Format("SELECT * FROM {0} WHERE idaccount = '{1}'", MyDatabase.DBTeam, people.IdAccount);
+
+            DataTable dataTable = Select(command);
+
+            List<Team> list = new List<Team>();
+            foreach (DataRow row in dataTable.Rows)
+            {
+                Team team = SelectOnly(row["idteam"].ToString());
+                list.Add(team);
+            }
+
+            return list;
+        }
 
         #endregion
 

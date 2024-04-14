@@ -24,6 +24,7 @@ namespace ThesisManagementProject
         private People host = new People();
         private Team team = new Team();
         private People instructor = new People();
+        private Notification notification = new Notification();
         private List<Team> listTeam = new List<Team>();
 
         private ThesisDAO thesisDAO = new ThesisDAO();
@@ -110,13 +111,11 @@ namespace ThesisManagementProject
         }
         private void SetControlsReadOnly(bool flagReadOnly)
         {
-            int thickness = flagReadOnly ? 0 : 1;
-            Color colors = flagReadOnly ? SystemColors.ButtonFace : Color.White;
-            myProcess.SetTextBoxReadOnly(gTextBoxTopic, thickness, colors, flagReadOnly);
-            myProcess.SetTextBoxReadOnly(gTextBoxDescription, thickness, colors, flagReadOnly);
-            myProcess.SetTextBoxReadOnly(gTextBoxField, thickness, colors, flagReadOnly);
-            myProcess.SetTextBoxReadOnly(gTextBoxLevel, thickness, colors, flagReadOnly);
-            myProcess.SetTextBoxReadOnly(gTextBoxMembers, thickness, colors, flagReadOnly);
+            myProcess.SetTextBoxState(gTextBoxTopic, flagReadOnly);
+            myProcess.SetTextBoxState(gTextBoxDescription, flagReadOnly);
+            myProcess.SetTextBoxState(gTextBoxField, flagReadOnly);
+            myProcess.SetTextBoxState(gTextBoxLevel, flagReadOnly);
+            myProcess.SetTextBoxState(gTextBoxMembers, flagReadOnly);
         }
         private void SetWaiting()
         {
@@ -223,6 +222,15 @@ namespace ThesisManagementProject
             myProcess.ButtonStandardColor(gGradientButtonTasks, Color.White, Color.White);
             myProcess.ButtonStandardColor(gGradientButtonStatistical, Color.White, Color.White);
         }
+        public void PerformNotificationClick(Notification notification)
+        {
+            this.notification = notification;
+            if (this.notification.Type != ENotificationType.Thesis)
+            {
+                gGradientButtonTasks.PerformClick();
+                uCThesisDetailsTasks.PerformNotificationClick(notification);
+            }
+        }
 
         #endregion
 
@@ -314,7 +322,7 @@ namespace ThesisManagementProject
                     thesisDAO.UpdateStatus(this.thesis, EThesisStatus.Processing);
 
                     string content = Notification.GetContentTypeAccepted(host.FullName, thesis.Topic);
-                    notificationDAO.InsertFollowListPeople(host.IdAccount, thesis.IdThesis, content, team.Members);
+                    notificationDAO.InsertFollowListPeople(host.IdAccount, thesis.IdThesis, thesis.IdThesis, content, team.Members);
 
                     SetThesisDetailsMode();
                     gTextBoxStatus.Text = thesis.Status.ToString();

@@ -85,6 +85,21 @@ namespace ThesisManagementProject
                 gGradientButtonFilter.FillColor2 = Color.White;
             }
         }
+        public void NotificationJump(Notification notification)
+        {
+            foreach (UCThesisLine line in flpThesisList.Controls)
+            {
+                if (line != null)
+                {
+                    if (line.GetIdThesis == notification.IdThesis)
+                    {
+                        line.PerformNotificationClick(notification);
+                        return;
+                    }
+                }
+            }
+        }
+
 
         #endregion
 

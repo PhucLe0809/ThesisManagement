@@ -22,8 +22,9 @@ namespace ThesisManagementProject
 
         private People creator = new People();
         private People instructor = new People();
-        private Team team = new Team();
+        private Thesis thesis = new Thesis();
         private Tasks tasks = new Tasks();
+        private Team team = new Team();
         private People host = new People();
 
         private PeopleDAO peopleDAO = new PeopleDAO();
@@ -32,11 +33,12 @@ namespace ThesisManagementProject
 
         private bool isProcessing = false;
 
-        public UCTaskMiniLine(People host, People instructor, Tasks tasks, bool isProcessing)
+        public UCTaskMiniLine(People host, People instructor, Thesis thesis, Tasks tasks, bool isProcessing)
         {
             InitializeComponent();
             this.host = host;
             this.instructor = instructor;
+            this.thesis = thesis;
             this.tasks = tasks;
             this.isProcessing = isProcessing;
             InitUserControl();
@@ -61,11 +63,20 @@ namespace ThesisManagementProject
                 lblTaskTitle.Text = myProcess.FormatStringLength(tasks.Title, 53);
             }
         }
-        private void gShadowPanelTeam_Click(object sender, EventArgs e)
+        private void TaskDetailsShow(Notification notification, bool flag)
         {
-            FTaskDetails fTaskDetails = new FTaskDetails(host, instructor, tasks, creator, team, isProcessing);
+            FTaskDetails fTaskDetails = new FTaskDetails(host, instructor, thesis, tasks, creator, team, isProcessing);
+            if (flag) fTaskDetails.PerformNotificationClick(notification);
             fTaskDetails.FormClosed += FTaskDetails_FormClosed;
             fTaskDetails.ShowDialog();
+        }
+        public void PerformNotificationClick(Notification notification)
+        {
+            TaskDetailsShow(notification, true);
+        }
+        private void gShadowPanelTeam_Click(object sender, EventArgs e)
+        {
+            TaskDetailsShow(new Notification(), false);
         }
         private void FTaskDetails_FormClosed(object? sender, FormClosedEventArgs e)
         {

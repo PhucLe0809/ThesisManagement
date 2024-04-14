@@ -22,8 +22,9 @@ namespace ThesisManagementProject.Forms
         private People host = new People();
         private People creator = new People();
         private People instructor = new People();
-        private Team team = new Team();
+        private Thesis thesis = new Thesis();
         private Tasks tasks = new Tasks();
+        private Team team = new Team();
         private Tasks dynamicTask = new Tasks();
 
         private TasksDAO tasksDAO = new TasksDAO();
@@ -37,11 +38,16 @@ namespace ThesisManagementProject.Forms
         private bool flagCheck = false;
         private bool edited = false;
 
-        public FTaskDetails(People host, People instructor, Tasks tasks, People creator, Team team, bool isProcessing)
+        public FTaskDetails()
+        {
+            InitializeComponent();
+        }
+        public FTaskDetails(People host, People instructor, Thesis thesis, Tasks tasks, People creator, Team team, bool isProcessing)
         {
             InitializeComponent();
             this.host = host;
             this.instructor = instructor;
+            this.thesis = thesis;
             this.tasks = tasks;
             this.creator = creator;
             this.team = team;
@@ -81,10 +87,10 @@ namespace ThesisManagementProject.Forms
                 gButtonStar.Location = new Point(383, 17);
             }
 
-            uCTaskComment.SetUpUserControl(host, instructor, tasks, isProcessing);
+            uCTaskComment.SetUpUserControl(host, instructor, thesis, tasks, isProcessing);
             gShadowPanelView.Controls.Add(uCTaskComment);
 
-            uCTaskEvaluateList.SetUpUserControl(tasks, team, host);
+            uCTaskEvaluateList.SetUpUserControl(thesis, tasks, team, host);
             uCTaskEvaluateList.ClickEvaluate += Line_ClickEvaluate;
             gShadowPanelView.Controls.Add(uCTaskEvaluateList);
 
@@ -120,6 +126,11 @@ namespace ThesisManagementProject.Forms
         {
             myProcess.ButtonStandardColor(gGradientButtonComment, Color.White, Color.White);
             myProcess.ButtonStandardColor(gGradientButtonEvaluate, Color.White, Color.White);
+        }
+        public void PerformNotificationClick(Notification notification)
+        {
+            if (notification.Type == ENotificationType.Evaluation) gGradientButtonEvaluate.PerformClick();
+            else gGradientButtonComment.PerformClick();
         }
 
         #endregion
@@ -205,7 +216,7 @@ namespace ThesisManagementProject.Forms
             if (line != null)
             {
                 this.peopleLineClicked = line;
-                uCTaskEvaluateDetails.SetUpUserControl(this.tasks, line.GetPeople, line.GetEvaluation, host, isProcessing);
+                uCTaskEvaluateDetails.SetUpUserControl(thesis, tasks, line.GetPeople, line.GetEvaluation, host, isProcessing);
                 uCTaskComment.Hide();
                 uCTaskEvaluateList.Hide();
                 uCTaskEvaluateDetails.Show();

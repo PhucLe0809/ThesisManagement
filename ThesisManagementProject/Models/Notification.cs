@@ -37,6 +37,7 @@ namespace ThesisManagementProject.Models
         private string idNotification;
         private string idHost;
         private string idSender;
+        private string idThesis;
         private string idObject;
         private string content;
         private ENotificationType type;
@@ -53,6 +54,7 @@ namespace ThesisManagementProject.Models
             this.idNotification = string.Empty;
             this.idHost = string.Empty;
             this.idSender = string.Empty;
+            this.idThesis = string.Empty;
             this.idObject = string.Empty;
             this.content = string.Empty;
             this.type = ENotificationType.Null;
@@ -60,12 +62,13 @@ namespace ThesisManagementProject.Models
             this.isFavorite = false;
             this.isSaw = false;
         }
-        public Notification(string idNotification, string idHost, string idSender, string idObject, string content, 
+        public Notification(string idNotification, string idHost, string idSender, string idThesis, string idObject, string content, 
                             ENotificationType type, DateTime created, bool isFavorite, bool isSaw)
         {
             this.idNotification = idNotification;
             this.idHost = idHost;
             this.idSender = idSender;
+            this.idThesis = idThesis;
             this.idObject= idObject;
             this.content = content;
             this.type = type;
@@ -73,11 +76,12 @@ namespace ThesisManagementProject.Models
             this.isFavorite = isFavorite;
             this.isSaw = isSaw;
         }
-        public Notification(string idHost, string idSender, string idOject, string content, DateTime created, bool isFavorite, bool isSaw)
+        public Notification(string idHost, string idSender, string idThesis, string idOject, string content, DateTime created, bool isFavorite, bool isSaw)
         {
             this.idNotification = myProcess.GenIDClassify(EClassify.Notification);
             this.idHost = idHost;
             this.idSender = idSender;
+            this.idThesis = idThesis;
             this.idObject = idOject; 
             this.content = content;
             this.type = GetNotificationType();
@@ -101,6 +105,10 @@ namespace ThesisManagementProject.Models
         public string IdSender
         {
             get { return this.idSender; }
+        }
+        public string IdThesis
+        {
+            get { return this.idThesis; }
         }
         public string IdObject
         {

@@ -97,6 +97,7 @@ create table Notification
 	idnotification nvarchar(10) not null,
 	idhost nvarchar(10) not null,
 	idsender nvarchar(10) not null,
+	idthesis nvarchar(10) not null,
 	idobject nvarchar(10) not null,
 	content text not null,
 	type nvarchar(15) not null,
@@ -123,7 +124,7 @@ create table Technology
 -- Lecture 1 - 10
 INSERT INTO Account
 VALUES 
-    ('242200001', 'David Lee', '072352117212', '1995-03-15', 'Male', 'david', '0375676599', 'DavidL', 'Lecture', 
+    ('242200001', 'David Lee', '072352117212', '1995-03-15', 'Male', 'david', '0375676599', 'DavidLee', 'Lecture', 
      'HCM City University of Technology and Education', 'Faculty of Information Technology', '5373538693', 'abc', 'PicAvatarOne'),
     ('242200002', 'Alice Johnson', '095216398243', '1994-08-22', 'Female', 'alice@gmail.com', '0652145893', 'AliceJ', 'Lecture', 
      'HCM City University of Technology and Education', 'Faculty of Information Technology', '9236492347', 'abc', 'PicAvatarTwo'),
@@ -153,7 +154,7 @@ INSERT INTO Account
 VALUES 
     ('243300001', 'Emma Watson', '093482139832', '2003-03-15', 'Female', 'emma@gmail.com', '0976523421', 'EmmaW', 'Student', 
      'HCM City University of Technology and Education', 'Faculty of Information Technology', '5372535694', 'abc', 'PicAvatarSix'),
-    ('243300002', 'Chris Evans', '096321587439', '2002-08-22', 'Male', 'chris', '0654321987', 'ChrisE', 'Student', 
+    ('243300002', 'Chris Evans', '096321587439', '2002-08-22', 'Male', 'chris', '0654321987', 'ChrisEvans', 'Student', 
      'HCM City University of Technology and Education', 'Faculty of Information Technology', '9236754210', 'abc', 'PicAvatarFive'),
     ('243300003', 'Scarlett Johansson', '093654827615', '2004-12-10', 'Female', 'scarlett@gmail.com', '0845672310', 'ScarlettJ', 'Student', 
      'HCM City University of Technology and Education', 'Faculty of Information Technology', '1325647892', 'abc', 'PicAvatarTwo'),
@@ -902,16 +903,16 @@ VALUES
 -- INSERT TABLE Notification
 INSERT INTO Notification
 VALUES
-	('2499000001', '242200001', '243300002', '244400001',
+	('2499000001', '242200001', '243300002', '244400001', '244400001',
 	'Chris Evans has suggested the [Enhancing Software Security Through Machine Learning] thesis to you', 
 	'Thesis', '2024-04-12 19:12:05', 1, 0),
-	('2499000002', '242200001', '243300002', '246600001',
+	('2499000002', '242200001', '243300002', '244400005', '246600009',
 	'David Lee has created a [Research cloud storage solutions] task in the [Implementing cloud computing solutions for efficient data storage and processing] thesis', 
 	'Task', '2024-04-07 08:15:25', 1, 0),
-	('2499000003', '243300002', '242200001', '248800001',
+	('2499000003', '243300002', '242200001', '244400005', '248800025',
 	'David Lee evaluated you in [Research cloud storage solutions] task', 
 	'Evaluation', '2024-04-07 21:34:55', 0, 0),
-	('2499000004', '242200001', '243300002', '247700001',
+	('2499000004', '242200001', '243300002', '244400005', '247700043',
 	'Chris Evans commeted [Reviewing potential cloud storage solutions for our needs.] about the [Research cloud storage solutions] task', 
 	'Comment', '2024-04-05 17:35:24', 1, 1);
 

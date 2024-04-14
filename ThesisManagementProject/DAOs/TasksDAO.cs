@@ -41,6 +41,20 @@ namespace ThesisManagementProject.DAOs
             if (dt.Rows.Count > 0) return GetFromDataRow(dt.Rows[0]);
             return new Tasks();
         }
+        public Tasks SelectFromComment(string idComment)
+        {
+            DataTable dt = Select(string.Format("SELECT * FROM {0} WHERE idcomment = '{1}'", MyDatabase.DBComment, idComment));
+
+            if (dt.Rows.Count > 0) return SelectOnly(dt.Rows[0]["idtask"].ToString());
+            return new Tasks();
+        }
+        public Tasks SelectFromEvaluation(string idEvaluation)
+        {
+            DataTable dt = Select(string.Format("SELECT * FROM {0} WHERE idevaluation = '{1}'", MyDatabase.DBEvaluation, idEvaluation));
+
+            if (dt.Rows.Count > 0) return SelectOnly(dt.Rows[0]["idtask"].ToString());
+            return new Tasks();
+        }
 
         #endregion
 

@@ -185,10 +185,10 @@ namespace ThesisManagementProject
                 teamDAO.Insert(team);
 
                 string content = Notification.GetContentTypeRegistered(team.TeamName, thesis.Topic);
-                notificationDAO.Insert(new Notification(thesis.IdInstructor, people.IdAccount, thesis.IdThesis, content, DateTime.Now, false, false));
+                notificationDAO.Insert(new Notification(thesis.IdInstructor, people.IdAccount, thesis.IdThesis, thesis.IdThesis, content, DateTime.Now, false, false));
 
                 string message = Notification.GetContentRegisteredMembers(people.FullName, team.TeamName, thesis.Topic);
-                notificationDAO.InsertFollowListPeople(people.IdAccount, thesis.IdThesis, message, team.Members);
+                notificationDAO.InsertFollowListPeople(people.IdAccount, thesis.IdThesis, thesis.IdThesis, message, team.Members);
 
                 MessageBox.Show("Registered successfuly", "Notification", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                 this.gGradientButtonRegister.Enabled = false;
