@@ -20,11 +20,12 @@ namespace ThesisManagementProject.Forms
         private MyProcess myProcess = new MyProcess();
 
         private People host = new People();
-        private People instructor = new People();
-        private Tasks tasks = new Tasks();
         private People creator = new People();
+        private People instructor = new People();
         private Team team = new Team();
+        private Tasks tasks = new Tasks();
         private Tasks dynamicTask = new Tasks();
+
         private TasksDAO tasksDAO = new TasksDAO();
         private EvaluationDAO evaluationDAO = new EvaluationDAO();
 
@@ -74,7 +75,7 @@ namespace ThesisManagementProject.Forms
             gCirclePictureBoxCreator.Image = myProcess.NameToImage(creator.AvatarName);
             myProcess.SetItemFavorite(gButtonStar, tasks.IsFavorite);
 
-            if (!isProcessing || tasks.IdCreator != host.IdAccount)
+            if (!isProcessing || (host.Role == ERole.Student && tasks.IdCreator != host.IdAccount))
             {
                 gButtonEdit.Hide();
                 gButtonStar.Location = new Point(383, 17);

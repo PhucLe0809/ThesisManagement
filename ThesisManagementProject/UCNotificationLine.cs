@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,11 +17,13 @@ namespace ThesisManagementProject
     public partial class UCNotificationLine : UserControl
     {
         private MyProcess myProcess = new MyProcess();
+        public event EventHandler NotificationDeleteClicked;
 
-        private Notification notification = new Notification();
         private People people = new People();
+        private Notification notification = new Notification();
         private PeopleDAO peopleDAO = new PeopleDAO();
         private NotificationDAO notificationDAO = new NotificationDAO();
+
         private Color lineColor = Color.White;
 
         public UCNotificationLine(Notification notification)
@@ -28,6 +31,10 @@ namespace ThesisManagementProject
             InitializeComponent();
             this.notification = notification;
             InitUserControl();
+        }
+        public Guna2Button GButtonDelete
+        {
+            get { return this.gButtonDelete; }
         }
         private void InitUserControl()
         {
@@ -65,6 +72,26 @@ namespace ThesisManagementProject
                 notification.IsSaw = true;
                 notificationDAO.UpdateIsSaw(notification.IdNotification, true);
             }
+        }
+        private void gButtonStar_Click(object sender, EventArgs e)
+        {
+            notification.IsFavorite = !notification.IsFavorite;
+            myProcess.SetItemFavorite(gButtonStar, notification.IsFavorite);
+            notificationDAO.UpdateIsFavorite(notification.IdNotification, notification.IsFavorite);
+        }
+        private void gButtonDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to delete notification " + notification.IdNotification,
+                                                    "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (result == DialogResult.OK)
+            {
+                notificationDAO.Delete(notification);
+                OnNotificationDeleteClicked(EventArgs.Empty);
+            }
+        }
+        public virtual void OnNotificationDeleteClicked(EventArgs e)
+        {
+            NotificationDeleteClicked?.Invoke(this, e);
         }
     }
 }

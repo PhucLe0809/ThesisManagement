@@ -13,6 +13,7 @@ namespace ThesisManagementProject.Forms
     public partial class FListAvatar : Form
     {
         private Image pictureAvatar;
+
         public FListAvatar()
         {
             InitializeComponent();

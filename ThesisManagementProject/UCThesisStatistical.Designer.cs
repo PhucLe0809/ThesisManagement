@@ -162,6 +162,7 @@
             Controls.Add(gShadowPanelProcess);
             Controls.Add(gPanelInformation);
             Controls.Add(gShadowPanelGenerate);
+            DoubleBuffered = true;
             Name = "UCThesisStatistical";
             Size = new Size(1280, 750);
             gShadowPanelProcess.ResumeLayout(false);

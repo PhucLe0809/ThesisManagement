@@ -23,10 +23,8 @@ namespace ThesisManagementProject.Forms
         public FThesisView(Thesis thesis)
         {
             InitializeComponent();
-
             SetInformation(thesis);
         }
-
         private void SetInformation(Thesis thesis)
         {
             gTextBoxStatus.Text = thesis.Status.ToString();

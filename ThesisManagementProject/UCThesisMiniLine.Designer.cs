@@ -97,6 +97,7 @@
             BackColor = SystemColors.ButtonFace;
             Controls.Add(lblThesisTopic);
             Controls.Add(gShadowPanelBack);
+            DoubleBuffered = true;
             Name = "UCThesisMiniLine";
             Size = new Size(350, 50);
             Click += UCThesisMiniLine_Click;

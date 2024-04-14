@@ -658,6 +658,7 @@
             Controls.Add(gShadowPanelCreAndIns);
             Controls.Add(gShadowPanelTopic);
             Controls.Add(gShadowPanelTechFunc);
+            DoubleBuffered = true;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FThesisView";
             StartPosition = FormStartPosition.CenterScreen;

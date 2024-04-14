@@ -19,11 +19,16 @@ namespace ThesisManagementProject
         private MyProcess myProcess = new MyProcess();
         public event EventHandler TasksCreateClicked;
 
-        private Tasks tasks = new Tasks();
         private People creator = new People();
+        private People instructor = new People();
+        private Tasks tasks = new Tasks();
         private Team team = new Team();
+        private Thesis thesis = new Thesis();
+
         private TasksDAO tasksDAO = new TasksDAO();
         private EvaluationDAO evaluationDAO = new EvaluationDAO();
+        private NotificationDAO notificationDAO = new NotificationDAO();
+
         private bool flagCheck = false;
 
         public UCTaskCreate()
@@ -46,10 +51,12 @@ namespace ThesisManagementProject
 
         #region FUNCTIONS
 
-        public void SetUpUserControl(People creator, Team team)
+        public void SetUpUserControl(People creator, People instructor, Team team, Thesis thesis)
         {
             this.creator = creator;
+            this.instructor = instructor;
             this.team = team;
+            this.thesis = thesis;
             InitUserControl();
         }
         private void InitUserControl()
@@ -71,14 +78,19 @@ namespace ThesisManagementProject
 
         private void gButtonCreate_Click(object sender, EventArgs e)
         {
-            this.tasks = new Tasks(gTextBoxTitle.Text, gTextBoxDescription.Text,
-                                    this.creator.IdAccount, this.team.IDTeam, false, 0, DateTime.Now);
-
             this.flagCheck = false;
             if (CheckInformationValid())
             {
+                this.tasks = new Tasks(gTextBoxTitle.Text, gTextBoxDescription.Text,
+                                        this.creator.IdAccount, this.team.IDTeam, false, 0, DateTime.Now);
                 tasksDAO.Insert(tasks);
                 evaluationDAO.InsertFollowTeam(tasks.IdTask, team);
+
+                List<People> peoples = team.Members.ToList();
+                peoples.Add(this.instructor);
+                string content = Notification.GetContentTypeTask(creator.FullName, tasks.Title, thesis.Topic);
+                notificationDAO.InsertFollowListPeople(creator.IdAccount, tasks.IdTask, content, peoples);
+
                 this.flagCheck = true;
                 InitUserControl();
                 OnTasksCreateClicked(EventArgs.Empty);

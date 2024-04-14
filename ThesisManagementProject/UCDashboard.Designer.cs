@@ -126,6 +126,7 @@
             Controls.Add(gPanelBack);
             Controls.Add(gGradientButtonViewThesis);
             Controls.Add(gGradientButtonStatistical);
+            DoubleBuffered = true;
             Name = "UCDashboard";
             Size = new Size(1329, 829);
             gPanelBack.ResumeLayout(false);

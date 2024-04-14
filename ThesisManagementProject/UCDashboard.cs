@@ -20,17 +20,19 @@ namespace ThesisManagementProject
     public partial class UCDashboard : UserControl
     {
         private MyProcess myProcess = new MyProcess();
+        private Thesis thesisClicked = new Thesis();
+        private People people = new People();
+        private List<Thesis> currentList = new List<Thesis>();
+        private List<Thesis> listThesis = new List<Thesis>();
+
+        private ThesisDAO thesisDAO = new ThesisDAO();
+
         private UCThesisList uCThesisList = new UCThesisList();
         private UCThesisCreate uCThesisCreate = new UCThesisCreate();
         private UCThesisDetails uCThesisDetails = new UCThesisDetails();
         private UCThesisLine thesisLineClicked = new UCThesisLine();
-
-        private Thesis thesisClicked = new Thesis();
-        private People people = new People();
-        private ThesisDAO thesisDAO = new ThesisDAO();
         private FThesisFilter fThesisFilter = new FThesisFilter();
-        private List<Thesis> currentList = new List<Thesis>();
-        private List<Thesis> listThesis = new List<Thesis>();
+
         private bool flagStuMyTheses = false;
 
         public UCDashboard()

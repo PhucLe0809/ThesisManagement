@@ -25,9 +25,11 @@ namespace ThesisManagementProject
         private Team team = new Team();
         private Tasks tasks = new Tasks();
         private People host = new People();
+
         private PeopleDAO peopleDAO = new PeopleDAO();
         private TeamDAO teamDAO = new TeamDAO();
         private TasksDAO tasksDAO = new TasksDAO();
+
         private bool isProcessing = false;
 
         public UCTaskMiniLine(People host, People instructor, Tasks tasks, bool isProcessing)
@@ -95,7 +97,7 @@ namespace ThesisManagementProject
                 OnTasksDeleteClicked(EventArgs.Empty);
             }
         }
-        public virtual void OnTasksDeleteClicked(EventArgs e)
+        private void OnTasksDeleteClicked(EventArgs e)
         {
             TasksDeleteClicked?.Invoke(this, e);
         }

@@ -19,25 +19,23 @@ namespace ThesisManagementProject
     {
         private MyProcess myProcess = new MyProcess();
         private People people = new People();
+        private List<Thesis> listThesis = new List<Thesis>();
+
         private PeopleDAO peopleDAO = new PeopleDAO();
         private ThesisDAO thesisDAO = new ThesisDAO();
+
         private UCPeopleMiniLine uCCreatorLine = new UCPeopleMiniLine();
         private UCPeopleMiniLine uCInstructorLine = new UCPeopleMiniLine();
+
         private bool flagAllTopic = true;
         private bool flagAllStatus = true;
         private bool flagAllFavorite = true;
         private bool flagFavorite = false;
-        private List<Thesis> listThesis = new List<Thesis>();
 
         public FThesisFilter()
         {
             InitializeComponent();
             InitUserControl();
-        }
-        public FThesisFilter(People people)
-        {
-            InitializeComponent();
-            SetUpFilter(people);
         }
 
         #region PROPERTIES

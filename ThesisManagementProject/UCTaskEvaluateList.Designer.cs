@@ -56,13 +56,14 @@
             gShadowPanelBack.Size = new Size(660, 470);
             gShadowPanelBack.TabIndex = 57;
             // 
-            // UCTaskEvaluate
+            // UCTaskEvaluateList
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             Controls.Add(gShadowPanelBack);
-            Name = "UCTaskEvaluate";
+            DoubleBuffered = true;
+            Name = "UCTaskEvaluateList";
             Size = new Size(680, 490);
             gShadowPanelBack.ResumeLayout(false);
             ResumeLayout(false);

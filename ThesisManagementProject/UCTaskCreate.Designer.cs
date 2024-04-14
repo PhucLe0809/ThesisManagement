@@ -197,6 +197,7 @@
             Controls.Add(gTextBoxDescription);
             Controls.Add(lblTaskTitle);
             Controls.Add(gTextBoxTitle);
+            DoubleBuffered = true;
             Name = "UCTaskCreate";
             Size = new Size(660, 458);
             ((System.ComponentModel.ISupportInitialize)erpTitle).EndInit();

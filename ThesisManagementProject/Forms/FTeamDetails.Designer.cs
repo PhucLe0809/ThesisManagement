@@ -387,6 +387,7 @@
             Controls.Add(gShadowPanelMemberList);
             Controls.Add(gShadowPanelShowInfor);
             Controls.Add(gShadowPanelAccountAvatar);
+            DoubleBuffered = true;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "FTeamDetails";

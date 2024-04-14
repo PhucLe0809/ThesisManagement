@@ -22,6 +22,15 @@ namespace ThesisManagementProject.DAOs
                                             MyDatabase.DBThesisStatus, team.IDTeam, thesis.IdThesis, thesis.Status.ToString());
             SQLExecuteByCommand(command);
         }
+        public void DeleteListTeam(List<Team> listTeam, string idThesis)
+        {
+            foreach (Team teamLine in listTeam)
+            {
+                string command = string.Format("DELETE FROM {0} WHERE idteam = '{1}' AND idthesis = '{2}'",
+                                    MyDatabase.DBThesisStatus, teamLine.IDTeam, idThesis);
+                ExecuteQuery(command, "Delete", false);
+            }
+        }
         public int CountTeamFollowState(Thesis thesis)
         {
             string command = string.Format("SELECT count(*) as NumTeams FROM {0} WHERE idthesis = '{1}' and status = '{2}'",
@@ -36,7 +45,6 @@ namespace ThesisManagementProject.DAOs
             string command = string.Format("UPDATE {0} SET status = '{1}' where idteam = '{2}' and idthesis = '{3}'",
                         MyDatabase.DBThesisStatus, EThesisStatus.Processing.ToString(), idPeople, idThesis);
             SQLExecuteByCommand(command);
-
         }
     }
 }

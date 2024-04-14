@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCDisplayLogin));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             gPictureBoxLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             gTextBoxEmail = new Guna.UI2.WinForms.Guna2TextBox();
             gTextBoxPassword = new Guna.UI2.WinForms.Guna2TextBox();
@@ -55,12 +55,12 @@
             // 
             // gPictureBoxLogo
             // 
-            gPictureBoxLogo.CustomizableEdges = customizableEdges13;
+            gPictureBoxLogo.CustomizableEdges = customizableEdges1;
             gPictureBoxLogo.Image = Properties.Resources.LogoThesisManagement;
             gPictureBoxLogo.ImageRotate = 0F;
             gPictureBoxLogo.Location = new Point(186, 58);
             gPictureBoxLogo.Name = "gPictureBoxLogo";
-            gPictureBoxLogo.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            gPictureBoxLogo.ShadowDecoration.CustomizableEdges = customizableEdges2;
             gPictureBoxLogo.Size = new Size(138, 138);
             gPictureBoxLogo.SizeMode = PictureBoxSizeMode.StretchImage;
             gPictureBoxLogo.TabIndex = 2;
@@ -70,7 +70,7 @@
             // 
             gTextBoxEmail.BackColor = Color.Transparent;
             gTextBoxEmail.BorderRadius = 10;
-            gTextBoxEmail.CustomizableEdges = customizableEdges15;
+            gTextBoxEmail.CustomizableEdges = customizableEdges3;
             gTextBoxEmail.DefaultText = "";
             gTextBoxEmail.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxEmail.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -90,7 +90,7 @@
             gTextBoxEmail.PlaceholderForeColor = Color.Gray;
             gTextBoxEmail.PlaceholderText = "Email";
             gTextBoxEmail.SelectedText = "";
-            gTextBoxEmail.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            gTextBoxEmail.ShadowDecoration.CustomizableEdges = customizableEdges4;
             gTextBoxEmail.Size = new Size(355, 45);
             gTextBoxEmail.TabIndex = 0;
             gTextBoxEmail.TextOffset = new Point(5, 0);
@@ -99,7 +99,7 @@
             // 
             gTextBoxPassword.BackColor = Color.Transparent;
             gTextBoxPassword.BorderRadius = 10;
-            gTextBoxPassword.CustomizableEdges = customizableEdges17;
+            gTextBoxPassword.CustomizableEdges = customizableEdges5;
             gTextBoxPassword.DefaultText = "";
             gTextBoxPassword.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxPassword.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -119,7 +119,7 @@
             gTextBoxPassword.PlaceholderForeColor = Color.Gray;
             gTextBoxPassword.PlaceholderText = "Password";
             gTextBoxPassword.SelectedText = "";
-            gTextBoxPassword.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            gTextBoxPassword.ShadowDecoration.CustomizableEdges = customizableEdges6;
             gTextBoxPassword.Size = new Size(355, 45);
             gTextBoxPassword.TabIndex = 1;
             gTextBoxPassword.TextOffset = new Point(5, 0);
@@ -128,7 +128,7 @@
             // gButtonLogin
             // 
             gButtonLogin.BorderRadius = 10;
-            gButtonLogin.CustomizableEdges = customizableEdges19;
+            gButtonLogin.CustomizableEdges = customizableEdges7;
             gButtonLogin.DisabledState.BorderColor = Color.DarkGray;
             gButtonLogin.DisabledState.CustomBorderColor = Color.DarkGray;
             gButtonLogin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -138,7 +138,7 @@
             gButtonLogin.ForeColor = Color.White;
             gButtonLogin.Location = new Point(194, 434);
             gButtonLogin.Name = "gButtonLogin";
-            gButtonLogin.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            gButtonLogin.ShadowDecoration.CustomizableEdges = customizableEdges8;
             gButtonLogin.Size = new Size(133, 45);
             gButtonLogin.TabIndex = 6;
             gButtonLogin.Text = "Login";
@@ -179,7 +179,7 @@
             gTextBoxReminder.BackColor = Color.Transparent;
             gTextBoxReminder.BorderRadius = 10;
             gTextBoxReminder.BorderThickness = 0;
-            gTextBoxReminder.CustomizableEdges = customizableEdges21;
+            gTextBoxReminder.CustomizableEdges = customizableEdges9;
             gTextBoxReminder.DefaultText = "";
             gTextBoxReminder.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxReminder.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -198,14 +198,14 @@
             gTextBoxReminder.PlaceholderText = "";
             gTextBoxReminder.ReadOnly = true;
             gTextBoxReminder.SelectedText = "";
-            gTextBoxReminder.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            gTextBoxReminder.ShadowDecoration.CustomizableEdges = customizableEdges10;
             gTextBoxReminder.Size = new Size(355, 31);
             gTextBoxReminder.TabIndex = 10;
             // 
             // gButtonBack
             // 
             gButtonBack.BorderRadius = 5;
-            gButtonBack.CustomizableEdges = customizableEdges23;
+            gButtonBack.CustomizableEdges = customizableEdges11;
             gButtonBack.DisabledState.BorderColor = Color.DarkGray;
             gButtonBack.DisabledState.CustomBorderColor = Color.DarkGray;
             gButtonBack.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -221,7 +221,7 @@
             gButtonBack.Location = new Point(373, 590);
             gButtonBack.Name = "gButtonBack";
             gButtonBack.PressedColor = Color.White;
-            gButtonBack.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            gButtonBack.ShadowDecoration.CustomizableEdges = customizableEdges12;
             gButtonBack.Size = new Size(90, 30);
             gButtonBack.TabIndex = 9;
             gButtonBack.Text = "Back";
@@ -233,6 +233,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             Controls.Add(gShadowPanelLogin);
+            DoubleBuffered = true;
             Name = "UCDisplayLogin";
             Size = new Size(1681, 853);
             ((System.ComponentModel.ISupportInitialize)gPictureBoxLogo).EndInit();

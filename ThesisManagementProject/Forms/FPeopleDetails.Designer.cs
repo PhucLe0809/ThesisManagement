@@ -836,7 +836,7 @@
             gCircleProgressBar.Text = "CircleProgressBar";
             gCircleProgressBar.Value = 75;
             // 
-            // FStudentDetails
+            // FPeopleDetails
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -852,9 +852,10 @@
             Controls.Add(gShadowPanelTopic);
             Controls.Add(gShadowPanelShowInfor);
             Controls.Add(gShadowPanelAccountAvatar);
+            DoubleBuffered = true;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
-            Name = "FStudentDetails";
+            Name = "FPeopleDetails";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Account Details";
             gShadowPanelAccountAvatar.ResumeLayout(false);

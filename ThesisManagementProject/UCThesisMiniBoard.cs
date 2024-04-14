@@ -18,10 +18,6 @@ namespace ThesisManagementProject
         private MyProcess myProcess = new MyProcess();
         private Thesis thesis = new Thesis();
 
-        public UCThesisMiniBoard()
-        {
-            InitializeComponent();
-        }
         public UCThesisMiniBoard(Thesis thesis)
         {
             InitializeComponent();

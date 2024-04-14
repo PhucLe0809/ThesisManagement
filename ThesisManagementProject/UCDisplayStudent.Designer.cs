@@ -311,6 +311,7 @@
             BackColor = Color.White;
             Controls.Add(gPanelTaskbar);
             Controls.Add(pnlAddUserControl);
+            DoubleBuffered = true;
             Name = "UCDisplayStudent";
             Size = new Size(1681, 853);
             gPanelTaskbar.ResumeLayout(false);

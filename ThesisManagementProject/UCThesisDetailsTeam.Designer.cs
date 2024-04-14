@@ -36,13 +36,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             gCirclePictureBoxAvatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             gTextBoxTeamMemebrs = new Guna.UI2.WinForms.Guna2TextBox();
             lblTeamName = new Label();
             gButtonGoto = new Guna.UI2.WinForms.Guna2Button();
-            gButtonAdd = new Guna.UI2.WinForms.Guna2Button();
             gTextBoxTeamCode = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)gCirclePictureBoxAvatar).BeginInit();
             SuspendLayout();
@@ -123,34 +120,12 @@
             gButtonGoto.Size = new Size(35, 35);
             gButtonGoto.TabIndex = 61;
             // 
-            // gButtonAdd
-            // 
-            gButtonAdd.BorderRadius = 5;
-            gButtonAdd.CustomizableEdges = customizableEdges6;
-            gButtonAdd.DisabledState.BorderColor = Color.White;
-            gButtonAdd.DisabledState.CustomBorderColor = Color.White;
-            gButtonAdd.DisabledState.FillColor = Color.White;
-            gButtonAdd.DisabledState.ForeColor = Color.White;
-            gButtonAdd.FillColor = Color.Transparent;
-            gButtonAdd.Font = new Font("Segoe UI", 9F);
-            gButtonAdd.ForeColor = Color.White;
-            gButtonAdd.HoverState.FillColor = Color.White;
-            gButtonAdd.HoverState.Image = (Image)resources.GetObject("resource.Image1");
-            gButtonAdd.Image = (Image)resources.GetObject("gButtonAdd.Image");
-            gButtonAdd.ImageSize = new Size(22, 22);
-            gButtonAdd.Location = new Point(235, 52);
-            gButtonAdd.Name = "gButtonAdd";
-            gButtonAdd.PressedColor = Color.White;
-            gButtonAdd.ShadowDecoration.CustomizableEdges = customizableEdges7;
-            gButtonAdd.Size = new Size(25, 25);
-            gButtonAdd.TabIndex = 62;
-            // 
             // gTextBoxTeamCode
             // 
             gTextBoxTeamCode.BackColor = Color.Transparent;
             gTextBoxTeamCode.BorderColor = Color.Silver;
             gTextBoxTeamCode.BorderRadius = 5;
-            gTextBoxTeamCode.CustomizableEdges = customizableEdges8;
+            gTextBoxTeamCode.CustomizableEdges = customizableEdges6;
             gTextBoxTeamCode.DefaultText = "245500001";
             gTextBoxTeamCode.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxTeamCode.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -168,7 +143,7 @@
             gTextBoxTeamCode.PlaceholderText = "";
             gTextBoxTeamCode.ReadOnly = true;
             gTextBoxTeamCode.SelectedText = "";
-            gTextBoxTeamCode.ShadowDecoration.CustomizableEdges = customizableEdges9;
+            gTextBoxTeamCode.ShadowDecoration.CustomizableEdges = customizableEdges7;
             gTextBoxTeamCode.Size = new Size(120, 35);
             gTextBoxTeamCode.TabIndex = 63;
             gTextBoxTeamCode.TextAlign = HorizontalAlignment.Center;
@@ -179,7 +154,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             Controls.Add(gTextBoxTeamCode);
-            Controls.Add(gButtonAdd);
             Controls.Add(gButtonGoto);
             Controls.Add(gTextBoxTeamMemebrs);
             Controls.Add(lblTeamName);
@@ -198,7 +172,6 @@
         private Guna.UI2.WinForms.Guna2TextBox gTextBoxTeamMemebrs;
         private Label lblTeamName;
         private Guna.UI2.WinForms.Guna2Button gButtonGoto;
-        private Guna.UI2.WinForms.Guna2Button gButtonAdd;
         private Guna.UI2.WinForms.Guna2TextBox gTextBoxTeamCode;
     }
 }

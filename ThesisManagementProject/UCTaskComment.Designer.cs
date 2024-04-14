@@ -154,6 +154,7 @@
             Controls.Add(gButtonSend);
             Controls.Add(gTextBoxComment);
             Controls.Add(flpComment);
+            DoubleBuffered = true;
             Name = "UCTaskComment";
             Size = new Size(680, 490);
             ((System.ComponentModel.ISupportInitialize)gCirclePictureBoxCommentator).EndInit();

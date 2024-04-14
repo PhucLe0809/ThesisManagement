@@ -4,7 +4,9 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using ThesisManagementProject.Process;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 
 namespace ThesisManagementProject.Models
 {
@@ -159,6 +161,34 @@ namespace ThesisManagementProject.Models
                 default:
                     return Color.Gray;
             }
+        }
+        public static string GetContentTypeThesis(string senderName, string thesisTopic)
+        {
+            return string.Format("{0} has suggested the [{1}] thesis to you", senderName, thesisTopic);
+        }
+        public static string GetContentTypeRegistered(string teamName, string thesisTopic)
+        {
+            return string.Format("{0} team has registered for the [{1}] thesis", teamName, thesisTopic);
+        }
+        public static string GetContentRegisteredMembers(string senderName, string teamName, string thesisTopic)
+        {
+            return string.Format("{0} has registered team [{1}] with you for the thesis [{2}]", senderName, teamName, thesisTopic);
+        }
+        public static string GetContentTypeAccepted(string senderName, string thesisTopic)
+        {
+            return string.Format("{0} has agreed with your team for the thesis [{1}]", senderName, thesisTopic);
+        }
+        public static string GetContentTypeTask(string senderName, string taskTitle, string thesisTopic)
+        {
+            return string.Format("{0} has created a [{1}] task in the [{2}] thesis", senderName, taskTitle, thesisTopic);
+        }
+        public static string GetContentTypeEvaluation(string senderName, string taskTitle)
+        {
+            return string.Format("{0} evaluated you in [{1}] task", senderName, taskTitle);
+        }
+        public static string GetContentTypeComment(string senderName, string comment, string taskTitle)
+        {
+            return string.Format("{0} commented [{1}] in [{2}] task", senderName, comment, taskTitle);
         }
 
         #endregion

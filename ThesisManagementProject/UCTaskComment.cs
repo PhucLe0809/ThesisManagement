@@ -24,9 +24,11 @@ namespace ThesisManagementProject
         private Tasks tasks = new Tasks();
         private Team team = new Team();
         private Comment comment = new Comment();
+
         private TeamDAO teamDAO = new TeamDAO();
         private CommentDAO commentDAO = new CommentDAO();
         private NotificationDAO notificationDAO = new NotificationDAO();
+
         private bool isProcessing = true;
 
         public UCTaskComment()
@@ -86,27 +88,14 @@ namespace ThesisManagementProject
                 flpComment.Controls.Add(line);
                 flpComment.ScrollControlIntoView(line);
                 commentDAO.Insert(comment);
-                SendNotification();
+
+                List<People> peoples = team.Members.ToList();
+                peoples.Add(this.instructor);
+                string content = Notification.GetContentTypeComment(people.FullName, comment.Content, tasks.Title);
+                notificationDAO.InsertFollowListPeople(people.IdAccount, comment.IdComment, content, peoples);
+
                 gTextBoxComment.Clear();
             }
-        }
-        private void SendNotification()
-        {
-            string content = string.Format("{0} commented [{1}] in [{2}] task", people.FullName, comment.Content, tasks.Title);
-            if (instructor.IdAccount != people.IdAccount)
-            {
-                notificationDAO.Insert(new Notification(instructor.IdAccount, people.IdAccount, comment.IdComment, content, DateTime.Now, false, false));
-            }
-
-            foreach (People member in team.Members)
-            {
-                if (member.IdAccount != people.IdAccount)
-                {
-                    notificationDAO.Insert(new Notification(member.IdAccount, people.IdAccount, comment.IdComment, content, DateTime.Now, false, false));
-                }
-
-            }
-
         }
         private void gButtonSend_Click(object sender, EventArgs e)
         {

@@ -71,6 +71,7 @@
             gButtonDelete.ShadowDecoration.CustomizableEdges = customizableEdges4;
             gButtonDelete.Size = new Size(40, 40);
             gButtonDelete.TabIndex = 13;
+            gButtonDelete.Click += gButtonDelete_Click;
             // 
             // gButtonStar
             // 
@@ -92,6 +93,7 @@
             gButtonStar.ShadowDecoration.CustomizableEdges = customizableEdges6;
             gButtonStar.Size = new Size(40, 40);
             gButtonStar.TabIndex = 12;
+            gButtonStar.Click += gButtonStar_Click;
             // 
             // lblFrom
             // 
@@ -192,6 +194,7 @@
             Controls.Add(lblNotification);
             Controls.Add(gButtonDelete);
             Controls.Add(gButtonStar);
+            DoubleBuffered = true;
             Name = "UCNotificationLine";
             Size = new Size(1230, 70);
             Click += UCNotificationLine_Click;

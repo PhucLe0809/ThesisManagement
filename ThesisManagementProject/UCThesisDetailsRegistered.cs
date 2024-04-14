@@ -18,7 +18,6 @@ namespace ThesisManagementProject
         {
             InitializeComponent();
         }
-
         public void Clear()
         {
             flpTeamRegistered.Controls.Clear();

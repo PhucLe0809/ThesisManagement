@@ -23,9 +23,11 @@ namespace ThesisManagementProject
         private Thesis thesis = new Thesis();
         private People creator = new People();
         private People instructor = new People();
+
         private ThesisDAO thesisDAO = new ThesisDAO();
         private PeopleDAO peopleDAO = new PeopleDAO();
         private TeamDAO teamDAO = new TeamDAO();
+        private ThesisStatusDAO thesisStatusDAO = new ThesisStatusDAO();
 
         public UCThesisLine()
         {
@@ -77,7 +79,7 @@ namespace ThesisManagementProject
         {
             thesisDAO.Delete(thesisDAO.SelectOnly(thesis.IdThesis));
             List<Team> listTeam = teamDAO.SelectList(this.thesis.IdThesis);
-            teamDAO.Delete(listTeam, this.thesis.IdThesis);
+            thesisStatusDAO.DeleteListTeam(listTeam, this.thesis.IdThesis);
 
             OnThesisDeleteClicked(EventArgs.Empty);
         }

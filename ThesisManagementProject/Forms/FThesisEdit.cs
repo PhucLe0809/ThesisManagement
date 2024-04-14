@@ -23,7 +23,6 @@ namespace ThesisManagementProject
             InitializeComponent();
             InitUserControl(people, thesis);
         }
-
         private void InitUserControl(People people, Thesis thesis)
         {
             gPanelEdit.Controls.Clear();

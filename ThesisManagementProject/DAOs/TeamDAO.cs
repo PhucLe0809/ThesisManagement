@@ -61,15 +61,17 @@ namespace ThesisManagementProject.DAOs
                 SQLExecuteByCommand(command);
             }
         }
-        public void Delete(List<Team> listTeam, string idThesis)
+        public void Delete(Team team)
         {
-            string command;
-            foreach (Team teamLine in listTeam)
+            foreach (People member in team.Members)
             {
-                command = string.Format("DELETE FROM {0} WHERE idteam = '{1}' AND idthesis = '{2}'",
-                                    MyDatabase.DBThesisStatus, teamLine.IDTeam, idThesis);
-                ExecuteQuery(command, "Delete", false);
+                string command = string.Format("DELETE FROM {0} WHERE idteam = '{1}' and idaccount = '{2}'", MyDatabase.DBTeam, team.IDTeam, member.IdAccount);
+                SQLExecuteByCommand(command);
             }
+        }
+        public void DeleteListTeam(List<Team> teams)
+        {
+            foreach (Team team in teams) Delete(team);
         }
 
         #endregion
