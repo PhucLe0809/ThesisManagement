@@ -107,7 +107,7 @@ namespace ThesisManagementProject.Database
         protected void ExecuteQueryNotification(Notification notifi, string command, string typeExecution, bool flag)
         {
             string sqlStr = string.Format(command, MyDatabase.DBNotification,
-                notifi.IdNotification, notifi.IdHost, notifi.IdSender, notifi.IdObject, notifi.Content, notifi.Type.ToString(),
+                notifi.IdNotification, notifi.IdHost, notifi.IdSender, notifi.IdThesis, notifi.IdObject, notifi.Content, notifi.Type.ToString(),
                 notifi.Created.ToString("yyyy-MM-dd hh:mm:ss"), notifi.IsFavorite ? 1 : 0, notifi.IsSaw ? 1 : 0);
 
             ExecuteQuery(sqlStr, typeExecution, flag);

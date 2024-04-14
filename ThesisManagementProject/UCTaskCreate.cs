@@ -89,7 +89,7 @@ namespace ThesisManagementProject
                 List<People> peoples = team.Members.ToList();
                 peoples.Add(this.instructor);
                 string content = Notification.GetContentTypeTask(creator.FullName, tasks.Title, thesis.Topic);
-                notificationDAO.InsertFollowListPeople(creator.IdAccount, tasks.IdTask, content, peoples);
+                notificationDAO.InsertFollowListPeople(creator.IdAccount, thesis.IdThesis, tasks.IdTask, content, peoples);
 
                 this.flagCheck = true;
                 InitUserControl();

@@ -31,9 +31,6 @@
     <Compile Update="UCDashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UCDisplayLecture.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Update="UCDisplayLogin.cs">
       <SubType>UserControl</SubType>
     </Compile>

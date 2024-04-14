@@ -14,7 +14,10 @@ namespace ThesisManagementProject
 {
     public partial class UCNotification : UserControl
     {
+        public event EventHandler NotificationJump;
+
         private People host = new People();
+        private Notification notificationClicked = new Notification();
         private List<Notification> notificationList = new List<Notification>();
         private NotificationDAO notificationDAO = new NotificationDAO();
 
@@ -39,10 +42,11 @@ namespace ThesisManagementProject
             {
                 UCNotificationLine line = new UCNotificationLine(notification);
                 line.NotificationDeleteClicked += NotificationDelete_Clicked;
+                line.NotificationLineClicked += NotificationLine_Clicked;
                 flpNotificationList.Controls.Add(line);
             }
         }
-        public void NotificationDelete_Clicked(object sender, EventArgs e)
+        private void NotificationDelete_Clicked(object sender, EventArgs e)
         {
             UCNotificationLine line = sender as UCNotificationLine;
 
@@ -62,6 +66,20 @@ namespace ThesisManagementProject
                     }
                 }
             }
+        }
+        private void NotificationLine_Clicked(object sender, EventArgs e)
+        {
+            UCNotificationLine line = sender as UCNotificationLine;
+
+            if (line != null)
+            {
+                this.notificationClicked = line.GetNotification;
+                OnNotificationLineClicked(EventArgs.Empty);
+            }
+        }
+        private void OnNotificationLineClicked(EventArgs e)
+        {
+            NotificationJump?.Invoke(this.notificationClicked, e);
         }
     }
 }

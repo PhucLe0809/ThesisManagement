@@ -302,5 +302,14 @@ namespace ThesisManagementProject.Models
 
         #endregion
 
+        #region FUNCTIONS
+
+        public People Clone()
+        {
+            return new People(idAccount, fullName, citizenCode, birthday, gender, email, phoneNumber, handle, role, workCode, password, avatarName);
+        }
+
+        #endregion
+
     }
 }

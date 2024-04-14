@@ -38,6 +38,18 @@ namespace ThesisManagementProject.DAOs
             if (dt.Rows.Count > 0) return GetFromDataRow(dt.Rows[0]);
             return new Thesis();
         }
+        public Thesis SelectFollowTeam(string idTeam)
+        {
+            DataTable dt = Select(string.Format("SELECT * FROM {0} WHERE idteam = '{1}'", MyDatabase.DBThesisStatus, idTeam));
+
+            if (dt.Rows.Count > 0) return SelectOnly(dt.Rows[0]["idthesis"].ToString());
+            return new Thesis();
+        }
+
+        #endregion
+
+        #region SELECT THESIS FOLLOW ROLE
+
         public List<Thesis> SelectListRoleLecture(string idAccount)
         {
             string command = string.Format("SELECT * FROM {0} WHERE idinstructor = '{1}'", MyDatabase.DBThesis, idAccount);
@@ -57,6 +69,25 @@ namespace ThesisManagementProject.DAOs
                                            "WHERE {1}.idteam IN (SELECT idteam FROM {2} WHERE idaccount = '{3}')",
                                             MyDatabase.DBThesis, MyDatabase.DBThesisStatus, MyDatabase.DBTeam, idAccount);
             return SelectList(command);
+        }
+
+        #endregion
+
+        #region SEARCH THESIS
+
+        public List<Thesis> SearchRoleLecture(string idAccount, string topic)
+        {
+            string command = string.Format("SELECT * FROM {0} WHERE idinstructor = '{1}' and topic LIKE '{2}%'",
+                                MyDatabase.DBThesis, idAccount, topic);
+            return SelectList(command);
+
+        }
+        public List<Thesis> SearchRoleStudent(string topic)
+        {
+            string command = string.Format("SELECT * FROM {0} WHERE status IN ('{1}', '{2}') and topic LIKE '{3}%'",
+                                    MyDatabase.DBThesis, EThesisStatus.Published.ToString(), EThesisStatus.Registered.ToString(), topic);
+            return SelectList(command);
+
         }
 
         #endregion
@@ -93,20 +124,6 @@ namespace ThesisManagementProject.DAOs
             string command = string.Format("UPDATE {0} SET isfavorite = {1} WHERE idthesis = '{2}'",
                                                 MyDatabase.DBThesis, thesis.IsFavorite ? 1 : 0, thesis.IdThesis);
             SQLExecuteByCommand(command);
-        }
-        public List<Thesis> SearchRoleLecture(string idAccount, string topic)
-        {
-            string command = string.Format("SELECT * FROM {0} WHERE idinstructor = '{1}' and topic LIKE '{2}%'",
-                                MyDatabase.DBThesis, idAccount, topic);
-            return SelectList(command);
-
-        }
-        public List<Thesis> SearchRoleStudent(string topic)
-        {
-            string command = string.Format("SELECT * FROM {0} WHERE status IN ('{1}', '{2}') and topic LIKE '{3}%'",
-                                    MyDatabase.DBThesis, EThesisStatus.Published.ToString(), EThesisStatus.Registered.ToString(), topic);
-            return SelectList(command);
-
         }
 
         #endregion

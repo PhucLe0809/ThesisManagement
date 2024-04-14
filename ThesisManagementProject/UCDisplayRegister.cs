@@ -94,7 +94,7 @@ namespace ThesisManagementProject
             myProcess.RunCheckDataValid(people.CheckGender() || flagCheck, erpGender, gComboBoxGender, "Gender cannot be empty");
             myProcess.RunCheckDataValid(people.CheckEmail() || flagCheck, erpEmail, gTextBoxEmail, "Email is already exists or invalid");
             myProcess.RunCheckDataValid(people.CheckPhoneNumber() || flagCheck, erpPhonenumber, gTextBoxPhonenumber, "Phone number is already exists or invalid");
-            myProcess.RunCheckDataValid(people.CheckHandle() || flagCheck, erpHandle, gTextBoxUserName, "Handle is already exists or invalid");
+            myProcess.RunCheckDataValid(people.CheckHandle() || flagCheck, erpHandle, gTextBoxUserName, "Username is already exists or invalid");
             myProcess.RunCheckDataValid(people.CheckPassWord() || flagCheck, erpConfirmPassword, gTextBoxConfirmPassword, "Confirmation password does not match");
             myProcess.RunCheckDataValid(people.CheckWorkCode() || flagCheck, erpWorkCode, gTextBoxWorkcode, "Work code is already exists or invalid");
         }
@@ -219,7 +219,7 @@ namespace ThesisManagementProject
         private void gTextBoxHandle_TextChanged(object sender, EventArgs e)
         {
             this.people.Handle = gTextBoxUserName.Text;
-            myProcess.RunCheckDataValid(people.CheckHandle() || flagCheck, erpHandle, gTextBoxUserName, "Handle is already exists or invalid");
+            myProcess.RunCheckDataValid(people.CheckHandle() || flagCheck, erpHandle, gTextBoxUserName, "Username is already exists or invalid");
         }
         private void gTextBoxPassword_TextChanged(object sender, EventArgs e)
         {

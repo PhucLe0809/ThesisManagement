@@ -45,16 +45,16 @@ namespace ThesisManagementProject.DAOs
 
         public void Insert(Notification notification)
         {
-            ExecuteQueryNotification(notification, "INSERT INTO {0} VALUES ('{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', {8}, {9})",
+            ExecuteQueryNotification(notification, "INSERT INTO {0} VALUES ('{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', {9}, {10})",
                 "Create", false);
         }
-        public void InsertFollowListPeople(string idSender, string idObject, string content, List<People> peoples)
+        public void InsertFollowListPeople(string idSender, string idThesis, string idObject, string content, List<People> peoples)
         {
             foreach (People people in peoples)
             {
                 if (people.IdAccount != idSender)
                 {
-                    Insert(new Notification(people.IdAccount, idSender, idObject, content, DateTime.Now, false, false));
+                    Insert(new Notification(people.IdAccount, idSender, idThesis, idObject, content, DateTime.Now, false, false));
                 }
             }
         }
@@ -85,6 +85,7 @@ namespace ThesisManagementProject.DAOs
             string idNotification = row["idnotification"].ToString();
             string idHost = row["idhost"].ToString();
             string idSender = row["idsender"].ToString();
+            string idThesis = row["idthesis"].ToString();
             string idObject = row["idobject"].ToString();
             string content = row["content"].ToString();
             ENotificationType type = myProcess.GetEnumFromDisplayName<ENotificationType>(row["type"].ToString());
@@ -92,7 +93,7 @@ namespace ThesisManagementProject.DAOs
             bool isFavorite = row["isfavorite"].ToString() == "True" ? true : false;
             bool isSaw = row["issaw"].ToString() == "True" ? true : false;
 
-            Notification notification = new Notification(idNotification, idHost, idSender, idObject, content, type, created, isFavorite, isSaw);
+            Notification notification = new Notification(idNotification, idHost, idSender, idThesis, idObject, content, type, created, isFavorite, isSaw);
             return notification;
         }
 

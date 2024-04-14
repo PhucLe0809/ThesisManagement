@@ -64,22 +64,56 @@ namespace ThesisManagementProject.Process
                 errorProvider.SetError(control, null);
             }
         }
-        public void SetTextBoxState(List<Guna2TextBox> list, bool flag)
+        public void SetTextBoxState(Guna2TextBox textBox, bool onlyView)
+        {
+            if (onlyView)
+            {
+                textBox.BorderThickness = 0;
+                textBox.FillColor = SystemColors.ButtonFace;
+                textBox.ReadOnly = true;
+            }
+            else
+            {
+                textBox.BorderThickness = 1;
+                textBox.FillColor = Color.White;
+                textBox.ReadOnly = false;
+            }
+        }
+        public void SetComboBoxState(Guna2ComboBox comboBox, bool onlyView)
+        {
+            if (onlyView)
+            {
+                comboBox.BorderThickness = 0;
+                comboBox.FillColor = SystemColors.ButtonFace;
+                comboBox.Enabled = false;
+            }
+            else
+            {
+                comboBox.BorderThickness = 1;
+                comboBox.FillColor = Color.White;
+                comboBox.Enabled = true;
+            }
+        }
+        public void SetDatePickerState(Guna2DateTimePicker datePicker, bool onlyView)
+        {
+            if (onlyView)
+            {
+                datePicker.BorderThickness = 0;
+                datePicker.FillColor = SystemColors.ButtonFace;
+                datePicker.Enabled = false;
+            }
+            else
+            {
+                datePicker.BorderThickness = 1;
+                datePicker.FillColor = Color.White;
+                datePicker.Enabled = true;
+            }
+        }
+        public void SetTextBoxState(List<Guna2TextBox> list, bool onlyView)
         {
             foreach (Guna2TextBox textBox in list)
             {
-                textBox.ReadOnly = flag;
-
-                if (flag)
-                {
-                    textBox.BorderThickness = 0;
-                    textBox.FillColor = SystemColors.ButtonFace;
-                }
-                else
-                {
-                    textBox.BorderThickness = 1;
-                    textBox.FillColor = Color.White;
-                }
+                SetTextBoxState(textBox, onlyView);
             }
         }
 
@@ -107,14 +141,14 @@ namespace ThesisManagementProject.Process
 
         #region CREATE GUNA2 CONTROL
 
-        public Guna2PictureBox CreatePictureBox(Image image)
+        public Guna2PictureBox CreatePictureBox(Image image, Size size)
         {
             Guna2PictureBox pictureBox = new Guna2PictureBox();
 
             pictureBox.ImageRotate = 0F;
             pictureBox.Image = image;
             pictureBox.Name = "pictureBox";
-            pictureBox.Size = new Size(399, 266);
+            pictureBox.Size = size;
             pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox.TabIndex = 0;
             pictureBox.TabStop = false;
@@ -364,23 +398,6 @@ namespace ThesisManagementProject.Process
                 MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
-        }
-
-        #endregion
-
-        #region FUNCTIONS OFF ON EDIT
-
-        public void SetTextBoxReadOnly(Guna2TextBox textBox, int thickness, Color colors, bool flag)
-        {
-            textBox.ReadOnly = flag;
-            textBox.BorderThickness = thickness;
-            textBox.FillColor = colors;
-        }
-        public void SetComboBoxReadOnly(Guna2ComboBox comboBox, int thickness, Color colors, bool flag)
-        {
-            comboBox.Enabled = !flag;
-            comboBox.BorderThickness = thickness;
-            comboBox.FillColor = colors;
         }
 
         #endregion

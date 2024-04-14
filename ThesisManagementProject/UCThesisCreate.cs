@@ -164,7 +164,7 @@ namespace ThesisManagementProject
                 if (thesis.IdCreator != thesis.IdInstructor)
                 {
                     string content = Notification.GetContentTypeThesis(people.FullName, thesis.Topic);
-                    notificationDAO.Insert(new Notification(thesis.IdInstructor, thesis.IdCreator, thesis.IdThesis, content, DateTime.Now, false, false));
+                    notificationDAO.Insert(new Notification(thesis.IdInstructor, thesis.IdCreator, thesis.IdThesis, thesis.IdThesis, content, DateTime.Now, false, false));
                 }
                 this.flagCheck = true;
                 InitCreateState();

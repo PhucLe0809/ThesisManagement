@@ -16,6 +16,7 @@ namespace ThesisManagementProject
     public partial class UCTaskEvaluateList : UserControl
     {
         public event EventHandler ClickEvaluate;
+        private Thesis thesis = new Thesis();
         private Tasks tasks = new Tasks();
         private Team team = new Team();
         private UCPeopleMiniLine peopleLine = new UCPeopleMiniLine();
@@ -29,8 +30,9 @@ namespace ThesisManagementProject
         {
             get { return this.peopleLine; }
         }
-        public void SetUpUserControl(Tasks tasks, Team team, People people)
+        public void SetUpUserControl(Thesis thesis, Tasks tasks, Team team, People people)
         {
+            this.thesis = thesis;
             this.tasks = tasks;
             this.team = team;
             flpMembers.Controls.Clear();

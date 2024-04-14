@@ -130,10 +130,15 @@ namespace ThesisManagementProject
                 UCThesisLine thesisLine = new UCThesisLine();
                 thesisLine.SetInformation(listThesis[i]);
                 thesisLine.ThesisLineClicked += ThesisLine_Clicked;
+                thesisLine.NotificationJump += ThesisLine_NotificationJump;
                 if (people.Role == ERole.Student) thesisLine.HideToolBar();
                 uCThesisList.AddThesis(thesisLine);
             }
             uCThesisList.SetNumThesis(listThesis.Count, true);
+        }
+        public void NotificationJump(Notification notification) 
+        {
+            uCThesisList.NotificationJump(notification);
         }
 
         #endregion
@@ -188,18 +193,33 @@ namespace ThesisManagementProject
 
         #region THESIS LINE 
 
+        private void ThesisDetailsShow(UCThesisLine thesisLine)
+        {
+            gPanelDataView.Controls.Clear();
+            this.thesisClicked = thesisDAO.SelectOnly(thesisLine.GetIdThesis);
+            this.thesisLineClicked = thesisLine;
+            uCThesisDetails.FlagWaiting = this.flagStuMyTheses && (thesisClicked.Status == EThesisStatus.Registered || thesisClicked.Status == EThesisStatus.Published);
+            uCThesisDetails.SetInformation(this.thesisClicked, people);
+            gPanelDataView.Controls.Add(uCThesisDetails);
+            
+        }
         private void ThesisLine_Clicked(object sender, EventArgs e)
         {
             UCThesisLine thesisLine = sender as UCThesisLine;
 
             if (thesisLine != null)
             {
-                gPanelDataView.Controls.Clear();
-                this.thesisClicked = thesisDAO.SelectOnly(thesisLine.ID);
-                this.thesisLineClicked = thesisLine;
-                uCThesisDetails.FlagWaiting = this.flagStuMyTheses && (thesisClicked.Status == EThesisStatus.Registered || thesisClicked.Status == EThesisStatus.Published);
-                uCThesisDetails.SetInformation(this.thesisClicked, people);
-                gPanelDataView.Controls.Add(uCThesisDetails);
+                ThesisDetailsShow(thesisLine);
+            }
+        }
+        private void ThesisLine_NotificationJump(object sender, EventArgs e)
+        {
+            UCThesisLine thesisLine = sender as UCThesisLine;
+
+            if (thesisLine != null)
+            {
+                ThesisDetailsShow(thesisLine);
+                uCThesisDetails.PerformNotificationClick(thesisLine.GetNotification);
             }
         }
 

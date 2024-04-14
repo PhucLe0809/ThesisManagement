@@ -21,10 +21,6 @@ namespace ThesisManagementProject
         private Team team = new Team();
         private Thesis thesis = new Thesis();
 
-        public FTeamDetails()
-        {
-            InitializeComponent();
-        }
         public FTeamDetails(Team team, Thesis thesis)
         {
             InitializeComponent();
@@ -43,7 +39,7 @@ namespace ThesisManagementProject
             if (this.thesis.IdThesis == string.Empty)
             {
                 gShadowPanelThesis.Controls.Clear();
-                gShadowPanelThesis.Controls.Add(myProcess.CreatePictureBox(Properties.Resources.PictureEmptyState));
+                gShadowPanelThesis.Controls.Add(myProcess.CreatePictureBox(Properties.Resources.PictureEmptyState, new Size(399, 266)));
             }
             else
             {

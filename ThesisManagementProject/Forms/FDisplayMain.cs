@@ -17,8 +17,7 @@ namespace ThesisManagementProject
     {
         private PeopleDAO peopleDAO = new PeopleDAO();
 
-        private UCDisplayLecture uCDisplayLecture = new UCDisplayLecture();
-        private UCDisplayStudent uCDisplayStudent = new UCDisplayStudent();
+        private UCDisplayPeople uCDisplayPeople = new UCDisplayPeople();
         private UCDisplayWelcome uCDisplayWelcome = new UCDisplayWelcome();
         private UCDisplayLogin uCDisplayLogin = new UCDisplayLogin();
         private UCDisplayRegister uCDisplayRegister = new UCDisplayRegister();
@@ -36,9 +35,9 @@ namespace ThesisManagementProject
             uCDisplayWelcome.GGradientButtonRegister.Click += DWelcomeButtonRegister_Click;
             uCDisplayWelcome.GButtonLogin.Click += DWelcomeButtonToLogin_Click;
 
-            uCDisplayLecture.GButtonLogOut.Click += DLectureButtonLogOut_Click;
+            uCDisplayPeople.GButtonLogOut.Click += DLectureButtonLogOut_Click;
 
-            uCDisplayStudent.GButtonLogOut.Click += DStudentButtonLogOut_Click;
+            uCDisplayPeople.GButtonLogOut.Click += DStudentButtonLogOut_Click;
 
             uCDisplayLogin.GButtonLogin.Click += DLoginButtonLogin_Click;
             uCDisplayLogin.GButtonBack.Click += DLoginButtonBack_Click;
@@ -71,14 +70,14 @@ namespace ThesisManagementProject
         private void DWelcomeButtonLecture_Click(object sender, EventArgs e)
         {
             People people = peopleDAO.SelectOnlyByID("242200001");
-            uCDisplayLecture.SetInformation(people);
-            SetDisplay(uCDisplayLecture);
+            uCDisplayPeople.SetInformation(people);
+            SetDisplay(uCDisplayPeople);
         }
         private void DWelcomeButtonStudent_Click(object sender, EventArgs e)
         {
             People people = peopleDAO.SelectOnlyByID("243300002");
-            uCDisplayStudent.SetInformation(people);
-            SetDisplay(uCDisplayStudent);
+            uCDisplayPeople.SetInformation(people);
+            SetDisplay(uCDisplayPeople);
         }
         private void DWelcomeButtonRegister_Click(object sender, EventArgs e)
         {
@@ -115,13 +114,13 @@ namespace ThesisManagementProject
                 uCDisplayLogin.GTextBoxReminder.Text = string.Empty;
                 if (people.Role == ERole.Lecture)
                 {
-                    uCDisplayLecture.SetInformation(people);
-                    SetDisplay(uCDisplayLecture);
+                    uCDisplayPeople.SetInformation(people);
+                    SetDisplay(uCDisplayPeople);
                 }
                 else
                 {
-                    uCDisplayStudent.SetInformation(people);
-                    SetDisplay(uCDisplayStudent);
+                    uCDisplayPeople.SetInformation(people);
+                    SetDisplay(uCDisplayPeople);
                 }
             }
         }

@@ -18,6 +18,7 @@ namespace ThesisManagementProject
     public partial class UCTaskEvaluateDetails : UserControl
     {
         private MyProcess myProcess = new MyProcess();
+        private Thesis thesis = new Thesis();
         private Tasks tasks = new Tasks();
         private People student = new People();
         private People host = new People();
@@ -45,8 +46,9 @@ namespace ThesisManagementProject
 
         #region FUNCTIONS
 
-        public void SetUpUserControl(Tasks tasks, People student, Evaluation evaluation, People host, bool isProcessing)
+        public void SetUpUserControl(Thesis thesis, Tasks tasks, People student, Evaluation evaluation, People host, bool isProcessing)
         {
+            this.thesis = thesis;
             this.tasks = tasks;
             this.student = student;
             this.evaluation = evaluation;
@@ -153,7 +155,7 @@ namespace ThesisManagementProject
                 if (host.Role == ERole.Lecture && evaluation.IsEvaluated)
                 {
                     string content = Notification.GetContentTypeEvaluation(host.FullName, tasks.Title);
-                    notificationDAO.Insert(new Notification(student.IdAccount, host.IdAccount, evaluation.IdEvaluation, content, DateTime.Now, false, false));
+                    notificationDAO.Insert(new Notification(student.IdAccount, host.IdAccount, thesis.IdThesis, evaluation.IdEvaluation, content, DateTime.Now, false, false));
                 }
                 this.flagCheck = true;
                 SetEditState(false);

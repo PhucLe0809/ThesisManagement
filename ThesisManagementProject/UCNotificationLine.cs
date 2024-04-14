@@ -17,6 +17,7 @@ namespace ThesisManagementProject
     public partial class UCNotificationLine : UserControl
     {
         private MyProcess myProcess = new MyProcess();
+        public event EventHandler NotificationLineClicked;
         public event EventHandler NotificationDeleteClicked;
 
         private People people = new People();
@@ -32,9 +33,9 @@ namespace ThesisManagementProject
             this.notification = notification;
             InitUserControl();
         }
-        public Guna2Button GButtonDelete
+        public Notification GetNotification
         {
-            get { return this.gButtonDelete; }
+            get { return this.notification; }
         }
         private void InitUserControl()
         {
@@ -72,6 +73,11 @@ namespace ThesisManagementProject
                 notification.IsSaw = true;
                 notificationDAO.UpdateIsSaw(notification.IdNotification, true);
             }
+            OnNotificationLineClicked(EventArgs.Empty);
+        }
+        private void OnNotificationLineClicked(EventArgs e)
+        {
+            NotificationLineClicked?.Invoke(this, e);
         }
         private void gButtonStar_Click(object sender, EventArgs e)
         {
@@ -89,7 +95,7 @@ namespace ThesisManagementProject
                 OnNotificationDeleteClicked(EventArgs.Empty);
             }
         }
-        public virtual void OnNotificationDeleteClicked(EventArgs e)
+        private void OnNotificationDeleteClicked(EventArgs e)
         {
             NotificationDeleteClicked?.Invoke(this, e);
         }

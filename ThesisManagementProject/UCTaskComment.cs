@@ -21,6 +21,7 @@ namespace ThesisManagementProject
 
         private People people = new People();
         private People instructor = new People();
+        private Thesis thesis = new Thesis();
         private Tasks tasks = new Tasks();
         private Team team = new Team();
         private Comment comment = new Comment();
@@ -38,10 +39,11 @@ namespace ThesisManagementProject
 
         #region FUNCTIONS
 
-        public void SetUpUserControl(People people, People instructor, Tasks tasks, bool isProcessing)
+        public void SetUpUserControl(People people, People instructor, Thesis thesis, Tasks tasks, bool isProcessing)
         {
             this.people = people;
             this.tasks = tasks;
+            this.thesis = thesis;
             this.instructor = instructor;
             this.isProcessing = isProcessing;
             this.team = teamDAO.SelectOnly(tasks.IdTeam);
@@ -92,7 +94,7 @@ namespace ThesisManagementProject
                 List<People> peoples = team.Members.ToList();
                 peoples.Add(this.instructor);
                 string content = Notification.GetContentTypeComment(people.FullName, comment.Content, tasks.Title);
-                notificationDAO.InsertFollowListPeople(people.IdAccount, comment.IdComment, content, peoples);
+                notificationDAO.InsertFollowListPeople(people.IdAccount, thesis.IdThesis, comment.IdComment, content, peoples);
 
                 gTextBoxComment.Clear();
             }

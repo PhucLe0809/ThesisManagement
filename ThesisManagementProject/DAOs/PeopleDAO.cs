@@ -76,6 +76,14 @@ namespace ThesisManagementProject.DAOs
                     "INSERT INTO {0} VALUES ('{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}'," +
                     " '{10}', '{11}', '{12}', '{13}', '{14}')", "Register", false);
         }
+        public void Update(People people)
+        {
+            ExecuteQueryPeople(people, "UPDATE {0} SET " +
+                "idaccount = '{1}', fullname = '{2}', citizencode = '{3}', birthday = {4}, gender = '{5}', " +
+                "email = '{6}', phonenumber = '{7}', handle = '{8}', role = '{9}', university = '{10}', " +
+                "faculty = '{11}', workcode = {12}, password = '{13}', avatarname = '{14}' WHERE idaccount = '{1}'",
+                "Update", true);
+        }
         public bool CheckNonExist(string field, string information)
         {
             return SQLCheckNonExist(string.Format("SELECT * FROM {0} WHERE {1} = '{2}'",

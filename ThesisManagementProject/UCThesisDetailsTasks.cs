@@ -68,7 +68,7 @@ namespace ThesisManagementProject
             Tasks tasks = taskDAO.SelectOnly(uCTaskCreate.GetTasks.IdTask);
 
             this.listTask.Add(tasks);
-            UCTaskMiniLine line = new UCTaskMiniLine(people, instructor, tasks, isProcessing);
+            UCTaskMiniLine line = new UCTaskMiniLine(people, instructor, thesis, tasks, isProcessing);
             line.TasksDeleteClicked += GButtonDelete_Click;
             flpTaskList.Controls.Add(line);
             flpTaskList.Controls.SetChildIndex(line, 0);
@@ -83,12 +83,12 @@ namespace ThesisManagementProject
             flpTaskList.Controls.Clear();
             foreach (Tasks tasks in listTask)
             {
-                UCTaskMiniLine line = new UCTaskMiniLine(people, instructor, tasks, isProcessing);
+                UCTaskMiniLine line = new UCTaskMiniLine(people, instructor, thesis, tasks, isProcessing);
                 line.TasksDeleteClicked += GButtonDelete_Click;
                 flpTaskList.Controls.Add(line);
             }
         }
-        public void GButtonDelete_Click(object sender, EventArgs e)
+        private void GButtonDelete_Click(object sender, EventArgs e)
         {
             UCTaskMiniLine line = sender as UCTaskMiniLine;
 
@@ -109,6 +109,34 @@ namespace ThesisManagementProject
                     }
                 }
             }
+        }
+        public void PerformNotificationClick(Notification notification)
+        {
+            Tasks tasks = new Tasks();
+            switch (notification.Type)
+            {
+                case ENotificationType.Task:
+                    tasks = taskDAO.SelectOnly(notification.IdObject);
+                    break;
+                case ENotificationType.Comment:
+                    tasks = taskDAO.SelectFromComment(notification.IdObject);
+                    break;
+                case ENotificationType.Evaluation:
+                    tasks = taskDAO.SelectFromEvaluation(notification.IdObject);
+                    break;
+            }
+
+            foreach (UCTaskMiniLine line in flpTaskList.Controls)
+            {
+                if (line != null)
+                {
+                    if (line.GetTask.IdTask == tasks.IdTask)
+                    {
+                        line.PerformNotificationClick(notification);
+                        return;
+                    }
+                }
+            }            
         }
 
         #endregion
