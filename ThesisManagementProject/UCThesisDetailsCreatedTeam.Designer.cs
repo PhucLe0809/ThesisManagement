@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCThesisDetailsCreatedTeam));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             flpTeam = new FlowLayoutPanel();
             gSeparatorTopic = new Guna.UI2.WinForms.Guna2Separator();
             lblRegisteredList = new Label();
@@ -89,7 +89,7 @@
             // 
             gTextBoxSearch.BorderColor = Color.FromArgb(74, 97, 94);
             gTextBoxSearch.BorderRadius = 8;
-            gTextBoxSearch.CustomizableEdges = customizableEdges10;
+            gTextBoxSearch.CustomizableEdges = customizableEdges1;
             gTextBoxSearch.DefaultText = "";
             gTextBoxSearch.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxSearch.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -106,9 +106,9 @@
             gTextBoxSearch.Name = "gTextBoxSearch";
             gTextBoxSearch.PasswordChar = '\0';
             gTextBoxSearch.PlaceholderForeColor = Color.Gray;
-            gTextBoxSearch.PlaceholderText = "Search user handle name";
+            gTextBoxSearch.PlaceholderText = "Search username";
             gTextBoxSearch.SelectedText = "";
-            gTextBoxSearch.ShadowDecoration.CustomizableEdges = customizableEdges11;
+            gTextBoxSearch.ShadowDecoration.CustomizableEdges = customizableEdges2;
             gTextBoxSearch.Size = new Size(260, 40);
             gTextBoxSearch.TabIndex = 9;
             gTextBoxSearch.TextOffset = new Point(5, 0);
@@ -128,7 +128,7 @@
             gTextBoxTeamName.BorderColor = Color.FromArgb(74, 97, 94);
             gTextBoxTeamName.BorderRadius = 8;
             gTextBoxTeamName.BorderThickness = 0;
-            gTextBoxTeamName.CustomizableEdges = customizableEdges12;
+            gTextBoxTeamName.CustomizableEdges = customizableEdges3;
             gTextBoxTeamName.DefaultText = "";
             gTextBoxTeamName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxTeamName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -147,7 +147,7 @@
             gTextBoxTeamName.PlaceholderForeColor = Color.Gray;
             gTextBoxTeamName.PlaceholderText = "Team name";
             gTextBoxTeamName.SelectedText = "";
-            gTextBoxTeamName.ShadowDecoration.CustomizableEdges = customizableEdges13;
+            gTextBoxTeamName.ShadowDecoration.CustomizableEdges = customizableEdges4;
             gTextBoxTeamName.Size = new Size(237, 40);
             gTextBoxTeamName.TabIndex = 57;
             gTextBoxTeamName.TextOffset = new Point(5, 0);
@@ -174,7 +174,7 @@
             gCirclePictureBoxAvatar.ImageRotate = 0F;
             gCirclePictureBoxAvatar.Location = new Point(33, 22);
             gCirclePictureBoxAvatar.Name = "gCirclePictureBoxAvatar";
-            gCirclePictureBoxAvatar.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            gCirclePictureBoxAvatar.ShadowDecoration.CustomizableEdges = customizableEdges5;
             gCirclePictureBoxAvatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             gCirclePictureBoxAvatar.Size = new Size(70, 70);
             gCirclePictureBoxAvatar.SizeMode = PictureBoxSizeMode.Zoom;
@@ -203,7 +203,7 @@
             // 
             gGradientButtonRegister.BackColor = Color.Transparent;
             gGradientButtonRegister.BorderRadius = 10;
-            gGradientButtonRegister.CustomizableEdges = customizableEdges15;
+            gGradientButtonRegister.CustomizableEdges = customizableEdges6;
             gGradientButtonRegister.DisabledState.BorderColor = Color.DarkGray;
             gGradientButtonRegister.DisabledState.CustomBorderColor = Color.DarkGray;
             gGradientButtonRegister.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -219,7 +219,7 @@
             gGradientButtonRegister.HoverState.ForeColor = Color.White;
             gGradientButtonRegister.Location = new Point(527, 35);
             gGradientButtonRegister.Name = "gGradientButtonRegister";
-            gGradientButtonRegister.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            gGradientButtonRegister.ShadowDecoration.CustomizableEdges = customizableEdges7;
             gGradientButtonRegister.Size = new Size(106, 40);
             gGradientButtonRegister.TabIndex = 61;
             gGradientButtonRegister.Text = "Register";
@@ -233,7 +233,7 @@
             // 
             gGradientButtonPerform.BackColor = Color.Transparent;
             gGradientButtonPerform.BorderRadius = 10;
-            gGradientButtonPerform.CustomizableEdges = customizableEdges17;
+            gGradientButtonPerform.CustomizableEdges = customizableEdges8;
             gGradientButtonPerform.DisabledState.BorderColor = Color.DarkGray;
             gGradientButtonPerform.DisabledState.CustomBorderColor = Color.DarkGray;
             gGradientButtonPerform.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -249,7 +249,7 @@
             gGradientButtonPerform.HoverState.ForeColor = Color.White;
             gGradientButtonPerform.Location = new Point(544, 222);
             gGradientButtonPerform.Name = "gGradientButtonPerform";
-            gGradientButtonPerform.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            gGradientButtonPerform.ShadowDecoration.CustomizableEdges = customizableEdges9;
             gGradientButtonPerform.Size = new Size(106, 40);
             gGradientButtonPerform.TabIndex = 62;
             gGradientButtonPerform.Text = "Perform";

@@ -54,6 +54,5 @@ namespace ThesisManagementProject
         }
 
         #endregion
-
     }
 }

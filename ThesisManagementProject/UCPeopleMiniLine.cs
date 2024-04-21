@@ -89,6 +89,8 @@ namespace ThesisManagementProject
                 gProgressBarToLine.Value = evaluation.Contribute;
                 if (evaluation.IsEvaluated) gButtonComplete.Image = Properties.Resources.PicItemComplete;
                 else gButtonComplete.Image = Properties.Resources.PicItemNonComplete;
+                if (evaluation.IsEvaluated) gButtonComplete.Image = Properties.Resources.PicItemComplete;
+                else gButtonComplete.Image = Properties.Resources.PicItemNonComplete;
 
                 gButtonComplete.Show();
                 gProgressBarToLine.Show();
@@ -99,6 +101,25 @@ namespace ThesisManagementProject
                 gProgressBarToLine.Hide();
             }
         }
+        public void SetStisticalMode(int statistical, double score)
+        {
+            lblUserName.Text = myProcess.FormatStringLength(people.FullName, 20);
+            gProgressBarToLine.Value = statistical;
+            gProgressBarToLine.Size = new Size(300, 20);
+            gProgressBarToLine.Location = new Point(170, 30);
+            gProgressBarToLine.ProgressColor2 = Color.FromArgb(128, 255, 255);
+            gProgressBarToLine.ShowText = true;
+            Label lblScore = new Label();
+            lblScore.AutoSize = false;
+            lblScore.Text = $"Score: {score}";
+            lblScore.Font = new Font("Segoe UI Semibold", 10.2f, FontStyle.Bold);
+            lblScore.ForeColor = SystemColors.ControlText;
+            lblScore.Location = new Point(485, 27);
+            lblScore.Size = new Size(100, 23);
+            gShadowPanelBack.Controls.Add(lblScore);
+            gProgressBarToLine.Show();
+        }
+
         public void SetButtonDelete()
         {
             gButtonAdd.Image = Properties.Resources.PicItemRemove;

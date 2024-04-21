@@ -83,6 +83,16 @@ namespace ThesisManagementProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GifPrivate {
+            get {
+                object obj = ResourceManager.GetObject("GifPrivate", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap GifSleep {
             get {
                 object obj = ResourceManager.GetObject("GifSleep", resourceCulture);
