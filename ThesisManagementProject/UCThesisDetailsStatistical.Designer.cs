@@ -57,6 +57,7 @@
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             flpMemberStatistical = new FlowLayoutPanel();
             guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            lblTotalProgress = new Label();
             gProgressBar = new Guna.UI2.WinForms.Guna2ProgressBar();
             lblDescription = new Label();
             gShadowPanelShowInfor.SuspendLayout();
@@ -77,7 +78,6 @@
             gShadowPanelShowInfor.Radius = 10;
             gShadowPanelShowInfor.ShadowColor = Color.Black;
             gShadowPanelShowInfor.ShadowShift = 8;
-            gShadowPanelShowInfor.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
             gShadowPanelShowInfor.Size = new Size(669, 275);
             gShadowPanelShowInfor.TabIndex = 1;
             // 
@@ -91,9 +91,9 @@
             chartFont1.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
             gChart.Legend.LabelFont = chartFont1;
             gChart.Legend.LabelForeColor = SystemColors.ControlText;
-            gChart.Location = new Point(17, 3);
+            gChart.Location = new Point(17, 18);
             gChart.Name = "gChart";
-            gChart.Size = new Size(622, 256);
+            gChart.Size = new Size(622, 241);
             gChart.TabIndex = 3;
             chartFont2.FontName = "Arial";
             chartFont2.Size = 12;
@@ -215,7 +215,6 @@
             guna2ShadowPanel1.Radius = 10;
             guna2ShadowPanel1.ShadowColor = Color.Black;
             guna2ShadowPanel1.ShadowShift = 8;
-            guna2ShadowPanel1.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
             guna2ShadowPanel1.Size = new Size(671, 250);
             guna2ShadowPanel1.TabIndex = 2;
             // 
@@ -231,6 +230,7 @@
             // guna2ShadowPanel2
             // 
             guna2ShadowPanel2.BackColor = Color.Transparent;
+            guna2ShadowPanel2.Controls.Add(lblTotalProgress);
             guna2ShadowPanel2.Controls.Add(gProgressBar);
             guna2ShadowPanel2.Controls.Add(lblDescription);
             guna2ShadowPanel2.FillColor = Color.White;
@@ -238,25 +238,36 @@
             guna2ShadowPanel2.Name = "guna2ShadowPanel2";
             guna2ShadowPanel2.Radius = 10;
             guna2ShadowPanel2.ShadowColor = Color.Black;
-            guna2ShadowPanel2.ShadowShift = 8;
+            guna2ShadowPanel2.ShadowShift = 0;
             guna2ShadowPanel2.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
             guna2ShadowPanel2.Size = new Size(671, 59);
             guna2ShadowPanel2.TabIndex = 3;
             // 
+            // lblTotalProgress
+            // 
+            lblTotalProgress.AutoSize = true;
+            lblTotalProgress.BackColor = Color.Transparent;
+            lblTotalProgress.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTotalProgress.Location = new Point(610, 15);
+            lblTotalProgress.Name = "lblTotalProgress";
+            lblTotalProgress.Size = new Size(67, 28);
+            lblTotalProgress.TabIndex = 8;
+            lblTotalProgress.Text = "100%";
+            // 
             // gProgressBar
             // 
             gProgressBar.BorderRadius = 10;
+            gProgressBar.BorderThickness = 1;
             gProgressBar.CustomizableEdges = customizableEdges4;
             gProgressBar.FillColor = Color.Transparent;
-            gProgressBar.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gProgressBar.Font = new Font("Trebuchet MS", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             gProgressBar.ForeColor = Color.DimGray;
             gProgressBar.Location = new Point(147, 15);
             gProgressBar.Name = "gProgressBar";
             gProgressBar.ProgressColor = Color.FromArgb(94, 148, 255);
             gProgressBar.ProgressColor2 = Color.FromArgb(128, 255, 255);
             gProgressBar.ShadowDecoration.CustomizableEdges = customizableEdges5;
-            gProgressBar.ShowText = true;
-            gProgressBar.Size = new Size(491, 28);
+            gProgressBar.Size = new Size(460, 28);
             gProgressBar.TabIndex = 7;
             gProgressBar.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             gProgressBar.Value = 50;
@@ -276,7 +287,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ButtonFace;
+            BackColor = Color.White;
             Controls.Add(guna2ShadowPanel2);
             Controls.Add(guna2ShadowPanel1);
             Controls.Add(gShadowPanelShowInfor);
@@ -294,7 +305,6 @@
 
         #endregion
 
-        private Guna.Charts.WinForms.GunaSplineAreaDataset gunaSplineAreaDataset1;
         private Guna.UI2.WinForms.Guna2ShadowPanel gShadowPanelShowInfor;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
@@ -306,5 +316,6 @@
         private Guna.Charts.WinForms.GunaSplineAreaDataset gSplineAreaDataset;
         private Label lblDescription;
         private Guna.UI2.WinForms.Guna2ProgressBar gProgressBar;
+        private Label lblTotalProgress;
     }
 }

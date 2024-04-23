@@ -176,8 +176,7 @@
             gShadowPanelThesis.Radius = 7;
             gShadowPanelThesis.ShadowColor = Color.Black;
             gShadowPanelThesis.ShadowShift = 4;
-            gShadowPanelThesis.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            gShadowPanelThesis.Size = new Size(221, 80);
+            gShadowPanelThesis.Size = new Size(230, 80);
             gShadowPanelThesis.TabIndex = 23;
             // 
             // lblNoteStatisThesis

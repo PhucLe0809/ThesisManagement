@@ -49,10 +49,10 @@ namespace ThesisManagementProject.DAOs
             return table.Rows[0]["idteam"].ToString();
 
         }
-        public void UpdateThesisStatus(string idPeople, string idThesis)
+        public void UpdateThesisStatus(string idTeam, string idThesis, EThesisStatus status)
         {
             string command = string.Format("UPDATE {0} SET status = '{1}' where idteam = '{2}' and idthesis = '{3}'",
-                        MyDatabase.DBThesisStatus, EThesisStatus.Processing.ToString(), idPeople, idThesis);
+                        MyDatabase.DBThesisStatus, status.ToString(), idTeam, idThesis);
             SQLExecuteByCommand(command);
         }
     }

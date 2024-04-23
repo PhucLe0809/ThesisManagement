@@ -103,9 +103,6 @@
     <Compile Update="UCThesisDetailsRegistered.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UCThesisStatistical.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Update="UCAccount.cs">
       <SubType>UserControl</SubType>
     </Compile>

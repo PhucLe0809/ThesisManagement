@@ -105,16 +105,19 @@ namespace ThesisManagementProject
         {
             lblUserName.Text = myProcess.FormatStringLength(people.FullName, 20);
             gProgressBarToLine.Value = statistical;
-            gProgressBarToLine.Size = new Size(300, 20);
-            gProgressBarToLine.Location = new Point(170, 30);
+            gProgressBarToLine.Size = new Size(270, 20);
+            gProgressBarToLine.Location = new Point(170, 33);
             gProgressBarToLine.ProgressColor2 = Color.FromArgb(128, 255, 255);
+            gProgressBarToLine.Font = new Font("Segoe UI Semibold", 8f, FontStyle.Bold);
             gProgressBarToLine.ShowText = true;
+            gCirclePictureBoxAvatar.Location = new Point(14, 7);
+
             Label lblScore = new Label();
             lblScore.AutoSize = false;
             lblScore.Text = $"Score: {score}";
             lblScore.Font = new Font("Segoe UI Semibold", 10.2f, FontStyle.Bold);
             lblScore.ForeColor = SystemColors.ControlText;
-            lblScore.Location = new Point(485, 27);
+            lblScore.Location = new Point(455, 30);
             lblScore.Size = new Size(100, 23);
             gShadowPanelBack.Controls.Add(lblScore);
             gProgressBarToLine.Show();

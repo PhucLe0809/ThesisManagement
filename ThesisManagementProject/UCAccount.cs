@@ -310,5 +310,6 @@ namespace ThesisManagementProject
             this.gBarChart.Update();
         }
         #endregion
+        
     }
 }

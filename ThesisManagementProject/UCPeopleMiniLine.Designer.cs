@@ -53,7 +53,7 @@
             lblPeopleCode.BackColor = Color.White;
             lblPeopleCode.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblPeopleCode.ForeColor = Color.FromArgb(74, 97, 94);
-            lblPeopleCode.Location = new Point(71, 31);
+            lblPeopleCode.Location = new Point(71, 30);
             lblPeopleCode.Name = "lblPeopleCode";
             lblPeopleCode.Size = new Size(71, 17);
             lblPeopleCode.TabIndex = 27;
@@ -64,7 +64,7 @@
             lblUserName.AutoSize = true;
             lblUserName.BackColor = Color.White;
             lblUserName.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblUserName.Location = new Point(69, 7);
+            lblUserName.Location = new Point(69, 6);
             lblUserName.Name = "lblUserName";
             lblUserName.Size = new Size(92, 23);
             lblUserName.TabIndex = 26;

@@ -33,6 +33,12 @@ namespace ThesisManagementProject.DAOs
                                             MyDatabase.DBEvaluation, idTask);
             return SelectList(command);
         }
+        public List<Evaluation> SelectListByTaskAndPeople(string idTask, string idPeople)
+        {
+            string command = string.Format("SELECT * FROM {0} WHERE idtask = '{1}' AND idpeople = '{2}'",
+                                            MyDatabase.DBEvaluation, idTask, idPeople);
+            return SelectList(command);
+        }
         public List<Evaluation> SelectListByPeople(string idPeople)
         {
             string command = string.Format("SELECT * FROM {0} WHERE idpeople = '{1}'",

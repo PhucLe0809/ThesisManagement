@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ThesisManagementProject.DAOs;
 using ThesisManagementProject.Models;
 using ThesisManagementProject.Process;
 using ThesisManagementProject.Properties;
@@ -20,16 +21,23 @@ namespace ThesisManagementProject
         private MyProcess myProcess = new MyProcess();
         private Team team = new Team();
         private Thesis thesis = new Thesis();
+        private List<Tasks> listTasks;
+
+        private TasksDAO tasksDAO = new TasksDAO();
 
         public FTeamDetails(Team team, Thesis thesis)
         {
             InitializeComponent();
             SetInformation(team, thesis);
         }
+
+        #region FUNCTIONS
+
         private void SetInformation(Team team, Thesis thesis)
         {
             this.team = team;
             this.thesis = thesis;
+            this.listTasks = tasksDAO.SelectListByTeam(this.team.IDTeam);
             InitUserControl();
         }
         private void InitUserControl()
@@ -47,6 +55,7 @@ namespace ThesisManagementProject
                 UCThesisMiniBoard uCThesisMiniBoard = new UCThesisMiniBoard(thesis);
                 gShadowPanelThesis.Controls.Add(uCThesisMiniBoard);
             }
+            UpdateChart();
         }
         public void SetTeam(Team team)
         {
@@ -66,5 +75,22 @@ namespace ThesisManagementProject
                 flpMembers.Controls.Add(line);
             }
         }
+
+        #endregion
+
+        #region CHART
+        public void UpdateChart()
+        {
+            this.gSplineAreaDataset.DataPoints.Clear();
+            for (int i = 0; i < this.listTasks.Count; i++)
+            {
+                string name = "Task " + i.ToString();
+                this.gSplineAreaDataset.DataPoints.Add(name, this.listTasks[i].Progress);
+            }
+            this.gChart.Datasets.Clear();
+            this.gChart.Datasets.Add(gSplineAreaDataset);
+            this.gChart.Update();
+        }
+        #endregion
     }
 }
