@@ -10,6 +10,7 @@ using System.Resources;
 using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
+using ThesisManagementProject.DAOs;
 using ThesisManagementProject.Database;
 using ThesisManagementProject.Models;
 
@@ -311,7 +312,6 @@ namespace ThesisManagementProject.Process
             if (imageName.Equals("PicAvatarTen")) return Properties.Resources.PicAvatarTen;
             return Properties.Resources.PicAvatarDemoUser;
         }
-
         #endregion
 
         #region FUNCTIONS ENUM
@@ -400,6 +400,35 @@ namespace ThesisManagementProject.Process
             }
         }
 
+        public Color GetThesisStatusColor(EThesisStatus eThesisStatus)
+        {
+            switch (eThesisStatus)
+            {
+                case EThesisStatus.Registered:
+                    return Color.FromArgb(255, 87, 87);
+                case EThesisStatus.Processing:
+                    return Color.FromArgb(94, 148, 255);
+                case EThesisStatus.Completed:
+                    return Color.FromArgb(45, 237, 55);
+                default:
+                    return Color.Gray;
+            }
+        }
+        public int GetThesisStatusIndex(EThesisStatus eThesisStatus)
+        {
+            switch (eThesisStatus)
+            {
+                case EThesisStatus.Registered:
+                    return 0;
+                case EThesisStatus.Processing:
+                    return 1;
+                case EThesisStatus.Completed:
+                    return 2;
+                default:
+                    return 3;
+            }
+        }
+
         #endregion
 
         #region FUNCTIONS SET GUNA2 BUTTON
@@ -447,6 +476,40 @@ namespace ThesisManagementProject.Process
                 ButtonStandardColor(button);
                 button.CustomImages.Image = listImage[i];
             }
+        }
+
+        #endregion
+
+        #region FUNCTIONS CALCULATOR
+
+        public List<double> CalEvaluations(List<Tasks> listTasks, int numOfMembers, Func<Evaluation, double> evaluationSelector)
+        {
+            EvaluationDAO evaluationDAO = new EvaluationDAO();
+            List<double> results = new List<double>(Enumerable.Repeat(0.0, numOfMembers));
+
+            foreach (Tasks task in listTasks)
+            {
+                List<Evaluation> evaluations = evaluationDAO.SelectListByTask(task.IdTask);
+                if (evaluations.Any())
+                {
+                    for (int i = 0; i < evaluations.Count && i < results.Count; i++)
+                    {
+                        results[i] += evaluationSelector(evaluations[i]);
+                    }
+                }
+            }
+
+            if (listTasks.Any())
+            {
+                double tasksCount = listTasks.Count;
+                results = results.Select(result => Math.Round(result / tasksCount, 2)).ToList();
+            }
+
+            return results;
+        }
+        public int CalStatisticalThesis(List<Tasks> listTasks)
+        {
+            return (int)(listTasks.Any() ? listTasks.Average(task => task.Progress) : 0);
         }
 
         #endregion

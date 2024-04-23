@@ -276,6 +276,7 @@ namespace ThesisManagementProject
         {
             AllButtonStandardColor();
             myProcess.ButtonSettingColor(gGradientButtonStatistical);
+            uCThesisDetailsStatistical.SetUpUserControl(this.team);
             gPanelDataView.Controls.Clear();
             gPanelDataView.Controls.Add(uCThesisDetailsStatistical);
         }

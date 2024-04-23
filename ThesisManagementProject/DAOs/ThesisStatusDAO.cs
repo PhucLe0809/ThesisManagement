@@ -40,6 +40,15 @@ namespace ThesisManagementProject.DAOs
             int.TryParse(table.Rows[0]["NumTeams"].ToString(), out num);
             return num;
         }
+        public string SelectTeamByIdThesis(string idThesis)
+        {
+            string command = $"SELECT idteam " +
+                             $"FROM {MyDatabase.DBThesisStatus} " +
+                             $"WHERE idthesis = '{idThesis}'";
+            DataTable table = Select(command);
+            return table.Rows[0]["idteam"].ToString();
+
+        }
         public void UpdateThesisStatus(string idPeople, string idThesis)
         {
             string command = string.Format("UPDATE {0} SET status = '{1}' where idteam = '{2}' and idthesis = '{3}'",

@@ -164,7 +164,7 @@ namespace ThesisManagementProject
 
         private void gGradientButtonStatistical_Click(object sender, EventArgs e)
         {
-            AddUserControl(gGradientButtonStatistical, new UCDashboardStatistical());
+            AddUserControl(gGradientButtonStatistical, new UCDashboardStatistical(this.listThesis));
         }
 
         #endregion

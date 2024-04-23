@@ -70,7 +70,15 @@ namespace ThesisManagementProject.DAOs
                                             MyDatabase.DBThesis, MyDatabase.DBThesisStatus, MyDatabase.DBTeam, idAccount);
             return SelectList(command);
         }
-
+        public List<Thesis> SelectListModeMyCompletedTheses(string idAccount)
+        {
+            string command = $"SELECT {MyDatabase.DBThesis}.* " +
+                             $"FROM {MyDatabase.DBThesis} INNER JOIN {MyDatabase.DBThesisStatus} " +
+                             $"ON {MyDatabase.DBThesis}.idthesis = {MyDatabase.DBThesisStatus}.idthesis " +
+                             $"WHERE {MyDatabase.DBThesisStatus}.idteam IN (SELECT idteam FROM {MyDatabase.DBTeam} WHERE idaccount = '{idAccount}') " +
+                             $"and {MyDatabase.DBThesis}.status = 'Completed'";
+            return SelectList(command);
+        }
         #endregion
 
         #region SEARCH THESIS
