@@ -40,6 +40,23 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.Charts.WinForms.ChartFont chartFont1 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont2 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont3 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont4 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid1 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.Tick tick1 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont5 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid2 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.Tick tick2 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont6 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid3 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.PointLabel pointLabel1 = new Guna.Charts.WinForms.PointLabel();
+            Guna.Charts.WinForms.ChartFont chartFont7 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Tick tick3 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont8 = new Guna.Charts.WinForms.ChartFont();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             gTextBoxTeamCode = new Guna.UI2.WinForms.Guna2TextBox();
             lblTeamCode = new Label();
             gTextBoxFaculty = new Guna.UI2.WinForms.Guna2TextBox();
@@ -57,10 +74,18 @@
             lblViewRole = new Label();
             gCirclePictureBoxAvatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             gShadowPanelShowInfor = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            gChart = new Guna.Charts.WinForms.GunaChart();
+            gSplineAreaDataset = new Guna.Charts.WinForms.GunaSplineAreaDataset();
+            guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            lblTotalProgress = new Label();
+            gProgressBar = new Guna.UI2.WinForms.Guna2ProgressBar();
+            lblDescription = new Label();
             gShadowPanelAccountAvatar = new Guna.UI2.WinForms.Guna2ShadowPanel();
             gShadowPanelMemberList.SuspendLayout();
             gShadowPanelTotalProcess.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)gCirclePictureBoxAvatar).BeginInit();
+            gShadowPanelShowInfor.SuspendLayout();
+            guna2ShadowPanel2.SuspendLayout();
             gShadowPanelAccountAvatar.SuspendLayout();
             SuspendLayout();
             // 
@@ -352,6 +377,8 @@
             // gShadowPanelShowInfor
             // 
             gShadowPanelShowInfor.BackColor = Color.Transparent;
+            gShadowPanelShowInfor.Controls.Add(guna2ShadowPanel2);
+            gShadowPanelShowInfor.Controls.Add(gChart);
             gShadowPanelShowInfor.FillColor = Color.White;
             gShadowPanelShowInfor.Location = new Point(366, 19);
             gShadowPanelShowInfor.Name = "gShadowPanelShowInfor";
@@ -362,6 +389,113 @@
             gShadowPanelShowInfor.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
             gShadowPanelShowInfor.Size = new Size(798, 355);
             gShadowPanelShowInfor.TabIndex = 35;
+            // 
+            // gChart
+            // 
+            gChart.AutoScroll = true;
+            gChart.Datasets.AddRange(new Guna.Charts.Interfaces.IGunaDataset[] { gSplineAreaDataset });
+            gChart.ImeMode = ImeMode.NoControl;
+            chartFont1.FontName = "Arial";
+            chartFont1.Size = 10;
+            chartFont1.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            gChart.Legend.LabelFont = chartFont1;
+            gChart.Legend.LabelForeColor = SystemColors.ControlText;
+            gChart.Location = new Point(24, 67);
+            gChart.Name = "gChart";
+            gChart.Size = new Size(751, 259);
+            gChart.TabIndex = 5;
+            chartFont2.FontName = "Arial";
+            chartFont2.Size = 12;
+            chartFont2.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            gChart.Title.Font = chartFont2;
+            chartFont3.FontName = "Arial";
+            gChart.Tooltips.BodyFont = chartFont3;
+            chartFont4.FontName = "Arial";
+            chartFont4.Size = 9;
+            chartFont4.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            gChart.Tooltips.TitleFont = chartFont4;
+            gChart.XAxes.GridLines = grid1;
+            chartFont5.FontName = "Arial";
+            tick1.Font = chartFont5;
+            gChart.XAxes.Ticks = tick1;
+            gChart.YAxes.GridLines = grid2;
+            chartFont6.FontName = "Arial";
+            tick2.Font = chartFont6;
+            tick2.HasMaximum = true;
+            tick2.HasMinimum = true;
+            gChart.YAxes.Ticks = tick2;
+            gChart.ZAxes.GridLines = grid3;
+            chartFont7.FontName = "Arial";
+            pointLabel1.Font = chartFont7;
+            gChart.ZAxes.PointLabels = pointLabel1;
+            chartFont8.FontName = "Arial";
+            tick3.Font = chartFont8;
+            gChart.ZAxes.Ticks = tick3;
+            // 
+            // gSplineAreaDataset
+            // 
+            gSplineAreaDataset.BorderColor = SystemColors.ActiveCaptionText;
+            gSplineAreaDataset.BorderWidth = 2;
+            gSplineAreaDataset.FillColor = Color.Empty;
+            gSplineAreaDataset.IndexLabelForeColor = Color.White;
+            gSplineAreaDataset.Label = "Statistical Task";
+            gSplineAreaDataset.PointRadius = 3;
+            // 
+            // guna2ShadowPanel2
+            // 
+            guna2ShadowPanel2.BackColor = Color.Transparent;
+            guna2ShadowPanel2.Controls.Add(lblTotalProgress);
+            guna2ShadowPanel2.Controls.Add(gProgressBar);
+            guna2ShadowPanel2.Controls.Add(lblDescription);
+            guna2ShadowPanel2.FillColor = Color.White;
+            guna2ShadowPanel2.Location = new Point(24, 18);
+            guna2ShadowPanel2.Name = "guna2ShadowPanel2";
+            guna2ShadowPanel2.Radius = 10;
+            guna2ShadowPanel2.ShadowColor = Color.Black;
+            guna2ShadowPanel2.ShadowShift = 0;
+            guna2ShadowPanel2.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
+            guna2ShadowPanel2.Size = new Size(736, 59);
+            guna2ShadowPanel2.TabIndex = 4;
+            // 
+            // lblTotalProgress
+            // 
+            lblTotalProgress.AutoSize = true;
+            lblTotalProgress.BackColor = Color.Transparent;
+            lblTotalProgress.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTotalProgress.Location = new Point(610, 15);
+            lblTotalProgress.Name = "lblTotalProgress";
+            lblTotalProgress.Size = new Size(67, 28);
+            lblTotalProgress.TabIndex = 8;
+            lblTotalProgress.Text = "100%";
+            // 
+            // gProgressBar
+            // 
+            gProgressBar.BorderRadius = 10;
+            gProgressBar.BorderThickness = 1;
+            gProgressBar.CustomizableEdges = customizableEdges12;
+            gProgressBar.FillColor = Color.Transparent;
+            gProgressBar.Font = new Font("Trebuchet MS", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gProgressBar.ForeColor = Color.DimGray;
+            gProgressBar.Location = new Point(147, 15);
+            gProgressBar.Name = "gProgressBar";
+            gProgressBar.ProgressColor = Color.FromArgb(94, 148, 255);
+            gProgressBar.ProgressColor2 = Color.FromArgb(128, 255, 255);
+            gProgressBar.ShadowDecoration.CustomizableEdges = customizableEdges13;
+            gProgressBar.Size = new Size(460, 28);
+            gProgressBar.TabIndex = 7;
+            gProgressBar.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            gProgressBar.Value = 50;
+            // 
+            // lblDescription
+            // 
+            lblDescription.AutoSize = true;
+            lblDescription.BackColor = Color.Transparent;
+            lblDescription.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDescription.Location = new Point(19, 15);
+            lblDescription.Name = "lblDescription";
+            lblDescription.Size = new Size(122, 28);
+            lblDescription.TabIndex = 6;
+            lblDescription.Text = "PROGRESS\r\n";
             // 
             // gShadowPanelAccountAvatar
             // 
@@ -398,6 +532,9 @@
             gShadowPanelTotalProcess.ResumeLayout(false);
             gShadowPanelTotalProcess.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)gCirclePictureBoxAvatar).EndInit();
+            gShadowPanelShowInfor.ResumeLayout(false);
+            guna2ShadowPanel2.ResumeLayout(false);
+            guna2ShadowPanel2.PerformLayout();
             gShadowPanelAccountAvatar.ResumeLayout(false);
             gShadowPanelAccountAvatar.PerformLayout();
             ResumeLayout(false);
@@ -422,5 +559,11 @@
         private Guna.UI2.WinForms.Guna2TextBox gTextBoxTeamMemebrs;
         private Guna.UI2.WinForms.Guna2ShadowPanel gShadowPanelThesis;
         private Label lblThesisTopic;
+        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
+        private Label lblTotalProgress;
+        private Guna.UI2.WinForms.Guna2ProgressBar gProgressBar;
+        private Label lblDescription;
+        private Guna.Charts.WinForms.GunaSplineAreaDataset gSplineAreaDataset;
+        private Guna.Charts.WinForms.GunaChart gChart;
     }
 }

@@ -33,7 +33,7 @@ namespace ThesisManagementProject
         private ThesisStatusDAO thesisStatusDAO = new ThesisStatusDAO();
         private NotificationDAO notificationDAO = new NotificationDAO();
 
-        private UCThesisDetailsTeam showTeam = new UCThesisDetailsTeam();        
+        private UCThesisDetailsTeam showTeam = new UCThesisDetailsTeam();
         private UCThesisDetailsRegistered uCThesisDetailsRegistered = new UCThesisDetailsRegistered();
         private UCThesisDetailsCreatedTeam uCThesisDetailsCreatedTeam = new UCThesisDetailsCreatedTeam();
         private UCThesisDetailsTasks uCThesisDetailsTasks = new UCThesisDetailsTasks();
@@ -85,10 +85,13 @@ namespace ThesisManagementProject
         private void InitUserControl()
         {
             this.flagEdited = false;
+            this.flagDeleted = false;
             gShadowPanelTeam.Controls.Add(showTeam);
+
             ResetUserControl();
             SetControlsReadOnly(true);
             SetWaiting();
+            SetButtonComplete();
             SetButtonEditOrDetails();
         }
         private void ResetUserControl()
@@ -134,7 +137,6 @@ namespace ThesisManagementProject
 
             SetTeamMode(flagShow);
             SetViewButtonMode(flagShow);
-
             if (host.Role == ERole.Student && !flagShow)
             {
                 SetStudentRegister();
@@ -174,6 +176,17 @@ namespace ThesisManagementProject
                 gGradientButtonRegistered.PerformClick();
             }
         }
+        private void SetButtonComplete()
+        {
+            if (host.Role == ERole.Lecture && thesis.Status == EThesisStatus.Processing)
+            {
+                gGradientButtonComplete.Show();
+            }
+            else
+            {
+                gGradientButtonComplete.Hide();
+            }
+        }
         private void SetButtonEditOrDetails()
         {
             if (host.Role == ERole.Student || thesis.Status == EThesisStatus.Completed)
@@ -183,6 +196,8 @@ namespace ThesisManagementProject
             else
             {
                 gButtonEdit.Show();
+                if (host.Role == ERole.Lecture && thesis.Status == EThesisStatus.Processing) gButtonEdit.Location = new Point(303, 14);
+                else gButtonEdit.Location = new Point(420, 14);
             }
         }
         private void SetTeamHere(bool flag)
@@ -231,6 +246,21 @@ namespace ThesisManagementProject
                 uCThesisDetailsTasks.PerformNotificationClick(notification);
             }
         }
+        private void SetStateCompleted()
+        {
+            this.thesis.Status = EThesisStatus.Completed;
+            gTextBoxStatus.Text = thesis.Status.ToString();
+            gTextBoxStatus.FillColor = thesis.GetStatusColor();
+            gButtonEdit.Hide();
+            SetButtonComplete();
+
+            HideAllButtonMode();
+            gPictureBoxState.Image = Properties.Resources.GifCompleted;
+            gTextBoxState.Text = "Congratulations on completion !";
+            gPanelDataView.Controls.Clear();
+            gPanelDataView.Controls.Add(gPictureBoxState);
+            gPanelDataView.Controls.Add(gTextBoxState);
+        }
 
         #endregion
 
@@ -253,6 +283,24 @@ namespace ThesisManagementProject
         {
             FThesisView fThesisView = new FThesisView(thesis);
             fThesisView.ShowDialog();
+        }
+
+        #endregion
+
+        #region EVENT gGradientButtonComplete
+
+        private void gGradientButtonComplete_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("You have definitely completed the " + thesis.Topic + " thesis",
+                                                    "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (result == DialogResult.OK)
+            {          
+                thesisDAO.UpdateStatus(this.thesis, EThesisStatus.Completed);
+                thesisStatusDAO.UpdateThesisStatus(this.team.IDTeam, this.thesis.IdThesis, EThesisStatus.Completed);
+
+                this.flagEdited = true;
+                SetStateCompleted();
+            }
         }
 
         #endregion
@@ -326,6 +374,8 @@ namespace ThesisManagementProject
                     notificationDAO.InsertFollowListPeople(host.IdAccount, thesis.IdThesis, thesis.IdThesis, content, team.Members);
 
                     SetThesisDetailsMode();
+                    SetButtonComplete();
+                    SetButtonEditOrDetails();
                     gTextBoxStatus.Text = thesis.Status.ToString();
                     gTextBoxStatus.FillColor = thesis.GetStatusColor();
                 }

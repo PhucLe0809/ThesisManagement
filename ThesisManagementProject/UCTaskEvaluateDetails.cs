@@ -134,7 +134,7 @@ namespace ThesisManagementProject
             UpdateScores();
             int contribution;
             float scores;
-            return tasks.CheckTitle() && tasks.CheckDescription() 
+            return (evaluation.CheckContent() || flagCheck || host.Role == ERole.Student)
                 && (int.TryParse(gTextBoxContribute.Text, out contribution) && tasks.CheckProgress()) 
                 && (float.TryParse(gTextBoxScores.Text, out scores) && evaluation.CheckScores());
         }

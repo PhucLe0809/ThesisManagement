@@ -490,6 +490,7 @@ namespace ThesisManagementProject.Process
             foreach (Tasks task in listTasks)
             {
                 List<Evaluation> evaluations = evaluationDAO.SelectListByTask(task.IdTask);
+                evaluations.OrderBy(evaluation => evaluation.IdPeople);
                 if (evaluations.Any())
                 {
                     for (int i = 0; i < evaluations.Count && i < results.Count; i++)

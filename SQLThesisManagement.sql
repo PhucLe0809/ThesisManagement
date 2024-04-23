@@ -183,7 +183,7 @@ VALUES
     ('243300013', 'Angelina Jolie', '093654827615', '2003-12-10', 'Female', 'angelina.jolie@gmail.com', '0845672310', 'AngelinaJ', 'Student', 
      'HCM City University of Technology and Education', 'Faculty of Information Technology', '1325647892', 'abc', 'PicAvatarTen'),
     ('243300014', 'Leonardo DiCaprio', '096527384519', '2000-05-29', 'Male', 'leonardo.dicaprio@gmail.com', '0213546789', 'LeonardoD', 'Student', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '4287396152', 'abc', 'PicAvatarThree'),
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '4287396152', 'abc', 'PicAvatarEight'),
     ('243300015', 'Emma Watson', '093741258639', '2000-09-17', 'Female', 'emma.watson@gmail.com', '0397546821', 'EmmaW', 'Student', 
      'HCM City University of Technology and Education', 'Faculty of Information Technology', '9284756123', 'abc', 'PicAvatarTen'),
     ('243300016', 'Chris Hemsworth', '096374815236', '2001-11-05', 'Male', 'chris.hemsworth@gmail.com', '0874651239', 'ChrisH', 'Student', 
@@ -195,7 +195,7 @@ VALUES
     ('243300019', 'Brie Larson', '096347819520', '2001-04-12', 'Female', 'brie.larson@gmail.com', '0946582713', 'BrieL', 'Student', 
      'HCM City University of Technology and Education', 'Faculty of Information Technology', '5281479632', 'abc', 'PicAvatarSeven'),
     ('243300020', 'Tom Hiddleston', '096347812530', '2000-10-03', 'Male', 'tom.hiddleston@gmail.com', '0357894216', 'TomH', 'Student', 
-     'HCM City University of Technology and Education', 'Faculty of Information Technology', '3948572160', 'abc', 'PicAvatarNine');
+     'HCM City University of Technology and Education', 'Faculty of Information Technology', '3948572160', 'abc', 'PicAvatarTen');
 
 -- INSERT TABLE Thesis
 
@@ -217,7 +217,7 @@ VALUES ('244400001',
 INSERT INTO Thesis 
 VALUES ('244400002', 
         'Developing an AI-powered system for cybersecurity threat detection and prevention', 
-        'Cybersecurity', 
+        'SoftwareDevelopment', 
         'Difficult', 
         7, 
         'Creating an advanced AI system to detect and prevent cybersecurity threats in real-time, providing robust protection for sensitive data and networks.', 
@@ -291,11 +291,11 @@ VALUES ('244400007',
         'Medium', 
         4, 
         'Designing mobile apps to remotely monitor patients health status, track medication adherence, and facilitate communication between healthcare providers and patients.', 
-        '2024-03-09 18:10:55', 
+        '2024-04-09 18:10:55', 
         'Technologies include Android Studio, Swift, Firebase, and HealthKit for building cross-platform mobile applications with health monitoring features.', 
         'Functions include user authentication, data encryption, real-time health data synchronization, medication reminders, and emergency alert systems.', 
         'Requirements: Proficiency in mobile app development frameworks, knowledge of healthcare regulations, experience in HIPAA compliance, and understanding of medical data privacy.',
-		'242200001', 1, 'Published', '242200001');
+		'242200001', 1, 'Completed', '242200001');
 
 -- Thesis 8
 INSERT INTO Thesis 
@@ -305,7 +305,7 @@ VALUES ('244400008',
         'Medium', 
         6, 
         'Creating user-friendly web interfaces for online learning platforms, ensuring accessibility, interactivity, and engagement for learners of all ages.', 
-        '2024-03-08 09:40:20', 
+        '2024-04-08 09:40:20', 
         'Technologies include HTML5, CSS3, JavaScript, React, and Node.js for building modern, responsive web interfaces and interactive learning modules.', 
         'Functions include frontend development, UI/UX design, content management, gamification features, and integration with learning management systems.', 
         'Requirements: Proficiency in web development technologies, understanding of educational principles, experience in UX/UI design, and familiarity with e-learning standards.',
@@ -319,7 +319,7 @@ VALUES ('244400009',
         'Difficult', 
         8, 
         'Investigating how blockchain can enhance supply chain transparency, traceability, and accountability, improving trust and efficiency in global supply networks.', 
-        '2024-03-07 11:50:35', 
+        '2024-04-07 11:50:35', 
         'Technologies include Ethereum, Hyperledger Fabric, and Solidity for building decentralized applications and smart contracts to track and verify supply chain transactions.', 
         'Functions include blockchain architecture design, smart contract development, consensus mechanism implementation, and integration with existing supply chain systems.', 
         'Requirements: Understanding of blockchain principles, proficiency in smart contract programming, knowledge of supply chain management, and familiarity with cryptographic techniques.',
@@ -356,7 +356,7 @@ VALUES
 ('245500005', '243300011', 'Cyber Savants', '2024-03-28', 'PicAvatarFive'),
 ('245500005', '243300012', 'Cyber Savants', '2024-03-28', 'PicAvatarFive'),
 ('245500006', '243300013', 'Data Wizards', '2024-03-20', 'PicAvatarNine'),
-('245500007', '243300014', 'Network Ninjas', '2024-03-20', 'PicAvatarEight'),
+('245500007', '243300020', 'Network Ninjas', '2024-03-20', 'PicAvatarTen'),
 ('245500008', '243300015', 'Innovation Squad', '2024-03-21', 'PicAvatarSeven'),
 ('245500008', '243300016', 'Innovation Squad', '2024-03-22', 'PicAvatarSeven'),
 ('245500008', '243300017', 'Innovation Squad', '2024-03-23', 'PicAvatarSeven'),
@@ -375,7 +375,7 @@ VALUES
 ('245500004', '244400002', 'Registered'),
 ('245500005', '244400001', 'Registered'),
 ('245500006', '244400003', 'Registered'),
-('245500007', '244400003', 'Registered'),
+('245500007', '244400007', 'Completed'),
 ('245500008', '244400004', 'Processing'),
 ('245500009', '244400005', 'Processing'),
 ('245500010', '244400006', 'Completed');
@@ -439,23 +439,43 @@ INSERT INTO Task
 VALUES 
     ('246600017', 'Research IoT devices for energy monitoring', 
     'Conduct research on IoT devices and sensors suitable for monitoring energy consumption in buildings, considering factors such as accuracy, compatibility, and cost-effectiveness.', 
-    '242200001', '245500010', 1, 100, '2024-04-06'),
+    '242200001', '245500010', 1, 70, '2024-04-06'),
     ('246600018', 'Design IoT system architecture', 
     'Design the architecture for the IoT system that will collect, transmit, and analyze energy consumption data from various sensors deployed in buildings.', 
-    '242200001', '245500010', 1, 100, '2024-04-05'),
+    '242200001', '245500010', 1, 80, '2024-04-05'),
     ('246600019', 'Develop IoT data acquisition module', 
     'Develop software modules to acquire data from IoT sensors, preprocess it if necessary, and transmit it to the central data collection and analysis system.', 
     '242200001', '245500010', 0, 100, '2024-04-05'),
     ('246600020', 'Implement energy consumption analytics', 
     'Implement algorithms and analytics tools to analyze the energy consumption data collected by the IoT system, identify patterns, and suggest energy-saving measures.', 
-    '242200001', '245500010', 1, 100, '2024-04-04'),
+    '242200001', '245500010', 1, 80, '2024-04-04'),
     ('246600021', 'Integrate IoT system with building management systems', 
     'Integrate the IoT energy management system with existing building management systems to enable centralized monitoring and control of energy usage.', 
-    '242200001', '245500010', 0, 100, '2024-04-03'),
+    '242200001', '245500010', 0, 70, '2024-04-03'),
     ('246600022', 'Test and validate IoT application in real-world scenarios', 
     'Conduct thorough testing of the IoT application in real-world building environments to validate its performance, reliability, and effectiveness in optimizing energy management.', 
     '242200001', '245500010', 1, 100, '2024-04-02');
-
+	
+INSERT INTO Task
+VALUES 
+    ('246600023', 'Research healthcare monitoring requirements', 
+    'Conduct research on healthcare monitoring requirements for remote patient monitoring, including vital signs tracking, medication adherence, and symptom reporting.', 
+    '242200001', '245500007', 1, 70, '2024-04-07'),
+    ('246600024', 'Design user interface for mobile app', 
+    'Design intuitive and user-friendly interfaces for the mobile application, considering the needs of both patients and healthcare providers for easy navigation and data input.', 
+    '242200001', '245500007', 1, 80, '2024-04-06'),
+    ('246600025', 'Develop backend system for data storage', 
+    'Develop the backend system to securely store and manage healthcare data collected from mobile devices, ensuring compliance with privacy and security regulations.', 
+    '242200001', '245500007', 0, 100, '2024-04-06'),
+    ('246600026', 'Implement real-time data synchronization', 
+    'Implement mechanisms for real-time data synchronization between the mobile application and the backend system to ensure up-to-date information for both patients and healthcare providers.', 
+    '242200001', '245500007', 1, 80, '2024-04-05'),
+    ('246600027', 'Integrate health monitoring devices with mobile app', 
+    'Integrate various health monitoring devices such as wearable sensors and Bluetooth-enabled medical devices with the mobile application to enable seamless data collection.', 
+    '242200001', '245500007', 0, 70, '2024-04-03'),
+    ('246600028', 'Test and validate mobile app for reliability and usability', 
+    'Conduct rigorous testing of the mobile application to ensure reliability, usability, and compatibility across different mobile devices and operating systems.', 
+    '242200001', '245500007', 1, 100, '2024-04-03');
 
 -- INSERT TABLE Comment
 INSERT INTO Comment
@@ -883,22 +903,43 @@ INSERT INTO Evaluation
 VALUES 
     ('248800049', '246600017', '243300020', 
 	'Strategic evaluation framework for assessing long-term goals and objectives.', 
-	100, 9.25, '2024-04-07', 1), 
+	100, 8.25, '2024-04-07', 1), 
     ('248800050', '246600018', '243300020', 
 	'Continuous performance evaluation system to provide ongoing feedback and support.', 
-	100, 8.75, '2024-04-07', 1), 
+	100, 7.75, '2024-04-07', 1), 
     ('248800051', '246600019', '243300020', 
 	'Multi-dimensional peer evaluation process incorporating various perspectives for a holistic view.', 
-	100, 9.25, '2024-04-07', 1), 
+	100, 8.25, '2024-04-07', 1), 
     ('248800052', '246600020', '243300020', 
 	'Quantitative customer satisfaction evaluation utilizing statistical analysis for data-driven insights.', 
-	100, 8.75, '2024-04-07', 1), 
+	100, 7.75, '2024-04-07', 1), 
     ('248800053', '246600021', '243300020', 
 	'Qualitative productivity assessment to explore factors influencing performance beyond numerical metrics.', 
-	100, 9.25, '2024-04-07', 1), 
+	100, 8.0, '2024-04-07', 1), 
     ('248800054', '246600022', '243300020', 
 	'Impact evaluation methodology to measure the broader effects and outcomes of interventions or programs.', 
-	100, 8.75, '2024-04-07', 1);
+	100, 8.25, '2024-04-07', 1);
+	
+INSERT INTO Evaluation
+VALUES 
+    ('248800055', '246600023', '243300014', 
+	'Strategic evaluation framework for assessing long-term goals and objectives.', 
+	100, 9.25, '2024-04-07', 1), 
+    ('248800056', '246600024', '243300014', 
+	'Continuous performance evaluation system to provide ongoing feedback and support.', 
+	100, 9.75, '2024-04-07', 1), 
+    ('248800057', '246600025', '243300014', 
+	'Multi-dimensional peer evaluation process incorporating various perspectives for a holistic view.', 
+	100, 9.25, '2024-04-07', 1), 
+    ('248800058', '246600026', '243300014', 
+	'Quantitative customer satisfaction evaluation utilizing statistical analysis for data-driven insights.', 
+	100, 8.75, '2024-04-07', 1), 
+    ('248800059', '246600027', '243300014', 
+	'Qualitative productivity assessment to explore factors influencing performance beyond numerical metrics.', 
+	100, 9.25, '2024-04-07', 1), 
+    ('248800060', '246600028', '243300014', 
+	'Impact evaluation methodology to measure the broader effects and outcomes of interventions or programs.', 
+	100, 9.75, '2024-04-07', 1);
 
 -- INSERT TABLE Notification
 INSERT INTO Notification

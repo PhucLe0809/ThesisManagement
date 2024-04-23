@@ -32,14 +32,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCThesisDetailsTeam));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             gCirclePictureBoxAvatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             gTextBoxTeamMemebrs = new Guna.UI2.WinForms.Guna2TextBox();
             lblTeamName = new Label();
-            gButtonGoto = new Guna.UI2.WinForms.Guna2Button();
             gTextBoxTeamCode = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)gCirclePictureBoxAvatar).BeginInit();
             SuspendLayout();
@@ -97,35 +93,12 @@
             lblTeamName.TabIndex = 58;
             lblTeamName.Text = "Team name";
             // 
-            // gButtonGoto
-            // 
-            gButtonGoto.BorderRadius = 5;
-            gButtonGoto.CustomizableEdges = customizableEdges4;
-            gButtonGoto.DisabledState.BorderColor = Color.White;
-            gButtonGoto.DisabledState.CustomBorderColor = Color.White;
-            gButtonGoto.DisabledState.FillColor = Color.White;
-            gButtonGoto.DisabledState.ForeColor = Color.White;
-            gButtonGoto.FillColor = Color.Transparent;
-            gButtonGoto.Font = new Font("Segoe UI", 9F);
-            gButtonGoto.ForeColor = Color.White;
-            gButtonGoto.HoverState.FillColor = Color.White;
-            gButtonGoto.HoverState.Image = (Image)resources.GetObject("resource.Image");
-            gButtonGoto.Image = (Image)resources.GetObject("gButtonGoto.Image");
-            gButtonGoto.ImageOffset = new Point(1, 0);
-            gButtonGoto.ImageSize = new Size(32, 32);
-            gButtonGoto.Location = new Point(425, 31);
-            gButtonGoto.Name = "gButtonGoto";
-            gButtonGoto.PressedColor = Color.White;
-            gButtonGoto.ShadowDecoration.CustomizableEdges = customizableEdges5;
-            gButtonGoto.Size = new Size(35, 35);
-            gButtonGoto.TabIndex = 61;
-            // 
             // gTextBoxTeamCode
             // 
             gTextBoxTeamCode.BackColor = Color.Transparent;
             gTextBoxTeamCode.BorderColor = Color.Silver;
             gTextBoxTeamCode.BorderRadius = 5;
-            gTextBoxTeamCode.CustomizableEdges = customizableEdges6;
+            gTextBoxTeamCode.CustomizableEdges = customizableEdges4;
             gTextBoxTeamCode.DefaultText = "245500001";
             gTextBoxTeamCode.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxTeamCode.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -135,7 +108,7 @@
             gTextBoxTeamCode.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             gTextBoxTeamCode.ForeColor = Color.FromArgb(74, 97, 94);
             gTextBoxTeamCode.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            gTextBoxTeamCode.Location = new Point(299, 31);
+            gTextBoxTeamCode.Location = new Point(335, 31);
             gTextBoxTeamCode.Margin = new Padding(3, 4, 3, 4);
             gTextBoxTeamCode.Name = "gTextBoxTeamCode";
             gTextBoxTeamCode.PasswordChar = '\0';
@@ -143,7 +116,7 @@
             gTextBoxTeamCode.PlaceholderText = "";
             gTextBoxTeamCode.ReadOnly = true;
             gTextBoxTeamCode.SelectedText = "";
-            gTextBoxTeamCode.ShadowDecoration.CustomizableEdges = customizableEdges7;
+            gTextBoxTeamCode.ShadowDecoration.CustomizableEdges = customizableEdges5;
             gTextBoxTeamCode.Size = new Size(120, 35);
             gTextBoxTeamCode.TabIndex = 63;
             gTextBoxTeamCode.TextAlign = HorizontalAlignment.Center;
@@ -154,7 +127,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             Controls.Add(gTextBoxTeamCode);
-            Controls.Add(gButtonGoto);
             Controls.Add(gTextBoxTeamMemebrs);
             Controls.Add(lblTeamName);
             Controls.Add(gCirclePictureBoxAvatar);
@@ -171,7 +143,6 @@
         private Guna.UI2.WinForms.Guna2CirclePictureBox gCirclePictureBoxAvatar;
         private Guna.UI2.WinForms.Guna2TextBox gTextBoxTeamMemebrs;
         private Label lblTeamName;
-        private Guna.UI2.WinForms.Guna2Button gButtonGoto;
         private Guna.UI2.WinForms.Guna2TextBox gTextBoxTeamCode;
     }
 }

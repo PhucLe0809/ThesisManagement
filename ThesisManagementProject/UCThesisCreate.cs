@@ -92,7 +92,8 @@ namespace ThesisManagementProject
             flagCreate = true;
             flagEdit = false;
             gButtonCreateOrEdit.Text = "Create";
-            
+            cmbIDInstructor.Enabled = true;
+
             if (people.Role == ERole.Lecture)
             {
                 cmbIDInstructor.SelectedItem = people.IdAccount;

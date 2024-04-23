@@ -32,10 +32,12 @@ namespace ThesisManagementProject
         public void SetUpUserControl(Team team)
         {
             this.team = team;
+            this.team.Members.OrderBy(member => member.IdAccount);
             this.listTasks = tasksDAO.SelectListByTeam(this.team.IDTeam);
             UpdateMembers();
             UpdateChart();
             this.gProgressBar.Value = myProcess.CalStatisticalThesis(this.listTasks);
+            this.lblTotalProgress.Text = this.gProgressBar.Value.ToString() + "%";
         }
 
         #region MEMBER STATISTICAL
@@ -48,16 +50,12 @@ namespace ThesisManagementProject
             {
                 UCPeopleMiniLine line = new UCPeopleMiniLine(this.team.Members[i]);
                 line.SetBackGroundColor(SystemColors.ButtonFace);
-                line.SetSize(new Size(610, 60));
+                line.SetSize(new Size(580, 63));
                 line.SetDeleteMode(false);
                 line.SetStisticalMode((int)this.evaluationOfMembers[i], this.scoreOfMembers[i]);
                 flpMemberStatistical.Controls.Add(line);
             }
         }
-        #endregion
-
-        #region CALCULATOR
-
         #endregion
 
         #region CHART

@@ -91,6 +91,7 @@ namespace ThesisManagementProject
             gSplineDataset = new Guna.Charts.WinForms.GunaSplineDataset();
             lblTotalThesis = new Label();
             gShadowPanelProcess = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            lblTotal = new Label();
             flpStatus = new FlowLayoutPanel();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             label1 = new Label();
@@ -124,9 +125,9 @@ namespace ThesisManagementProject
             gDoughnutChart.Legend.Display = false;
             chartFont1.FontName = "Arial";
             gDoughnutChart.Legend.LabelFont = chartFont1;
-            gDoughnutChart.Location = new Point(33, 46);
+            gDoughnutChart.Location = new Point(43, 48);
             gDoughnutChart.Name = "gDoughnutChart";
-            gDoughnutChart.Size = new Size(300, 300);
+            gDoughnutChart.Size = new Size(280, 280);
             gDoughnutChart.TabIndex = 9;
             chartFont2.FontName = "Arial";
             chartFont2.Size = 12;
@@ -260,7 +261,7 @@ namespace ThesisManagementProject
             lblTotalThesis.AutoSize = true;
             lblTotalThesis.BackColor = Color.Transparent;
             lblTotalThesis.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTotalThesis.Location = new Point(73, 15);
+            lblTotalThesis.Location = new Point(72, 15);
             lblTotalThesis.Name = "lblTotalThesis";
             lblTotalThesis.Size = new Size(175, 28);
             lblTotalThesis.TabIndex = 7;
@@ -269,6 +270,7 @@ namespace ThesisManagementProject
             // gShadowPanelProcess
             // 
             gShadowPanelProcess.BackColor = Color.Transparent;
+            gShadowPanelProcess.Controls.Add(lblTotal);
             gShadowPanelProcess.Controls.Add(gDoughnutChart);
             gShadowPanelProcess.Controls.Add(flpStatus);
             gShadowPanelProcess.Controls.Add(lblTotalThesis);
@@ -282,11 +284,22 @@ namespace ThesisManagementProject
             gShadowPanelProcess.Size = new Size(492, 360);
             gShadowPanelProcess.TabIndex = 6;
             // 
+            // lblTotal
+            // 
+            lblTotal.AutoSize = true;
+            lblTotal.BackColor = Color.Transparent;
+            lblTotal.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTotal.Location = new Point(241, 15);
+            lblTotal.Name = "lblTotal";
+            lblTotal.Size = new Size(175, 28);
+            lblTotal.TabIndex = 10;
+            lblTotal.Text = "TOTAL THESIS: ";
+            // 
             // flpStatus
             // 
             flpStatus.Location = new Point(339, 91);
             flpStatus.Name = "flpStatus";
-            flpStatus.Size = new Size(107, 175);
+            flpStatus.Size = new Size(115, 175);
             flpStatus.TabIndex = 8;
             // 
             // guna2ShadowPanel1
@@ -393,5 +406,6 @@ namespace ThesisManagementProject
         private Guna.Charts.WinForms.GunaChart gHorizontalBarChart;
         private FlowLayoutPanel flpStatus;
         private Guna.Charts.WinForms.GunaChart gDoughnutChart;
+        private Label lblTotal;
     }
 }

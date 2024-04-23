@@ -31,6 +31,7 @@ namespace ThesisManagementProject
         private UCThesisCreate uCThesisCreate = new UCThesisCreate();
         private UCThesisDetails uCThesisDetails = new UCThesisDetails();
         private UCThesisLine thesisLineClicked = new UCThesisLine();
+        private UCDashboardStatistical uCDashboardStatistical = new UCDashboardStatistical();
         private FThesisFilter fThesisFilter = new FThesisFilter();
 
         private bool flagStuMyTheses = false;
@@ -164,7 +165,13 @@ namespace ThesisManagementProject
 
         private void gGradientButtonStatistical_Click(object sender, EventArgs e)
         {
-            AddUserControl(gGradientButtonStatistical, new UCDashboardStatistical(this.listThesis));
+            AllButtonStandardColor();
+            myProcess.ButtonSettingColor(gGradientButtonStatistical);
+            UpdateThesisList();
+
+            gPanelDataView.Controls.Clear();
+            uCDashboardStatistical.SetInformation(this.listThesis);
+            gPanelDataView.Controls.Add(uCDashboardStatistical);
         }
 
         #endregion

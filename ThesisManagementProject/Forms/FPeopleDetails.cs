@@ -48,7 +48,7 @@ namespace ThesisManagementProject
 
             gTextBoxFullname.Text = people.FullName;
             gTextBoxCitizencode.Text = people.CitizenCode;
-            gTextBoxBirthday.Text = people.Birthday.ToString("%d");   
+            gTextBoxBirthday.Text = people.Birthday.ToString("dd/MM/yyyy");   
             gTextBoxGender.Text = people.Gender.ToString();
             gTextBoxEmail.Text = people.Email;
             gTextBoxPhonenumber.Text = people.PhoneNumber;

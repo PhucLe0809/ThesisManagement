@@ -109,7 +109,7 @@ namespace ThesisManagementProject
         {
             OnThesisLineClicked(EventArgs.Empty);
         }
-        protected virtual void OnThesisLineClicked(EventArgs e)
+        private void OnThesisLineClicked(EventArgs e)
         {
             ThesisLineClicked?.Invoke(this, e);
         }

@@ -19,28 +19,30 @@ namespace ThesisManagementProject
 {
     public partial class UCDashboardStatistical : UserControl
     {
+        private MyProcess myProcess = new MyProcess();
         private List<Thesis> listTheses;
 
-        private MyProcess myProcess = new MyProcess();
         public UCDashboardStatistical()
         {
             InitializeComponent();
-        }
-        public UCDashboardStatistical(List<Thesis> listTheses)
-        {
-            this.listTheses = listTheses;
-            InitializeComponent();
-            SetupUserControl();
+            SetupFlpStatus();
         }
 
+        #region FUNCTIONS
+
+        public void SetInformation(List<Thesis> listTheses)
+        {
+            this.listTheses = listTheses;
+            SetupUserControl();
+        }
         void SetupUserControl()
         {
-            SetupFlpStatus();
             UpdateDoughnutChart();
             UpdateHorizontalbarChart();
-            SetupComboBoxSelectYear();
-            
+            SetupComboBoxSelectYear();            
         }
+
+        #endregion
 
         #region FLOW PANEL STATUS
 
@@ -50,10 +52,10 @@ namespace ThesisManagementProject
             foreach (var status in statusList)
             {
                 Guna2Button button = new Guna2Button();
-                button.Font = new Font("Segoe UI", 8F);
+                button.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
                 button.Text = status.ToString();
-                button.ForeColor = SystemColors.ControlText;
-                button.Size = new Size(100, 25);
+                button.ForeColor = Color.White;
+                button.Size = new Size(105, 25);
                 button.BorderRadius = 5;
                 button.FillColor = myProcess.GetThesisStatusColor(status);
                 this.flpStatus.Controls.Add(button);
@@ -65,7 +67,7 @@ namespace ThesisManagementProject
         #region DOUGHNUT CHART
         public void UpdateDoughnutChart()
         {
-            this.lblTotalThesis.Text += this.listTheses.Count.ToString();
+            this.lblTotal.Text = this.listTheses.Count.ToString();
             var thesisGroupedByStatus = this.listTheses
             .GroupBy(thesis => thesis.Status)
             .Select(group => new
@@ -73,6 +75,7 @@ namespace ThesisManagementProject
                 Status = group.Key,
                 Count = group.Count(),
             });
+            this.gDoughnutChart.Datasets.Clear();
             foreach (var group in thesisGroupedByStatus)
             {
                 int ind = myProcess.GetThesisStatusIndex(group.Status);
@@ -97,6 +100,8 @@ namespace ThesisManagementProject
             thesisGroupedByField = thesisGroupedByField.OrderByDescending(item => item.Count);
             int max = 5;
             int i = 0;
+            this.gHorizontalBarDataset.DataPoints.Clear();
+            this.gHorizontalBarChart.Datasets.Clear();
             foreach (var group in thesisGroupedByField)
             {
                 this.gHorizontalBarDataset.DataPoints.Add(group.Field.ToString(), group.Count);
@@ -159,7 +164,6 @@ namespace ThesisManagementProject
             this.gMixedBarAndSplineChart.Update();
         }
         #endregion
-
-  
+          
     }
 }
