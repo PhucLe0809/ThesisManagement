@@ -66,6 +66,8 @@ namespace ThesisManagementProject
             Guna.Charts.WinForms.ChartFont chartFont15 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.Tick tick6 = new Guna.Charts.WinForms.Tick();
             Guna.Charts.WinForms.ChartFont chartFont16 = new Guna.Charts.WinForms.ChartFont();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.Charts.WinForms.ChartFont chartFont17 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.ChartFont chartFont18 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.ChartFont chartFont19 = new Guna.Charts.WinForms.ChartFont();
@@ -94,6 +96,7 @@ namespace ThesisManagementProject
             lblTotal = new Label();
             flpStatus = new FlowLayoutPanel();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            gComboBoxTop = new Guna.UI2.WinForms.Guna2ComboBox();
             label1 = new Label();
             gHorizontalBarChart = new Guna.Charts.WinForms.GunaChart();
             gHorizontalBarDataset = new Guna.Charts.WinForms.GunaHorizontalBarDataset();
@@ -305,6 +308,7 @@ namespace ThesisManagementProject
             // guna2ShadowPanel1
             // 
             guna2ShadowPanel1.BackColor = Color.Transparent;
+            guna2ShadowPanel1.Controls.Add(gComboBoxTop);
             guna2ShadowPanel1.Controls.Add(label1);
             guna2ShadowPanel1.Controls.Add(gHorizontalBarChart);
             guna2ShadowPanel1.FillColor = Color.White;
@@ -316,6 +320,26 @@ namespace ThesisManagementProject
             guna2ShadowPanel1.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
             guna2ShadowPanel1.Size = new Size(728, 360);
             guna2ShadowPanel1.TabIndex = 8;
+            // 
+            // gComboBoxTop
+            // 
+            gComboBoxTop.BackColor = Color.Transparent;
+            gComboBoxTop.BorderRadius = 10;
+            gComboBoxTop.CustomizableEdges = customizableEdges3;
+            gComboBoxTop.DrawMode = DrawMode.OwnerDrawFixed;
+            gComboBoxTop.DropDownStyle = ComboBoxStyle.DropDownList;
+            gComboBoxTop.FocusedColor = Color.FromArgb(94, 148, 255);
+            gComboBoxTop.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            gComboBoxTop.Font = new Font("Segoe UI", 10F);
+            gComboBoxTop.ForeColor = Color.FromArgb(68, 88, 112);
+            gComboBoxTop.ItemHeight = 30;
+            gComboBoxTop.Items.AddRange(new object[] { "Field", "Lecture" });
+            gComboBoxTop.Location = new Point(26, 15);
+            gComboBoxTop.Name = "gComboBoxTop";
+            gComboBoxTop.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            gComboBoxTop.Size = new Size(175, 36);
+            gComboBoxTop.TabIndex = 9;
+            gComboBoxTop.SelectedValueChanged += gComboBoxTop_SelectedValueChanged;
             // 
             // label1
             // 
@@ -333,9 +357,9 @@ namespace ThesisManagementProject
             gHorizontalBarChart.Legend.Display = false;
             chartFont17.FontName = "Arial";
             gHorizontalBarChart.Legend.LabelFont = chartFont17;
-            gHorizontalBarChart.Location = new Point(26, 20);
+            gHorizontalBarChart.Location = new Point(26, 46);
             gHorizontalBarChart.Name = "gHorizontalBarChart";
-            gHorizontalBarChart.Size = new Size(681, 325);
+            gHorizontalBarChart.Size = new Size(681, 299);
             gHorizontalBarChart.TabIndex = 8;
             chartFont18.FontName = "Arial";
             chartFont18.Size = 12;
@@ -407,5 +431,6 @@ namespace ThesisManagementProject
         private FlowLayoutPanel flpStatus;
         private Guna.Charts.WinForms.GunaChart gDoughnutChart;
         private Label lblTotal;
+        private Guna.UI2.WinForms.Guna2ComboBox gComboBoxTop;
     }
 }

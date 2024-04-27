@@ -30,24 +30,9 @@
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FPeopleDetails));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.Charts.WinForms.ChartFont chartFont1 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont2 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont3 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont4 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid1 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.Tick tick1 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont5 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid2 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.Tick tick2 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont6 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid3 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.PointLabel pointLabel1 = new Guna.Charts.WinForms.PointLabel();
-            Guna.Charts.WinForms.ChartFont chartFont7 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Tick tick3 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont8 = new Guna.Charts.WinForms.ChartFont();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FPeopleDetails));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -65,23 +50,15 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             gShadowPanelAccountAvatar = new Guna.UI2.WinForms.Guna2ShadowPanel();
             lblViewHandle = new Label();
             lblViewRole = new Label();
             gCirclePictureBoxAvatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            gShadowPanelThesis = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            lblNoteStatisThesis = new Label();
-            gPictureBoxItemThesis = new Guna.UI2.WinForms.Guna2PictureBox();
-            lblNumThesis = new Label();
             gShadowPanelShowInfor = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            label1 = new Label();
-            gChart = new Guna.Charts.WinForms.GunaChart();
-            gLineDataset = new Guna.Charts.WinForms.GunaLineDataset();
+            pnlShowStatistical = new Panel();
             gShadowPanelPersonalInfor = new Guna.UI2.WinForms.Guna2ShadowPanel();
             gTextBoxGender = new Guna.UI2.WinForms.Guna2TextBox();
             lblPersonalInfor = new Label();
@@ -104,8 +81,6 @@
             gCircleProgressBar = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             gShadowPanelAccountAvatar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)gCirclePictureBoxAvatar).BeginInit();
-            gShadowPanelThesis.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)gPictureBoxItemThesis).BeginInit();
             gShadowPanelShowInfor.SuspendLayout();
             gShadowPanelPersonalInfor.SuspendLayout();
             gShadowPanelIDAccount.SuspendLayout();
@@ -164,62 +139,10 @@
             gCirclePictureBoxAvatar.TabIndex = 0;
             gCirclePictureBoxAvatar.TabStop = false;
             // 
-            // gShadowPanelThesis
-            // 
-            gShadowPanelThesis.BackColor = Color.Transparent;
-            gShadowPanelThesis.Controls.Add(lblNoteStatisThesis);
-            gShadowPanelThesis.Controls.Add(gPictureBoxItemThesis);
-            gShadowPanelThesis.Controls.Add(lblNumThesis);
-            gShadowPanelThesis.FillColor = Color.White;
-            gShadowPanelThesis.Location = new Point(21, 10);
-            gShadowPanelThesis.Name = "gShadowPanelThesis";
-            gShadowPanelThesis.Radius = 7;
-            gShadowPanelThesis.ShadowColor = Color.Black;
-            gShadowPanelThesis.ShadowShift = 4;
-            gShadowPanelThesis.Size = new Size(230, 80);
-            gShadowPanelThesis.TabIndex = 23;
-            // 
-            // lblNoteStatisThesis
-            // 
-            lblNoteStatisThesis.AutoSize = true;
-            lblNoteStatisThesis.Font = new Font("Verdana", 8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblNoteStatisThesis.ForeColor = Color.Gray;
-            lblNoteStatisThesis.Location = new Point(78, 40);
-            lblNoteStatisThesis.Name = "lblNoteStatisThesis";
-            lblNoteStatisThesis.Size = new Size(132, 17);
-            lblNoteStatisThesis.TabIndex = 9;
-            lblNoteStatisThesis.Text = "completed theses";
-            // 
-            // gPictureBoxItemThesis
-            // 
-            gPictureBoxItemThesis.CustomizableEdges = customizableEdges2;
-            gPictureBoxItemThesis.FillColor = Color.Transparent;
-            gPictureBoxItemThesis.Image = (Image)resources.GetObject("gPictureBoxItemThesis.Image");
-            gPictureBoxItemThesis.ImageRotate = 0F;
-            gPictureBoxItemThesis.Location = new Point(17, 7);
-            gPictureBoxItemThesis.Name = "gPictureBoxItemThesis";
-            gPictureBoxItemThesis.ShadowDecoration.CustomizableEdges = customizableEdges3;
-            gPictureBoxItemThesis.Size = new Size(50, 50);
-            gPictureBoxItemThesis.SizeMode = PictureBoxSizeMode.StretchImage;
-            gPictureBoxItemThesis.TabIndex = 10;
-            gPictureBoxItemThesis.TabStop = false;
-            // 
-            // lblNumThesis
-            // 
-            lblNumThesis.AutoSize = true;
-            lblNumThesis.Font = new Font("Trebuchet MS", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblNumThesis.Location = new Point(78, 7);
-            lblNumThesis.Name = "lblNumThesis";
-            lblNumThesis.Size = new Size(44, 32);
-            lblNumThesis.TabIndex = 11;
-            lblNumThesis.Text = "24";
-            // 
             // gShadowPanelShowInfor
             // 
             gShadowPanelShowInfor.BackColor = Color.Transparent;
-            gShadowPanelShowInfor.Controls.Add(label1);
-            gShadowPanelShowInfor.Controls.Add(gChart);
-            gShadowPanelShowInfor.Controls.Add(gShadowPanelThesis);
+            gShadowPanelShowInfor.Controls.Add(pnlShowStatistical);
             gShadowPanelShowInfor.FillColor = Color.White;
             gShadowPanelShowInfor.Location = new Point(375, 27);
             gShadowPanelShowInfor.Name = "gShadowPanelShowInfor";
@@ -231,64 +154,12 @@
             gShadowPanelShowInfor.Size = new Size(798, 329);
             gShadowPanelShowInfor.TabIndex = 19;
             // 
-            // label1
+            // pnlShowStatistical
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(292, 62);
-            label1.Name = "label1";
-            label1.Size = new Size(214, 31);
-            label1.TabIndex = 32;
-            label1.Text = "ACADEMIC CHART";
-            // 
-            // gChart
-            // 
-            gChart.Datasets.AddRange(new Guna.Charts.Interfaces.IGunaDataset[] { gLineDataset });
-            gChart.Legend.Display = false;
-            chartFont1.FontName = "Arial";
-            gChart.Legend.LabelFont = chartFont1;
-            gChart.Location = new Point(23, 96);
-            gChart.Name = "gChart";
-            gChart.Size = new Size(747, 215);
-            gChart.TabIndex = 31;
-            chartFont2.FontName = "Arial";
-            chartFont2.Size = 12;
-            chartFont2.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            gChart.Title.Font = chartFont2;
-            chartFont3.FontName = "Arial";
-            gChart.Tooltips.BodyFont = chartFont3;
-            chartFont4.FontName = "Arial";
-            chartFont4.Size = 9;
-            chartFont4.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            gChart.Tooltips.TitleFont = chartFont4;
-            gChart.XAxes.GridLines = grid1;
-            chartFont5.FontName = "Arial";
-            tick1.Font = chartFont5;
-            gChart.XAxes.Ticks = tick1;
-            gChart.YAxes.GridLines = grid2;
-            chartFont6.FontName = "Arial";
-            tick2.Font = chartFont6;
-            tick2.HasMaximum = true;
-            tick2.HasMinimum = true;
-            tick2.Maximum = 10D;
-            gChart.YAxes.Ticks = tick2;
-            gChart.ZAxes.GridLines = grid3;
-            chartFont7.FontName = "Arial";
-            pointLabel1.Font = chartFont7;
-            gChart.ZAxes.PointLabels = pointLabel1;
-            chartFont8.FontName = "Arial";
-            tick3.Font = chartFont8;
-            gChart.ZAxes.Ticks = tick3;
-            // 
-            // gLineDataset
-            // 
-            gLineDataset.BorderColor = Color.Empty;
-            gLineDataset.BorderWidth = 0;
-            gLineDataset.FillColor = Color.Empty;
-            gLineDataset.Label = "Score";
-            gLineDataset.LegendBoxBorderColor = Color.Transparent;
-            gLineDataset.LegendBoxFillColor = Color.FromArgb(255, 255, 192);
-            gLineDataset.TargetChart = gChart;
+            pnlShowStatistical.Location = new Point(24, 17);
+            pnlShowStatistical.Name = "pnlShowStatistical";
+            pnlShowStatistical.Size = new Size(750, 295);
+            pnlShowStatistical.TabIndex = 0;
             // 
             // gShadowPanelPersonalInfor
             // 
@@ -315,7 +186,7 @@
             gTextBoxGender.BackColor = Color.Transparent;
             gTextBoxGender.BorderColor = Color.White;
             gTextBoxGender.BorderRadius = 5;
-            gTextBoxGender.CustomizableEdges = customizableEdges4;
+            gTextBoxGender.CustomizableEdges = customizableEdges2;
             gTextBoxGender.DefaultText = "";
             gTextBoxGender.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxGender.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -335,7 +206,7 @@
             gTextBoxGender.PlaceholderText = "Gender";
             gTextBoxGender.ReadOnly = true;
             gTextBoxGender.SelectedText = "";
-            gTextBoxGender.ShadowDecoration.CustomizableEdges = customizableEdges5;
+            gTextBoxGender.ShadowDecoration.CustomizableEdges = customizableEdges3;
             gTextBoxGender.Size = new Size(277, 40);
             gTextBoxGender.TabIndex = 16;
             gTextBoxGender.TextOffset = new Point(5, 0);
@@ -355,7 +226,7 @@
             gTextBoxPhonenumber.BackColor = Color.Transparent;
             gTextBoxPhonenumber.BorderColor = Color.White;
             gTextBoxPhonenumber.BorderRadius = 5;
-            gTextBoxPhonenumber.CustomizableEdges = customizableEdges6;
+            gTextBoxPhonenumber.CustomizableEdges = customizableEdges4;
             gTextBoxPhonenumber.DefaultText = "";
             gTextBoxPhonenumber.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxPhonenumber.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -375,7 +246,7 @@
             gTextBoxPhonenumber.PlaceholderText = "Phone number";
             gTextBoxPhonenumber.ReadOnly = true;
             gTextBoxPhonenumber.SelectedText = "";
-            gTextBoxPhonenumber.ShadowDecoration.CustomizableEdges = customizableEdges7;
+            gTextBoxPhonenumber.ShadowDecoration.CustomizableEdges = customizableEdges5;
             gTextBoxPhonenumber.Size = new Size(277, 40);
             gTextBoxPhonenumber.TabIndex = 10;
             gTextBoxPhonenumber.TextOffset = new Point(5, 0);
@@ -385,7 +256,7 @@
             gTextBoxEmail.BackColor = Color.Transparent;
             gTextBoxEmail.BorderColor = Color.White;
             gTextBoxEmail.BorderRadius = 5;
-            gTextBoxEmail.CustomizableEdges = customizableEdges8;
+            gTextBoxEmail.CustomizableEdges = customizableEdges6;
             gTextBoxEmail.DefaultText = "";
             gTextBoxEmail.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxEmail.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -405,7 +276,7 @@
             gTextBoxEmail.PlaceholderText = "Email";
             gTextBoxEmail.ReadOnly = true;
             gTextBoxEmail.SelectedText = "";
-            gTextBoxEmail.ShadowDecoration.CustomizableEdges = customizableEdges9;
+            gTextBoxEmail.ShadowDecoration.CustomizableEdges = customizableEdges7;
             gTextBoxEmail.Size = new Size(277, 40);
             gTextBoxEmail.TabIndex = 12;
             gTextBoxEmail.TextOffset = new Point(5, 0);
@@ -415,7 +286,7 @@
             gTextBoxBirthday.BackColor = Color.Transparent;
             gTextBoxBirthday.BorderColor = Color.White;
             gTextBoxBirthday.BorderRadius = 5;
-            gTextBoxBirthday.CustomizableEdges = customizableEdges10;
+            gTextBoxBirthday.CustomizableEdges = customizableEdges8;
             gTextBoxBirthday.DefaultText = "";
             gTextBoxBirthday.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxBirthday.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -435,7 +306,7 @@
             gTextBoxBirthday.PlaceholderText = "Birthday";
             gTextBoxBirthday.ReadOnly = true;
             gTextBoxBirthday.SelectedText = "";
-            gTextBoxBirthday.ShadowDecoration.CustomizableEdges = customizableEdges11;
+            gTextBoxBirthday.ShadowDecoration.CustomizableEdges = customizableEdges9;
             gTextBoxBirthday.Size = new Size(277, 40);
             gTextBoxBirthday.TabIndex = 13;
             gTextBoxBirthday.TextOffset = new Point(5, 0);
@@ -445,7 +316,7 @@
             gTextBoxCitizencode.BackColor = Color.Transparent;
             gTextBoxCitizencode.BorderColor = Color.White;
             gTextBoxCitizencode.BorderRadius = 5;
-            gTextBoxCitizencode.CustomizableEdges = customizableEdges12;
+            gTextBoxCitizencode.CustomizableEdges = customizableEdges10;
             gTextBoxCitizencode.DefaultText = "";
             gTextBoxCitizencode.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxCitizencode.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -465,7 +336,7 @@
             gTextBoxCitizencode.PlaceholderText = "Citizen code";
             gTextBoxCitizencode.ReadOnly = true;
             gTextBoxCitizencode.SelectedText = "";
-            gTextBoxCitizencode.ShadowDecoration.CustomizableEdges = customizableEdges13;
+            gTextBoxCitizencode.ShadowDecoration.CustomizableEdges = customizableEdges11;
             gTextBoxCitizencode.Size = new Size(277, 40);
             gTextBoxCitizencode.TabIndex = 8;
             gTextBoxCitizencode.TextOffset = new Point(5, 0);
@@ -475,7 +346,7 @@
             gTextBoxFullname.BackColor = Color.Transparent;
             gTextBoxFullname.BorderColor = Color.White;
             gTextBoxFullname.BorderRadius = 5;
-            gTextBoxFullname.CustomizableEdges = customizableEdges14;
+            gTextBoxFullname.CustomizableEdges = customizableEdges12;
             gTextBoxFullname.DefaultText = "";
             gTextBoxFullname.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxFullname.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -495,7 +366,7 @@
             gTextBoxFullname.PlaceholderText = "Full name";
             gTextBoxFullname.ReadOnly = true;
             gTextBoxFullname.SelectedText = "";
-            gTextBoxFullname.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            gTextBoxFullname.ShadowDecoration.CustomizableEdges = customizableEdges13;
             gTextBoxFullname.Size = new Size(277, 40);
             gTextBoxFullname.TabIndex = 9;
             gTextBoxFullname.TextOffset = new Point(5, 0);
@@ -520,7 +391,7 @@
             gTextBoxIDAccount.BackColor = Color.Transparent;
             gTextBoxIDAccount.BorderColor = Color.White;
             gTextBoxIDAccount.BorderRadius = 5;
-            gTextBoxIDAccount.CustomizableEdges = customizableEdges16;
+            gTextBoxIDAccount.CustomizableEdges = customizableEdges14;
             gTextBoxIDAccount.DefaultText = "";
             gTextBoxIDAccount.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxIDAccount.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -541,7 +412,7 @@
             gTextBoxIDAccount.PlaceholderText = "ID Account";
             gTextBoxIDAccount.ReadOnly = true;
             gTextBoxIDAccount.SelectedText = "";
-            gTextBoxIDAccount.ShadowDecoration.CustomizableEdges = customizableEdges17;
+            gTextBoxIDAccount.ShadowDecoration.CustomizableEdges = customizableEdges15;
             gTextBoxIDAccount.Size = new Size(413, 40);
             gTextBoxIDAccount.TabIndex = 8;
             gTextBoxIDAccount.TextOffset = new Point(5, 0);
@@ -578,7 +449,7 @@
             gTextBoxFaculty.BackColor = Color.Transparent;
             gTextBoxFaculty.BorderColor = Color.White;
             gTextBoxFaculty.BorderRadius = 5;
-            gTextBoxFaculty.CustomizableEdges = customizableEdges18;
+            gTextBoxFaculty.CustomizableEdges = customizableEdges16;
             gTextBoxFaculty.DefaultText = "";
             gTextBoxFaculty.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxFaculty.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -599,7 +470,7 @@
             gTextBoxFaculty.PlaceholderText = "Faculty";
             gTextBoxFaculty.ReadOnly = true;
             gTextBoxFaculty.SelectedText = "";
-            gTextBoxFaculty.ShadowDecoration.CustomizableEdges = customizableEdges19;
+            gTextBoxFaculty.ShadowDecoration.CustomizableEdges = customizableEdges17;
             gTextBoxFaculty.Size = new Size(413, 40);
             gTextBoxFaculty.TabIndex = 14;
             gTextBoxFaculty.TextOffset = new Point(5, 0);
@@ -609,7 +480,7 @@
             gTextBoxWorkcode.BackColor = Color.Transparent;
             gTextBoxWorkcode.BorderColor = Color.White;
             gTextBoxWorkcode.BorderRadius = 5;
-            gTextBoxWorkcode.CustomizableEdges = customizableEdges20;
+            gTextBoxWorkcode.CustomizableEdges = customizableEdges18;
             gTextBoxWorkcode.DefaultText = "";
             gTextBoxWorkcode.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxWorkcode.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -629,7 +500,7 @@
             gTextBoxWorkcode.PlaceholderText = "Work code";
             gTextBoxWorkcode.ReadOnly = true;
             gTextBoxWorkcode.SelectedText = "";
-            gTextBoxWorkcode.ShadowDecoration.CustomizableEdges = customizableEdges21;
+            gTextBoxWorkcode.ShadowDecoration.CustomizableEdges = customizableEdges19;
             gTextBoxWorkcode.Size = new Size(413, 40);
             gTextBoxWorkcode.TabIndex = 10;
             gTextBoxWorkcode.TextOffset = new Point(5, 0);
@@ -639,7 +510,7 @@
             gTextBoxUniversity.BackColor = Color.Transparent;
             gTextBoxUniversity.BorderColor = Color.White;
             gTextBoxUniversity.BorderRadius = 5;
-            gTextBoxUniversity.CustomizableEdges = customizableEdges22;
+            gTextBoxUniversity.CustomizableEdges = customizableEdges20;
             gTextBoxUniversity.DefaultText = "";
             gTextBoxUniversity.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxUniversity.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -659,7 +530,7 @@
             gTextBoxUniversity.PlaceholderText = "University";
             gTextBoxUniversity.ReadOnly = true;
             gTextBoxUniversity.SelectedText = "";
-            gTextBoxUniversity.ShadowDecoration.CustomizableEdges = customizableEdges23;
+            gTextBoxUniversity.ShadowDecoration.CustomizableEdges = customizableEdges21;
             gTextBoxUniversity.Size = new Size(413, 40);
             gTextBoxUniversity.TabIndex = 13;
             gTextBoxUniversity.TextOffset = new Point(5, 0);
@@ -694,11 +565,11 @@
             gPanelTotalProcess.BorderRadius = 20;
             gPanelTotalProcess.Controls.Add(lblTotalProgress);
             gPanelTotalProcess.Controls.Add(gCircleProgressBar);
-            gPanelTotalProcess.CustomizableEdges = customizableEdges25;
+            gPanelTotalProcess.CustomizableEdges = customizableEdges23;
             gPanelTotalProcess.FillColor = Color.White;
             gPanelTotalProcess.Location = new Point(24, 47);
             gPanelTotalProcess.Name = "gPanelTotalProcess";
-            gPanelTotalProcess.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            gPanelTotalProcess.ShadowDecoration.CustomizableEdges = customizableEdges24;
             gPanelTotalProcess.Size = new Size(270, 270);
             gPanelTotalProcess.TabIndex = 14;
             // 
@@ -728,7 +599,7 @@
             gCircleProgressBar.ProgressEndCap = System.Drawing.Drawing2D.LineCap.Round;
             gCircleProgressBar.ProgressStartCap = System.Drawing.Drawing2D.LineCap.Round;
             gCircleProgressBar.ProgressThickness = 20;
-            gCircleProgressBar.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            gCircleProgressBar.ShadowDecoration.CustomizableEdges = customizableEdges22;
             gCircleProgressBar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             gCircleProgressBar.ShowText = true;
             gCircleProgressBar.Size = new Size(162, 162);
@@ -757,11 +628,7 @@
             gShadowPanelAccountAvatar.ResumeLayout(false);
             gShadowPanelAccountAvatar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)gCirclePictureBoxAvatar).EndInit();
-            gShadowPanelThesis.ResumeLayout(false);
-            gShadowPanelThesis.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)gPictureBoxItemThesis).EndInit();
             gShadowPanelShowInfor.ResumeLayout(false);
-            gShadowPanelShowInfor.PerformLayout();
             gShadowPanelPersonalInfor.ResumeLayout(false);
             gShadowPanelPersonalInfor.PerformLayout();
             gShadowPanelIDAccount.ResumeLayout(false);
@@ -777,10 +644,6 @@
         #endregion
         private Guna.UI2.WinForms.Guna2ShadowPanel gShadowPanelAccountAvatar;
         private Guna.UI2.WinForms.Guna2CirclePictureBox gCirclePictureBoxAvatar;
-        private Guna.UI2.WinForms.Guna2ShadowPanel gShadowPanelThesis;
-        private Label lblNoteStatisThesis;
-        private Guna.UI2.WinForms.Guna2PictureBox gPictureBoxItemThesis;
-        private Label lblNumThesis;
         private Guna.UI2.WinForms.Guna2ShadowPanel gShadowPanelShowInfor;
         private Label lblViewHandle;
         private Label lblViewRole;
@@ -804,8 +667,6 @@
         private Guna.UI2.WinForms.Guna2Panel gPanelTotalProcess;
         private Label lblTotalProgress;
         private Guna.UI2.WinForms.Guna2CircleProgressBar gCircleProgressBar;
-        private Guna.Charts.WinForms.GunaChart gChart;
-        private Guna.Charts.WinForms.GunaLineDataset gLineDataset;
-        private Label label1;
+        private Panel pnlShowStatistical;
     }
 }

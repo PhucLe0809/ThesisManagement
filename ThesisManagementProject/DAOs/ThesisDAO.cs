@@ -1,13 +1,18 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Xml.Linq;
 using ThesisManagementProject.Database;
 using ThesisManagementProject.Models;
 using ThesisManagementProject.Process;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ThesisManagementProject.DAOs
 {
@@ -45,6 +50,32 @@ namespace ThesisManagementProject.DAOs
             if (dt.Rows.Count > 0) return SelectOnly(dt.Rows[0]["idthesis"].ToString());
             return new Thesis();
         }
+        public List<Dictionary<Thesis, int>> GetMaxSubscribers()
+        {
+            string command = "SELECT idthesis, SUM(SL) AS total_SL " +
+                             "FROM ThesisStatus " +
+                             "JOIN (SELECT idteam, COUNT(idaccount) AS SL FROM Team GROUP BY idteam) AS Team " +
+                             "ON ThesisStatus.idteam = Team.idteam " +
+                             "WHERE ThesisStatus.status IN ('Registered', 'Processing', 'Completed') " +
+                             "GROUP BY idthesis " +
+                             "ORDER BY total_SL DESC";
+            DataTable dataTable = Select(command);
+
+            List<Dictionary<Thesis, int>> resultList = new List<Dictionary<Thesis, int>>();
+
+            foreach (DataRow row in dataTable.Rows)
+            {
+                string idThesis = row["idthesis"].ToString();
+                Thesis thesis = SelectOnly(idThesis);
+                int total = Convert.ToInt32(row["total_SL"]);
+                Dictionary<Thesis, int> resultDict = new Dictionary<Thesis, int>
+                {
+                    { thesis, total }
+                };
+                resultList.Add(resultDict);
+            }
+            return resultList;
+        }
 
         #endregion
 
@@ -67,6 +98,14 @@ namespace ThesisManagementProject.DAOs
         {
             string command = string.Format("SELECT {0}.* FROM {0} INNER JOIN {1} ON {0}.idthesis = {1}.idthesis " +
                                            "WHERE {1}.idteam IN (SELECT idteam FROM {2} WHERE idaccount = '{3}')",
+                                            MyDatabase.DBThesis, MyDatabase.DBThesisStatus, MyDatabase.DBTeam, idAccount);
+            return SelectList(command);
+        }
+        public List<Thesis> SelectListModeNotCompleted(string idAccount)
+        {
+            string command = string.Format("SELECT {0}.* FROM {0} INNER JOIN {1} ON {0}.idthesis = {1}.idthesis " +
+                                           "WHERE {1}.idteam IN (SELECT idteam FROM {2} WHERE idaccount = '{3}') " +
+                                           "AND {1}.status = 'NotCompleted'",
                                             MyDatabase.DBThesis, MyDatabase.DBThesisStatus, MyDatabase.DBTeam, idAccount);
             return SelectList(command);
         }
@@ -160,7 +199,6 @@ namespace ThesisManagementProject.DAOs
             return thesis;
         }
 
-        #endregion
-
+        #endregion 
     }
 }

@@ -22,7 +22,6 @@ namespace ThesisManagementProject
         private List<double> scoreOfMembers;
 
         private TasksDAO tasksDAO = new TasksDAO();
-        private EvaluationDAO evaluationDAO = new EvaluationDAO();
         private MyProcess myProcess = new MyProcess();
 
         public UCThesisDetailsStatistical()

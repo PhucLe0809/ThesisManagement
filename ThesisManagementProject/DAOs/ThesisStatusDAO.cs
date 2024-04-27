@@ -15,7 +15,6 @@ namespace ThesisManagementProject.DAOs
     internal class ThesisStatusDAO : DBConnection
     {
         public ThesisStatusDAO() { }
-
         public void Insert(Thesis thesis, Team team)
         {
             string command = string.Format("INSERT INTO {0} VALUES('{1}', '{2}', '{3}')",

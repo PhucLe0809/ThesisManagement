@@ -22,6 +22,9 @@ namespace ThesisManagementProject
         private MyProcess myProcess = new MyProcess();
         private List<Thesis> listTheses;
 
+        private ThesisDAO thesisDAO = new ThesisDAO();
+        private PeopleDAO peopleDAO = new PeopleDAO();
+
         public UCDashboardStatistical()
         {
             InitializeComponent();
@@ -38,8 +41,8 @@ namespace ThesisManagementProject
         void SetupUserControl()
         {
             UpdateDoughnutChart();
-            UpdateHorizontalbarChart();
-            SetupComboBoxSelectYear();            
+            SetupComboBoxTop();
+            SetupComboBoxSelectYear();
         }
 
         #endregion
@@ -87,32 +90,6 @@ namespace ThesisManagementProject
         }
         #endregion
 
-        #region HORIZONTALBAR CHART
-        public void UpdateHorizontalbarChart()
-        {
-            var thesisGroupedByField = this.listTheses
-                .GroupBy(thesis => thesis.Field)
-                .Select(group => new
-                {
-                    Field = group.Key,
-                    Count = group.Count()
-                });
-            thesisGroupedByField = thesisGroupedByField.OrderByDescending(item => item.Count);
-            int max = 5;
-            int i = 0;
-            this.gHorizontalBarDataset.DataPoints.Clear();
-            this.gHorizontalBarChart.Datasets.Clear();
-            foreach (var group in thesisGroupedByField)
-            {
-                this.gHorizontalBarDataset.DataPoints.Add(group.Field.ToString(), group.Count);
-                i++;
-                if (i == max) break;
-            }
-            this.gHorizontalBarChart.Datasets.Add(gHorizontalBarDataset);
-            this.gHorizontalBarChart.Update();
-        }
-        #endregion
-
         #region COMBO BOX
         public void SetupComboBoxSelectYear()
         {
@@ -125,6 +102,71 @@ namespace ThesisManagementProject
         private void gComboBoxSelectYear_SelectedValueChanged(object sender, EventArgs e)
         {
             UpdateMixedBarAndSplineChart();
+        }
+        public void SetupComboBoxTop()
+        {
+            this.gComboBoxTop.SelectedIndex = 0;
+        }
+        private void gComboBoxTop_SelectedValueChanged(object sender, EventArgs e)
+        {
+            UpdateHorizontalbarChart();
+        }
+        #endregion
+
+        #region HORIZONTALBAR CHART
+        IEnumerable<object> ByLecture()
+        {
+            List<Dictionary<Thesis, int>> getThesisByMaxSubscribers = thesisDAO.GetMaxSubscribers();
+            List<string> lectures = peopleDAO.SelectListID(ERole.Lecture);
+            var result = from dict in getThesisByMaxSubscribers
+                         join lecture in lectures on dict.Keys.FirstOrDefault().IdInstructor equals lecture
+                         select new { Lecture = lecture, Count = dict.Values.FirstOrDefault() };
+            var groupedResult = result.GroupBy(
+                item => item.Lecture,
+                (key, group) => new
+                {
+                    Name = key,
+                    Count = group.Sum(item => item.Count)
+                }
+            ).ToList();
+            return groupedResult;
+
+        }
+        IEnumerable<object> ByField()
+        {
+            var thesisGroupedByField = this.listTheses
+              .GroupBy(thesis => thesis.Field)
+              .Select(group => new
+              {
+                  Name = group.Key,
+                  Count = group.Count()
+              });
+            thesisGroupedByField = thesisGroupedByField.OrderByDescending(item => item.Count);
+            return thesisGroupedByField;
+        }
+        public void UpdateHorizontalbarChart()
+        {
+            string selectedFilter = gComboBoxTop.SelectedItem.ToString();
+            var thesisGroupedByField = selectedFilter == "Field" ? ByField() : ByLecture();
+            int max = 5;
+            int i = 0;
+            this.gHorizontalBarDataset.DataPoints.Clear();
+            this.gHorizontalBarChart.Datasets.Clear();
+            foreach (var group in thesisGroupedByField)
+            {
+                var name = group.GetType().GetProperty("Name").GetValue(group, null).ToString();
+                if (selectedFilter == "Lecture")
+                {
+                    People people = peopleDAO.SelectOnlyByID(name);
+                    name = people.Handle;
+                }
+                var count = (int)group.GetType().GetProperty("Count").GetValue(group, null);
+                this.gHorizontalBarDataset.DataPoints.Add(name, count);
+                i++;
+                if (i == max) break;
+            }
+            this.gHorizontalBarChart.Datasets.Add(gHorizontalBarDataset);
+            this.gHorizontalBarChart.Update();
         }
         #endregion
 
@@ -164,6 +206,6 @@ namespace ThesisManagementProject
             this.gMixedBarAndSplineChart.Update();
         }
         #endregion
-          
+
     }
 }
