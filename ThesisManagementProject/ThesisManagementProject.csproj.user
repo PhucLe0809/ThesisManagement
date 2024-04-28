@@ -49,6 +49,12 @@
     <Compile Update="UCNotificationLine.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="UCStatisticalLecture.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCStatisticalStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UCTaskComment.cs">
       <SubType>UserControl</SubType>
     </Compile>

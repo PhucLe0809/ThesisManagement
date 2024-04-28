@@ -8,6 +8,8 @@ namespace ThesisManagementProject.DAOs
 {
     internal class LectureDAO : PeopleDAO
     {
+        ThesisDAO thesisDAO = new ThesisDAO();
         public LectureDAO() : base() { }
+        
     }
 }
