@@ -16,7 +16,7 @@ using ThesisManagementProject.Models;
 
 namespace ThesisManagementProject.Process
 {
-    #region ENUM
+    #region ENUM CLASSIFY
 
     public enum EClassify
     {

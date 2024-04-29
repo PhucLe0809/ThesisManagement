@@ -182,7 +182,7 @@ namespace ThesisManagementProject.DAOs
             string idThesis = row["idthesis"].ToString();
             string topic = row["topic"].ToString();
             EField field = myProcess.GetEnumFromDisplayName<EField>(row["field"].ToString());
-            ELevel level = myProcess.GetEnumFromDisplayName<ELevel>(row["tslevel"].ToString());
+            ELevel level = myProcess.GetEnumFromDisplayName<ELevel>(row["level"].ToString());
             int maxMembers = int.Parse(row["maxmembers"].ToString());
             string description = row["description"].ToString();
             DateTime publishDate = DateTime.Parse(row["publishdate"].ToString());

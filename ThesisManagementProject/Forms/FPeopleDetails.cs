@@ -28,14 +28,14 @@ namespace ThesisManagementProject
             InitializeComponent();
             SetInformation(people);
         }
+
+        #region FUNCTIONS
+
         public void SetInformation(People people)
         {
             this.people = people;
             InitUserControl();
         }
-
-        #region FUNTIONS
-
         private void InitUserControl()
         {
             gCirclePictureBoxAvatar.Image = myProcess.NameToImage(people.AvatarName);
@@ -64,7 +64,9 @@ namespace ThesisManagementProject
             this.pnlShowStatistical.Controls.Add(uCstatisticalLecture);
 
             this.gShadowPanelContribution.Controls.Clear();
-            Guna2PictureBox gPictureBoxState = myProcess.CreatePictureBox(Properties.Resources.GifPrivate, new Size(300, 300));
+            Guna2PictureBox gPictureBoxState = myProcess.CreatePictureBox(Properties.Resources.PictureEmptyState, new Size(280, 280));
+            gPictureBoxState.SizeMode = PictureBoxSizeMode.StretchImage;
+            gPictureBoxState.Location = new Point(15, 30);
             this.gShadowPanelContribution.Controls.Add(gPictureBoxState);
 
         }
@@ -78,5 +80,6 @@ namespace ThesisManagementProject
         }
 
         #endregion
+    
     }
 }

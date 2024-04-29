@@ -68,23 +68,6 @@ namespace ThesisManagementProject.DAOs
 
         #endregion
 
-        #region SELECT LIST PEOPLE BY ROLE
-
-        public List<People> SelectListPeopleByRole(ERole role)
-        {
-            string command = string.Format("SELECT idaccount FROM {0} WHERE role = '{1}'", MyDatabase.DBAccount, role.ToString());
-            DataTable table = Select(command);
-            List<People> list = new List<People>();
-
-            foreach (DataRow row in table.Rows)
-            {
-                list.Add(GetFromDataRow(row));
-            }
-            return list;
-        }
-
-        #endregion
-
         #region PEOPLE DAO EXECUTION
 
         public void Insert(People people)
