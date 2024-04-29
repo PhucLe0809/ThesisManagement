@@ -34,13 +34,6 @@ namespace ThesisManagementProject.DAOs
                                             MyDatabase.DBComment, tasks.IdTask);
             return SelectList(command);
         }
-        public Comment SelectOnly(string idComment)
-        {
-            DataTable dt = Select(string.Format("SELECT * FROM {0} WHERE idcomment = '{1}'", MyDatabase.DBComment, idComment));
-
-            if (dt.Rows.Count > 0) return GetFromDataRow(dt.Rows[0]);
-            return new Comment();
-        }
 
         #endregion
 

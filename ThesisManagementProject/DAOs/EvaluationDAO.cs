@@ -33,12 +33,6 @@ namespace ThesisManagementProject.DAOs
                                             MyDatabase.DBEvaluation, idTask);
             return SelectList(command);
         }
-        public List<Evaluation> SelectListByTaskAndPeople(string idTask, string idPeople)
-        {
-            string command = string.Format("SELECT * FROM {0} WHERE idtask = '{1}' AND idpeople = '{2}'",
-                                            MyDatabase.DBEvaluation, idTask, idPeople);
-            return SelectList(command);
-        }
         public List<Evaluation> SelectListByPeople(string idPeople)
         {
             string command = string.Format("SELECT * FROM {0} WHERE idpeople = '{1}'",
@@ -62,11 +56,6 @@ namespace ThesisManagementProject.DAOs
         {
             ExecuteQueryEvaluation(evaluation, "INSERT INTO {0} VALUES ('{1}', '{2}', '{3}', '{4}', {5}, {6}, '{7}', {8})",
                 "Create", false);
-        }
-        public void Delete(Evaluation evaluation)
-        {
-            ExecuteQueryEvaluation(evaluation, "DELETE FROM {0} WHERE idevaluation = '{1}'",
-                "Delete", false);
         }
         public void DeleteFollowTask(Tasks tasks)
         {

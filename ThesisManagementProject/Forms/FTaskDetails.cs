@@ -38,10 +38,6 @@ namespace ThesisManagementProject.Forms
         private bool flagCheck = false;
         private bool edited = false;
 
-        public FTaskDetails()
-        {
-            InitializeComponent();
-        }
         public FTaskDetails(People host, People instructor, Thesis thesis, Tasks tasks, People creator, Team team, bool isProcessing)
         {
             InitializeComponent();
