@@ -149,7 +149,7 @@ namespace ThesisManagementProject.Forms
             this.flagCheck = false;
             if (CheckInformationValid())
             {
-                this.tasks = new Tasks(tasks.IdTask, gTextBoxTitle.Text, gTextBoxDescription.Text, this.creator.IdAccount, this.team.IDTeam,
+                this.tasks = new Tasks(tasks.IdTask, gTextBoxTitle.Text, gTextBoxDescription.Text, this.creator.IdAccount, this.team.IdTeam,
                                             tasks.IsFavorite, int.Parse(gTextBoxProgress.Text.ToString()), tasks.CreatedDate);
 
                 tasksDAO.Update(tasks);

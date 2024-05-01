@@ -8,7 +8,7 @@
 use ThesisManagement
 go
 
-drop table Account, Thesis, Team, Task, Comment, Evaluation, Notification, NotCompleted, ThesisStatus, Technology
+drop table Account, Thesis, Team, Task, Comment, Evaluation, Notification, ThesisStatus, Technology
 
 -- CREATE TABLE ACCOUNT
 create table Account (

@@ -32,7 +32,7 @@ namespace ThesisManagementProject
         {
             this.team = team;
             this.team.Members.OrderBy(member => member.IdAccount);
-            this.listTasks = tasksDAO.SelectListByTeam(this.team.IDTeam);
+            this.listTasks = tasksDAO.SelectListByTeam(this.team.IdTeam);
             UpdateMembers();
             UpdateChart();
             this.gProgressBar.Value = myProcess.CalStatisticalThesis(this.listTasks);

@@ -18,7 +18,7 @@ namespace ThesisManagementProject.DAOs
         public void Insert(Thesis thesis, Team team)
         {
             string command = string.Format("INSERT INTO {0} VALUES('{1}', '{2}', '{3}')",
-                                            MyDatabase.DBThesisStatus, team.IDTeam, thesis.IdThesis, thesis.Status.ToString());
+                                            MyDatabase.DBThesisStatus, team.IdTeam, thesis.IdThesis, thesis.Status.ToString());
             SQLExecuteByCommand(command);
         }
         public void DeleteListTeam(List<Team> listTeam, string idThesis)
@@ -26,7 +26,7 @@ namespace ThesisManagementProject.DAOs
             foreach (Team teamLine in listTeam)
             {
                 string command = string.Format("DELETE FROM {0} WHERE idteam = '{1}' AND idthesis = '{2}'",
-                                    MyDatabase.DBThesisStatus, teamLine.IDTeam, idThesis);
+                                    MyDatabase.DBThesisStatus, teamLine.IdTeam, idThesis);
                 ExecuteQuery(command, "Delete", false);
             }
         }

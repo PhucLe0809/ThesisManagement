@@ -155,7 +155,7 @@ namespace ThesisManagementProject.DAOs
         public void Update(Thesis thesis)
         {
             ExecuteQueryThesis(thesis, "UPDATE {0} SET " +
-                "idthesis = '{1}', topic = '{2}', field = '{3}', tslevel = '{4}', maxmembers = {5}, " +
+                "idthesis = '{1}', topic = '{2}', field = '{3}', level = '{4}', maxmembers = {5}, " +
                 "description = '{6}', publishdate = '{7}', technology = '{8}', functions = '{9}', requirements = '{10}', " +
                 "idcreator = '{11}', isfavorite = {12}, status = '{13}', idinstructor = '{14}' WHERE idthesis = '{1}'",
                 "Update", false);

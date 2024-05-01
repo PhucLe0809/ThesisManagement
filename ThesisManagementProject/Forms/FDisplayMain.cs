@@ -17,7 +17,6 @@ namespace ThesisManagementProject
     {
         private PeopleDAO peopleDAO = new PeopleDAO();
 
-        private UCDisplayPeople uCDisplayPeople = new UCDisplayPeople();
         private UCDisplayWelcome uCDisplayWelcome = new UCDisplayWelcome();
         private UCDisplayLogin uCDisplayLogin = new UCDisplayLogin();
         private UCDisplayRegister uCDisplayRegister = new UCDisplayRegister();
@@ -34,10 +33,6 @@ namespace ThesisManagementProject
             uCDisplayWelcome.GGradientButtonStudent.Click += DWelcomeButtonStudent_Click;
             uCDisplayWelcome.GGradientButtonRegister.Click += DWelcomeButtonRegister_Click;
             uCDisplayWelcome.GButtonLogin.Click += DWelcomeButtonToLogin_Click;
-
-            uCDisplayPeople.GButtonLogOut.Click += DLectureButtonLogOut_Click;
-
-            uCDisplayPeople.GButtonLogOut.Click += DStudentButtonLogOut_Click;
 
             uCDisplayLogin.GButtonLogin.Click += DLoginButtonLogin_Click;
             uCDisplayLogin.GButtonBack.Click += DLoginButtonBack_Click;
@@ -62,6 +57,13 @@ namespace ThesisManagementProject
             gPanelDisplay.Controls.Clear();
             gPanelDisplay.Controls.Add(userControl);
         }
+        private void SetNewDisplayPeople(People people)
+        {
+            UCDisplayPeople uCDisplayPeople = new UCDisplayPeople();
+            uCDisplayPeople.SetInformation(people);
+            uCDisplayPeople.GButtonLogOut.Click += DButtonLogOut_Click;
+            SetDisplay(uCDisplayPeople);
+        }
 
         #endregion
 
@@ -70,14 +72,12 @@ namespace ThesisManagementProject
         private void DWelcomeButtonLecture_Click(object sender, EventArgs e)
         {
             People people = peopleDAO.SelectOnlyByID("242200001");
-            uCDisplayPeople.SetInformation(people);
-            SetDisplay(uCDisplayPeople);
+            SetNewDisplayPeople(people);
         }
         private void DWelcomeButtonStudent_Click(object sender, EventArgs e)
         {
             People people = peopleDAO.SelectOnlyByID("243300002");
-            uCDisplayPeople.SetInformation(people);
-            SetDisplay(uCDisplayPeople);
+            SetNewDisplayPeople(people);
         }
         private void DWelcomeButtonRegister_Click(object sender, EventArgs e)
         {
@@ -89,11 +89,7 @@ namespace ThesisManagementProject
             uCDisplayLogin.InitDataControls();
             SetDisplay(uCDisplayLogin);
         }
-        private void DLectureButtonLogOut_Click(object sender, EventArgs e)
-        {
-            SetDisplay(uCDisplayWelcome);
-        }
-        private void DStudentButtonLogOut_Click(object sender, EventArgs e)
+        private void DButtonLogOut_Click(object sender, EventArgs e)
         {
             SetDisplay(uCDisplayWelcome);
         }
@@ -112,16 +108,7 @@ namespace ThesisManagementProject
             else
             {
                 uCDisplayLogin.GTextBoxReminder.Text = string.Empty;
-                if (people.Role == ERole.Lecture)
-                {
-                    uCDisplayPeople.SetInformation(people);
-                    SetDisplay(uCDisplayPeople);
-                }
-                else
-                {
-                    uCDisplayPeople.SetInformation(people);
-                    SetDisplay(uCDisplayPeople);
-                }
+                SetNewDisplayPeople(people);
             }
         }
         private void DLoginButtonBack_Click(object sender, EventArgs e)

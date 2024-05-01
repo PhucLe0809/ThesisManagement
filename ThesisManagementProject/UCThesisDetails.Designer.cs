@@ -223,6 +223,7 @@
             gGradientButtonComplete.Size = new Size(100, 30);
             gGradientButtonComplete.TabIndex = 70;
             gGradientButtonComplete.Text = "Complete";
+            gGradientButtonComplete.Click += gGradientButtonComplete_Click;
             // 
             // gButtonDetails
             // 

@@ -68,7 +68,7 @@ namespace ThesisManagementProject.Models
 
         #region TEAM PROPERTIES
 
-        public string IDTeam
+        public string IdTeam
         {
             get { return this.idteam; }
         }

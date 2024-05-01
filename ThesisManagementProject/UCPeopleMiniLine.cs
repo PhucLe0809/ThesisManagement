@@ -18,9 +18,7 @@ namespace ThesisManagementProject
     {
         public event EventHandler ButtonAddClicked;
         public event EventHandler ButtonDeleteClicked;
-        public event EventHandler ClickNotEvaluate;
         public event EventHandler ClickEvaluate;
-        public event EventHandler CustomClick;
 
         private MyProcess myProcess = new MyProcess();
         private People people = new People();
@@ -65,9 +63,6 @@ namespace ThesisManagementProject
         }
         private void InitUserControl()
         {
-            this.ClickNotEvaluate += ClickNotEvaluate_Click;
-            this.CustomClick += UCPeopleMiniLine_Click;
-
             gCirclePictureBoxAvatar.Image = myProcess.NameToImage(people.AvatarName);
             lblUserName.Text = people.Handle;
             lblPeopleCode.Text = people.IdAccount;
@@ -166,7 +161,11 @@ namespace ThesisManagementProject
 
         #region EVENT CONTROLS
 
-        private void UCPeopleMiniLine_Click(object sender, EventArgs e)
+        private void gCirclePictureBoxAvatar_Click(object sender, EventArgs e)
+        {
+            ShowPeopleInformation();
+        }
+        private void gShadowPanelBack_Click(object sender, EventArgs e)
         {
             if (this.isEvaluate)
             {
@@ -174,20 +173,8 @@ namespace ThesisManagementProject
             }
             else
             {
-                ClickNotEvaluate?.Invoke(this, e);
+                ShowPeopleInformation();
             }
-        }
-        private void gCirclePictureBoxAvatar_Click(object sender, EventArgs e)
-        {
-            ShowPeopleInformation();
-        }
-        private void gShadowPanelBack_Click(object sender, EventArgs e)
-        {
-            CustomClick?.Invoke(this, e);
-        }
-        private void ClickNotEvaluate_Click(object sender, EventArgs e)
-        {
-            ShowPeopleInformation();
         }
         private void gButtonAdd_Click(object sender, EventArgs e)
         {
@@ -197,11 +184,11 @@ namespace ThesisManagementProject
         {
             OnButtonDeleteClicked(EventArgs.Empty);
         }
-        public virtual void OnButtonAddClicked(EventArgs e)
+        private void OnButtonAddClicked(EventArgs e)
         {
             ButtonAddClicked?.Invoke(this, e);
         }
-        public virtual void OnButtonDeleteClicked(EventArgs e)
+        private void OnButtonDeleteClicked(EventArgs e)
         {
             ButtonDeleteClicked?.Invoke(this, e);
         }
