@@ -178,7 +178,6 @@
             DoubleBuffered = true;
             Name = "UCPeopleMiniLine";
             Size = new Size(610, 60);
-            Click += UCPeopleMiniLine_Click;
             ((System.ComponentModel.ISupportInitialize)gCirclePictureBoxAvatar).EndInit();
             gShadowPanelBack.ResumeLayout(false);
             ResumeLayout(false);

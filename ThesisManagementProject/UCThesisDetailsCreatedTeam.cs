@@ -66,17 +66,10 @@ namespace ThesisManagementProject
         private void InitUserControl()
         {
             pictureAvatar = Properties.Resources.PicAvatarDemoUser;
-            if(CheckCanRegister())
-            {
-                gGradientButtonRegister.Enabled = true;
-                flpSearch.Location = new Point(11, 14);
-                flpSearch.Hide();
-                gGradientButtonPerform.Hide();
-            }
-            else
-            {
-                gGradientButtonRegister.Enabled = false;
-            }
+            gGradientButtonRegister.Enabled = true;
+            flpSearch.Location = new Point(11, 14);
+            flpSearch.Hide();
+            gGradientButtonPerform.Hide();
         }
         private void AddMember(People people)
         {
@@ -179,11 +172,7 @@ namespace ThesisManagementProject
         #endregion
 
         #region EVENT gGradientButtonRegister
-        bool CheckCanRegister()
-        {
-            List<Thesis> listThesesNotCompleted = thesisDAO.SelectListModeNotCompleted(this.people.IdAccount);
-            return listThesesNotCompleted.Count < 3;
-        }
+
         private void gGradientButtonApply_Click(object sender, EventArgs e)
         {
             if (CheckEmpty(gTextBoxTeamName.Text))

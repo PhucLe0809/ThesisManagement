@@ -72,7 +72,7 @@ namespace ThesisManagementProject.DAOs
             foreach (People member in team.Members)
             {
                 string command = string.Format("INSERT INTO {0} VALUES('{1}', '{2}', '{3}', '{4}', '{5}')",
-                                            MyDatabase.DBTeam, team.IDTeam, member.IdAccount, team.TeamName, team.Created, team.AvatarName);
+                                            MyDatabase.DBTeam, team.IdTeam, member.IdAccount, team.TeamName, team.Created, team.AvatarName);
                 SQLExecuteByCommand(command);
             }
         }
@@ -80,7 +80,7 @@ namespace ThesisManagementProject.DAOs
         {
             foreach (People member in team.Members)
             {
-                string command = string.Format("DELETE FROM {0} WHERE idteam = '{1}' and idaccount = '{2}'", MyDatabase.DBTeam, team.IDTeam, member.IdAccount);
+                string command = string.Format("DELETE FROM {0} WHERE idteam = '{1}' and idaccount = '{2}'", MyDatabase.DBTeam, team.IdTeam, member.IdAccount);
                 SQLExecuteByCommand(command);
             }
         }

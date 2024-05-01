@@ -38,7 +38,7 @@ namespace ThesisManagementProject
         {
             this.team = team;
             this.thesis = thesis;
-            this.listTasks = tasksDAO.SelectListByTeam(this.team.IDTeam);
+            this.listTasks = tasksDAO.SelectListByTeam(this.team.IdTeam);
             InitUserControl();
         }
         private void InitUserControl()
@@ -62,7 +62,7 @@ namespace ThesisManagementProject
         {
             gCirclePictureBoxAvatar.Image = myProcess.NameToImage(team.AvatarName);
             lblViewHandle.Text = myProcess.FormatStringLength(team.TeamName, 20);
-            gTextBoxTeamCode.Text = team.IDTeam;
+            gTextBoxTeamCode.Text = team.IdTeam;
             gTextBoxCreated.Text = team.Created.ToString("dd/MM/yyyy");
             gTextBoxTeamMemebrs.Text = team.Members.Count.ToString() + " members";
 

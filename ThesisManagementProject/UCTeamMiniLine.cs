@@ -41,14 +41,14 @@ namespace ThesisManagementProject
         public void SetInformation(Team team)
         {
             this.team = team;
-            this.thesis = thesisDAO.SelectFollowTeam(team.IDTeam);
+            this.thesis = thesisDAO.SelectFollowTeam(team.IdTeam);
             InitUserControl();
         }
         private void InitUserControl()
         {
             gCirclePictureBoxAvatar.Image = myProcess.NameToImage(team.AvatarName);
             lblTeamName.Text = myProcess.FormatStringLength(team.TeamName, 30);
-            lblTeamCode.Text = team.IDTeam;
+            lblTeamCode.Text = team.IdTeam;
             gTextBoxTeamMemebrs.Text = team.Members.Count.ToString() + " members";
         }
         public void SetSize(Size size)

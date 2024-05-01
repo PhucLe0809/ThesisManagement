@@ -82,7 +82,7 @@ namespace ThesisManagementProject
             if (CheckInformationValid())
             {
                 this.tasks = new Tasks(gTextBoxTitle.Text, gTextBoxDescription.Text,
-                                        this.creator.IdAccount, this.team.IDTeam, false, 0, DateTime.Now);
+                                        this.creator.IdAccount, this.team.IdTeam, false, 0, DateTime.Now);
                 tasksDAO.Insert(tasks);
                 evaluationDAO.InsertFollowTeam(tasks.IdTask, team);
 
