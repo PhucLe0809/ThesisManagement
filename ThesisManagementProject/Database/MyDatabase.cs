@@ -8,9 +8,9 @@ namespace ThesisManagementProject.Database
 {
     internal class MyDatabase
     {
-        public static string DBAccount = "Account";
+        public static string DBPeople = "People";
         public static string DBThesis = "Thesis";
-        public static string DBTeam = "Team";
+        public static string DBMember = "Member";
         public static string DBTask = "Task";
         public static string DBComment = "Comment";
         public static string DBEvaluation = "Evaluation";

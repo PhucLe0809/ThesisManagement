@@ -21,7 +21,7 @@ namespace ThesisManagementProject.DAOs
         public List<People> SelectListByUserName(string username, ERole role)
         {
             string command = string.Format("SELECT * FROM {0} WHERE handle LIKE '{1}%' and role = '{2}'",
-                                MyDatabase.DBAccount, username, role);
+                                MyDatabase.DBPeople, username, role);
 
             DataTable dataTable = Select(command);
 
@@ -35,7 +35,7 @@ namespace ThesisManagementProject.DAOs
         }
         public People SelectOnlyByID(string id)
         {
-            DataTable dt = Select(string.Format("SELECT * FROM {0} WHERE idaccount = '{1}'", MyDatabase.DBAccount, id));
+            DataTable dt = Select(string.Format("SELECT * FROM {0} WHERE idaccount = '{1}'", MyDatabase.DBPeople, id));
 
             if (dt.Rows.Count > 0) return GetFromDataRow(dt.Rows[0]);
             return new People();
@@ -43,7 +43,7 @@ namespace ThesisManagementProject.DAOs
         public People SelectOnlyByEmailAndPassword(string email, string password)
         {
             DataTable dt = Select(string.Format("SELECT * FROM {0} WHERE email = '{1}' and password = '{2}'",
-                                        MyDatabase.DBAccount, email, password));
+                                        MyDatabase.DBPeople, email, password));
 
             if (dt.Rows.Count > 0) return GetFromDataRow(dt.Rows[0]);
             return new People();
@@ -55,7 +55,7 @@ namespace ThesisManagementProject.DAOs
 
         public List<string> SelectListID(ERole role)
         {
-            string command = string.Format("SELECT idaccount FROM {0} WHERE role = '{1}'", MyDatabase.DBAccount, role.ToString());
+            string command = string.Format("SELECT idaccount FROM {0} WHERE role = '{1}'", MyDatabase.DBPeople, role.ToString());
             DataTable table = Select(command);
             List<string> list = new List<string>();
 
@@ -87,7 +87,7 @@ namespace ThesisManagementProject.DAOs
         public bool CheckNonExist(string field, string information)
         {
             return SQLCheckNonExist(string.Format("SELECT * FROM {0} WHERE {1} = '{2}'",
-                                    MyDatabase.DBAccount, field, information));
+                                    MyDatabase.DBPeople, field, information));
         }
 
         #endregion

@@ -176,13 +176,13 @@ namespace ThesisManagementProject.Process
             switch (eClassify)
             {
                 case EClassify.Lecture:
-                    cntAccount = GetLastestID(string.Format("SELECT max(idaccount) as MaxID FROM {0} WHERE role = '{1}'", MyDatabase.DBAccount, EClassify.Lecture.ToString()));
+                    cntAccount = GetLastestID(string.Format("SELECT max(idaccount) as MaxID FROM {0} WHERE role = '{1}'", MyDatabase.DBPeople, EClassify.Lecture.ToString()));
                     break;
                 case EClassify.Student:
-                    cntAccount = GetLastestID(string.Format("SELECT max(idaccount) as MaxID FROM {0} WHERE role = '{1}'", MyDatabase.DBAccount, EClassify.Student.ToString()));
+                    cntAccount = GetLastestID(string.Format("SELECT max(idaccount) as MaxID FROM {0} WHERE role = '{1}'", MyDatabase.DBPeople, EClassify.Student.ToString()));
                     break;
                 case EClassify.Team:
-                    cntAccount = GetLastestID(string.Format("SELECT max(idteam) as MaxID FROM {0}", MyDatabase.DBTeam));
+                    cntAccount = GetLastestID(string.Format("SELECT max(idteam) as MaxID FROM {0}", MyDatabase.DBMember));
                     break;
                 case EClassify.Thesis:
                     cntAccount = GetLastestID(string.Format("SELECT max(idthesis) as MaxID FROM {0}", MyDatabase.DBThesis));

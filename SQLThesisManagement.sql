@@ -8,10 +8,10 @@
 use ThesisManagement
 go
 
-drop table Account, Thesis, Team, Task, Comment, Evaluation, Notification, ThesisStatus, Technology
+drop table People, Thesis, Member, Task, Comment, Evaluation, Notification, ThesisStatus, Technology
 
 -- CREATE TABLE ACCOUNT
-create table Account (
+create table People (
     idaccount nvarchar(10) primary key not null,
     fullname nvarchar(50) not null,
     citizencode nvarchar(15) not null,
@@ -47,7 +47,7 @@ create table Thesis (
 );
 
 -- CREATE TABLE TEAM
-create table Team
+create table Member
 (
     idteam nvarchar(10) not null,
     idaccount nvarchar(10) not null,
@@ -124,7 +124,7 @@ create table Technology
 );
 
 -- Lecture 1 - 10
-INSERT INTO Account
+INSERT INTO People
 VALUES 
     ('242200001', 'David Lee', '072352117212', '1995-03-15', 'Male', 'david', '0375676599', 'DavidLee', 'Lecture', 
      'HCM City University of Technology and Education', 'Faculty of Information Technology', '5373538693', 'abc', 'PicAvatarOne'),
@@ -148,11 +148,11 @@ VALUES
      'HCM City University of Technology and Education', 'Faculty of Information Technology', '3948572160', 'abc', 'PicAvatarTen');
 	 
 -- INSERT Student
--- delete from Account where role = 'Student'
--- update Account set password = '123abc' where role = 'Student'
+-- delete from People where role = 'Student'
+-- update People set password = '123abc' where role = 'Student'
 
 -- Student 1 - 10
-INSERT INTO Account
+INSERT INTO People
 VALUES 
     ('243300001', 'Emma Watson', '093482139832', '2003-03-15', 'Female', 'emma@gmail.com', '0976523421', 'EmmaW', 'Student', 
      'HCM City University of Technology and Education', 'Faculty of Information Technology', '5372535694', 'abc', 'PicAvatarSix'),
@@ -176,7 +176,7 @@ VALUES
      'HCM City University of Technology and Education', 'Faculty of Information Technology', '3948572160', 'abc', 'PicAvatarTen');
 	 
 -- Student 11 - 20
-INSERT INTO Account
+INSERT INTO People
 VALUES 
     ('243300011', 'Natalie Portman', '093482139832', '2000-03-15', 'Female', 'natalie.portman@gmail.com', '0976523421', 'NatalieP', 'Student', 
      'HCM City University of Technology and Education', 'Faculty of Information Technology', '5372535694', 'abc', 'PicAvatarOne'),
@@ -341,9 +341,9 @@ VALUES ('244400010',
         'Requirements: Proficiency in AR development frameworks, understanding of human-centered design principles, experience in UI/UX design, and creativity in AR content creation.',
 		'242200001', 0, 'Published', '242200001');
 
--- INSERT TABLE Team
+-- INSERT TABLE Member
 
-INSERT INTO Team
+INSERT INTO Member
 VALUES 
 ('245500001', '243300001', 'Code Crusaders', '2024-03-25', 'PicAvatarOne'),
 ('245500001', '243300002', 'Code Crusaders', '2024-03-25', 'PicAvatarOne'),

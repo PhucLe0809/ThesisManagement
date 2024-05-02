@@ -74,7 +74,7 @@ namespace ThesisManagementProject.Database
         }
         protected void ExecuteQueryPeople(People people, string command, string typeExecution, bool flag)
         {
-            string sqlStr = string.Format(command, MyDatabase.DBAccount,
+            string sqlStr = string.Format(command, MyDatabase.DBPeople,
                 people.IdAccount, people.FullName, people.CitizenCode, people.Birthday.ToString("yyyy-MM-dd"), people.Gender.ToString(),
                 people.Email, people.PhoneNumber, people.Handle, people.Role.ToString(), people.University, people.Faculty,
                 people.WorkCode, people.Password, people.AvatarName);

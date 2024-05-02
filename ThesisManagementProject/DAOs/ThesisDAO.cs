@@ -91,14 +91,14 @@ namespace ThesisManagementProject.DAOs
             string command = string.Format("SELECT * FROM {0} WHERE status IN ('Published', 'Registered') " +
                                            "AND NOT EXISTS(SELECT 1 FROM {1} WHERE {1}.idthesis = {0}.idthesis " +
                                            "AND idteam IN (SELECT idteam FROM {2} WHERE idaccount = '{3}'))",
-                                           MyDatabase.DBThesis, MyDatabase.DBThesisStatus, MyDatabase.DBTeam, idAccount);
+                                           MyDatabase.DBThesis, MyDatabase.DBThesisStatus, MyDatabase.DBMember, idAccount);
             return SelectList(command);
         }
         public List<Thesis> SelectListModeMyTheses(string idAccount)
         {
             string command = string.Format("SELECT {0}.* FROM {0} INNER JOIN {1} ON {0}.idthesis = {1}.idthesis " +
                                            "WHERE {1}.idteam IN (SELECT idteam FROM {2} WHERE idaccount = '{3}')",
-                                            MyDatabase.DBThesis, MyDatabase.DBThesisStatus, MyDatabase.DBTeam, idAccount);
+                                            MyDatabase.DBThesis, MyDatabase.DBThesisStatus, MyDatabase.DBMember, idAccount);
             return SelectList(command);
         }
         public List<Thesis> SelectListModeNotCompleted(string idAccount)
@@ -106,7 +106,7 @@ namespace ThesisManagementProject.DAOs
             string command = string.Format("SELECT {0}.* FROM {0} INNER JOIN {1} ON {0}.idthesis = {1}.idthesis " +
                                            "WHERE {1}.idteam IN (SELECT idteam FROM {2} WHERE idaccount = '{3}') " +
                                            "AND {1}.status = 'NotCompleted'",
-                                            MyDatabase.DBThesis, MyDatabase.DBThesisStatus, MyDatabase.DBTeam, idAccount);
+                                            MyDatabase.DBThesis, MyDatabase.DBThesisStatus, MyDatabase.DBMember, idAccount);
             return SelectList(command);
         }
         public List<Thesis> SelectListModeMyCompletedTheses(string idAccount)
@@ -114,7 +114,7 @@ namespace ThesisManagementProject.DAOs
             string command = $"SELECT {MyDatabase.DBThesis}.* " +
                              $"FROM {MyDatabase.DBThesis} INNER JOIN {MyDatabase.DBThesisStatus} " +
                              $"ON {MyDatabase.DBThesis}.idthesis = {MyDatabase.DBThesisStatus}.idthesis " +
-                             $"WHERE {MyDatabase.DBThesisStatus}.idteam IN (SELECT idteam FROM {MyDatabase.DBTeam} WHERE idaccount = '{idAccount}') " +
+                             $"WHERE {MyDatabase.DBThesisStatus}.idteam IN (SELECT idteam FROM {MyDatabase.DBMember} WHERE idaccount = '{idAccount}') " +
                              $"and {MyDatabase.DBThesis}.status = 'Completed'";
             return SelectList(command);
         }

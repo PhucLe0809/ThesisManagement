@@ -34,7 +34,7 @@ namespace ThesisManagementProject.DAOs
         }
         public Team SelectOnly(string idTeam)
         {
-            DataTable dt = Select(string.Format("SELECT * FROM {0} WHERE idteam = '{1}'", MyDatabase.DBTeam, idTeam));
+            DataTable dt = Select(string.Format("SELECT * FROM {0} WHERE idteam = '{1}'", MyDatabase.DBMember, idTeam));
 
             if (dt.Rows.Count > 0) return GetFromDataRow(dt.Rows[0]);
             return new Team();
@@ -49,7 +49,7 @@ namespace ThesisManagementProject.DAOs
         }
         public List<Team> SelectFollowPeople(People people)
         {
-            string command = string.Format("SELECT * FROM {0} WHERE idaccount = '{1}'", MyDatabase.DBTeam, people.IdAccount);
+            string command = string.Format("SELECT * FROM {0} WHERE idaccount = '{1}'", MyDatabase.DBMember, people.IdAccount);
 
             DataTable dataTable = Select(command);
 
@@ -72,7 +72,7 @@ namespace ThesisManagementProject.DAOs
             foreach (People member in team.Members)
             {
                 string command = string.Format("INSERT INTO {0} VALUES('{1}', '{2}', '{3}', '{4}', '{5}')",
-                                            MyDatabase.DBTeam, team.IdTeam, member.IdAccount, team.TeamName, team.Created, team.AvatarName);
+                                            MyDatabase.DBMember, team.IdTeam, member.IdAccount, team.TeamName, team.Created, team.AvatarName);
                 SQLExecuteByCommand(command);
             }
         }
@@ -80,7 +80,7 @@ namespace ThesisManagementProject.DAOs
         {
             foreach (People member in team.Members)
             {
-                string command = string.Format("DELETE FROM {0} WHERE idteam = '{1}' and idaccount = '{2}'", MyDatabase.DBTeam, team.IdTeam, member.IdAccount);
+                string command = string.Format("DELETE FROM {0} WHERE idteam = '{1}' and idaccount = '{2}'", MyDatabase.DBMember, team.IdTeam, member.IdAccount);
                 SQLExecuteByCommand(command);
             }
         }
@@ -95,7 +95,7 @@ namespace ThesisManagementProject.DAOs
 
         private List<People> GetMembersByIDTeam(string idTeam)
         {
-            string command = string.Format("SELECT * FROM {0} WHERE idteam = '{1}'", MyDatabase.DBTeam, idTeam);
+            string command = string.Format("SELECT * FROM {0} WHERE idteam = '{1}'", MyDatabase.DBMember, idTeam);
             DataTable dataTable = Select(command);
 
             PeopleDAO peopleDAO = new PeopleDAO();
