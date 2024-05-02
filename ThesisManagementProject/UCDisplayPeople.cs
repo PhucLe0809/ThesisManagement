@@ -73,7 +73,7 @@ namespace ThesisManagementProject
             {
                 gButtonNotification.CustomImages.Image = Properties.Resources.PicNewNotification;
                 gButtonNotification.Image = Properties.Resources.ItemDotNewNotification;
-                gButtonNotification.FillColor = Color.Gainsboro;
+                gButtonNotification.FillColor = Color.White;
                 gButtonNotification.ForeColor = Color.Black;
                 gButtonNotification.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             }
