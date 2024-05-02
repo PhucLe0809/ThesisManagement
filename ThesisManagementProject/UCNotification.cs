@@ -35,6 +35,10 @@ namespace ThesisManagementProject
             this.notificationList = notificationDAO.SelectList(host);
             LoadNotificationList();
         }
+        public bool HasNewNotification()
+        {
+            return notificationList.Count(n => n.IsSaw == false) > 0;
+        }
         private void LoadNotificationList()
         {
             flpNotificationList.Controls.Clear();
@@ -80,6 +84,13 @@ namespace ThesisManagementProject
         private void OnNotificationLineClicked(EventArgs e)
         {
             NotificationJump?.Invoke(this.notificationClicked, e);
+        }
+        private void gGradientButtonMarkAll_Click(object sender, EventArgs e)
+        {
+            foreach (UCNotificationLine line in flpNotificationList.Controls)
+            {
+                line.PerformClicked();
+            }
         }
     }
 }

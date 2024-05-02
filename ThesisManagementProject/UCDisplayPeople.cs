@@ -8,8 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 using ThesisManagementProject.Models;
 using ThesisManagementProject.Process;
+using Timer = System.Windows.Forms.Timer;
 
 namespace ThesisManagementProject
 {
@@ -65,7 +67,16 @@ namespace ThesisManagementProject
             pnlAddUserControl.Controls.Add(new UCWelcome(people));
             SetButtonBar();
 
+            uCNotification.SetInformation(people);
             uCNotification.NotificationJump += NotificationType_Jump;
+            if (uCNotification.HasNewNotification())
+            {
+                gButtonNotification.CustomImages.Image = Properties.Resources.PicNewNotification;
+                gButtonNotification.Image = Properties.Resources.ItemDotNewNotification;
+                gButtonNotification.FillColor = Color.Gainsboro;
+                gButtonNotification.ForeColor = Color.Black;
+                gButtonNotification.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            }
         }
         private void SetButtonBar()
         {
@@ -113,7 +124,8 @@ namespace ThesisManagementProject
         }
         private void gButtonNotification_Click(object sender, EventArgs e)
         {
-            uCNotification.SetInformation(people);
+            gButtonNotification.Image = null;
+            gButtonNotification.FillColor = Color.Transparent;
             SetButtonClick(gButtonNotification, Properties.Resources.PictureNotificationGradient, uCNotification);
         }
         private void gButtonAccount_Click(object sender, EventArgs e)

@@ -113,6 +113,16 @@ namespace ThesisManagementProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GiftNotificationBell {
+            get {
+                object obj = ResourceManager.GetObject("GiftNotificationBell", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap GiftWaiting {
             get {
                 object obj = ResourceManager.GetObject("GiftWaiting", resourceCulture);
@@ -127,6 +137,16 @@ namespace ThesisManagementProject.Properties {
             get {
                 object obj = ResourceManager.GetObject("IcoError", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ItemDotNewNotification {
+            get {
+                object obj = ResourceManager.GetObject("ItemDotNewNotification", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -906,6 +926,16 @@ namespace ThesisManagementProject.Properties {
         internal static System.Drawing.Bitmap PicMiniLineGradientEssay {
             get {
                 object obj = ResourceManager.GetObject("PicMiniLineGradientEssay", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PicNewNotification {
+            get {
+                object obj = ResourceManager.GetObject("PicNewNotification", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

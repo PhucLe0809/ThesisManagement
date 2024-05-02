@@ -458,13 +458,13 @@ namespace ThesisManagementProject.Process
         {
             button.FillColor = Color.Transparent;
             button.ForeColor = Color.White;
-            button.Font = new System.Drawing.Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
         }
         public void ButtonSettingColor(Guna2Button button)
         {
             button.FillColor = Color.White;
             button.ForeColor = Color.Black;
-            button.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, FontStyle.Bold);
+            button.Font = new Font("Trebuchet MS", 10.8F, FontStyle.Bold);
         }
         public void AllButtonStandardColor(List<Guna2Button> listButton, List<Image> listImage)
         {

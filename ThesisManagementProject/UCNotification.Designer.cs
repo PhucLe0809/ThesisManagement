@@ -28,15 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             gPanelBack = new Guna.UI2.WinForms.Guna2Panel();
+            gGradientButtonMarkAll = new Guna.UI2.WinForms.Guna2GradientButton();
             lblNotification = new Label();
             gSeparator = new Guna.UI2.WinForms.Guna2Separator();
             flpNotificationList = new FlowLayoutPanel();
@@ -50,19 +53,47 @@
             // 
             gPanelBack.BackColor = Color.Transparent;
             gPanelBack.BorderRadius = 20;
+            gPanelBack.Controls.Add(gGradientButtonMarkAll);
             gPanelBack.Controls.Add(lblNotification);
             gPanelBack.Controls.Add(gSeparator);
             gPanelBack.Controls.Add(flpNotificationList);
             gPanelBack.Controls.Add(gGradientButtonNotifications);
             gPanelBack.Controls.Add(gGradientButtonToolbar);
             gPanelBack.Controls.Add(gGradientButtonTag);
-            gPanelBack.CustomizableEdges = customizableEdges7;
+            gPanelBack.CustomizableEdges = customizableEdges9;
             gPanelBack.FillColor = SystemColors.ButtonFace;
             gPanelBack.Location = new Point(12, 12);
             gPanelBack.Name = "gPanelBack";
-            gPanelBack.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            gPanelBack.ShadowDecoration.CustomizableEdges = customizableEdges10;
             gPanelBack.Size = new Size(1303, 800);
             gPanelBack.TabIndex = 2;
+            // 
+            // gGradientButtonMarkAll
+            // 
+            gGradientButtonMarkAll.BorderColor = Color.FromArgb(74, 97, 94);
+            gGradientButtonMarkAll.BorderRadius = 6;
+            gGradientButtonMarkAll.BorderThickness = 1;
+            gGradientButtonMarkAll.CustomizableEdges = customizableEdges1;
+            gGradientButtonMarkAll.DisabledState.BorderColor = Color.DarkGray;
+            gGradientButtonMarkAll.DisabledState.CustomBorderColor = Color.DarkGray;
+            gGradientButtonMarkAll.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            gGradientButtonMarkAll.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            gGradientButtonMarkAll.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            gGradientButtonMarkAll.FillColor = Color.White;
+            gGradientButtonMarkAll.FillColor2 = Color.White;
+            gGradientButtonMarkAll.Font = new Font("Trebuchet MS", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gGradientButtonMarkAll.ForeColor = Color.FromArgb(74, 97, 94);
+            gGradientButtonMarkAll.HoverState.BorderColor = Color.White;
+            gGradientButtonMarkAll.HoverState.FillColor = Color.FromArgb(94, 148, 255);
+            gGradientButtonMarkAll.HoverState.FillColor2 = Color.FromArgb(255, 77, 165);
+            gGradientButtonMarkAll.HoverState.ForeColor = Color.White;
+            gGradientButtonMarkAll.Location = new Point(1080, 9);
+            gGradientButtonMarkAll.Name = "gGradientButtonMarkAll";
+            gGradientButtonMarkAll.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            gGradientButtonMarkAll.Size = new Size(170, 40);
+            gGradientButtonMarkAll.TabIndex = 69;
+            gGradientButtonMarkAll.Text = "Mark all as read";
+            gGradientButtonMarkAll.Click += gGradientButtonMarkAll_Click;
             // 
             // lblNotification
             // 
@@ -92,7 +123,7 @@
             // 
             // gGradientButtonNotifications
             // 
-            gGradientButtonNotifications.CustomizableEdges = customizableEdges1;
+            gGradientButtonNotifications.CustomizableEdges = customizableEdges3;
             gGradientButtonNotifications.DisabledState.BorderColor = Color.DarkGray;
             gGradientButtonNotifications.DisabledState.CustomBorderColor = Color.DarkGray;
             gGradientButtonNotifications.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -107,7 +138,7 @@
             gGradientButtonNotifications.HoverState.ForeColor = Color.White;
             gGradientButtonNotifications.Location = new Point(74, 58);
             gGradientButtonNotifications.Name = "gGradientButtonNotifications";
-            gGradientButtonNotifications.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            gGradientButtonNotifications.ShadowDecoration.CustomizableEdges = customizableEdges4;
             gGradientButtonNotifications.Size = new Size(1080, 40);
             gGradientButtonNotifications.TabIndex = 22;
             gGradientButtonNotifications.Text = "Notifications";
@@ -115,7 +146,7 @@
             // 
             // gGradientButtonToolbar
             // 
-            gGradientButtonToolbar.CustomizableEdges = customizableEdges3;
+            gGradientButtonToolbar.CustomizableEdges = customizableEdges5;
             gGradientButtonToolbar.DisabledState.BorderColor = Color.DarkGray;
             gGradientButtonToolbar.DisabledState.CustomBorderColor = Color.DarkGray;
             gGradientButtonToolbar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -130,14 +161,14 @@
             gGradientButtonToolbar.HoverState.ForeColor = Color.White;
             gGradientButtonToolbar.Location = new Point(1155, 58);
             gGradientButtonToolbar.Name = "gGradientButtonToolbar";
-            gGradientButtonToolbar.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            gGradientButtonToolbar.ShadowDecoration.CustomizableEdges = customizableEdges6;
             gGradientButtonToolbar.Size = new Size(95, 40);
             gGradientButtonToolbar.TabIndex = 23;
             gGradientButtonToolbar.Text = "Tool bar";
             // 
             // gGradientButtonTag
             // 
-            gGradientButtonTag.CustomizableEdges = customizableEdges5;
+            gGradientButtonTag.CustomizableEdges = customizableEdges7;
             gGradientButtonTag.DisabledState.BorderColor = Color.DarkGray;
             gGradientButtonTag.DisabledState.CustomBorderColor = Color.DarkGray;
             gGradientButtonTag.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -152,7 +183,7 @@
             gGradientButtonTag.HoverState.ForeColor = Color.White;
             gGradientButtonTag.Location = new Point(22, 58);
             gGradientButtonTag.Name = "gGradientButtonTag";
-            gGradientButtonTag.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            gGradientButtonTag.ShadowDecoration.CustomizableEdges = customizableEdges8;
             gGradientButtonTag.Size = new Size(51, 40);
             gGradientButtonTag.TabIndex = 24;
             gGradientButtonTag.Text = "#";
@@ -180,5 +211,6 @@
         private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonTag;
         private Label lblNotification;
         private Guna.UI2.WinForms.Guna2Separator gSeparator;
+        private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonMarkAll;
     }
 }
