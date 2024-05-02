@@ -47,7 +47,7 @@ namespace ThesisManagementProject
         private void InitUserControl()
         {
             gCirclePictureBoxAvatar.Image = myProcess.NameToImage(team.AvatarName);
-            lblTeamName.Text = myProcess.FormatStringLength(team.TeamName, 30);
+            lblTeamName.Text = myProcess.FormatStringLength(team.Name, 30);
             lblTeamCode.Text = team.IdTeam;
             gTextBoxTeamMemebrs.Text = team.Members.Count.ToString() + " members";
         }

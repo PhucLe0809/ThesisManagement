@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ThesisManagementProject.Database;
+using ThesisManagementProject.Entity;
 using ThesisManagementProject.Models;
 using ThesisManagementProject.Process;
 
@@ -34,33 +35,30 @@ namespace ThesisManagementProject.DAOs
         }
         public Team SelectOnly(string idTeam)
         {
-            DataTable dt = Select(string.Format("SELECT * FROM {0} WHERE idteam = '{1}'", MyDatabase.DBTeam, idTeam));
-
-            if (dt.Rows.Count > 0) return GetFromDataRow(dt.Rows[0]);
-            return new Team();
+            using (var dbContext = new AppDbContext())
+            {
+                var team = dbContext.Team.FirstOrDefault(t => t.IdTeam == idTeam);
+                if (team != null)
+                { 
+                    return team; 
+                }
+                return new Team();
+            }
         }
         public Team SelectFollowThesis(Thesis thesis)
         {
-            string command = string.Format("SELECT * FROM {0} WHERE idthesis = '{1}' and status = '{2}'",
-                                            MyDatabase.DBThesisStatus, thesis.IdThesis, thesis.OnStatus.ToString());
-
-            DataTable table = Select(command);
-            return SelectOnly(table.Rows[0]["idteam"].ToString());
+            ThesisStatusDAO thesisStatusDAO = new ThesisStatusDAO();
+            ThesisStatus thesisStatus = thesisStatusDAO.SelectFollowThesis(thesis);
+            return SelectOnly(thesisStatus.IdTeam);
         }
         public List<Team> SelectFollowPeople(People people)
         {
-            string command = string.Format("SELECT * FROM {0} WHERE idaccount = '{1}'", MyDatabase.DBTeam, people.IdAccount);
-
-            DataTable dataTable = Select(command);
-
-            List<Team> list = new List<Team>();
-            foreach (DataRow row in dataTable.Rows)
+            using (var dbContext = new AppDbContext())
             {
-                Team team = SelectOnly(row["idteam"].ToString());
-                list.Add(team);
+                var listTeam = dbContext.Team.Where(t => t.Members.Contains(people)).ToList();
+                if (listTeam != null) return listTeam;
+                return new List<Team>();
             }
-
-            return list;
         }
 
         #endregion
@@ -69,19 +67,18 @@ namespace ThesisManagementProject.DAOs
 
         public void Insert(Team team)
         {
-            foreach (People member in team.Members)
+            using (var dbContext = new AppDbContext()) 
             {
-                string command = string.Format("INSERT INTO {0} VALUES('{1}', '{2}', '{3}', '{4}', '{5}')",
-                                            MyDatabase.DBTeam, team.IdTeam, member.IdAccount, team.TeamName, team.Created, team.AvatarName);
-                SQLExecuteByCommand(command);
+                dbContext.Team.Add(team);
+                dbContext.SaveChanges();
             }
         }
         public void Delete(Team team)
         {
-            foreach (People member in team.Members)
+            using (var dbContext = new AppDbContext())
             {
-                string command = string.Format("DELETE FROM {0} WHERE idteam = '{1}' and idaccount = '{2}'", MyDatabase.DBTeam, team.IdTeam, member.IdAccount);
-                SQLExecuteByCommand(command);
+                dbContext.Team.Remove(team);
+                dbContext.SaveChanges();
             }
         }
         public void DeleteListTeam(List<Team> teams)

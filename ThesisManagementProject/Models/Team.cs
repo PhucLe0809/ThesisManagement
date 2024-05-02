@@ -14,7 +14,7 @@ namespace ThesisManagementProject.Models
         #region TEAM ATTRIBUTES
 
         private string idteam;
-        private string teamName;
+        private string name;
         private string avatarName;
         private DateTime created;
         private List<People> members;
@@ -26,7 +26,7 @@ namespace ThesisManagementProject.Models
         public Team()
         {
             this.idteam = string.Empty;
-            this.teamName = "Anonymous";
+            this.name = "Anonymous";
             this.avatarName = "PicAvatarDemoUser";
             this.created = DateTime.Now;
             this.members = new List<People>();
@@ -34,31 +34,31 @@ namespace ThesisManagementProject.Models
         public Team(List<People> members)
         {
             this.idteam = myProcess.GenIDClassify(EClassify.Team);
-            this.teamName = "Anonymous";
+            this.name = "Anonymous";
             this.avatarName = "PicAvatarDemoUser";
             this.created = DateTime.Now;
             this.members = members;
         }
-        public Team(string teamName, string avatarName, List<People> members)
+        public Team(string name, string avatarName, List<People> members)
         {
             this.idteam = myProcess.GenIDClassify(EClassify.Team);
-            this.teamName = teamName;
+            this.name = name;
             this.avatarName = avatarName;
             this.created = DateTime.Now;
             this.members = members;
         }
-        public Team(string teamName, string avatarName, DateTime created, List<People> members)
+        public Team(string name, string avatarName, DateTime created, List<People> members)
         {
             this.idteam = myProcess.GenIDClassify(EClassify.Team);
-            this.teamName = teamName;
+            this.name = name;
             this.avatarName = avatarName;
             this.created = created;
             this.members = members;
         }
-        public Team(string idteam, string teamName, string avatarName, DateTime created, List<People> members)
+        public Team(string idteam, string name, string avatarName, DateTime created, List<People> members)
         {
             this.idteam = idteam;
-            this.teamName = teamName;
+            this.name = name;
             this.avatarName = avatarName;
             this.created = created;
             this.members = members;
@@ -71,22 +71,27 @@ namespace ThesisManagementProject.Models
         public string IdTeam
         {
             get { return this.idteam; }
+            set { this.idteam = value; }
         }
-        public string TeamName
+        public string Name
         {
-            get { return this.teamName; }
+            get { return this.name; }
+            set { this.name = value; }
         }
         public string AvatarName
         {
             get { return this.avatarName; }
+            set { this.avatarName = value; }
         }
         public DateTime Created
         {
             get { return this.created; }
+            set { this.created = value; }
         }
         public List<People> Members
         {
             get { return this.members; }
+            set { this.members = value; }
         }
 
         #endregion

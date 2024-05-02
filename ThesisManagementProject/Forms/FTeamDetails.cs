@@ -61,7 +61,7 @@ namespace ThesisManagementProject
         public void SetTeam(Team team)
         {
             gCirclePictureBoxAvatar.Image = myProcess.NameToImage(team.AvatarName);
-            lblViewHandle.Text = myProcess.FormatStringLength(team.TeamName, 20);
+            lblViewHandle.Text = myProcess.FormatStringLength(team.Name, 20);
             gTextBoxTeamCode.Text = team.IdTeam;
             gTextBoxCreated.Text = team.Created.ToString("dd/MM/yyyy");
             gTextBoxTeamMemebrs.Text = team.Members.Count.ToString() + " members";

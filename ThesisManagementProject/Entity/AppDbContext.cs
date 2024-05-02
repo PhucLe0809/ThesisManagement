@@ -8,8 +8,8 @@ namespace ThesisManagementProject.Entity
     {
         public DbSet<People> Account { get; set; }
         public DbSet<Thesis> Thesis { get; set; }
-        //public DbSet<Team> Teams { get; set; }
-        //public DbSet<Tasks> Tasks { get; set; }
+        public DbSet<Team> Team { get; set; }
+        public DbSet<Tasks> Task { get; set; }
         public DbSet<Comment> Comment { get; set; }
         public DbSet<Evaluation> Evaluation { get; set; }
         public DbSet<Notification> Notification { get; set; }
@@ -23,8 +23,8 @@ namespace ThesisManagementProject.Entity
         {
             modelBuilder.Entity<People>().HasKey(t => t.IdAccount);
             modelBuilder.Entity<Thesis>().HasKey(t => t.IdThesis);
-            //modelBuilder.Entity<Team>().HasKey(t => t.IdTeam);
-            //modelBuilder.Entity<Tasks>().HasKey(t => t.IdTask);
+            modelBuilder.Entity<Team>().HasKey(t => t.IdTeam);
+            modelBuilder.Entity<Tasks>().HasKey(t => t.IdTask);
             modelBuilder.Entity<Comment>().HasKey(t => t.IdComment);
             modelBuilder.Entity<Evaluation>().HasKey(t => t.IdEvaluation);
             modelBuilder.Entity<Notification>().HasKey(t => t.IdNotification);

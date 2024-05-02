@@ -182,11 +182,7 @@ namespace ThesisManagementProject
                 gGradientButtonComplete.Show();
                 return;
             }
-<<<<<<< HEAD
             gGradientButtonComplete.Hide();            
-=======
-            gGradientButtonComplete.Hide();
->>>>>>> 55340cd96e9166acefe353d2e04589f4cdb921f3
         }
         private void SetButtonEditOrDetails()
         {
@@ -245,11 +241,7 @@ namespace ThesisManagementProject
             {
                 gGradientButtonTasks.PerformClick();
                 UCThesisDetailsTasks uCThesisDetailsTasks = new UCThesisDetailsTasks();
-<<<<<<< HEAD
-                uCThesisDetailsTasks.SetUpUserControl(host, instructor, team, thesis, thesis.Status == EThesisStatus.Processing);
-=======
                 uCThesisDetailsTasks.SetUpUserControl(host, instructor, team, thesis, thesis.OnStatus == EThesisStatus.Processing);
->>>>>>> 55340cd96e9166acefe353d2e04589f4cdb921f3
                 uCThesisDetailsTasks.PerformNotificationClick(notification);
             }
         }
@@ -319,11 +311,7 @@ namespace ThesisManagementProject
             AllButtonStandardColor();
             myProcess.ButtonSettingColor(gGradientButtonTasks);
             UCThesisDetailsTasks uCThesisDetailsTasks = new UCThesisDetailsTasks();
-<<<<<<< HEAD
-            uCThesisDetailsTasks.SetUpUserControl(host, instructor, team, thesis, thesis.Status == EThesisStatus.Processing);
-=======
             uCThesisDetailsTasks.SetUpUserControl(host, instructor, team, thesis, thesis.OnStatus == EThesisStatus.Processing);
->>>>>>> 55340cd96e9166acefe353d2e04589f4cdb921f3
             gPanelDataView.Controls.Clear();
             gPanelDataView.Controls.Add(uCThesisDetailsTasks);
         }
@@ -370,7 +358,7 @@ namespace ThesisManagementProject
             if (line != null)
             {
                 Team team = line.GetTeam;
-                DialogResult result = MessageBox.Show("Are you sure you want to accept team " + team.TeamName,
+                DialogResult result = MessageBox.Show("Are you sure you want to accept team " + team.Name,
                                                         "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (result == DialogResult.OK)
                 {

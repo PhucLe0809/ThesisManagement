@@ -34,13 +34,25 @@ namespace ThesisManagementProject.DAOs
                 }
             }
         }
+        public ThesisStatus SelectFollowThesis(Thesis thesis)
+        {
+            using (var dbContext = new AppDbContext())
+            {
+                var existingThesisStatus = dbContext.ThesisStatus
+                    .FirstOrDefault(t => t.IdThesis == thesis.IdThesis && t.OnStatus == thesis.OnStatus);
+
+                if (existingThesisStatus != null)
+                {
+                    return existingThesisStatus;
+                }
+                else
+                {
+                    return new ThesisStatus();
+                }
+            }
+        }
         public void Insert(Thesis thesis, Team team)
         {
-<<<<<<< HEAD
-            string command = string.Format("INSERT INTO {0} VALUES('{1}', '{2}', '{3}')",
-                                            MyDatabase.DBThesisStatus, team.IdTeam, thesis.IdThesis, thesis.Status.ToString());
-            SQLExecuteByCommand(command);
-=======
             using (var dbContext = new AppDbContext())
             {
                 ThesisStatus thesisStatus = new ThesisStatus(team.IdTeam, thesis.IdThesis, thesis.OnStatus);
@@ -60,17 +72,11 @@ namespace ThesisManagementProject.DAOs
                     dbContext.SaveChanges();
                 }
             }
->>>>>>> 55340cd96e9166acefe353d2e04589f4cdb921f3
         }
         public void DeleteListTeam(List<Team> listTeam, string idThesis)
         {
             foreach (Team teamLine in listTeam)
             {
-<<<<<<< HEAD
-                string command = string.Format("DELETE FROM {0} WHERE idteam = '{1}' AND idthesis = '{2}'",
-                                    MyDatabase.DBThesisStatus, teamLine.IdTeam, idThesis);
-                ExecuteQuery(command, "Delete", false);
-=======
                 Delete(teamLine.IdTeam, idThesis);
             }
         }
@@ -85,7 +91,6 @@ namespace ThesisManagementProject.DAOs
                     existingThesisStatus.OnStatus = status;
                     dbContext.SaveChanges();
                 }
->>>>>>> 55340cd96e9166acefe353d2e04589f4cdb921f3
             }
         }
         public int CountTeamFollowState(Thesis thesis)

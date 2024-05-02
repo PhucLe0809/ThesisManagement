@@ -4,7 +4,9 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using ThesisManagementProject.Database;
+using ThesisManagementProject.Entity;
 using ThesisManagementProject.Models;
 
 namespace ThesisManagementProject.DAOs
@@ -15,7 +17,7 @@ namespace ThesisManagementProject.DAOs
 
         #region SELECT TASKS
 
-        private List<Tasks> SelectList(string command)
+        public List<Tasks> SelectList(string command)
         {
             DataTable dataTable = Select(command);
 
@@ -30,30 +32,58 @@ namespace ThesisManagementProject.DAOs
         }
         public List<Tasks> SelectListByTeam(string idTeam)
         {
-            string command = string.Format("SELECT * FROM {0} WHERE idteam = '{1}' ORDER BY created DESC",
-                                            MyDatabase.DBTask, idTeam);
-            return SelectList(command);
+            using (var dbContext = new AppDbContext())
+            {
+                var listTasks = dbContext.Task
+                    .Where(t => t.IdTeam == idTeam)
+                    .OrderByDescending(t => t.Created)
+                    .ToList();
+                if (listTasks != null)
+                {
+                    return listTasks;
+                }
+                return new List<Tasks>();
+            }
         }
         public Tasks SelectOnly(string idTask)
         {
-            DataTable dt = Select(string.Format("SELECT * FROM {0} WHERE idtask = '{1}'", MyDatabase.DBTask, idTask));
-
-            if (dt.Rows.Count > 0) return GetFromDataRow(dt.Rows[0]);
-            return new Tasks();
+            using (var dbContext = new AppDbContext())
+            {
+                var task = dbContext.Task.FirstOrDefault(t => t.IdTask == idTask);
+                if (task != null)
+                {
+                    return task;
+                }
+                return new Tasks();
+            }
         }
         public Tasks SelectFromComment(string idComment)
         {
-            DataTable dt = Select(string.Format("SELECT * FROM {0} WHERE idcomment = '{1}'", MyDatabase.DBComment, idComment));
-
-            if (dt.Rows.Count > 0) return SelectOnly(dt.Rows[0]["idtask"].ToString());
-            return new Tasks();
+            CommentDAO commentDAO = new CommentDAO();
+            Comment comment = commentDAO.SelectOnlyByID(idComment);
+            using (var dbContext = new AppDbContext())
+            {
+                var task = dbContext.Task.FirstOrDefault(t => t.IdTask.Equals(comment.IdTask));
+                if (task != null)
+                {
+                    return task;
+                }
+                return new Tasks();
+            }
         }
         public Tasks SelectFromEvaluation(string idEvaluation)
         {
-            DataTable dt = Select(string.Format("SELECT * FROM {0} WHERE idevaluation = '{1}'", MyDatabase.DBEvaluation, idEvaluation));
-
-            if (dt.Rows.Count > 0) return SelectOnly(dt.Rows[0]["idtask"].ToString());
-            return new Tasks();
+            EvaluationDAO evaluationDao = new EvaluationDAO();
+            Evaluation evaluation = evaluationDao.SelectOnlyByID(idEvaluation);
+            using (var dbContext = new AppDbContext())
+            {
+                var task = dbContext.Task.FirstOrDefault(t => t.IdTask.Equals(evaluation.IdTask));
+                if (task != null)
+                {
+                    return task;
+                }
+                return new Tasks();
+            }
         }
 
         #endregion
@@ -62,34 +92,65 @@ namespace ThesisManagementProject.DAOs
 
         public void Insert(Tasks tasks)
         {
-            ExecuteQueryTask(tasks, "INSERT INTO {0} VALUES ('{1}', '{2}', '{3}', '{4}', '{5}', {6}, {7}, '{8}')",
-                "Create", true);
+            using (var dbContext = new AppDbContext())
+            {
+                dbContext.Task.Add(tasks);
+                dbContext.SaveChanges();
+            }
         }
         public void Delete(Tasks tasks)
         {
-            EvaluationDAO evaluationDAO = new EvaluationDAO();
-            evaluationDAO.DeleteFollowTask(tasks);
-            ExecuteQueryTask(tasks, "DELETE FROM {0} WHERE idtask = '{1}'",
-                "Delete", false);
+            using (var dbContext = new AppDbContext())
+            {
+                dbContext.Task.Remove(tasks);
+                dbContext.SaveChanges();
+            }
         }
         public void Update(Tasks tasks)
         {
-            ExecuteQueryTask(tasks, "UPDATE {0} SET " +
-                "idtask = '{1}', title = '{2}', description = '{3}', idcreator = '{4}', idteam = '{5}', " +
-                "isfavorite = {6}, progress = {7}, created = '{8}' WHERE idtask = '{1}'",
-                "Update", false);
+            using (var dbContext = new AppDbContext())
+            {
+                var exixtingTask = dbContext.Task.FirstOrDefault(t => t.IdTask == tasks.IdTask);
+
+                if (exixtingTask != null)
+                {
+                    exixtingTask.Title = tasks.Title;
+                    exixtingTask.Description = tasks.Description;
+                    exixtingTask.IdCreator = tasks.IdCreator;   
+                    exixtingTask.IdTeam = tasks.IdTeam; 
+                    exixtingTask.IsFavorite = tasks.IsFavorite;
+                    exixtingTask.Progress = tasks.Progress;
+                    exixtingTask.Created = tasks.Created;
+
+                    dbContext.SaveChanges();
+                }
+            }
         }
         public void UpdateIsFavorite(Tasks tasks)
         {
-            SQLExecuteByCommand(string.Format("UPDATE " + MyDatabase.DBTask + " SET isfavorite = {0} WHERE idtask = '{1}'",
-                                    tasks.IsFavorite ? 1 : 0, tasks.IdTask));
+            using (var dbContext = new AppDbContext())
+            {
+                var exixtingTask = dbContext.Task.FirstOrDefault(t => t.IdTask == tasks.IdTask);
+
+                if (exixtingTask != null)
+                {
+                    exixtingTask.IsFavorite = tasks.IsFavorite;
+
+                    dbContext.SaveChanges();
+                }
+            }
         }
         public List<Tasks> SearchTaskTitle(string idTeam, string title)
         {
-            string command = string.Format("SELECT * FROM {0} WHERE idteam = '{1}' and title LIKE '{2}%' ORDER BY created DESC",
-                                MyDatabase.DBTask, idTeam, title);
-            return SelectList(command);
+            using (var dbContext = new AppDbContext())
+            {
+                var listTasks = dbContext.Task
+                    .Where(t => t.IdTeam == idTeam && t.Title.StartsWith(title))
+                    .OrderByDescending(t => t.Created)
+                    .ToList();
 
+                return listTasks;
+            }
         }
 
         #endregion

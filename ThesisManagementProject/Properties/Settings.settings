@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="conStr" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">Data Source=DESKTOP-4FIVTNT\SQLEXPRESS;Initial Catalog=ThesisManagement;Integrated Security=True;Encrypt=False</Value>
+      <Value Profile="(Default)">Data Source=HUY\SQLEXPRESS;Initial Catalog=ThesisManagement;Integrated Security=True;Encrypt=False;</Value>
     </Setting>
   </Settings>
 </SettingsFile>

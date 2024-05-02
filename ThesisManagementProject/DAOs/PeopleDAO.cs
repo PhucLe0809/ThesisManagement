@@ -24,6 +24,7 @@ namespace ThesisManagementProject.DAOs
             using (var dbContext = new AppDbContext())
             {
                 var people = dbContext.Account.FirstOrDefault(p => p.IdAccount == idPeople);
+                MessageBox.Show("Yes");
                 if (people != null) return Format(people);
                 return new People();
             }
@@ -59,10 +60,6 @@ namespace ThesisManagementProject.DAOs
                 return new List<string>();
 
             }
-<<<<<<< HEAD
-            return list;
-=======
->>>>>>> 55340cd96e9166acefe353d2e04589f4cdb921f3
         }
 
         #endregion

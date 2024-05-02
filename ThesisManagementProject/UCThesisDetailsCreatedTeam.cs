@@ -66,10 +66,6 @@ namespace ThesisManagementProject
         private void InitUserControl()
         {
             pictureAvatar = Properties.Resources.PicAvatarDemoUser;
-<<<<<<< HEAD
-            gGradientButtonRegister.Enabled = true;
-=======
->>>>>>> 55340cd96e9166acefe353d2e04589f4cdb921f3
             flpSearch.Location = new Point(11, 14);
             flpSearch.Hide();
             gGradientButtonPerform.Hide();
@@ -187,10 +183,10 @@ namespace ThesisManagementProject
                 thesisStatusDAO.Insert(this.thesis, team);
                 teamDAO.Insert(team);
 
-                string content = Notification.GetContentTypeRegistered(team.TeamName, thesis.Topic);
+                string content = Notification.GetContentTypeRegistered(team.Name, thesis.Topic);
                 notificationDAO.Insert(new Notification(thesis.IdInstructor, people.IdAccount, thesis.IdThesis, thesis.IdThesis, content, DateTime.Now, false, false));
 
-                string message = Notification.GetContentRegisteredMembers(people.FullName, team.TeamName, thesis.Topic);
+                string message = Notification.GetContentRegisteredMembers(people.FullName, team.Name, thesis.Topic);
                 notificationDAO.InsertFollowListPeople(people.IdAccount, thesis.IdThesis, thesis.IdThesis, message, team.Members);
 
                 MessageBox.Show("Registered successfuly", "Notification", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);

@@ -150,12 +150,8 @@ namespace ThesisManagementProject.Forms
             if (CheckInformationValid())
             {
                 this.tasks = new Tasks(tasks.IdTask, gTextBoxTitle.Text, gTextBoxDescription.Text, this.creator.IdAccount, this.team.IdTeam,
-<<<<<<< HEAD
-                                            tasks.IsFavorite, int.Parse(gTextBoxProgress.Text.ToString()), tasks.CreatedDate);
-=======
                                             tasks.IsFavorite, int.Parse(gTextBoxProgress.Text.ToString()), tasks.Created);
->>>>>>> 55340cd96e9166acefe353d2e04589f4cdb921f3
-
+               
                 tasksDAO.Update(tasks);
                 this.flagCheck = true;
                 this.edited = true;

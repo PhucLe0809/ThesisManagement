@@ -105,14 +105,6 @@ namespace ThesisManagementProject.DAOs
                                             MyDatabase.DBThesis, MyDatabase.DBThesisStatus, MyDatabase.DBTeam, idAccount);
             return SelectList(command);
         }
-        public List<Thesis> SelectListModeNotCompleted(string idAccount)
-        {
-            string command = string.Format("SELECT {0}.* FROM {0} INNER JOIN {1} ON {0}.idthesis = {1}.idthesis " +
-                                           "WHERE {1}.idteam IN (SELECT idteam FROM {2} WHERE idaccount = '{3}') " +
-                                           "AND {1}.status = 'NotCompleted'",
-                                            MyDatabase.DBThesis, MyDatabase.DBThesisStatus, MyDatabase.DBTeam, idAccount);
-            return SelectList(command);
-        }
         public List<Thesis> SelectListModeMyCompletedTheses(string idAccount)
         {
             string command = $"SELECT {MyDatabase.DBThesis}.* " +
@@ -171,13 +163,6 @@ namespace ThesisManagementProject.DAOs
 
         public void Update(Thesis thesis)
         {
-<<<<<<< HEAD
-            ExecuteQueryThesis(thesis, "UPDATE {0} SET " +
-                "idthesis = '{1}', topic = '{2}', field = '{3}', level = '{4}', maxmembers = {5}, " +
-                "description = '{6}', publishdate = '{7}', technology = '{8}', functions = '{9}', requirements = '{10}', " +
-                "idcreator = '{11}', isfavorite = {12}, status = '{13}', idinstructor = '{14}' WHERE idthesis = '{1}'",
-                "Update", false);
-=======
             using (var dbContext = new AppDbContext())
             {
                 var existingThesis = dbContext.Thesis.FirstOrDefault(t => t.IdThesis == thesis.IdThesis);
@@ -201,7 +186,6 @@ namespace ThesisManagementProject.DAOs
                     dbContext.SaveChanges();
                 }
             }
->>>>>>> 55340cd96e9166acefe353d2e04589f4cdb921f3
         }
         public void UpdateStatus(Thesis thesis, EThesisStatus status)
         {
@@ -236,24 +220,7 @@ namespace ThesisManagementProject.DAOs
 
         private Thesis Format(Thesis thesis)
         {
-<<<<<<< HEAD
-            string idThesis = row["idthesis"].ToString();
-            string topic = row["topic"].ToString();
-            EField field = myProcess.GetEnumFromDisplayName<EField>(row["field"].ToString());
-            ELevel level = myProcess.GetEnumFromDisplayName<ELevel>(row["level"].ToString());
-            int maxMembers = int.Parse(row["maxmembers"].ToString());
-            string description = row["description"].ToString();
-            DateTime publishDate = DateTime.Parse(row["publishdate"].ToString());
-            string technology = row["technology"].ToString();
-            string functions = row["functions"].ToString();
-            string requirements = row["requirements"].ToString();
-            string idCreator = row["idcreator"].ToString();
-            bool isFavorite = row["isfavorite"].ToString() == "True" ? true : false;
-            EThesisStatus status = myProcess.GetEnumFromDisplayName<EThesisStatus>(row["status"].ToString());
-            string idInstructor = row["idinstructor"].ToString();
-=======
             if (thesis == null) return new Thesis();
->>>>>>> 55340cd96e9166acefe353d2e04589f4cdb921f3
 
             EField field = myProcess.GetEnumFromDisplayName<EField>(thesis.Field);
             ELevel level = myProcess.GetEnumFromDisplayName<ELevel>(thesis.Level);

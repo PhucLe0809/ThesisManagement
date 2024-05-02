@@ -22,20 +22,27 @@ namespace ThesisManagementProject.DAOs
                 return list;
             }
         }
-<<<<<<< HEAD
-
-        #endregion
-
-        #region COMMENT DAO EXECUTION
-
-=======
->>>>>>> 55340cd96e9166acefe353d2e04589f4cdb921f3
         public void Insert(Comment comment)
         {
             using (var dbContext = new AppDbContext())
             {
                 dbContext.Comment.Add(comment);
                 dbContext.SaveChanges();
+            }
+        }
+        public Comment SelectOnlyByID(string idComment)
+        {
+            using (var dbContext = new AppDbContext())
+            {
+                var comment = dbContext.Comment.FirstOrDefault(c => c.IdComment == idComment);
+                if (comment != null)
+                {
+                    return comment;
+                }
+                else
+                {
+                    return new Comment();
+                }
             }
         }
     }
