@@ -85,6 +85,7 @@
             // 
             // gButtonMyTheses
             // 
+            gButtonMyTheses.Animated = true;
             gButtonMyTheses.BackColor = Color.Transparent;
             gButtonMyTheses.BorderRadius = 20;
             gButtonMyTheses.CustomImages.HoveredImage = Properties.Resources.PictureThesisGradient;
@@ -100,6 +101,7 @@
             gButtonMyTheses.FillColor = Color.Transparent;
             gButtonMyTheses.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             gButtonMyTheses.ForeColor = Color.White;
+            gButtonMyTheses.HoverState.BorderColor = Color.White;
             gButtonMyTheses.HoverState.FillColor = Color.White;
             gButtonMyTheses.HoverState.Font = new Font("Trebuchet MS", 10.8F, FontStyle.Bold);
             gButtonMyTheses.HoverState.ForeColor = Color.Black;
@@ -143,6 +145,7 @@
             // 
             // gButtonNotification
             // 
+            gButtonNotification.Animated = true;
             gButtonNotification.BackColor = Color.Transparent;
             gButtonNotification.BorderRadius = 20;
             gButtonNotification.CustomImages.HoveredImage = Properties.Resources.PictureNotificationGradient;
@@ -158,9 +161,13 @@
             gButtonNotification.FillColor = Color.Transparent;
             gButtonNotification.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             gButtonNotification.ForeColor = Color.White;
+            gButtonNotification.HoverState.BorderColor = Color.White;
             gButtonNotification.HoverState.FillColor = Color.White;
             gButtonNotification.HoverState.Font = new Font("Trebuchet MS", 10.8F, FontStyle.Bold);
             gButtonNotification.HoverState.ForeColor = Color.Black;
+            gButtonNotification.ImageAlign = HorizontalAlignment.Right;
+            gButtonNotification.ImageOffset = new Point(10, 0);
+            gButtonNotification.ImageSize = new Size(23, 23);
             gButtonNotification.Location = new Point(22, 296);
             gButtonNotification.Name = "gButtonNotification";
             gButtonNotification.ShadowDecoration.CustomizableEdges = customizableEdges6;
@@ -189,6 +196,7 @@
             // 
             // gButtonAccount
             // 
+            gButtonAccount.Animated = true;
             gButtonAccount.BackColor = Color.Transparent;
             gButtonAccount.BorderRadius = 20;
             gButtonAccount.CustomImages.HoveredImage = (Image)resources.GetObject("resource.HoveredImage1");
@@ -204,6 +212,7 @@
             gButtonAccount.FillColor = Color.Transparent;
             gButtonAccount.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             gButtonAccount.ForeColor = Color.White;
+            gButtonAccount.HoverState.BorderColor = Color.White;
             gButtonAccount.HoverState.FillColor = Color.White;
             gButtonAccount.HoverState.Font = new Font("Trebuchet MS", 10.8F, FontStyle.Bold);
             gButtonAccount.HoverState.ForeColor = Color.Black;
@@ -219,6 +228,7 @@
             // 
             // gButtonDashboards
             // 
+            gButtonDashboards.Animated = true;
             gButtonDashboards.BackColor = Color.Transparent;
             gButtonDashboards.BorderRadius = 20;
             gButtonDashboards.CustomImages.HoveredImage = (Image)resources.GetObject("resource.HoveredImage2");
@@ -234,6 +244,7 @@
             gButtonDashboards.FillColor = Color.Transparent;
             gButtonDashboards.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             gButtonDashboards.ForeColor = Color.White;
+            gButtonDashboards.HoverState.BorderColor = Color.White;
             gButtonDashboards.HoverState.FillColor = Color.White;
             gButtonDashboards.HoverState.Font = new Font("Trebuchet MS", 10.8F, FontStyle.Bold);
             gButtonDashboards.HoverState.ForeColor = Color.Black;
@@ -304,7 +315,7 @@
             pnlAddUserControl.Size = new Size(1329, 829);
             pnlAddUserControl.TabIndex = 3;
             // 
-            // UCDisplayStudent
+            // UCDisplayPeople
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -312,7 +323,7 @@
             Controls.Add(gPanelTaskbar);
             Controls.Add(pnlAddUserControl);
             DoubleBuffered = true;
-            Name = "UCDisplayStudent";
+            Name = "UCDisplayPeople";
             Size = new Size(1681, 853);
             gPanelTaskbar.ResumeLayout(false);
             gPanelBackAvatar.ResumeLayout(false);
