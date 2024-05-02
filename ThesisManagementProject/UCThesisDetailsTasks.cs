@@ -113,7 +113,7 @@ namespace ThesisManagementProject
         public void PerformNotificationClick(Notification notification)
         {
             Tasks tasks = new Tasks();
-            switch (notification.Type)
+            switch (notification.OnType)
             {
                 case ENotificationType.Task:
                     tasks = taskDAO.SelectOnly(notification.IdObject);

@@ -57,7 +57,7 @@ namespace ThesisManagementProject
             gProgressBarToLine.Value = tasks.Progress;
             myProcess.SetItemFavorite(gButtonStar, tasks.IsFavorite);
 
-            if (!isProcessing || (host.Role == ERole.Student && tasks.IdCreator != host.IdAccount))
+            if (!isProcessing || (host.OnRole == ERole.Student && tasks.IdCreator != host.IdAccount))
             {
                 gButtonDelete.Hide();
                 lblTaskTitle.Text = myProcess.FormatStringLength(tasks.Title, 53);

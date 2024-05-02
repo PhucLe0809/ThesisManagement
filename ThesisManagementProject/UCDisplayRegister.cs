@@ -91,7 +91,7 @@ namespace ThesisManagementProject
             myProcess.RunCheckDataValid(people.CheckFullName() || flagCheck, erpFullName, gTextBoxFullname, "Name cannot be empty");
             myProcess.RunCheckDataValid(people.CheckCitizenCode() || flagCheck, erpCitizenCode, gTextBoxCitizencode, "Citizen code is already exists or empty");
             myProcess.RunCheckDataValid(people.CheckBirthday() || flagCheck, erpBirthday, gDateTimePickerBirthday, "Not yet 18 years old");
-            myProcess.RunCheckDataValid(people.CheckGender() || flagCheck, erpGender, gComboBoxGender, "Gender cannot be empty");
+            myProcess.RunCheckDataValid(people.CheckGender() || flagCheck, erpGender, gComboBoxGender, "OnGender cannot be empty");
             myProcess.RunCheckDataValid(people.CheckEmail() || flagCheck, erpEmail, gTextBoxEmail, "Email is already exists or invalid");
             myProcess.RunCheckDataValid(people.CheckPhoneNumber() || flagCheck, erpPhonenumber, gTextBoxPhonenumber, "Phone number is already exists or invalid");
             myProcess.RunCheckDataValid(people.CheckHandle() || flagCheck, erpHandle, gTextBoxUserName, "Username is already exists or invalid");
@@ -203,8 +203,8 @@ namespace ThesisManagementProject
         }
         private void gComboBoxGender_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.people.Gender = (EGender)myProcess.ConvertStringToEnum(gComboBoxGender, typeof(EGender));
-            myProcess.RunCheckDataValid(people.CheckGender() || flagCheck, erpGender, gComboBoxGender, "Gender cannot be empty");
+            this.people.OnGender = (EGender)myProcess.ConvertStringToEnum(gComboBoxGender, typeof(EGender));
+            myProcess.RunCheckDataValid(people.CheckGender() || flagCheck, erpGender, gComboBoxGender, "OnGender cannot be empty");
         }
         private void gTextBoxEmail_TextChanged(object sender, EventArgs e)
         {

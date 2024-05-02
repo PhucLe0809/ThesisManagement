@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,21 +42,19 @@ namespace ThesisManagementProject.Models
         protected string fullName;
         protected string citizenCode;
         protected DateTime birthday;
-        protected EGender gender;
+        protected string gender;
+        protected EGender pegender;
         protected string email;
         protected string phoneNumber;
         protected string handle;
-        protected ERole role;
+        protected string role;
+        protected ERole perole;
         protected string university;
         protected string faculty;
         protected string workCode;
         protected string password;
         protected string confirmPassword;
         protected string avatarName;
-        protected int numPending;
-        protected int numAccepted;
-        protected int numCompleted;
-        protected int numTeams;
 
         #endregion
 
@@ -63,25 +62,23 @@ namespace ThesisManagementProject.Models
 
         public People()
         {
-            idAccount = string.Empty;
-            fullName = string.Empty;
-            citizenCode = string.Empty;
-            birthday = DateTime.Now;
-            gender = EGender.Male;
-            email = string.Empty;
-            phoneNumber = string.Empty;
-            handle = string.Empty;
-            role = ERole.Student;
-            university = "HCM City University of Technology and Education";
-            faculty = "Faculty of Information Technology";
-            workCode = string.Empty;
-            password = string.Empty;
-            confirmPassword = string.Empty;
-            avatarName = "PicAvatarDemoUser";
-            numPending = 0;
-            numAccepted = 0;
-            numCompleted = 0;
-            numTeams = 0;
+            this.idAccount = string.Empty;
+            this.fullName = string.Empty;
+            this.citizenCode = string.Empty;
+            this.birthday = DateTime.Now;
+            this.pegender = EGender.Male;
+            this.gender = this.pegender.ToString();
+            this.email = string.Empty;
+            this.phoneNumber = string.Empty;
+            this.handle = string.Empty;
+            this.perole = ERole.Student;
+            this.role = this.perole.ToString();
+            this.university = "HCM City University of Technology and Education";
+            this.faculty = "Faculty of Information Technology";
+            this.workCode = string.Empty;
+            this.password = string.Empty;
+            this.confirmPassword = string.Empty;
+            this.avatarName = "PicAvatarDemoUser";
         }
         public People(string fullName, string citizenCode, DateTime birthday, EGender gender, string email, string phoneNumber,
                         string handle, ERole role, string workCode, string password, EClassify eClassify)
@@ -90,21 +87,19 @@ namespace ThesisManagementProject.Models
             this.fullName = fullName;
             this.citizenCode = citizenCode;
             this.birthday = birthday;
-            this.gender = gender;
+            this.pegender = gender;
+            this.gender = gender.ToString();
             this.email = email;
             this.phoneNumber = phoneNumber;
             this.handle = handle;
-            this.role = role;
+            this.perole = role;
+            this.role = role.ToString();
             this.university = "HCM City University of Technology and Education";
             this.faculty = "Faculty of Information Technology";
             this.workCode = workCode;
             this.password = password;
             this.confirmPassword = password;
             this.avatarName = "PicAvatarDemoUser";
-            this.numPending = 0;
-            this.numAccepted = 0;
-            this.numCompleted = 0;
-            this.numTeams = 0;
         }
         public People(string fullName, string citizenCode, DateTime birthday, EGender gender, string email, string phoneNumber,
                         string handle, ERole role, string workCode, string password, string confirmPassword, string avatarName, EClassify eClassify)
@@ -113,21 +108,19 @@ namespace ThesisManagementProject.Models
             this.fullName = fullName;
             this.citizenCode = citizenCode;
             this.birthday = birthday;
-            this.gender = gender;
+            this.pegender = gender;
+            this.gender = gender.ToString();
             this.email = email;
             this.phoneNumber = phoneNumber;
             this.handle = handle;
-            this.role = role;
+            this.perole = role;
+            this.role = role.ToString();
             this.university = "HCM City University of Technology and Education";
             this.faculty = "Faculty of Information Technology";
             this.workCode = workCode;
             this.password = password;
             this.confirmPassword = confirmPassword;
             this.avatarName = avatarName;
-            this.numPending = 0;
-            this.numAccepted = 0;
-            this.numCompleted = 0;
-            this.numTeams = 0;
         }
         public People(string idAccount, string fullName, string citizenCode, DateTime birthday, EGender gender, string email, string phoneNumber,
                         string handle, ERole role, string workCode, string password, string avatarName)
@@ -136,26 +129,25 @@ namespace ThesisManagementProject.Models
             this.fullName = fullName;
             this.citizenCode = citizenCode;
             this.birthday = birthday;
-            this.gender = gender;
+            this.pegender = gender;
+            this.gender = gender.ToString();
             this.email = email;
             this.phoneNumber = phoneNumber;
             this.handle = handle;
-            this.role = role;
+            this.perole = role;
+            this.role = role.ToString();
             this.university = "HCM City University of Technology and Education";
             this.faculty = "Faculty of Information Technology";
             this.workCode = workCode;
             this.password = password;
             this.avatarName = avatarName;
-            this.numPending = 0;
-            this.numAccepted = 0;
-            this.numCompleted = 0;
-            this.numTeams = 0;
         }
 
         #endregion
 
         #region PEOPLE PROPERTIES
 
+        [Key]
         public string IdAccount
         {
             get { return idAccount; }
@@ -164,7 +156,7 @@ namespace ThesisManagementProject.Models
         public string FullName
         {
             get { return fullName; }
-            set {  fullName = value; }
+            set { fullName = value; }
         }
         public string CitizenCode
         {
@@ -176,10 +168,24 @@ namespace ThesisManagementProject.Models
             get { return birthday; }
             set { birthday = value; }
         }
-        public EGender Gender
+        public string Gender
         {
             get { return gender; }
-            set { gender = value; }
+            set
+            {
+                gender = value;
+                pegender = myProcess.GetEnumFromDisplayName<EGender>(gender);
+            }
+        }
+        [NotMapped]
+        public EGender OnGender
+        {
+            get { return pegender; }
+            set 
+            {
+                pegender = value;
+                gender = pegender.ToString();
+            }
         }
         public string Email
         {
@@ -196,10 +202,24 @@ namespace ThesisManagementProject.Models
             get { return handle; }
             set { handle = value; }
         }
-        public ERole Role
+        public string Role
         {
             get { return role; }
-            set { role = value; }
+            set
+            {
+                role = value;
+                perole = myProcess.GetEnumFromDisplayName<ERole>(role);
+            }
+        }
+        [NotMapped]
+        public ERole OnRole
+        {
+            get { return perole; }
+            set 
+            { 
+                perole = value;
+                role = perole.ToString();
+            }
         }
         public string University
         {
@@ -221,6 +241,7 @@ namespace ThesisManagementProject.Models
             get { return password; }
             set { password = value; }
         }
+        [NotMapped]
         public string ConfirmPassword
         {
             get { return confirmPassword; }
@@ -230,22 +251,6 @@ namespace ThesisManagementProject.Models
         {
             get { return this.avatarName; }
             set { this.avatarName = value; }
-        }
-        public int NumPending
-        {
-            get { return numPending; }
-        }
-        public int NumAccepted
-        {
-            get { return numAccepted; }
-        }
-        public int NumCompleted
-        {
-            get { return numCompleted; }
-        }
-        public int NumTeams
-        {
-            get { return numTeams; }
         }
 
         #endregion
@@ -259,7 +264,7 @@ namespace ThesisManagementProject.Models
         public bool CheckCitizenCode()
         {
             return this.citizenCode != string.Empty
-                    && peopleDAO.CheckNonExist("citizencode", this.citizenCode);
+                    && !peopleDAO.CheckExist(t => t.CitizenCode == this.citizenCode);
         }
         public bool CheckBirthday()
         {
@@ -269,31 +274,31 @@ namespace ThesisManagementProject.Models
         }
         public bool CheckGender()
         {
-            return this.gender == EGender.Male || this.gender == EGender.Female;
+            return this.pegender == EGender.Male || this.pegender == EGender.Female;
         }
         public bool CheckEmail()
         {
             return this.email != string.Empty
-                    && peopleDAO.CheckNonExist("email", this.email);
+                    && !peopleDAO.CheckExist(t => t.Email == this.email);
         }
         public bool CheckPhoneNumber()
         {
             return this.phoneNumber != string.Empty && this.phoneNumber.All(char.IsDigit)
-                    && peopleDAO.CheckNonExist("phonenumber", this.phoneNumber);
+                    && !peopleDAO.CheckExist(t => t.PhoneNumber == this.phoneNumber);
         }
         public bool CheckHandle()
         {
             return this.handle != string.Empty
-                    && peopleDAO.CheckNonExist("handle", this.handle);
+                    && !peopleDAO.CheckExist(t => t.Handle == this.handle);
         }
         public bool CheckRole()
         {
-            return this.role == ERole.Lecture || this.role == ERole.Student;
+            return this.perole == ERole.Lecture || this.perole == ERole.Student;
         }
         public bool CheckWorkCode()
         {
             return this.workCode != string.Empty
-                    && peopleDAO.CheckNonExist("workcode", this.workCode);
+                    && !peopleDAO.CheckExist(t => t.WorkCode == this.workCode);
         }
         public bool CheckPassWord()
         {
@@ -306,7 +311,7 @@ namespace ThesisManagementProject.Models
 
         public People Clone()
         {
-            return new People(idAccount, fullName, citizenCode, birthday, gender, email, phoneNumber, handle, role, workCode, password, avatarName);
+            return new People(idAccount, fullName, citizenCode, birthday, pegender, email, phoneNumber, handle, perole, workCode, password, avatarName);
         }
 
         #endregion

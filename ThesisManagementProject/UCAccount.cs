@@ -48,12 +48,12 @@ namespace ThesisManagementProject
         {
             gCirclePictureBoxAvatar.Image = myProcess.NameToImage(people.AvatarName);
             lblViewHandle.Text = people.Handle;
-            lblViewRole.Text = people.Role.ToString();
+            lblViewRole.Text = people.OnRole.ToString();
 
             gTextBoxFullname.Text = people.FullName;
             gTextBoxCitizencode.Text = people.CitizenCode;
             gDateTimePickerBirthday.Value = people.Birthday;
-            gComboBoxGender.SelectedItem = people.Gender.ToString();
+            gComboBoxGender.SelectedItem = people.OnGender.ToString();
             gTextBoxEmail.Text = people.Email;
             gTextBoxPhonenumber.Text = people.PhoneNumber;
             gTextBoxUserName.Text = people.Handle;
@@ -96,7 +96,7 @@ namespace ThesisManagementProject
         private void SetTeamsList()
         {
             flpTeams.Controls.Clear();
-            if (people.Role == ERole.Lecture)
+            if (people.OnRole == ERole.Lecture)
             {
                 Guna2PictureBox pictureBox = myProcess.CreatePictureBox(Properties.Resources.PictureEmptyState, new Size(370, 325));
                 flpTeams.Controls.Add(pictureBox);
@@ -119,7 +119,7 @@ namespace ThesisManagementProject
             myProcess.RunCheckDataValid(dynamicPeople.CheckCitizenCode() || flagCheck || people.CitizenCode == dynamicPeople.CitizenCode,
                 erpCitizenCode, gTextBoxCitizencode, "Citizen code is already exists or empty");
             myProcess.RunCheckDataValid(dynamicPeople.CheckBirthday() || flagCheck, erpBirthday, gDateTimePickerBirthday, "Not yet 18 years old");
-            myProcess.RunCheckDataValid(dynamicPeople.CheckGender() || flagCheck, erpGender, gComboBoxGender, "Gender cannot be empty");
+            myProcess.RunCheckDataValid(dynamicPeople.CheckGender() || flagCheck, erpGender, gComboBoxGender, "OnGender cannot be empty");
             myProcess.RunCheckDataValid(dynamicPeople.CheckEmail() || flagCheck || people.Email == dynamicPeople.Email,
                 erpEmail, gTextBoxEmail, "Email is already exists or invalid");
             myProcess.RunCheckDataValid(dynamicPeople.CheckPhoneNumber() || flagCheck || people.PhoneNumber == dynamicPeople.PhoneNumber,
@@ -153,7 +153,7 @@ namespace ThesisManagementProject
         {
             this.dynamicPeople = new People(dynamicPeople.IdAccount, gTextBoxFullname.Text, gTextBoxCitizencode.Text, gDateTimePickerBirthday.Value,
                                      (EGender)myProcess.ConvertStringToEnum(gComboBoxGender, typeof(EGender)), gTextBoxEmail.Text, gTextBoxPhonenumber.Text, gTextBoxUserName.Text,
-                                     dynamicPeople.Role, gTextBoxWorkcode.Text, dynamicPeople.Password, dynamicPeople.AvatarName);
+                                     dynamicPeople.OnRole, gTextBoxWorkcode.Text, dynamicPeople.Password, dynamicPeople.AvatarName);
 
             this.flagCheck = false;
             if (CheckInformationValid())
@@ -188,8 +188,8 @@ namespace ThesisManagementProject
         }
         private void gComboBoxGender_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.dynamicPeople.Gender = (EGender)myProcess.ConvertStringToEnum(gComboBoxGender, typeof(EGender));
-            myProcess.RunCheckDataValid(dynamicPeople.CheckGender() || flagCheck, erpGender, gComboBoxGender, "Gender cannot be empty");
+            this.dynamicPeople.OnGender = (EGender)myProcess.ConvertStringToEnum(gComboBoxGender, typeof(EGender));
+            myProcess.RunCheckDataValid(dynamicPeople.CheckGender() || flagCheck, erpGender, gComboBoxGender, "OnGender cannot be empty");
         }
         private void gTextBoxEmail_TextChanged(object sender, EventArgs e)
         {
@@ -267,7 +267,7 @@ namespace ThesisManagementProject
 
         IEnumerable<object> GetContributionForStudent(int selectedYear)
         {
-            List<Evaluation> listEvaluations = evaluationDAO.SelectListByPeople(this.people.IdAccount);
+            List<Evaluation> listEvaluations = evaluationDAO.SelectList(e => e.IdPeople == this.people.IdAccount);
             this.totalContributions = listEvaluations.Count;
             var allMonths = Enumerable.Range(1, 12);
             var contributions = allMonths
@@ -291,7 +291,7 @@ namespace ThesisManagementProject
         {
             int selectedYear = (int)gComboBoxSelectYear.SelectedItem;
 
-            var contributions = people.Role == ERole.Lecture ? GetContributionForTeacher(selectedYear) : GetContributionForStudent(selectedYear);
+            var contributions = people.OnRole == ERole.Lecture ? GetContributionForTeacher(selectedYear) : GetContributionForStudent(selectedYear);
 
             CultureInfo culture = CultureInfo.InvariantCulture;
             DateTimeFormatInfo dtfi = culture.DateTimeFormat;

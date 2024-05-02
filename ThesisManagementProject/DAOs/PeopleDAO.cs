@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ThesisManagementProject.Database;
+using ThesisManagementProject.Entity;
 using ThesisManagementProject.Models;
 using ThesisManagementProject.Process;
 
@@ -18,36 +19,31 @@ namespace ThesisManagementProject.DAOs
 
         #region SELECT PEOPLE
 
-        public List<People> SelectListByUserName(string username, ERole role)
+        public People SelectOnlyByID(string idPeople)
         {
-            string command = string.Format("SELECT * FROM {0} WHERE handle LIKE '{1}%' and role = '{2}'",
-                                MyDatabase.DBAccount, username, role);
-
-            DataTable dataTable = Select(command);
-
-            List<People> list = new List<People>();
-            foreach (DataRow row in dataTable.Rows)
+            using (var dbContext = new AppDbContext())
             {
-                list.Add(GetFromDataRow(row));
+                var people = dbContext.Account.FirstOrDefault(p => p.IdAccount == idPeople);
+                if (people != null) return Format(people);
+                return new People();
             }
-
-            return list;
-        }
-        public People SelectOnlyByID(string id)
-        {
-            DataTable dt = Select(string.Format("SELECT * FROM {0} WHERE idaccount = '{1}'", MyDatabase.DBAccount, id));
-
-            if (dt.Rows.Count > 0) return GetFromDataRow(dt.Rows[0]);
-            return new People();
         }
         public People SelectOnlyByEmailAndPassword(string email, string password)
         {
-            DataTable dt = Select(string.Format("SELECT * FROM {0} WHERE email = '{1}' and password = '{2}'",
-                                        MyDatabase.DBAccount, email, password));
-
-            if (dt.Rows.Count > 0) return GetFromDataRow(dt.Rows[0]);
-            return new People();
-        }        
+            using (var dbContext = new AppDbContext())
+            {
+                var people = dbContext.Account.FirstOrDefault(p => p.Email == email && p.Password == password);
+                if (people != null) return Format(people);
+                return null;
+            }
+        }
+        public List<People> SelectListByUserName(string username, ERole role)
+        {
+            using (var dbContext = new AppDbContext())
+            {
+                return FormatList(dbContext.Account.Where(p => p.OnRole == role && p.Handle.StartsWith(username)).ToList());
+            }
+        }
 
         #endregion
 
@@ -55,15 +51,18 @@ namespace ThesisManagementProject.DAOs
 
         public List<string> SelectListID(ERole role)
         {
-            string command = string.Format("SELECT idaccount FROM {0} WHERE role = '{1}'", MyDatabase.DBAccount, role.ToString());
-            DataTable table = Select(command);
-            List<string> list = new List<string>();
-
-            foreach (DataRow row in table.Rows)
+            using (var dbContext = new AppDbContext())
             {
-                list.Add(row["idaccount"].ToString());
+                var listPeople = dbContext.Account.Where(p => p.Role == role.ToString()).ToList();
+                
+                if (listPeople != null) return listPeople.Select(p => p.IdAccount).ToList();
+                return new List<string>();
+
             }
+<<<<<<< HEAD
             return list;
+=======
+>>>>>>> 55340cd96e9166acefe353d2e04589f4cdb921f3
         }
 
         #endregion
@@ -72,47 +71,65 @@ namespace ThesisManagementProject.DAOs
 
         public void Insert(People people)
         {
-            ExecuteQueryPeople(people,
-                    "INSERT INTO {0} VALUES ('{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}'," +
-                    " '{10}', '{11}', '{12}', '{13}', '{14}')", "Register", false);
+            using (var dbContext = new AppDbContext())
+            {
+                dbContext.Account.Add(people);
+                dbContext.SaveChanges();
+            }
         }
         public void Update(People people)
         {
-            ExecuteQueryPeople(people, "UPDATE {0} SET " +
-                "idaccount = '{1}', fullname = '{2}', citizencode = '{3}', birthday = {4}, gender = '{5}', " +
-                "email = '{6}', phonenumber = '{7}', handle = '{8}', role = '{9}', university = '{10}', " +
-                "faculty = '{11}', workcode = {12}, password = '{13}', avatarname = '{14}' WHERE idaccount = '{1}'",
-                "Update", true);
+            using (var dbContext = new AppDbContext())
+            {
+                var existingPeople = dbContext.Account.FirstOrDefault(p => p.IdAccount == people.IdAccount);
+
+                if (existingPeople != null)
+                {
+                    existingPeople.FullName = people.FullName;
+                    existingPeople.CitizenCode = people.CitizenCode;
+                    existingPeople.Birthday = people.Birthday;
+                    existingPeople.Gender = people.Gender;
+                    existingPeople.Email = people.Email;
+                    existingPeople.PhoneNumber = people.PhoneNumber;
+                    existingPeople.Handle = people.Handle;
+                    existingPeople.Role = people.Role;
+                    existingPeople.University = people.University;
+                    existingPeople.Faculty = people.Faculty;
+                    existingPeople.WorkCode = people.WorkCode;
+                    existingPeople.Password = people.Password;
+                    existingPeople.AvatarName = people.AvatarName;
+
+                    dbContext.SaveChanges();
+                }
+            }
         }
-        public bool CheckNonExist(string field, string information)
+        public bool CheckExist(Func<People, bool> condition)
         {
-            return SQLCheckNonExist(string.Format("SELECT * FROM {0} WHERE {1} = '{2}'",
-                                    MyDatabase.DBAccount, field, information));
+            using (var dbContext = new AppDbContext())
+            {
+                return dbContext.Account.Any(condition);
+            }
         }
 
         #endregion
 
-        #region Get From Data Row
+        #region Get People From Database
 
-        public People GetFromDataRow(DataRow row)
+        private People Format(People people)
         {
-            string idaccount = row["idaccount"].ToString();
-            string fullname = row["fullname"].ToString();
-            string citizenCode = row["citizencode"].ToString();
-            DateTime birthday = DateTime.Parse(row["birthday"].ToString());
-            EGender gender = myProcess.GetEnumFromDisplayName<EGender>(row["gender"].ToString());
-            string email = row["email"].ToString();
-            string phoneNumber = row["phonenumber"].ToString();
-            string handle = row["handle"].ToString();
-            ERole role = myProcess.GetEnumFromDisplayName<ERole>(row["role"].ToString());
-            string workCode = row["workcode"].ToString();
-            string password = row["password"].ToString();
-            string avatarName = row["avatarname"].ToString();
+            if (people == null) return new People();
 
-            People people = new People(idaccount, fullname, citizenCode, birthday, gender,
-                                        email, phoneNumber, handle, role, workCode, password, avatarName);
+            EGender gender = myProcess.GetEnumFromDisplayName<EGender>(people.Gender);
+            ERole role = myProcess.GetEnumFromDisplayName<ERole>(people.Role);
 
+            people.OnGender = gender;
+            people.OnRole = role;
             return people;
+        }
+        private List<People> FormatList(List<People> peoples)
+        {
+            for (int i = 0; i < peoples.Count; i++) peoples[i] = Format(peoples[i]);
+            return peoples;
         }
 
         #endregion

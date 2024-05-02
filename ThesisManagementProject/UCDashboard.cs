@@ -84,7 +84,7 @@ namespace ThesisManagementProject
             }
             else
             {
-                if (people.Role == ERole.Lecture) UpdateThesisListLecture();
+                if (people.OnRole == ERole.Lecture) UpdateThesisListLecture();
                 else UpdateThesisListStudent();
             }
         }
@@ -132,7 +132,7 @@ namespace ThesisManagementProject
                 thesisLine.SetInformation(listThesis[i]);
                 thesisLine.ThesisLineClicked += ThesisLine_Clicked;
                 thesisLine.NotificationJump += ThesisLine_NotificationJump;
-                if (people.Role == ERole.Student) thesisLine.HideToolBar();
+                if (people.OnRole == ERole.Student) thesisLine.HideToolBar();
                 uCThesisList.AddThesis(thesisLine);
             }
             uCThesisList.SetNumThesis(listThesis.Count, true);
@@ -205,7 +205,7 @@ namespace ThesisManagementProject
             gPanelDataView.Controls.Clear();
             this.thesisClicked = thesisDAO.SelectOnly(thesisLine.GetIdThesis);
             this.thesisLineClicked = thesisLine;
-            uCThesisDetails.FlagWaiting = this.flagStuMyTheses && (thesisClicked.Status == EThesisStatus.Registered || thesisClicked.Status == EThesisStatus.Published);
+            uCThesisDetails.FlagWaiting = this.flagStuMyTheses && (thesisClicked.OnStatus == EThesisStatus.Registered || thesisClicked.OnStatus == EThesisStatus.Published);
             uCThesisDetails.SetInformation(this.thesisClicked, people);
             gPanelDataView.Controls.Add(uCThesisDetails);
             
@@ -281,7 +281,7 @@ namespace ThesisManagementProject
 
         private List<Thesis> GetThesisListByTopic(Guna2TextBox textBox)
         {
-            if (people.Role == ERole.Lecture)
+            if (people.OnRole == ERole.Lecture)
             {
 
                 return thesisDAO.SearchRoleLecture(this.people.IdAccount, textBox.Text);

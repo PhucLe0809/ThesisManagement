@@ -97,7 +97,7 @@ namespace ThesisManagementProject
             }
         }
         private void OnTasksCreateClicked(EventArgs e)
-        { 
+        {
             TasksCreateClicked?.Invoke(this, e);
         }
 

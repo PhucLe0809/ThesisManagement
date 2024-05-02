@@ -40,15 +40,15 @@ namespace ThesisManagementProject
         {
             gCirclePictureBoxAvatar.Image = myProcess.NameToImage(people.AvatarName);
             lblViewHandle.Text = people.Handle;
-            lblViewRole.Text = people.Role.ToString();
+            lblViewRole.Text = people.OnRole.ToString();
 
-            Action setupRole = (this.people.Role == ERole.Lecture) ? new Action(SetupLectureRole) : new Action(SetupStudentRole);
+            Action setupRole = (this.people.OnRole == ERole.Lecture) ? new Action(SetupLectureRole) : new Action(SetupStudentRole);
             setupRole();
 
             gTextBoxFullname.Text = people.FullName;
             gTextBoxCitizencode.Text = people.CitizenCode;
             gTextBoxBirthday.Text = people.Birthday.ToString("dd/MM/yyyy");   
-            gTextBoxGender.Text = people.Gender.ToString();
+            gTextBoxGender.Text = people.OnGender.ToString();
             gTextBoxEmail.Text = people.Email;
             gTextBoxPhonenumber.Text = people.PhoneNumber;
 

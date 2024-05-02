@@ -7,52 +7,110 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using ThesisManagementProject.Database;
+using ThesisManagementProject.Entity;
 using ThesisManagementProject.Models;
 using ThesisManagementProject.Process;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ThesisManagementProject.DAOs
 {
     internal class ThesisStatusDAO : DBConnection
     {
         public ThesisStatusDAO() { }
+
+        public string SelectTeamByIdThesis(string idThesis)
+        {
+            using (var dbContext = new AppDbContext())
+            {
+                var existingThesisStatus = dbContext.ThesisStatus.FirstOrDefault(t => t.IdThesis == idThesis);
+
+                if (existingThesisStatus != null)
+                {
+                    return existingThesisStatus.IdTeam;
+                }
+                else
+                {
+                    return string.Empty;
+                }
+            }
+        }
         public void Insert(Thesis thesis, Team team)
         {
+<<<<<<< HEAD
             string command = string.Format("INSERT INTO {0} VALUES('{1}', '{2}', '{3}')",
                                             MyDatabase.DBThesisStatus, team.IdTeam, thesis.IdThesis, thesis.Status.ToString());
             SQLExecuteByCommand(command);
+=======
+            using (var dbContext = new AppDbContext())
+            {
+                ThesisStatus thesisStatus = new ThesisStatus(team.IdTeam, thesis.IdThesis, thesis.OnStatus);
+                dbContext.ThesisStatus.Add(thesisStatus);
+                dbContext.SaveChanges();
+            }
+        }
+        private void Delete(string idTeam, string idThesis)
+        {
+            using (var dbContext = new AppDbContext())
+            {
+                var existingThesisStatus = dbContext.ThesisStatus.FirstOrDefault(t => t.IdTeam == idTeam && t.IdThesis == idThesis);
+
+                if (existingThesisStatus != null)
+                {
+                    dbContext.ThesisStatus.Remove(existingThesisStatus);
+                    dbContext.SaveChanges();
+                }
+            }
+>>>>>>> 55340cd96e9166acefe353d2e04589f4cdb921f3
         }
         public void DeleteListTeam(List<Team> listTeam, string idThesis)
         {
             foreach (Team teamLine in listTeam)
             {
+<<<<<<< HEAD
                 string command = string.Format("DELETE FROM {0} WHERE idteam = '{1}' AND idthesis = '{2}'",
                                     MyDatabase.DBThesisStatus, teamLine.IdTeam, idThesis);
                 ExecuteQuery(command, "Delete", false);
+=======
+                Delete(teamLine.IdTeam, idThesis);
+            }
+        }
+        public void UpdateThesisStatus(string idTeam, string idThesis, EThesisStatus status)
+        {
+            using (var dbContext = new AppDbContext())
+            {
+                var existingThesisStatus = dbContext.ThesisStatus.FirstOrDefault(t => t.IdTeam == idTeam && t.IdThesis == idThesis);
+
+                if (existingThesisStatus != null)
+                {
+                    existingThesisStatus.OnStatus = status;
+                    dbContext.SaveChanges();
+                }
+>>>>>>> 55340cd96e9166acefe353d2e04589f4cdb921f3
             }
         }
         public int CountTeamFollowState(Thesis thesis)
         {
-            string command = string.Format("SELECT count(*) as NumTeams FROM {0} WHERE idthesis = '{1}' and status = '{2}'",
-                                            MyDatabase.DBThesisStatus, thesis.IdThesis, thesis.Status.ToString());
-            DataTable table = Select(command);
-            int num = 0;
-            int.TryParse(table.Rows[0]["NumTeams"].ToString(), out num);
-            return num;
+            using (var dbContext = new AppDbContext())
+            {
+                var list = dbContext.ThesisStatus.Where(t => t.IdThesis == thesis.IdThesis && t.Status == thesis.Status).ToList();
+                return list.Count;
+            }
         }
-        public string SelectTeamByIdThesis(string idThesis)
+        public string SelectThesisByIdTeam(string idTeam)
         {
-            string command = $"SELECT idteam " +
-                             $"FROM {MyDatabase.DBThesisStatus} " +
-                             $"WHERE idthesis = '{idThesis}'";
-            DataTable table = Select(command);
-            return table.Rows[0]["idteam"].ToString();
+            using (var dbContext = new AppDbContext())
+            {
+                var existingThesisStatus = dbContext.ThesisStatus.FirstOrDefault(t => t.IdTeam == idTeam);
 
-        }
-        public void UpdateThesisStatus(string idTeam, string idThesis, EThesisStatus status)
-        {
-            string command = string.Format("UPDATE {0} SET status = '{1}' where idteam = '{2}' and idthesis = '{3}'",
-                        MyDatabase.DBThesisStatus, status.ToString(), idTeam, idThesis);
-            SQLExecuteByCommand(command);
+                if (existingThesisStatus != null)
+                {
+                    return existingThesisStatus.IdThesis;
+                }
+                else
+                {
+                    return string.Empty;
+                }
+            }
         }
     }
 }

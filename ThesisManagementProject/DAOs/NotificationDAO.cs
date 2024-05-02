@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ThesisManagementProject.Database;
+using ThesisManagementProject.Entity;
 using ThesisManagementProject.Models;
 using ThesisManagementProject.Process;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -19,24 +21,15 @@ namespace ThesisManagementProject.DAOs
 
         #region SELECT NOTIFICATION
 
-        private List<Notification> SelectList(string command)
-        {
-            DataTable dataTable = Select(command);
-
-            List<Notification> list = new List<Notification>();
-            foreach (DataRow row in dataTable.Rows)
-            {
-                Notification notification = GetFromDataRow(row);
-                list.Add(notification);
-            }
-
-            return list;
-        }
         public List<Notification> SelectList(People people)
         {
-            string command = string.Format("SELECT * FROM {0} WHERE idhost = '{1}' ORDER BY created DESC", 
-                                            MyDatabase.DBNotification, people.IdAccount);
-            return SelectList(command);
+            using (var dbContext = new AppDbContext())
+            {
+                var list = FormatList(dbContext.Notification.Where(n => n.IdHost == people.IdAccount).ToList());
+
+                if (list != null) return list.OrderByDescending(n => n.Created).ToList();
+                return new List<Notification>();
+            }
         }
 
         #endregion
@@ -45,8 +38,11 @@ namespace ThesisManagementProject.DAOs
 
         public void Insert(Notification notification)
         {
-            ExecuteQueryNotification(notification, "INSERT INTO {0} VALUES ('{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', {9}, {10})",
-                "Create", false);
+            using (var dbContext = new AppDbContext())
+            {
+                dbContext.Notification.Add(notification);
+                dbContext.SaveChanges();
+            }
         }
         public void InsertFollowListPeople(string idSender, string idThesis, string idObject, string content, List<People> peoples)
         {
@@ -60,44 +56,52 @@ namespace ThesisManagementProject.DAOs
         }
         public void Delete(Notification notification)
         {
-            ExecuteQueryNotification(notification, "DELETE FROM {0} WHERE idnotification = '{1}'",
-                "Delete", false);
+            using (var dbContext = new AppDbContext())
+            {
+                var existingNotification = dbContext.Notification.FirstOrDefault(n => n.IdNotification == notification.IdNotification);
+
+                if (existingNotification != null)
+                {
+                    dbContext.Notification.Remove(existingNotification);
+                    dbContext.SaveChanges();
+                }
+            }
         }
-        public void UpdateIsSaw(string idNotification, bool flag)
+        public void UpdateProperty(string idNotification, Action<Notification> updateAction)
         {
-            string command = string.Format("UPDATE {0} SET issaw = {1} WHERE idnotification = '{2}'",
-                                                MyDatabase.DBNotification, flag ? 1 : 0, idNotification);
-            SQLExecuteByCommand(command);
+            using (var dbContext = new AppDbContext())
+            {
+                var existingNotification = dbContext.Notification.FirstOrDefault(n => n.IdNotification == idNotification);
+
+                if (existingNotification != null)
+                {
+                    updateAction(existingNotification);
+                    dbContext.SaveChanges();
+                }
+            }
         }
-        public void UpdateIsFavorite(string idNotification, bool flag)
-        {
-            string command = string.Format("UPDATE {0} SET isfavorite = {1} WHERE idnotification = '{2}'",
-                                                MyDatabase.DBNotification, flag ? 1 : 0, idNotification);
-            SQLExecuteByCommand(command);
-        }
+
 
         #endregion
 
-        #region Get Notification From Data Row
+        #region Get Notification From Database
 
-        public Notification GetFromDataRow(DataRow row)
+        private Notification Format(Notification notification)
         {
-            string idNotification = row["idnotification"].ToString();
-            string idHost = row["idhost"].ToString();
-            string idSender = row["idsender"].ToString();
-            string idThesis = row["idthesis"].ToString();
-            string idObject = row["idobject"].ToString();
-            string content = row["content"].ToString();
-            ENotificationType type = myProcess.GetEnumFromDisplayName<ENotificationType>(row["type"].ToString());
-            DateTime created = DateTime.Parse(row["created"].ToString());
-            bool isFavorite = row["isfavorite"].ToString() == "True" ? true : false;
-            bool isSaw = row["issaw"].ToString() == "True" ? true : false;
+            if (notification == null) return new Notification();
 
-            Notification notification = new Notification(idNotification, idHost, idSender, idThesis, idObject, content, type, created, isFavorite, isSaw);
+            ENotificationType type = myProcess.GetEnumFromDisplayName<ENotificationType>(notification.Type);
+
+            notification.OnType = type;
             return notification;
         }
+        private List<Notification> FormatList(List<Notification> notifications)
+        {
+            for (int i = 0; i < notifications.Count; i++) notifications[i] = Format(notifications[i]);
+            return notifications;
+        }
 
         #endregion
-    
+
     }
 }

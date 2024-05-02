@@ -42,7 +42,7 @@ namespace ThesisManagementProject.DAOs
         public Team SelectFollowThesis(Thesis thesis)
         {
             string command = string.Format("SELECT * FROM {0} WHERE idthesis = '{1}' and status = '{2}'",
-                                            MyDatabase.DBThesisStatus, thesis.IdThesis, thesis.Status.ToString());
+                                            MyDatabase.DBThesisStatus, thesis.IdThesis, thesis.OnStatus.ToString());
 
             DataTable table = Select(command);
             return SelectOnly(table.Rows[0]["idteam"].ToString());

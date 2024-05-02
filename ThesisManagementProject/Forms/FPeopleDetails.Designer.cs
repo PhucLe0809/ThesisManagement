@@ -203,7 +203,7 @@
             gTextBoxGender.Name = "gTextBoxGender";
             gTextBoxGender.PasswordChar = '\0';
             gTextBoxGender.PlaceholderForeColor = Color.FromArgb(125, 137, 149);
-            gTextBoxGender.PlaceholderText = "Gender";
+            gTextBoxGender.PlaceholderText = "OnGender";
             gTextBoxGender.ReadOnly = true;
             gTextBoxGender.SelectedText = "";
             gTextBoxGender.ShadowDecoration.CustomizableEdges = customizableEdges3;

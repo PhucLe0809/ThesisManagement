@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,7 +41,8 @@ namespace ThesisManagementProject.Models
         private string idThesis;
         private string idObject;
         private string content;
-        private ENotificationType type;
+        private string type;
+        private ENotificationType notype;
         private DateTime created;
         private bool isFavorite;
         private bool isSaw;
@@ -57,7 +59,8 @@ namespace ThesisManagementProject.Models
             this.idThesis = string.Empty;
             this.idObject = string.Empty;
             this.content = string.Empty;
-            this.type = ENotificationType.Null;
+            this.type = string.Empty;
+            this.notype = ENotificationType.Null;
             this.created = DateTime.MinValue;
             this.isFavorite = false;
             this.isSaw = false;
@@ -71,7 +74,8 @@ namespace ThesisManagementProject.Models
             this.idThesis = idThesis;
             this.idObject= idObject;
             this.content = content;
-            this.type = type;
+            this.notype = type;
+            this.type = this.notype.ToString();
             this.created = created;
             this.isFavorite = isFavorite;
             this.isSaw = isSaw;
@@ -84,7 +88,8 @@ namespace ThesisManagementProject.Models
             this.idThesis = idThesis;
             this.idObject = idOject; 
             this.content = content;
-            this.type = GetNotificationType();
+            this.notype = GetNotificationType();
+            this.type = this.notype.ToString();
             this.created = created;
             this.isFavorite = isFavorite;
             this.isSaw = isSaw;
@@ -94,37 +99,60 @@ namespace ThesisManagementProject.Models
 
         #region PROPERTIES
 
+        [Key]
         public string IdNotification
         {
             get { return this.idNotification; }
+            set { this.idNotification = value; }
         }
         public string IdHost
         {
             get { return this.idHost; }
+            set { this.idHost = value; }
         }
         public string IdSender
         {
             get { return this.idSender; }
+            set { this.idSender = value; }
         }
         public string IdThesis
         {
             get { return this.idThesis; }
+            set { this.idThesis = value; }
         }
         public string IdObject
         {
             get { return this.idObject; }
+            set { this.idObject = value; }
         }
         public string Content
         {
             get { return this.content; }
+            set { this.content = value; }
         }
-        public ENotificationType Type
+        public string Type
         {
             get { return this.type; }
+            set 
+            { 
+                this.type = value;
+                this.notype = myProcess.GetEnumFromDisplayName<ENotificationType>(this.type);
+            }
+        }
+        [NotMapped]
+        public ENotificationType OnType
+        {
+            get { return this.notype; }
+            set
+            {
+                this.notype = value;
+                this.type = this.notype.ToString();
+            }
         }
         public DateTime Created
         {
             get { return this.created; }
+            set { this.created = value; }
         }
         public bool IsFavorite
         {
@@ -158,7 +186,7 @@ namespace ThesisManagementProject.Models
         }
         public Color GetTypeColor()
         {
-            switch (this.type)
+            switch (this.notype)
             {
                 case ENotificationType.Thesis:
                     return Color.FromArgb(255, 87, 87);

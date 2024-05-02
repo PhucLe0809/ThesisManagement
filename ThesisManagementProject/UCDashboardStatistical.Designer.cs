@@ -333,7 +333,7 @@ namespace ThesisManagementProject
             gComboBoxTop.Font = new Font("Segoe UI", 10F);
             gComboBoxTop.ForeColor = Color.FromArgb(68, 88, 112);
             gComboBoxTop.ItemHeight = 30;
-            gComboBoxTop.Items.AddRange(new object[] { "Field", "Lecture" });
+            gComboBoxTop.Items.AddRange(new object[] { "OnField", "Lecture" });
             gComboBoxTop.Location = new Point(26, 15);
             gComboBoxTop.Name = "gComboBoxTop";
             gComboBoxTop.ShadowDecoration.CustomizableEdges = customizableEdges4;

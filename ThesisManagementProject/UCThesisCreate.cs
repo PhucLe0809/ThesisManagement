@@ -94,7 +94,7 @@ namespace ThesisManagementProject
             gButtonCreateOrEdit.Text = "Create";
             cmbIDInstructor.Enabled = true;
 
-            if (people.Role == ERole.Lecture)
+            if (people.OnRole == ERole.Lecture)
             {
                 cmbIDInstructor.SelectedItem = people.IdAccount;
                 cmbIDInstructor.Enabled = false;
@@ -106,8 +106,8 @@ namespace ThesisManagementProject
             flagInitEdit = true;
             InitUserControl();
             gTextBoxTopic.Text = thesis.Topic;
-            gComboBoxField.SelectedItem = thesis.Field;
-            gComboBoxLevel.SelectedItem = thesis.Level;
+            gComboBoxField.SelectedItem = thesis.OnField;
+            gComboBoxLevel.SelectedItem = thesis.OnLevel;
             gComboBoxMembers.SelectedItem = thesis.MaxMembers.ToString();
             gTextBoxDescription.Text = thesis.Description;
             gTextBoxFunctions.Text = thesis.Functions;
@@ -177,7 +177,7 @@ namespace ThesisManagementProject
                 (EField)gComboBoxField.SelectedItem, (ELevel)gComboBoxLevel.SelectedItem,
                 myProcess.ConvertStringToInt32(gComboBoxMembers.SelectedItem.ToString()), gTextBoxDescription.Text,
                 DateTime.Now, gTextBoxTechnology.Text, gTextBoxFunctions.Text, gTextBoxRequirements.Text,
-                this.thesis.IdCreator, this.thesis.IsFavorite, this.thesis.Status, this.thesis.IdInstructor);
+                this.thesis.IdCreator, this.thesis.IsFavorite, this.thesis.OnStatus, this.thesis.IdInstructor);
 
             this.flagCheck = false;
             if (CheckInformationValid())

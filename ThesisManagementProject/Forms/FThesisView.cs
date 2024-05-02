@@ -27,11 +27,11 @@ namespace ThesisManagementProject.Forms
         }
         private void SetInformation(Thesis thesis)
         {
-            gTextBoxStatus.Text = thesis.Status.ToString();
+            gTextBoxStatus.Text = thesis.OnStatus.ToString();
             gTextBoxStatus.FillColor = thesis.GetStatusColor();
             gTextBoxTopic.Text = thesis.Topic;
-            gTextBoxField.Text = thesis.Field.ToString();
-            gTextBoxLevel.Text = thesis.Level.ToString();
+            gTextBoxField.Text = thesis.OnField.ToString();
+            gTextBoxLevel.Text = thesis.OnLevel.ToString();
             gTextBoxMembers.Text = thesis.MaxMembers.ToString();
             gTextBoxDescription.Text = thesis.Description;
             gTextBoxTechnology.Text = thesis.Technology;

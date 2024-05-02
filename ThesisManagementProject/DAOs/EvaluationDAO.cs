@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using ThesisManagementProject.Database;
+using ThesisManagementProject.Entity;
 using ThesisManagementProject.Models;
 
 namespace ThesisManagementProject.DAOs
@@ -14,17 +16,16 @@ namespace ThesisManagementProject.DAOs
 
         #region SELECT EVALUATION
 
-        public List<Evaluation> SelectList(string command)
+        public List<Evaluation> SelectList(Func<Evaluation, bool> predicate)
         {
-            DataTable dataTable = Select(command);
-
-            List<Evaluation> list = new List<Evaluation>();
-            foreach (DataRow row in dataTable.Rows)
+            using (var dbContext = new AppDbContext())
             {
-                Evaluation evaluation = GetFromDataRow(row);
-                list.Add(evaluation);
+                var list = dbContext.Evaluation.Where(predicate).ToList();
+                return list;
             }
+        }
 
+<<<<<<< HEAD
             return list;
         }
         public List<Evaluation> SelectListByTask(string idTask)
@@ -39,13 +40,17 @@ namespace ThesisManagementProject.DAOs
                                             MyDatabase.DBEvaluation, idPeople);
             return SelectList(command);
         }
+=======
+>>>>>>> 55340cd96e9166acefe353d2e04589f4cdb921f3
         public Evaluation SelectOnly(string idTask, string idPeople)
         {
-            DataTable dt = Select(string.Format("SELECT * FROM {0} WHERE idtask = '{1}' and idpeople = '{2}'", 
-                                            MyDatabase.DBEvaluation, idTask, idPeople));
+            using (var dbContext = new AppDbContext())
+            {
+                var existingEvaluation = dbContext.Evaluation.FirstOrDefault(e => e.IdTask == idTask && e.IdPeople == idPeople);
 
-            if (dt.Rows.Count > 0) return GetFromDataRow(dt.Rows[0]);
-            return new Evaluation();
+                if (existingEvaluation != null) return existingEvaluation;
+                return new Evaluation();
+            }
         }
 
         #endregion
@@ -54,6 +59,7 @@ namespace ThesisManagementProject.DAOs
 
         public void Insert(Evaluation evaluation)
         {
+<<<<<<< HEAD
             ExecuteQueryEvaluation(evaluation, "INSERT INTO {0} VALUES ('{1}', '{2}', '{3}', '{4}', {5}, {6}, '{7}', {8})",
                 "Create", false);
         }
@@ -67,6 +73,13 @@ namespace ThesisManagementProject.DAOs
                 "idevaluation = '{1}', idtask = '{2}', idpeople = '{3}', content = '{4}', contribute = {5}, " +
                 "scores = {6}, created = '{7}', isevaluated = {8} WHERE idevaluation = '{1}'",
                 "Evaluate", true);
+=======
+            using (var dbContext = new AppDbContext())
+            {
+                dbContext.Evaluation.Add(evaluation);
+                dbContext.SaveChanges();
+            }
+>>>>>>> 55340cd96e9166acefe353d2e04589f4cdb921f3
         }
         public void InsertFollowTeam(string idTask, Team team)
         {
@@ -76,24 +89,38 @@ namespace ThesisManagementProject.DAOs
                 Insert(evaluation);
             }
         }
-
-        #endregion
-
-        #region Get Evaluation From Data Row
-
-        public Evaluation GetFromDataRow(DataRow row)
+        public void DeleteFollowTask(Tasks tasks)
         {
-            string idEvaluation = row["idevaluation"].ToString();
-            string idTask = row["idtask"].ToString();
-            string idPeople = row["idpeople"].ToString();
-            string content = row["content"].ToString();
-            int contribute = int.Parse(row["contribute"].ToString());
-            float scores = float.Parse(row["scores"].ToString());
-            DateTime created = DateTime.Parse(row["created"].ToString());
-            bool isEvaluated = row["isevaluated"].ToString() == "True" ? true : false;
+            using (var dbContext = new AppDbContext())
+            {
+                var list = dbContext.Evaluation.Where(e => e.IdTask == tasks.IdTask);
 
-            Evaluation evaluation = new Evaluation(idEvaluation, idTask, idPeople, content, contribute, scores, created, isEvaluated);
-            return evaluation;
+                if (list != null)
+                {
+                    foreach (var evaluation in list) dbContext.Evaluation.Remove(evaluation);
+                    dbContext.SaveChanges();
+                }
+            }
+        }
+        public void Update(Evaluation evaluation)
+        {
+            using (var dbContext = new AppDbContext())
+            {
+                var existingEvaluation = dbContext.Evaluation.FirstOrDefault(t => t.IdEvaluation == evaluation.IdEvaluation);
+
+                if (existingEvaluation != null)
+                {
+                    existingEvaluation.Content = evaluation.Content;
+                    existingEvaluation.Contribute = evaluation.Contribute;
+                    existingEvaluation.Scores = evaluation.Scores;
+                    existingEvaluation.Created = evaluation.Created;
+                    existingEvaluation.IsEvaluated = evaluation.IsEvaluated;
+
+                    dbContext.SaveChanges();
+
+                    MessageBox.Show("You have successfully evaluated!", "Notification", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                }
+            }
         }
 
         #endregion

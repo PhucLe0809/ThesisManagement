@@ -65,14 +65,14 @@ namespace ThesisManagementProject
             gTextBoxEvaluation.Text = evaluation.Content;
             gProgressBarToLine.Value = evaluation.Contribute;
             gTextBoxContribute.Text = evaluation.Contribute.ToString();
-            gTextBoxScores.Text = evaluation.Scores.ToString();
+            gTextBoxScores.Text = Math.Round(evaluation.Scores, 2).ToString();
             gTextBoxStatus.Text = evaluation.IsEvaluated ? ("Evaluated") : ("NotEvaluated");
             gTextBoxStatus.FillColor = evaluation.GetStatusColor();
             SetEditState(false);
 
             if (this.isProcessing)
             {
-                if (host.Role == ERole.Lecture) SetEditState(true);
+                if (host.OnRole == ERole.Lecture) SetEditState(true);
                 else
                 {
                     if (!evaluation.IsEvaluated) SetTextBoxEditState(gTextBoxContribute, true);
@@ -123,18 +123,18 @@ namespace ThesisManagementProject
         private void UpdateScores()
         {
             float scores = 0.0F;
-            bool checkScores = float.TryParse(gTextBoxScores.Text, out scores) || host.Role == ERole.Student;
+            bool checkScores = float.TryParse(gTextBoxScores.Text, out scores) || host.OnRole == ERole.Student;
             if (checkScores) evaluation.Scores = scores;
             myProcess.RunCheckDataValid((checkScores && evaluation.CheckScores()) || flagCheck, erpScores, gTextBoxScores, "Can only take values from 0.0 to 10.0");
         }
         private bool CheckInformationValid()
         {
-            myProcess.RunCheckDataValid(evaluation.CheckContent() || flagCheck || host.Role == ERole.Student, erpEvaluation, gTextBoxEvaluation, "Comment be empty");
+            myProcess.RunCheckDataValid(evaluation.CheckContent() || flagCheck || host.OnRole == ERole.Student, erpEvaluation, gTextBoxEvaluation, "Comment be empty");
             UpdateContribute(); 
             UpdateScores();
             int contribution;
             float scores;
-            return (evaluation.CheckContent() || flagCheck || host.Role == ERole.Student)
+            return (evaluation.CheckContent() || flagCheck || host.OnRole == ERole.Student)
                 && (int.TryParse(gTextBoxContribute.Text, out contribution) && tasks.CheckProgress()) 
                 && (float.TryParse(gTextBoxScores.Text, out scores) && evaluation.CheckScores());
         }
@@ -149,10 +149,10 @@ namespace ThesisManagementProject
             if (CheckInformationValid())
             {
                 this.evaluation = new Evaluation(evaluation.IdEvaluation, evaluation.IdTask, evaluation.IdPeople, gTextBoxEvaluation.Text,
-                                            int.Parse(gTextBoxContribute.Text), float.Parse(gTextBoxScores.Text), DateTime.Now, host.Role == ERole.Lecture);
+                                            int.Parse(gTextBoxContribute.Text), float.Parse(gTextBoxScores.Text), DateTime.Now, host.OnRole == ERole.Lecture);
 
                 evaluationDAO.Update(evaluation);
-                if (host.Role == ERole.Lecture && evaluation.IsEvaluated)
+                if (host.OnRole == ERole.Lecture && evaluation.IsEvaluated)
                 {
                     string content = Notification.GetContentTypeEvaluation(host.FullName, tasks.Title);
                     notificationDAO.Insert(new Notification(student.IdAccount, host.IdAccount, thesis.IdThesis, evaluation.IdEvaluation, content, DateTime.Now, false, false));
@@ -164,7 +164,7 @@ namespace ThesisManagementProject
         private void gTextBoxEvaluation_TextChanged(object sender, EventArgs e)
         {
             this.evaluation.Content = gTextBoxEvaluation.Text;
-            myProcess.RunCheckDataValid(evaluation.CheckContent() || flagCheck || host.Role == ERole.Student, erpEvaluation, gTextBoxEvaluation, "Comment be empty");
+            myProcess.RunCheckDataValid(evaluation.CheckContent() || flagCheck || host.OnRole == ERole.Student, erpEvaluation, gTextBoxEvaluation, "Comment be empty");
         }
         private void gTextBoxContribute_TextChanged(object sender, EventArgs e)
         {
