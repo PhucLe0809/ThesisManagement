@@ -36,7 +36,7 @@ namespace ThesisManagementProject
             this.tasks = tasks;
             this.team = team;
             flpMembers.Controls.Clear();
-            if (people.Role == ERole.Lecture) LoadListRoleLecture();
+            if (people.OnRole == ERole.Lecture) LoadListRoleLecture();
             else AddPeopleMiniLine(people);
         }
         private void LoadListRoleLecture()

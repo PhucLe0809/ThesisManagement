@@ -38,10 +38,6 @@ namespace ThesisManagementProject.Forms
         private bool flagCheck = false;
         private bool edited = false;
 
-        public FTaskDetails()
-        {
-            InitializeComponent();
-        }
         public FTaskDetails(People host, People instructor, Thesis thesis, Tasks tasks, People creator, Team team, bool isProcessing)
         {
             InitializeComponent();
@@ -81,7 +77,7 @@ namespace ThesisManagementProject.Forms
             gCirclePictureBoxCreator.Image = myProcess.NameToImage(creator.AvatarName);
             myProcess.SetItemFavorite(gButtonStar, tasks.IsFavorite);
 
-            if (!isProcessing || (host.Role == ERole.Student && tasks.IdCreator != host.IdAccount))
+            if (!isProcessing || (host.OnRole == ERole.Student && tasks.IdCreator != host.IdAccount))
             {
                 gButtonEdit.Hide();
                 gButtonStar.Location = new Point(383, 17);
@@ -129,7 +125,7 @@ namespace ThesisManagementProject.Forms
         }
         public void PerformNotificationClick(Notification notification)
         {
-            if (notification.Type == ENotificationType.Evaluation) gGradientButtonEvaluate.PerformClick();
+            if (notification.OnType == ENotificationType.Evaluation) gGradientButtonEvaluate.PerformClick();
             else gGradientButtonComment.PerformClick();
         }
 
@@ -153,8 +149,8 @@ namespace ThesisManagementProject.Forms
             this.flagCheck = false;
             if (CheckInformationValid())
             {
-                this.tasks = new Tasks(tasks.IdTask, gTextBoxTitle.Text, gTextBoxDescription.Text, this.creator.IdAccount, this.team.IDTeam,
-                                            tasks.IsFavorite, int.Parse(gTextBoxProgress.Text.ToString()), tasks.CreatedDate);
+                this.tasks = new Tasks(tasks.IdTask, gTextBoxTitle.Text, gTextBoxDescription.Text, this.creator.IdAccount, this.team.IdTeam,
+                                            tasks.IsFavorite, int.Parse(gTextBoxProgress.Text.ToString()), tasks.Created);
 
                 tasksDAO.Update(tasks);
                 this.flagCheck = true;

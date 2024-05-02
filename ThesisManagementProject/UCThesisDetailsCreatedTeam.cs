@@ -66,17 +66,9 @@ namespace ThesisManagementProject
         private void InitUserControl()
         {
             pictureAvatar = Properties.Resources.PicAvatarDemoUser;
-            if(CheckCanRegister())
-            {
-                gGradientButtonRegister.Enabled = true;
-                flpSearch.Location = new Point(11, 14);
-                flpSearch.Hide();
-                gGradientButtonPerform.Hide();
-            }
-            else
-            {
-                gGradientButtonRegister.Enabled = false;
-            }
+            flpSearch.Location = new Point(11, 14);
+            flpSearch.Hide();
+            gGradientButtonPerform.Hide();
         }
         private void AddMember(People people)
         {
@@ -162,7 +154,7 @@ namespace ThesisManagementProject
 
             if (!string.IsNullOrEmpty(textBox.Text))
             {
-                this.listPeople = peopleDAO.SelectListByUserName(textBox.Text, people.Role);
+                this.listPeople = peopleDAO.SelectListByUserName(textBox.Text, people.OnRole);
                 flpTeam.Hide();
                 LoadPeopleList();
             }
@@ -179,16 +171,12 @@ namespace ThesisManagementProject
         #endregion
 
         #region EVENT gGradientButtonRegister
-        bool CheckCanRegister()
-        {
-            List<Thesis> listThesesNotCompleted = thesisDAO.SelectListModeNotCompleted(this.people.IdAccount);
-            return listThesesNotCompleted.Count < 3;
-        }
+
         private void gGradientButtonApply_Click(object sender, EventArgs e)
         {
             if (CheckEmpty(gTextBoxTeamName.Text))
             {
-                this.thesis.Status = EThesisStatus.Registered;
+                this.thesis.OnStatus = EThesisStatus.Registered;
 
                 thesisDAO.UpdateStatus(this.thesis, EThesisStatus.Registered);
                 Team team = new Team(gTextBoxTeamName.Text, myProcess.ImageToName(pictureAvatar), members);

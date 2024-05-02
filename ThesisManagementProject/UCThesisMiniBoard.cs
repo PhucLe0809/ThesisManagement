@@ -24,10 +24,10 @@ namespace ThesisManagementProject
 
             this.thesis = thesis;
             myProcess.SetItemFavorite(gButtonStar, thesis.IsFavorite);
-            gTextBoxStatus.Text = thesis.Status.ToString();
+            gTextBoxStatus.Text = thesis.OnStatus.ToString();
             gTextBoxStatus.FillColor = thesis.GetStatusColor();
             gTextBoxTopic.Text = thesis.Topic;
-            gTextBoxField.Text = thesis.Field.ToString();
+            gTextBoxField.Text = thesis.OnField.ToString();
         }
         private void SetThesisView()
         {

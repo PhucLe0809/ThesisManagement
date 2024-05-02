@@ -76,7 +76,7 @@ namespace ThesisManagementProject
         private void UpdateTaskList()
         {
             this.listTask.Clear();
-            this.listTask = taskDAO.SelectListByTeam(this.team.IDTeam);
+            this.listTask = taskDAO.SelectListByTeam(this.team.IdTeam);
         }
         private void LoadTaskList()
         {
@@ -113,7 +113,7 @@ namespace ThesisManagementProject
         public void PerformNotificationClick(Notification notification)
         {
             Tasks tasks = new Tasks();
-            switch (notification.Type)
+            switch (notification.OnType)
             {
                 case ENotificationType.Task:
                     tasks = taskDAO.SelectOnly(notification.IdObject);
@@ -160,7 +160,7 @@ namespace ThesisManagementProject
 
         private void gTextBoxSearch_TextChanged(object sender, EventArgs e)
         {
-            this.listTask = taskDAO.SearchTaskTitle(this.team.IDTeam, gTextBoxSearch.Text);
+            this.listTask = taskDAO.SearchTaskTitle(this.team.IdTeam, gTextBoxSearch.Text);
             LoadTaskList();
         }
 

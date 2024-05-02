@@ -16,7 +16,7 @@ using ThesisManagementProject.Models;
 
 namespace ThesisManagementProject.Process
 {
-    #region ENUM
+    #region ENUM CLASSIFY
 
     public enum EClassify
     {
@@ -489,7 +489,7 @@ namespace ThesisManagementProject.Process
 
             foreach (Tasks task in listTasks)
             {
-                List<Evaluation> evaluations = evaluationDAO.SelectListByTask(task.IdTask);
+                List<Evaluation> evaluations = evaluationDAO.SelectList(e => e.IdTask == task.IdTask);
                 evaluations.OrderBy(evaluation => evaluation.IdPeople);
                 if (evaluations.Any())
                 {

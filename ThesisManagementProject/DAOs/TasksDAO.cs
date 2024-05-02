@@ -94,7 +94,7 @@ namespace ThesisManagementProject.DAOs
 
         #endregion
 
-        #region Get Tasks From Data Row
+        #region Get Tasks From Database
 
         public Tasks GetFromDataRow(DataRow row)
         {

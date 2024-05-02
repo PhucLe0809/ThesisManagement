@@ -59,26 +59,32 @@ namespace ThesisManagementProject.Models
         public string IdComment
         {
             get { return this.idComment; }
+            set { this.idComment = value; }
         }
         public string IdTask
         {
             get { return this.idTask; }
+            set { this.idTask = value; }
         }
         public string IdCreator
         {
             get { return this.idCreator; }
+            set { this.idCreator = value; }
         }
         public string Content
         {
             get { return this.content; }
+            set { this.content = value; }
         }
         public string Emoji
         {
             get { return this.emoji; }
+            set { this.emoji = value; }
         }
         public DateTime Created
         {
             get { return this.created; }
+            set { this.created = value; }
         }
 
         #endregion

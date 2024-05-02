@@ -58,7 +58,7 @@ namespace ThesisManagementProject
         {
             gCirclePictureBoxAvatar.Image = myProcess.NameToImage(people.AvatarName);
             lblHandle.Text = people.Handle;
-            lblRole.Text = people.Role.ToString();
+            lblRole.Text = people.OnRole.ToString();
             myProcess.AllButtonStandardColor(this.listButton, this.listImage);
 
             pnlAddUserControl.Controls.Clear();
@@ -69,7 +69,7 @@ namespace ThesisManagementProject
         }
         private void SetButtonBar()
         {
-            if (people.Role == ERole.Lecture)
+            if (people.OnRole == ERole.Lecture)
             {
                 gButtonMyTheses.Hide();
                 gButtonNotification.Location = new Point(22, 234);
@@ -131,7 +131,7 @@ namespace ThesisManagementProject
             Notification notification = sender as Notification;
             if (notification != null)
             {
-                if (people.Role == ERole.Lecture)
+                if (people.OnRole == ERole.Lecture)
                 {
                     gButtonDashboards.PerformClick();
                     uCDashboard.NotificationJump(notification);

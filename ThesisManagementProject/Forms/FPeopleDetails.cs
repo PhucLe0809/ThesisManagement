@@ -28,27 +28,27 @@ namespace ThesisManagementProject
             InitializeComponent();
             SetInformation(people);
         }
+
+        #region FUNCTIONS
+
         public void SetInformation(People people)
         {
             this.people = people;
             InitUserControl();
         }
-
-        #region FUNTIONS
-
         private void InitUserControl()
         {
             gCirclePictureBoxAvatar.Image = myProcess.NameToImage(people.AvatarName);
             lblViewHandle.Text = people.Handle;
-            lblViewRole.Text = people.Role.ToString();
+            lblViewRole.Text = people.OnRole.ToString();
 
-            Action setupRole = (this.people.Role == ERole.Lecture) ? new Action(SetupLectureRole) : new Action(SetupStudentRole);
+            Action setupRole = (this.people.OnRole == ERole.Lecture) ? new Action(SetupLectureRole) : new Action(SetupStudentRole);
             setupRole();
 
             gTextBoxFullname.Text = people.FullName;
             gTextBoxCitizencode.Text = people.CitizenCode;
             gTextBoxBirthday.Text = people.Birthday.ToString("dd/MM/yyyy");   
-            gTextBoxGender.Text = people.Gender.ToString();
+            gTextBoxGender.Text = people.OnGender.ToString();
             gTextBoxEmail.Text = people.Email;
             gTextBoxPhonenumber.Text = people.PhoneNumber;
 
@@ -64,7 +64,9 @@ namespace ThesisManagementProject
             this.pnlShowStatistical.Controls.Add(uCstatisticalLecture);
 
             this.gShadowPanelContribution.Controls.Clear();
-            Guna2PictureBox gPictureBoxState = myProcess.CreatePictureBox(Properties.Resources.GifPrivate, new Size(300, 300));
+            Guna2PictureBox gPictureBoxState = myProcess.CreatePictureBox(Properties.Resources.PictureEmptyState, new Size(280, 280));
+            gPictureBoxState.SizeMode = PictureBoxSizeMode.StretchImage;
+            gPictureBoxState.Location = new Point(15, 30);
             this.gShadowPanelContribution.Controls.Add(gPictureBoxState);
 
         }
@@ -78,5 +80,6 @@ namespace ThesisManagementProject
         }
 
         #endregion
+    
     }
 }

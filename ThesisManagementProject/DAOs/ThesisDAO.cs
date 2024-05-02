@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using ThesisManagementProject.Database;
+using ThesisManagementProject.Entity;
 using ThesisManagementProject.Models;
 using ThesisManagementProject.Process;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
@@ -26,29 +27,29 @@ namespace ThesisManagementProject.DAOs
 
         public List<Thesis> SelectList(string command)
         {
-            DataTable dataTable = Select(command);
-
-            List<Thesis> list = new List<Thesis>();
-            foreach (DataRow row in dataTable.Rows)
+            using (var dbContext = new AppDbContext())
             {
-                list.Add(GetFromDataRow(row));
+                return FormatList(dbContext.Thesis.ToList());
             }
-
-            return list;
         }
         public Thesis SelectOnly(string idThesis)
         {
-            DataTable dt = Select(string.Format("SELECT * FROM {0} WHERE idthesis = '{1}'", MyDatabase.DBThesis, idThesis));
+            using (var dbContext = new AppDbContext())
+            {
+                var thesis = dbContext.Thesis.FirstOrDefault(t => t.IdThesis == idThesis);
 
-            if (dt.Rows.Count > 0) return GetFromDataRow(dt.Rows[0]);
-            return new Thesis();
+                if (thesis != null) return Format(thesis);
+                return new Thesis();
+            }
         }
         public Thesis SelectFollowTeam(string idTeam)
         {
-            DataTable dt = Select(string.Format("SELECT * FROM {0} WHERE idteam = '{1}'", MyDatabase.DBThesisStatus, idTeam));
-
-            if (dt.Rows.Count > 0) return SelectOnly(dt.Rows[0]["idthesis"].ToString());
-            return new Thesis();
+            using (var dbContext = new AppDbContext())
+            {
+                ThesisStatusDAO thesisStatusDAO = new ThesisStatusDAO();
+                string idThesis = thesisStatusDAO.SelectThesisByIdTeam(idTeam);
+                return SelectOnly(idThesis);
+            }
         }
         public List<Dictionary<Thesis, int>> GetMaxSubscribers()
         {
@@ -83,8 +84,11 @@ namespace ThesisManagementProject.DAOs
 
         public List<Thesis> SelectListRoleLecture(string idAccount)
         {
-            string command = string.Format("SELECT * FROM {0} WHERE idinstructor = '{1}'", MyDatabase.DBThesis, idAccount);
-            return SelectList(command);
+            using (var dbContext = new AppDbContext())
+            {
+                var theses = dbContext.Thesis.Where(t => t.IdInstructor == idAccount).ToList();
+                return FormatList(theses);
+            }
         }
         public List<Thesis> SelectListRoleStudent(string idAccount)
         {
@@ -118,23 +122,25 @@ namespace ThesisManagementProject.DAOs
                              $"and {MyDatabase.DBThesis}.status = 'Completed'";
             return SelectList(command);
         }
+
         #endregion
 
         #region SEARCH THESIS
 
         public List<Thesis> SearchRoleLecture(string idAccount, string topic)
         {
-            string command = string.Format("SELECT * FROM {0} WHERE idinstructor = '{1}' and topic LIKE '{2}%'",
-                                MyDatabase.DBThesis, idAccount, topic);
-            return SelectList(command);
-
+            using (var dbContext = new AppDbContext())
+            {
+                return FormatList(dbContext.Thesis.Where(t => t.IdInstructor == idAccount && t.Topic.StartsWith(topic)).ToList());
+            }
         }
         public List<Thesis> SearchRoleStudent(string topic)
         {
-            string command = string.Format("SELECT * FROM {0} WHERE status IN ('{1}', '{2}') and topic LIKE '{3}%'",
-                                    MyDatabase.DBThesis, EThesisStatus.Published.ToString(), EThesisStatus.Registered.ToString(), topic);
-            return SelectList(command);
-
+            using (var dbContext = new AppDbContext())
+            {
+                var statuses = new List<EThesisStatus> { EThesisStatus.Published, EThesisStatus.Registered };
+                return FormatList(dbContext.Thesis.Where(t => statuses.Contains(t.OnStatus) && t.Topic.StartsWith(topic)).ToList());
+            }
         }
 
         #endregion
@@ -143,60 +149,100 @@ namespace ThesisManagementProject.DAOs
 
         public void Insert(Thesis thesis)
         {
-            ExecuteQueryThesis(thesis, "INSERT INTO {0} " +
-                "VALUES ('{1}', '{2}', '{3}', '{4}', {5}, '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', {12}, '{13}', '{14}')",
-                "Create", true);
+            using (var dbContext = new AppDbContext())
+            {
+                dbContext.Thesis.Add(thesis);
+                dbContext.SaveChanges();
+            }
         }
         public void Delete(Thesis thesis)
         {
-            ExecuteQueryThesis(thesis, "DELETE FROM {0} WHERE idthesis = '{1}'",
-                "Delete", false);
+            using (var dbContext = new AppDbContext())
+            {
+                var existingThesis = dbContext.Thesis.FirstOrDefault(t => t.IdThesis == thesis.IdThesis);
+
+                if (existingThesis != null)
+                {
+                    dbContext.Thesis.Remove(existingThesis);
+                    dbContext.SaveChanges();
+                }
+            }
         }
+
         public void Update(Thesis thesis)
         {
-            ExecuteQueryThesis(thesis, "UPDATE {0} SET " +
-                "idthesis = '{1}', topic = '{2}', field = '{3}', tslevel = '{4}', maxmembers = {5}, " +
-                "description = '{6}', publishdate = '{7}', technology = '{8}', functions = '{9}', requirements = '{10}', " +
-                "idcreator = '{11}', isfavorite = {12}, status = '{13}', idinstructor = '{14}' WHERE idthesis = '{1}'",
-                "Update", false);
+            using (var dbContext = new AppDbContext())
+            {
+                var existingThesis = dbContext.Thesis.FirstOrDefault(t => t.IdThesis == thesis.IdThesis);
+
+                if (existingThesis != null)
+                {
+                    existingThesis.Topic = thesis.Topic;
+                    existingThesis.OnField = thesis.OnField;
+                    existingThesis.OnLevel = thesis.OnLevel;
+                    existingThesis.MaxMembers = thesis.MaxMembers;
+                    existingThesis.Description = thesis.Description;
+                    existingThesis.PublishDate = thesis.PublishDate;
+                    existingThesis.Technology = thesis.Technology;
+                    existingThesis.Functions = thesis.Functions;
+                    existingThesis.Requirements = thesis.Requirements;
+                    existingThesis.IdCreator = thesis.IdCreator;
+                    existingThesis.IsFavorite = thesis.IsFavorite;
+                    existingThesis.OnStatus = thesis.OnStatus;
+                    existingThesis.IdInstructor = thesis.IdInstructor;
+
+                    dbContext.SaveChanges();
+                }
+            }
         }
         public void UpdateStatus(Thesis thesis, EThesisStatus status)
         {
-            string command = string.Format("UPDATE {0} SET status = '{1}' WHERE idthesis = '{2}'",
-                                                MyDatabase.DBThesis, status.ToString(), thesis.IdThesis);
-            SQLExecuteByCommand(command);
+            using (var dbContext = new AppDbContext())
+            {
+                var existingThesis = dbContext.Thesis.FirstOrDefault(t => t.IdThesis == thesis.IdThesis);
+
+                if (existingThesis != null)
+                {
+                    existingThesis.OnStatus = status;
+                    dbContext.SaveChanges();
+                }
+            }
         }
         public void UpdateFavorite(Thesis thesis)
         {
-            string command = string.Format("UPDATE {0} SET isfavorite = {1} WHERE idthesis = '{2}'",
-                                                MyDatabase.DBThesis, thesis.IsFavorite ? 1 : 0, thesis.IdThesis);
-            SQLExecuteByCommand(command);
+            using (var dbContext = new AppDbContext())
+            {
+                var existingThesis = dbContext.Thesis.FirstOrDefault(t => t.IdThesis == thesis.IdThesis);
+
+                if (existingThesis != null)
+                {
+                    existingThesis.IsFavorite = thesis.IsFavorite;
+                    dbContext.SaveChanges();
+                }
+            }
         }
 
         #endregion
 
-        #region Get Thesis From Data Row
+        #region Get Thesis From Database
 
-        public Thesis GetFromDataRow(DataRow row)
+        private Thesis Format(Thesis thesis)
         {
-            string idThesis = row["idthesis"].ToString();
-            string topic = row["topic"].ToString();
-            EField field = myProcess.GetEnumFromDisplayName<EField>(row["field"].ToString());
-            ELevel level = myProcess.GetEnumFromDisplayName<ELevel>(row["tslevel"].ToString());
-            int maxMembers = int.Parse(row["maxmembers"].ToString());
-            string description = row["description"].ToString();
-            DateTime publishDate = DateTime.Parse(row["publishdate"].ToString());
-            string technology = row["technology"].ToString();
-            string functions = row["functions"].ToString();
-            string requirements = row["requirements"].ToString();
-            string idCreator = row["idcreator"].ToString();
-            bool isFavorite = row["isfavorite"].ToString() == "True" ? true : false;
-            EThesisStatus status = myProcess.GetEnumFromDisplayName<EThesisStatus>(row["status"].ToString());
-            string idInstructor = row["idinstructor"].ToString();
+            if (thesis == null) return new Thesis();
 
-            Thesis thesis = new Thesis(idThesis, topic, field, level, maxMembers, description, publishDate, technology,
-                                        functions, requirements, idCreator, isFavorite, status, idInstructor);
+            EField field = myProcess.GetEnumFromDisplayName<EField>(thesis.Field);
+            ELevel level = myProcess.GetEnumFromDisplayName<ELevel>(thesis.Level);
+            EThesisStatus status = myProcess.GetEnumFromDisplayName<EThesisStatus>(thesis.Status);
+
+            thesis.OnField = field;
+            thesis.OnLevel = level;
+            thesis.OnStatus = status;
             return thesis;
+        }
+        private List<Thesis> FormatList(List<Thesis> theses)
+        {
+            for (int i = 0; i < theses.Count; i++) theses[i] = Format(theses[i]);
+            return theses;
         }
 
         #endregion 

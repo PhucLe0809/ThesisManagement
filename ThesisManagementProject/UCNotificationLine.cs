@@ -43,7 +43,7 @@ namespace ThesisManagementProject
             this.people = peopleDAO.SelectOnlyByID(notification.IdSender);
             lblFrom.Text = people.FullName;
             lblTime.Text = notification.Created.ToString("dd/MM/yyyy hh:mm:ss tt");
-            gTextBoxType.Text = notification.Type.ToString();
+            gTextBoxType.Text = notification.OnType.ToString();
             gTextBoxType.FillColor = notification.GetTypeColor();
             myProcess.SetItemFavorite(gButtonStar, notification.IsFavorite);
             if (notification.IsSaw)
@@ -71,7 +71,7 @@ namespace ThesisManagementProject
             if (notification.IsSaw != true)
             {
                 notification.IsSaw = true;
-                notificationDAO.UpdateIsSaw(notification.IdNotification, true);
+                notificationDAO.UpdateProperty(notification.IdNotification, notification => notification.IsSaw = true);
             }
             OnNotificationLineClicked(EventArgs.Empty);
         }
@@ -81,9 +81,10 @@ namespace ThesisManagementProject
         }
         private void gButtonStar_Click(object sender, EventArgs e)
         {
-            notification.IsFavorite = !notification.IsFavorite;
+            bool flag = !notification.IsFavorite;
+            notification.IsFavorite = flag;
             myProcess.SetItemFavorite(gButtonStar, notification.IsFavorite);
-            notificationDAO.UpdateIsFavorite(notification.IdNotification, notification.IsFavorite);
+            notificationDAO.UpdateProperty(notification.IdNotification, notification => notification.IsFavorite = flag);
         }
         private void gButtonDelete_Click(object sender, EventArgs e)
         {

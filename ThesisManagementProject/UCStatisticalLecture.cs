@@ -13,7 +13,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ThesisManagementProject.DAOs;
 using ThesisManagementProject.Models;
-using ThesisManagementProject.Process;
 
 namespace ThesisManagementProject
 {
@@ -21,7 +20,6 @@ namespace ThesisManagementProject
     {
         private People people = new People();
         private List<Thesis> listThesis;
-        private double avgContribute;
         private ThesisDAO thesisDAO = new ThesisDAO();
         public UCStatisticalLecture()
         {

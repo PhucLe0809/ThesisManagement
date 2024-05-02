@@ -27,7 +27,7 @@ namespace ThesisManagementProject
         private void InitUserControl()
         {
             lblThesisTopic.Text = myProcess.FormatStringLength(thesis.Topic, 20);
-            gTextBoxStatus.Text = thesis.Status.ToString();
+            gTextBoxStatus.Text = thesis.OnStatus.ToString();
             gTextBoxStatus.FillColor = thesis.GetStatusColor();
         }
         private void UCThesisMiniLine_Click(object sender, EventArgs e)

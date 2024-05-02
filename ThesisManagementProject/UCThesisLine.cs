@@ -63,7 +63,7 @@ namespace ThesisManagementProject
             myProcess.SetItemFavorite(gButtonStar, thesis.IsFavorite);
 
             lblThesisTopic.Text = myProcess.FormatStringLength(thesis.Topic, 130);
-            gTextBoxStatus.Text = thesis.Status.ToString();
+            gTextBoxStatus.Text = thesis.OnStatus.ToString();
             gTextBoxStatus.FillColor = thesis.GetStatusColor();
             lblCreator.Text = creator.FullName;
             lblInstructor.Text = instructor.FullName;

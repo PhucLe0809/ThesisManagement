@@ -72,18 +72,18 @@ namespace ThesisManagementProject
         {
             this.lblTotal.Text = this.listTheses.Count.ToString();
             var thesisGroupedByStatus = this.listTheses
-            .GroupBy(thesis => thesis.Status)
+            .GroupBy(thesis => thesis.OnStatus)
             .Select(group => new
             {
-                Status = group.Key,
+                OnStatus = group.Key,
                 Count = group.Count(),
             });
             this.gDoughnutChart.Datasets.Clear();
             foreach (var group in thesisGroupedByStatus)
             {
-                int ind = myProcess.GetThesisStatusIndex(group.Status);
+                int ind = myProcess.GetThesisStatusIndex(group.OnStatus);
                 this.gDoughnutDataset.DataPoints[ind].Y = group.Count;
-                this.gDoughnutDataset.FillColors[ind] = myProcess.GetThesisStatusColor(group.Status);
+                this.gDoughnutDataset.FillColors[ind] = myProcess.GetThesisStatusColor(group.OnStatus);
             }
             this.gDoughnutChart.Datasets.Add(gDoughnutDataset);
             this.gDoughnutChart.Update();
@@ -114,6 +114,7 @@ namespace ThesisManagementProject
         #endregion
 
         #region HORIZONTALBAR CHART
+
         IEnumerable<object> ByLecture()
         {
             List<Dictionary<Thesis, int>> getThesisByMaxSubscribers = thesisDAO.GetMaxSubscribers();
@@ -135,7 +136,7 @@ namespace ThesisManagementProject
         IEnumerable<object> ByField()
         {
             var thesisGroupedByField = this.listTheses
-              .GroupBy(thesis => thesis.Field)
+              .GroupBy(thesis => thesis.OnField)
               .Select(group => new
               {
                   Name = group.Key,
@@ -147,7 +148,7 @@ namespace ThesisManagementProject
         public void UpdateHorizontalbarChart()
         {
             string selectedFilter = gComboBoxTop.SelectedItem.ToString();
-            var thesisGroupedByField = selectedFilter == "Field" ? ByField() : ByLecture();
+            var thesisGroupedByField = selectedFilter == "OnField" ? ByField() : ByLecture();
             int max = 5;
             int i = 0;
             this.gHorizontalBarDataset.DataPoints.Clear();

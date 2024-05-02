@@ -271,7 +271,7 @@
             gTextBoxMembers.Name = "gTextBoxMembers";
             gTextBoxMembers.PasswordChar = '\0';
             gTextBoxMembers.PlaceholderForeColor = Color.Gray;
-            gTextBoxMembers.PlaceholderText = "Level";
+            gTextBoxMembers.PlaceholderText = "OnLevel";
             gTextBoxMembers.ReadOnly = true;
             gTextBoxMembers.SelectedText = "";
             gTextBoxMembers.ShadowDecoration.CustomizableEdges = customizableEdges12;
@@ -302,7 +302,7 @@
             gTextBoxLevel.Name = "gTextBoxLevel";
             gTextBoxLevel.PasswordChar = '\0';
             gTextBoxLevel.PlaceholderForeColor = Color.Gray;
-            gTextBoxLevel.PlaceholderText = "Level";
+            gTextBoxLevel.PlaceholderText = "OnLevel";
             gTextBoxLevel.ReadOnly = true;
             gTextBoxLevel.SelectedText = "";
             gTextBoxLevel.ShadowDecoration.CustomizableEdges = customizableEdges14;
@@ -385,7 +385,7 @@
             lblLevel.Name = "lblLevel";
             lblLevel.Size = new Size(64, 26);
             lblLevel.TabIndex = 49;
-            lblLevel.Text = "Level";
+            lblLevel.Text = "OnLevel";
             // 
             // lblMaximum
             // 

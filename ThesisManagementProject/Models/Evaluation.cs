@@ -18,7 +18,7 @@ namespace ThesisManagementProject.Models
         private string idPeople;
         private string content;
         private int contribute;
-        private float scores;
+        private double scores;
         private DateTime created;
         private bool isEvaluated;
 
@@ -37,7 +37,7 @@ namespace ThesisManagementProject.Models
             this.created = DateTime.Now;
             this.isEvaluated = false;
         }
-        public Evaluation(string idEvaluation, string idTask, string idPeople, string content, int contribute, float scores, 
+        public Evaluation(string idEvaluation, string idTask, string idPeople, string content, int contribute, double scores, 
                             DateTime created, bool isEvaluated)
         {
             this.idEvaluation = idEvaluation;
@@ -49,7 +49,7 @@ namespace ThesisManagementProject.Models
             this.created = created;
             this.isEvaluated = isEvaluated;
         }
-        public Evaluation(string idTask, string idPeople, string content, int contribute, float scores, DateTime created, bool isEvaluated)
+        public Evaluation(string idTask, string idPeople, string content, int contribute, double scores, DateTime created, bool isEvaluated)
         {
             this.idEvaluation = myProcess.GenIDClassify(EClassify.Evaluation);
             this.idTask = idTask;
@@ -68,14 +68,17 @@ namespace ThesisManagementProject.Models
         public string IdEvaluation
         {
             get { return this.idEvaluation; }
+            set { this.idEvaluation = value; }
         }
         public string IdTask
         { 
-            get { return this.idTask; } 
+            get { return this.idTask; }
+            set { this.idTask = value; }
         }
         public string IdPeople
         { 
             get { return this.idPeople; } 
+            set { this.idPeople = value; }
         }
         public string Content
         {
@@ -87,7 +90,7 @@ namespace ThesisManagementProject.Models
             get { return this.contribute; }
             set { this.contribute = value; }
         }
-        public float Scores
+        public double Scores
         { 
             get { return this.scores; } 
             set { this.scores = value; }
@@ -95,10 +98,12 @@ namespace ThesisManagementProject.Models
         public DateTime Created
         {
             get { return this.created; }
+            set { this.created = value; }
         }
         public bool IsEvaluated
         {
             get { return this.isEvaluated; }
+            set { this.isEvaluated = value; }
         }
 
         #endregion

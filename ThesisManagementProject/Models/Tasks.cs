@@ -67,6 +67,7 @@ namespace ThesisManagementProject.Models
         public string IdTask
         {
             get { return this.idTask; }
+            set { this.idTask = value; }
         }
         public string Title
         {
@@ -81,10 +82,12 @@ namespace ThesisManagementProject.Models
         public string IdCreator
         {
             get { return this.idCreator; }
+            set { this.idCreator = value; }
         }
         public string IdTeam
         {
             get { return this.idTeam; }
+            set { this.idTeam = value; }
         }
         public bool IsFavorite
         {
@@ -96,9 +99,10 @@ namespace ThesisManagementProject.Models
             get { return this.progress; }
             set { this.progress = value; }
         }
-        public DateTime CreatedDate
+        public DateTime Created
         {
             get { return this.created; }
+            set { this.created = value; }
         }
 
         #endregion

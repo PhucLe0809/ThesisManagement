@@ -21,9 +21,10 @@ namespace ThesisManagementProject
         private MyProcess myProcess = new MyProcess();
         private Team team = new Team();
         private Thesis thesis = new Thesis();
-        private List<Tasks> listTasks;
-
         private TasksDAO tasksDAO = new TasksDAO();
+
+        private int progress = 0;
+        private List<Tasks> listTasks;
 
         public FTeamDetails(Team team, Thesis thesis)
         {
@@ -37,7 +38,7 @@ namespace ThesisManagementProject
         {
             this.team = team;
             this.thesis = thesis;
-            this.listTasks = tasksDAO.SelectListByTeam(this.team.IDTeam);
+            this.listTasks = tasksDAO.SelectListByTeam(this.team.IdTeam);
             InitUserControl();
         }
         private void InitUserControl()
@@ -61,7 +62,7 @@ namespace ThesisManagementProject
         {
             gCirclePictureBoxAvatar.Image = myProcess.NameToImage(team.AvatarName);
             lblViewHandle.Text = myProcess.FormatStringLength(team.TeamName, 20);
-            gTextBoxTeamCode.Text = team.IDTeam;
+            gTextBoxTeamCode.Text = team.IdTeam;
             gTextBoxCreated.Text = team.Created.ToString("dd/MM/yyyy");
             gTextBoxTeamMemebrs.Text = team.Members.Count.ToString() + " members";
 
@@ -79,18 +80,29 @@ namespace ThesisManagementProject
         #endregion
 
         #region CHART
+
         public void UpdateChart()
         {
             this.gSplineAreaDataset.DataPoints.Clear();
-            for (int i = 0; i < this.listTasks.Count; i++)
+            double sum = 0.0D;
+            int numberOfTasks = this.listTasks.Count;
+            for (int i = 0; i < numberOfTasks; i++)
             {
                 string name = "Task " + i.ToString();
+                sum = sum + listTasks[i].Progress;
                 this.gSplineAreaDataset.DataPoints.Add(name, this.listTasks[i].Progress);
             }
+
+            if (numberOfTasks != 0) this.progress = int.Parse(Math.Round(sum / numberOfTasks, 0).ToString());
+            this.gProgressBar.Value = this.progress;
+            lblTotalProgress.Text = this.progress.ToString() + "%";
+
             this.gChart.Datasets.Clear();
             this.gChart.Datasets.Add(gSplineAreaDataset);
             this.gChart.Update();
         }
+
         #endregion
+
     }
 }

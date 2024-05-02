@@ -92,7 +92,7 @@ namespace ThesisManagementProject
             cmbIDCreator.Text = string.Empty;
             cmbIDInstructor.Text = string.Empty;
 
-            if (people.Role == ERole.Lecture)
+            if (people.OnRole == ERole.Lecture)
             {
                 cmbIDInstructor.SelectedItem = people.IdAccount;
                 cmbIDInstructor.Enabled = false;

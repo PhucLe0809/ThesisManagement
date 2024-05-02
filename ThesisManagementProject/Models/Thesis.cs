@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -79,8 +80,10 @@ namespace ThesisManagementProject.Models
 
         private string idThesis;
         private string topic;
-        private EField field;
-        private ELevel level;
+        private string field;
+        private EField tsfield;
+        private string level;
+        private ELevel tslevel;
         private int maxMembers;
         private string description;
         private DateTime publishDate;
@@ -89,7 +92,8 @@ namespace ThesisManagementProject.Models
         private string requirements;
         private string idCreator;
         private bool isFavorite;
-        private EThesisStatus status;
+        private string status;
+        private EThesisStatus tsstatus;
         private string idInstructor;
 
         #endregion
@@ -100,8 +104,10 @@ namespace ThesisManagementProject.Models
         {
             this.idThesis = string.Empty;
             this.topic = string.Empty;
-            this.field = EField.SoftwareDevelopment;
-            this.level = ELevel.Easy;
+            this.field = string.Empty;
+            this.tsfield = EField.SoftwareDevelopment;
+            this.level = string.Empty;
+            this.tslevel = ELevel.Easy;
             this.maxMembers = 0;
             this.description = string.Empty;
             this.publishDate = DateTime.Now;
@@ -110,7 +116,8 @@ namespace ThesisManagementProject.Models
             this.requirements = string.Empty;
             this.idCreator = string.Empty;
             this.isFavorite = false;
-            this.status = EThesisStatus.Published;
+            this.status = string.Empty;
+            this.tsstatus = EThesisStatus.Published;
             this.idInstructor = string.Empty;
         }
         public Thesis(string topic, EField field, ELevel level, int maxMembers, string desciption,
@@ -118,8 +125,10 @@ namespace ThesisManagementProject.Models
         {
             this.idThesis = myProcess.GenIDClassify(EClassify.Thesis);
             this.topic = topic;
-            this.field = field;
-            this.level = level;
+            this.tsfield = field;
+            this.field = tsfield.ToString();
+            this.tslevel = level;
+            this.level = tslevel.ToString();
             this.maxMembers = maxMembers;
             this.description = desciption;
             this.publishDate = publishDate;
@@ -128,7 +137,8 @@ namespace ThesisManagementProject.Models
             this.requirements = requirements;
             this.idCreator = idCreator;
             this.isFavorite = false;
-            this.status = EThesisStatus.Published;
+            this.tsstatus = EThesisStatus.Published;
+            this.status = tsstatus.ToString();
             this.idInstructor = idInstructor;
         }
         public Thesis(string idThesis, string topic, EField field, ELevel level, int maxMembers, string desciption, DateTime publishDate, 
@@ -136,8 +146,10 @@ namespace ThesisManagementProject.Models
         {
             this.idThesis = idThesis;
             this.topic = topic;
-            this.field = field;
-            this.level = level;
+            this.tsfield = field;
+            this.field = tsfield.ToString();
+            this.tslevel = level;
+            this.level = tslevel.ToString();
             this.maxMembers = maxMembers;
             this.description = desciption;
             this.publishDate = publishDate;
@@ -146,7 +158,8 @@ namespace ThesisManagementProject.Models
             this.requirements = requirements;
             this.idCreator = idCreator;
             this.isFavorite = isFavorite;
-            this.status = status;
+            this.tsstatus = status;
+            this.status = tsstatus.ToString();
             this.idInstructor = idInstructor;
         }
 
@@ -154,26 +167,59 @@ namespace ThesisManagementProject.Models
 
         #region THESIS PROPERTIES
 
+        [Key]
         public string IdThesis
         {
             get { return idThesis; }
+            set { idThesis = value; }
         }
         public string Topic
         {
             get { return topic; }
             set { topic = value; }
         }
-        public EField Field
+        public string Field
         {
             get { return field; }
+            set 
+            { 
+                field = value;
+                tsfield = myProcess.GetEnumFromDisplayName<EField>(field);
+            }
         }
-        public ELevel Level
+        [NotMapped]
+        public EField OnField
+        {
+            get { return tsfield; }
+            set 
+            { 
+                tsfield = value; 
+                field = tsfield.ToString(); 
+            }
+        }
+        public string Level
         {
             get { return level; }
+            set 
+            { 
+                level = value;
+                tslevel = myProcess.GetEnumFromDisplayName<ELevel>(level);
+            }
+        }
+        [NotMapped]
+        public ELevel OnLevel
+        {
+            get { return tslevel; }
+            set 
+            { 
+                tslevel = value;
+                level = tslevel.ToString();
+            }
         }
         public int MaxMembers
         {
             get { return maxMembers; }
+            set { maxMembers = value; }
         }
         public string Description
         {
@@ -183,16 +229,17 @@ namespace ThesisManagementProject.Models
         public DateTime PublishDate
         {
             get { return publishDate; }
+            set { publishDate = value; }
         }
         public string Technology
         {
             get { return technology; }
-            set {  technology = value; }
+            set { technology = value; }
         }
         public string Functions
         {
             get { return functions; }
-            set {  functions = value; }
+            set { functions = value; }
         }
         public string Requirements
         {
@@ -202,16 +249,31 @@ namespace ThesisManagementProject.Models
         public string IdCreator
         {
             get { return idCreator; }
+            set { idCreator = value; }
         }
         public bool IsFavorite
         {
             get { return isFavorite; }
             set { isFavorite = value; }
         }
-        public EThesisStatus Status
+        public string Status
         {
             get { return status; }
-            set { status = value; }
+            set 
+            { 
+                status = value;
+                tsstatus = myProcess.GetEnumFromDisplayName<EThesisStatus>(status);
+            }
+        }
+        [NotMapped]
+        public EThesisStatus OnStatus
+        {
+            get { return tsstatus; }
+            set 
+            { 
+                tsstatus = value;
+                status = tsstatus.ToString();
+            }
         }
         public string IdInstructor
         {
@@ -254,7 +316,7 @@ namespace ThesisManagementProject.Models
 
         public Color GetStatusColor()
         {
-            switch (this.status)
+            switch (this.tsstatus)
             {
                 case EThesisStatus.Registered:
                     return Color.FromArgb(255, 87, 87);
@@ -270,7 +332,7 @@ namespace ThesisManagementProject.Models
         }
         public int GetPriority()
         {
-            switch (this.status)
+            switch (this.tsstatus)
             {
                 case EThesisStatus.Registered:
                     return 0;
