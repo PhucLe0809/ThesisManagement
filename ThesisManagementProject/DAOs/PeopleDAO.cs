@@ -23,8 +23,7 @@ namespace ThesisManagementProject.DAOs
         {
             using (var dbContext = new AppDbContext())
             {
-                var people = dbContext.Account.FirstOrDefault(p => p.IdAccount == idPeople);
-                MessageBox.Show("Yes");
+                var people = dbContext.People.FirstOrDefault(p => p.IdAccount == idPeople);
                 if (people != null) return Format(people);
                 return new People();
             }
@@ -33,7 +32,7 @@ namespace ThesisManagementProject.DAOs
         {
             using (var dbContext = new AppDbContext())
             {
-                var people = dbContext.Account.FirstOrDefault(p => p.Email == email && p.Password == password);
+                var people = dbContext.People.FirstOrDefault(p => p.Email == email && p.Password == password);
                 if (people != null) return Format(people);
                 return null;
             }
@@ -42,7 +41,7 @@ namespace ThesisManagementProject.DAOs
         {
             using (var dbContext = new AppDbContext())
             {
-                return FormatList(dbContext.Account.Where(p => p.OnRole == role && p.Handle.StartsWith(username)).ToList());
+                return FormatList(dbContext.People.Where(p => p.OnRole == role && p.Handle.StartsWith(username)).ToList());
             }
         }
 
@@ -54,7 +53,7 @@ namespace ThesisManagementProject.DAOs
         {
             using (var dbContext = new AppDbContext())
             {
-                var listPeople = dbContext.Account.Where(p => p.Role == role.ToString()).ToList();
+                var listPeople = dbContext.People.Where(p => p.Role == role.ToString()).ToList();
                 
                 if (listPeople != null) return listPeople.Select(p => p.IdAccount).ToList();
                 return new List<string>();
@@ -70,7 +69,7 @@ namespace ThesisManagementProject.DAOs
         {
             using (var dbContext = new AppDbContext())
             {
-                dbContext.Account.Add(people);
+                dbContext.People.Add(people);
                 dbContext.SaveChanges();
             }
         }
@@ -78,7 +77,7 @@ namespace ThesisManagementProject.DAOs
         {
             using (var dbContext = new AppDbContext())
             {
-                var existingPeople = dbContext.Account.FirstOrDefault(p => p.IdAccount == people.IdAccount);
+                var existingPeople = dbContext.People.FirstOrDefault(p => p.IdAccount == people.IdAccount);
 
                 if (existingPeople != null)
                 {
@@ -104,7 +103,7 @@ namespace ThesisManagementProject.DAOs
         {
             using (var dbContext = new AppDbContext())
             {
-                return dbContext.Account.Any(condition);
+                return dbContext.People.Any(condition);
             }
         }
 

@@ -17,27 +17,12 @@ namespace ThesisManagementProject.DAOs
 
         #region SELECT TASKS
 
-        public List<Tasks> SelectList(string command)
-        {
-            DataTable dataTable = Select(command);
-
-            List<Tasks> list = new List<Tasks>();
-            foreach (DataRow row in dataTable.Rows)
-            {
-                Tasks tasks = GetFromDataRow(row);
-                list.Add(tasks);
-            }
-
-            return list;
-        }
         public List<Tasks> SelectListByTeam(string idTeam)
         {
             using (var dbContext = new AppDbContext())
             {
-                var listTasks = dbContext.Task
-                    .Where(t => t.IdTeam == idTeam)
-                    .OrderByDescending(t => t.Created)
-                    .ToList();
+                var listTasks = dbContext.Task.Where(t => t.IdTeam == idTeam).OrderByDescending(t => t.Created).ToList();
+
                 if (listTasks != null)
                 {
                     return listTasks;
@@ -151,25 +136,6 @@ namespace ThesisManagementProject.DAOs
 
                 return listTasks;
             }
-        }
-
-        #endregion
-
-        #region Get Tasks From Database
-
-        public Tasks GetFromDataRow(DataRow row)
-        {
-            string idTask = row["idtask"].ToString();
-            string title = row["title"].ToString();
-            string description = row["description"].ToString();
-            string idSender = row["idcreator"].ToString();
-            string idReceiver = row["idteam"].ToString();
-            bool isFavorite = row["isfavorite"].ToString() == "True" ? true : false;
-            int progress = int.Parse(row["progress"].ToString());
-            DateTime created = DateTime.Parse(row["created"].ToString());
-
-            Tasks tasks = new Tasks(idTask, title, description, idSender, idReceiver, isFavorite, progress, created);
-            return tasks;
         }
 
         #endregion

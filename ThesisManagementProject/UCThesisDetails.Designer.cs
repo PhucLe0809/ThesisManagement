@@ -386,7 +386,7 @@
             lblLevel.Name = "lblLevel";
             lblLevel.Size = new Size(64, 26);
             lblLevel.TabIndex = 49;
-            lblLevel.Text = "OnLevel";
+            lblLevel.Text = "Level";
             // 
             // lblMaximum
             // 

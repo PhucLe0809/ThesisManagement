@@ -50,6 +50,7 @@ namespace ThesisManagementProject.DAOs
                 }
             }
         }
+
         #endregion
 
         #region EVALUATION DAO EXECUTION

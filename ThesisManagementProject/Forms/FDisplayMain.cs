@@ -71,12 +71,12 @@ namespace ThesisManagementProject
 
         private void DWelcomeButtonLecture_Click(object sender, EventArgs e)
         {
-            People people = peopleDAO.SelectOnlyByID("242200001");
+            People people = peopleDAO.SelectOnlyByID(@"242200001");
             SetNewDisplayPeople(people);
         }
         private void DWelcomeButtonStudent_Click(object sender, EventArgs e)
         {
-            People people = peopleDAO.SelectOnlyByID("243300002");
+            People people = peopleDAO.SelectOnlyByID(@"243300002");
             SetNewDisplayPeople(people);
         }
         private void DWelcomeButtonRegister_Click(object sender, EventArgs e)

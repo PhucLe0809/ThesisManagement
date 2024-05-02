@@ -18,15 +18,15 @@ namespace ThesisManagementProject.DAOs
     {
         public ThesisStatusDAO() { }
 
-        public string SelectTeamByIdThesis(string idThesis)
+        private string SelectFieldById(string id, Func<ThesisStatus, string> fieldSelector, Func<ThesisStatus, bool> predicate)
         {
             using (var dbContext = new AppDbContext())
             {
-                var existingThesisStatus = dbContext.ThesisStatus.FirstOrDefault(t => t.IdThesis == idThesis);
+                var existingThesisStatus = dbContext.ThesisStatus.FirstOrDefault(predicate);
 
                 if (existingThesisStatus != null)
                 {
-                    return existingThesisStatus.IdTeam;
+                    return fieldSelector(existingThesisStatus);
                 }
                 else
                 {
@@ -34,12 +34,20 @@ namespace ThesisManagementProject.DAOs
                 }
             }
         }
+        public string SelectTeamByIdThesis(string idThesis)
+        {
+            return SelectFieldById(idThesis, t => t.IdTeam, t => t.IdThesis == idThesis);
+        }
+        public string SelectThesisByIdTeam(string idTeam)
+        {
+            return SelectFieldById(idTeam, t => t.IdThesis, t => t.IdTeam == idTeam);
+        }
         public ThesisStatus SelectFollowThesis(Thesis thesis)
         {
             using (var dbContext = new AppDbContext())
             {
                 var existingThesisStatus = dbContext.ThesisStatus
-                    .FirstOrDefault(t => t.IdThesis == thesis.IdThesis && t.OnStatus == thesis.OnStatus);
+                    .FirstOrDefault(t => t.IdThesis == thesis.IdThesis && t.Status == thesis.Status);
 
                 if (existingThesisStatus != null)
                 {
@@ -99,22 +107,6 @@ namespace ThesisManagementProject.DAOs
             {
                 var list = dbContext.ThesisStatus.Where(t => t.IdThesis == thesis.IdThesis && t.Status == thesis.Status).ToList();
                 return list.Count;
-            }
-        }
-        public string SelectThesisByIdTeam(string idTeam)
-        {
-            using (var dbContext = new AppDbContext())
-            {
-                var existingThesisStatus = dbContext.ThesisStatus.FirstOrDefault(t => t.IdTeam == idTeam);
-
-                if (existingThesisStatus != null)
-                {
-                    return existingThesisStatus.IdThesis;
-                }
-                else
-                {
-                    return string.Empty;
-                }
             }
         }
     }

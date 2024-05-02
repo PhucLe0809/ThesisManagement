@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -64,6 +65,7 @@ namespace ThesisManagementProject.Models
 
         #region TASK PROPERTIES
 
+        [Key]
         public string IdTask
         {
             get { return this.idTask; }

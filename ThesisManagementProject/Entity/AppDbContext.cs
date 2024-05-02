@@ -6,9 +6,9 @@ namespace ThesisManagementProject.Entity
 {
     internal class AppDbContext : DbContext
     {
-        public DbSet<People> Account { get; set; }
+        public DbSet<People> People { get; set; }
         public DbSet<Thesis> Thesis { get; set; }
-        public DbSet<Team> Team { get; set; }
+        public DbSet<Member> Member { get; set; }
         public DbSet<Tasks> Task { get; set; }
         public DbSet<Comment> Comment { get; set; }
         public DbSet<Evaluation> Evaluation { get; set; }
@@ -23,12 +23,12 @@ namespace ThesisManagementProject.Entity
         {
             modelBuilder.Entity<People>().HasKey(t => t.IdAccount);
             modelBuilder.Entity<Thesis>().HasKey(t => t.IdThesis);
-            modelBuilder.Entity<Team>().HasKey(t => t.IdTeam);
+            modelBuilder.Entity<Member>().HasKey(t => new { t.IdTeam, t.IdAccount });
             modelBuilder.Entity<Tasks>().HasKey(t => t.IdTask);
             modelBuilder.Entity<Comment>().HasKey(t => t.IdComment);
             modelBuilder.Entity<Evaluation>().HasKey(t => t.IdEvaluation);
             modelBuilder.Entity<Notification>().HasKey(t => t.IdNotification);
-            modelBuilder.Entity<ThesisStatus>().HasKey(t => t.IdThesis);
+            modelBuilder.Entity<ThesisStatus>().HasKey(t => new { t.IdTeam, t.IdThesis });
         }
     }
 }

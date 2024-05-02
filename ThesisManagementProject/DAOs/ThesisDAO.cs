@@ -11,9 +11,6 @@ using ThesisManagementProject.Database;
 using ThesisManagementProject.Entity;
 using ThesisManagementProject.Models;
 using ThesisManagementProject.Process;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
-using static System.ComponentModel.Design.ObjectSelectorEditor;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ThesisManagementProject.DAOs
 {
@@ -238,5 +235,6 @@ namespace ThesisManagementProject.DAOs
         }
 
         #endregion 
+    
     }
 }

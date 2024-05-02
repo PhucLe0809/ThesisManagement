@@ -43,6 +43,7 @@ namespace ThesisManagementProject.Models
             get { return idTeam; }
             set { idTeam = value; }
         }
+        [Key]
         public string IdThesis
         {
             get { return idThesis; }

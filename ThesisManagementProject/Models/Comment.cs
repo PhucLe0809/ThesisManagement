@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -56,6 +57,7 @@ namespace ThesisManagementProject.Models
 
         #region COMMENT PROPERTIES
 
+        [Key]
         public string IdComment
         {
             get { return this.idComment; }
