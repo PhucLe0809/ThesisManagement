@@ -50,29 +50,35 @@ namespace ThesisManagementProject.DAOs
         }
         public List<Dictionary<Thesis, int>> GetMaxSubscribers()
         {
-            string command = "SELECT idthesis, SUM(SL) AS total_SL " +
-                             "FROM ThesisStatus " +
-                             "JOIN (SELECT idteam, COUNT(idaccount) AS SL FROM Team GROUP BY idteam) AS Team " +
-                             "ON ThesisStatus.idteam = Team.idteam " +
-                             "WHERE ThesisStatus.status IN ('Registered', 'Processing', 'Completed') " +
-                             "GROUP BY idthesis " +
-                             "ORDER BY total_SL DESC";
-            DataTable dataTable = Select(command);
-
-            List<Dictionary<Thesis, int>> resultList = new List<Dictionary<Thesis, int>>();
-
-            foreach (DataRow row in dataTable.Rows)
+            using (var dbContext = new AppDbContext())
             {
-                string idThesis = row["idthesis"].ToString();
-                Thesis thesis = SelectOnly(idThesis);
-                int total = Convert.ToInt32(row["total_SL"]);
-                Dictionary<Thesis, int> resultDict = new Dictionary<Thesis, int>
+                var query = from status in dbContext.ThesisStatus
+                            join team in dbContext.Member
+                            on status.IdTeam equals team.IdTeam into teamGroup
+                            from teamGrp in teamGroup.DefaultIfEmpty()
+                            where new[] { "Registered", "Processing", "Completed" }.Contains(status.Status)
+                            group teamGrp by status.IdThesis into grp
+                            orderby grp.Sum(x => x != null ? 1 : 0) descending
+                            select new { ThesisId = grp.Key, TotalSubscribers = grp.Sum(x => x != null ? 1 : 0) };
+
+                var resultDictList = new List<Dictionary<Thesis, int>>();
+
+                var theses = dbContext.Thesis.ToList();
+
+                foreach (var item in query)
                 {
-                    { thesis, total }
-                };
-                resultList.Add(resultDict);
+                    Thesis thesis = theses.FirstOrDefault(t => t.IdThesis == item.ThesisId);
+                    if (thesis != null)
+                    {
+                        Dictionary<Thesis, int> resultDict = new Dictionary<Thesis, int>
+                        {
+                            { thesis, item.TotalSubscribers }
+                        };
+                        resultDictList.Add(resultDict);
+                    }
+                }
+                return resultDictList;
             }
-            return resultList;
         }
 
         #endregion
@@ -89,27 +95,53 @@ namespace ThesisManagementProject.DAOs
         }
         public List<Thesis> SelectListRoleStudent(string idAccount)
         {
-            string command = string.Format("SELECT * FROM {0} WHERE status IN ('Published', 'Registered') " +
-                                           "AND NOT EXISTS(SELECT 1 FROM {1} WHERE {1}.idthesis = {0}.idthesis " +
-                                           "AND idteam IN (SELECT idteam FROM {2} WHERE idaccount = '{3}'))",
-                                           MyDatabase.DBThesis, MyDatabase.DBThesisStatus, MyDatabase.DBTeam, idAccount);
-            return SelectList(command);
+            using (var dbContext = new AppDbContext())
+            {
+                var query = from thesis in dbContext.Thesis
+                            where new[] { "Published", "Registered" }.Contains(thesis.Status)
+                               && !dbContext.ThesisStatus.Any(ts =>
+                                    ts.IdThesis == thesis.IdThesis &&
+                                    dbContext.Member.Any(t =>
+                                        t.IdAccount == idAccount &&
+                                        ts.IdTeam == t.IdTeam))
+                            select thesis;
+
+                var listTheses = query.ToList();
+                return FormatList(listTheses);
+            }
         }
         public List<Thesis> SelectListModeMyTheses(string idAccount)
         {
-            string command = string.Format("SELECT {0}.* FROM {0} INNER JOIN {1} ON {0}.idthesis = {1}.idthesis " +
-                                           "WHERE {1}.idteam IN (SELECT idteam FROM {2} WHERE idaccount = '{3}')",
-                                            MyDatabase.DBThesis, MyDatabase.DBThesisStatus, MyDatabase.DBTeam, idAccount);
-            return SelectList(command);
+            using (var dbContext = new AppDbContext())
+            {
+                var query = from thesis in dbContext.Thesis
+                            join status in dbContext.ThesisStatus
+                            on thesis.IdThesis equals status.IdThesis
+                            where dbContext.Member.Any(t =>
+                                      t.IdAccount == idAccount &&
+                                      status.IdTeam == t.IdTeam)
+                            select thesis;
+
+                var listTheses = query.ToList();
+                return FormatList(listTheses);
+            }
         }
-        public List<Thesis> SelectListModeMyCompletedTheses(string idAccount)
+        public List<Thesis> SelectListModeMyThesesByStatus(string idAccount, EThesisStatus eThesisStatus)
         {
-            string command = $"SELECT {MyDatabase.DBThesis}.* " +
-                             $"FROM {MyDatabase.DBThesis} INNER JOIN {MyDatabase.DBThesisStatus} " +
-                             $"ON {MyDatabase.DBThesis}.idthesis = {MyDatabase.DBThesisStatus}.idthesis " +
-                             $"WHERE {MyDatabase.DBThesisStatus}.idteam IN (SELECT idteam FROM {MyDatabase.DBTeam} WHERE idaccount = '{idAccount}') " +
-                             $"and {MyDatabase.DBThesis}.status = 'Completed'";
-            return SelectList(command);
+            using (var dbContext = new AppDbContext())
+            {
+                var query = from thesis in dbContext.Thesis
+                            join status in dbContext.ThesisStatus
+                            on thesis.IdThesis equals status.IdThesis
+                            where dbContext.Member.Any(t =>
+                                      t.IdAccount == idAccount &&
+                                      status.IdTeam == t.IdTeam) &&
+                                  thesis.Status == eThesisStatus.ToString()
+                            select thesis;
+
+                var listTheses = query.ToList();
+                return FormatList(listTheses);
+            }
         }
 
         #endregion

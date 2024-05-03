@@ -40,7 +40,7 @@ namespace ThesisManagementProject
         }
         void SetupUserControl() 
         {
-            this.listThesis = thesisDAO.SelectListModeMyCompletedTheses(people.IdAccount);
+            this.listThesis = thesisDAO.SelectListModeMyThesesByStatus(people.IdAccount, EThesisStatus.Completed);
             this.lblNumThesis.Text = this.listThesis.Count.ToString();
             this.avgContribute = 0;
 

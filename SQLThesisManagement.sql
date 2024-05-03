@@ -5,10 +5,10 @@
 -- Data Source=DESKTOP-4FIVTNT\SQLEXPRESS;Initial Catalog=ThesisManagement;Integrated Security=True;Encrypt=False
 -- Scaffold-DbContext "Data Source=DESKTOP-4FIVTNT\SQLEXPRESS;Initial Catalog=ThesisManagement;Integrated Security=True;Encrypt=False" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
 
-use ThesisManagement
-go
+--use ThesisManagement
+--go
 
-drop table People, Thesis, Member, Task, Comment, Evaluation, Notification, ThesisStatus, Technology
+--drop table People, Thesis, Member, Task, Comment, Evaluation, Notification, ThesisStatus, Technology
 
 -- CREATE TABLE ACCOUNT
 create table People (
