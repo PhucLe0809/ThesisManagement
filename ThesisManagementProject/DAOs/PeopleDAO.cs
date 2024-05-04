@@ -46,7 +46,7 @@ namespace ThesisManagementProject.DAOs
                                         MyDatabase.DBPeople, email, password));
 
             if (dt.Rows.Count > 0) return GetFromDataRow(dt.Rows[0]);
-            return new People();
+            return null;
         }        
 
         #endregion
