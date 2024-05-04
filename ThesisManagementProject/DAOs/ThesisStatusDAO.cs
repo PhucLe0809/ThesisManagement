@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
-using ThesisManagementProject.Database;
+
 using ThesisManagementProject.Entity;
 using ThesisManagementProject.Models;
 using ThesisManagementProject.Process;
@@ -14,7 +14,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ThesisManagementProject.DAOs
 {
-    internal class ThesisStatusDAO : DBConnection
+    internal class ThesisStatusDAO
     {
         public ThesisStatusDAO() { }
 

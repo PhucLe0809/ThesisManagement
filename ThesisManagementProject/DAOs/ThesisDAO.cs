@@ -7,14 +7,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
-using ThesisManagementProject.Database;
 using ThesisManagementProject.Entity;
 using ThesisManagementProject.Models;
 using ThesisManagementProject.Process;
 
 namespace ThesisManagementProject.DAOs
 {
-    internal class ThesisDAO : DBConnection
+    internal class ThesisDAO
     {
         private MyProcess myProcess = new MyProcess();
 
@@ -22,7 +21,7 @@ namespace ThesisManagementProject.DAOs
 
         #region SELECT THESIS
 
-        public List<Thesis> SelectList(string command)
+        public List<Thesis> SelectList()
         {
             using (var dbContext = new AppDbContext())
             {
@@ -161,6 +160,13 @@ namespace ThesisManagementProject.DAOs
             {
                 var statuses = new List<EThesisStatus> { EThesisStatus.Published, EThesisStatus.Registered };
                 return FormatList(dbContext.Thesis.Where(t => statuses.Contains(t.OnStatus) && t.Topic.StartsWith(topic)).ToList());
+            }
+        }
+        public List<Thesis> FilterByProperty(Func<Thesis, bool> predicate)
+        {
+            using (var dbContext = new AppDbContext())
+            {
+                return FormatList(dbContext.Thesis.Where(predicate).ToList());
             }
         }
 

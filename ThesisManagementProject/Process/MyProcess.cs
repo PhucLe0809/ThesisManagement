@@ -11,7 +11,8 @@ using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using ThesisManagementProject.DAOs;
-using ThesisManagementProject.Database;
+
+using ThesisManagementProject.Entity;
 using ThesisManagementProject.Models;
 
 namespace ThesisManagementProject.Process
@@ -35,8 +36,6 @@ namespace ThesisManagementProject.Process
 
     internal class MyProcess
     {
-        private DBConnection dBConnection = new DBConnection();
-
         #region MY UTILS
 
         public string FormatStringLength(string str, int length)
@@ -161,51 +160,54 @@ namespace ThesisManagementProject.Process
 
         #region FUNCTIONS GenIDbyClassify
 
-        private int GetLastestID(string command)
+        private int GetLastestID(EClassify eClassify)
         {
-            DataTable dataTable = dBConnection.Select(command);
-            string str = dataTable.Rows[0]["MaxID"].ToString();
-            return Convert.ToInt32(str.Substring(str.Length - 5));
+            using (var dbContext = new AppDbContext())
+            {
+                string idMax = string.Empty;
+                switch (eClassify)
+                {
+                    case EClassify.Lecture:
+                        idMax = dbContext.People.Where(p => p.Role == EClassify.Lecture.ToString()).Max(p => p.IdAccount).ToString();
+                        break;
+                    case EClassify.Student:
+                        idMax = dbContext.People.Where(p => p.Role == EClassify.Student.ToString()).Max(p => p.IdAccount).ToString();
+                        break;
+                    case EClassify.Team:
+                        idMax = dbContext.Member.Max(m => m.IdTeam).ToString();
+                        break;
+                    case EClassify.Thesis:
+                        idMax = dbContext.Thesis.Max(t => t.IdThesis).ToString();
+                        break;
+                    case EClassify.Task:
+                        idMax = dbContext.Task.Max(t => t.IdTask).ToString();
+                        break;
+                    case EClassify.Comment:
+                        idMax = dbContext.Comment.Max(m => m.IdComment).ToString();
+                        break;
+                    case EClassify.Evaluation:
+                        idMax = dbContext.Evaluation.Max(e => e.IdEvaluation).ToString();
+                        break;
+                    case EClassify.Notification:
+                        idMax = dbContext.Notification.Max(n => n.IdNotification).ToString();
+                        break;
+                }
+                if (idMax == string.Empty) return 0;
+                else return int.Parse(idMax.Substring(4));
+            }
         }
         public string GenIDClassify(EClassify eClassify)
         {
             int year = DateTime.Now.Year % 100;
             string classify = ((int)eClassify).ToString().PadLeft(2, '0');
 
-            int cntAccount = 0;
-            switch (eClassify)
-            {
-                case EClassify.Lecture:
-                    cntAccount = GetLastestID(string.Format("SELECT max(idaccount) as MaxID FROM {0} WHERE role = '{1}'", MyDatabase.DBAccount, EClassify.Lecture.ToString()));
-                    break;
-                case EClassify.Student:
-                    cntAccount = GetLastestID(string.Format("SELECT max(idaccount) as MaxID FROM {0} WHERE role = '{1}'", MyDatabase.DBAccount, EClassify.Student.ToString()));
-                    break;
-                case EClassify.Team:
-                    cntAccount = GetLastestID(string.Format("SELECT max(idteam) as MaxID FROM {0}", MyDatabase.DBTeam));
-                    break;
-                case EClassify.Thesis:
-                    cntAccount = GetLastestID(string.Format("SELECT max(idthesis) as MaxID FROM {0}", MyDatabase.DBThesis));
-                    break;
-                case EClassify.Task:
-                    cntAccount = GetLastestID(string.Format("SELECT max(idtask) as MaxID FROM {0}", MyDatabase.DBTask));
-                    break;
-                case EClassify.Comment:
-                    cntAccount = GetLastestID(string.Format("SELECT max(idcomment) as MaxID FROM {0}", MyDatabase.DBComment));
-                    break;
-                case EClassify.Evaluation:
-                    cntAccount = GetLastestID(string.Format("SELECT max(idevaluation) as MaxID FROM {0}", MyDatabase.DBEvaluation));
-                    break;
-                case EClassify.Notification:
-                    cntAccount = GetLastestID(string.Format("SELECT max(idnotification) as MaxID FROM {0}", MyDatabase.DBNotification));
-                    break;
-            }
-            cntAccount++;
+            int cntAccount = GetLastestID(eClassify) + 1;
             string counterStr = cntAccount.ToString().PadLeft(5, '0');
 
             if (cntAccount > 99999)
             {
-                throw new InvalidOperationException("Has exceeded the limit.");
+                MessageBox.Show("Has exceeded the limit.");
+                throw new Exception();
             }
 
             string id = $"{year}{classify}{counterStr}";

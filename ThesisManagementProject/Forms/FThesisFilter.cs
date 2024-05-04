@@ -9,7 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ThesisManagementProject.DAOs;
-using ThesisManagementProject.Database;
+
+using ThesisManagementProject.Entity;
 using ThesisManagementProject.Models;
 using ThesisManagementProject.Process;
 
@@ -43,10 +44,6 @@ namespace ThesisManagementProject
         public Guna2Button GButtonFilter
         {
             get { return this.gButtonFilter; }
-        }
-        public Guna2GradientButton GButtonSave
-        {
-            get { return this.gGradientButtonSave; }
         }
         public List<Thesis> ListThesis
         {
@@ -153,44 +150,55 @@ namespace ThesisManagementProject
         {
             this.Close();
         }
+        private void MergeList(ref List<Thesis> one, ref List<Thesis> two, Func<Thesis, object> propertySelector)
+        {
+            var temp = one.Join(two, propertySelector, propertySelector, (t1, t2) => t1).ToList();
+            one.Clear();
+            one.AddRange(temp);
+        }
         private void gGradientButtonSave_Click(object sender, EventArgs e)
         {
-            string command = string.Format("SELECT * FROM {0} ", MyDatabase.DBThesis);
-            int condition = 0;
+            this.listThesis.Clear();
+            this.listThesis.AddRange(thesisDAO.SelectList());
 
+            var dbContext = new AppDbContext();
             if (!flagAllTopic)
             {
-                condition++;
-                command += " WHERE ";
-                command += string.Format(" field = '{0}' ", gComboBoxField.SelectedItem.ToString());
-                command += "and";
-                command += string.Format(" maxmembers BETWEEN {0} and {1} ", gTextBoxMembersFrom.Text, gTextBoxMembersTo.Text);
+                string field = gComboBoxField.SelectedItem.ToString();
+                int minimum = int.Parse(gTextBoxMembersFrom.Text);
+                int maximum = int.Parse(gTextBoxMembersTo.Text);
+
+                var one = thesisDAO.FilterByProperty(t => t.Field == field);
+                MergeList(ref this.listThesis, ref one, t => t.IdThesis);
+                var two = thesisDAO.FilterByProperty(t => t.MaxMembers >= minimum && t.MaxMembers <= maximum);
+                MergeList(ref this.listThesis, ref two, t => t.IdThesis);
             }
             if (!flagAllStatus)
             {
-                condition++;
-                if (condition == 1) command += " WHERE "; else command += "and";
-                command += string.Format(" status = '{0}' ", gComboBoxStatus.SelectedItem.ToString());
+                string status = gComboBoxStatus.SelectedItem.ToString();
+
+                var list = thesisDAO.FilterByProperty(t => t.Status == status);
+                MergeList(ref this.listThesis, ref list, t => t.IdThesis);
             }
             if (!flagAllFavorite)
             {
-                condition++;
-                if (condition == 1) command += " WHERE "; else command += "and";
-                command += string.Format(" isfavorite = {0}", flagFavorite ? 1 : 0);
+                var list = thesisDAO.FilterByProperty(t => t.IsFavorite == flagFavorite);
+                MergeList(ref this.listThesis, ref list, t => t.IdThesis);
             }
             if (cmbIDCreator.SelectedIndex != -1)
             {
-                condition++;
-                if (condition == 1) command += " WHERE "; else command += "and";
-                command += string.Format(" idcreator = '{0}'", cmbIDCreator.SelectedItem);
+                string idCreator = cmbIDCreator.SelectedItem.ToString();
+
+                var list = thesisDAO.FilterByProperty(t => t.IdCreator == idCreator);
+                MergeList(ref this.listThesis, ref list, t => t.IdThesis);
             }
             if (cmbIDInstructor.SelectedIndex != -1)
             {
-                condition++;
-                if (condition == 1) command += " WHERE "; else command += "and";
-                command += string.Format(" idinstructor = '{0}'", cmbIDInstructor.SelectedItem);
+                string idInstructor = cmbIDInstructor.SelectedItem.ToString();
+
+                var list = thesisDAO.FilterByProperty(t => t.IdInstructor == idInstructor);
+                MergeList(ref this.listThesis, ref list, t => t.IdThesis);
             }
-            this.listThesis = thesisDAO.SelectList(command);
             this.Close();
             gButtonFilter.PerformClick();
         }

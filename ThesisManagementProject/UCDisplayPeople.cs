@@ -65,7 +65,16 @@ namespace ThesisManagementProject
             pnlAddUserControl.Controls.Add(new UCWelcome(people));
             SetButtonBar();
 
+            uCNotification.SetInformation(people);
             uCNotification.NotificationJump += NotificationType_Jump;
+            if (uCNotification.HasNewNotification())
+            {
+                gButtonNotification.CustomImages.Image = Properties.Resources.PicNewNotification;
+                gButtonNotification.Image = Properties.Resources.ItemDotNewNotification;
+                gButtonNotification.FillColor = Color.White;
+                gButtonNotification.ForeColor = Color.Black;
+                gButtonNotification.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            }
         }
         private void SetButtonBar()
         {
@@ -113,7 +122,7 @@ namespace ThesisManagementProject
         }
         private void gButtonNotification_Click(object sender, EventArgs e)
         {
-            uCNotification.SetInformation(people);
+            gButtonNotification.Image = null;
             SetButtonClick(gButtonNotification, Properties.Resources.PictureNotificationGradient, uCNotification);
         }
         private void gButtonAccount_Click(object sender, EventArgs e)

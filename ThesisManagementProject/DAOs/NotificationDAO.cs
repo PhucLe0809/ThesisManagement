@@ -5,7 +5,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ThesisManagementProject.Database;
+
 using ThesisManagementProject.Entity;
 using ThesisManagementProject.Models;
 using ThesisManagementProject.Process;
@@ -13,7 +13,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ThesisManagementProject.DAOs
 {
-    internal class NotificationDAO : DBConnection
+    internal class NotificationDAO
     {
         private MyProcess myProcess = new MyProcess();
 

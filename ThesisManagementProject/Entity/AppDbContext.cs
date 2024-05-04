@@ -14,6 +14,7 @@ namespace ThesisManagementProject.Entity
         public DbSet<Evaluation> Evaluation { get; set; }
         public DbSet<Notification> Notification { get; set; }
         public DbSet<ThesisStatus> ThesisStatus { get; set; }
+        public DbSet<Technology> Technology { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -29,6 +30,7 @@ namespace ThesisManagementProject.Entity
             modelBuilder.Entity<Evaluation>().HasKey(t => t.IdEvaluation);
             modelBuilder.Entity<Notification>().HasKey(t => t.IdNotification);
             modelBuilder.Entity<ThesisStatus>().HasKey(t => new { t.IdTeam, t.IdThesis });
+            modelBuilder.Entity<Technology>().HasKey(t => new { t.Field, t.Tech });
         }
     }
 }

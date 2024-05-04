@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
-using ThesisManagementProject.Database;
+
 using ThesisManagementProject.Entity;
 using ThesisManagementProject.Models;
 
 namespace ThesisManagementProject.DAOs
 {
-    internal class TasksDAO : DBConnection
+    internal class TasksDAO
     {
         public TasksDAO() { }
 

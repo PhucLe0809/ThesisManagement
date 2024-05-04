@@ -5,14 +5,14 @@ using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ThesisManagementProject.Database;
+
 using ThesisManagementProject.Entity;
 using ThesisManagementProject.Models;
 using ThesisManagementProject.Process;
 
 namespace ThesisManagementProject.DAOs
 {
-    internal class TeamDAO : DBConnection
+    internal class TeamDAO
     {
         public TeamDAO() { }
 

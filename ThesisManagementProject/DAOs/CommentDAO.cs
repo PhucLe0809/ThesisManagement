@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
-using ThesisManagementProject.Database;
+
 using ThesisManagementProject.Entity;
 using ThesisManagementProject.Models;
 
 namespace ThesisManagementProject.DAOs
 {
-    internal class CommentDAO : DBConnection
+    internal class CommentDAO
     {
 
         public CommentDAO() { }

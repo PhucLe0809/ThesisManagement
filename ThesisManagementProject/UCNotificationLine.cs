@@ -56,6 +56,16 @@ namespace ThesisManagementProject
         {
             this.BackColor = color;
         }
+        public void SetClickedState()
+        {
+            this.lineColor = Color.FromArgb(222, 224, 224);
+            this.BackColor = lineColor;
+            if (notification.IsSaw != true)
+            {
+                notification.IsSaw = true;
+                notificationDAO.UpdateProperty(notification.IdNotification, notification => notification.IsSaw = true);
+            }
+        }
         private void UCNotificationLine_MouseEnter(object sender, EventArgs e)
         {
             SetColor(Color.Gainsboro);
@@ -66,13 +76,7 @@ namespace ThesisManagementProject
         }
         private void UCNotificationLine_Click(object sender, EventArgs e)
         {
-            this.lineColor = Color.FromArgb(222, 224, 224);
-            this.BackColor = lineColor;
-            if (notification.IsSaw != true)
-            {
-                notification.IsSaw = true;
-                notificationDAO.UpdateProperty(notification.IdNotification, notification => notification.IsSaw = true);
-            }
+            SetClickedState();
             OnNotificationLineClicked(EventArgs.Empty);
         }
         private void OnNotificationLineClicked(EventArgs e)

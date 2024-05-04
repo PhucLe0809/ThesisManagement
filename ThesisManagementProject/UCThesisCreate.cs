@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ThesisManagementProject.DAOs;
-using ThesisManagementProject.Database;
+
 using ThesisManagementProject.Models;
 using ThesisManagementProject.Process;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -19,7 +19,6 @@ namespace ThesisManagementProject
     public partial class UCThesisCreate : UserControl
     {
         private MyProcess myProcess = new MyProcess();
-        private DBConnection dBConnection = new DBConnection();
 
         private People people = new People();
         private Thesis thesis = new Thesis();
@@ -122,14 +121,14 @@ namespace ThesisManagementProject
         private void SetComboBoxTechnology()
         {
             if (gComboBoxField.SelectedItem == null) return;
-            string command = string.Format("SELECT * FROM {0} WHERE field = '{1}'",
-                                    MyDatabase.DBTechnology, gComboBoxField.Text);
-            DataTable table = dBConnection.Select(command);
+
+            TechnologyDAO technologyDAO = new TechnologyDAO();
+            var listTech = technologyDAO.SelectFollowField(gComboBoxField.SelectedItem.ToString());
 
             gComboBoxTechnology.Items.Clear();
-            foreach (DataRow row in table.Rows)
+            foreach (Technology technology in listTech)
             {
-                gComboBoxTechnology.Items.Add(row["tech"].ToString());
+                gComboBoxTechnology.Items.Add(technology.Tech);
             }
             gComboBoxTechnology.StartIndex = 0;
         }

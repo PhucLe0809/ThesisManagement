@@ -4,14 +4,14 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ThesisManagementProject.Database;
+
 using ThesisManagementProject.Entity;
 using ThesisManagementProject.Models;
 using ThesisManagementProject.Process;
 
 namespace ThesisManagementProject.DAOs
 {
-    internal class PeopleDAO : DBConnection
+    internal class PeopleDAO
     {
         private MyProcess myProcess = new MyProcess();
 
@@ -41,7 +41,7 @@ namespace ThesisManagementProject.DAOs
         {
             using (var dbContext = new AppDbContext())
             {
-                return FormatList(dbContext.People.Where(p => p.OnRole == role && p.Handle.StartsWith(username)).ToList());
+                return FormatList(dbContext.People.Where(p => p.Role == role.ToString() && p.Handle.StartsWith(username)).ToList());
             }
         }
 

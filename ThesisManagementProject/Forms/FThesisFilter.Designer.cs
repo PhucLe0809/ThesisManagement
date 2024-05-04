@@ -497,7 +497,7 @@
             lblStatus.Name = "lblStatus";
             lblStatus.Size = new Size(78, 28);
             lblStatus.TabIndex = 16;
-            lblStatus.Text = "OnStatus";
+            lblStatus.Text = "Status";
             // 
             // gComboBoxStatus
             // 
