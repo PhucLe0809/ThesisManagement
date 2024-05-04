@@ -126,7 +126,7 @@ create table Technology
 -- Lecture 1 - 10
 INSERT INTO People
 VALUES 
-    ('242200001', 'David Lee', '072352117212', '1995-03-15', 'Male', 'david', '0375676599', 'DavidLee', 'Lecture', 
+    ('242200001', 'David Lee', '072352117212', '1995-03-15', 'Male', 'david@gmail.com', '0375676599', 'DavidLee', 'Lecture', 
      'HCM City University of Technology and Education', 'Faculty of Information Technology', '5373538693', 'abc', 'PicAvatarOne'),
     ('242200002', 'Alice Johnson', '095216398243', '1994-08-22', 'Female', 'alice@gmail.com', '0652145893', 'AliceJ', 'Lecture', 
      'HCM City University of Technology and Education', 'Faculty of Information Technology', '9236492347', 'abc', 'PicAvatarTwo'),
@@ -156,7 +156,7 @@ INSERT INTO People
 VALUES 
     ('243300001', 'Emma Watson', '093482139832', '2003-03-15', 'Female', 'emma@gmail.com', '0976523421', 'EmmaW', 'Student', 
      'HCM City University of Technology and Education', 'Faculty of Information Technology', '5372535694', 'abc', 'PicAvatarSix'),
-    ('243300002', 'Chris Evans', '096321587439', '2002-08-22', 'Male', 'chris', '0654321987', 'ChrisEvans', 'Student', 
+    ('243300002', 'Chris Evans', '096321587439', '2002-08-22', 'Male', 'chris@gmail.com', '0654321987', 'ChrisEvans', 'Student', 
      'HCM City University of Technology and Education', 'Faculty of Information Technology', '9236754210', 'abc', 'PicAvatarFive'),
     ('243300003', 'Scarlett Johansson', '093654827615', '2004-12-10', 'Female', 'scarlett@gmail.com', '0845672310', 'ScarlettJ', 'Student', 
      'HCM City University of Technology and Education', 'Faculty of Information Technology', '1325647892', 'abc', 'PicAvatarTwo'),

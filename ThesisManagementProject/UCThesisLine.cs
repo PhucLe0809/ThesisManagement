@@ -129,7 +129,7 @@ namespace ThesisManagementProject
         }
         private void gButtonDelete_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to delete thesis " + thesis.IdThesis,
+            DialogResult result = MessageBox.Show("Are you sure you want to delete thesis " + thesis.Topic,
                                                     "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (result == DialogResult.OK)
             {

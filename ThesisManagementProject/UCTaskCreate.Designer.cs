@@ -88,7 +88,7 @@
             gTextBoxDescription.PlaceholderText = "Task description";
             gTextBoxDescription.SelectedText = "";
             gTextBoxDescription.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            gTextBoxDescription.Size = new Size(626, 163);
+            gTextBoxDescription.Size = new Size(615, 163);
             gTextBoxDescription.TabIndex = 11;
             gTextBoxDescription.TextOffset = new Point(5, 0);
             gTextBoxDescription.TextChanged += gTextBoxDescription_TextChanged;
@@ -130,7 +130,7 @@
             gTextBoxTitle.PlaceholderText = "Task title";
             gTextBoxTitle.SelectedText = "";
             gTextBoxTitle.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            gTextBoxTitle.Size = new Size(626, 90);
+            gTextBoxTitle.Size = new Size(615, 90);
             gTextBoxTitle.TabIndex = 9;
             gTextBoxTitle.TextOffset = new Point(5, 0);
             gTextBoxTitle.TextChanged += gTextBoxTitle_TextChanged;
