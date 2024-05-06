@@ -30,6 +30,7 @@ namespace ThesisManagementProject
         private ThesisDAO thesisDAO = new ThesisDAO();
         private PeopleDAO peopleDAO = new PeopleDAO();
         private TeamDAO teamDAO = new TeamDAO();
+        private GiveUpDAO giveUpDAO = new GiveUpDAO();
         private ThesisStatusDAO thesisStatusDAO = new ThesisStatusDAO();
         private NotificationDAO notificationDAO = new NotificationDAO();
 
@@ -40,7 +41,7 @@ namespace ThesisManagementProject
 
         private bool flagEdited = false;
         private bool flagDeleted = false;
-        private bool flagWaiting = false;
+        private bool flagStuMyTheses = false;
 
         public UCThesisDetails()
         {
@@ -49,10 +50,6 @@ namespace ThesisManagementProject
 
         #region PROPERTIES
 
-        public bool FlagWaiting
-        {
-            set { this.flagWaiting = value; }
-        }
         public bool ThesisEdited
         {
             get { return this.flagEdited; }
@@ -74,10 +71,11 @@ namespace ThesisManagementProject
 
         #region FUNCTIONS
 
-        public void SetInformation(Thesis thesis, People host)
+        public void SetInformation(Thesis thesis, People host, bool flagStuMyTheses)
         {
             this.thesis = thesis;
             this.host = host;
+            this.flagStuMyTheses = flagStuMyTheses;
             this.instructor = peopleDAO.SelectOnlyByID(thesis.IdInstructor);
             InitUserControl();
         }
@@ -87,16 +85,11 @@ namespace ThesisManagementProject
             this.flagDeleted = false;
             gShadowPanelTeam.Controls.Add(showTeam);
 
-            ResetUserControl();
+            ResetThesisInfor();
             SetControlsReadOnly(true);
-            SetWaiting();
+            SetInitialSate();
             SetButtonComplete();
             SetButtonEditOrDetails();
-        }
-        private void ResetUserControl()
-        {
-            ResetThesisInfor();
-            SetThesisDetailsMode();
         }
         private void ResetThesisInfor()
         {
@@ -119,27 +112,50 @@ namespace ThesisManagementProject
             myProcess.SetTextBoxState(gTextBoxLevel, flagReadOnly);
             myProcess.SetTextBoxState(gTextBoxMembers, flagReadOnly);
         }
-        private void SetWaiting()
+        private void SetInitialSate()
         {
-            if (this.flagWaiting == false) return;
+            SetTeamHere(false);
+            gGradientButtonReasonDetails.Hide();
 
+            if (thesis.Status == EThesisStatus.Processing || thesis.Status == EThesisStatus.Completed)
+            {
+                SetTeamMode(true);
+                SetViewButtonMode(true);
+                return;
+            }
+            if (thesis.Status == EThesisStatus.GiveUp)
+            {
+                SetTeamMode(true);
+                SetGiveUpMode(true);
+                return;
+            }
+            if (thesis.Status == EThesisStatus.Registered || thesis.Status == EThesisStatus.Published)
+            {
+                SetViewButtonMode(false);
+                if (host.Role == ERole.Lecture)
+                {
+                    gGradientButtonRegistered.PerformClick();
+                }
+                else
+                {
+                    if (this.flagStuMyTheses)
+                    {
+                        SetWaitingMode(true);
+                    }
+                    else
+                    {
+                        SetStudentRegister(true);
+                    }
+                }
+            }
+        }
+        private void SetUpDataViewState()
+        {
             HideAllButtonMode();
-            gPictureBoxState.Image = Properties.Resources.GiftWaiting;
-            gTextBoxState.Text = "Please wait !";
             gPanelDataView.Controls.Clear();
             gPanelDataView.Controls.Add(gPictureBoxState);
             gPanelDataView.Controls.Add(gTextBoxState);
-        }
-        private void SetThesisDetailsMode()
-        {
-            bool flagShow = thesis.Status == EThesisStatus.Processing || thesis.Status == EThesisStatus.Completed;
-
-            SetTeamMode(flagShow);
-            SetViewButtonMode(flagShow);
-            if (host.Role == ERole.Student && !flagShow)
-            {
-                SetStudentRegister();
-            }
+            gPanelDataView.Controls.Add(gGradientButtonReasonDetails);
         }
         private void SetTeamMode(bool flagShow)
         {
@@ -175,14 +191,48 @@ namespace ThesisManagementProject
                 gGradientButtonRegistered.PerformClick();
             }
         }
+        private void SetWaitingMode(bool flag)
+        {
+            if (flag == false) return;
+
+            gPictureBoxState.Image = Properties.Resources.GiftWaiting;
+            gTextBoxState.Text = "Please wait !";
+            gTextBoxState.ForeColor = Color.FromArgb(0, 192, 192);
+            SetUpDataViewState();
+        }
+        private void SetGiveUpMode(bool flag)
+        {
+            if (flag == false) return;
+
+            gPictureBoxState.Image = Properties.Resources.PictureEmptyState;
+            gTextBoxState.Text = "  The thesis cannot continue !";
+            gTextBoxState.ForeColor = Color.Gray;
+            gGradientButtonReasonDetails.Show();
+            SetUpDataViewState();
+        }
+        private void SetSuccessfullyRegistered()
+        {
+            gPictureBoxState.Image = Properties.Resources.GifCompleted;
+            gTextBoxState.Text = "You have successfully registered !";
+            gTextBoxState.ForeColor = Color.FromArgb(0, 192, 192);
+            SetUpDataViewState();
+        }
         private void SetButtonComplete()
         {
+            gGradientButtonComplete.Hide();
+            gGradientButtonGiveUp.Hide();
+
             if (host.Role == ERole.Lecture && thesis.Status == EThesisStatus.Processing)
             {
                 gGradientButtonComplete.Show();
+                gGradientButtonGiveUp.Show();
                 return;
             }
-            gGradientButtonComplete.Hide();            
+            if (host.Role == ERole.Student && thesis.Status == EThesisStatus.Processing)
+            {
+                gGradientButtonGiveUp.Show();
+                return;
+            }
         }
         private void SetButtonEditOrDetails()
         {
@@ -193,8 +243,6 @@ namespace ThesisManagementProject
             else
             {
                 gButtonEdit.Show();
-                if (host.Role == ERole.Lecture && thesis.Status == EThesisStatus.Processing) gButtonEdit.Location = new Point(303, 14);
-                else gButtonEdit.Location = new Point(420, 14);
             }
         }
         private void SetTeamHere(bool flag)
@@ -213,10 +261,11 @@ namespace ThesisManagementProject
             }
 
         }
-        private void SetStudentRegister()
+        private void SetStudentRegister(bool flag)
         {
-            HideAllButtonMode();
+            if (flag == false) return;
 
+            HideAllButtonMode();
             uCThesisDetailsCreatedTeam = new UCThesisDetailsCreatedTeam(this.host, this.thesis);
             uCThesisDetailsCreatedTeam.GPerform.Click += GPerformState_Click;
             gPanelDataView.Controls.Clear();
@@ -245,20 +294,29 @@ namespace ThesisManagementProject
                 uCThesisDetailsTasks.PerformNotificationClick(notification);
             }
         }
-        private void SetStateCompleted()
+        private void SetNewState(EThesisStatus status, Image image, string notification)
         {
-            this.thesis.Status = EThesisStatus.Completed;
+            this.thesis.Status = status;
             gTextBoxStatus.Text = thesis.Status.ToString();
             gTextBoxStatus.FillColor = thesis.GetStatusColor();
             gButtonEdit.Hide();
             SetButtonComplete();
 
             HideAllButtonMode();
-            gPictureBoxState.Image = Properties.Resources.GifCompleted;
-            gTextBoxState.Text = "Congratulations on completion !";
+            gPictureBoxState.Image = image;
+            gTextBoxState.Text = notification;
             gPanelDataView.Controls.Clear();
             gPanelDataView.Controls.Add(gPictureBoxState);
             gPanelDataView.Controls.Add(gTextBoxState);
+
+            if (status == EThesisStatus.GiveUp)
+            {
+                gTextBoxState.ForeColor = Color.Gray;
+            }
+            else
+            {
+                gTextBoxState.ForeColor = Color.FromArgb(0, 192, 192);
+            }
         }
 
         #endregion
@@ -293,13 +351,41 @@ namespace ThesisManagementProject
             DialogResult result = MessageBox.Show("You have definitely completed the " + thesis.Topic + " thesis",
                                                     "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (result == DialogResult.OK)
-            {          
+            {
                 thesisDAO.UpdateStatus(this.thesis, EThesisStatus.Completed);
                 thesisStatusDAO.UpdateThesisStatus(this.team.IdTeam, this.thesis.IdThesis, EThesisStatus.Completed);
 
                 this.flagEdited = true;
-                SetStateCompleted();
+                SetNewState(EThesisStatus.Completed, Properties.Resources.GiftCompleted, "Congratulations on completion !");
             }
+        }
+
+        #endregion
+
+        #region EVENT gGradientButtonGiveUp
+
+        private void gGradientButtonGiveUp_Click(object sender, EventArgs e)
+        {
+            FGiveUp fGiveUp = new FGiveUp(this.thesis, this.host, this.team);
+            fGiveUp.ConfirnedGivingUp += FGiveUp_ConfirnedGivingUp;
+            fGiveUp.ShowDialog();
+        }
+        private void FGiveUp_ConfirnedGivingUp(object? sender, EventArgs e)
+        {
+            this.flagEdited = true;
+            SetNewState(EThesisStatus.GiveUp, Properties.Resources.PictureEmptyState, "The thesis cannot continue !");
+        }
+
+        #endregion
+
+        #region EVENT gGradientButtonReasonDetails
+
+        private void gGradientButtonReasonDetails_Click(object sender, EventArgs e)
+        {
+            FGiveUp fGiveUp = new FGiveUp(this.thesis, this.host, this.team);
+            GiveUp giveUp = giveUpDAO.SelectFollowThesis(thesis.IdThesis);
+            fGiveUp.SetReadOnly(giveUp);
+            fGiveUp.ShowDialog();
         }
 
         #endregion
@@ -373,7 +459,7 @@ namespace ThesisManagementProject
                     string content = Notification.GetContentTypeAccepted(host.FullName, thesis.Topic);
                     notificationDAO.InsertFollowListPeople(host.IdAccount, thesis.IdThesis, thesis.IdThesis, content, team.Members);
 
-                    SetThesisDetailsMode();
+                    SetInitialSate();
                     SetButtonComplete();
                     SetButtonEditOrDetails();
                     gTextBoxStatus.Text = thesis.Status.ToString();
@@ -388,11 +474,7 @@ namespace ThesisManagementProject
 
         private void GPerformState_Click(object? sender, EventArgs e)
         {
-            gPanelDataView.Controls.Clear();
-            gPictureBoxState.Image = Properties.Resources.GifCompleted;
-            gTextBoxState.Text = "You have successfully registered !";
-            gPanelDataView.Controls.Add(gPictureBoxState);
-            gPanelDataView.Controls.Add(gTextBoxState);
+            SetSuccessfullyRegistered();
             this.flagDeleted = true;
             this.thesis = thesisDAO.SelectOnly(thesis.IdThesis);
             gTextBoxStatus.Text = thesis.Status.ToString();

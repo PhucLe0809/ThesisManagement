@@ -8,7 +8,7 @@
 use ThesisManagement
 go
 
-drop table People, Thesis, Member, Task, Comment, Evaluation, Notification, ThesisStatus, Technology
+drop table People, Thesis, Member, Task, Comment, Evaluation, Notification, ThesisStatus, Technology, GiveUp
 
 -- CREATE TABLE ACCOUNT
 create table People (
@@ -122,6 +122,20 @@ create table Technology
 	field nvarchar(50) not null,
 	tech nvarchar(70) not null,
 );
+
+-- CREATE TABLE GIVEUP
+create table GiveUp
+(
+	idthesis nvarchar(10) not null,
+	idrepresent nvarchar(10) not null,
+	idteam nvarchar(10) not null,
+	reason text not null,
+	created datetime not null,
+);
+
+INSERT INTO GiveUp
+VALUES
+	('244400008', '243300002', '245500011', 'Not enough energy and resources to continue', '2024-04-15 19:30:45');
 
 -- Lecture 1 - 10
 INSERT INTO People
@@ -311,7 +325,7 @@ VALUES ('244400008',
         'Technologies include HTML5, CSS3, JavaScript, React, and Node.js for building modern, responsive web interfaces and interactive learning modules.', 
         'Functions include frontend development, UI/UX design, content management, gamification features, and integration with learning management systems.', 
         'Requirements: Proficiency in web development technologies, understanding of educational principles, experience in UX/UI design, and familiarity with e-learning standards.',
-		'242200001', 0, 'Published', '242200001');
+		'242200001', 1, 'GiveUp', '242200001');
 
 -- Thesis 9
 INSERT INTO Thesis 
@@ -365,7 +379,11 @@ VALUES
 ('245500009', '243300018', 'Digital Mavericks', '2024-03-24', 'PicAvatarSix'),
 ('245500009', '243300002', 'Digital Mavericks', '2024-03-25', 'PicAvatarSix'),
 ('245500009', '243300019', 'Digital Mavericks', '2024-03-25', 'PicAvatarSix'),
-('245500010', '243300020', 'Pixel Pioneers', '2024-03-26', 'PicAvatarTen');
+('245500010', '243300020', 'Pixel Pioneers', '2024-03-26', 'PicAvatarTen'),
+('245500011', '243300005', 'Basic Algorithm', '2024-04-8', 'PicAvatarFour'),
+('245500011', '243300002', 'Basic Algorithm', '2024-04-9', 'PicAvatarFour'),
+('245500011', '243300009', 'Basic Algorithm', '2024-04-10', 'PicAvatarFour');
+
 
 -- INSERT TABLE ThesisStatus
 
@@ -380,7 +398,8 @@ VALUES
 ('245500007', '244400007', 'Completed'),
 ('245500008', '244400004', 'Processing'),
 ('245500009', '244400005', 'Processing'),
-('245500010', '244400006', 'Completed');
+('245500010', '244400006', 'Completed'),
+('245500011', '244400008', 'GiveUp');
 
 -- INSERT TABLE Task
 INSERT INTO Task

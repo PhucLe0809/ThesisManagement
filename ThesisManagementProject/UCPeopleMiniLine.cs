@@ -96,7 +96,7 @@ namespace ThesisManagementProject
                 gProgressBarToLine.Hide();
             }
         }
-        public void SetStisticalMode(int statistical, double score)
+        public void SetStatisticalMode(int statistical, double score)
         {
             lblUserName.Text = myProcess.FormatStringLength(people.FullName, 20);
             gProgressBarToLine.Value = statistical;

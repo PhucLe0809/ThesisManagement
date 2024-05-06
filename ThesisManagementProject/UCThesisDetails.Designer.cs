@@ -51,22 +51,27 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             gButtonBack = new Guna.UI2.WinForms.Guna2Button();
             gButtonEdit = new Guna.UI2.WinForms.Guna2Button();
             gButtonStar = new Guna.UI2.WinForms.Guna2Button();
             gShadowPanelTopic = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            gGradientButtonGiveUp = new Guna.UI2.WinForms.Guna2GradientButton();
             gGradientButtonComplete = new Guna.UI2.WinForms.Guna2GradientButton();
             gButtonDetails = new Guna.UI2.WinForms.Guna2Button();
             gTextBoxMembers = new Guna.UI2.WinForms.Guna2TextBox();
@@ -83,6 +88,7 @@
             gTextBoxTopic = new Guna.UI2.WinForms.Guna2TextBox();
             gShadowPanelBack = new Guna.UI2.WinForms.Guna2ShadowPanel();
             gPanelDataView = new Guna.UI2.WinForms.Guna2Panel();
+            gGradientButtonReasonDetails = new Guna.UI2.WinForms.Guna2GradientButton();
             gTextBoxState = new Guna.UI2.WinForms.Guna2TextBox();
             gPictureBoxState = new Guna.UI2.WinForms.Guna2PictureBox();
             gGradientButtonRegistered = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -171,6 +177,7 @@
             // gShadowPanelTopic
             // 
             gShadowPanelTopic.BackColor = Color.Transparent;
+            gShadowPanelTopic.Controls.Add(gGradientButtonGiveUp);
             gShadowPanelTopic.Controls.Add(gGradientButtonComplete);
             gShadowPanelTopic.Controls.Add(gButtonDetails);
             gShadowPanelTopic.Controls.Add(gTextBoxMembers);
@@ -196,13 +203,42 @@
             gShadowPanelTopic.Size = new Size(495, 537);
             gShadowPanelTopic.TabIndex = 40;
             // 
+            // gGradientButtonGiveUp
+            // 
+            gGradientButtonGiveUp.BackColor = Color.Transparent;
+            gGradientButtonGiveUp.BorderColor = Color.FromArgb(74, 97, 94);
+            gGradientButtonGiveUp.BorderRadius = 10;
+            gGradientButtonGiveUp.BorderThickness = 1;
+            gGradientButtonGiveUp.CustomizableEdges = customizableEdges7;
+            gGradientButtonGiveUp.DisabledState.BorderColor = Color.DarkGray;
+            gGradientButtonGiveUp.DisabledState.CustomBorderColor = Color.DarkGray;
+            gGradientButtonGiveUp.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            gGradientButtonGiveUp.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            gGradientButtonGiveUp.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            gGradientButtonGiveUp.FillColor = Color.White;
+            gGradientButtonGiveUp.FillColor2 = Color.White;
+            gGradientButtonGiveUp.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gGradientButtonGiveUp.ForeColor = Color.FromArgb(74, 97, 94);
+            gGradientButtonGiveUp.HoverState.BorderColor = Color.White;
+            gGradientButtonGiveUp.HoverState.FillColor = Color.FromArgb(94, 148, 255);
+            gGradientButtonGiveUp.HoverState.FillColor2 = Color.FromArgb(255, 77, 165);
+            gGradientButtonGiveUp.HoverState.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gGradientButtonGiveUp.HoverState.ForeColor = Color.White;
+            gGradientButtonGiveUp.Location = new Point(362, 65);
+            gGradientButtonGiveUp.Name = "gGradientButtonGiveUp";
+            gGradientButtonGiveUp.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            gGradientButtonGiveUp.Size = new Size(100, 30);
+            gGradientButtonGiveUp.TabIndex = 71;
+            gGradientButtonGiveUp.Text = "Give up";
+            gGradientButtonGiveUp.Click += gGradientButtonGiveUp_Click;
+            // 
             // gGradientButtonComplete
             // 
             gGradientButtonComplete.BackColor = Color.Transparent;
             gGradientButtonComplete.BorderColor = Color.FromArgb(74, 97, 94);
             gGradientButtonComplete.BorderRadius = 10;
             gGradientButtonComplete.BorderThickness = 1;
-            gGradientButtonComplete.CustomizableEdges = customizableEdges7;
+            gGradientButtonComplete.CustomizableEdges = customizableEdges9;
             gGradientButtonComplete.DisabledState.BorderColor = Color.DarkGray;
             gGradientButtonComplete.DisabledState.CustomBorderColor = Color.DarkGray;
             gGradientButtonComplete.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -217,9 +253,9 @@
             gGradientButtonComplete.HoverState.FillColor2 = Color.FromArgb(255, 77, 165);
             gGradientButtonComplete.HoverState.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             gGradientButtonComplete.HoverState.ForeColor = Color.White;
-            gGradientButtonComplete.Location = new Point(362, 21);
+            gGradientButtonComplete.Location = new Point(256, 65);
             gGradientButtonComplete.Name = "gGradientButtonComplete";
-            gGradientButtonComplete.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            gGradientButtonComplete.ShadowDecoration.CustomizableEdges = customizableEdges10;
             gGradientButtonComplete.Size = new Size(100, 30);
             gGradientButtonComplete.TabIndex = 70;
             gGradientButtonComplete.Text = "Complete";
@@ -228,7 +264,7 @@
             // gButtonDetails
             // 
             gButtonDetails.BorderRadius = 5;
-            gButtonDetails.CustomizableEdges = customizableEdges9;
+            gButtonDetails.CustomizableEdges = customizableEdges11;
             gButtonDetails.DisabledState.BorderColor = Color.DarkGray;
             gButtonDetails.DisabledState.CustomBorderColor = Color.DarkGray;
             gButtonDetails.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -244,7 +280,7 @@
             gButtonDetails.Location = new Point(195, 14);
             gButtonDetails.Name = "gButtonDetails";
             gButtonDetails.PressedColor = Color.White;
-            gButtonDetails.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            gButtonDetails.ShadowDecoration.CustomizableEdges = customizableEdges12;
             gButtonDetails.Size = new Size(102, 40);
             gButtonDetails.TabIndex = 69;
             gButtonDetails.Text = "Details";
@@ -255,7 +291,7 @@
             gTextBoxMembers.AutoScroll = true;
             gTextBoxMembers.BorderColor = Color.FromArgb(74, 97, 94);
             gTextBoxMembers.BorderRadius = 5;
-            gTextBoxMembers.CustomizableEdges = customizableEdges11;
+            gTextBoxMembers.CustomizableEdges = customizableEdges13;
             gTextBoxMembers.DefaultText = "1";
             gTextBoxMembers.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxMembers.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -275,7 +311,7 @@
             gTextBoxMembers.PlaceholderText = "Level";
             gTextBoxMembers.ReadOnly = true;
             gTextBoxMembers.SelectedText = "";
-            gTextBoxMembers.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            gTextBoxMembers.ShadowDecoration.CustomizableEdges = customizableEdges14;
             gTextBoxMembers.Size = new Size(71, 40);
             gTextBoxMembers.TabIndex = 61;
             gTextBoxMembers.TextAlign = HorizontalAlignment.Center;
@@ -285,7 +321,7 @@
             gTextBoxLevel.AutoScroll = true;
             gTextBoxLevel.BorderColor = Color.FromArgb(74, 97, 94);
             gTextBoxLevel.BorderRadius = 5;
-            gTextBoxLevel.CustomizableEdges = customizableEdges13;
+            gTextBoxLevel.CustomizableEdges = customizableEdges15;
             gTextBoxLevel.DefaultText = "";
             gTextBoxLevel.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxLevel.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -306,7 +342,7 @@
             gTextBoxLevel.PlaceholderText = "Level";
             gTextBoxLevel.ReadOnly = true;
             gTextBoxLevel.SelectedText = "";
-            gTextBoxLevel.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            gTextBoxLevel.ShadowDecoration.CustomizableEdges = customizableEdges16;
             gTextBoxLevel.Size = new Size(140, 40);
             gTextBoxLevel.TabIndex = 60;
             gTextBoxLevel.TextOffset = new Point(5, 0);
@@ -316,7 +352,7 @@
             gTextBoxField.AutoScroll = true;
             gTextBoxField.BorderColor = Color.FromArgb(74, 97, 94);
             gTextBoxField.BorderRadius = 5;
-            gTextBoxField.CustomizableEdges = customizableEdges15;
+            gTextBoxField.CustomizableEdges = customizableEdges17;
             gTextBoxField.DefaultText = "";
             gTextBoxField.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxField.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -337,7 +373,7 @@
             gTextBoxField.PlaceholderText = "Technology field";
             gTextBoxField.ReadOnly = true;
             gTextBoxField.SelectedText = "";
-            gTextBoxField.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            gTextBoxField.ShadowDecoration.CustomizableEdges = customizableEdges18;
             gTextBoxField.Size = new Size(435, 40);
             gTextBoxField.TabIndex = 8;
             gTextBoxField.TextOffset = new Point(5, 0);
@@ -347,7 +383,7 @@
             gTextBoxStatus.BackColor = Color.Transparent;
             gTextBoxStatus.BorderRadius = 10;
             gTextBoxStatus.BorderThickness = 0;
-            gTextBoxStatus.CustomizableEdges = customizableEdges17;
+            gTextBoxStatus.CustomizableEdges = customizableEdges19;
             gTextBoxStatus.DefaultText = "Published";
             gTextBoxStatus.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxStatus.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -365,7 +401,7 @@
             gTextBoxStatus.PlaceholderText = "";
             gTextBoxStatus.ReadOnly = true;
             gTextBoxStatus.SelectedText = "";
-            gTextBoxStatus.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            gTextBoxStatus.ShadowDecoration.CustomizableEdges = customizableEdges20;
             gTextBoxStatus.Size = new Size(110, 25);
             gTextBoxStatus.TabIndex = 59;
             gTextBoxStatus.TextAlign = HorizontalAlignment.Center;
@@ -426,7 +462,7 @@
             gTextBoxDescription.AutoScroll = true;
             gTextBoxDescription.BorderColor = Color.FromArgb(74, 97, 94);
             gTextBoxDescription.BorderRadius = 5;
-            gTextBoxDescription.CustomizableEdges = customizableEdges19;
+            gTextBoxDescription.CustomizableEdges = customizableEdges21;
             gTextBoxDescription.DefaultText = "";
             gTextBoxDescription.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxDescription.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -448,7 +484,7 @@
             gTextBoxDescription.PlaceholderText = "Topic description";
             gTextBoxDescription.ReadOnly = true;
             gTextBoxDescription.SelectedText = "";
-            gTextBoxDescription.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            gTextBoxDescription.ShadowDecoration.CustomizableEdges = customizableEdges22;
             gTextBoxDescription.Size = new Size(435, 120);
             gTextBoxDescription.TabIndex = 6;
             gTextBoxDescription.TextOffset = new Point(5, 0);
@@ -469,7 +505,7 @@
             gTextBoxTopic.AutoScroll = true;
             gTextBoxTopic.BorderColor = Color.FromArgb(74, 97, 94);
             gTextBoxTopic.BorderRadius = 5;
-            gTextBoxTopic.CustomizableEdges = customizableEdges21;
+            gTextBoxTopic.CustomizableEdges = customizableEdges23;
             gTextBoxTopic.DefaultText = "";
             gTextBoxTopic.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxTopic.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -490,7 +526,7 @@
             gTextBoxTopic.PlaceholderText = "Thesis topic";
             gTextBoxTopic.ReadOnly = true;
             gTextBoxTopic.SelectedText = "";
-            gTextBoxTopic.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            gTextBoxTopic.ShadowDecoration.CustomizableEdges = customizableEdges24;
             gTextBoxTopic.Size = new Size(435, 92);
             gTextBoxTopic.TabIndex = 7;
             gTextBoxTopic.TextOffset = new Point(5, 0);
@@ -510,20 +546,50 @@
             // 
             // gPanelDataView
             // 
+            gPanelDataView.Controls.Add(gGradientButtonReasonDetails);
             gPanelDataView.Controls.Add(gTextBoxState);
             gPanelDataView.Controls.Add(gPictureBoxState);
-            gPanelDataView.CustomizableEdges = customizableEdges27;
+            gPanelDataView.CustomizableEdges = customizableEdges31;
             gPanelDataView.Location = new Point(10, 10);
             gPanelDataView.Name = "gPanelDataView";
-            gPanelDataView.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            gPanelDataView.ShadowDecoration.CustomizableEdges = customizableEdges32;
             gPanelDataView.Size = new Size(715, 635);
             gPanelDataView.TabIndex = 1;
+            // 
+            // gGradientButtonReasonDetails
+            // 
+            gGradientButtonReasonDetails.BackColor = Color.Transparent;
+            gGradientButtonReasonDetails.BorderColor = Color.FromArgb(74, 97, 94);
+            gGradientButtonReasonDetails.BorderRadius = 10;
+            gGradientButtonReasonDetails.BorderThickness = 1;
+            gGradientButtonReasonDetails.CustomizableEdges = customizableEdges25;
+            gGradientButtonReasonDetails.DisabledState.BorderColor = Color.DarkGray;
+            gGradientButtonReasonDetails.DisabledState.CustomBorderColor = Color.DarkGray;
+            gGradientButtonReasonDetails.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            gGradientButtonReasonDetails.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            gGradientButtonReasonDetails.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            gGradientButtonReasonDetails.FillColor = SystemColors.ButtonFace;
+            gGradientButtonReasonDetails.FillColor2 = SystemColors.ButtonFace;
+            gGradientButtonReasonDetails.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gGradientButtonReasonDetails.ForeColor = Color.Black;
+            gGradientButtonReasonDetails.HoverState.BorderColor = Color.White;
+            gGradientButtonReasonDetails.HoverState.FillColor = Color.FromArgb(94, 148, 255);
+            gGradientButtonReasonDetails.HoverState.FillColor2 = Color.FromArgb(255, 77, 165);
+            gGradientButtonReasonDetails.HoverState.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gGradientButtonReasonDetails.HoverState.ForeColor = Color.White;
+            gGradientButtonReasonDetails.Location = new Point(289, 341);
+            gGradientButtonReasonDetails.Name = "gGradientButtonReasonDetails";
+            gGradientButtonReasonDetails.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            gGradientButtonReasonDetails.Size = new Size(145, 40);
+            gGradientButtonReasonDetails.TabIndex = 46;
+            gGradientButtonReasonDetails.Text = "Reason Details";
+            gGradientButtonReasonDetails.Click += gGradientButtonReasonDetails_Click;
             // 
             // gTextBoxState
             // 
             gTextBoxState.BorderRadius = 6;
             gTextBoxState.BorderThickness = 0;
-            gTextBoxState.CustomizableEdges = customizableEdges23;
+            gTextBoxState.CustomizableEdges = customizableEdges27;
             gTextBoxState.DefaultText = "Please wait !";
             gTextBoxState.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gTextBoxState.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -540,19 +606,19 @@
             gTextBoxState.PlaceholderText = "";
             gTextBoxState.ReadOnly = true;
             gTextBoxState.SelectedText = "";
-            gTextBoxState.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            gTextBoxState.ShadowDecoration.CustomizableEdges = customizableEdges28;
             gTextBoxState.Size = new Size(441, 27);
             gTextBoxState.TabIndex = 45;
             gTextBoxState.TextAlign = HorizontalAlignment.Center;
             // 
             // gPictureBoxState
             // 
-            gPictureBoxState.CustomizableEdges = customizableEdges25;
+            gPictureBoxState.CustomizableEdges = customizableEdges29;
             gPictureBoxState.Image = Properties.Resources.GiftWaiting;
             gPictureBoxState.ImageRotate = 0F;
             gPictureBoxState.Location = new Point(262, 54);
             gPictureBoxState.Name = "gPictureBoxState";
-            gPictureBoxState.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            gPictureBoxState.ShadowDecoration.CustomizableEdges = customizableEdges30;
             gPictureBoxState.Size = new Size(210, 210);
             gPictureBoxState.SizeMode = PictureBoxSizeMode.Zoom;
             gPictureBoxState.TabIndex = 44;
@@ -562,7 +628,7 @@
             // 
             gGradientButtonRegistered.BackColor = Color.Transparent;
             gGradientButtonRegistered.BorderRadius = 10;
-            gGradientButtonRegistered.CustomizableEdges = customizableEdges29;
+            gGradientButtonRegistered.CustomizableEdges = customizableEdges33;
             gGradientButtonRegistered.DisabledState.BorderColor = Color.DarkGray;
             gGradientButtonRegistered.DisabledState.CustomBorderColor = Color.DarkGray;
             gGradientButtonRegistered.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -578,7 +644,7 @@
             gGradientButtonRegistered.HoverState.ForeColor = Color.White;
             gGradientButtonRegistered.Location = new Point(1096, 37);
             gGradientButtonRegistered.Name = "gGradientButtonRegistered";
-            gGradientButtonRegistered.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            gGradientButtonRegistered.ShadowDecoration.CustomizableEdges = customizableEdges34;
             gGradientButtonRegistered.Size = new Size(117, 40);
             gGradientButtonRegistered.TabIndex = 42;
             gGradientButtonRegistered.Text = "Registered";
@@ -624,7 +690,7 @@
             // 
             gGradientButtonTasks.BackColor = Color.Transparent;
             gGradientButtonTasks.BorderRadius = 10;
-            gGradientButtonTasks.CustomizableEdges = customizableEdges31;
+            gGradientButtonTasks.CustomizableEdges = customizableEdges35;
             gGradientButtonTasks.DisabledState.BorderColor = Color.DarkGray;
             gGradientButtonTasks.DisabledState.CustomBorderColor = Color.DarkGray;
             gGradientButtonTasks.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -640,7 +706,7 @@
             gGradientButtonTasks.HoverState.ForeColor = Color.White;
             gGradientButtonTasks.Location = new Point(560, 36);
             gGradientButtonTasks.Name = "gGradientButtonTasks";
-            gGradientButtonTasks.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            gGradientButtonTasks.ShadowDecoration.CustomizableEdges = customizableEdges36;
             gGradientButtonTasks.Size = new Size(117, 40);
             gGradientButtonTasks.TabIndex = 43;
             gGradientButtonTasks.Text = "Tasks";
@@ -650,7 +716,7 @@
             // 
             gGradientButtonStatistical.BackColor = Color.Transparent;
             gGradientButtonStatistical.BorderRadius = 10;
-            gGradientButtonStatistical.CustomizableEdges = customizableEdges33;
+            gGradientButtonStatistical.CustomizableEdges = customizableEdges37;
             gGradientButtonStatistical.DisabledState.BorderColor = Color.DarkGray;
             gGradientButtonStatistical.DisabledState.CustomBorderColor = Color.DarkGray;
             gGradientButtonStatistical.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -666,7 +732,7 @@
             gGradientButtonStatistical.HoverState.ForeColor = Color.White;
             gGradientButtonStatistical.Location = new Point(677, 37);
             gGradientButtonStatistical.Name = "gGradientButtonStatistical";
-            gGradientButtonStatistical.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            gGradientButtonStatistical.ShadowDecoration.CustomizableEdges = customizableEdges38;
             gGradientButtonStatistical.Size = new Size(117, 40);
             gGradientButtonStatistical.TabIndex = 44;
             gGradientButtonStatistical.Text = "Statistical";
@@ -728,5 +794,7 @@
         private Label lblThere;
         private PictureBox ptbEmptyState;
         private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonComplete;
+        private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonGiveUp;
+        private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonReasonDetails;
     }
 }

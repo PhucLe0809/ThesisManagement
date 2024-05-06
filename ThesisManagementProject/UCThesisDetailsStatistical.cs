@@ -40,6 +40,7 @@ namespace ThesisManagementProject
         }
 
         #region MEMBER STATISTICAL
+
         public void UpdateMembers()
         {
             this.evaluationOfMembers = myProcess.CalEvaluations(this.listTasks, this.team.Members.Count(), evaluation => evaluation.Contribute);
@@ -51,7 +52,7 @@ namespace ThesisManagementProject
                 line.SetBackGroundColor(SystemColors.ButtonFace);
                 line.SetSize(new Size(580, 63));
                 line.SetDeleteMode(false);
-                line.SetStisticalMode((int)this.evaluationOfMembers[i], this.scoreOfMembers[i]);
+                line.SetStatisticalMode((int)this.evaluationOfMembers[i], this.scoreOfMembers[i]);
                 flpMemberStatistical.Controls.Add(line);
             }
         }
