@@ -112,6 +112,13 @@ namespace ThesisManagementProject.Database
 
             ExecuteQuery(sqlStr, typeExecution, flag);
         }
+        protected void ExecuteQueryGiveUp(GiveUp giveUp, string command, string typeExecution, bool flag)
+        {
+            string sqlStr = string.Format(command, MyDatabase.DBGiveUp,
+                giveUp.IdThesis, giveUp.IdRepresent, giveUp.IdTeam, giveUp.Reason, giveUp.Created.ToString("yyyy-MM-dd hh:mm:ss"));
+
+            ExecuteQuery(sqlStr, typeExecution, flag);
+        }
 
         #endregion
 

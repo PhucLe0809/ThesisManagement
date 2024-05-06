@@ -198,6 +198,10 @@ namespace ThesisManagementProject.Models
         {
             return string.Format("{0} commented [{1}] in [{2}] task", senderName, comment, taskTitle);
         }
+        public static string GetContentTypeGiveUp(string teamName, string thesisTopic)
+        {
+            return string.Format("The [{0}] team abandoned the the [{1}] thesis", teamName, thesisTopic);
+        }
 
         #endregion
 

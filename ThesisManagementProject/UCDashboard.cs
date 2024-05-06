@@ -205,8 +205,7 @@ namespace ThesisManagementProject
             gPanelDataView.Controls.Clear();
             this.thesisClicked = thesisDAO.SelectOnly(thesisLine.GetIdThesis);
             this.thesisLineClicked = thesisLine;
-            uCThesisDetails.FlagWaiting = this.flagStuMyTheses && (thesisClicked.Status == EThesisStatus.Registered || thesisClicked.Status == EThesisStatus.Published);
-            uCThesisDetails.SetInformation(this.thesisClicked, people);
+            uCThesisDetails.SetInformation(this.thesisClicked, people, this.flagStuMyTheses);
             gPanelDataView.Controls.Add(uCThesisDetails);
             
         }

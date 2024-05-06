@@ -29,6 +29,13 @@ namespace ThesisManagementProject
             gTextBoxTopic.Text = thesis.Topic;
             gTextBoxField.Text = thesis.Field.ToString();
         }
+        public void SetColorViewState(Color color)
+        {
+            gTextBoxTopic.FillColor = color;
+            gTextBoxField.FillColor = color;
+            gTextBoxTopic.BorderThickness = 0;
+            gTextBoxField.BorderThickness = 0;
+        }
         private void SetThesisView()
         {
             FThesisView fThesisView = new FThesisView(thesis);

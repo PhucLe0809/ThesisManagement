@@ -65,8 +65,8 @@ namespace ThesisManagementProject.Models
         Processing,
         [Display(Name = "Completed")]
         Completed,
-        [Display(Name = "NotCompleted")]
-        NotCompleted
+        [Display(Name = "GiveUp")]
+        GiveUp
     }
 
     #endregion
@@ -262,8 +262,8 @@ namespace ThesisManagementProject.Models
                     return Color.FromArgb(94, 148, 255);
                 case EThesisStatus.Completed:
                     return Color.FromArgb(45, 237, 55);
-                case EThesisStatus.NotCompleted:
-                    return Color.FromArgb(255, 87, 87);
+                case EThesisStatus.GiveUp:
+                    return Color.FromArgb(252, 182, 3);
                 default:
                     return Color.Gray;
             }
