@@ -22,6 +22,8 @@ namespace ThesisManagementProject.Models
         Evaluation,
         [Display(Name = "Comment")]
         Comment,
+        [Display(Name = "Meeting")]
+        Meeting,
         [Display(Name = "Null")]
         Null,
     }
@@ -150,6 +152,7 @@ namespace ThesisManagementProject.Models
             if (pattern == ConvertEClassifyToString(EClassify.Task)) return ENotificationType.Task;
             if (pattern == ConvertEClassifyToString(EClassify.Evaluation)) return ENotificationType.Evaluation;
             if (pattern == ConvertEClassifyToString(EClassify.Comment)) return ENotificationType.Comment;
+            if (pattern == ConvertEClassifyToString(EClassify.Meeting)) return ENotificationType.Meeting;
             return ENotificationType.Null;
         }
         private string ConvertEClassifyToString(EClassify eClassify)
@@ -166,6 +169,8 @@ namespace ThesisManagementProject.Models
                     return Color.FromArgb(94, 148, 255);
                 case ENotificationType.Evaluation:
                     return Color.FromArgb(45, 237, 55);
+                case ENotificationType.Meeting:
+                    return Color.FromArgb(252, 182, 3);
                 default:
                     return Color.Gray;
             }
@@ -197,6 +202,14 @@ namespace ThesisManagementProject.Models
         public static string GetContentTypeComment(string senderName, string comment, string taskTitle)
         {
             return string.Format("{0} commented [{1}] in [{2}] task", senderName, comment, taskTitle);
+        }
+        public static string GetContentTypeMeeting(string meetingTitle, string creator)
+        {
+            return string.Format("[{0}] was created by [{1}]", meetingTitle, creator);
+        }
+        public static string GetContentTypeMeetingUpdated(string meetingTitle)
+        {
+            return string.Format("[{0}] meeting has content edited", meetingTitle);
         }
         public static string GetContentTypeGiveUp(string teamName, string thesisTopic)
         {

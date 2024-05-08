@@ -33,9 +33,9 @@ namespace ThesisManagementProject.DAOs
 
             return list;
         }
-        public People SelectOnlyByID(string id)
+        public People SelectOnlyByID(string idPeople)
         {
-            DataTable dt = Select(string.Format("SELECT * FROM {0} WHERE idaccount = '{1}'", MyDatabase.DBPeople, id));
+            DataTable dt = Select(string.Format("SELECT * FROM {0} WHERE idaccount = '{1}'", MyDatabase.DBPeople, idPeople));
 
             if (dt.Rows.Count > 0) return GetFromDataRow(dt.Rows[0]);
             return new People();

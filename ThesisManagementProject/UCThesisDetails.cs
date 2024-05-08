@@ -180,12 +180,14 @@ namespace ThesisManagementProject
             {
                 gGradientButtonRegistered.Hide();
                 gGradientButtonTasks.Show();
+                gGradientButtonMeeting.Show();
                 gGradientButtonStatistical.Show();
                 gGradientButtonTasks.PerformClick();
             }
             else
             {
                 gGradientButtonTasks.Hide();
+                gGradientButtonMeeting.Hide();
                 gGradientButtonStatistical.Hide();
                 gGradientButtonRegistered.Show();
                 gGradientButtonRegistered.PerformClick();
@@ -271,29 +273,6 @@ namespace ThesisManagementProject
             gPanelDataView.Controls.Clear();
             gPanelDataView.Controls.Add(uCThesisDetailsCreatedTeam);
         }
-        private void HideAllButtonMode()
-        {
-            gGradientButtonTasks.Hide();
-            gGradientButtonStatistical.Hide();
-            gGradientButtonRegistered.Hide();
-        }
-        private void AllButtonStandardColor()
-        {
-            myProcess.ButtonStandardColor(gGradientButtonRegistered, Color.White, Color.White);
-            myProcess.ButtonStandardColor(gGradientButtonTasks, Color.White, Color.White);
-            myProcess.ButtonStandardColor(gGradientButtonStatistical, Color.White, Color.White);
-        }
-        public void PerformNotificationClick(Notification notification)
-        {
-            this.notification = notification;
-            if (this.notification.Type != ENotificationType.Thesis)
-            {
-                gGradientButtonTasks.PerformClick();
-                UCThesisDetailsTasks uCThesisDetailsTasks = new UCThesisDetailsTasks();
-                uCThesisDetailsTasks.SetUpUserControl(host, instructor, team, thesis, thesis.Status == EThesisStatus.Processing);
-                uCThesisDetailsTasks.PerformNotificationClick(notification);
-            }
-        }
         private void SetNewState(EThesisStatus status, Image image, string notification)
         {
             this.thesis.Status = status;
@@ -316,6 +295,37 @@ namespace ThesisManagementProject
             else
             {
                 gTextBoxState.ForeColor = Color.FromArgb(0, 192, 192);
+            }
+        }
+        private void HideAllButtonMode()
+        {
+            gGradientButtonTasks.Hide();
+            gGradientButtonStatistical.Hide();
+            gGradientButtonMeeting.Hide();
+            gGradientButtonRegistered.Hide();
+        }
+        private void AllButtonStandardColor()
+        {
+            myProcess.ButtonStandardColor(gGradientButtonRegistered, Color.White, Color.White);
+            myProcess.ButtonStandardColor(gGradientButtonTasks, Color.White, Color.White);
+            myProcess.ButtonStandardColor(gGradientButtonStatistical, Color.White, Color.White);
+            myProcess.ButtonStandardColor(gGradientButtonMeeting, Color.White, Color.White);
+        }
+        public void PerformNotificationClick(Notification notification)
+        {
+            this.notification = notification;
+            if (this.notification.Type == ENotificationType.Meeting)
+            {
+                gGradientButtonMeeting.PerformClick();
+                return;
+            }
+
+            if (this.notification.Type != ENotificationType.Thesis)
+            {
+                gGradientButtonTasks.PerformClick();
+                UCThesisDetailsTasks uCThesisDetailsTasks = new UCThesisDetailsTasks();
+                uCThesisDetailsTasks.SetUpUserControl(host, instructor, team, thesis, thesis.Status == EThesisStatus.Processing);
+                uCThesisDetailsTasks.PerformNotificationClick(notification);
             }
         }
 
@@ -367,7 +377,7 @@ namespace ThesisManagementProject
         private void gGradientButtonGiveUp_Click(object sender, EventArgs e)
         {
             FGiveUp fGiveUp = new FGiveUp(this.thesis, this.host, this.team);
-            fGiveUp.ConfirnedGivingUp += FGiveUp_ConfirnedGivingUp;
+            fGiveUp.ConfirmedGivingUp += FGiveUp_ConfirnedGivingUp;
             fGiveUp.ShowDialog();
         }
         private void FGiveUp_ConfirnedGivingUp(object? sender, EventArgs e)
@@ -413,6 +423,20 @@ namespace ThesisManagementProject
             uCThesisDetailsStatistical.SetUpUserControl(this.team);
             gPanelDataView.Controls.Clear();
             gPanelDataView.Controls.Add(uCThesisDetailsStatistical);
+        }
+
+        #endregion
+
+        #region EVENT gGradientButtonMeeting
+
+        private void gGradientButtonMeeting_Click(object sender, EventArgs e)
+        {
+            AllButtonStandardColor();
+            myProcess.ButtonSettingColor(gGradientButtonMeeting);
+            UCThesisDetailsMeeting uCThesisDetailsMeeting = new UCThesisDetailsMeeting();
+            uCThesisDetailsMeeting.SetUpUserControl(host, thesis, team);
+            gPanelDataView.Controls.Clear();
+            gPanelDataView.Controls.Add(uCThesisDetailsMeeting);
         }
 
         #endregion

@@ -7,6 +7,9 @@
     <Compile Update="Forms\FListAvatar.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\FMeetingDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\FPeopleDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -44,6 +47,12 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UCDashboardStatistical.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCMeetingCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCMeetingCreate.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UCNotification.cs">
@@ -86,6 +95,9 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UCThesisDetailsCreatedTeam.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UCThesisDetailsMeeting.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UCThesisDetailsStatistical.cs">

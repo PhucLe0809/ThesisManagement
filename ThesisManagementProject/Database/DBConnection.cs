@@ -112,6 +112,14 @@ namespace ThesisManagementProject.Database
 
             ExecuteQuery(sqlStr, typeExecution, flag);
         }
+        protected void ExecuteQueryMeeting(Meeting meeting, string command, string typeExecution, bool flag)
+        {
+            string sqlStr = string.Format(command, MyDatabase.DBMeeting,
+                meeting.IdMeeting, meeting.IdThesis, meeting.Title, meeting.Description, meeting.Start.ToString("yyyy-MM-dd hh:mm:ss"), meeting.TheEnd.ToString("yyyy-MM-dd hh:mm:ss"),
+                meeting.Location, meeting.Link, meeting.IdCreator, meeting.Created.ToString("yyyy-MM-dd hh:mm:ss"));
+
+            ExecuteQuery(sqlStr, typeExecution, flag);
+        }
         protected void ExecuteQueryGiveUp(GiveUp giveUp, string command, string typeExecution, bool flag)
         {
             string sqlStr = string.Format(command, MyDatabase.DBGiveUp,
