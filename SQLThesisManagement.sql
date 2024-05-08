@@ -8,7 +8,7 @@
 use ThesisManagement
 go
 
-drop table People, Thesis, Member, Task, Comment, Evaluation, Notification, ThesisStatus, Technology, GiveUp
+drop table People, Thesis, Member, Task, Comment, Meeting, Evaluation, Notification, ThesisStatus, Technology, GiveUp
 
 -- CREATE TABLE ACCOUNT
 create table People (
@@ -66,6 +66,21 @@ create table Task
 	idteam nvarchar(10) not null,
 	isfavorite bit not null default 0,
 	progress int not null,
+	created datetime not null,
+);
+
+-- CRTEATE TABLE MEETING
+create table Meeting
+(
+	idmeeting nvarchar(10) not null,
+	idthesis nvarchar(10) not null,
+	title text not null,
+	description text not null,
+	start datetime not null,
+	theend datetime not null,
+	location text not null,
+	link text,
+	idcreator nvarchar(10) not null,
 	created datetime not null,
 );
 
@@ -133,9 +148,32 @@ create table GiveUp
 	created datetime not null,
 );
 
+-- INSERT TABLE GiveUp
+
 INSERT INTO GiveUp
 VALUES
 	('244400008', '243300002', '245500011', 'Not enough energy and resources to continue', '2024-04-15 19:30:45');
+
+-- INSERT TABLE Meeting
+
+INSERT INTO Meeting
+VALUES 
+	('241100001', '244400004', 'Agree on solution strategy', 
+	'At this meeting, the main strategy to solve the problem is brought up for discussion. Please read the draft in advance and report back to the person in charge.',
+	'2024-05-15 09:00:00', '2024-05-15 11:00:00', 'Meeting Room - 3nd floor, Central Building', 
+	'meet.google.com/dhe-tonw-wjr', '242200001', '2024-05-07 09:35:15'),
+	('241100002', '244400004', 'Work assignment meeting', 
+	'The class will assign tasks to members. Please read the expected roster in advance.',
+	'2024-05-27 09:00:00', '2024-05-27 11:00:00', 'Meeting Room - 3nd floor, Central Building', 
+	'meet.google.com/dhe-tonw-wjr', '242200001', '2024-05-08 17:10:35'),
+	('241100003', '244400005', 'Agree on solution strategy', 
+	'At this meeting, the main strategy to solve the problem is brought up for discussion. Please read the draft in advance and report back to the person in charge.',
+	'2024-05-16 09:00:00', '2024-05-16 11:00:00', 'Meeting Room - 3nd floor, Central Building', 
+	'meet.google.com/jbo-foov-rac', '242200001', '2024-05-07 19:35:15'),
+	('241100004', '244400005', 'Work assignment meeting', 
+	'The class will assign tasks to members. Please read the expected roster in advance.',
+	'2024-05-29 09:00:00', '2024-05-29 11:00:00', 'Meeting Room - 3nd floor, Central Building', 
+	'meet.google.com/jbo-foov-rac', '242200001', '2024-05-08 21:10:35');
 
 -- Lecture 1 - 10
 INSERT INTO People
@@ -974,7 +1012,10 @@ VALUES
 	('2499000003', '243300002', '242200001', '244400005', '248800025',
 	'David Lee evaluated you in [Research cloud storage solutions] task', 
 	'Evaluation', '2024-04-07 21:34:55', 0, 0),
-	('2499000004', '242200001', '243300002', '244400005', '247700043',
+	('2499000004', '243300002', '242200001', '244400005', '241100003',
+	'[Agree on solution strategy] meeting was created by [David Lee]',
+	'Meeting', '2024-05-07 19:35:15', 1, 0),
+	('2499000005', '242200001', '243300002', '244400005', '247700043',
 	'Chris Evans commeted [Reviewing potential cloud storage solutions for our needs.] about the [Research cloud storage solutions] task', 
 	'Comment', '2024-04-05 17:35:24', 1, 1);
 

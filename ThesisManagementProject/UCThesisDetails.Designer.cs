@@ -67,6 +67,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             gButtonBack = new Guna.UI2.WinForms.Guna2Button();
             gButtonEdit = new Guna.UI2.WinForms.Guna2Button();
             gButtonStar = new Guna.UI2.WinForms.Guna2Button();
@@ -97,6 +99,7 @@
             ptbEmptyState = new PictureBox();
             gGradientButtonTasks = new Guna.UI2.WinForms.Guna2GradientButton();
             gGradientButtonStatistical = new Guna.UI2.WinForms.Guna2GradientButton();
+            gGradientButtonMeeting = new Guna.UI2.WinForms.Guna2GradientButton();
             gShadowPanelTopic.SuspendLayout();
             gShadowPanelBack.SuspendLayout();
             gPanelDataView.SuspendLayout();
@@ -577,7 +580,7 @@
             gGradientButtonReasonDetails.HoverState.FillColor2 = Color.FromArgb(255, 77, 165);
             gGradientButtonReasonDetails.HoverState.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             gGradientButtonReasonDetails.HoverState.ForeColor = Color.White;
-            gGradientButtonReasonDetails.Location = new Point(289, 341);
+            gGradientButtonReasonDetails.Location = new Point(292, 341);
             gGradientButtonReasonDetails.Name = "gGradientButtonReasonDetails";
             gGradientButtonReasonDetails.ShadowDecoration.CustomizableEdges = customizableEdges26;
             gGradientButtonReasonDetails.Size = new Size(145, 40);
@@ -730,13 +733,39 @@
             gGradientButtonStatistical.HoverState.FillColor2 = Color.FromArgb(255, 77, 165);
             gGradientButtonStatistical.HoverState.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             gGradientButtonStatistical.HoverState.ForeColor = Color.White;
-            gGradientButtonStatistical.Location = new Point(677, 37);
+            gGradientButtonStatistical.Location = new Point(794, 37);
             gGradientButtonStatistical.Name = "gGradientButtonStatistical";
             gGradientButtonStatistical.ShadowDecoration.CustomizableEdges = customizableEdges38;
             gGradientButtonStatistical.Size = new Size(117, 40);
             gGradientButtonStatistical.TabIndex = 44;
             gGradientButtonStatistical.Text = "Statistical";
             gGradientButtonStatistical.Click += gGradientButtonStatistical_Click;
+            // 
+            // gGradientButtonMeeting
+            // 
+            gGradientButtonMeeting.BackColor = Color.Transparent;
+            gGradientButtonMeeting.BorderRadius = 10;
+            gGradientButtonMeeting.CustomizableEdges = customizableEdges39;
+            gGradientButtonMeeting.DisabledState.BorderColor = Color.DarkGray;
+            gGradientButtonMeeting.DisabledState.CustomBorderColor = Color.DarkGray;
+            gGradientButtonMeeting.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            gGradientButtonMeeting.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            gGradientButtonMeeting.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            gGradientButtonMeeting.FillColor = Color.White;
+            gGradientButtonMeeting.FillColor2 = Color.White;
+            gGradientButtonMeeting.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gGradientButtonMeeting.ForeColor = Color.Black;
+            gGradientButtonMeeting.HoverState.FillColor = Color.FromArgb(94, 148, 255);
+            gGradientButtonMeeting.HoverState.FillColor2 = Color.FromArgb(255, 77, 165);
+            gGradientButtonMeeting.HoverState.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gGradientButtonMeeting.HoverState.ForeColor = Color.White;
+            gGradientButtonMeeting.Location = new Point(677, 37);
+            gGradientButtonMeeting.Name = "gGradientButtonMeeting";
+            gGradientButtonMeeting.ShadowDecoration.CustomizableEdges = customizableEdges40;
+            gGradientButtonMeeting.Size = new Size(117, 40);
+            gGradientButtonMeeting.TabIndex = 45;
+            gGradientButtonMeeting.Text = "Meeting";
+            gGradientButtonMeeting.Click += gGradientButtonMeeting_Click;
             // 
             // UCThesisDetails
             // 
@@ -750,6 +779,7 @@
             Controls.Add(gGradientButtonRegistered);
             Controls.Add(gGradientButtonTasks);
             Controls.Add(gGradientButtonStatistical);
+            Controls.Add(gGradientButtonMeeting);
             DoubleBuffered = true;
             Name = "UCThesisDetails";
             Size = new Size(1280, 750);
@@ -796,5 +826,6 @@
         private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonComplete;
         private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonGiveUp;
         private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonReasonDetails;
+        private Guna.UI2.WinForms.Guna2GradientButton gGradientButtonMeeting;
     }
 }

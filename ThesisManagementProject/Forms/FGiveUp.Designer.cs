@@ -134,7 +134,7 @@
             gButtonConfirm.Name = "gButtonConfirm";
             gButtonConfirm.ShadowDecoration.CustomizableEdges = customizableEdges4;
             gButtonConfirm.Size = new Size(100, 35);
-            gButtonConfirm.TabIndex = 44;
+            gButtonConfirm.TabIndex = 3;
             gButtonConfirm.Text = "Confirm";
             gButtonConfirm.Click += gButtonConfirm_Click;
             // 
@@ -154,7 +154,7 @@
             gButtonCancel.Name = "gButtonCancel";
             gButtonCancel.ShadowDecoration.CustomizableEdges = customizableEdges6;
             gButtonCancel.Size = new Size(100, 35);
-            gButtonCancel.TabIndex = 45;
+            gButtonCancel.TabIndex = 3;
             gButtonCancel.Text = "Cancel";
             gButtonCancel.Click += gButtonCancel_Click;
             // 
@@ -214,7 +214,7 @@
             gPanelRepresent.Name = "gPanelRepresent";
             gPanelRepresent.ShadowDecoration.CustomizableEdges = customizableEdges10;
             gPanelRepresent.Size = new Size(275, 60);
-            gPanelRepresent.TabIndex = 73;
+            gPanelRepresent.TabIndex = 50;
             // 
             // gPanelThesis
             // 

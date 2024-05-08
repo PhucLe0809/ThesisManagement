@@ -20,7 +20,7 @@ namespace ThesisManagementProject.Process
 
     public enum EClassify
     {
-        Admin = 11,
+        Meeting = 11,
         Lecture = 22,
         Student = 33,
         Thesis = 44,
@@ -33,7 +33,18 @@ namespace ThesisManagementProject.Process
 
     #endregion
 
-    internal class MyProcess
+    #region ENUM OPERATION
+
+    public enum EOperation
+    {
+        Create,
+        View,
+        Edit
+    }
+
+    #endregion
+
+    public class MyProcess
     {
         private DBConnection dBConnection = new DBConnection();
 
@@ -198,6 +209,9 @@ namespace ThesisManagementProject.Process
                     break;
                 case EClassify.Notification:
                     cntAccount = GetLastestID(string.Format("SELECT max(idnotification) as MaxID FROM {0}", MyDatabase.DBNotification));
+                    break;
+                case EClassify.Meeting:
+                    cntAccount = GetLastestID(string.Format("SELECT max(idmeeting) as MaxID FROM {0}", MyDatabase.DBMeeting));
                     break;
             }
             cntAccount++;

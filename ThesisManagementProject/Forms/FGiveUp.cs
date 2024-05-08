@@ -10,13 +10,12 @@ using System.Windows.Forms;
 using ThesisManagementProject.DAOs;
 using ThesisManagementProject.Models;
 using ThesisManagementProject.Process;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 
 namespace ThesisManagementProject.Forms
 {
     public partial class FGiveUp : Form
     {
-        public event EventHandler ConfirnedGivingUp;
+        public event EventHandler ConfirmedGivingUp;
         private MyProcess myProcess = new MyProcess();
 
         private Thesis thesis = new Thesis();
@@ -52,7 +51,6 @@ namespace ThesisManagementProject.Forms
             SetThesis();
             SetRepresent();
             SetTeam();
-            gTextBoxReason.Focus();
         }
         private void SetThesis()
         {
@@ -81,8 +79,8 @@ namespace ThesisManagementProject.Forms
         {
             this.represent = peopleDAO.SelectOnlyByID(giveUp.IdRepresent);
             this.giveUp = giveUp;
-            SetRepresent();
             SetReasonReadOnly();
+            SetRepresent();
         }
         private void SetReasonReadOnly()
         {
@@ -90,8 +88,10 @@ namespace ThesisManagementProject.Forms
             gTextBoxReason.FillColor = SystemColors.ButtonFace;
             gTextBoxReason.BorderThickness = 0;
             gTextBoxReason.ReadOnly = true;
-            gButtonCancel.Hide();
+            gButtonCancel.Location = new Point(672, 624);
+            gButtonCancel.Show();
             gButtonConfirm.Hide();
+            gButtonCancel.Focus();
         }
         private bool CheckInformationValid()
         {
@@ -122,7 +122,7 @@ namespace ThesisManagementProject.Forms
                     peoples.Add(peopleDAO.SelectOnlyByID(thesis.IdInstructor));
                     notificationDAO.InsertFollowListPeople(represent.IdAccount, thesis.IdThesis, thesis.IdThesis, content, peoples);
 
-                    ConfirnedGivingUp?.Invoke(this, e);
+                    ConfirmedGivingUp?.Invoke(this, e);
                     this.Close();
                 }
             }
