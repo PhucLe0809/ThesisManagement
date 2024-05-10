@@ -38,6 +38,10 @@ namespace ThesisManagementProject
         public UCMeetingCreate()
         {
             InitializeComponent();
+            gDateTimePickerStart.Format = DateTimePickerFormat.Custom;
+            gDateTimePickerStart.CustomFormat = "dd/MM/yyyy HH:mm:ss tt";
+            gDateTimePickerEnd.Format = DateTimePickerFormat.Custom;
+            gDateTimePickerEnd.CustomFormat = "dd/MM/yyyy HH:mm:ss tt";
         }
 
         #region PROPERTIES
@@ -176,6 +180,9 @@ namespace ThesisManagementProject
                 var peoples = new List<People> { instructor };
                 peoples.AddRange(team.Members);
                 notificationDAO.InsertFollowListPeople(host.IdAccount, this.meeting.IdThesis, this.meeting.IdMeeting, content, peoples);
+
+                MeetingCreated?.Invoke(this.meeting, EventArgs.Empty);
+                gButtonCancel.PerformClick();
             }
         }
         private void SolveForEdit()
@@ -191,15 +198,15 @@ namespace ThesisManagementProject
                 var peoples = new List<People> { instructor };
                 peoples.AddRange(team.Members);
                 notificationDAO.InsertFollowListPeople(host.IdAccount, this.meeting.IdThesis, this.meeting.IdMeeting, content, peoples);
+
+                MeetingCreated?.Invoke(this.meeting, EventArgs.Empty);
+                gButtonCancel.PerformClick();
             }
         }
         private void gButtonCreate_Click(object sender, EventArgs e)
         {
             if (this.eOperation == EOperation.Create) SolveForCreate();
             else SolveForEdit();
-
-            MeetingCreated?.Invoke(this.meeting, e);
-            gButtonCancel.PerformClick();
         }
 
         #endregion

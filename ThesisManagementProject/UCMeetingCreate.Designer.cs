@@ -202,6 +202,7 @@
             // gDateTimePickerStart
             // 
             gDateTimePickerStart.Checked = true;
+            gDateTimePickerStart.CustomFormat = "";
             gDateTimePickerStart.CustomizableEdges = customizableEdges9;
             gDateTimePickerStart.FillColor = Color.White;
             gDateTimePickerStart.Font = new Font("Segoe UI", 9F);
@@ -211,6 +212,7 @@
             gDateTimePickerStart.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             gDateTimePickerStart.Name = "gDateTimePickerStart";
             gDateTimePickerStart.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            gDateTimePickerStart.ShowUpDown = true;
             gDateTimePickerStart.Size = new Size(230, 45);
             gDateTimePickerStart.TabIndex = 1;
             gDateTimePickerStart.Value = new DateTime(2024, 5, 8, 8, 42, 56, 890);
@@ -321,6 +323,7 @@
             gDateTimePickerEnd.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             gDateTimePickerEnd.Name = "gDateTimePickerEnd";
             gDateTimePickerEnd.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            gDateTimePickerEnd.ShowUpDown = true;
             gDateTimePickerEnd.Size = new Size(230, 45);
             gDateTimePickerEnd.TabIndex = 1;
             gDateTimePickerEnd.Value = new DateTime(2024, 5, 8, 8, 42, 56, 890);
